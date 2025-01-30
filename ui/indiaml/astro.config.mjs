@@ -6,16 +6,17 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'India@ML',
 			social: {
 				github: 'https://github.com/withastro/starlight',
 			},
 			sidebar: [
 				{
-					label: 'Guides',
+					label: 'Accepted Papers by Indians',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
+						{ label: 'NeurIPS 2024 Conference', slug: 'conferences/neurips-2024-conf' },
+						{ label: 'ICML 2024 Conference', slug: 'conferences/icml-2024-conf' },
 					],
 				},
 				{
