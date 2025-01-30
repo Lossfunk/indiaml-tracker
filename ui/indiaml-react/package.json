@@ -10,9 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@loadable/component": "^5.16.4",
     "@tailwindcss/vite": "^4.0.1",
+    "install": "^0.13.0",
+    "npm": "^11.1.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-router-dom": "^7.1.4",
     "tailwindcss": "^4.0.1"
   },
   "devDependencies": {
@@ -25,6 +29,7 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.14.0",
+    "typescript": "^5.7.3",
     "vite": "^6.0.5"
   }
 }
