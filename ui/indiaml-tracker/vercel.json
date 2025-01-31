@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/be/:path*",
+      "destination": "https://example-vercel.a.run.app/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ]
+} 
