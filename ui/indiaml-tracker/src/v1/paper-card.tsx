@@ -38,7 +38,7 @@ export function PaperCard({ paper }: PaperCardProps) {
                 href={paper.pdf_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-800 underline"
+                className="text-blue-100/60 underline"
               >
                 View PDF
               </a>
