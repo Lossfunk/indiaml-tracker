@@ -10,7 +10,8 @@ import React, { useEffect } from "react";
 const V1Items = {
   V1Homepage: loadable(() => import("../v1/Homepage")),
   NeurIPS2024: loadable(() => import("../v1/neurips-2024")),
-  Maps2024: loadable(() => import("../v1/cc-map"))
+  Maps2024: loadable(() => import("../v1/cc-map")),
+  About: loadable(() => import("../v1/about")),
 };
 
 const AutoRedirectComponent = ({children}: {children: JSX.Element}) => {
@@ -31,6 +32,10 @@ export const router = createBrowserRouter([
       {
         path: "papers-2024",
         element: <V1Items.NeurIPS2024 />,
+      },
+      {
+        path: "about",
+        element: <V1Items.About />,
       },
       {
         path: "map-2024",
