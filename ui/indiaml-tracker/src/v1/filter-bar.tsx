@@ -38,7 +38,7 @@ export function FilterBar({
   }
 
   return (
-    <div className="flex flex-wrap items-center gap-4 bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+    <div className="flex flex-wrap items-center gap-4 p-4 rounded-lg shadow-sm border">
       <Input
         type="text"
         placeholder="Search papers..."
@@ -49,7 +49,7 @@ export function FilterBar({
       <div className="flex items-center space-x-4">
         <div className="flex items-center space-x-2">
           <Switch id="first-author" checked={isFirstAuthorIndian} onCheckedChange={setIsFirstAuthorIndian} />
-          <Label htmlFor="first-author" className="text-sm text-gray-600">
+          <Label htmlFor="first-author" className="text-sm text-gray-300">
             First author Indian
           </Label>
         </div>
@@ -59,7 +59,7 @@ export function FilterBar({
             checked={isMajorityAuthorsIndian}
             onCheckedChange={setIsMajorityAuthorsIndian}
           />
-          <Label htmlFor="majority-authors" className="text-sm text-gray-600">
+          <Label htmlFor="majority-authors" className="text-sm text-gray-300">
             Majority authors Indian
           </Label>
         </div>
@@ -71,8 +71,8 @@ export function FilterBar({
             <ChevronDown className="ml-2 h-4 w-4 opacity-50" />
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="w-[180px] p-0">
-          <div className="p-2">
+        <PopoverContent className="w-[180px] px-1 py-2">
+          <div className="p-2 flex flex-col space-y-2">
             {conferences.map((conference) => (
               <div key={conference} className="flex items-center space-x-2 mb-2">
                 <Checkbox
