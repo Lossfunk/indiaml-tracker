@@ -15,7 +15,7 @@ const V1Urls = {
 const AutoRedirectComponent = ({children}: {children: JSX.Element}) => {
   const navigate = useNavigate();
   useEffect(() => {
-    navigate("/neurips-2024", { replace: true });
+    navigate("/papers-2024", { replace: true });
   }, []);
   return children;
 };
@@ -26,7 +26,7 @@ export const router = createBrowserRouter([
     element: <AutoRedirectComponent children={<V1Urls.V2Homepage />} />,
     children: [
       {
-        path: "neurips-2024",
+        path: "papers-2024",
         element: <V1Urls.NeurIPS2024 />,
       },
     ],
