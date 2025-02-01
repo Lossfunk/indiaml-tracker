@@ -4,6 +4,7 @@ import "./index.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { router } from "@/router/router";
+import { TopNav } from "./v1/top-nav";
 
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(

@@ -28,7 +28,7 @@ export function FilterBar({
   selectedConferences,
   setSelectedConferences,
 }: FilterBarProps) {
-  const conferences = ["NeurIPS", "ICML"]
+  const conferences = ["neurips", "icml"]
   const [isOpen, setIsOpen] = useState(false)
 
   const handleConferenceToggle = (conference: string) => {
