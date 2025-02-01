@@ -13,20 +13,16 @@ export function ResearchPapersShowcase() {
   const [selectedConferences, setSelectedConferences] = useState<string[]>([])
 
   const filteredPapers = mockPapers.filter((paper) => {
-    // Search filtering based on paper_title.
     const matchesSearch = paper.paper_title
       .toLowerCase()
       .includes(searchTerm.toLowerCase())
 
-    // Filter based on the Indian author flags:
-    // If the filter is enabled, only include papers with the flag set to true.
-    const matchesFirstAuthorIndian =
+      const matchesFirstAuthorIndian =
       !isFirstAuthorIndian || paper.top_author_from_india === true
 
     const matchesMajorityAuthorsIndian =
       !isMajorityAuthorsIndian || paper.majority_authors_from_india === true
 
-    // Conference filtering: if no conference is selected, include all.
     const matchesConference =
       selectedConferences.length === 0 ||
       paper.accepted_in.some((conf) => selectedConferences.includes(conf))

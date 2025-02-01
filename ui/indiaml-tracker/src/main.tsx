@@ -8,7 +8,7 @@ import { TopNav } from "./v1/top-nav";
 
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
+  <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
     <React.StrictMode>
       <div className="w-full h-[100dvh] touch-manipulation select-none">
         <RouterProvider router={router} />

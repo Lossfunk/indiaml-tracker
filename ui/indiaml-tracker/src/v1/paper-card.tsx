@@ -24,8 +24,8 @@ export function PaperCard({ paper }: PaperCardProps) {
 
   return (
     <Card className="h-full flex flex-col overflow-hidden transition-shadow hover:shadow-md">
-      <CardHeader className="bg-orange-50 border-b border-orange-100">
-        <CardTitle className="text-lg text-gray-800">{paper.paper_title}</CardTitle>
+      <CardHeader className="bg-zinc-900 border-b">
+        <CardTitle className="text-lg text-zinc-200">{paper.paper_title}</CardTitle>
       </CardHeader>
       <CardContent className="flex-grow flex flex-col justify-between p-4">
         <div>
@@ -38,7 +38,7 @@ export function PaperCard({ paper }: PaperCardProps) {
                 href={paper.pdf_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 underline"
+                className="text-blue-800 underline"
               >
                 View PDF
               </a>
@@ -58,7 +58,7 @@ export function PaperCard({ paper }: PaperCardProps) {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <Badge variant="secondary" className="bg-blue-50 text-blue-700">
+                        <Badge variant="secondary" className="bg-slate-700 text-blue-200">
                           {displayName}
                         </Badge>
                       </a>
@@ -73,7 +73,7 @@ export function PaperCard({ paper }: PaperCardProps) {
               {!showAllAuthors && remainingAuthorsCount > 0 && (
                 <Badge
                   onClick={() => setShowAllAuthors(true)}
-                  className="cursor-pointer bg-gray-200 text-gray-800"
+                  className="cursor-pointer bg-zinc-600 text-gray-100"
                 >
                   +{remainingAuthorsCount} more
                 </Badge>
@@ -82,7 +82,7 @@ export function PaperCard({ paper }: PaperCardProps) {
               {showAllAuthors && authors.length > maxVisibleAuthors && (
                 <Badge
                   onClick={() => setShowAllAuthors(false)}
-                  className="cursor-pointer bg-gray-200 text-gray-800"
+                  className="cursor-pointer bg-zinc-600 text-gray-100"
                 >
                   Show less
                 </Badge>
