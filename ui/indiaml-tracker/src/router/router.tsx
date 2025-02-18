@@ -9,6 +9,7 @@ import React, { useEffect } from "react";
 
 const V1Items = {
   V1Homepage: loadable(() => import("../v1/Homepage")),
+  Landing: loadable(() => import("../v1/Landing")),
   NeurIPS2024: loadable(() => import("../v1/neurips-2024")),
   Maps2024: loadable(() => import("../v1/cc-map")),
   About: loadable(() => import("../v1/about")),
@@ -33,6 +34,10 @@ export const router = createBrowserRouter([
       {
         path: "papers-2024",
         element: <V1Items.NeurIPS2024 />,
+      },
+      {
+        path: "landing",
+        element: <V1Items.Landing />,
       },
       {
         path: "about",
