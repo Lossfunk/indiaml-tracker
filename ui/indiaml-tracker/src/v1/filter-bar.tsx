@@ -1,11 +1,14 @@
+"use client"
+
 import { useState } from "react"
+import { motion } from "framer-motion"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Switch } from "@/components/ui/switch"
 import { Button } from "@/components/ui/button"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { Checkbox } from "@/components/ui/checkbox"
-import { ChevronDown } from "lucide-react"
+import { ChevronDown, Search, Filter } from "lucide-react"
 
 interface FilterBarProps {
   searchTerm: string
@@ -31,26 +34,62 @@ export function FilterBar({
   const conferences = ["neurips", "icml"]
   const [isOpen, setIsOpen] = useState(false)
 
+  // Toggles a conference in or out of the selectedConferences array
   const handleConferenceToggle = (conference: string) => {
     setSelectedConferences((prev) =>
-      prev.includes(conference) ? prev.filter((c) => c !== conference) : [...prev, conference],
+      prev.includes(conference)
+        ? prev.filter((c) => c !== conference)
+        : [...prev, conference]
     )
   }
 
   return (
-    <div className="flex flex-wrap items-center gap-4 p-4 rounded-lg shadow-sm border">
-      <Input
-        type="text"
-        placeholder="Search papers..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        className="flex-grow min-w-[200px]"
-      />
-      <div className="flex items-center space-x-4">
+    // Outer container with some entry animation
+    <motion.div
+      className="
+        relative flex flex-wrap items-center gap-4 p-4 rounded-lg shadow-md border 
+        bg-gradient-to-r from-gray-900 via-black to-gray-900 
+        text-gray-100
+      "
+      initial={{ opacity: 0, y: 25 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+    >
+
+      {/* Search Field with an icon and motion */}
+      <motion.div
+        className="flex items-center space-x-2 flex-grow"
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.5 }}
+      >
+        <Search className="h-5 w-5 text-gray-400" />
+        <Input
+          type="text"
+          placeholder="Search Indian AI/ML papers..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="flex-grow min-w-[200px] bg-white/10 
+                     placeholder:text-gray-400 
+                     focus:ring-2 focus:ring-pink-500 focus:outline-none"
+        />
+      </motion.div>
+
+      {/* Toggles for Indian authors */}
+      <motion.div
+        className="flex items-center space-x-4"
+        initial={{ y: 10, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.3, duration: 0.5 }}
+      >
         <div className="flex items-center space-x-2">
-          <Switch id="first-author" checked={isFirstAuthorIndian} onCheckedChange={setIsFirstAuthorIndian} />
+          <Switch
+            id="first-author"
+            checked={isFirstAuthorIndian}
+            onCheckedChange={setIsFirstAuthorIndian}
+          />
           <Label htmlFor="first-author" className="text-sm text-gray-300">
-            First author Indian
+            First Author Indian
           </Label>
         </div>
         <div className="flex items-center space-x-2">
@@ -60,38 +99,48 @@ export function FilterBar({
             onCheckedChange={setIsMajorityAuthorsIndian}
           />
           <Label htmlFor="majority-authors" className="text-sm text-gray-300">
-            Majority authors Indian
+            Majority Authors Indian
           </Label>
         </div>
-      </div>
-      <Popover open={isOpen} onOpenChange={setIsOpen}>
-        <PopoverTrigger asChild>
-          <Button variant="outline" className="w-[180px] justify-between">
-            Conferences
-            <ChevronDown className="ml-2 h-4 w-4 opacity-50" />
-          </Button>
-        </PopoverTrigger>
-        <PopoverContent className="w-[180px] px-1 py-2">
-          <div className="p-2 flex flex-col space-y-2">
-            {conferences.map((conference) => (
-              <div key={conference} className="flex items-center space-x-2 mb-2">
-                <Checkbox
-                  id={conference}
-                  checked={selectedConferences.includes(conference)}
-                  onCheckedChange={() => handleConferenceToggle(conference)}
-                />
-                <label
-                  htmlFor={conference}
-                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                >
-                  {conference}
-                </label>
-              </div>
-            ))}
-          </div>
-        </PopoverContent>
-      </Popover>
-    </div>
+      </motion.div>
+
+      {/* Conferences dropdown */}
+      <motion.div
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ delay: 0.4, duration: 0.5 }}
+      >
+        <Popover open={isOpen} onOpenChange={setIsOpen}>
+          <PopoverTrigger asChild>
+            <Button variant="outline" className="w-[180px] justify-between">
+              <Filter className="mr-2 h-4 w-4" />
+              Conferences
+              <ChevronDown className="ml-2 h-4 w-4 opacity-50" />
+            </Button>
+          </PopoverTrigger>
+          <PopoverContent className="w-[180px] px-1 py-2 bg-black border border-white/20 text-gray-100">
+            <div className="p-2 flex flex-col space-y-2">
+              {conferences.map((conference) => (
+                <div key={conference} className="flex items-center space-x-2 mb-2">
+                  <Checkbox
+                    id={conference}
+                    checked={selectedConferences.includes(conference)}
+                    onCheckedChange={() => handleConferenceToggle(conference)}
+                  />
+                  <label
+                    htmlFor={conference}
+                    className="text-sm font-medium leading-none 
+                               peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                  >
+                    {conference.toUpperCase()}
+                  </label>
+                </div>
+              ))}
+            </div>
+          </PopoverContent>
+        </Popover>
+      </motion.div>
+
+    </motion.div>
   )
 }
-

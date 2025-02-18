@@ -1,4 +1,6 @@
+"use client"
 import { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import {
@@ -23,88 +25,134 @@ export function PaperCard({ paper }: PaperCardProps) {
   const remainingAuthorsCount = authors.length - maxVisibleAuthors
 
   return (
-    <Card className="h-full flex flex-col overflow-hidden transition-shadow hover:shadow-md">
-      <CardHeader className="bg-zinc-900 border-b">
-        <CardTitle className="text-lg text-zinc-200">{paper.paper_title}</CardTitle>
-      </CardHeader>
-      <CardContent className="flex-grow flex flex-col justify-between p-4">
-        <div>
-          {/* Render abstract or a PDF link */}
-          <p className="text-sm text-gray-600 mb-4">
-            {paper.abstract ? (
-              paper.abstract
+    // If you're seeing clipping, remove or override 'overflow-hidden' from here.
+    <motion.div
+      className="h-full flex flex-col overflow-visible" // <--- ensure visible if needed
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+      whileHover={{ scale: 1.01 }}
+    >
+      <Card className="flex flex-col h-full">
+        <CardHeader className="bg-zinc-900 border-b">
+          <CardTitle className="text-lg text-zinc-100 font-semibold">
+            {paper.paper_title}
+          </CardTitle>
+        </CardHeader>
+
+        <CardContent className="flex-grow flex flex-col justify-between p-4">
+          <div>
+            {/* Paper Summary */}
+            <h3 className="font-medium text-gray-800 dark:text-gray-200 mb-2">
+              Paper Summary
+            </h3>
+            {paper.summary && paper.summary.trim() !== "" ? (
+              <p className="text-sm text-gray-600 mb-4">{paper.summary}</p>
             ) : (
-              <a
-                href={paper.pdf_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-100/60 underline"
-              >
-                View PDF
-              </a>
+              <p className="text-sm text-gray-600 mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+                faucibus tortor ut neque consequat, at egestas neque efficitur. Proin
+                vel quam id lectus tempus dignissim eu sit amet arcu.
+              </p>
             )}
-          </p>
-          <div className="flex flex-wrap gap-2 mb-4">
-            <TooltipProvider>
-              {visibleAuthors.map((author, index) => {
-                const displayName = getDisplayName(author)
-                return (
-                  <Tooltip key={index}>
-                    <TooltipTrigger asChild>
-                      <a
-                        href={`https://openreview.net/profile?id=${encodeURIComponent(
-                          author.openreview_id
-                        )}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Badge variant="secondary" className="bg-slate-700 text-blue-200">
-                          {displayName}
-                        </Badge>
-                      </a>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      <p>{getAuthorInfo(author)}</p>
-                    </TooltipContent>
-                  </Tooltip>
-                )
-              })}
-              {/* If not expanded and there are extra authors, show a badge to expand */}
-              {!showAllAuthors && remainingAuthorsCount > 0 && (
-                <Badge
-                  onClick={() => setShowAllAuthors(true)}
-                  className="cursor-pointer bg-zinc-600 text-gray-100"
-                >
-                  +{remainingAuthorsCount} more
-                </Badge>
-              )}
-              {/* If expanded and there are extra authors, show a badge to collapse */}
-              {showAllAuthors && authors.length > maxVisibleAuthors && (
-                <Badge
-                  onClick={() => setShowAllAuthors(false)}
-                  className="cursor-pointer bg-zinc-600 text-gray-100"
-                >
-                  Show less
-                </Badge>
-              )}
-            </TooltipProvider>
+
+            {/* Abstract or PDF link (optional) */}
+            {paper.abstract ? (
+              <>
+                <h3 className="font-medium text-gray-800 dark:text-gray-200 mb-2">
+                  Abstract
+                </h3>
+                <p className="text-sm text-gray-600 mb-4">{paper.abstract}</p>
+              </>
+            ) : (
+              <p className="text-sm text-blue-100/60 underline mb-4">
+                <a href={paper.pdf_url} target="_blank" rel="noopener noreferrer">
+                  View PDF
+                </a>
+              </p>
+            )}
+
+            {/* Author badges with tooltips */}
+            <div className="flex flex-wrap gap-2 mb-4">
+              <TooltipProvider>
+                {visibleAuthors.map((author, index) => {
+                  const displayName = getDisplayName(author)
+                  return (
+                    <Tooltip key={index} delayDuration={200}>
+                      <TooltipTrigger asChild>
+                        <a
+                          href={`https://openreview.net/profile?id=${encodeURIComponent(
+                            author.openreview_id
+                          )}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Badge
+                            variant="secondary"
+                            className="bg-slate-700 text-blue-200 cursor-pointer"
+                          >
+                            {displayName}
+                          </Badge>
+                        </a>
+                      </TooltipTrigger>
+
+                      {/* AnimatePresence ensures we can animate the tooltip in/out */}
+                      <AnimatePresence>
+                        <TooltipContent
+                          as={motion.div}
+                          initial={{ opacity: 0, y: 4 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: 4 }}
+                          transition={{ duration: 0.2 }}
+                          side="top"
+                          sideOffset={10}
+                          className="z-50 max-w-sm p-4 text-sm leading-normal text-white bg-gradient-to-r from-teal-700 to-emerald-800 rounded-md shadow-lg whitespace-pre-line"
+                        >
+                          {getAuthorInfo(author)}
+                        </TooltipContent>
+                      </AnimatePresence>
+                    </Tooltip>
+                  )
+                })}
+
+                {/* Expand/Collapse author list if needed */}
+                {!showAllAuthors && remainingAuthorsCount > 0 && (
+                  <Badge
+                    onClick={() => setShowAllAuthors(true)}
+                    className="cursor-pointer bg-zinc-600 text-gray-100"
+                  >
+                    +{remainingAuthorsCount} more
+                  </Badge>
+                )}
+                {showAllAuthors && authors.length > maxVisibleAuthors && (
+                  <Badge
+                    onClick={() => setShowAllAuthors(false)}
+                    className="cursor-pointer bg-zinc-600 text-gray-100"
+                  >
+                    Show less
+                  </Badge>
+                )}
+              </TooltipProvider>
+            </div>
           </div>
-        </div>
-        <div className="flex justify-between items-center">
-          <Badge className="bg-orange-100 text-orange-800 hover:bg-orange-200">
-            {paper.accepted_in.join(", ")}
-          </Badge>
-          <a
-            href={paper.pdf_url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm text-gray-500 underline"
-          >
-            PDF
-          </a>
-        </div>
-      </CardContent>
-    </Card>
+
+          {/* Footer: accepted_in + PDF link */}
+          <div className="flex justify-between items-center">
+            <Badge className="bg-orange-100 text-orange-800 hover:bg-orange-200">
+              {paper.accepted_in.join(", ")}
+            </Badge>
+            <a
+              href={paper.pdf_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-gray-500 underline"
+            >
+              PDF
+            </a>
+          </div>
+        </CardContent>
+      </Card>
+    </motion.div>
   )
 }
 
@@ -141,15 +189,23 @@ function processOpenReviewId(id: string): string {
 }
 
 /**
- * Returns additional author information for tooltip display.
- */
+ * Returns additional author information for tooltip display as a React component.
+* Using Tailwind CSS for styling.
+*/
 function getAuthorInfo(author: {
-  name?: string
-  affiliation_name: string
-  affiliation_country: string
-  affiliation_domain: string
-  openreview_id: string
-}): string {
-  const displayName = getDisplayName(author)
-  return `${displayName}\nAffiliation: ${author.affiliation_name}\nCountry: ${author.affiliation_country}`
+ name?: string;
+ affiliation_name: string;
+ affiliation_country: string;
+ affiliation_domain: string;
+ openreview_id: string;
+}): JSX.Element {
+ const displayName = getDisplayName(author);
+
+ return (
+   <div className="text-left">
+     <div className="text-lg font-bold">{displayName}</div>
+     <div className="text-gray-100">Affiliation: {author.affiliation_name}</div>
+     <div className="text-gray-100">Country: {author.affiliation_country}</div>
+   </div>
+ );
 }
