@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import {Link} from 'react-router-dom'
+import AnimatedLogo from "./animated-logo"
 
 export function TopNav() {
   return (
@@ -7,15 +8,18 @@ export function TopNav() {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <Link to="/papers-2024" className="text-xl font-bold">
+          <div className="h-16 flex items-center">
+          <div className="h-full">
+          <AnimatedLogo/>
+          </div>
+
+          <div>
             India@ML
+          </div>
+          </div>
+            {/* India@ML */}
           </Link>
           <div className="space-x-4">
-            <Button variant="ghost" className="text-gray-200 hover:text-gray-800 hover:bg-gray-100" asChild>
-              <Link to="/">Home</Link>
-            </Button>
-            <Button variant="ghost" className="text-gray-200 hover:text-gray-800 hover:bg-gray-100" asChild>
-              <Link to="/about">About</Link>
-            </Button>
             <Button variant="ghost" className="text-gray-200 hover:text-gray-800 hover:bg-gray-100" asChild>
               <Link to="/motivation">Motivation</Link>
             </Button>

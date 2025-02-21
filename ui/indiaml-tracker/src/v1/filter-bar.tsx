@@ -21,6 +21,12 @@ interface FilterBarProps {
   setSelectedConferences: (value: string[]) => void
 }
 
+interface Conference {
+  id: string
+  label: string
+  year: number
+}
+
 export function FilterBar({
   searchTerm,
   setSearchTerm,
@@ -31,15 +37,20 @@ export function FilterBar({
   selectedConferences,
   setSelectedConferences,
 }: FilterBarProps) {
-  const conferences = ["neurips", "icml"]
+  // Updated configuration: now each conference includes a year
+  const conferences: Conference[] = [
+    { id: "neurips", label: "NeurIPS", year: 2024 },
+    { id: "icml", label: "ICML", year: 2024 },
+  ]
   const [isOpen, setIsOpen] = useState(false)
 
-  // Toggles a conference in or out of the selectedConferences array
-  const handleConferenceToggle = (conference: string) => {
+  // Toggles a conference (using a composite key of id and year) in or out of the selectedConferences array
+  const handleConferenceToggle = (conference: Conference) => {
+    const conferenceKey = `${conference.id}-${conference.year}`
     setSelectedConferences((prev) =>
-      prev.includes(conference)
-        ? prev.filter((c) => c !== conference)
-        : [...prev, conference]
+      prev.includes(conferenceKey)
+        ? prev.filter((c) => c !== conferenceKey)
+        : [...prev, conferenceKey]
     )
   }
 
@@ -55,7 +66,6 @@ export function FilterBar({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
     >
-
       {/* Search Field with an icon and motion */}
       <motion.div
         className="flex items-center space-x-2 flex-grow"
@@ -120,27 +130,29 @@ export function FilterBar({
           </PopoverTrigger>
           <PopoverContent className="w-[180px] px-1 py-2 bg-black border border-white/20 text-gray-100">
             <div className="p-2 flex flex-col space-y-2">
-              {conferences.map((conference) => (
-                <div key={conference} className="flex items-center space-x-2 mb-2">
-                  <Checkbox
-                    id={conference}
-                    checked={selectedConferences.includes(conference)}
-                    onCheckedChange={() => handleConferenceToggle(conference)}
-                  />
-                  <label
-                    htmlFor={conference}
-                    className="text-sm font-medium leading-none 
-                               peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                  >
-                    {conference.toUpperCase()}
-                  </label>
-                </div>
-              ))}
+              {conferences.map((conference) => {
+                const conferenceKey = `${conference.id}-${conference.year}`
+                return (
+                  <div key={conferenceKey} className="flex items-center space-x-2 mb-2">
+                    <Checkbox
+                      id={conferenceKey}
+                      checked={selectedConferences.includes(conferenceKey)}
+                      onCheckedChange={() => handleConferenceToggle(conference)}
+                    />
+                    <label
+                      htmlFor={conferenceKey}
+                      className="text-sm font-medium leading-none 
+                                 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
+                      {`${conference.label.toUpperCase()} (${conference.year})`}
+                    </label>
+                  </div>
+                )
+              })}
             </div>
           </PopoverContent>
         </Popover>
       </motion.div>
-
     </motion.div>
   )
 }

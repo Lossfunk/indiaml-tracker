@@ -36,7 +36,7 @@
         "top_author_from_india": true,
         "majority_authors_from_india": true,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -62,7 +62,7 @@
         "top_author_from_india": true,
         "majority_authors_from_india": true,
         "accepted_in": [
-            "icml"
+            "icml-2024"
         ]
     },
     {
@@ -88,7 +88,7 @@
         "top_author_from_india": false,
         "majority_authors_from_india": true,
         "accepted_in": [
-            "icml"
+            "icml-2024"
         ]
     },
     {
@@ -184,7 +184,7 @@
         "top_author_from_india": false,
         "majority_authors_from_india": false,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -259,7 +259,7 @@
         "top_author_from_india": false,
         "majority_authors_from_india": false,
         "accepted_in": [
-            "icml"
+            "icml-2024"
         ]
     },
     {
@@ -292,7 +292,7 @@
         "top_author_from_india": true,
         "majority_authors_from_india": true,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -325,7 +325,7 @@
         "top_author_from_india": true,
         "majority_authors_from_india": false,
         "accepted_in": [
-            "icml"
+            "icml-2024"
         ]
     },
     {
@@ -358,7 +358,7 @@
         "top_author_from_india": false,
         "majority_authors_from_india": false,
         "accepted_in": [
-            "icml"
+            "icml-2024"
         ]
     },
     {
@@ -398,7 +398,7 @@
         "top_author_from_india": false,
         "majority_authors_from_india": false,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -424,7 +424,7 @@
         "top_author_from_india": false,
         "majority_authors_from_india": true,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -443,7 +443,7 @@
         "top_author_from_india": true,
         "majority_authors_from_india": true,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -462,7 +462,7 @@
         "top_author_from_india": true,
         "majority_authors_from_india": true,
         "accepted_in": [
-            "icml"
+            "icml-2024"
         ]
     },
     {
@@ -516,7 +516,7 @@
         "top_author_from_india": true,
         "majority_authors_from_india": true,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -591,7 +591,7 @@
         "top_author_from_india": false,
         "majority_authors_from_india": false,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -631,7 +631,7 @@
         "top_author_from_india": true,
         "majority_authors_from_india": true,
         "accepted_in": [
-            "icml"
+            "icml-2024"
         ]
     },
     {
@@ -671,7 +671,7 @@
         "top_author_from_india": false,
         "majority_authors_from_india": true,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -718,7 +718,7 @@
         "top_author_from_india": false,
         "majority_authors_from_india": true,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -758,7 +758,7 @@
         "top_author_from_india": true,
         "majority_authors_from_india": true,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -784,7 +784,7 @@
         "top_author_from_india": true,
         "majority_authors_from_india": true,
         "accepted_in": [
-            "icml"
+            "icml-2024"
         ]
     },
     {
@@ -852,7 +852,7 @@
         "top_author_from_india": false,
         "majority_authors_from_india": false,
         "accepted_in": [
-            "icml"
+            "icml-2024"
         ]
     },
     {
@@ -899,7 +899,7 @@
         "top_author_from_india": true,
         "majority_authors_from_india": true,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -953,7 +953,7 @@
         "top_author_from_india": false,
         "majority_authors_from_india": false,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -986,7 +986,7 @@
         "top_author_from_india": false,
         "majority_authors_from_india": false,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -1019,7 +1019,7 @@
         "top_author_from_india": false,
         "majority_authors_from_india": false,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -1059,7 +1059,7 @@
         "top_author_from_india": false,
         "majority_authors_from_india": false,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -1162,7 +1162,7 @@
         "top_author_from_india": false,
         "majority_authors_from_india": false,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -1202,7 +1202,7 @@
         "top_author_from_india": false,
         "majority_authors_from_india": true,
         "accepted_in": [
-            "icml"
+            "icml-2024"
         ]
     },
     {
@@ -1228,7 +1228,7 @@
         "top_author_from_india": true,
         "majority_authors_from_india": true,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -1289,7 +1289,7 @@
         "top_author_from_india": true,
         "majority_authors_from_india": false,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -1336,7 +1336,7 @@
         "top_author_from_india": false,
         "majority_authors_from_india": false,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -1404,7 +1404,7 @@
         "top_author_from_india": true,
         "majority_authors_from_india": true,
         "accepted_in": [
-            "icml"
+            "icml-2024"
         ]
     },
     {
@@ -1437,7 +1437,7 @@
         "top_author_from_india": true,
         "majority_authors_from_india": false,
         "accepted_in": [
-            "icml"
+            "icml-2024"
         ]
     },
     {
@@ -1463,7 +1463,7 @@
         "top_author_from_india": false,
         "majority_authors_from_india": true,
         "accepted_in": [
-            "icml"
+            "icml-2024"
         ]
     },
     {
@@ -1489,7 +1489,7 @@
         "top_author_from_india": true,
         "majority_authors_from_india": true,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -1522,7 +1522,7 @@
         "top_author_from_india": true,
         "majority_authors_from_india": true,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -1569,7 +1569,7 @@
         "top_author_from_india": true,
         "majority_authors_from_india": false,
         "accepted_in": [
-            "icml"
+            "icml-2024"
         ]
     },
     {
@@ -1602,7 +1602,7 @@
         "top_author_from_india": true,
         "majority_authors_from_india": true,
         "accepted_in": [
-            "icml"
+            "icml-2024"
         ]
     },
     {
@@ -1635,7 +1635,7 @@
         "top_author_from_india": false,
         "majority_authors_from_india": false,
         "accepted_in": [
-            "icml"
+            "icml-2024"
         ]
     },
     {
@@ -1682,7 +1682,7 @@
         "top_author_from_india": false,
         "majority_authors_from_india": false,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -1708,7 +1708,7 @@
         "top_author_from_india": true,
         "majority_authors_from_india": true,
         "accepted_in": [
-            "icml"
+            "icml-2024"
         ]
     },
     {
@@ -1741,7 +1741,7 @@
         "top_author_from_india": false,
         "majority_authors_from_india": false,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -1795,7 +1795,7 @@
         "top_author_from_india": false,
         "majority_authors_from_india": false,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -1849,7 +1849,7 @@
         "top_author_from_india": true,
         "majority_authors_from_india": false,
         "accepted_in": [
-            "icml"
+            "icml-2024"
         ]
     },
     {
@@ -1882,7 +1882,7 @@
         "top_author_from_india": true,
         "majority_authors_from_india": true,
         "accepted_in": [
-            "icml"
+            "icml-2024"
         ]
     },
     {
@@ -1915,7 +1915,7 @@
         "top_author_from_india": false,
         "majority_authors_from_india": false,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -1955,7 +1955,7 @@
         "top_author_from_india": false,
         "majority_authors_from_india": false,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -1981,7 +1981,7 @@
         "top_author_from_india": true,
         "majority_authors_from_india": true,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -2028,7 +2028,7 @@
         "top_author_from_india": true,
         "majority_authors_from_india": true,
         "accepted_in": [
-            "icml"
+            "icml-2024"
         ]
     },
     {
@@ -2068,7 +2068,7 @@
         "top_author_from_india": false,
         "majority_authors_from_india": false,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -2122,7 +2122,7 @@
         "top_author_from_india": true,
         "majority_authors_from_india": false,
         "accepted_in": [
-            "icml"
+            "icml-2024"
         ]
     },
     {
@@ -2155,7 +2155,7 @@
         "top_author_from_india": true,
         "majority_authors_from_india": false,
         "accepted_in": [
-            "icml"
+            "icml-2024"
         ]
     },
     {
@@ -2195,7 +2195,7 @@
         "top_author_from_india": false,
         "majority_authors_from_india": false,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -2522,7 +2522,7 @@
         "top_author_from_india": false,
         "majority_authors_from_india": false,
         "accepted_in": [
-            "icml"
+            "icml-2024"
         ]
     },
     {
@@ -2576,7 +2576,7 @@
         "top_author_from_india": true,
         "majority_authors_from_india": true,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -2644,7 +2644,7 @@
         "top_author_from_india": false,
         "majority_authors_from_india": false,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -2691,7 +2691,7 @@
         "top_author_from_india": false,
         "majority_authors_from_india": false,
         "accepted_in": [
-            "icml"
+            "icml-2024"
         ]
     },
     {
@@ -2731,7 +2731,7 @@
         "top_author_from_india": false,
         "majority_authors_from_india": false,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -2764,7 +2764,7 @@
         "top_author_from_india": true,
         "majority_authors_from_india": true,
         "accepted_in": [
-            "neurips"
+            "neurips-2024"
         ]
     },
     {
@@ -2797,7 +2797,7 @@
         "top_author_from_india": false,
         "majority_authors_from_india": true,
         "accepted_in": [
-            "icml"
+            "icml-2024"
         ]
     },
     {
@@ -2844,7 +2844,7 @@
         "top_author_from_india": true,
         "majority_authors_from_india": true,
         "accepted_in": [
-            "icml"
+            "icml-2024"
         ]
     },
     {
@@ -2884,7 +2884,7 @@
         "top_author_from_india": false,
         "majority_authors_from_india": false,
         "accepted_in": [
-            "icml"
+            "icml-2024"
         ]
     }
 ]
