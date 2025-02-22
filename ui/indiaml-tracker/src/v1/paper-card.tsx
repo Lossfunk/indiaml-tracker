@@ -46,8 +46,8 @@ export function PaperCard({ paper }: PaperCardProps) {
             <h3 className="font-medium text-gray-800 dark:text-gray-200 mb-2">
               Paper Summary
             </h3>
-            {paper.summary && paper.summary.trim() !== "" ? (
-              <p className="text-sm text-gray-600 mb-4">{paper.summary}</p>
+            {paper.paper_content && paper.paper_content.trim() !== "" ? (
+              <p className="text-sm text-gray-600 mb-4">{paper.paper_content}</p>
             ) : (
               <p className="text-sm text-gray-600 mb-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
