@@ -312,7 +312,7 @@ const HomePage = () => {
               <div className="my-8 p-6 bg-gray-800 rounded-lg">
                 <h3 className="text-xl font-semibold mb-4">The Tweet That Started It All</h3>
                 <p>
-                  Paras Chopra, CEO of Wingify, tweeted asking if anyone was interested in building a platform to track India's contributions
+                  Paras Chopra, Founder of <a href="https://lossfunk.com">Lossfunk</a>, tweeted asking if anyone was interested in building a platform to track India's contributions
                   to machine learning.
                 </p>
               </div>
@@ -320,7 +320,7 @@ const HomePage = () => {
               <div className="my-8 p-6 bg-gray-800 rounded-lg">
                 <h3 className="text-xl font-semibold mb-4">From Idea to Reality</h3>
                 <p>
-                  Sohan Basak, who loves tech and just writing code, responded to the challenge and quickly built the first version of the
+                  <a href="https://iamsohan.in">Sohan Basak</a>, who loves tech and AI/ML, responded to the challenge and quickly built the first version of the
                   tracker.
                 </p>
               </div>

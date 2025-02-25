@@ -123,14 +123,14 @@ const Motivation = () => {
               <FaTwitter className="text-blue-400 mr-3 text-xl" />
               <p className="text-gray-300 italic text-sm">
                 "i'm happy to fund this if someone builds a tracker" 
-                <span className="text-blue-400 ml-1">@paraschopra</span>
+                <a href="https://x.com/paraschopra" className="text-blue-400 ml-1">@paraschopra</a>
               </p>
             </div>
             <div className="flex items-center">
               <FaTwitter className="text-blue-400 mr-3 text-xl" />
               <p className="text-gray-300 italic text-sm">
                 "Cool. Weekend project locked in if no one else has already done so."
-                <span className="text-blue-400 ml-1">@HiSohan</span>
+                <a href="https://x.com/HiSohan" className="text-blue-400 ml-1">@HiSohan</a>
               </p>
             </div>
             <p className="text-gray-400 text-xs mt-4 text-right">January 23, 2023</p>
