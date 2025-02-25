@@ -38,12 +38,12 @@ const storyMilestones = [
   {
     icon: <FaTwitter className="text-blue-400 text-2xl" />,
     title: "The Tweet That Started It All",
-    content: "Paras Chopra, CEO of Wingify, tweeted asking if anyone was interested in building a platform to track India's contributions to machine learning."
+    content: "Paras Chopra, Founder of Lossfunk, tweeted asking if anyone was interested in building a platform to track India's contributions to machine learning."
   },
   {
     icon: <FaCode className="text-green-400 text-2xl" />,
     title: "From Idea to Reality",
-    content: "Sohan Basak, who loves tech and just writing code, responded to the challenge and quickly built the first version of the tracker."
+    content: "Sohan Basak, Loves tech and tinkering, building tech, responded to the challenge and quickly built the first version of the tracker."
   },
   {
     icon: <FaHandshake className="text-yellow-400 text-2xl" />,
