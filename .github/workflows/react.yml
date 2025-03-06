@@ -21,6 +21,7 @@ concurrency:
 
 env:
   BUILD_PATH: "./ui/indiaml-tracker"  # folder where package.json exists
+  VITE_BASE_URL: "/indiaml-tracker"  # Set the base URL using VITE_BASE_URL for Vite
 
 jobs:
   build:
