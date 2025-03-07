@@ -47,7 +47,7 @@ export default function Home() {
           transition={{ duration: 0.8, delay: 0.7 }}
         >
           <a
-            href="https://github.com/ronniebasak/indiaml-tracker/"
+            href="https://github.com/lossfunk/indiaml-tracker/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-md bg-indigo-600 hover:bg-indigo-500 transition-colors"
