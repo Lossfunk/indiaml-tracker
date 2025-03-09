@@ -133,7 +133,7 @@ const Motivation = () => {
                 <a href="https://x.com/HiSohan" className="text-blue-400 ml-1">@HiSohan</a>
               </p>
             </div>
-            <p className="text-gray-400 text-xs mt-4 text-right">January 23, 2024</p>
+            <p className="text-gray-400 text-xs mt-4 text-right">January 23, 2025</p>
           </div>
         </motion.div>
 
@@ -163,7 +163,7 @@ const Motivation = () => {
           <h3 className="text-2xl font-semibold text-white mb-6">Join Us in Mapping India's ML Journey</h3>
           <div className="flex flex-wrap justify-center gap-4">
             <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-md transition-colors">
-              Submit Research
+              Submit Research 
             </button>
             <button className="bg-transparent border-2 border-indigo-500 text-indigo-300 hover:bg-indigo-900 px-6 py-3 rounded-md transition-colors">
               Learn More
