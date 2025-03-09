@@ -133,7 +133,7 @@ const Motivation = () => {
                 <a href="https://x.com/HiSohan" className="text-blue-400 ml-1">@HiSohan</a>
               </p>
             </div>
-            <p className="text-gray-400 text-xs mt-4 text-right">January 23, 2023</p>
+            <p className="text-gray-400 text-xs mt-4 text-right">January 23, 2024</p>
           </div>
         </motion.div>
 
@@ -156,7 +156,7 @@ const Motivation = () => {
         </motion.div>
 
         {/* Call to Action */}
-        <motion.div 
+        {/* <motion.div 
           className="text-center mt-16"
           variants={itemVariants}
         >
@@ -170,7 +170,7 @@ const Motivation = () => {
             </button>
           </div>
         </motion.div>
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 };
