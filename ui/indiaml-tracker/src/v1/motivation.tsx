@@ -169,8 +169,8 @@ const Motivation = () => {
               Learn More
             </button>
           </div>
-        </motion.div>
-      </motion.div> */}
+        </motion.div> */}
+      </motion.div>
     </section>
   );
 };
