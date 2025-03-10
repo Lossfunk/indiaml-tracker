@@ -3,13 +3,45 @@
 
 ## Project Overview
 
-The IndiaML Tracker was developed to highlight India's contributions to the global machine learning research landscape. It systematically collects, processes, and analyzes research papers from major AI conferences, focusing on identifying and tracking author affiliations with Indian institutions.
+The IndiaML Tracker systematically identifies, analyzes, and highlights India's contributions to global machine learning research. Born from a Twitter exchange between Paras Chopra (Lossfunk Founder) and developer Sohan Basak in January 2025, the project focuses specifically on research conducted within Indian institutions rather than diaspora contributions. This focused approach aims to showcase domestic innovation and inspire the next generation of researchers.
+
+## Why We Built IndiaML Tracker
+
+Despite India's growing presence in global ML research, there was no dedicated platform to quantify this contribution. The IndiaML Tracker addresses this gap by providing metrics and insights about Indian institutions' participation in top-tier ML conferences. Our goals include:
+
+- Increasing visibility of Indian research institutions globally
+- Creating benchmarks for measuring progress in ML research output
+- Identifying collaboration opportunities between institutions
+- Inspiring young researchers by showcasing successful Indian contributions
+- Informing policy decisions through comprehensive research landscape data
+
+## How It Works
+
+The IndiaML Tracker employs a data pipeline that:
+
+1. Collects research paper metadata from major AI conferences
+2. Analyzes author affiliations with a multi-stage approach
+3. Resolves affiliations based on publication dates to account for researcher mobility
+4. Determines institution locations through domain knowledge and LLM-based analysis
+5. Validates data through multiple verification layers
+6. Generates analytics and visualizations from the processed data
+
+## What It Delivers
+
+The system provides several key outputs:
+
+- A comprehensive database of ML research papers with Indian author affiliations
+- Institutional insights and publication pattern analysis
+- Year-over-year tracking of India's growing contribution to global ML research
+- Visualization of research partnerships between Indian and international institutions
+- Thematic analysis of India's contribution areas
+- An interactive dashboard for exploring data and generating custom reports
 
 ## Architecture Diagram
 
 ![IndiaML Architecture Diagram](./indiaml-architecture.svg)
 
-## Project Structure (Pipeline code is relative to indiaml)
+## Project Structure
 
 ```
 indiaml/
@@ -51,18 +83,14 @@ indiaml/
 
 ### 1. Data Models (`indiaml/models/`)
 
-The system uses two types of data models:
-
-#### Database Models (`indiaml/models/models.py`)
-
-SQLAlchemy ORM classes that represent the database schema:
+The system uses SQLAlchemy ORM classes for database schema and lightweight data transfer objects:
 
 ```python
 # Key database entities:
-class VenueInfo(Base):     # Conference venue details
-class Paper(Base):         # Research paper information
-class Author(Base):        # Author details 
-class PaperAuthor(Base):   # Many-to-many mapping with affiliation data
+class VenueInfo(Base)      # Conference venue details
+class Paper(Base)          # Research paper information
+class Author(Base)         # Author details 
+class PaperAuthor(Base)    # Many-to-many mapping with affiliation data
 ```
 
 #### Data Transfer Objects (`indiaml/models/dto.py`)
@@ -85,6 +113,7 @@ class PaperDTO:
 ```
 
 ### 2. Pipeline Components (`indiaml/pipeline/`)
+
 
 The data processing pipeline consists of several sequential steps:
 
