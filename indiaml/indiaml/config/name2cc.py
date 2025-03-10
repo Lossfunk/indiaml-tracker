@@ -1,6 +1,3 @@
-# university_country_mapping.py
-
-# Mapping of universities and research institutions to their respective country codes
 affiliation_to_country = {
     "Carnegie Mellon University": "US",
     "University of Toronto": "CA",
