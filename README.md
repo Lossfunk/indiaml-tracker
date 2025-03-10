@@ -4,6 +4,10 @@
 
 The IndiaML Tracker was developed to highlight India's contributions to the global machine learning research landscape. It systematically collects, processes, and analyzes research papers from major AI conferences, focusing on identifying and tracking author affiliations with Indian institutions.
 
+## Architecture Diagram
+
+![IndiaML Architecture Diagram](./indiaml-architecture.svg)
+
 ## Project Structure (Pipeline code is relative to indiaml)
 
 ```
