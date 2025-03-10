@@ -1,5 +1,3 @@
-# adapters/adapter_factory.py
-
 from .base_adapter import BaseAdapter
 from .neurips_adapter import NeurIPSAdapter
 from .icml_adapter import ICMLAdapter

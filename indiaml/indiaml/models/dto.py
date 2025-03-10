@@ -1,4 +1,3 @@
-# dto.py
 from typing import Dict, Optional, List
 from dataclasses import dataclass
 

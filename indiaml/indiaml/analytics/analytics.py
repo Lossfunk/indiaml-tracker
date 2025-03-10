@@ -1,8 +1,6 @@
 import json
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, joinedload
-
-# Import your models (adjust import path according to your project structure)
 from ..models.models import Base, Paper, VenueInfo, PaperAuthor
 
 

@@ -1,4 +1,3 @@
-# models/models.py
 from datetime import datetime
 from sqlalchemy.orm import relationship, declarative_base
 from sqlalchemy import (
