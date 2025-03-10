@@ -1,3 +1,4 @@
+![Lossfunk India@ML Logo](./lossfunk-indiaml.png)
 # IndiaML Tracker Documentation
 
 ## Project Overview
