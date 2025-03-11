@@ -1,32 +1,142 @@
+# 🚀 IndiaML Tracker
+
 ![Lossfunk India@ML Logo](./lossfunk-indiaml.png)
-# IndiaML Tracker Documentation
 
-## Project Overview
+Highlighting India's contributions to global machine learning research, one paper at a time.
 
-The IndiaML Tracker systematically identifies, analyzes, and highlights India's contributions to global machine learning research. Born from a Twitter exchange between Paras Chopra (Lossfunk Founder) and developer Sohan Basak in January 2025, the project focuses specifically on research conducted within Indian institutions rather than diaspora contributions. This focused approach aims to showcase domestic innovation and inspire the next generation of researchers.
+## 📋 Overview
 
-## Why We Built IndiaML Tracker
+The IndiaML Tracker systematically identifies, analyzes, and highlights India's contributions to global machine learning research. Born from a Twitter exchange between Paras Chopra (Lossfunk Founder) and Sohan Basak (Hardcode technologist) in January 2025, the project focuses specifically on research conducted within Indian institutions. This approach aims to showcase domestic innovation and inspire the next generation of researchers.
 
-Despite India's growing presence in global ML research, there was no dedicated platform to quantify this contribution. The IndiaML Tracker addresses this gap by providing metrics and insights about Indian institutions' participation in top-tier ML conferences. Our goals include:
+### Why We Built This
 
+Despite India's growing presence in global ML research, there was no dedicated platform to quantify this contribution. The IndiaML Tracker addresses this gap by providing metrics about Indian institutions' participation in top-tier ML conferences.
+
+Our goals include:
 - Increasing visibility of Indian research institutions globally
 - Creating benchmarks for measuring progress in ML research output
 - Identifying collaboration opportunities between institutions
 - Inspiring young researchers by showcasing successful Indian contributions
-- Informing policy decisions through comprehensive research landscape data
 
-## How It Works
+## 🤝 How to Contribute
 
-The IndiaML Tracker employs a data pipeline that:
+We welcome contributions from the community! Here are the most common ways to help:
 
-1. Collects research paper metadata from major AI conferences
-2. Analyzes author affiliations with a multi-stage approach
-3. Resolves affiliations based on publication dates to account for researcher mobility
-4. Determines institution locations through domain knowledge and LLM-based analysis
-5. Validates data through multiple verification layers
-6. Generates analytics and visualizations from the processed data
+### 1️⃣ Run the Pipeline and Submit Data
 
-## What It Delivers
+This is the most valuable contribution you can make - it helps expand our dataset and verify existing information.
+
+```bash
+# Clone the repository
+git clone https://github.com/lossfunk/indiaml-tracker.git
+cd indiaml
+
+# Set up environment
+uv venv --python=3.11
+uv pip install .
+
+# Add your API keys in a .env file
+# OPENROUTER_API_KEY=your_key_here
+
+# Install dependencies from pyproject.toml
+uv pip install .
+
+# Run the pipeline
+python -m indiaml.pipeline.process_venue
+python -m indiaml.pipeline.process_authors
+python -m indiaml.pipeline.process_paper_author_mapping
+
+# Run country code resolution
+python -m indiaml.pipeline.patch_unk_cc2
+python -m indiaml.pipeline.patch_unk_cc3
+python -m indiaml.pipeline.patch_unk_cc4
+
+# Generate analytics
+python -m indiaml.analytics.analytics
+```
+
+Then submit your updated data by creating a pull request!
+
+### 2️⃣ Verify and Correct Data
+
+Data quality is crucial. You can help by checking and correcting:
+- Author names and affiliations
+- Institutional assignments
+- Country codes
+
+For corrections, open an issue with details or submit a PR with your changes.
+
+### 3️⃣ Other Ways to Help
+
+<details>
+<summary>Enhance existing components</summary>
+
+You can improve:
+- Affiliation resolution algorithms
+- Country code resolution
+- Data models
+
+Check out the CONTRIBUTING.md file for more details.
+</details>
+
+<details>
+<summary>Add new data sources</summary>
+
+The system can be extended to include data from:
+- arXiv (ML/AI categories)
+- ACL Anthology
+- IEEE Xplore
+- ACM Digital Library
+
+See CONTRIBUTING.md for implementation guidelines.
+</details>
+
+<details>
+<summary>Improve documentation</summary>
+
+Help us make the project more accessible through:
+- Better code comments
+- Updated READMEs
+- Tutorials and examples
+- Architecture diagrams
+</details>
+
+## 🧪 Project Structure
+
+<details>
+<summary>Click to see the full project structure</summary>
+
+```
+indiaml/
+├── __init__.py
+├── main.py
+├── pipeline/           # Data processing pipeline components
+│   ├── process_venue.py
+│   ├── process_authors.py
+│   ├── affiliation_checker.py
+│   └── patch_unk_cc*.py
+├── config/             # Configuration files
+├── models/             # Data models
+├── venue_adapters/     # Adapters for different data sources
+├── analytics/          # Analysis and visualization
+└── tests/              # Test suite
+```
+</details>
+
+<details>
+<summary>How the pipeline works</summary>
+
+1. **Collect** research paper metadata from major AI conferences
+2. **Analyze** author affiliations with a multi-stage approach
+3. **Resolve** affiliations based on publication dates
+4. **Determine** institution locations through domain knowledge and analysis
+5. **Validate** data through multiple verification layers
+6. **Generate** analytics and visualizations
+
+For detailed technical documentation, see the [full documentation](./DOCUMENTATION.md).
+</details>
+
+## 📊 What We Deliver
 
 The system provides several key outputs:
 
@@ -34,272 +144,16 @@ The system provides several key outputs:
 - Institutional insights and publication pattern analysis
 - Year-over-year tracking of India's growing contribution to global ML research
 - Visualization of research partnerships between Indian and international institutions
-- Thematic analysis of India's contribution areas
-- An interactive dashboard for exploring data and generating custom reports
 
-## Architecture Diagram
+## 🔧 Setup for Development
 
-![IndiaML Architecture Diagram](./indiaml-architecture.svg)
-
-## Project Structure
-
-```
-indiaml/
-├── __init__.py
-├── main.py
-├── pipeline/
-│   ├── __init__.py
-│   ├── affiliation_checker.py
-│   ├── process_venue.py
-│   ├── process_authors.py
-│   ├── process_paper_author_mapping.py
-│   ├── patch_unk_cc2.py
-│   ├── patch_unk_cc3.py
-│   ├── patch_unk_cc4.py
-│   └── patch_unk_cc5.py
-├── config/
-│   ├── db_config.py
-│   ├── venues_config.py
-│   ├── name2cc.py
-│   └── d2cc.py
-├── models/
-│   ├── models.py
-│   └── dto.py
-├── venue_adapters/
-│   ├── adapter_factory.py
-│   ├── base_adapter.py
-│   ├── neurips_adapter.py
-│   ├── icml_adapter.py
-│   └── icai_adapter.py
-├── venue/
-│   └── venudao.py
-├── analytics/
-│   └── analytics.py
-└── tests/
-    └── test_affiliation_checker.py
-```
-
-## Core Components
-
-### 1. Data Models (`indiaml/models/`)
-
-The system uses SQLAlchemy ORM classes for database schema and lightweight data transfer objects:
-
-```python
-# Key database entities:
-class VenueInfo(Base)      # Conference venue details
-class Paper(Base)          # Research paper information
-class Author(Base)         # Author details 
-class PaperAuthor(Base)    # Many-to-many mapping with affiliation data
-```
-
-#### Data Transfer Objects (`indiaml/models/dto.py`)
-
-Lightweight objects for transferring data between components:
-
-```python
-@dataclass
-class AuthorDTO:
-    name: str
-    email: Optional[str] = None
-    # Other author fields...
-
-@dataclass
-class PaperDTO:
-    id: str
-    title: str
-    # Other paper fields...
-    authors: List[AuthorDTO]
-```
-
-### 2. Pipeline Components (`indiaml/pipeline/`)
-
-
-The data processing pipeline consists of several sequential steps:
-
-#### Paper Metadata Processing (`indiaml/pipeline/process_venue.py`)
-
-Fetches and stores paper metadata from conference venues:
-
-```python
-def main_flow(configs: List[VenueConfig], only_accepted: bool = True, cache_dir: str = "cache"):
-    """
-    Orchestrate the processing of multiple venues:
-    - Fetch papers
-    - Store metadata
-    """
-    # Implementation...
-```
-
-#### Author Processing (`indiaml/pipeline/process_authors.py`)
-
-Processes authors from stored papers:
-
-```python
-def process_authors():
-    """Process authors from stored papers and save them to the database."""
-    # Implementation...
-```
-
-#### Affiliation Checking (`indiaml/pipeline/affiliation_checker.py`)
-
-Core component that resolves author affiliations based on publication date:
-
-```python
-class AffiliationChecker:
-    def resolve_affiliation(self, affiliation_history: List[Dict[str, Any]], 
-                            paper_date: datetime) -> Optional[Dict[str, Any]]:
-        """
-        Determine the author's affiliation at the time of the paper's publication.
-        """
-        # Implementation...
-```
-
-#### Paper-Author Mapping (`indiaml/pipeline/process_paper_author_mapping.py`)
-
-Links papers to authors with the correct affiliation information:
-
-```python
-def create_paper_authors():
-    """
-    Populate the PaperAuthor table with paper-author associations and affiliation details.
-    """
-    # Implementation...
-```
-
-#### Country Code Resolution (`indiaml/pipeline/patch_unk_cc*.py`)
-
-Multiple scripts for resolving unknown country codes:
-
-- `indiaml/pipeline/patch_unk_cc2.py`: Uses domain-based inference
-- `indiaml/pipeline/patch_unk_cc3.py`: Uses name-based mapping
-- `indiaml/pipeline/patch_unk_cc4.py`: Additional name-based mapping
-- `indiaml/pipeline/patch_unk_cc5.py`: Advanced resolution using LLM-based content analysis
-
-### 3. Venue Adapters (`indiaml/venue_adapters/`)
-
-The adapter pattern allows handling different data sources uniformly:
-
-#### Base Adapter (`indiaml/venue_adapters/base_adapter.py`)
-
-Abstract base class for venue-specific adapters:
-
-```python
-class BaseAdapter(ABC):
-    @abstractmethod
-    def fetch_papers(self) -> List[PaperRecord]:
-        """Fetches papers from the provider."""
-        pass
-        
-    @abstractmethod
-    def determine_status(self, venue_group: openreview.Group, venueid: str) -> str:
-        """Determines the submission status based on venue-specific logic."""
-        pass
-        
-    @abstractmethod
-    def fetch_authors(self, author_ids: List[str]) -> List[AuthorDTO]:
-        """Fetches author details for the given author IDs."""
-        pass
-```
-
-#### Conference-Specific Adapters
-
-- `indiaml/venue_adapters/neurips_adapter.py`: Implementation for NeurIPS
-- `indiaml/venue_adapters/icml_adapter.py`: Implementation for ICML
-- `indiaml/venue_adapters/icai_adapter.py`: Implementation for ICAI
-
-#### Adapter Factory (`indiaml/venue_adapters/adapter_factory.py`)
-
-Factory pattern for creating appropriate adapters:
-
-```python
-def get_adapter(config) -> BaseAdapter:
-    """Factory function to get the appropriate adapter instance based on the config."""
-    # Implementation...
-```
-
-### 4. Database Access Layer (`indiaml/venue/venudao.py`)
-
-Repository pattern implementation for database operations:
-
-```python
-class VenueDB:
-    """Data Access Layer using SQLAlchemy ORM."""
-    
-    def store_papers(self, paper_dtos: List[PaperDTO]):
-        # Implementation...
-        
-    def get_or_create_author(self, author_dto: AuthorDTO) -> Author:
-        # Implementation...
-        
-    def resolve_affiliation(self, author: Author, paper_date: datetime) -> Optional[Dict]:
-        # Implementation...
-```
-
-### 5. Configuration (`indiaml/config/`)
-
-Various configuration files:
-
-- `indiaml/config/venues_config.py`: Conference venue configurations
-- `indiaml/config/db_config.py`: Database configuration
-- `indiaml/config/name2cc.py`: Institution name to country code mappings
-- `indiaml/config/d2cc.py`: Domain to country code mappings
-
-### 6. Analytics (`indiaml/analytics/analytics.py`)
-
-Generates analytics from the processed data:
-
-```python
-def generate_papers_json(output_path='papers_output.json'):
-    """Generates a JSON file with paper information and author affiliations."""
-    # Implementation...
-```
-
-### 7. Tests (`indiaml/tests/`)
-
-Unit tests for components:
-
-- `indiaml/tests/test_affiliation_checker.py`: Tests for the AffiliationChecker
-
-## Pipeline Execution Flow
-
-To build a complete dataset, execute these steps in sequence:
-
-```bash
-# 1. Fetch and store paper metadata
-python -m indiaml.pipeline.process_venue
-
-# 2. Process author information
-python -m indiaml.pipeline.process_authors
-
-# 3. Create paper-author mappings with affiliations
-python -m indiaml.pipeline.process_paper_author_mapping
-
-# 4. Resolve unknown country codes (run in sequence)
-python -m indiaml.pipeline.patch_unk_cc2
-python -m indiaml.pipeline.patch_unk_cc3
-python -m indiaml.pipeline.patch_unk_cc4
-
-# 5. Advanced country resolution (optional, requires API key)
-python -m indiaml.pipeline.patch_unk_cc5
-
-# 6. Generate analytics output
-python -m indiaml.analytics.analytics
-```
-
-## Environment Setup
+<details>
+<summary>Prerequisites and environment setup</summary>
 
 ### Prerequisites
-1. Python 3.8+
-2. Access to OpenReview API
-3. SQLite (for database storage)
-4. Required Python packages (install via `pip install -r requirements.txt`):
-   - sqlalchemy
-   - openreview-py
-   - pydantic
-   - requests
-   - pymupdf4llm
-   - python-dotenv
+- Python 3.8+
+- SQLite
+- Required Python packages (install via `pip install -r requirements.txt`)
 
 ### Configuration
 
@@ -308,81 +162,13 @@ python -m indiaml.analytics.analytics
    OPENROUTER_API_KEY=your_api_key_here  # For LLM-based affiliation resolution
    ```
 
-2. Configure venues in `indiaml/config/venues_config.py`:
-   ```python
-   VENUE_CONFIGS = [
-       VenueConfig(
-           conference="NeurIPS",
-           year=2024,
-           track="Conference",
-           source_adapter="openreview",
-           source_id="NeurIPS.cc/2024/Conference",
-           adapter_class="NeurIPSAdapter"
-       ),
-       # Add more conferences as needed
-   ]
-   ```
+2. Configure venues in `indiaml/config/venues_config.py`
+</details>
 
-## Adding New Data Sources
-
-To extend the system with new conference sources:
-
-1. **Create a new adapter** in `indiaml/venue_adapters/`:
-   ```python
-   # indiaml/venue_adapters/new_conference_adapter.py
-   from .base_adapter import BaseAdapter
-   
-   class NewConferenceAdapter(BaseAdapter):
-       def fetch_papers(self) -> List[PaperDTO]:
-           # Implementation...
-           
-       def determine_status(self, venue_group, venueid) -> str:
-           # Implementation...
-           
-       def fetch_authors(self, author_ids) -> List[AuthorDTO]:
-           # Implementation...
-   ```
-
-2. **Update the adapter factory** in `indiaml/venue_adapters/adapter_factory.py`:
-   ```python
-   adapter_classes = {
-       # Existing adapters...
-       "NewConferenceAdapter": NewConferenceAdapter,
-   }
-   ```
-
-3. **Add configuration** in `indiaml/config/venues_config.py`:
-   ```python
-   VENUE_CONFIGS.append(
-       VenueConfig(
-           conference="NewConference",
-           year=2024,
-           track="Conference",
-           source_adapter="openreview",  # or other source
-           source_id="NewConference.cc/2024/Conference",
-           adapter_class="NewConferenceAdapter"
-       )
-   )
-   ```
-
-## Testing
-
-Run the test suite:
-
-```bash
-# Run all tests
-python -m unittest discover indiaml.tests
-
-# Run specific test
-python -m unittest indiaml.tests.test_affiliation_checker
-```
-
-## Output
-
-After running the pipeline, results will be available in:
-- SQLite database: `venues.db`
-- JSON output: `papers_output.json` (generated by `indiaml.analytics.analytics`)
-
-## License
+## 📜 License
 
 [MIT License](LICENSE)
+
+---
+
+Made with ❤️ by the IndiaML Tracker team. Join us in highlighting India's contributions to global ML research!
