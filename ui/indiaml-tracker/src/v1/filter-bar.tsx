@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -25,6 +25,7 @@ interface Conference {
   id: string
   label: string
   year: number
+  file: string // Added to store the original filename
 }
 
 export function FilterBar({
@@ -37,12 +38,46 @@ export function FilterBar({
   selectedConferences,
   setSelectedConferences,
 }: FilterBarProps) {
-  // Updated configuration: now each conference includes a year
-  const conferences: Conference[] = [
-    { id: "neurips", label: "NeurIPS", year: 2024 },
-    { id: "icml", label: "ICML", year: 2024 },
-  ]
+  const [conferences, setConferences] = useState<Conference[]>([])
   const [isOpen, setIsOpen] = useState(false)
+  const [loading, setLoading] = useState(true)
+
+  // Fetch conference data from index.json
+  useEffect(() => {
+    async function fetchConferenceIndex() {
+      try {
+        const response = await fetch('/tracker/index.json')
+        if (!response.ok) {
+          throw new Error('Failed to fetch conference index')
+        }
+        const data = await response.json()
+        
+        // Transform the data to match our Conference interface
+        const transformedData = data.map((item: { label: string, file: string }) => {
+          // Parse the label to extract conference name and year
+          // Assuming format like "ICLR 2024"
+          const labelParts = item.label.split(' ')
+          const year = parseInt(labelParts[labelParts.length - 1], 10)
+          const id = labelParts[0].toLowerCase().replace('-', '')
+          
+          return {
+            id,
+            label: labelParts[0],
+            year,
+            file: item.file
+          }
+        })
+        
+        setConferences(transformedData)
+        setLoading(false)
+      } catch (error) {
+        console.error("Error fetching conference index:", error)
+        setLoading(false)
+      }
+    }
+
+    fetchConferenceIndex()
+  }, [])
 
   // Toggles a conference (using a composite key of id and year) in or out of the selectedConferences array
   const handleConferenceToggle = (conference: Conference) => {
@@ -130,25 +165,29 @@ export function FilterBar({
           </PopoverTrigger>
           <PopoverContent className="w-[180px] px-1 py-2 bg-black border border-white/20 text-gray-100">
             <div className="p-2 flex flex-col space-y-2">
-              {conferences.map((conference) => {
-                const conferenceKey = `${conference.id}-${conference.year}`
-                return (
-                  <div key={conferenceKey} className="flex items-center space-x-2 mb-2">
-                    <Checkbox
-                      id={conferenceKey}
-                      checked={selectedConferences.includes(conferenceKey)}
-                      onCheckedChange={() => handleConferenceToggle(conference)}
-                    />
-                    <label
-                      htmlFor={conferenceKey}
-                      className="text-sm font-medium leading-none 
+              {loading ? (
+                <div className="text-sm text-gray-400">Loading conferences...</div>
+              ) : (
+                conferences.map((conference) => {
+                  const conferenceKey = `${conference.id}-${conference.year}`
+                  return (
+                    <div key={conferenceKey} className="flex items-center space-x-2 mb-2">
+                      <Checkbox
+                        id={conferenceKey}
+                        checked={selectedConferences.includes(conferenceKey)}
+                        onCheckedChange={() => handleConferenceToggle(conference)}
+                      />
+                      <label
+                        htmlFor={conferenceKey}
+                        className="text-sm font-medium leading-none 
                                  peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                    >
-                      {`${conference.label.toUpperCase()} (${conference.year})`}
-                    </label>
-                  </div>
-                )
-              })}
+                      >
+                        {`${conference.label.toUpperCase()} (${conference.year})`}
+                      </label>
+                    </div>
+                  )
+                })
+              )}
             </div>
           </PopoverContent>
         </Popover>

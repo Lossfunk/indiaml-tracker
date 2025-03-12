@@ -1,0 +1,1315 @@
+[
+  {
+    "paper_title": "Total Variation Distance Meets Probabilistic Inference",
+    "paper_id": "6OSLjErBhh",
+    "pdf_url": "http://openreview.net/pdf/e6ffa80506c26dd3909c142042ed7744ef824792.pdf",
+    "author_list": [
+      {
+        "name": "Arnab Bhattacharyya",
+        "openreview_id": "~Arnab_Bhattacharyya1",
+        "affiliation_name": "The University of Warwick",
+        "affiliation_domain": "warwick.ac.uk",
+        "affiliation_country": "GB"
+      },
+      {
+        "name": "Sutanu Gayen",
+        "openreview_id": "~Sutanu_Gayen1",
+        "affiliation_name": "Indian Institute of Technology, Kanpur",
+        "affiliation_domain": "iitk.ac.in",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "Kuldeep S. Meel",
+        "openreview_id": "~Kuldeep_S._Meel2",
+        "affiliation_name": "Department of Computer Science",
+        "affiliation_domain": "cs.toronto.edu",
+        "affiliation_country": "CA"
+      },
+      {
+        "name": "Dimitrios Myrisiotis",
+        "openreview_id": "~Dimitrios_Myrisiotis1",
+        "affiliation_name": "CNRS@CREATE LTD.",
+        "affiliation_domain": "cnrsatcreate.cnrs.fr",
+        "affiliation_country": "FR"
+      },
+      {
+        "name": "A. Pavan",
+        "openreview_id": "~A._Pavan1",
+        "affiliation_name": "Iowa State University",
+        "affiliation_domain": "iastate.edu",
+        "affiliation_country": "US"
+      }
+    ],
+    "top_author_from_india": false,
+    "majority_authors_from_india": false,
+    "paper_content": "This paper establishes a novel link between total variation distance estimation and probabilistic inference in graphical models.  It presents an efficient algorithm for approximating total variation distance between probability distributions defined over Bayes nets with small treewidth.  Prior methods only handled product distributions; this new approach employs partial couplings of high-dimensional distributions.\n"
+  },
+  {
+    "paper_title": "Online Matrix Completion: A Collaborative Approach with Hott Items",
+    "paper_id": "7XZKzQtooN",
+    "pdf_url": "http://openreview.net/pdf/a47b0150343c512aed145c5634271d63eea7b922.pdf",
+    "author_list": [
+      {
+        "name": "Dheeraj Baby",
+        "openreview_id": "~Dheeraj_Baby1",
+        "affiliation_name": "Amazon",
+        "affiliation_domain": "amazon.com",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Soumyabrata Pal",
+        "openreview_id": "~Soumyabrata_Pal1",
+        "affiliation_name": "Adobe Systems",
+        "affiliation_domain": "adobe.com",
+        "affiliation_country": "IN"
+      }
+    ],
+    "top_author_from_india": false,
+    "majority_authors_from_india": true,
+    "paper_content": "This paper investigates online matrix completion for recommendation systems, focusing on the efficient recommendation of items to users.  The authors propose two algorithms, PHASEDCLUSTERELIM and DETERMINANTELIM, that leverage user collaboration to reduce the number of sub-optimal items in phases.  These algorithms aim to minimize regret in the face of noisy reward feedback, achieving near-optimal per-user regret bounds.\n"
+  },
+  {
+    "paper_title": "Risk Estimation in a Markov Cost Process: Lower and Upper Bounds",
+    "paper_id": "7xzhKEPfBo",
+    "pdf_url": "http://openreview.net/pdf/61c68b6da42e9185837b464227ecbcbc75504505.pdf",
+    "author_list": [
+      {
+        "name": "",
+        "openreview_id": "~Gugan_Thoppe1",
+        "affiliation_name": "Indian Institute of Science",
+        "affiliation_domain": "iisc.ac.in",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "Prashanth L. A.",
+        "openreview_id": "~Prashanth_L_A1",
+        "affiliation_name": "Indian Institute of Technology, Madras",
+        "affiliation_domain": "iitm.ac.in",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "",
+        "openreview_id": "~Sanjay_P._Bhat1",
+        "affiliation_name": "Tata Consultancy Services Limited, India",
+        "affiliation_domain": "tcs.com",
+        "affiliation_country": "IN"
+      }
+    ],
+    "top_author_from_india": true,
+    "majority_authors_from_india": true,
+    "paper_content": "This paper analyzes the computational cost of estimating risk measures, such as variance, Value-at-Risk (VaR), and Conditional Value-at-Risk (CVaR), for infinite-horizon discounted Markov cost processes.  It derives lower and upper bounds for estimating these risk measures, demonstrating that  \u03a9(1/\u03f5<sup>2</sup>) samples are required for \u03f5-accuracy, both in expectation and in high probability scenarios.  The findings extend to other risk measures that meet a specific continuity criterion.\n"
+  },
+  {
+    "paper_title": "WISER: Weak Supervision and Supervised Representation Learning to Improve Drug Response Prediction in Cancer",
+    "paper_id": "8ySQaphUYH",
+    "pdf_url": "http://openreview.net/pdf/07f74f6818e7261951b0dfd09d5666e670e5e9d0.pdf",
+    "author_list": [
+      {
+        "name": "Kumar Shubham",
+        "openreview_id": "~Kumar_Shubham1",
+        "affiliation_name": "Indian Institute of Science, Indian institute of science, Bangalore",
+        "affiliation_domain": "iisc.ac.in",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "Aishwarya Jayagopal",
+        "openreview_id": "~Aishwarya_Jayagopal1",
+        "affiliation_name": "National University of Singapore",
+        "affiliation_domain": "u.nus.edu",
+        "affiliation_country": "SG"
+      },
+      {
+        "name": "Syed Mohammed Danish",
+        "openreview_id": "~Syed_Mohammed_Danish1",
+        "affiliation_name": "Indian Institute of Technology, Patna",
+        "affiliation_domain": "iitp.ac.in",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "Prathosh AP",
+        "openreview_id": "~Prathosh_AP1",
+        "affiliation_name": "Indian Institute of Science, Indian institute of science, Bangalore",
+        "affiliation_domain": "iisc.ac.in",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "Vaibhav Rajan",
+        "openreview_id": "~Vaibhav_Rajan2",
+        "affiliation_name": "Google",
+        "affiliation_domain": "google.com",
+        "affiliation_country": "IN"
+      }
+    ],
+    "top_author_from_india": true,
+    "majority_authors_from_india": true,
+    "paper_content": "This paper introduces WISER, a novel method for predicting personalized drug responses in cancer patients.  It leverages weak supervision in conjunction with supervised representation learning to overcome the challenges of limited drug response data and heterogeneous patient responses.  The method aims to improve upon existing techniques by integrating both supervision stages for enhanced drug response prediction accuracy.\n"
+  },
+  {
+    "paper_title": "Why do Variational Autoencoders Really Promote Disentanglement?",
+    "paper_id": "Ao9UUaScAU",
+    "pdf_url": "http://openreview.net/pdf/71efc1da1d0fe38f66103886bdf9d41d7a430479.pdf",
+    "author_list": [
+      {
+        "name": "Pratik Bhowal",
+        "openreview_id": "~Pratik_Bhowal1",
+        "affiliation_name": "CMU, Carnegie Mellon University",
+        "affiliation_domain": "andrew.cmu.edu",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "Achint Soni",
+        "openreview_id": "~Achint_Soni1",
+        "affiliation_name": "University of Waterloo",
+        "affiliation_domain": "uwaterloo.ca",
+        "affiliation_country": "CA"
+      },
+      {
+        "name": "Sirisha Rambhatla",
+        "openreview_id": "~Sirisha_Rambhatla1",
+        "affiliation_name": "University of Waterloo",
+        "affiliation_domain": "uwaterloo.ca",
+        "affiliation_country": "CA"
+      }
+    ],
+    "top_author_from_india": true,
+    "majority_authors_from_india": false,
+    "paper_content": "This paper aims to theoretically investigate how the orthogonality properties of variational autoencoder (VAE) decoders contribute to disentanglement in real-world applications.  The authors hypothesize that decoder orthogonality is key to disentanglement, a concept crucial for latent space manipulation in various fields.  Through both theoretical analysis and experimental results, they seek to validate this hypothesis in practical VAE setups.\n"
+  },
+  {
+    "paper_title": "OAK: Enriching Document Representations using Auxiliary Knowledge for Extreme Classification",
+    "paper_id": "Cbacx90Wkt",
+    "pdf_url": "http://openreview.net/pdf/c0530913b6c22d453b2332a2be5cbf1c57e67ff0.pdf",
+    "author_list": [
+      {
+        "name": "Shikhar Mohan",
+        "openreview_id": "~Shikhar_Mohan1",
+        "affiliation_name": "Microsoft",
+        "affiliation_domain": "microsoft.com",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "Deepak Saini",
+        "openreview_id": "~Deepak_Saini2",
+        "affiliation_name": "Microsoft",
+        "affiliation_domain": "microsoft.com",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Anshul Mittal",
+        "openreview_id": "~Anshul_Mittal2",
+        "affiliation_name": "Microsoft",
+        "affiliation_domain": "microsoft.com",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "Sayak Ray Chowdhury",
+        "openreview_id": "~Sayak_Ray_Chowdhury1",
+        "affiliation_name": "Indian Institute of Technology, Kanpur",
+        "affiliation_domain": "iitk.ac.in",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "Bhawna Paliwal",
+        "openreview_id": "~Bhawna_Paliwal1",
+        "affiliation_name": "Microsoft Research",
+        "affiliation_domain": "microsoft.com",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Jian Jiao",
+        "openreview_id": "~Jian_Jiao2",
+        "affiliation_name": "Microsoft",
+        "affiliation_domain": "microsoft.com",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Manish Gupta",
+        "openreview_id": "~Manish_Gupta4",
+        "affiliation_name": "Microsoft",
+        "affiliation_domain": "microsoft.com",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "",
+        "openreview_id": "~Manik_Varma1",
+        "affiliation_name": "Research, Microsoft",
+        "affiliation_domain": "research.microsoft.com",
+        "affiliation_country": "IN"
+      }
+    ],
+    "top_author_from_india": true,
+    "majority_authors_from_india": true,
+    "paper_content": "This paper introduces OAK, a novel framework for eXtreme Classification (XC).  OAK leverages auxiliary knowledge linked to documents to improve classification accuracy by enriching document embeddings with auxiliary knowledge embeddings.  The framework demonstrates superior performance compared to existing state-of-the-art XC methods on various datasets and in sponsored search applications.\n"
+  },
+  {
+    "paper_title": "Weakly Convex Regularisers for Inverse Problems: Convergence of Critical Points and Primal-Dual Optimisation",
+    "paper_id": "E8FpcUyPuS",
+    "pdf_url": "http://openreview.net/pdf/b0eb7cb8f2998339c2df68fb673e093522aa7257.pdf",
+    "author_list": [
+      {
+        "name": "Zakhar Shumaylov",
+        "openreview_id": "~Zakhar_Shumaylov1",
+        "affiliation_name": "University of Cambridge",
+        "affiliation_domain": "cam.ac.uk",
+        "affiliation_country": "GB"
+      },
+      {
+        "name": "Jeremy Budd",
+        "openreview_id": "~Jeremy_Budd1",
+        "affiliation_name": "California Institute of Technology",
+        "affiliation_domain": "caltech.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Subhadip Mukherjee",
+        "openreview_id": "~Subhadip_Mukherjee1",
+        "affiliation_name": "Indian Institute of Technology Kharagpur",
+        "affiliation_domain": "iitkgp.ernet.in",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "",
+        "openreview_id": "~Carola-Bibiane_Sch\u00f6nlieb1",
+        "affiliation_name": "University of Cambridge",
+        "affiliation_domain": "cam.ac.uk",
+        "affiliation_country": "GB"
+      }
+    ],
+    "top_author_from_india": false,
+    "majority_authors_from_india": false,
+    "paper_content": "This paper investigates the convergence of critical points for variational regularisation in inverse problems, particularly focusing on weakly convex regularisers.  It develops a generalized framework for convergence analysis, proving the convergence of the primal-dual hybrid gradient method for associated variational problems.  Finally, the paper applies these theoretical findings to learned regularisation, demonstrating improved performance in, for example, computed tomography reconstruction.\n"
+  },
+  {
+    "paper_title": "Representation Surgery: Theory and Practice of Affine Steering",
+    "paper_id": "GwA4go0Mw4",
+    "pdf_url": "http://openreview.net/pdf/b913a137f582939ceef4f0e95b210de1e8e9e8cc.pdf",
+    "author_list": [
+      {
+        "name": "Shashwat Singh",
+        "openreview_id": "~Shashwat_Singh1",
+        "affiliation_name": "International Institute of Information Technology Hyderabad",
+        "affiliation_domain": "iiit.ac.in",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "",
+        "openreview_id": "~Shauli_Ravfogel1",
+        "affiliation_name": "Bar-Ilan University",
+        "affiliation_domain": "biu.ac.il",
+        "affiliation_country": "IL"
+      },
+      {
+        "name": "Jonathan Herzig",
+        "openreview_id": "~Jonathan_Herzig2",
+        "affiliation_name": "Research, Google",
+        "affiliation_domain": "research.google.com",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Roee Aharoni",
+        "openreview_id": "~Roee_Aharoni1",
+        "affiliation_name": "Google",
+        "affiliation_domain": "google.com",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Ryan Cotterell",
+        "openreview_id": "~Ryan_Cotterell1",
+        "affiliation_name": "Swiss Federal Institute of Technology",
+        "affiliation_domain": "ethz.ch",
+        "affiliation_country": "CH"
+      },
+      {
+        "name": "Ponnurangam Kumaraguru",
+        "openreview_id": "~Ponnurangam_Kumaraguru3",
+        "affiliation_name": "International Institute of Information Technology Hyderabad ",
+        "affiliation_domain": "iiit.ac.in",
+        "affiliation_country": "IN"
+      }
+    ],
+    "top_author_from_india": true,
+    "majority_authors_from_india": false,
+    "paper_content": "This paper develops a theoretical framework and practical methods for \"steering\" neural language model representations to reduce undesirable behaviors, such as generating toxic or biased text.  Specifically, it derives optimal affine steering functions to modify model representations, providing justification for existing techniques and proposing an improved approach.  Empirical experiments demonstrate the effectiveness of these methods in mitigating biases and reducing toxic content generation.\n"
+  },
+  {
+    "paper_title": "Causal Discovery with Fewer Conditional Independence Tests",
+    "paper_id": "HpT19AKddu",
+    "pdf_url": "http://openreview.net/pdf/23331b236f09db1c4293895ed7d92c5d7c76991f.pdf",
+    "author_list": [
+      {
+        "name": "Kirankumar Shiragur",
+        "openreview_id": "~Kirankumar_Shiragur1",
+        "affiliation_name": "Microsoft Research",
+        "affiliation_domain": "microsoft.com",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "Jiaqi Zhang",
+        "openreview_id": "~Jiaqi_Zhang2",
+        "affiliation_name": "Massachusetts Institute of Technology",
+        "affiliation_domain": "mit.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "",
+        "openreview_id": "~Caroline_Uhler1",
+        "affiliation_name": "Electrical Engineering & Computer Science, Massachusetts Institute of Technology",
+        "affiliation_domain": "eecs.mit.edu",
+        "affiliation_country": "US"
+      }
+    ],
+    "top_author_from_india": true,
+    "majority_authors_from_india": false,
+    "paper_content": "This paper addresses the computational limitations of existing causal discovery algorithms, which often require an exponential number of conditional independence tests.  It proposes a new method, the Causal Consistent Partition Graph (CCPG), that learns a coarser representation of the causal graph using a polynomial number of tests.  This approach aims to provide an efficient algorithm for recovering the true causal graph in specific cases, particularly when the graph is fully identifiable.\n"
+  },
+  {
+    "paper_title": "Enhancing Trajectory Prediction through Self-Supervised Waypoint Distortion Prediction",
+    "paper_id": "OQ7TlOphGX",
+    "pdf_url": "http://openreview.net/pdf/6f5199a867ae97c4ee3f4303b1afe90f767d9d65.pdf",
+    "author_list": [
+      {
+        "name": "Pravendra Singh",
+        "openreview_id": "~Pravendra_Singh1",
+        "affiliation_name": "Indian Institute of Technology, Roorkee",
+        "affiliation_domain": "iitr.ac.in",
+        "affiliation_country": "IN"
+      }
+    ],
+    "top_author_from_india": true,
+    "majority_authors_from_india": true,
+    "paper_content": "This research paper introduces a novel self-supervised approach, SSWDP, for trajectory prediction.  The goal is to enhance representation learning for improved trajectory prediction accuracy by predicting distortion within observed trajectories.  The authors aim to complement existing methods and demonstrate significant improvements on various benchmark datasets, particularly in environments with distortions.\n"
+  },
+  {
+    "paper_title": "In-Context Principle Learning from Mistakes",
+    "paper_id": "PAPY0cAB3C",
+    "pdf_url": "http://openreview.net/pdf/2526010313edf53a746ebfa778cf15642b26a62c.pdf",
+    "author_list": [
+      {
+        "name": "Tianjun Zhang",
+        "openreview_id": "~Tianjun_Zhang1",
+        "affiliation_name": "University of California Berkeley",
+        "affiliation_domain": "berkeley.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "",
+        "openreview_id": "~Aman_Madaan1",
+        "affiliation_name": "Carnegie Mellon University",
+        "affiliation_domain": "cmu.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Luyu Gao",
+        "openreview_id": "~Luyu_Gao1",
+        "affiliation_name": "Carnegie Mellon University",
+        "affiliation_domain": "cmu.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Steven Zheng",
+        "openreview_id": "~Steven_Zheng1",
+        "affiliation_name": "Google",
+        "affiliation_domain": "google.com",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Swaroop Mishra",
+        "openreview_id": "~Swaroop_Mishra1",
+        "affiliation_name": "Google",
+        "affiliation_domain": "google.com",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "",
+        "openreview_id": "~Yiming_Yang1",
+        "affiliation_name": "School of Computer Science, Carnegie Mellon University",
+        "affiliation_domain": "cs.cmu.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Niket Tandon",
+        "openreview_id": "~Niket_Tandon2",
+        "affiliation_name": "Research, Microsoft",
+        "affiliation_domain": "research.microsoft.com",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "Uri Alon",
+        "openreview_id": "~Uri_Alon1",
+        "affiliation_name": "Google DeepMind",
+        "affiliation_domain": "google.com",
+        "affiliation_country": "US"
+      }
+    ],
+    "top_author_from_india": false,
+    "majority_authors_from_india": false,
+    "paper_content": "This paper introduces LEAP, a method for improving in-context learning (ICL) in large language models (LLMs).  LEAP intentionally induces errors in example input-output pairs, allowing the model to derive task-specific principles for solving similar problems.  These learned principles, combined with the original examples, then enhance the LLM's performance on unseen test data across various benchmarks, including question answering and math problems.\n"
+  },
+  {
+    "paper_title": "How Far Can Fairness Constraints Help Recover From Biased Data?",
+    "paper_id": "RfQT6vJt8b",
+    "pdf_url": "http://openreview.net/pdf/409965515edccbc49d377b009df2f47a57479ebd.pdf",
+    "author_list": [
+      {
+        "name": "mohit sharma",
+        "openreview_id": "~mohit_sharma5",
+        "affiliation_name": "Indraprastha Institute of Information Technology, Delhi",
+        "affiliation_domain": "iiitd.ac.in",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "Amit Deshpande",
+        "openreview_id": "~Amit_Deshpande1",
+        "affiliation_name": "Microsoft Research",
+        "affiliation_domain": "microsoft.com",
+        "affiliation_country": "US"
+      }
+    ],
+    "top_author_from_india": true,
+    "majority_authors_from_india": true,
+    "paper_content": "This paper extends previous research on fair classification by demonstrating how fairness constraints can recover accurate and fair classifiers even when the training data is significantly biased.  It generalizes these results to different types of bias, data distributions, and hypothesis classes.  The authors prove that under specific conditions, the optimal fair classifier on biased data equals the optimal classifier on unbiased data, thus suggesting that well-designed fairness constraints can mitigate data bias.\n"
+  },
+  {
+    "paper_title": "Tandem Transformers for Inference Efficient LLMs",
+    "paper_id": "TN3fi7dwPo",
+    "pdf_url": "http://openreview.net/pdf/c14bbb8bb8638326ffae116b81072096457da928.pdf",
+    "author_list": [
+      {
+        "name": "Aishwarya P S",
+        "openreview_id": "~Aishwarya_P_S1",
+        "affiliation_name": "Google",
+        "affiliation_domain": "google.com",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "Yashas Samaga B L",
+        "openreview_id": "~Yashas_Samaga_B_L2",
+        "affiliation_name": "University of Washington",
+        "affiliation_domain": "uw.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Toby James Boyd",
+        "openreview_id": "~Toby_James_Boyd1",
+        "affiliation_name": "Unknown",
+        "affiliation_domain": "unknown.edu",
+        "affiliation_country": "UNK"
+      },
+      {
+        "name": "",
+        "openreview_id": "~Sanjiv_Kumar1",
+        "affiliation_name": "Google",
+        "affiliation_domain": "google.com",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "",
+        "openreview_id": "~Prateek_Jain1",
+        "affiliation_name": "Google",
+        "affiliation_domain": "google.com",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "",
+        "openreview_id": "~Praneeth_Netrapalli1",
+        "affiliation_name": "Google",
+        "affiliation_domain": "google.com",
+        "affiliation_country": "US"
+      }
+    ],
+    "top_author_from_india": true,
+    "majority_authors_from_india": false,
+    "paper_content": "This paper introduces Tandem Transformers, a novel architecture for large language models (LLMs).  The architecture combines a small, autoregressive model with a larger, block-mode model to accelerate inference.  The goal is to improve inference speed without sacrificing downstream task accuracy by strategically allocating capacity for prompt processing versus response generation.\n"
+  },
+  {
+    "paper_title": "Testing the Feasibility of Linear Programs with Bandit Feedback",
+    "paper_id": "TfwGtfPkhV",
+    "pdf_url": "http://openreview.net/pdf/a89b112bea8fde3d1e91d41d41e6dd7fdf86aff2.pdf",
+    "author_list": [
+      {
+        "name": "Aditya Gopalan",
+        "openreview_id": "~Aditya_Gopalan1",
+        "affiliation_name": "Indian Institute of Science",
+        "affiliation_domain": "iisc.ac.in",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "Venkatesh Saligrama",
+        "openreview_id": "~Venkatesh_Saligrama1",
+        "affiliation_name": "Amazon",
+        "affiliation_domain": "amazon.com",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Clayton Scott",
+        "openreview_id": "~Clayton_Scott1",
+        "affiliation_name": "University of Michigan",
+        "affiliation_domain": "umich.edu",
+        "affiliation_country": "US"
+      }
+    ],
+    "top_author_from_india": true,
+    "majority_authors_from_india": false,
+    "paper_content": "This paper investigates the feasibility testing of linear programs with bandit feedback.  It develops a novel test for determining if a linear program has a feasible solution, based on low-regret algorithms and a non-asymptotic law of iterated logarithms, within a linear bandit setting.  The method is shown to be reliable and adaptive to the signal level of the problem, with sample costs scaling efficiently.\n"
+  },
+  {
+    "paper_title": "Policy Evaluation for Variance in Average Reward Reinforcement Learning",
+    "paper_id": "bID9PiBFpT",
+    "pdf_url": "http://openreview.net/pdf/3b877b3be936eb628fd438c4713ff612a784fae7.pdf",
+    "author_list": [
+      {
+        "name": "Shubhada Agrawal",
+        "openreview_id": "~Shubhada_Agrawal1",
+        "affiliation_name": "Carnegie Mellon University",
+        "affiliation_domain": "cmu.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Prashanth L. A.",
+        "openreview_id": "~Prashanth_L_A1",
+        "affiliation_name": "Indian Institute of Technology, Madras",
+        "affiliation_domain": "iitm.ac.in",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "",
+        "openreview_id": "~Siva_Theja_Maguluri1",
+        "affiliation_name": "Georgia Institute of Technology",
+        "affiliation_domain": "gatech.edu",
+        "affiliation_country": "US"
+      }
+    ],
+    "top_author_from_india": false,
+    "majority_authors_from_india": false,
+    "paper_content": "This paper develops a temporal-difference (TD) algorithm for evaluating policies in average reward reinforcement learning problems, focusing on asymptotic variance as a risk measure.  The algorithm, applicable to both tabular and linear function approximation settings, achieves a finite-time convergence rate of O(1/k) and provides the first sequential estimator for asymptotic variance with provable finite sample guarantees. This work aims to facilitate the development of variance-constrained reinforcement learning algorithms.\n"
+  },
+  {
+    "paper_title": "Submodular framework for structured-sparse optimal transport",
+    "paper_id": "bfQCO9Vqhk",
+    "pdf_url": "http://openreview.net/pdf/15e9e2ce1a2a6304834b144d8443de2478e30aa7.pdf",
+    "author_list": [
+      {
+        "name": "",
+        "openreview_id": "~Piyushi_Manupriya1",
+        "affiliation_name": "Indian Institute of Technology Hyderabad",
+        "affiliation_domain": "iith.ac.in",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "Pratik Jawanpuria",
+        "openreview_id": "~Pratik_Jawanpuria1",
+        "affiliation_name": "Microsoft",
+        "affiliation_domain": "microsoft.com",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Karthik S. Gurumoorthy",
+        "openreview_id": "~Karthik_S._Gurumoorthy2",
+        "affiliation_name": "Walmart Global Tech",
+        "affiliation_domain": "walmart.com",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "SakethaNath Jagarlapudi",
+        "openreview_id": "~SakethaNath_Jagarlapudi1",
+        "affiliation_name": "Indian Institute of Technology Hyderabad",
+        "affiliation_domain": "iith.ac.in",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "",
+        "openreview_id": "~Bamdev_Mishra1",
+        "affiliation_name": "Microsoft",
+        "affiliation_domain": "microsoft.com",
+        "affiliation_country": "US"
+      }
+    ],
+    "top_author_from_india": true,
+    "majority_authors_from_india": true,
+    "paper_content": "This paper introduces novel sparsity-constrained optimal transport (OT) formulations for unbalanced OT (UOT).  It leverages a submodular framework to efficiently optimize transport plans with a structured sparsity pattern.  The authors develop efficient algorithms with theoretical guarantees, demonstrating practical applicability in various domains.\n"
+  },
+  {
+    "paper_title": "Agnostic Learning of Mixed Linear Regressions with EM and AM Algorithms",
+    "paper_id": "eo88noTbb5",
+    "pdf_url": "http://openreview.net/pdf/17a75d2d4ceb5ac28e380f4e82e1c0df8d09dbb8.pdf",
+    "author_list": [
+      {
+        "name": "Avishek Ghosh",
+        "openreview_id": "~Avishek_Ghosh2",
+        "affiliation_name": "Indian Institute of Technology, Bombay",
+        "affiliation_domain": "iitb.ac.in",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "",
+        "openreview_id": "~Arya_Mazumdar1",
+        "affiliation_name": "University of California, San Diego",
+        "affiliation_domain": "ucsd.edu",
+        "affiliation_country": "US"
+      }
+    ],
+    "top_author_from_india": true,
+    "majority_authors_from_india": true,
+    "paper_content": "This paper investigates the agnostic learning of mixed linear regressions.  It demonstrates that the EM and AM algorithms, under specific conditions, can learn optimal solutions for the problem even without a generative model. The key is finding the set of linear functions that minimize a predefined loss function for a given dataset.\n"
+  },
+  {
+    "paper_title": "Asymptotically Optimal and Computationally Efficient Average Treatment Effect Estimation in A/B testing",
+    "paper_id": "eqIGoEoI10",
+    "pdf_url": "http://openreview.net/pdf/e6a6390164671b94fb6543bf8b3cc2674dbadc9d.pdf",
+    "author_list": [
+      {
+        "name": "VIKAS DEEP",
+        "openreview_id": "~VIKAS_DEEP1",
+        "affiliation_name": "Northwestern University",
+        "affiliation_domain": "northwestern.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Sandeep Kumar Juneja",
+        "openreview_id": "~Sandeep_Kumar_Juneja1",
+        "affiliation_name": "Ashoka University",
+        "affiliation_domain": "ashoka.edu.in",
+        "affiliation_country": "IN"
+      }
+    ],
+    "top_author_from_india": false,
+    "majority_authors_from_india": true,
+    "paper_content": "This paper investigates estimating the average treatment effect (ATE) in A/B testing.  It develops asymptotically optimal and computationally efficient adaptive policies for constructing confidence intervals (CIs) for ATE.  The proposed methods minimize the expected sample size while guaranteeing a desired level of precision and confidence.\n"
+  },
+  {
+    "paper_title": "PIPER: Primitive-Informed Preference-based Hierarchical Reinforcement Learning via Hindsight Relabeling",
+    "paper_id": "l6Hef6FVd0",
+    "pdf_url": "http://openreview.net/pdf/486d2e3f8b1d6cd84cc050e257c70fda5c2f6980.pdf",
+    "author_list": [
+      {
+        "name": "Utsav Singh",
+        "openreview_id": "~Utsav_Singh1",
+        "affiliation_name": "Indian Institute of Technology, Kanpur",
+        "affiliation_domain": "iitk.ac.in",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "Wesley A. Suttle",
+        "openreview_id": "~Wesley_A_Suttle1",
+        "affiliation_name": "Army Research Laboratory",
+        "affiliation_domain": "army.mil",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Brian M. Sadler",
+        "openreview_id": "~Brian_M._Sadler1",
+        "affiliation_name": "University of Texas at Austin",
+        "affiliation_domain": "utexas.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "",
+        "openreview_id": "~Vinay_P_Namboodiri1",
+        "affiliation_name": "University of Bath",
+        "affiliation_domain": "bath.ac.uk",
+        "affiliation_country": "GB"
+      },
+      {
+        "name": "Amrit Singh Bedi",
+        "openreview_id": "~Amrit_Bedi1",
+        "affiliation_name": "University of Central Florida",
+        "affiliation_domain": "ucf.edu",
+        "affiliation_country": "US"
+      }
+    ],
+    "top_author_from_india": true,
+    "majority_authors_from_india": false,
+    "paper_content": "The paper introduces PIPER, a novel hierarchical reinforcement learning approach.  It aims to address the challenges of non-stationarity and infeasible subgoals by leveraging preference-based learning to create a reward model for relabeling replay buffers.  This approach, replacing human feedback with primitive-in-the-loop feedback using sparse rewards, shows improved performance in sparse-reward robotic tasks compared to existing baselines.\n"
+  },
+  {
+    "paper_title": "On Online Experimentation without Device Identifiers",
+    "paper_id": "merZTLSdC9",
+    "pdf_url": "http://openreview.net/pdf/0615d619c3602e2d636f310e2ddca4c631b9613c.pdf",
+    "author_list": [
+      {
+        "name": "",
+        "openreview_id": "~Shiv_Shankar2",
+        "affiliation_name": "IIT Bombay",
+        "affiliation_domain": "iitb.ac.in",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "",
+        "openreview_id": "~Ritwik_Sinha1",
+        "affiliation_name": "Unknown",
+        "affiliation_domain": "unknown.edu",
+        "affiliation_country": "UNK"
+      },
+      {
+        "name": "Madalina Fiterau",
+        "openreview_id": "~Madalina_Fiterau3",
+        "affiliation_name": "Department of Computer Science, University of Massachusetts, Amherst",
+        "affiliation_domain": "cs.umass.edu",
+        "affiliation_country": "US"
+      }
+    ],
+    "top_author_from_india": true,
+    "majority_authors_from_india": false,
+    "paper_content": "This paper introduces HIFIVE, a variational method for estimating global average treatment effects in online A/B testing.  The method addresses the challenge of fragmented user data across devices, a problem emerging from the decline of identifying user devices and the rise of multi-device usage.  HIFIVE aims to improve the accuracy and robustness of preference estimation for online experimentation under these conditions.\n"
+  },
+  {
+    "paper_title": "BRAIn: Bayesian Reward-conditioned Amortized Inference for natural language generation from feedback",
+    "paper_id": "nxzXTLByXO",
+    "pdf_url": "http://openreview.net/pdf/adec4b8db2c08af7cf38121b2b60680f89348c2c.pdf",
+    "author_list": [
+      {
+        "name": "Gaurav Pandey",
+        "openreview_id": "~Gaurav_Pandey2",
+        "affiliation_name": "International Business Machines",
+        "affiliation_domain": "ibm.com",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Yatin Nandwani",
+        "openreview_id": "~Yatin_Nandwani1",
+        "affiliation_name": "International Business Machines",
+        "affiliation_domain": "ibm.com",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "",
+        "openreview_id": "~Tahira_Naseem1",
+        "affiliation_name": "IBM, International Business Machines",
+        "affiliation_domain": "us.ibm.com",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Mayank Mishra",
+        "openreview_id": "~Mayank_Mishra1",
+        "affiliation_name": "Massachusetts Institute of Technology",
+        "affiliation_domain": "mit.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Guangxuan Xu",
+        "openreview_id": "~Guangxuan_Xu1",
+        "affiliation_name": "Red Hat. Inc",
+        "affiliation_domain": "redhat.com",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Dinesh Raghu",
+        "openreview_id": "~Dinesh_Raghu1",
+        "affiliation_name": "IBM Research - New Delhi",
+        "affiliation_domain": "in.ibm.com",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "",
+        "openreview_id": "~Sachindra_Joshi1",
+        "affiliation_name": "Unknown",
+        "affiliation_domain": "unknown.edu",
+        "affiliation_country": "UNK"
+      },
+      {
+        "name": "Asim Munawar",
+        "openreview_id": "~Asim_Munawar2",
+        "affiliation_name": "International Business Machines",
+        "affiliation_domain": "ibm.com",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Ram\u00f3n Fernandez Astudillo",
+        "openreview_id": "~Ram\u00f3n_Fernandez_Astudillo1",
+        "affiliation_name": "International Business Machines",
+        "affiliation_domain": "ibm.com",
+        "affiliation_country": "US"
+      }
+    ],
+    "top_author_from_india": false,
+    "majority_authors_from_india": false,
+    "paper_content": "This research paper introduces BRAIN, a new reinforcement learning from human feedback (RLHF) method for natural language generation.  It aims to improve upon existing distribution matching techniques by reducing gradient variance and generalizing the target distribution using Bayesian methods.  The proposed approach, a bridge between distribution matching and Direct Preference Optimization (DPO), demonstrates superior performance on summarization and Antropic HH tasks compared to previous methods.\n"
+  },
+  {
+    "paper_title": "PairNet: Training with Observed Pairs to Estimate Individual Treatment Effect",
+    "paper_id": "o5SVr80Rgg",
+    "pdf_url": "http://openreview.net/pdf/8542c0b81c30deb10c2d35fd220b4d912812d24a.pdf",
+    "author_list": [
+      {
+        "name": "Lokesh Nagalapatti",
+        "openreview_id": "~Lokesh_Nagalapatti1",
+        "affiliation_name": "Indian Institute of Technology, Bombay",
+        "affiliation_domain": "iitb.ac.in",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "Avishek Ghosh",
+        "openreview_id": "~Avishek_Ghosh2",
+        "affiliation_name": "Indian Institute of Technology, Bombay",
+        "affiliation_domain": "iitb.ac.in",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "Sunita Sarawagi",
+        "openreview_id": "~Sunita_Sarawagi1",
+        "affiliation_name": "IIT Bombay",
+        "affiliation_domain": "iitb.ac.in",
+        "affiliation_country": "IN"
+      }
+    ],
+    "top_author_from_india": true,
+    "majority_authors_from_india": true,
+    "paper_content": "This paper introduces PairNet, a novel method for estimating individual treatment effects (ITE) from observational data.  PairNet avoids the use of potentially inaccurate pseudo-outcomes, focusing instead on observed outcomes in pairs of examples.  The theoretical analysis and empirical results demonstrate its superior performance compared to existing methods in estimating ITE.\n"
+  },
+  {
+    "paper_title": "MS-TIP: Imputation Aware Pedestrian Trajectory Prediction",
+    "paper_id": "s4Hy0L4mml",
+    "pdf_url": "http://openreview.net/pdf/1d8e4c1deb5aa09684e661e39df6dfe8bba15611.pdf",
+    "author_list": [
+      {
+        "name": "Achintya Nath",
+        "openreview_id": "~Achintya_Nath1",
+        "affiliation_name": "Indian Institute of Technology, Roorkee",
+        "affiliation_domain": "iitr.ac.in",
+        "affiliation_country": "IO"
+      },
+      {
+        "name": "Paritosh Kabra",
+        "openreview_id": "~Paritosh_Kabra1",
+        "affiliation_name": "Indian Institute of Technology, Roorkee",
+        "affiliation_domain": "iitr.ac.in",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "Ishu Gupta",
+        "openreview_id": "~Ishu_Gupta1",
+        "affiliation_name": "Indian Institute of Technology, Roorkee, Dhirubhai Ambani Institute Of Information and Communication Technology",
+        "affiliation_domain": "iitr.ac.in",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "Pravendra Singh",
+        "openreview_id": "~Pravendra_Singh1",
+        "affiliation_name": "Indian Institute of Technology, Roorkee",
+        "affiliation_domain": "iitr.ac.in",
+        "affiliation_country": "IN"
+      }
+    ],
+    "top_author_from_india": false,
+    "majority_authors_from_india": true,
+    "paper_content": "This paper proposes MS-TIP, a novel approach for pedestrian trajectory prediction that addresses missing data in observed sequences.  MS-TIP leverages transformers for imputation and multi-scale hypergraphs for interaction modeling, aiming to improve prediction accuracy by considering context and interactions at different scales.  The method includes a control point and refinement module for enhanced future trajectory inference.\n"
+  },
+  {
+    "paper_title": "Finite Time Logarithmic Regret Bounds for Self-Tuning Regulation",
+    "paper_id": "tTtSnpH4fc",
+    "pdf_url": "http://openreview.net/pdf/a7f969be6c3977786d11395298655bfc29c99967.pdf",
+    "author_list": [
+      {
+        "name": "Rahul Singh",
+        "openreview_id": "~Rahul_Singh5",
+        "affiliation_name": "Indian Institute of Science",
+        "affiliation_domain": "iisc.ac.in",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "Akshay Mete",
+        "openreview_id": "~Akshay_Mete1",
+        "affiliation_name": "Texas A&M University - College Station",
+        "affiliation_domain": "tamu.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Avik Kar",
+        "openreview_id": "~Avik_Kar1",
+        "affiliation_name": "Indian Institute of Science, Indian institute of science, Bangalore",
+        "affiliation_domain": "iisc.ac.in",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "",
+        "openreview_id": "~Panganamala_Kumar1",
+        "affiliation_name": "Texas A&M",
+        "affiliation_domain": "tamu.edu",
+        "affiliation_country": "US"
+      }
+    ],
+    "top_author_from_india": true,
+    "majority_authors_from_india": true,
+    "paper_content": "This paper introduces a novel algorithm, PIECE, for the self-tuning regulation problem, which aims to minimize the output variance of a system with an unknown model.  Crucially, the algorithm achieves a logarithmic regret bound for finite time, a significant improvement over existing methods for similar problems.  The proposed PIECE algorithm addresses the often problematic initial transient performance of reinforcement learning algorithms for linear systems by cleverly incorporating techniques for exploration and input clipping.\n"
+  },
+  {
+    "paper_title": "Unsupervised Parameter-free Simplicial Representation Learning with Scattering Transforms",
+    "paper_id": "wmljUnbjy6",
+    "pdf_url": "http://openreview.net/pdf/c86519c899c3ac54e7702b9fdcbb438886ce2c8c.pdf",
+    "author_list": [
+      {
+        "name": "Hiren Madhu",
+        "openreview_id": "~Hiren_Madhu1",
+        "affiliation_name": "Yale University",
+        "affiliation_domain": "yale.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Sravanthi Gurugubelli",
+        "openreview_id": "~Sravanthi_Gurugubelli1",
+        "affiliation_name": "Indian Institute of Science, Bangalore",
+        "affiliation_domain": "iisc.ac.in",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "Sundeep Prabhakar Chepuri",
+        "openreview_id": "~Sundeep_Prabhakar_Chepuri1",
+        "affiliation_name": "Indian Institute of Science",
+        "affiliation_domain": "iisc.ac.in",
+        "affiliation_country": "IN"
+      }
+    ],
+    "top_author_from_india": false,
+    "majority_authors_from_india": true,
+    "paper_content": "This paper introduces simplicial scattering networks (SSNs), a parameter-free model for learning task-agnostic features from simplicial complex data.  Unlike existing simplicial neural networks, SSNs avoid the high training complexity and reliance on task-specific labels by employing a scattering transform.  The proposed method uses random walk matrices to extract high-frequency information, demonstrating superior performance on various tasks like node classification and graph classification compared to existing simplicial or graph neural networks.\n"
+  },
+  {
+    "paper_title": "The WMDP Benchmark: Measuring and Reducing Malicious Use with Unlearning",
+    "paper_id": "xlr6AUDuJz",
+    "pdf_url": "http://openreview.net/pdf/1c3ad9f79f4531bbb0c52de9996b3ff95f17a046.pdf",
+    "author_list": [
+      {
+        "name": "Nathaniel Li",
+        "openreview_id": "~Nathaniel_Li1",
+        "affiliation_name": "University of California, Berkeley",
+        "affiliation_domain": "berkeley.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Alexander Pan",
+        "openreview_id": "~Alexander_Pan1",
+        "affiliation_name": "University of California, Berkeley",
+        "affiliation_domain": "berkeley.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Anjali Gopal",
+        "openreview_id": "~Anjali_Gopal1",
+        "affiliation_name": "Massachusetts Institute of Technology",
+        "affiliation_domain": "mit.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Summer Yue",
+        "openreview_id": "~Summer_Yue2",
+        "affiliation_name": "Scale AI",
+        "affiliation_domain": "scale.ai",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Daniel Berrios",
+        "openreview_id": "~Daniel_Berrios1",
+        "affiliation_name": "Unknown",
+        "affiliation_domain": "unknown.edu",
+        "affiliation_country": "UNK"
+      },
+      {
+        "name": "Alice Gatti",
+        "openreview_id": "~Alice_Gatti1",
+        "affiliation_name": "Center for AI Safety",
+        "affiliation_domain": "safe.ai",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Justin D. Li",
+        "openreview_id": "~Justin_D._Li1",
+        "affiliation_name": "New York University",
+        "affiliation_domain": "nyu.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Ann-Kathrin Dombrowski",
+        "openreview_id": "~Ann-Kathrin_Dombrowski1",
+        "affiliation_name": "FAR.AI",
+        "affiliation_domain": "far.ai",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Shashwat Goel",
+        "openreview_id": "~Shashwat_Goel1",
+        "affiliation_name": "ELLIS, Max Planck Institute",
+        "affiliation_domain": "tuebingen.mpg.de",
+        "affiliation_country": "DE"
+      },
+      {
+        "name": "Gabriel Mukobi",
+        "openreview_id": "~Gabriel_Mukobi1",
+        "affiliation_name": "UC Berkeley, University of California, Berkeley",
+        "affiliation_domain": "cs.berkeley.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Nathan Helm-Burger",
+        "openreview_id": "~Nathan_Helm-Burger1",
+        "affiliation_name": "SecureBio",
+        "affiliation_domain": "securebio.org",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Rassin Lababidi",
+        "openreview_id": "~Rassin_Lababidi1",
+        "affiliation_name": "Unknown",
+        "affiliation_domain": "unknown.edu",
+        "affiliation_country": "UNK"
+      },
+      {
+        "name": "Lennart Justen",
+        "openreview_id": "~Lennart_Justen1",
+        "affiliation_name": "Massachusetts Institute of Technology",
+        "affiliation_domain": "mit.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Andrew Bo Liu",
+        "openreview_id": "~Andrew_Bo_Liu1",
+        "affiliation_name": "Unknown",
+        "affiliation_domain": "unknown.edu",
+        "affiliation_country": "UNK"
+      },
+      {
+        "name": "Michael Chen",
+        "openreview_id": "~Michael_Chen3",
+        "affiliation_name": "Model Evaluation and Threat Research",
+        "affiliation_domain": "metr.org",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Isabelle Barrass",
+        "openreview_id": "~Isabelle_Barrass1",
+        "affiliation_name": "Center for AI Safety",
+        "affiliation_domain": "safe.ai",
+        "affiliation_country": "AI"
+      },
+      {
+        "name": "Oliver Zhang",
+        "openreview_id": "~Oliver_Zhang1",
+        "affiliation_name": "Stanford University",
+        "affiliation_domain": "stanford.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Xiaoyuan Zhu",
+        "openreview_id": "~Xiaoyuan_Zhu2",
+        "affiliation_name": "University of Southern California",
+        "affiliation_domain": "usc.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Rishub Tamirisa",
+        "openreview_id": "~Rishub_Tamirisa1",
+        "affiliation_name": "University of Illinois at Urbana-Champaign",
+        "affiliation_domain": "cs.illinois.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Bhrugu Bharathi",
+        "openreview_id": "~Bhrugu_Bharathi2",
+        "affiliation_name": "University of California, San Diego",
+        "affiliation_domain": "ucsd.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "",
+        "openreview_id": "~Ariel_Herbert-Voss1",
+        "affiliation_name": "Harvard University",
+        "affiliation_domain": "harvard.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Cort B Breuer",
+        "openreview_id": "~Cort_B_Breuer1",
+        "affiliation_name": "Stanford University",
+        "affiliation_domain": "stanford.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Andy Zou",
+        "openreview_id": "~Andy_Zou1",
+        "affiliation_name": "CMU, Carnegie Mellon University",
+        "affiliation_domain": "andrew.cmu.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Mantas Mazeika",
+        "openreview_id": "~Mantas_Mazeika3",
+        "affiliation_name": "Center for AI Safety",
+        "affiliation_domain": "safe.ai",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Zifan Wang",
+        "openreview_id": "~Zifan_Wang1",
+        "affiliation_name": "Scale AI",
+        "affiliation_domain": "scale.com",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Palash Oswal",
+        "openreview_id": "~Palash_Oswal1",
+        "affiliation_name": "Unknown",
+        "affiliation_domain": "unknown.edu",
+        "affiliation_country": "UNK"
+      },
+      {
+        "name": "Weiran Lin",
+        "openreview_id": "~Weiran_Lin1",
+        "affiliation_name": "CMU, Carnegie Mellon University",
+        "affiliation_domain": "andrew.cmu.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Adam Alfred Hunt",
+        "openreview_id": "~Adam_Alfred_Hunt1",
+        "affiliation_name": "Carnegie Mellon University",
+        "affiliation_domain": "cmu.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Justin Tienken-Harder",
+        "openreview_id": "~Justin_Tienken-Harder1",
+        "affiliation_name": "Unknown",
+        "affiliation_domain": "unknown.edu",
+        "affiliation_country": "UNK"
+      },
+      {
+        "name": "Kevin Y. Shih",
+        "openreview_id": "~Kevin_Y._Shih1",
+        "affiliation_name": "Stanford University",
+        "affiliation_domain": "stanford.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Kemper Talley",
+        "openreview_id": "~Kemper_Talley1",
+        "affiliation_name": "Unknown",
+        "affiliation_domain": "unknown.edu",
+        "affiliation_country": "UNK"
+      },
+      {
+        "name": "John Guan",
+        "openreview_id": "~John_Guan1",
+        "affiliation_name": "Unknown",
+        "affiliation_domain": "unknown.edu",
+        "affiliation_country": "UNK"
+      },
+      {
+        "name": "Ian Steneker",
+        "openreview_id": "~Ian_Steneker1",
+        "affiliation_name": "Unknown",
+        "affiliation_domain": "unknown.edu",
+        "affiliation_country": "UNK"
+      },
+      {
+        "name": "David Campbell",
+        "openreview_id": "~David_Campbell2",
+        "affiliation_name": "Drake University",
+        "affiliation_domain": "drake.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Brad Jokubaitis",
+        "openreview_id": "~Brad_Jokubaitis1",
+        "affiliation_name": "Unknown",
+        "affiliation_domain": "unknown.edu",
+        "affiliation_country": "UNK"
+      },
+      {
+        "name": "Steven Basart",
+        "openreview_id": "~Steven_Basart1",
+        "affiliation_name": "Center for AI Safety ",
+        "affiliation_domain": "safe.ai",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Ponnurangam Kumaraguru",
+        "openreview_id": "~Ponnurangam_Kumaraguru3",
+        "affiliation_name": "International Institute of Information Technology Hyderabad ",
+        "affiliation_domain": "iiit.ac.in",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "Kallol Krishna Karmakar",
+        "openreview_id": "~Kallol_Krishna_Karmakar1",
+        "affiliation_name": "University of Newcastle",
+        "affiliation_domain": "newcastle.edu.au",
+        "affiliation_country": "AU"
+      },
+      {
+        "name": "Uday Tupakula",
+        "openreview_id": "~Uday_Tupakula1",
+        "affiliation_name": "University of New England",
+        "affiliation_domain": "une.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Vijay Varadharajan",
+        "openreview_id": "~Vijay_Varadharajan1",
+        "affiliation_name": "University of Newcastle",
+        "affiliation_domain": "newcastle.edu.au",
+        "affiliation_country": "AU"
+      },
+      {
+        "name": "Yan Shoshitaishvili",
+        "openreview_id": "~Yan_Shoshitaishvili1",
+        "affiliation_name": "Arizona State University",
+        "affiliation_domain": "asu.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Jimmy Ba",
+        "openreview_id": "~Jimmy_Ba1",
+        "affiliation_name": "Department of Computer Science, University of Toronto",
+        "affiliation_domain": "cs.toronto.edu",
+        "affiliation_country": "CA"
+      },
+      {
+        "name": "Kevin M. Esvelt",
+        "openreview_id": "~Kevin_M._Esvelt1",
+        "affiliation_name": "Massachusetts Institute of Technology",
+        "affiliation_domain": "mit.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Alexandr Wang",
+        "openreview_id": "~Alexandr_Wang1",
+        "affiliation_name": "Unknown",
+        "affiliation_domain": "unknown.edu",
+        "affiliation_country": "UNK"
+      },
+      {
+        "name": "Dan Hendrycks",
+        "openreview_id": "~Dan_Hendrycks1",
+        "affiliation_name": "UC Berkeley",
+        "affiliation_domain": "berkeley.edu",
+        "affiliation_country": "US"
+      }
+    ],
+    "top_author_from_india": false,
+    "majority_authors_from_india": false,
+    "paper_content": "This paper introduces the WMDP benchmark, a dataset of multiple-choice questions designed to assess hazardous knowledge in large language models (LLMs).  The authors aim to measure and mitigate the potential for malicious use by LLMs related to biosecurity, cybersecurity, and chemical security.  Further, they present a novel unlearning method, RMU, which effectively reduces dangerous knowledge capabilities while preserving general knowledge.\n"
+  },
+  {
+    "paper_title": "Provably Robust DPO: Aligning Language Models with Noisy Feedback",
+    "paper_id": "yhpDKSw7yA",
+    "pdf_url": "http://openreview.net/pdf/3f1185c2cb457015bf09600ef1508b8737fcf2a4.pdf",
+    "author_list": [
+      {
+        "name": "Sayak Ray Chowdhury",
+        "openreview_id": "~Sayak_Ray_Chowdhury1",
+        "affiliation_name": "Indian Institute of Technology, Kanpur",
+        "affiliation_domain": "iitk.ac.in",
+        "affiliation_country": "IN"
+      },
+      {
+        "name": "Nagarajan Natarajan",
+        "openreview_id": "~Nagarajan_Natarajan1",
+        "affiliation_name": "Microsoft Research",
+        "affiliation_domain": "microsoft.com",
+        "affiliation_country": "US"
+      }
+    ],
+    "top_author_from_india": true,
+    "majority_authors_from_india": true,
+    "paper_content": "This paper introduces a novel, provably robust method for Direct Preference Optimization (DPO) in the context of aligning language models with human preferences, specifically addressing the issue of noisy feedback.  The authors develop a new loss function that mitigates the impact of noisy preference data on the learned policy.  Theoretical analysis demonstrates the improved robustness of the proposed method, achieving a sub-optimality gap that scales favorably with the dataset size and noise level.\n"
+  }
+]

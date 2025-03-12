@@ -52,6 +52,11 @@ python -m indiaml.pipeline.process_authors
 python -m indiaml.pipeline.process_paper_author_mapping
 python -m indiaml.pipeline.patch_unk_cc2
 python -m indiaml.pipeline.patch_unk_cc3
+
+```
+After running cc3, please check the logs for unmatched db, at this point, you may want to find ways to add them to name2cc.py file, either manually or using a service like ChatGPT. I left out any scripts for that, as it requires careful judgement and LLMs are prone to hallucinations.
+
+```bash
 python -m indiaml.pipeline.patch_unk_cc4
 
 # Generate analytics
