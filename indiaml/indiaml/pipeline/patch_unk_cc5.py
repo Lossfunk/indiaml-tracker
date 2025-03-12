@@ -17,7 +17,6 @@ import re
 import dotenv
 dotenv.load_dotenv()
 
-import os
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -38,13 +37,13 @@ Base.metadata.create_all(engine)
 Session = sessionmaker(bind=engine)
 session = Session()
 
+logger.info("AK:::: " + os.environ.get("OPENROUTER_API_KEY", "sk-or-v1-..."))
 
 client = openai.OpenAI(
     api_key=os.environ.get("OPENROUTER_API_KEY", "sk-or-v1-..."),
     base_url="https://openrouter.ai/api/v1",
 )
 
-logger.info("AK:::: " + os.environ.get("OPENROUTER_API_KEY", ""))
 # Define Pydantic Schema for Structured Response
 class AffiliationSchema(BaseModel):
     openreview_id: str = Field(..., description="The openreview id that is likely as per the author input data for correlation")
@@ -218,7 +217,7 @@ def get_affiliation_details(messages, expected_count, authors):
         #     max_tokens=4096,
         # )
         response = client.chat.completions.create(
-            model="anthropic/claude-3.5-sonnet",
+            model="anthropic/claude-3.5-haiku",
             messages=messages,
             max_tokens=4096,
             temperature=0.1
