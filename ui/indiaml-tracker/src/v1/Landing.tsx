@@ -177,7 +177,7 @@ const HomePage = () => {
               variants={itemVariants}
             >
               <motion.a
-                href="/papers-2024"
+                href="/papers"
                 className="px-8 py-4 bg-indigo-600 text-white rounded-lg font-medium flex items-center space-x-2 hover:bg-indigo-700 transition duration-300"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -247,7 +247,7 @@ const HomePage = () => {
           >
             <h2 className="text-3xl font-bold">Latest Research Papers</h2>
             <motion.a
-              href="/papers-2024"
+              href="/papers"
               className="flex items-center text-indigo-400 hover:text-indigo-300 transition-colors"
               whileHover={{ x: 5 }}
             >

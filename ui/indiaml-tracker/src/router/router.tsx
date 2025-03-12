@@ -20,7 +20,7 @@ const AutoRedirectComponent = ({children}: {children: JSX.Element}) => {
   const navigate = useNavigate();
   useEffect(() => {
     if (window.location.pathname == '/') {
-      navigate("/papers-2024", { replace: true });
+      navigate("/papers", { replace: true });
     }
   }, []);
   return children;
