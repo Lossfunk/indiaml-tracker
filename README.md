@@ -165,6 +165,10 @@ If you encounter issues during setup or while running the pipeline:
 2. Look for similar issues in our [GitHub Issues](https://github.com/lossfunk/indiaml-tracker/issues)
 3. If your issue is new, please open a detailed bug report
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=lossfunk/indiaml-tracker&type=Date)](https://www.star-history.com/#lossfunk/indiaml-tracker&Date)
+
 ## 📜 License
 
 [MIT License](LICENSE)
