@@ -32,7 +32,7 @@ export const router = createBrowserRouter([
     element: <AutoRedirectComponent children={<V1Items.V1Homepage />} />,
     children: [
       {
-        path: "papers-2024",
+        path: "papers",
         element: <V1Items.NeurIPS2024 />,
       },
       {
