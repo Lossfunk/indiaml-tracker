@@ -5,9 +5,32 @@
    height="950"
    version="1.1"
    id="svg394"
+   sodipodi:docname="indiaml-architecture.svg"
+   inkscape:version="1.2.1 (9c6d41e4, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview308"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     showgrid="false"
+     inkscape:zoom="0.4960787"
+     inkscape:cx="497.90487"
+     inkscape:cy="419.28831"
+     inkscape:window-width="1512"
+     inkscape:window-height="916"
+     inkscape:window-x="0"
+     inkscape:window-y="38"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg394" />
   <!-- Styles -->
   <defs
      id="defs214">
@@ -124,6 +147,46 @@
          style="stop-color:#ff6b6b;stop-opacity:1"
          id="stop-llm2" />
     </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#configGrad"
+       id="linearGradient558"
+       x1="535.76161"
+       y1="302.84872"
+       x2="535.76161"
+       y2="421.261"
+       gradientTransform="matrix(1.4821747,0,0,0.67468429,-1.3580832,-86.917324)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#configGrad"
+       id="linearGradient560"
+       x1="535.76161"
+       y1="428.83357"
+       x2="535.76161"
+       y2="547.24586"
+       gradientTransform="matrix(1.4821747,0,0,0.67468429,-1.3580832,-86.917324)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#configGrad"
+       id="linearGradient562"
+       x1="535.76161"
+       y1="554.81842"
+       x2="535.76161"
+       y2="673.23071"
+       gradientTransform="matrix(1.4821747,0,0,0.67468429,-1.3580832,-86.917324)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#configGrad"
+       id="linearGradient564"
+       x1="535.76161"
+       y1="680.80327"
+       x2="535.76161"
+       y2="799.21556"
+       gradientTransform="matrix(1.4821747,0,0,0.67468429,-1.3580832,-86.917324)"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <!-- Background -->
   <rect
@@ -147,40 +210,40 @@
   </text>
   <!-- Layer Labels -->
   <text
-     x="44"
-     y="120"
+     x="14.009227"
+     y="117.8578"
      font-family="Arial, sans-serif"
      font-size="22px"
      font-weight="bold"
      fill="#2c3e50"
      id="text220">Data Sources</text>
   <text
-     x="44"
-     y="280"
+     x="14.009227"
+     y="277.85779"
      font-family="Arial, sans-serif"
      font-size="22px"
      font-weight="bold"
      fill="#2c3e50"
      id="text222">Adapters</text>
   <text
-     x="44"
-     y="450"
+     x="14.009227"
+     y="447.85779"
      font-family="Arial, sans-serif"
      font-size="22px"
      font-weight="bold"
      fill="#2c3e50"
      id="text224">Pipeline</text>
   <text
-     x="44"
-     y="670"
+     x="14.009227"
+     y="667.85779"
      font-family="Arial, sans-serif"
      font-size="22px"
      font-weight="bold"
      fill="#2c3e50"
      id="text226">Storage</text>
   <text
-     x="44"
-     y="800"
+     x="14.009227"
+     y="797.85779"
      font-family="Arial, sans-serif"
      font-size="22px"
      font-weight="bold"
@@ -244,76 +307,80 @@
      id="text-future">Future Sources</text>
   <!-- Configuration Components -->
   <rect
-     x="800"
-     y="210"
+     x="798.64191"
+     y="123.08268"
      width="160"
      height="65"
      rx="10"
      ry="10"
      fill="url(#configGrad)"
      filter="url(#shadow)"
-     id="rect238" />
+     id="rect238"
+     style="fill:url(#linearGradient558)" />
   <text
-     x="880"
-     y="250"
+     x="878.64191"
+     y="163.08267"
      font-family="Arial, sans-serif"
-     font-size="16"
+     font-size="16px"
      text-anchor="middle"
-     fill="white"
+     fill="#ffffff"
      id="text240">venues_config.py</text>
   <rect
-     x="800"
-     y="295"
+     x="798.64191"
+     y="208.08267"
      width="160"
      height="65"
      rx="10"
      ry="10"
      fill="url(#configGrad)"
      filter="url(#shadow)"
-     id="rect242" />
+     id="rect242"
+     style="fill:url(#linearGradient560)" />
   <text
-     x="880"
-     y="335"
+     x="878.64191"
+     y="248.08267"
      font-family="Arial, sans-serif"
-     font-size="16"
+     font-size="16px"
      text-anchor="middle"
-     fill="white"
+     fill="#ffffff"
      id="text244">name2cc.py</text>
   <rect
-     x="800"
-     y="380"
+     x="798.64191"
+     y="293.08267"
      width="160"
      height="65"
      rx="10"
      ry="10"
      fill="url(#configGrad)"
      filter="url(#shadow)"
-     id="rect246" />
+     id="rect246"
+     style="fill:url(#linearGradient562)" />
   <text
-     x="880"
-     y="420"
+     x="878.64191"
+     y="333.08267"
      font-family="Arial, sans-serif"
-     font-size="16"
+     font-size="16px"
      text-anchor="middle"
-     fill="white"
+     fill="#ffffff"
      id="text248">d2cc.py</text>
   <rect
-     x="800"
-     y="465"
+     x="798.64191"
+     y="378.08267"
      width="160"
      height="65"
      rx="10"
      ry="10"
      fill="url(#configGrad)"
      filter="url(#shadow)"
-     id="rect250" />
+     id="rect250"
+     style="fill:url(#linearGradient564)" />
   <text
-     x="880"
-     y="505"
+     x="878.64191"
+     y="418.08267"
      font-family="Arial, sans-serif"
-     font-size="16"
+     font-size="16px"
      text-anchor="middle"
-     fill="white"
+     fill="#ffffff"
      id="text252">db_config.py</text>
   <!-- Adapters Layer -->
   <rect
@@ -803,21 +870,22 @@
      fill="none"
      id="path358" />
   <path
-     d="M790,242 L790,410 L780,410"
+     d="m 790,242 v 168 l 10.05519,0.42671"
      stroke="#2c3e50"
      stroke-width="2"
      fill="none"
-     stroke-dasharray="5,5"
-     id="path360" />
+     stroke-dasharray="5, 5"
+     id="path360"
+     sodipodi:nodetypes="ccc" />
   <!-- Process Flow -->
   <path
-     d="M190,455 L190,475"
+     d="m 160.00923,452.8578 v 20"
      stroke="#2c3e50"
      stroke-width="2"
      fill="none"
      id="path362" />
   <path
-     d="M190,540 L190,560"
+     d="m 160.00923,537.8578 v 20"
      stroke="#2c3e50"
      stroke-width="2"
      fill="none"
@@ -843,11 +911,12 @@
      fill="none"
      id="path370" />
   <path
-     d="M280,740 L280,770"
+     d="m 323.40894,744.42985 -15.66128,25.58758"
      stroke="#2c3e50"
      stroke-width="2"
      fill="none"
-     id="path-analytics" />
+     id="path-analytics"
+     inkscape:transform-center-x="27.424939" />
   <path
      d="M680,740 L680,770"
      stroke="#2c3e50"
