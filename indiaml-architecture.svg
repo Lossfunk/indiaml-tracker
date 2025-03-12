@@ -1,36 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   viewBox="0 0 1000 900"
-   width="1000"
-   height="900"
+   viewBox="0 0 1050 950"
+   width="1050"
+   height="950"
    version="1.1"
    id="svg394"
-   sodipodi:docname="indiaml-architecture-improved.svg"
-   inkscape:version="1.2.1 (9c6d41e4, 2022-07-14)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview396"
-     pagecolor="#505050"
-     bordercolor="#eeeeee"
-     borderopacity="1"
-     inkscape:showpageshadow="0"
-     inkscape:pageopacity="0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#505050"
-     showgrid="false"
-     inkscape:zoom="0.48505529"
-     inkscape:cx="564.88405"
-     inkscape:cy="239.14799"
-     inkscape:window-width="1512"
-     inkscape:window-height="916"
-     inkscape:window-x="0"
-     inkscape:window-y="38"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg394" />
   <!-- Styles -->
   <defs
      id="defs214">
@@ -133,67 +110,32 @@
          id="stop211" />
     </linearGradient>
     <linearGradient
-       inkscape:collect="always"
-       xlink:href="#sourceGrad"
-       id="linearGradient627"
-       x1="800"
-       y1="770"
-       x2="800"
-       y2="790"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(8,-32)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#pipelineGrad"
-       id="linearGradient629"
-       x1="800"
-       y1="800"
-       x2="800"
-       y2="820"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(8,-32)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#dbGrad"
-       id="linearGradient631"
-       x1="800"
-       y1="830"
-       x2="800"
-       y2="850"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(8,-32)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#configGrad"
-       id="linearGradient633"
-       x1="800"
-       y1="860"
-       x2="800"
-       y2="880"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(8,-32)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#outputGrad"
-       id="linearGradient635"
-       x1="800"
-       y1="890"
-       x2="800"
-       y2="910"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(8,-32)" />
+       id="llmGrad"
+       x1="0%"
+       y1="0%"
+       x2="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color:#ffcccb;stop-opacity:1"
+         id="stop-llm1" />
+      <stop
+         offset="100%"
+         style="stop-color:#ff6b6b;stop-opacity:1"
+         id="stop-llm2" />
+    </linearGradient>
   </defs>
   <!-- Background -->
   <rect
-     width="1000"
-     height="900"
+     width="1050"
+     height="950"
      fill="#f8f9fa"
      rx="10"
      ry="10"
      id="rect216" />
   <!-- Title -->
   <text
-     x="500"
+     x="525"
      y="50"
      font-family="Arial, sans-serif"
      font-size="28"
@@ -271,7 +213,6 @@
      rx="10"
      ry="10"
      fill="url(#sourceGrad)"
-     opacity="0.6"
      filter="url(#shadow)"
      id="rect234" />
   <text
@@ -281,7 +222,26 @@
      font-size="16"
      text-anchor="middle"
      fill="white"
-     id="text236">Future Sources</text>
+     id="text236">Paper PDFs</text>
+  <rect
+     x="600"
+     y="100"
+     width="160"
+     height="65"
+     rx="10"
+     ry="10"
+     fill="url(#sourceGrad)"
+     opacity="0.7"
+     filter="url(#shadow)"
+     id="rect-future" />
+  <text
+     x="680"
+     y="140"
+     font-family="Arial, sans-serif"
+     font-size="16"
+     text-anchor="middle"
+     fill="white"
+     id="text-future">Future Sources</text>
   <!-- Configuration Components -->
   <rect
      x="800"
@@ -448,7 +408,7 @@
      id="text272">adapter_factory.py</text>
   <!-- Pipeline Layer -->
   <rect
-     x="180"
+     x="110"
      y="390"
      width="160"
      height="65"
@@ -458,7 +418,7 @@
      filter="url(#shadow)"
      id="rect274" />
   <text
-     x="260"
+     x="190"
      y="430"
      font-family="Arial, sans-serif"
      font-size="16"
@@ -466,9 +426,9 @@
      fill="white"
      id="text276">process_venue.py</text>
   <rect
-     x="370"
+     x="290"
      y="390"
-     width="220"
+     width="200"
      height="65"
      rx="10"
      ry="10"
@@ -476,15 +436,15 @@
      filter="url(#shadow)"
      id="rect278" />
   <text
-     x="480"
+     x="390"
      y="430"
      font-family="Arial, sans-serif"
      font-size="16"
      text-anchor="middle"
      fill="white"
-     id="text280">process_paper_author_mapping.py</text>
+     id="text280">paper_author_mapping.py</text>
   <rect
-     x="620"
+     x="510"
      y="390"
      width="160"
      height="65"
@@ -494,7 +454,7 @@
      filter="url(#shadow)"
      id="rect282" />
   <text
-     x="700"
+     x="590"
      y="430"
      font-family="Arial, sans-serif"
      font-size="16"
@@ -502,7 +462,7 @@
      fill="white"
      id="text284">venudao.py</text>
   <rect
-     x="180"
+     x="110"
      y="475"
      width="160"
      height="65"
@@ -512,7 +472,7 @@
      filter="url(#shadow)"
      id="rect286" />
   <text
-     x="260"
+     x="190"
      y="515"
      font-family="Arial, sans-serif"
      font-size="16"
@@ -520,7 +480,7 @@
      fill="white"
      id="text288">process_authors.py</text>
   <rect
-     x="370"
+     x="290"
      y="475"
      width="160"
      height="65"
@@ -530,7 +490,7 @@
      filter="url(#shadow)"
      id="rect290" />
   <text
-     x="450"
+     x="370"
      y="515"
      font-family="Arial, sans-serif"
      font-size="16"
@@ -538,7 +498,7 @@
      fill="white"
      id="text292">affiliation_checker.py</text>
   <rect
-     x="620"
+     x="510"
      y="475"
      width="160"
      height="65"
@@ -548,7 +508,7 @@
      filter="url(#shadow)"
      id="rect294" />
   <text
-     x="700"
+     x="590"
      y="505"
      font-family="Arial, sans-serif"
      font-size="16"
@@ -556,7 +516,7 @@
      fill="white"
      id="text296">models.py</text>
   <text
-     x="700"
+     x="590"
      y="525"
      font-family="Arial, sans-serif"
      font-size="12"
@@ -564,7 +524,7 @@
      fill="white"
      id="text298">(SQLAlchemy ORM)</text>
   <rect
-     x="180"
+     x="110"
      y="560"
      width="160"
      height="65"
@@ -574,7 +534,7 @@
      filter="url(#shadow)"
      id="rect300" />
   <text
-     x="260"
+     x="190"
      y="600"
      font-family="Arial, sans-serif"
      font-size="16"
@@ -582,7 +542,7 @@
      fill="white"
      id="text302">patch_unk_cc2.py</text>
   <rect
-     x="370"
+     x="290"
      y="560"
      width="160"
      height="65"
@@ -592,7 +552,7 @@
      filter="url(#shadow)"
      id="rect304" />
   <text
-     x="450"
+     x="370"
      y="600"
      font-family="Arial, sans-serif"
      font-size="16"
@@ -600,7 +560,7 @@
      fill="white"
      id="text306">patch_unk_cc3.py</text>
   <rect
-     x="560"
+     x="470"
      y="560"
      width="160"
      height="65"
@@ -610,7 +570,7 @@
      filter="url(#shadow)"
      id="rect308" />
   <text
-     x="640"
+     x="550"
      y="600"
      font-family="Arial, sans-serif"
      font-size="16"
@@ -618,116 +578,47 @@
      fill="white"
      id="text310">patch_unk_cc4.py</text>
   <rect
-     x="750"
+     x="650"
      y="560"
      width="160"
      height="65"
      rx="10"
      ry="10"
-     fill="url(#pipelineGrad)"
+     fill="url(#llmGrad)"
      filter="url(#shadow)"
      id="rect312" />
   <text
-     x="830"
+     x="730"
      y="600"
      font-family="Arial, sans-serif"
      font-size="16"
      text-anchor="middle"
      fill="white"
      id="text314">patch_unk_cc5.py</text>
+  <!-- LLM Integration Components -->
   <rect
-     x="620"
-     y="560"
+     x="690"
+     y="475"
      width="160"
      height="65"
      rx="10"
      ry="10"
-     fill="url(#pipelineGrad)"
+     fill="url(#llmGrad)"
      filter="url(#shadow)"
-     opacity="0"
-     id="rect316" />
+     id="rect-llm1" />
   <text
-     x="700"
-     y="590"
+     x="770"
+     y="515"
      font-family="Arial, sans-serif"
      font-size="16"
      text-anchor="middle"
      fill="white"
-     opacity="0"
-     id="text318">dto.py</text>
-  <text
-     x="700"
-     y="610"
-     font-family="Arial, sans-serif"
-     font-size="12"
-     text-anchor="middle"
-     fill="white"
-     opacity="0"
-     id="text320">(Data Transfer Objects)</text>
-  <!-- Data Models -->
-  <rect
-     x="620"
-     y="560"
-     width="160"
-     height="65"
-     rx="10"
-     ry="10"
-     fill="url(#pipelineGrad)"
-     filter="url(#shadow)"
-     opacity="0"
-     id="rect322" />
-  <text
-     x="700"
-     y="590"
-     font-family="Arial, sans-serif"
-     font-size="16"
-     text-anchor="middle"
-     fill="white"
-     opacity="0"
-     id="text324">models.py</text>
-  <text
-     x="700"
-     y="610"
-     font-family="Arial, sans-serif"
-     font-size="12"
-     text-anchor="middle"
-     fill="white"
-     opacity="0"
-     id="text326">(SQLAlchemy ORM)</text>
-  <rect
-     x="620"
-     y="560"
-     width="160"
-     height="65"
-     rx="10"
-     ry="10"
-     fill="url(#pipelineGrad)"
-     filter="url(#shadow)"
-     opacity="0"
-     id="rect328" />
-  <text
-     x="700"
-     y="590"
-     font-family="Arial, sans-serif"
-     font-size="16"
-     text-anchor="middle"
-     fill="white"
-     opacity="0"
-     id="text330">dto.py</text>
-  <text
-     x="700"
-     y="610"
-     font-family="Arial, sans-serif"
-     font-size="12"
-     text-anchor="middle"
-     fill="white"
-     opacity="0"
-     id="text332">(Data Transfer Objects)</text>
+     id="text-llm1">OpenRouter API</text>
   <!-- Database Layer -->
   <rect
-     x="350"
+     x="300"
      y="650"
-     width="320"
+     width="360"
      height="90"
      rx="10"
      ry="10"
@@ -735,7 +626,7 @@
      filter="url(#shadow)"
      id="rect334" />
   <text
-     x="510"
+     x="480"
      y="690"
      font-family="Arial, sans-serif"
      font-size="20"
@@ -743,7 +634,7 @@
      fill="white"
      id="text336">SQLite Database</text>
   <text
-     x="510"
+     x="480"
      y="720"
      font-family="Arial, sans-serif"
      font-size="16"
@@ -752,7 +643,7 @@
      id="text338">venues.db</text>
   <!-- Analytics Layer -->
   <rect
-     x="350"
+     x="200"
      y="770"
      width="160"
      height="65"
@@ -762,7 +653,7 @@
      filter="url(#shadow)"
      id="rect340" />
   <text
-     x="430"
+     x="280"
      y="810"
      font-family="Arial, sans-serif"
      font-size="16"
@@ -770,8 +661,62 @@
      fill="white"
      id="text342">analytics.py</text>
   <rect
-     x="550"
+     x="380"
      y="770"
+     width="200"
+     height="65"
+     rx="10"
+     ry="10"
+     fill="url(#pipelineGrad)"
+     filter="url(#shadow)"
+     id="rect-finalJSON" />
+  <text
+     x="480"
+     y="810"
+     font-family="Arial, sans-serif"
+     font-size="16"
+     text-anchor="middle"
+     fill="white"
+     id="text-finalJSON">generate_final_jsons.py</text>
+  <rect
+     x="600"
+     y="770"
+     width="160"
+     height="65"
+     rx="10"
+     ry="10"
+     fill="url(#llmGrad)"
+     filter="url(#shadow)"
+     id="rect-summaries" />
+  <text
+     x="680"
+     y="810"
+     font-family="Arial, sans-serif"
+     font-size="16"
+     text-anchor="middle"
+     fill="white"
+     id="text-summaries">generate_summaries.py</text>
+  <rect
+     x="200"
+     y="855"
+     width="160"
+     height="65"
+     rx="10"
+     ry="10"
+     fill="url(#outputGrad)"
+     filter="url(#shadow)"
+     id="rect-outputJSON" />
+  <text
+     x="280"
+     y="895"
+     font-family="Arial, sans-serif"
+     font-size="16"
+     text-anchor="middle"
+     fill="white"
+     id="text-outputJSON">papers_output.json</text>
+  <rect
+     x="380"
+     y="855"
      width="160"
      height="65"
      rx="10"
@@ -780,13 +725,31 @@
      filter="url(#shadow)"
      id="rect344" />
   <text
-     x="630"
-     y="810"
+     x="460"
+     y="895"
      font-family="Arial, sans-serif"
      font-size="16"
      text-anchor="middle"
      fill="white"
-     id="text346">papers_output.json</text>
+     id="text346">index.json</text>
+  <rect
+     x="560"
+     y="855"
+     width="200"
+     height="65"
+     rx="10"
+     ry="10"
+     fill="url(#outputGrad)"
+     filter="url(#shadow)"
+     id="rect-confJSON" />
+  <text
+     x="660"
+     y="895"
+     font-family="Arial, sans-serif"
+     font-size="16"
+     text-anchor="middle"
+     fill="white"
+     id="text-confJSON">conference-year.json</text>
   <!-- Connection Lines -->
   <!-- Data Source to Adapters -->
   <path
@@ -795,6 +758,18 @@
      stroke-width="2"
      fill="none"
      id="path348" />
+  <path
+     d="M480,165 L480,295"
+     stroke="#2c3e50"
+     stroke-width="2"
+     fill="none"
+     id="path-pdf1" />
+  <path
+     d="M480,295 L545,295"
+     stroke="#2c3e50"
+     stroke-width="2"
+     fill="none"
+     id="path-pdf2" />
   <!-- Adapter Factory to Adapters -->
   <path
      d="M630,242 L340,242"
@@ -836,118 +811,164 @@
      id="path360" />
   <!-- Process Flow -->
   <path
-     d="M260,455 L260,475"
+     d="M190,455 L190,475"
      stroke="#2c3e50"
      stroke-width="2"
      fill="none"
      id="path362" />
   <path
-     d="M260,540 L260,560"
+     d="M190,540 L190,560"
      stroke="#2c3e50"
      stroke-width="2"
      fill="none"
      id="path364" />
   <!-- Data Flow to DB -->
   <path
-     d="M450,625 L450,650"
+     d="M370,625 L370,650"
      stroke="#2c3e50"
      stroke-width="2"
      fill="none"
      id="path366" />
   <path
-     d="M640,625 L640,650"
+     d="M590,625 L590,650"
      stroke="#2c3e50"
      stroke-width="2"
      fill="none"
      id="path368" />
   <!-- DB to Analytics -->
   <path
-     d="M430,740 L430,770"
+     d="M480,740 L480,770"
      stroke="#2c3e50"
      stroke-width="2"
      fill="none"
      id="path370" />
+  <path
+     d="M280,740 L280,770"
+     stroke="#2c3e50"
+     stroke-width="2"
+     fill="none"
+     id="path-analytics" />
+  <path
+     d="M680,740 L680,770"
+     stroke="#2c3e50"
+     stroke-width="2"
+     fill="none"
+     id="path-summaries" />
   <!-- Analytics to Output -->
   <path
-     d="M510,800 L550,800"
+     d="M280,835 L280,855"
      stroke="#2c3e50"
      stroke-width="2"
      fill="none"
      id="path372" />
+  <path
+     d="M480,835 L460,855"
+     stroke="#2c3e50"
+     stroke-width="2"
+     fill="none"
+     id="path-json1" />
+  <path
+     d="M480,835 L560,855"
+     stroke="#2c3e50"
+     stroke-width="2"
+     fill="none"
+     id="path-json2" />
+  <!-- LLM Integration -->
+  <path
+     d="M770,540 L770,560"
+     stroke="#2c3e50"
+     stroke-width="2"
+     fill="none"
+     id="path-llm1" />
+  <path
+     d="M680,625 L680,770"
+     stroke="#2c3e50"
+     stroke-width="2"
+     fill="none"
+     id="path-llm2" />
   <!-- Legend -->
   <rect
-     x="808"
-     y="738"
+     x="850"
+     y="678"
      width="20"
      height="20"
      fill="url(#sourceGrad)"
-     id="rect374"
-     style="fill:url(#linearGradient627)" />
+     id="rect374" />
   <text
-     x="838"
-     y="753"
+     x="880"
+     y="693"
      font-family="Arial, sans-serif"
      font-size="14px"
      fill="#2c3e50"
      id="text376">Data Sources</text>
   <rect
-     x="808"
-     y="768"
+     x="850"
+     y="708"
      width="20"
      height="20"
      fill="url(#pipelineGrad)"
-     id="rect378"
-     style="fill:url(#linearGradient629)" />
+     id="rect378" />
   <text
-     x="838"
-     y="783"
+     x="880"
+     y="723"
      font-family="Arial, sans-serif"
      font-size="14px"
      fill="#2c3e50"
      id="text380">Processing Components</text>
   <rect
-     x="808"
-     y="798"
+     x="850"
+     y="738"
      width="20"
      height="20"
      fill="url(#dbGrad)"
-     id="rect382"
-     style="fill:url(#linearGradient631)" />
+     id="rect382" />
   <text
-     x="838"
-     y="813"
+     x="880"
+     y="753"
      font-family="Arial, sans-serif"
      font-size="14px"
      fill="#2c3e50"
      id="text384">Data Storage</text>
   <rect
-     x="808"
-     y="828"
+     x="850"
+     y="768"
      width="20"
      height="20"
      fill="url(#configGrad)"
-     id="rect386"
-     style="fill:url(#linearGradient633)" />
+     id="rect386" />
   <text
-     x="838"
-     y="843"
+     x="880"
+     y="783"
      font-family="Arial, sans-serif"
      font-size="14px"
      fill="#2c3e50"
      id="text388">Configuration</text>
   <rect
-     x="808"
-     y="858"
+     x="850"
+     y="798"
      width="20"
      height="20"
      fill="url(#outputGrad)"
-     id="rect390"
-     style="fill:url(#linearGradient635)" />
+     id="rect390" />
   <text
-     x="838"
-     y="873"
+     x="880"
+     y="813"
      font-family="Arial, sans-serif"
      font-size="14px"
      fill="#2c3e50"
      id="text392">Output</text>
+  <rect
+     x="850"
+     y="828"
+     width="20"
+     height="20"
+     fill="url(#llmGrad)"
+     id="rect-llm-legend" />
+  <text
+     x="880"
+     y="843"
+     font-family="Arial, sans-serif"
+     font-size="14px"
+     fill="#2c3e50"
+     id="text-llm-legend">LLM Integration</text>
 </svg>

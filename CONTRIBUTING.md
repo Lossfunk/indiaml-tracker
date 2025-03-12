@@ -20,6 +20,7 @@ This document outlines various ways you can contribute to the project, along wit
   - [Pull Request Guidelines](#pull-request-guidelines)
   - [Code Style and Standards](#code-style-and-standards)
   - [Formatting Guidelines](#formatting-guidelines)
+- [Testing Guidelines](#testing-guidelines)
 - [Community Guidelines](#community-guidelines)
 
 ## Why Contribute?
@@ -35,7 +36,7 @@ Your contributions, large or small, directly support these goals.
 
 ## Code of Conduct
 
-We are committed to providing a welcoming and inclusive experience for everyone. By participating in this project, you agree to abide by our Code of Conduct.
+We are committed to providing a welcoming and inclusive experience for everyone. By participating in this project, you agree to abide by our [Code of Conduct](./CODE_OF_CONDUCT.md).
 
 ### Our Pledge
 
@@ -59,12 +60,6 @@ Examples of unacceptable behavior include:
 - Publishing others' private information, such as a physical or electronic address, without explicit permission
 - Other conduct which could reasonably be considered inappropriate in a professional setting
 
-### Enforcement
-
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at [maintainer email]. All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. The project team is obligated to maintain confidentiality with regard to the reporter of an incident.
-
-Project maintainers who do not follow or enforce the Code of Conduct in good faith may face temporary or permanent repercussions as determined by other members of the project's leadership.
-
 ## Types of Contributions
 
 ### Running the Pipeline and Submitting Data
@@ -77,8 +72,15 @@ One of the most valuable contributions is running the data pipeline and submitti
    ```bash
    git clone https://github.com/lossfunk/indiaml-tracker.git
    cd indiaml
+   
+   # Using uv (recommended)
    uv venv --python=3.11
    uv pip install .
+   
+   # Or using standard pip
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   pip install -r requirements.txt
    ```
 
 2. **Create a .env file with necessary API keys:**
@@ -103,6 +105,8 @@ One of the most valuable contributions is running the data pipeline and submitti
    
    # Generate analytics output
    python -m indiaml.analytics.analytics
+   python -m indiaml.pipeline.generate_final_jsons
+   python -m indiaml.pipeline.generate_summaries
    ```
 
 4. **Submit your data:**
@@ -133,6 +137,10 @@ Data quality is crucial. You can help by verifying and correcting existing data.
    - For multiple corrections, create a JSON file with corrections and submit a PR
    - Format: `{"paper_id": "...", "corrections": [{"author_id": "...", "correct_affiliation": "...", "correct_country": "..."}]}`
 
+4. **For institution mapping:**
+   - Add entries to `name2cc.py` for institution name to country mapping
+   - Add entries to `d2cc.py` for domain to country mapping
+
 ### Enhancing Existing Components
 
 You can improve existing components of the system:
@@ -148,6 +156,11 @@ You can improve existing components of the system:
 3. **Data Models (`indiaml/models/`):**
    - Extend models to capture additional metadata
    - Optimize database schema for performance
+
+4. **Adapter Improvements:**
+   - Enhance error handling in existing adapters
+   - Add support for additional conference structures
+   - Implement better retry logic for API requests
 
 ### Adding New Data Sources
 
@@ -209,6 +222,7 @@ Clear documentation is essential for project adoption:
 - Update README.md with new features or clearer instructions
 - Create or enhance tutorials and examples
 - Add diagrams explaining system architecture or workflows
+- Provide better examples and use cases
 
 ### Addressing Issues
 
@@ -235,6 +249,9 @@ You can help by addressing open issues in the GitHub repository:
 3. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
+   
+   # For development, install additional tools
+   pip install black isort pytest pytest-cov
    ```
 
 4. **Set up environment variables:**
@@ -243,7 +260,32 @@ You can help by addressing open issues in the GitHub repository:
 5. **Run tests to ensure everything is working:**
    ```bash
    python -m unittest discover indiaml.tests
+   # or
+   pytest indiaml/tests/
    ```
+
+### Environment Troubleshooting
+
+If you encounter issues setting up your development environment:
+
+1. **Missing dependencies:**
+   ```bash
+   pip install --upgrade pip  # Ensure pip is up to date
+   pip install -r requirements.txt --no-cache-dir  # Force fresh install
+   ```
+
+2. **OpenReview API issues:**
+   - Verify your internet connection
+   - Check if the OpenReview API is accessible: `curl https://api2.openreview.net/status`
+   - Review OpenReview API documentation for changes
+
+3. **Database connection issues:**
+   - Check SQLite installation: `sqlite3 --version`
+   - Verify permissions on the database directory
+
+4. **PDF processing issues:**
+   - Ensure pymupdf4llm is correctly installed: `pip install pymupdf4llm`
+   - Check for PDF dependencies: `pip install pymupdf`
 
 ## Contribution Process
 
@@ -258,6 +300,7 @@ You can help by addressing open issues in the GitHub repository:
    - Write clean, well-documented code
    - Add tests for new functionality
    - Ensure all tests pass
+   - Follow the coding style guidelines
 
 3. **Commit your changes:**
    - Use clear, descriptive commit messages
@@ -271,6 +314,7 @@ You can help by addressing open issues in the GitHub repository:
 5. **Respond to review feedback:**
    - Be open to suggestions
    - Make requested changes promptly
+   - Ensure CI checks pass
 
 ### Code Style and Standards
 
@@ -280,6 +324,17 @@ You can help by addressing open issues in the GitHub repository:
 - Include unit tests for new functionality
 - Aim for 80% test coverage for new code
 
+We use automatic formatting tools to maintain consistency:
+
+```bash
+# Install formatting tools
+pip install black isort
+
+# Format Python code
+black indiaml/
+isort indiaml/
+```
+
 ### Formatting Guidelines
 
 Consistent formatting makes the codebase more maintainable and easier to understand. Please adhere to the following guidelines:
@@ -288,12 +343,7 @@ Consistent formatting makes the codebase more maintainable and easier to underst
 
 - Use 4 spaces for indentation (no tabs)
 - Maximum line length of 88 characters (compatible with Black formatter)
-- Use Black and isort for automated formatting:
-  ```bash
-  pip install black isort
-  black indiaml/
-  isort indiaml/
-  ```
+- Use Black and isort for automated formatting
 - Follow Google-style docstrings for functions and classes:
   ```python
   def function_name(param1: type, param2: type) -> return_type:
@@ -346,6 +396,77 @@ Fixes #42
 - Include both the SQL statements and ORM model changes when modifying the database schema
 - Add a database migration script if necessary
 - Document changes to the database schema in comments
+
+## Testing Guidelines
+
+We use Python's unittest framework for testing. All new features and bug fixes should include appropriate tests.
+
+### Writing Tests
+
+1. **Test Location**: 
+   - Place tests in the `indiaml/tests/` directory
+   - Mirror the package structure (e.g., test for `indiaml/pipeline/module.py` goes in `indiaml/tests/pipeline/test_module.py`)
+
+2. **Test Categories**:
+   - **Unit tests**: Test individual functions and methods
+   - **Integration tests**: Test interactions between components
+   - **End-to-end tests**: Test complete workflows
+
+3. **Good Test Practices**:
+   - Use descriptive test names that explain what is being tested
+   - Setup and teardown should be clear and minimal
+   - Mock external dependencies when appropriate
+   - Test both normal cases and edge cases
+
+4. **Example Test Structure**:
+   ```python
+   import unittest
+   from unittest.mock import patch, MagicMock
+   from indiaml.your_module import YourClass
+   
+   class TestYourClass(unittest.TestCase):
+       def setUp(self):
+           # Setup for each test
+           self.instance = YourClass()
+       
+       def tearDown(self):
+           # Cleanup after each test
+           pass
+       
+       def test_normal_case(self):
+           # Test standard functionality
+           result = self.instance.method(valid_input)
+           self.assertEqual(result, expected_output)
+       
+       def test_edge_case(self):
+           # Test edge case
+           result = self.instance.method(edge_input)
+           self.assertEqual(result, expected_edge_output)
+       
+       @patch('indiaml.your_module.external_dependency')
+       def test_with_mock(self, mock_dependency):
+           # Setup mock
+           mock_dependency.return_value = mock_value
+           
+           # Run test
+           result = self.instance.method_using_dependency()
+           
+           # Assertions
+           mock_dependency.assert_called_once_with(expected_args)
+           self.assertEqual(result, expected_output)
+   ```
+
+5. **Running Tests**:
+   ```bash
+   # Run all tests
+   python -m unittest discover indiaml.tests
+   
+   # Run specific test file
+   python -m unittest indiaml.tests.test_module
+   
+   # Run with coverage
+   pytest --cov=indiaml indiaml/tests/
+   ```
 
 ## Community Guidelines
 

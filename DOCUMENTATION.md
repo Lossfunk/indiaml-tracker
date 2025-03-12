@@ -14,7 +14,8 @@
 10. [Analytics Generation](#analytics-generation)
 11. [Configuration](#configuration)
 12. [Troubleshooting](#troubleshooting)
-13. [Future Development](#future-development)
+13. [Testing](#testing)
+14. [Future Development](#future-development)
 
 ## Architecture Diagram
 
@@ -25,6 +26,14 @@
 IndiaML Tracker is a data aggregation and analysis system designed to highlight India's contributions to global machine learning research. The project systematically identifies, analyzes, and highlights research papers from top-tier ML conferences that include authors affiliated with Indian institutions.
 
 The system focuses on building a comprehensive database of ML research papers with Indian author affiliations, analyzing institutional patterns, tracking year-over-year growth in India's contributions, and visualizing research collaborations between Indian and international institutions.
+
+### Key Features
+
+- **Multi-source data collection**: Currently focused on OpenReview with extensibility for additional sources
+- **Robust affiliation resolution**: Multi-stage approach to accurately determine author affiliations
+- **Country code mapping**: Systematic identification of Indian institutions
+- **Paper content analysis**: Optional LLM-based extraction of paper summaries
+- **Analytics generation**: Structured outputs for visualization and analysis
 
 ## Research Landscape and OpenReview
 
@@ -110,130 +119,6 @@ The IndiaML Tracker follows a modular, pipeline-based architecture:
 5. **Database**: SQLite database storing papers, authors, affiliations, and their relationships.
 6. **Analytics Generation**: Processes the curated data to produce insights and visualizations.
 
-## Data Pipeline
-
-The data processing pipeline consists of several sequential steps:
-
-### 1. Venue Processing (`process_venue.py`)
-
-- Fetches paper metadata from configured venues (conferences)
-- Normalizes and stores basic paper information
-- Captures raw author data for further processing
-
-### 2. Author Processing (`process_authors.py`)
-
-- Extracts author information from papers
-- Creates or updates author records in the database
-- Preserves affiliation history data for later resolution
-
-### 3. Paper-Author Mapping (`process_paper_author_mapping.py`)
-
-- Creates associations between papers and authors
-- Determines correct author ordering for each paper
-- Begins preliminary affiliation mapping
-
-### 4. Affiliation Resolution (Patch Scripts)
-
-The system employs a multi-stage approach to resolve affiliations:
-
-- **Stage 1** (`patch_unk_cc2.py`): Domain-based resolution using email domain or website
-- **Stage 2** (`patch_unk_cc3.py`): Name-based resolution using institution name
-- **Stage 3** (`patch_unk_cc4.py`): Additional name-based resolution with expanded mapping
-- **Stage 4** (`patch_unk_cc5.py`): LLM-based resolution for difficult cases
-
-### 5. Analytics Generation (`analytics.py`)
-
-- Compiles the processed data into structured JSON
-- Generates analysis of institutional contributions
-- Prepares data for visualization and reporting
-
-## Database Schema
-
-The system uses SQLalchemy ORM with the following core models:
-
-### VenueInfo
-
-Stores information about research venues:
-
-```python
-class VenueInfo(Base):
-    __tablename__ = 'venue_infos'
-    __table_args__ = (UniqueConstraint('conference', 'year', 'track', name='uix_conference_year_track'),)
-    
-    id = Column(Integer, primary_key=True)
-    conference = Column(String, nullable=False)
-    year = Column(Integer, nullable=False)
-    track = Column(String, nullable=False)
-    
-    papers = relationship("Paper", back_populates="venue_info", cascade="all, delete-orphan")
-```
-
-### Paper
-
-Stores research paper details:
-
-```python
-class Paper(Base):
-    __tablename__ = 'papers'
-    
-    id = Column(String, primary_key=True)  # e.g., OpenReview ID
-    venue_info_id = Column(Integer, ForeignKey('venue_infos.id'), nullable=False)
-    
-    title = Column(String, nullable=False)
-    status = Column(String)
-    pdf_url = Column(String)
-    pdf_path = Column(String)
-    pdate = Column(DateTime)
-    odate = Column(DateTime)
-    raw_authors = Column(JSON, nullable=True)
-    
-    venue_info = relationship("VenueInfo", back_populates="papers")
-    authors = relationship("PaperAuthor", back_populates="paper", cascade="all, delete-orphan")
-```
-
-### Author
-
-Stores author information:
-
-```python
-class Author(Base):
-    __tablename__ = 'authors'
-    
-    id = Column(Integer, primary_key=True)
-    full_name = Column(String, nullable=False)
-    email = Column(String, unique=False, nullable=True)
-    openreview_id = Column(String, unique=True, nullable=True)
-    orcid = Column(String, nullable=True)
-    google_scholar_link = Column(String, nullable=True)
-    linkedin = Column(String, nullable=True)
-    homepage = Column(String, nullable=True)
-    affiliation_history = Column(JSON, nullable=True)
-
-    papers = relationship("PaperAuthor", back_populates="author", cascade="all, delete-orphan")
-```
-
-### PaperAuthor
-
-Association table connecting papers and authors:
-
-```python
-class PaperAuthor(Base):
-    __tablename__ = 'paper_authors'
-    
-    paper_id = Column(String, ForeignKey('papers.id'), primary_key=True)
-    author_id = Column(Integer, ForeignKey('authors.id'), primary_key=True)
-    position = Column(Integer, nullable=False)
-    
-    # Affiliation details
-    affiliation_name = Column(String, nullable=True)
-    affiliation_domain = Column(String, nullable=True)
-    affiliation_state_province = Column(String, nullable=True)
-    affiliation_country = Column(String, nullable=True)
-    
-    paper = relationship("Paper", back_populates="authors")
-    author = relationship("Author", back_populates="papers")
-```
-
 ## Design Patterns
 
 The IndiaML Tracker employs several established software design patterns to ensure maintainability, extensibility, and separation of concerns:
@@ -258,6 +143,11 @@ class BaseAdapter(ABC):
     @abstractmethod
     def determine_status(self, venue_group: openreview.Group, venueid: str) -> str:
         """Determines the submission status based on venue-specific logic."""
+        pass
+        
+    @abstractmethod
+    def fetch_authors(self, author_ids: List[str]) -> List[AuthorDTO]:
+        """Fetches detailed author information."""
         pass
 ```
 
@@ -331,7 +221,12 @@ class AuthorDTO:
     name: str
     email: Optional[str] = None
     openreview_id: Optional[str] = None
-    # Additional fields
+    orcid: Optional[str] = None
+    google_scholar_link: Optional[str] = None
+    dblp: Optional[str] = None
+    linkedin: Optional[str] = None
+    homepage: Optional[str] = None
+    history: Optional[List[Dict]] = None
 ```
 
 This pattern was chosen because:
@@ -354,6 +249,260 @@ This pattern was chosen for:
 2. **Failure Isolation**: Issues in one stage don't necessarily affect others.
 3. **Parallelization Potential**: Stages can potentially run in parallel for improved performance.
 4. **Restart Capability**: Processing can be resumed from any stage in case of failures.
+
+## Data Pipeline
+
+The data processing pipeline consists of several sequential steps:
+
+### 1. Venue Processing (`process_venue.py`)
+
+- Fetches paper metadata from configured venues (conferences)
+- Normalizes and stores basic paper information
+- Captures raw author data for further processing
+
+```python
+def main_flow(configs: List[VenueConfig], only_accepted: bool = True, cache_dir: str = "cache"):
+    """
+    Orchestrate the processing of multiple venues:
+    - Fetch papers
+    - Store metadata
+    - Assign affiliations
+    """
+    init_db()
+    
+    for cfg in configs:
+        logger.info(f"Starting processing for venue: {cfg.conference} {cfg.year} {cfg.track}")
+        papers = fetch_paper_metadata(cfg)
+        if not papers:
+            logger.warning(f"No papers fetched for {cfg.source_id}.")
+            continue
+        
+        store_metadata(cfg, papers)
+```
+
+### 2. Author Processing (`process_authors.py`)
+
+- Extracts author information from papers
+- Creates or updates author records in the database
+- Preserves affiliation history data for later resolution
+
+```python
+def process_authors():
+    """Process authors from stored papers and save them to the database."""
+    try:
+        with VenueDB() as db:
+            session: Session = db.session
+            # Fetch all papers with related venue_info using joinedload to optimize queries
+            papers: List[Paper] = session.query(Paper).options(
+                joinedload(Paper.venue_info)
+            ).all()
+
+            logger.info(f"Processing authors for {len(papers)} papers.")
+
+            for paper in papers:
+                # Process paper authors
+                # ...
+    except Exception as e:
+        logger.error(f"Error in processing authors: {e}")
+```
+
+### 3. Paper-Author Mapping (`process_paper_author_mapping.py`)
+
+- Creates associations between papers and authors
+- Determines correct author ordering for each paper
+- Begins preliminary affiliation mapping
+
+```python
+def create_paper_authors():
+    """
+    Populate the PaperAuthor table with paper-author associations and affiliation details.
+    """
+    try:
+        with VenueDB() as db:
+            session: Session = db.session
+
+            # Initialize AffiliationChecker
+            affiliation_checker = AffiliationChecker()
+
+            # Fetch all papers with their venue_info
+            papers: List[Paper] = session.query(Paper).options(
+                joinedload(Paper.venue_info)
+            ).all()
+
+            logger.info(f"Found {len(papers)} papers in the database.")
+
+            for paper in papers:
+                # Process paper authors
+                # ...
+    except Exception as e:
+        logger.error(f"An error occurred while creating PaperAuthor associations: {e}")
+```
+
+### 4. Affiliation Resolution (Patch Scripts)
+
+The system employs a multi-stage approach to resolve affiliations:
+
+#### Stage 1: Domain-based Resolution (`patch_unk_cc2.py`)
+- Uses email domains or website domains to determine country
+- Leverages the `d2cc.py` mapping file
+
+```python
+for record in results:
+    domain = record.affiliation_domain.lower() if record.affiliation_domain else ""
+    match = ccTLD_pattern.search(domain)
+    if match:
+        country_code = match.group(1).upper()
+    else:
+        # Use the predefined mapping
+        main_domain = domain.split('.')[-2] + '.' + domain.split('.')[-1] if '.' in domain else domain
+        country_code = domain_to_cc.get(main_domain, "UNK")
+    
+    # Update the country code if known
+    if country_code != "UNK":
+        record.affiliation_country = country_code
+```
+
+#### Stage 2: Name-based Resolution (`patch_unk_cc3.py`)
+- Uses institution names to determine country
+- Leverages the `name2cc.py` mapping file
+
+```python
+for record in results:
+    name = record.affiliation_name
+    country_code = name_to_cc.get(name, "UNK")  # Lookup the name-to-CC mapping
+
+    # Update the country code if a mapping is found
+    if country_code != "UNK":
+        record.affiliation_country = country_code
+```
+
+#### Stage 3: Additional Name-based Resolution (`patch_unk_cc4.py`)
+- Similar to Stage 2 but with expanded mapping
+
+#### Stage 4: LLM-based Resolution (`patch_unk_cc5.py`)
+- Uses LLMs to extract affiliation details from paper PDFs
+- Processes papers with unknown affiliations
+
+```python
+def process_paper_authors():
+    """
+    Main function to process PaperAuthor entries with unknown affiliations.
+    """
+    paper_authors = get_paper_authors_with_unknown_affiliation()
+
+    # Group PaperAuthors by Paper to minimize PDF downloads
+    papers_dict = {}
+    for pa in paper_authors:
+        paper = pa.paper
+        if paper.id not in papers_dict:
+            papers_dict[paper.id] = {"paper": paper, "authors": []}
+        papers_dict[paper.id]["authors"].append(pa)
+
+    logger.info(f"Processing {len(papers_dict)} papers with unknown author affiliations.")
+
+    for paper_id, data in papers_dict.items():
+        # Download PDF, extract text, use LLM to determine affiliations
+        # ...
+```
+
+### 5. Analytics Generation (`analytics.py`, `generate_final_jsons.py`, `generate_summaries.py`)
+
+- Compiles the processed data into structured JSON
+- Generates analysis of institutional contributions
+- Creates paper summaries using LLM processing of paper content
+- Prepares data for visualization and reporting
+
+## Database Schema
+
+The system uses SQLalchemy ORM with the following core models:
+
+### VenueInfo
+
+Stores information about research venues:
+
+```python
+class VenueInfo(Base):
+    __tablename__ = 'venue_infos'
+    __table_args__ = (UniqueConstraint('conference', 'year', 'track', name='uix_conference_year_track'),)
+    
+    id = Column(Integer, primary_key=True)
+    conference = Column(String, nullable=False)  # Conference name (e.g., "NeurIPS")
+    year = Column(Integer, nullable=False)       # Conference year (e.g., 2024)
+    track = Column(String, nullable=False)       # Conference track (e.g., "Conference")
+    
+    papers = relationship("Paper", back_populates="venue_info", cascade="all, delete-orphan")
+```
+
+### Paper
+
+Stores research paper details:
+
+```python
+class Paper(Base):
+    __tablename__ = 'papers'
+    
+    id = Column(String, primary_key=True)  # e.g., OpenReview ID
+    venue_info_id = Column(Integer, ForeignKey('venue_infos.id'), nullable=False)
+    
+    title = Column(String, nullable=False)  # Paper title
+    status = Column(String)                 # Status (e.g., "accepted", "rejected")
+    pdf_url = Column(String)                # URL to the PDF
+    pdf_path = Column(String)               # Local path if PDF is cached
+    pdate = Column(DateTime)                # Publication date
+    odate = Column(DateTime)                # Online date
+    raw_authors = Column(JSON, nullable=True)  # Raw author data as JSON
+    
+    # Relationships
+    venue_info = relationship("VenueInfo", back_populates="papers")
+    authors = relationship("PaperAuthor", back_populates="paper", cascade="all, delete-orphan")
+```
+
+### Author
+
+Stores author information:
+
+```python
+class Author(Base):
+    __tablename__ = 'authors'
+    
+    id = Column(Integer, primary_key=True)
+    full_name = Column(String, nullable=False)       # Author's full name
+    email = Column(String, unique=False, nullable=True)  # Author's email
+    openreview_id = Column(String, unique=True, nullable=True)  # e.g. "~John_Smith1"
+    orcid = Column(String, nullable=True)            # ORCID identifier
+    google_scholar_link = Column(String, nullable=True)  # Google Scholar profile
+    linkedin = Column(String, nullable=True)         # LinkedIn profile
+    homepage = Column(String, nullable=True)         # Personal/academic homepage
+    affiliation_history = Column(JSON, nullable=True)  # History of affiliations as JSON
+
+    papers = relationship("PaperAuthor", back_populates="author", cascade="all, delete-orphan")
+```
+
+### PaperAuthor
+
+Association table connecting papers and authors:
+
+```python
+class PaperAuthor(Base):
+    """
+    Association table linking a Paper to an Author, including the
+    'position' (i.e., ordering) of the author on that paper and affiliation details.
+    """
+    __tablename__ = 'paper_authors'
+    
+    paper_id = Column(String, ForeignKey('papers.id'), primary_key=True)
+    author_id = Column(Integer, ForeignKey('authors.id'), primary_key=True)
+    position = Column(Integer, nullable=False)  # Author position in paper
+    
+    # Affiliation details
+    affiliation_name = Column(String, nullable=True)  # Institution name
+    affiliation_domain = Column(String, nullable=True)  # Institution domain
+    affiliation_state_province = Column(String, nullable=True)  # State/province
+    affiliation_country = Column(String, nullable=True)  # Country code (e.g., "IN" for India)
+    
+    paper = relationship("Paper", back_populates="authors")
+    author = relationship("Author", back_populates="papers")
+```
 
 ## Modules and Components
 
@@ -379,24 +528,83 @@ The `AffiliationChecker` class in `pipeline/affiliation_checker.py` determines t
 def resolve_affiliation(self, affiliation_history: List[Dict[str, Any]], paper_date: datetime) -> Optional[Dict[str, Any]]:
     """
     Determine the author's affiliation at the time of the paper's publication.
+    
+    :param affiliation_history: List of affiliation records.
+    :param paper_date: Publication date of the paper.
+    :return: A dictionary containing affiliation details or None if not found.
     """
-    # Algorithm determines correct affiliation based on dates
+    if not affiliation_history:
+        logger.debug("No affiliation history provided.")
+        return None
+
+    for record in affiliation_history:
+        # Extract dates and affiliation details
+        start_year = record.get('start')
+        end_year = record.get('end')
+        institution = record.get('institution', {})
+        
+        # Convert years to datetime objects for comparison
+        start_date = datetime(start_year, 1, 1) if start_year else datetime.min
+        end_date = datetime(end_year, 12, 31) if end_year else datetime.max
+        
+        # Check if paper date falls within this affiliation period
+        if start_date <= paper_date <= end_date:
+            return {
+                'name': institution.get('name'),
+                'domain': institution.get('domain'),
+                'country': institution.get('country', 'UNK')
+            }
+            
+    return None  # No matching affiliation found
 ```
 
-### Configuration
+### Configuration Components
 
 Configuration files include:
+
 - `venues_config.py`: Defines venues/conferences to track
+  ```python
+  VenueConfig(
+      conference="NeurIPS",
+      year=2024,
+      track="Conference",
+      source_adapter="openreview",
+      source_id="NeurIPS.cc/2024/Conference",
+      adapter_class="NeurIPSAdapter"
+  )
+  ```
+
 - `name2cc.py`: Maps institution names to country codes
+  ```python
+  affiliation_to_country = {
+      "Indian Institute of Technology Bombay": "IN",
+      "IIIT Hyderabad": "IN",
+      # ...
+  }
+  ```
+
 - `d2cc.py`: Maps domains to country codes
+  ```python
+  domain_to_cc = {
+      "iitb.ac.in": "IN",
+      "iiit.ac.in": "IN",
+      # ...
+  }
+  ```
+
 - `db_config.py`: Database connection settings
+  ```python
+  DATABASE_URL = "sqlite:///venues.db"
+  engine = create_engine(DATABASE_URL, echo=False, connect_args={"check_same_thread": False})
+  SessionLocal = sessionmaker(bind=engine, expire_on_commit=False, autoflush=False)
+  ```
 
 ### DTO (Data Transfer Objects)
 
 The system uses DTOs to pass data between different components:
 
-- `AuthorDTO`: Represents author information
-- `PaperDTO`: Represents paper details
+- `AuthorDTO`: Represents author information with fields for name, email, identifiers, and affiliation history
+- `PaperDTO`: Represents paper details including metadata and author list
 
 ## Workflows
 
@@ -418,175 +626,48 @@ python -m indiaml.pipeline.process_paper_author_mapping
 python -m indiaml.pipeline.patch_unk_cc2
 python -m indiaml.pipeline.patch_unk_cc3
 python -m indiaml.pipeline.patch_unk_cc4
-python -m indiaml.pipeline.patch_unk_cc5
+python -m indiaml.pipeline.patch_unk_cc5  # Optional, requires OpenRouter API key
 
 # Generate analytics
 python -m indiaml.analytics.analytics
+python -m indiaml.pipeline.generate_final_jsons
+python -m indiaml.pipeline.generate_summaries  # Optional, requires OpenRouter API key
 ```
 
-### Adding a New Data Source
+### Adding a New Conference
 
-To add a new data source:
+To add a new conference:
 
-1. Create a new adapter class in `venue_adapters/`
-2. Register the adapter in `adapter_factory.py`
-3. Add configuration entries in `venues_config.py`
-4. Update any necessary affiliation mappings in `name2cc.py` and `d2cc.py`
+1. Add a new `VenueConfig` entry to `indiaml/config/venues_config.py`:
+   ```python
+   VENUE_CONFIGS.append(
+       VenueConfig(
+           conference="NewConference",
+           year=2024,
+           track="Conference",
+           source_adapter="openreview",
+           source_id="NewConference.cc/2024/Conference",
+           adapter_class="NeurIPSAdapter"  # Reuse existing adapter if compatible
+       )
+   )
+   ```
 
-## API Integration
+2. If the new conference has a unique structure, create a custom adapter:
+   ```python
+   # indiaml/venue_adapters/new_conference_adapter.py
+   from .base_adapter import BaseAdapter
+   
+   class NewConferenceAdapter(BaseAdapter):
+       def fetch_papers(self) -> List[PaperRecord]:
+           # Implementation
+       
+       def determine_status(self, venue_group, venueid) -> str:
+           # Implementation
+           
+       def fetch_authors(self, author_ids) -> List[AuthorDTO]:
+           # Implementation
+   ```
 
-### OpenReview API
+3. Register the adapter in `adapter_factory.py`
 
-The system uses the OpenReview API to fetch papers and author information:
-
-```python
-from openreview import OpenReviewClient, Profile
-
-# Initialize client
-client = OpenReviewClient(baseurl="https://api2.openreview.net")
-
-# Fetch papers
-invitation = f"{source_id}/-/Submission"
-notes = client.get_all_notes(invitation=invitation)
-
-# Fetch author profiles
-profiles = openreview.tools.get_profiles(
-    client,
-    ids_or_emails=author_ids,
-    with_publications=False,
-    with_relations=False
-)
-```
-
-### LLM Integration
-
-For advanced affiliation resolution, the system can use LLMs (e.g., Claude) via the OpenRouter API:
-
-```python
-client = openai.OpenAI(
-    api_key=os.environ.get("OPENROUTER_API_KEY"),
-    base_url="https://openrouter.ai/api/v1",
-)
-
-response = client.chat.completions.create(
-    model="anthropic/claude-3.5-sonnet",
-    messages=messages,
-    max_tokens=4096,
-    temperature=0.1
-)
-```
-
-## Analytics Generation
-
-The analytics module processes the database to generate structured outputs:
-
-```python
-def generate_papers_json(output_path='papers_output.json'):
-    # Query all papers with related data
-    papers = session.query(Paper).options(
-        joinedload(Paper.venue_info),
-        joinedload(Paper.authors).joinedload(PaperAuthor.author)
-    ).all()
-
-    # Transform into structured output
-    output_data = []
-    for paper in papers:
-        # Build conference information
-        conference = ConferenceSchema(...)
-        # Build authors list
-        authors = [...]
-        # Create paper entry
-        paper_entry = PaperSchema(...)
-        output_data.append(paper_entry.model_dump())
-    
-    # Write to JSON file
-    with open(output_path, 'w') as f:
-        f.write(response.model_dump_json(indent=2))
-```
-
-## Configuration
-
-### Environment Variables
-
-Required environment variables:
-- `OPENROUTER_API_KEY`: API key for OpenRouter LLM access (for advanced affiliation resolution)
-
-### Configuration Files
-
-- `venues_config.py`: Contains VenueConfig objects for each venue to track
-- `name2cc.py`: Maps institution names to country codes
-- `d2cc.py`: Maps domains to country codes
-- `db_config.py`: Database connection configuration
-
-Example venue configuration:
-```python
-VenueConfig(
-    conference="NeurIPS",
-    year=2024,
-    track="Conference",
-    source_adapter="openreview",
-    source_id="NeurIPS.cc/2024/Conference",
-    adapter_class="NeurIPSAdapter"
-)
-```
-
-## Troubleshooting
-
-### Common Issues
-
-1. **Unknown Affiliations**: When the system cannot determine an author's affiliation, it sets the affiliation_country to "UNK". To address:
-   - Add entries to name2cc.py or d2cc.py
-   - Run the patch scripts again
-   - Use the LLM-based resolution (patch_unk_cc5.py)
-
-2. **API Rate Limits**: OpenReview API may enforce rate limits. Implement retry logic with exponential backoff.
-
-3. **PDF Processing Issues**: When extracting information from PDFs:
-   - Ensure pymupdf4llm is correctly installed
-   - Implement fallback mechanisms for poorly formatted PDFs
-
-### Logging
-
-The system uses Python's logging module. Logs are output to stdout by default:
-
-```python
-# Setup Logging
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
-handler = logging.StreamHandler()
-handler.setLevel(logging.DEBUG)
-formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-handler.setFormatter(formatter)
-if not logger.handlers:
-    logger.addHandler(handler)
-```
-
-## Future Development
-
-### Planned Enhancements
-
-1. **Improved Affiliation Resolution**:
-   - Enhanced heuristics for domain-based resolution
-   - Improved country code mapping
-
-1. **Data Visualization**:
-- Interactive dashboards for trends and metrics
-- Collaboration network graphs
-
-1. **Quality Improvements**:
-   - Expanded test coverage
-   - Enhanced validation of data integrity
-   - Automated data quality checks
-
-1. **Additional Data Sources**:
-   - arXiv (ML/AI categories)
-   - ACL Anthology
-   - IEEE Xplore
-   - ACM Digital Library
-
-1. **API Development**:
-   - REST API for accessing the dataset
-
-### Contributing
-
-Please refer to CONTRIBUTING.md for detailed guidelines on contributing to the project.
+4. Run the pipeline with the new configuration

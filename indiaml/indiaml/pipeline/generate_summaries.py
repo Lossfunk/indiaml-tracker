@@ -132,7 +132,7 @@ def process_venue_file(file_path, tracker_dir):
 
 def main():
     # Set tracker directory from CLI args or use default
-    tracker_dir = sys.argv[1] if len(sys.argv) > 1 else "../ui/indiaml-tracker/src/assets/tracker"
+    tracker_dir = sys.argv[1] if len(sys.argv) > 1 else "../ui/indiaml-tracker/public/tracker"
     
     # Ensure the tracker directory exists
     if not os.path.exists(tracker_dir):

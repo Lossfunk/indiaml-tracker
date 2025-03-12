@@ -4,7 +4,7 @@ import pycountry
 import json
 import os
 
-OUTPUT_DIR = "../ui/indiaml-tracker/src/assets/tracker"
+OUTPUT_DIR = "../ui/indiaml-tracker/public/tracker"
 
 
 def connect_to_database(db_path="venues.db"):
