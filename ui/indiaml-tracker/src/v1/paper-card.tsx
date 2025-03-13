@@ -50,9 +50,7 @@ export function PaperCard({ paper }: PaperCardProps) {
               <p className="text-sm text-gray-600 mb-4">{paper.paper_content}</p>
             ) : (
               <p className="text-sm text-gray-600 mb-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-                faucibus tortor ut neque consequat, at egestas neque efficitur. Proin
-                vel quam id lectus tempus dignissim eu sit amet arcu.
+                Loading...
               </p>
             )}
 

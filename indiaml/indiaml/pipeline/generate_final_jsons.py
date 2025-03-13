@@ -97,7 +97,7 @@ def process_venue_year(conn, conference, year, country_code='IN', output_dir=OUT
         return None
     
     # Add prefix to pdf_url
-    df["pdf_url"] = "http://openreview.net" + df["pdf_url"]
+    df["pdf_url"] = "https://openreview.net" + df["pdf_url"]
     
     # Process papers
     processed_df = process_papers(df, country_code)
