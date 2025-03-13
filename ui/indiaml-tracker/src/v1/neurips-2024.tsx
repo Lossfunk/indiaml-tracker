@@ -25,7 +25,7 @@ export default function Home() {
           animate={{ scale: 1, opacity: 1, y: [50, 0] }}
           transition={{ duration: 1, ease: "anticipate" }}
         >
-          Indian Research Papers 🇮🇳 accepted at Top AI/ML conferences in 2024!
+          Indian Research Papers 🇮🇳 accepted at Top AI/ML conferences
         </motion.h1>
 
         {/* Subtitle (slides in once) */}
