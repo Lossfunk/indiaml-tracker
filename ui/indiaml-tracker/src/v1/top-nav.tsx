@@ -7,7 +7,7 @@ export function TopNav() {
     <nav className="border-b border-gray-200">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <Link to="/papers-2024" className="text-xl font-bold">
+          <Link to="/papers" className="text-xl font-bold">
           <div className="h-16 flex items-center">
           <div className="h-full">
           <AnimatedLogo/>
