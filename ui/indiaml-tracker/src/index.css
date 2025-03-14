@@ -75,4 +75,44 @@
   body {
     @apply bg-background text-foreground;
   }
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes slideIn {
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes slideOut {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(100%); }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s ease-in-out;
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.slide-out {
+  animation: slideOut 0.5s ease-in-out;
 }
