@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react"
+import { Switch } from "@/components/ui/switch"
 
 type Theme = "dark" | "light" | "system"
 
@@ -48,6 +49,21 @@ export function ThemeProvider({
     root.classList.add(theme)
   }, [theme])
 
+  useEffect(() => {
+    const root = window.document.documentElement
+    const observer = new MutationObserver(() => {
+      if (root.classList.contains("light")) {
+        root.style.setProperty("--foreground", "0 0% 0%")
+      } else {
+        root.style.setProperty("--foreground", "210 40% 98%")
+      }
+    })
+
+    observer.observe(root, { attributes: true, attributeFilter: ["class"] })
+
+    return () => observer.disconnect()
+  }, [])
+
   const value = {
     theme,
     setTheme: (theme: Theme) => {
@@ -59,6 +75,12 @@ export function ThemeProvider({
   return (
     <ThemeProviderContext.Provider {...props} value={value}>
       {children}
+      <div className="fixed bottom-4 right-4">
+        <Switch
+          checked={theme === "dark"}
+          onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
+        />
+      </div>
     </ThemeProviderContext.Provider>
   )
 }
