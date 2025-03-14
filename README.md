@@ -60,7 +60,7 @@ git clone https://github.com/lossfunk/indiaml-tracker.git
 cd indiaml
 
 # Set up environment with uv (recommended)
-uv venv --python=3.11
+uv venv --python=3.12
 uv pip install .
 
 # Alternative setup with pip
