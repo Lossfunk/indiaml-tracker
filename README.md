@@ -169,6 +169,13 @@ If you encounter issues during setup or while running the pipeline:
 
 [![Star History Chart](https://api.star-history.com/svg?repos=lossfunk/indiaml-tracker&type=Date)](https://www.star-history.com/#lossfunk/indiaml-tracker&Date)
 
+
+## FAQ
+
+### What is "Indian Research"
+- How we define that is "at least one author must be affiliated with an indian organization at the time of publication of the paper"
+- There are two filters "First author Indian" and "Majory Authors Indian", this will update appropriate filters.
+
 ## 📜 License
 
 [MIT License](LICENSE)
