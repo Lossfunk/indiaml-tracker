@@ -428,7 +428,8 @@
       }
     ],
     "top_author_from_india": false,
-    "majority_authors_from_india": false
+    "majority_authors_from_india": false,
+    "paper_content": "This paper explores transfer learning for network models where a fully observed source network helps estimate a target network when only a small fraction of its nodes are observed. When networks share latent variables, the authors show vanishing error is possible despite limited target data. They present two algorithms: a general method for latent variable models using graph distance metrics, and a specialized approach for Stochastic Block Models achieving minimax optimal rates. Experiments on synthetic and real-world networks validate their theoretical guarantees."
   },
   {
     "paper_title": "Accuracy is Not All You Need",
@@ -1299,7 +1300,8 @@
       }
     ],
     "top_author_from_india": true,
-    "majority_authors_from_india": true
+    "majority_authors_from_india": true,
+    "paper_content": "IsoNet++ is a graph neural network for subgraph matching that iteratively refines alignments between query and corpus graphs through early interaction. It outperforms previous methods by using injective alignments, lazy multi-round updates, and node-pair partner interactions that capture critical signals between graphs. Experiments show significant performance improvements across multiple datasets as alignments are progressively refined through successive rounds."
   },
   {
     "paper_title": "FactorSim: Generative Simulation via Factorized Representation",
