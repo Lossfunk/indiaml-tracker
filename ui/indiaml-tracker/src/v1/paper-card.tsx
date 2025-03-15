@@ -33,7 +33,7 @@ export function PaperCard({ paper }: PaperCardProps) {
       transition={{ duration: 0.4, ease: "easeOut" }}
       whileHover={{ scale: 1.01 }}
     >
-      <Card className="flex flex-col h-full">
+      <Card className="flex flex-col h-full overflow-hidden">
         <CardHeader className="bg-zinc-900 border-b">
           <CardTitle className="text-lg text-zinc-100 font-semibold">
             {paper.paper_title}
@@ -191,19 +191,19 @@ function processOpenReviewId(id: string): string {
 * Using Tailwind CSS for styling.
 */
 function getAuthorInfo(author: {
- name?: string;
- affiliation_name: string;
- affiliation_country: string;
- affiliation_domain: string;
- openreview_id: string;
+  name?: string;
+  affiliation_name: string;
+  affiliation_country: string;
+  affiliation_domain: string;
+  openreview_id: string;
 }): JSX.Element {
- const displayName = getDisplayName(author);
+  const displayName = getDisplayName(author);
 
- return (
-   <div className="text-left">
-     <div className="text-lg font-bold">{displayName}</div>
-     <div className="text-gray-100">Affiliation: {author.affiliation_name}</div>
-     <div className="text-gray-100">Country: {author.affiliation_country}</div>
-   </div>
- );
+  return (
+    <div className="text-left">
+      <div className="text-lg font-bold">{displayName}</div>
+      <div className="text-gray-100">Affiliation: {author.affiliation_name}</div>
+      <div className="text-gray-100">Country: {author.affiliation_country}</div>
+    </div>
+  );
 }
