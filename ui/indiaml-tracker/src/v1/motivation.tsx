@@ -59,8 +59,8 @@ const storyMilestones = [
 
 const Motivation = () => {
   return (
-    <section className="bg-gray-900 py-16 px-4">
-      <motion.div 
+    <section className="dark:bg-gray-900 py-16 px-4">
+      <motion.div
         className="max-w-5xl mx-auto"
         variants={containerVariants}
         initial="hidden"
@@ -68,15 +68,15 @@ const Motivation = () => {
         viewport={{ once: true }}
       >
         {/* Section Header */}
-        <motion.div 
+        <motion.div
           className="text-center mb-16"
           variants={itemVariants}
         >
           <FaLightbulb className="text-yellow-400 text-4xl mx-auto mb-4" />
-          <h2 className="text-3xl font-bold text-white mb-4">Our Motivation</h2>
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Our Motivation</h2>
           <div className="w-24 h-1 bg-indigo-500 mx-auto mb-6"></div>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            The IndiaML Tracker was born from a simple tweet and grew into a mission to spotlight 
+          <p className="text-gray-700 dark:text-gray-300 text-lg max-w-3xl mx-auto">
+            The IndiaML Tracker was born from a simple tweet and grew into a mission to spotlight
             India's contributions to the global machine learning landscape.
           </p>
         </motion.div>
@@ -87,7 +87,7 @@ const Motivation = () => {
           <div className="absolute opacity-10 transform scale-75 -rotate-2 blur-sm left-0 right-0 mx-auto w-full max-w-md pointer-events-none">
             <Tweet />
           </div>
-          
+
           {/* Main Story Timeline */}
           <div className="relative z-10">
             {storyMilestones.map((milestone, index) => (
@@ -114,7 +114,7 @@ const Motivation = () => {
         </div>
 
         {/* Tweet Callout (smaller version) */}
-        <motion.div 
+        <motion.div
           className="mb-16 max-w-lg mx-auto"
           variants={itemVariants}
         >
@@ -122,7 +122,7 @@ const Motivation = () => {
             <div className="flex items-center mb-4">
               <FaTwitter className="text-blue-400 mr-3 text-xl" />
               <p className="text-gray-300 italic text-sm">
-                "i'm happy to fund this if someone builds a tracker" 
+                "i'm happy to fund this if someone builds a tracker"
                 <a href="https://x.com/paraschopra" className="text-blue-400 ml-1">@paraschopra</a>
               </p>
             </div>
@@ -138,15 +138,15 @@ const Motivation = () => {
         </motion.div>
 
         {/* Mission Statement */}
-        <motion.div 
+        <motion.div
           className="bg-gradient-to-r from-indigo-900 to-purple-900 rounded-xl p-8 shadow-2xl"
           variants={itemVariants}
         >
           <blockquote className="text-xl text-gray-100 italic relative">
             <span className="text-5xl text-indigo-300 absolute top-0 left-0 opacity-20">"</span>
             <p className="relative z-10 pl-6">
-              We're committed to showcasing the groundbreaking machine learning research happening 
-              within India's borders. By spotlighting local innovation, we aim to inspire the next 
+              We're committed to showcasing the groundbreaking machine learning research happening
+              within India's borders. By spotlighting local innovation, we aim to inspire the next
               generation of researchers and position India as a global leader in AI advancement.
             </p>
             <footer className="mt-4 text-right">

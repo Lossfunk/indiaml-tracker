@@ -1,5 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react"
 import { Switch } from "@/components/ui/switch"
+import { Button } from "./ui/button"
+import { Moon, Sun } from "lucide-react"
 
 type Theme = "dark" | "light" | "system"
 
@@ -75,12 +77,6 @@ export function ThemeProvider({
   return (
     <ThemeProviderContext.Provider {...props} value={value}>
       {children}
-      <div className="fixed bottom-4 right-4">
-        <Switch
-          checked={theme === "dark"}
-          onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
-        />
-      </div>
     </ThemeProviderContext.Provider>
   )
 }
