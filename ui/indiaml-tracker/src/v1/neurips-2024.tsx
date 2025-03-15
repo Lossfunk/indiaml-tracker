@@ -6,7 +6,7 @@ import { ResearchPapersShowcase } from "./research-paper-showcase";
 
 export default function Home() {
   return (
-    <main className="relative container mx-auto p-4 min-h-screen overflow-visible text-gray-100">
+    <main className="relative container mx-auto p-4 min-h-screen overflow-visible text-gray-900 dark:text-gray-200">
       {/* Main Card Container with glassmorphic outline */}
       <div
         className="
@@ -30,7 +30,7 @@ export default function Home() {
 
         {/* Subtitle (slides in once) */}
         <motion.h6
-          className="text-base md:text-lg text-gray-200"
+          className="text-base md:text-lg text-gray-800 dark:text-gray-300"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
@@ -50,12 +50,12 @@ export default function Home() {
             href="https://github.com/lossfunk/indiaml-tracker/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-md bg-indigo-600 hover:bg-indigo-500 transition-colors"
+            className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-md text-gray-100 bg-indigo-600 hover:bg-indigo-500 transition-colors"
           >
             <FaGithub className="mr-2" />
             View Research Data & Pipelines on GitHub
           </a>
-          <p className="text-xs text-gray-400 mt-1">
+          <p className="text-xs text-gray-600 dark:text-gray-500 mt-2">
             Explore data pipelines and research materials for India's ML
             landscape
           </p>

@@ -51,7 +51,7 @@ export function FilterBar({
           throw new Error('Failed to fetch conference index')
         }
         const data = await response.json()
-        
+
         // Transform the data to match our Conference interface
         const transformedData = data.map((item: { label: string, file: string }) => {
           // Parse the label to extract conference name and year
@@ -59,7 +59,7 @@ export function FilterBar({
           const labelParts = item.label.split(' ')
           const year = parseInt(labelParts[labelParts.length - 1], 10)
           const id = labelParts[0].toLowerCase().replace('-', '')
-          
+
           return {
             id,
             label: labelParts[0],
@@ -67,7 +67,7 @@ export function FilterBar({
             file: item.file
           }
         })
-        
+
         setConferences(transformedData)
         setLoading(false)
       } catch (error) {
@@ -122,12 +122,12 @@ export function FilterBar({
 
       {/* Toggles for Indian authors */}
       <motion.div
-        className="flex items-center space-x-4"
+        className="flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0 justify-start"
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
       >
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-2 -ml-8 md:ml-0">
           <Switch
             id="first-author"
             checked={isFirstAuthorIndian}
@@ -157,7 +157,7 @@ export function FilterBar({
       >
         <Popover open={isOpen} onOpenChange={setIsOpen}>
           <PopoverTrigger asChild>
-            <Button variant="outline" className="w-[180px] justify-between">
+            <Button variant="outline" className="w-[180px] justify-between text-gray-900 dark:text-gray-300">
               <Filter className="mr-2 h-4 w-4" />
               Conferences
               <ChevronDown className="ml-2 h-4 w-4 opacity-50" />
@@ -171,11 +171,12 @@ export function FilterBar({
                 conferences.map((conference) => {
                   const conferenceKey = `${conference.id}-${conference.year}`
                   return (
-                    <div key={conferenceKey} className="flex items-center space-x-2 mb-2">
+                    <div key={conferenceKey} className="flex items-center space-x-2 mb-">
                       <Checkbox
                         id={conferenceKey}
                         checked={selectedConferences.includes(conferenceKey)}
                         onCheckedChange={() => handleConferenceToggle(conference)}
+                        className="border-white"
                       />
                       <label
                         htmlFor={conferenceKey}
