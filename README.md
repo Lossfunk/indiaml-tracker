@@ -7,7 +7,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/lossfunk/indiaml-tracker?style=social)](https://github.com/lossfunk/indiaml-tracker/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/lossfunk/indiaml-tracker?style=social)](https://github.com/lossfunk/indiaml-tracker/network/members)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/downloads/)
+[![Python Version](https://img.shields.io/badge/python-3.12%2B-blue)](https://www.python.org/downloads/)
 
 ## 📋 Overview
 
@@ -40,7 +40,7 @@ For complete technical details, please refer to our [Documentation](./DOCUMENTAT
 
 ## 🛠️ Technologies Used
 
-- **Python 3.8+**: Core development language
+- **Python 3.12+**: Core development language
 - **SQLite**: Lightweight database for data storage
 - **SQLAlchemy**: ORM for database operations
 - **OpenReview API**: Primary data source for paper metadata
@@ -170,11 +170,11 @@ If you encounter issues during setup or while running the pipeline:
 [![Star History Chart](https://api.star-history.com/svg?repos=lossfunk/indiaml-tracker&type=Date)](https://www.star-history.com/#lossfunk/indiaml-tracker&Date)
 
 
-## FAQ
+## 
 
 ### What is "Indian Research"
 - How we define that is "at least one author must be affiliated with an indian organization at the time of publication of the paper"
-- There are two filters "First author Indian" and "Majory Authors Indian", this will update appropriate filters.
+- There are two filters "First author Indian" and "Majority Authors Indian", the first author typically is the one doing the significant portion of work. And Majority is just based on whether >50% authors are from india or not.
 
 ## 📜 License
 
