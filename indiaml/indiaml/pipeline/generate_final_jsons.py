@@ -87,7 +87,8 @@ def process_venue_year(conn, conference, year, country_code='IN', output_dir=OUT
     )
     WHERE conference = '{conference}'
     AND year = '{year}'
-    AND track = 'Conference';
+    AND track = 'Conference'
+    AND status = 'accepted';
     """
     
     df = pd.read_sql_query(query, conn)
