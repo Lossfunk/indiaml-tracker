@@ -6,5 +6,9 @@
   {
     "label": "NeurIPS 2024",
     "file": "neurips-2024.json"
+  },
+  {
+    "label": "ICLR 2024",
+    "file": "iclr-2024.json"
   }
 ]
