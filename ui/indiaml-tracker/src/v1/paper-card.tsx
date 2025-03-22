@@ -47,9 +47,9 @@ export function PaperCard({ paper }: PaperCardProps) {
               Paper Summary
             </h3>
             {paper.paper_content && paper.paper_content.trim() !== "" ? (
-              <p className="text-sm text-gray-600 mb-4">{paper.paper_content}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">{paper.paper_content}</p>
             ) : (
-              <p className="text-sm text-gray-600 mb-4">
+              <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
                 Loading...
               </p>
             )}
@@ -60,7 +60,7 @@ export function PaperCard({ paper }: PaperCardProps) {
                 <h3 className="font-medium text-gray-800 dark:text-gray-200 mb-2">
                   Abstract
                 </h3>
-                <p className="text-sm text-gray-600 mb-4">{paper.abstract}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">{paper.abstract}</p>
               </>
             ) : (
               <p className="text-sm text-blue-100/60 underline mb-4">
