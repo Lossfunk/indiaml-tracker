@@ -34,6 +34,14 @@ VENUE_CONFIGS: List[VenueConfig] = [
         source_adapter="openreview",
         source_id="ICLR.cc/2024/Conference",
         adapter_class="ICAIAdapter"
+    ),
+    VenueConfig(
+        conference="ICLR",
+        year=2025,
+        track="Conference",
+        source_adapter="openreview",
+        source_id="ICLR.cc/2025/Conference",
+        adapter_class="ICAIAdapter"
     )
     # Add more VenueConfig instances as needed
 ]
