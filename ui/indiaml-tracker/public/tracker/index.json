@@ -1,14 +1,18 @@
 [
   {
     "label": "ICML 2024",
-    "file": "icml-2024.json"
+    "file": "icml-2024-v1.json"
   },
   {
-    "label": "NeurIPS 2024",
-    "file": "neurips-2024.json"
+    "label": "NeurIPS 2024 (v1)",
+    "file": "neurips-2024-v1.json"
   },
   {
     "label": "ICLR 2024",
     "file": "iclr-2024.json"
+  },
+  {
+    "label": "NeurIPS 2024",
+    "file": "neurips-2024.json"
   }
 ]

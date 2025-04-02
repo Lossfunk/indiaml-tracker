@@ -15,6 +15,7 @@ import openai
 import logging
 import re
 import dotenv
+
 dotenv.load_dotenv()
 
 
@@ -44,18 +45,39 @@ client = openai.OpenAI(
     base_url="https://openrouter.ai/api/v1",
 )
 
+
 # Define Pydantic Schema for Structured Response
 class AffiliationSchema(BaseModel):
-    openreview_id: str = Field(..., description="The openreview id that is likely as per the author input data for correlation")
-    author_name: Optional[str] = Field(..., description="The author name corresponding to a given affiliation entry")
-    affiliation_name: Optional[str] = Field(..., description="The affiliation name for a given author, set to 'Unknown' if not sure or ambiguous")
-    affiliation_domain: Optional[str] = Field(..., description="The affiliation domain (DNS) for a given author, set to empty string if not sure or ambiguous")
-    affiliation_state_province: Optional[str] = Field(..., description="The state/province address, set to UNK if not sure or ambiguous")
-    affiliation_country: Optional[str] = Field(..., description="2 letter ISO country code for the country, set to UNK if not sure or ambiguous")
+    openreview_id: str = Field(
+        ...,
+        description="The openreview id that is likely as per the author input data for correlation",
+    )
+    author_name: Optional[str] = Field(
+        ..., description="The author name corresponding to a given affiliation entry"
+    )
+    affiliation_name: Optional[str] = Field(
+        ...,
+        description="The affiliation name for a given author, set to 'Unknown' if not sure or ambiguous",
+    )
+    affiliation_domain: Optional[str] = Field(
+        ...,
+        description="The affiliation domain (DNS) for a given author, set to empty string if not sure or ambiguous",
+    )
+    affiliation_state_province: Optional[str] = Field(
+        ...,
+        description="The state/province address, set to UNK if not sure or ambiguous",
+    )
+    affiliation_country: Optional[str] = Field(
+        ...,
+        description="2 letter ISO country code for the country, set to UNK if not sure or ambiguous",
+    )
 
 
 class AffiliationResponse(BaseModel):
-    affiliations: List[AffiliationSchema] = Field(..., description="List of relevant found affiliations based on the author information and the paper")
+    affiliations: List[AffiliationSchema] = Field(
+        ...,
+        description="List of relevant found affiliations based on the author information and the paper",
+    )
 
 
 # Function to get paper authors with unknown affiliation
@@ -74,6 +96,8 @@ def get_paper_authors_with_unknown_affiliation():
         .filter(
             PaperAuthor.affiliation_name == "Unknown",
             PaperAuthor.affiliation_country == "UNK",
+            PaperAuthor.paper.has(status="accepted")  # Use the has() method for relationships
+
         )
         .all()
     )
@@ -111,14 +135,13 @@ def convert_pdf_to_markdown(pdf_stream, num_pages=3):
     return markdown
 
 
-
 def extract_json(markdown_string):
     """
     Extracts the JSON string between ```json start and ``` end tags.
-    
+
     Args:
     markdown_string (str): The markdown string containing the JSON data.
-    
+
     Returns:
     str: The extracted JSON string, including curly braces.
     """
@@ -170,7 +193,7 @@ Document Content (First {len(markdown_content.splitlines())} lines):
 ---
 First think through and reason from the document and the context about the JSON response and then use a code block to respond with this JSON format.
 Ensure you articulate your thoughts clearly before starting the JSON markdown tags, and ensure only one JSON code block in markdown format is elicited for the ease of parsing.
-Ensure adherence to provided JSON schema
+Ensure adherence to provided JSON schema, ensure the count matches, even if the result is filled with UNK
 
 ```json
 {{"affiliations": ...}}
@@ -217,14 +240,13 @@ def get_affiliation_details(messages, expected_count, authors):
         #     max_tokens=4096,
         # )
         response = client.chat.completions.create(
-            model="anthropic/claude-3.5-haiku",
+            model="deepseek/deepseek-chat-v3-0324",
             messages=messages,
             max_tokens=4096,
-            temperature=0.1
+            temperature=0.1,
         )
 
         raw_response = response.choices[0].message.content
-        
 
         logger.debug(f"Raw OpenAI response: {raw_response}")
         extracted_json = extract_json(raw_response)
@@ -334,9 +356,7 @@ def process_paper_authors():
                 continue
 
             # Prepare messages for OpenAI
-            messages = prepare_openai_messages(
-                paper.title, unknown_authors, markdown
-            )
+            messages = prepare_openai_messages(paper.title, unknown_authors, markdown)
             # Get affiliation details from OpenAI
             affiliations = get_affiliation_details(
                 messages,
