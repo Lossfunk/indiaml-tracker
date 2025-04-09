@@ -63,11 +63,12 @@ export function PaperCard({ paper }: PaperCardProps) {
                 <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">{paper.abstract}</p>
               </>
             ) : (
-              <p className="text-sm text-blue-100/60 underline mb-4">
-                <a href={paper.pdf_url} target="_blank" rel="noopener noreferrer">
-                  View PDF
-                </a>
-              </p>
+              // <p className="text-sm text-blue-100/60 underline mb-4">
+              //   <a href={paper.pdf_url} target="_blank" rel="noopener noreferrer">
+              //     View PDF
+              //   </a>
+              // </p>
+              <></>
             )}
 
             {/* Author badges with tooltips */}
@@ -143,7 +144,7 @@ export function PaperCard({ paper }: PaperCardProps) {
               href={paper.pdf_url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-gray-500 underline"
+              className="text-sm text-gray-600 dark:text-gray-400 underline"
             >
               PDF
             </a>
