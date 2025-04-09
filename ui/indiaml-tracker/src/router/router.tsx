@@ -10,8 +10,7 @@ import React, { useEffect } from "react";
 const V1Items = {
   V1Homepage: loadable(() => import("../v1/Homepage")),
   Landing: loadable(() => import("../v1/Landing")),
-  NeurIPS2024: loadable(() => import("../v1/neurips-2024")),
-  Maps2024: loadable(() => import("../v1/cc-map")),
+  Papers: loadable(() => import("../v1/papers")),
   About: loadable(() => import("../v1/about")),
   Motivation: loadable(() => import("../v1/motivation")),
 };
@@ -33,7 +32,7 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "papers",
-        element: <V1Items.NeurIPS2024 />,
+        element: <V1Items.Papers />,
       },
       {
         path: "landing",
@@ -46,10 +45,6 @@ export const router = createBrowserRouter([
       {
         path: "motivation",
         element: <V1Items.Motivation />,
-      },
-      {
-        path: "map-2024",
-        element: <V1Items.Maps2024 />,
       },
     ],
   },
