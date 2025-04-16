@@ -9,25 +9,47 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
-import type { Paper } from "@/types/paper"
+import type { Paper } from "@/types/paper" // Assuming Paper type includes top_author_from_india and majority_authors_from_india
 
 interface PaperCardProps {
   paper: Paper
 }
 
+// --- Helper Function to get Flag Emoji ---
+/**
+ * Converts a 2-letter country code (ISO 3166-1 alpha-2) to a flag emoji.
+ * Handles potential null/undefined/invalid codes.
+ * @param countryCode - The 2-letter country code (e.g., "IN", "US").
+ * @returns The corresponding flag emoji string, or an empty string if invalid.
+ */
+function getFlagEmoji(countryCode: string | null | undefined): string {
+  if (!countryCode || countryCode.length !== 2) {
+    return "" // Return empty if no code or not 2 letters
+  }
+  const code = countryCode.toUpperCase();
+  // Ensure both characters are A-Z
+  if (code.charCodeAt(0) < 65 || code.charCodeAt(0) > 90 || code.charCodeAt(1) < 65 || code.charCodeAt(1) > 90) {
+      return ""; // Return empty if not valid A-Z characters
+  }
+  // Calculate Unicode code points for regional indicator symbols
+  const codePoint1 = 0x1F1E6 + (code.charCodeAt(0) - 65); // 65 is 'A'
+  const codePoint2 = 0x1F1E6 + (code.charCodeAt(1) - 65);
+  return String.fromCodePoint(codePoint1) + String.fromCodePoint(codePoint2);
+}
+// --- End Helper Function ---
+
+
 export function PaperCard({ paper }: PaperCardProps) {
   const [showAllAuthors, setShowAllAuthors] = useState(false)
-  const authors = paper.author_list
+  const authors = paper.author_list || [] // Ensure authors is always an array
   const maxVisibleAuthors = 3
 
-  // Determine which authors to show based on the expanded state.
   const visibleAuthors = showAllAuthors ? authors : authors.slice(0, maxVisibleAuthors)
   const remainingAuthorsCount = authors.length - maxVisibleAuthors
 
   return (
-    // If you're seeing clipping, remove or override 'overflow-hidden' from here.
     <motion.div
-      className="h-full flex flex-col overflow-visible" // <--- ensure visible if needed
+      className="h-full flex flex-col overflow-visible"
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
@@ -49,53 +71,65 @@ export function PaperCard({ paper }: PaperCardProps) {
             {paper.paper_content && paper.paper_content.trim() !== "" ? (
               <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">{paper.paper_content}</p>
             ) : (
-              <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
-                Loading...
-              </p>
+               // Display abstract if content is missing but abstract exists
+              paper.abstract ? (
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 italic">(Abstract shown as summary)</p>
+              ) : (
+                 <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 italic">
+                    Summary not available.
+                 </p>
+              )
             )}
 
-            {/* Abstract or PDF link (optional) */}
-            {paper.abstract ? (
+            {/* Abstract - only show if different from summary */}
+            {paper.abstract && paper.abstract !== paper.paper_content && (
               <>
                 <h3 className="font-medium text-gray-800 dark:text-gray-200 mb-2">
                   Abstract
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">{paper.abstract}</p>
               </>
-            ) : (
-              // <p className="text-sm text-blue-100/60 underline mb-4">
-              //   <a href={paper.pdf_url} target="_blank" rel="noopener noreferrer">
-              //     View PDF
-              //   </a>
-              // </p>
-              <></>
             )}
 
-            {/* Author badges with tooltips */}
+            {/* Author badges with tooltips and flags */}
             <div className="flex flex-wrap gap-2 mb-4">
               <TooltipProvider>
                 {visibleAuthors.map((author, index) => {
                   const displayName = getDisplayName(author)
+                  // Add flag emoji based on affiliation_country
+                  const flag = getFlagEmoji(author.affiliation_country)
+
                   return (
                     <Tooltip key={index} delayDuration={200}>
                       <TooltipTrigger asChild>
-                        <a
-                          href={`https://openreview.net/profile?id=${encodeURIComponent(
-                            author.openreview_id
-                          )}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Badge
-                            variant="secondary"
-                            className="bg-slate-700 text-blue-200 cursor-pointer"
+                        {/* Link author badge if openreview_id exists */}
+                        {author.openreview_id ? (
+                          <a
+                            href={`https://openreview.net/profile?id=${encodeURIComponent(
+                              author.openreview_id
+                            )}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                             className="inline-block" // Ensure link wraps badge correctly
                           >
-                            {displayName}
-                          </Badge>
-                        </a>
+                            <Badge
+                              variant="secondary"
+                              className="bg-slate-700 text-blue-200 cursor-pointer"
+                            >
+                              {displayName} {flag} {/* Display name and flag */}
+                            </Badge>
+                          </a>
+                        ) : (
+                           // Render badge without link if no ID
+                           <Badge
+                             variant="secondary"
+                             className="bg-slate-700 text-blue-200"
+                           >
+                             {displayName} {flag} {/* Display name and flag */}
+                           </Badge>
+                        )}
                       </TooltipTrigger>
 
-                      {/* AnimatePresence ensures we can animate the tooltip in/out */}
                       <AnimatePresence>
                         <TooltipContent
                           as={motion.div}
@@ -107,6 +141,7 @@ export function PaperCard({ paper }: PaperCardProps) {
                           sideOffset={10}
                           className="z-50 max-w-sm p-4 text-sm leading-normal text-white bg-gradient-to-r from-teal-700 to-emerald-800 rounded-md shadow-lg whitespace-pre-line"
                         >
+                           {/* Pass author to getAuthorInfo which now also includes flag */}
                           {getAuthorInfo(author)}
                         </TooltipContent>
                       </AnimatePresence>
@@ -114,7 +149,7 @@ export function PaperCard({ paper }: PaperCardProps) {
                   )
                 })}
 
-                {/* Expand/Collapse author list if needed */}
+                {/* Expand/Collapse author list */}
                 {!showAllAuthors && remainingAuthorsCount > 0 && (
                   <Badge
                     onClick={() => setShowAllAuthors(true)}
@@ -135,25 +170,60 @@ export function PaperCard({ paper }: PaperCardProps) {
             </div>
           </div>
 
-          {/* Footer: accepted_in + PDF link */}
-          <div className="flex justify-between items-center">
-            <div className="space-x-2">
-
-            <Badge className="bg-orange-100 text-orange-800 hover:bg-orange-200">
-              {paper.accepted_in.join(", ")}
-            </Badge>
-            <Badge className="bg-orange-100 text-orange-800 hover:bg-orange-200">
-              {paper.venue}
-            </Badge>
+          {/* Footer: Badges + PDF link */}
+          <div className="flex flex-wrap gap-2 justify-between items-center pt-2 border-t">
+             {/* Left side badges (Conference, Venue, Indian Authorship) */}
+            <div className="flex flex-wrap items-center gap-2">
+              {/* Conference */}
+              {paper.conference && (
+                 <Badge className="bg-purple-100 text-purple-800 hover:bg-purple-200">
+                   {paper.conference} {paper.year}
+                 </Badge>
+              )}
+              {/* Venue */}
+              {paper.venue && (
+                 <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-200 capitalize">
+                  {paper.venue}
+                 </Badge>
+              )}
+              {/* Indian Authorship Badges */}
+              {paper.top_author_from_india === true && (
+                  <TooltipProvider>
+                      <Tooltip delayDuration={100}>
+                          <TooltipTrigger>
+                              <Badge className="bg-green-100 text-green-800 hover:bg-green-200 cursor-default">
+                                  🇮🇳 First Author
+                              </Badge>
+                          </TooltipTrigger>
+                          <TooltipContent side="top" sideOffset={4}>First Author affiliated with an Indian institution.</TooltipContent>
+                      </Tooltip>
+                  </TooltipProvider>
+              )}
+              {paper.majority_authors_from_india === true && paper.top_author_from_india !== true && (
+                   <TooltipProvider>
+                      <Tooltip delayDuration={100}>
+                          <TooltipTrigger>
+                                <Badge className="bg-green-100 text-green-800 hover:bg-green-200 cursor-default">
+                                    🇮🇳 Majority Authors
+                                </Badge>
+                           </TooltipTrigger>
+                           <TooltipContent side="top" sideOffset={4}>Majority of Authors affiliated with Indian institutions (but not first author).</TooltipContent>
+                      </Tooltip>
+                  </TooltipProvider>
+              )}
             </div>
-            <a
-              href={paper.pdf_url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-gray-600 dark:text-gray-400 underline"
-            >
-              PDF
-            </a>
+
+             {/* Right side: PDF link */}
+             {paper.pdf_url && (
+                <a
+                  href={paper.pdf_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-gray-600 dark:text-gray-400 underline whitespace-nowrap ml-auto pl-2" // Added pl-2 for spacing
+                >
+                  View PDF
+                </a>
+            )}
           </div>
         </CardContent>
       </Card>
@@ -161,56 +231,49 @@ export function PaperCard({ paper }: PaperCardProps) {
   )
 }
 
-/**
- * Returns a display name for an author.
- * If `author.name` is present, it is returned.
- * Otherwise, the `openreview_id` is processed to:
- * 1. Remove a leading tilde (~),
- * 2. Remove trailing digits,
- * 3. Replace underscores with spaces,
- * 4. Convert to sentence case.
- */
+// --- Helper functions for author display ---
+
 function getDisplayName(author: {
   name?: string
-  openreview_id: string
+  openreview_id?: string // Make optional if not always present
 }): string {
   if (author.name && author.name.trim() !== "") {
-    return author.name
+    return author.name;
   }
-  return processOpenReviewId(author.openreview_id)
+  // Fallback to processing OpenReview ID only if it exists
+  if (author.openreview_id) {
+     return processOpenReviewId(author.openreview_id);
+  }
+  return "Unknown Author"; // Default if no name or ID
 }
 
 function processOpenReviewId(id: string): string {
-  // Remove leading tilde (~)
   let processed = id.startsWith("~") ? id.slice(1) : id
-  // Remove trailing digits using a regex
-  processed = processed.replace(/\d+$/, "")
-  // Replace underscores with spaces
-  processed = processed.replace(/_/g, " ")
-  // Convert to sentence case: lowercase entire string and then uppercase first letter
-  processed = processed.toLowerCase()
-  processed = processed.charAt(0).toUpperCase() + processed.slice(1)
-  return processed
+  processed = processed.replace(/\d+$/, "") // Remove trailing digits
+  processed = processed.replace(/_/g, " ") // Replace underscores
+  // Convert to sentence case robustly
+  processed = processed.toLowerCase();
+  return processed.charAt(0).toUpperCase() + processed.slice(1);
 }
 
-/**
- * Returns additional author information for tooltip display as a React component.
-* Using Tailwind CSS for styling.
-*/
+// Updated to include flag in tooltip
 function getAuthorInfo(author: {
   name?: string;
-  affiliation_name: string;
-  affiliation_country: string;
-  affiliation_domain: string;
-  openreview_id: string;
+  affiliation_name?: string; // Make optional
+  affiliation_country?: string; // Make optional
+  openreview_id?: string; // Make optional
 }): JSX.Element {
   const displayName = getDisplayName(author);
+  // Get flag for tooltip
+  const flag = getFlagEmoji(author.affiliation_country);
 
   return (
-    <div className="text-left">
-      <div className="text-lg font-bold">{displayName}</div>
-      <div className="text-gray-100">Affiliation: {author.affiliation_name}</div>
-      <div className="text-gray-100">Country: {author.affiliation_country}</div>
+    <div className="text-left space-y-1"> {/* Added space-y-1 for better spacing */}
+      <div className="text-lg font-bold">{displayName} {flag}</div> {/* Added flag */}
+      {author.affiliation_name && <div className="text-gray-100">Affiliation: {author.affiliation_name}</div>}
+      {author.affiliation_country && <div className="text-gray-100">Country: {author.affiliation_country}</div>}
+       {/* Optionally show OpenReview ID */}
+       {/* {author.openreview_id && <div className="text-gray-300 text-xs">ID: {author.openreview_id}</div>} */}
     </div>
   );
 }
