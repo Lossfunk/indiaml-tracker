@@ -137,9 +137,15 @@ export function PaperCard({ paper }: PaperCardProps) {
 
           {/* Footer: accepted_in + PDF link */}
           <div className="flex justify-between items-center">
+            <div className="space-x-2">
+
             <Badge className="bg-orange-100 text-orange-800 hover:bg-orange-200">
               {paper.accepted_in.join(", ")}
             </Badge>
+            <Badge className="bg-orange-100 text-orange-800 hover:bg-orange-200">
+              {paper.venue}
+            </Badge>
+            </div>
             <a
               href={paper.pdf_url}
               target="_blank"

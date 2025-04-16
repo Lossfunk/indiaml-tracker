@@ -21,7 +21,8 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": true,
-    "paper_content": "This paper introduces a new algorithm, PD-ANPG, for constrained Markov Decision Problems (CMDPs) with general policy parameterization.  The algorithm aims to improve sample efficiency for these problems, specifically achieving a sample complexity of  O\u02dc((1 \u2212 \u03b3)\u22127\u03f5\u22122) which surpasses existing methods for general parameterization.  The proposed approach targets a significant reduction in the sample complexity compared to the current state-of-the-art, bringing it closer to the theoretical lower bound.\n"
+    "paper_content": "This paper introduces a new algorithm, PD-ANPG, for constrained Markov Decision Problems (CMDPs) with general policy parameterization.  The algorithm aims to improve sample efficiency for these problems, specifically achieving a sample complexity of  O˜((1 − γ)−7ϵ−2) which surpasses existing methods for general parameterization.  The proposed approach targets a significant reduction in the sample complexity compared to the current state-of-the-art, bringing it closer to the theoretical lower bound.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Tiny Time Mixers (TTMs): Fast Pre-trained Models for Enhanced Zero/Few-Shot Forecasting of Multivariate Time Series",
@@ -87,7 +88,8 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper introduces Tiny Time Mixers (TTMs), a compact pre-trained model for multivariate time series forecasting.  TTMs leverage transfer learning and are designed for faster performance and reduced computational demands compared to existing models.  The authors aim to improve zero/few-shot forecasting accuracy while maintaining usability in resource-constrained environments.\n"
+    "paper_content": "This paper introduces Tiny Time Mixers (TTMs), a compact pre-trained model for multivariate time series forecasting.  TTMs leverage transfer learning and are designed for faster performance and reduced computational demands compared to existing models.  The authors aim to improve zero/few-shot forecasting accuracy while maintaining usability in resource-constrained environments.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Learning General Parameterized Policies for Infinite Horizon Average Reward Constrained MDPs via Primal-Dual Policy Gradient Algorithm",
@@ -118,7 +120,8 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper introduces a novel primal-dual policy gradient algorithm for infinite horizon average reward constrained Markov Decision Processes (CMDPs) with general parameterization.  The algorithm aims to achieve a low regret guarantee while managing constraints to find a globally optimal policy.  The proposed method provides O(T<sup>4/5</sup>) bounds on objective regret and constraint violation.\n"
+    "paper_content": "This paper introduces a novel primal-dual policy gradient algorithm for infinite horizon average reward constrained Markov Decision Processes (CMDPs) with general parameterization.  The algorithm aims to achieve a low regret guarantee while managing constraints to find a globally optimal policy.  The proposed method provides O(T<sup>4/5</sup>) bounds on objective regret and constraint violation.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Text2CAD: Generating Sequential CAD Designs from Beginner-to-Expert Level Text Prompts",
@@ -128,7 +131,7 @@
       {
         "name": "Mohammad Sadil Khan",
         "openreview_id": "~Mohammad_Sadil_Khan1",
-        "affiliation_name": "Rheinland-Pf\u00e4lzische Technische Universit\u00e4t Kaiserslautern-Landau",
+        "affiliation_name": "Rheinland-Pfälzische Technische Universität Kaiserslautern-Landau",
         "affiliation_domain": "rptu.de",
         "affiliation_country": "DE"
       },
@@ -163,7 +166,8 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "The paper introduces Text2CAD, a new AI framework designed to generate parametric CAD models from text prompts.  It aims to address the lack of intelligent systems for quickly creating intermediate CAD parts by enabling generation from beginner-to-expert level prompts.  The framework utilizes a transformer-based autoregressive network and a new dataset of ~170K models and ~660K annotations to generate and evaluate the models using visual quality, precision, and accuracy metrics.\n"
+    "paper_content": "The paper introduces Text2CAD, a new AI framework designed to generate parametric CAD models from text prompts.  It aims to address the lack of intelligent systems for quickly creating intermediate CAD parts by enabling generation from beginner-to-expert level prompts.  The framework utilizes a transformer-based autoregressive network and a new dataset of ~170K models and ~660K annotations to generate and evaluate the models using visual quality, precision, and accuracy metrics.\n",
+    "venue": "spotlight"
   },
   {
     "paper_title": "COLD: Causal reasOning in cLosed Daily activities",
@@ -194,7 +198,8 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": true,
-    "paper_content": "This paper introduces COLD, a framework for evaluating Large Language Models' (LLMs) causal reasoning abilities.  COLD focuses on reasoning about causal relationships in everyday activities, creating a large dataset of causal queries to assess LLM understanding of real-world events.  The framework aims to bridge the gap between purely theoretical causal reasoning and real-world grounding by employing a mini-turing test-like scenario.\n"
+    "paper_content": "This paper introduces COLD, a framework for evaluating Large Language Models' (LLMs) causal reasoning abilities.  COLD focuses on reasoning about causal relationships in everyday activities, creating a large dataset of causal queries to assess LLM understanding of real-world events.  The framework aims to bridge the gap between purely theoretical causal reasoning and real-world grounding by employing a mini-turing test-like scenario.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Near-Optimal Streaming Heavy-Tailed Statistical Estimation with Clipped SGD",
@@ -239,7 +244,8 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper analyzes the streaming heavy-tailed statistical estimation problem, framed as stochastic convex optimization.  It demonstrates that the ClippedSGD algorithm achieves near-optimal sub-Gaussian statistical rates under finite second moment conditions for the stochastic gradient noise.  The results improve upon existing rates for smooth and strongly convex objectives, extending to smooth convex and Lipschitz convex cases.\n"
+    "paper_content": "This paper analyzes the streaming heavy-tailed statistical estimation problem, framed as stochastic convex optimization.  It demonstrates that the ClippedSGD algorithm achieves near-optimal sub-Gaussian statistical rates under finite second moment conditions for the stochastic gradient noise.  The results improve upon existing rates for smooth and strongly convex objectives, extending to smooth convex and Lipschitz convex cases.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Generalized Linear Bandits with Limited Adaptivity",
@@ -277,7 +283,8 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": true,
-    "paper_content": "This paper introduces two algorithms, B-GLinCB and RS-GLinCB, for generalized linear contextual bandits with limited adaptivity.  The algorithms address two scenarios where the number of policy updates is constrained to a budget M.  B-GLinCB handles the fixed-update-round setting, while RS-GLinCB permits adaptive updates, aiming to minimize regret while adhering to the update budget.\n"
+    "paper_content": "This paper introduces two algorithms, B-GLinCB and RS-GLinCB, for generalized linear contextual bandits with limited adaptivity.  The algorithms address two scenarios where the number of policy updates is constrained to a budget M.  B-GLinCB handles the fixed-update-round setting, while RS-GLinCB permits adaptive updates, aiming to minimize regret while adhering to the update budget.\n",
+    "venue": "spotlight"
   },
   {
     "paper_title": "Mixture of Nested Experts: Adaptive Processing of Visual Tokens",
@@ -336,7 +343,8 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": false,
-    "paper_content": "This paper introduces MoNE, a Mixture of Nested Experts framework for visual processing.  MoNE dynamically prioritizes tokens for processing, using nested experts with varying computational costs, to reduce inference time by over two-fold while maintaining baseline performance on image and video datasets.  The approach leverages token interdependence to efficiently allocate compute resources based on a learned prioritization, unlike existing methods which process all tokens equally.\n"
+    "paper_content": "This paper introduces MoNE, a Mixture of Nested Experts framework for visual processing.  MoNE dynamically prioritizes tokens for processing, using nested experts with varying computational costs, to reduce inference time by over two-fold while maintaining baseline performance on image and video datasets.  The approach leverages token interdependence to efficiently allocate compute resources based on a learned prioritization, unlike existing methods which process all tokens equally.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Mitigating Biases in Blackbox Feature Extractors for Image Classification Tasks",
@@ -360,7 +368,8 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": true,
-    "paper_content": "This paper investigates mitigating biases in pre-trained feature extractors for image classification tasks.  It addresses the practical challenge of debiasing black-box feature extractors, where full model retraining isn't possible.  The authors propose a clustering-based adaptive margin loss method to achieve this debiasing without knowledge of the bias attribute.\n"
+    "paper_content": "This paper investigates mitigating biases in pre-trained feature extractors for image classification tasks.  It addresses the practical challenge of debiasing black-box feature extractors, where full model retraining isn't possible.  The authors propose a clustering-based adaptive margin loss method to achieve this debiasing without knowledge of the bias attribute.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Quantifying the Gain in Weak-to-Strong Generalization",
@@ -391,7 +400,8 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper develops a theoretical framework to explain the phenomenon of \"weak-to-strong generalization,\" where a strong model (e.g., GPT-4) trained with labels from a weaker model (e.g., GPT-2) achieves better performance than the weaker model.  The authors quantify this gain by the misfit error of the strong model on the labels generated by the weak model, demonstrating how this error can predict the improvement and guide the selection of weak models for training strong ones.  Empirical validation supports these theoretical findings.\n"
+    "paper_content": "This paper develops a theoretical framework to explain the phenomenon of \"weak-to-strong generalization,\" where a strong model (e.g., GPT-4) trained with labels from a weaker model (e.g., GPT-2) achieves better performance than the weaker model.  The authors quantify this gain by the misfit error of the strong model on the labels generated by the weak model, demonstrating how this error can predict the improvement and guide the selection of weak models for training strong ones.  Empirical validation supports these theoretical findings.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Transfer Learning for Latent Variable Network Models",
@@ -429,7 +439,8 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper explores transfer learning for network models where a fully observed source network helps estimate a target network when only a small fraction of its nodes are observed. When networks share latent variables, the authors show vanishing error is possible despite limited target data. They present two algorithms: a general method for latent variable models using graph distance metrics, and a specialized approach for Stochastic Block Models achieving minimax optimal rates. Experiments on synthetic and real-world networks validate their theoretical guarantees."
+    "paper_content": "This paper explores transfer learning for network models where a fully observed source network helps estimate a target network when only a small fraction of its nodes are observed. When networks share latent variables, the authors show vanishing error is possible despite limited target data. They present two algorithms: a general method for latent variable models using graph distance metrics, and a specialized approach for Stochastic Block Models achieving minimax optimal rates. Experiments on synthetic and real-world networks validate their theoretical guarantees.",
+    "venue": "poster"
   },
   {
     "paper_title": "Accuracy is Not All You Need",
@@ -467,7 +478,8 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": true,
-    "paper_content": "This paper argues that evaluating compressed large language models (LLMs) solely based on accuracy is insufficient.  It demonstrates that even when accuracy metrics appear similar between compressed and baseline models, significant changes in the generated text (flips from correct to incorrect answers) often occur.  The authors propose new distance metrics (KL-Divergence and % flips) to better assess the quality of compressed LLMs, showing correlation between these and the observed discrepancies in model behavior.\n"
+    "paper_content": "This paper argues that evaluating compressed large language models (LLMs) solely based on accuracy is insufficient.  It demonstrates that even when accuracy metrics appear similar between compressed and baseline models, significant changes in the generated text (flips from correct to incorrect answers) often occur.  The authors propose new distance metrics (KL-Divergence and % flips) to better assess the quality of compressed LLMs, showing correlation between these and the observed discrepancies in model behavior.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "FUGAL: Feature-fortified Unrestricted Graph Alignment",
@@ -519,7 +531,8 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": true,
-    "paper_content": "This paper introduces FUGAL, a novel unrestricted graph alignment method.  Unlike existing methods that rely on intermediary representations, FUGAL directly operates on adjacency matrices, aiming to find a permutation matrix that aligns two graphs.  Extensive testing demonstrates FUGAL's superior accuracy compared to state-of-the-art methods without sacrificing efficiency.\n"
+    "paper_content": "This paper introduces FUGAL, a novel unrestricted graph alignment method.  Unlike existing methods that rely on intermediary representations, FUGAL directly operates on adjacency matrices, aiming to find a permutation matrix that aligns two graphs.  Extensive testing demonstrates FUGAL's superior accuracy compared to state-of-the-art methods without sacrificing efficiency.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Detecting and Measuring Confounding Using Causal Mechanism Shifts",
@@ -543,7 +556,8 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": true,
-    "paper_content": "This paper proposes a new approach to detect and quantify confounding effects in observational data.  It aims to relax the unrealistic assumptions of causal sufficiency and strong parametric models often used in existing methods, using advancements in causal discovery and non-i.i.d. data analysis.  The paper develops methods to identify, separate, and measure confounding's impact, offering more practical and informative results that can improve causal discovery and analysis in observational studies.\n"
+    "paper_content": "This paper proposes a new approach to detect and quantify confounding effects in observational data.  It aims to relax the unrealistic assumptions of causal sufficiency and strong parametric models often used in existing methods, using advancements in causal discovery and non-i.i.d. data analysis.  The paper develops methods to identify, separate, and measure confounding's impact, offering more practical and informative results that can improve causal discovery and analysis in observational studies.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Conformal Prediction for Class-wise Coverage via Augmented Label Rank Calibration",
@@ -581,7 +595,8 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper introduces a new algorithm, Rank Calibrated Class-conditional CP (RC3P), for conformal prediction.  RC3P aims to achieve class-wise coverage, ensuring valid coverage for each class in classification tasks, while also reducing prediction set sizes compared to existing methods.  The authors demonstrate empirical improvements in prediction set size reductions and prove RC3P's ability to guarantee class-wise coverage regardless of the underlying classifier or data distribution.\n"
+    "paper_content": "This paper introduces a new algorithm, Rank Calibrated Class-conditional CP (RC3P), for conformal prediction.  RC3P aims to achieve class-wise coverage, ensuring valid coverage for each class in classification tasks, while also reducing prediction set sizes compared to existing methods.  The authors demonstrate empirical improvements in prediction set size reductions and prove RC3P's ability to guarantee class-wise coverage regardless of the underlying classifier or data distribution.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "RanDumb: Random Representations Outperform Online Continually Learned Representations",
@@ -591,7 +606,7 @@
       {
         "name": "",
         "openreview_id": "~Ameya_Prabhu1",
-        "affiliation_name": "Eberhard-Karls-Universit\u00e4t T\u00fcbingen",
+        "affiliation_name": "Eberhard-Karls-Universität Tübingen",
         "affiliation_domain": "uni-tuebingen.de",
         "affiliation_country": "DE"
       },
@@ -633,7 +648,8 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper investigates the effectiveness of representations learned through continual learning methods.  It argues that these representations are often inferior to simpler, predefined random representations in online continual learning scenarios.  The authors introduce \"RanDumb,\" a method utilizing random projections and a linear classifier, demonstrating its superior performance compared to state-of-the-art continually learned representations in various benchmarks.\n"
+    "paper_content": "This paper investigates the effectiveness of representations learned through continual learning methods.  It argues that these representations are often inferior to simpler, predefined random representations in online continual learning scenarios.  The authors introduce \"RanDumb,\" a method utilizing random projections and a linear classifier, demonstrating its superior performance compared to state-of-the-art continually learned representations in various benchmarks.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Optimal Algorithms for Online Convex Optimization with Adversarial Constraints",
@@ -657,7 +673,8 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": true,
-    "paper_content": "This paper investigates constrained online convex optimization (COCO).  Its goal is to develop an online learning policy minimizing regret and cumulative constraint violation (CCV) against an adaptive adversary, without restrictive assumptions.  The authors demonstrate a simple first-order policy achieving these bounds, and further refine the regret guarantee for strongly convex cost and convex constraint functions.\n"
+    "paper_content": "This paper investigates constrained online convex optimization (COCO).  Its goal is to develop an online learning policy minimizing regret and cumulative constraint violation (CCV) against an adaptive adversary, without restrictive assumptions.  The authors demonstrate a simple first-order policy achieving these bounds, and further refine the regret guarantee for strongly convex cost and convex constraint functions.\n",
+    "venue": "spotlight"
   },
   {
     "paper_title": "TFS-NeRF: Template-Free NeRF for Semantic 3D Reconstruction of Dynamic Scene",
@@ -695,7 +712,8 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper introduces TFS-NeRF, a template-free NeRF for reconstructing dynamic scenes with multiple interacting entities.  It aims to improve upon existing methods by enabling efficient and accurate 3D semantic reconstruction from sparse RGB videos, and by optimizing per-entity skinning weights.  The approach uses an invertible neural network to predict LBS, which simplifies training and yields high-quality reconstructions of both deformable and non-deformable objects.\n"
+    "paper_content": "This paper introduces TFS-NeRF, a template-free NeRF for reconstructing dynamic scenes with multiple interacting entities.  It aims to improve upon existing methods by enabling efficient and accurate 3D semantic reconstruction from sparse RGB videos, and by optimizing per-entity skinning weights.  The approach uses an invertible neural network to predict LBS, which simplifies training and yields high-quality reconstructions of both deformable and non-deformable objects.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Safety through feedback in Constrained RL",
@@ -726,7 +744,8 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper introduces a method for learning cost functions in constrained reinforcement learning, particularly for safety-critical applications.  The approach leverages trajectory-level feedback from human evaluators, enabling scaling to complex environments.  The method utilizes a novel sampling mechanism to efficiently select trajectories for evaluation, minimizing the burden on the evaluator while achieving near-optimal performance.\n"
+    "paper_content": "This paper introduces a method for learning cost functions in constrained reinforcement learning, particularly for safety-critical applications.  The approach leverages trajectory-level feedback from human evaluators, enabling scaling to complex environments.  The method utilizes a novel sampling mechanism to efficiently select trajectories for evaluation, minimizing the burden on the evaluator while achieving near-optimal performance.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Sample Complexity of Interventional Causal Representation Learning",
@@ -734,15 +753,15 @@
     "pdf_url": "https://openreview.net/pdf/3cd848f730138b8b2afd1dcc6c71c80ba6f6a6a1.pdf",
     "author_list": [
       {
-        "name": "Emre Acart\u00fcrk",
-        "openreview_id": "~Emre_Acart\u00fcrk1",
+        "name": "Emre Acartürk",
+        "openreview_id": "~Emre_Acartürk1",
         "affiliation_name": "Rensselaer Polytechnic Institute",
         "affiliation_domain": "rpi.edu",
         "affiliation_country": "US"
       },
       {
-        "name": "Burak Var\u0131c\u0131",
-        "openreview_id": "~Burak_Var\u0131c\u01311",
+        "name": "Burak Varıcı",
+        "openreview_id": "~Burak_Varıcı1",
         "affiliation_name": "Carnegie Mellon University",
         "affiliation_domain": "cmu.edu",
         "affiliation_country": "US"
@@ -764,7 +783,8 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper analyzes the sample complexity of recovering latent causal variables and their structure in finite data sets.  It focuses on latent causal models with stochastic interventions and a linear transformation from latent to observed variables.  The study provides sample size requirements for recovering the causal graph and latent variables with high probability.\n"
+    "paper_content": "This paper analyzes the sample complexity of recovering latent causal variables and their structure in finite data sets.  It focuses on latent causal models with stochastic interventions and a linear transformation from latent to observed variables.  The study provides sample size requirements for recovering the causal graph and latent variables with high probability.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Long-Horizon Planning for Multi-Agent Robots in Partially Observable Environments",
@@ -865,7 +885,8 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper introduces LLaMAR, a language model-based long-horizon planner for multi-agent robotics in partially observable environments.  It aims to improve upon existing methods by leveraging language models' ability to generalize and adapt to diverse tasks while incorporating a plan-act-correct-verify framework for self-correction and verification.  The authors propose a centralized multi-agent system approach to address the challenges of non-stationarity in multi-agent settings.\n"
+    "paper_content": "This paper introduces LLaMAR, a language model-based long-horizon planner for multi-agent robotics in partially observable environments.  It aims to improve upon existing methods by leveraging language models' ability to generalize and adapt to diverse tasks while incorporating a plan-act-correct-verify framework for self-correction and verification.  The authors propose a centralized multi-agent system approach to address the challenges of non-stationarity in multi-agent settings.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Optimal Top-Two Method for Best Arm Identification and Fluid Analysis",
@@ -896,7 +917,8 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": true,
-    "paper_content": "This paper introduces an optimal algorithm for identifying the best arm in a multi-armed bandit problem, focusing on the top-two approach.  The proposed algorithm, based on a threshold-anchored allocation function, asymptotically achieves the known lower bound on sample complexity for this problem, overcoming the computational challenges of existing plug-in methods.  The analysis leverages fluid dynamics and the implicit function theorem to demonstrate optimality.\n"
+    "paper_content": "This paper introduces an optimal algorithm for identifying the best arm in a multi-armed bandit problem, focusing on the top-two approach.  The proposed algorithm, based on a threshold-anchored allocation function, asymptotically achieves the known lower bound on sample complexity for this problem, overcoming the computational challenges of existing plug-in methods.  The analysis leverages fluid dynamics and the implicit function theorem to demonstrate optimality.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Learning Mixtures of Unknown Causal Interventions",
@@ -927,7 +949,8 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper addresses the challenge of disentangling mixed interventional and observational data in linear structural equation models.  It develops an algorithm to effectively learn the individual components of the mixture, even when the true causal graph is unknown.  The method is applicable to both \"do\" and \"soft\" interventions and leverages the diversity of intervention-generated distributions to efficiently recover the components.\n"
+    "paper_content": "This paper addresses the challenge of disentangling mixed interventional and observational data in linear structural equation models.  It develops an algorithm to effectively learn the individual components of the mixture, even when the true causal graph is unknown.  The method is applicable to both \"do\" and \"soft\" interventions and leverages the diversity of intervention-generated distributions to efficiently recover the components.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "AutoMix: Automatically Mixing Language Models",
@@ -1021,7 +1044,8 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper presents AutoMix, a method for automatically routing language model queries to optimize computational cost and performance.  AutoMix leverages a self-verification mechanism to estimate output reliability and a partially observable Markov decision process (POMDP) router to select the appropriate model size, based on confidence.  Experiments indicate that AutoMix consistently outperforms baselines, achieving over 50% computational cost reduction with comparable performance across various language models and datasets.\n"
+    "paper_content": "This paper presents AutoMix, a method for automatically routing language model queries to optimize computational cost and performance.  AutoMix leverages a self-verification mechanism to estimate output reliability and a partially observable Markov decision process (POMDP) router to select the appropriate model size, based on confidence.  Experiments indicate that AutoMix consistently outperforms baselines, achieving over 50% computational cost reduction with comparable performance across various language models and datasets.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "GraphTrail: Translating GNN Predictions into Human-Interpretable Logical Rules",
@@ -1059,7 +1083,8 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": true,
-    "paper_content": "This research introduces GRAPHTRAIL, a novel global explainer for graph neural networks (GNNs).  GRAPHTRAIL automatically translates a GNN's predictions into human-understandable logical rules by identifying and combining relevant subgraph-level concepts, thereby overcoming the limitations of existing local explainers.  Extensive testing across various datasets and GNN architectures demonstrates GRAPHTRAIL's superior ability to generate accurate and interpretable formulae compared to existing methods.\n"
+    "paper_content": "This research introduces GRAPHTRAIL, a novel global explainer for graph neural networks (GNNs).  GRAPHTRAIL automatically translates a GNN's predictions into human-understandable logical rules by identifying and combining relevant subgraph-level concepts, thereby overcoming the limitations of existing local explainers.  Extensive testing across various datasets and GNN architectures demonstrates GRAPHTRAIL's superior ability to generate accurate and interpretable formulae compared to existing methods.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "UGC: Universal Graph Coarsening",
@@ -1090,7 +1115,8 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": true,
-    "paper_content": "This paper introduces a universal graph coarsening (UGC) framework.  UGC aims to efficiently downsize large graphs, preserving vital information like spectral properties, while being applicable to both homophilic and heterophilic datasets.  The method leverages node attributes and adjacency information, demonstrating improved speed and accuracy compared to existing techniques.\n"
+    "paper_content": "This paper introduces a universal graph coarsening (UGC) framework.  UGC aims to efficiently downsize large graphs, preserving vital information like spectral properties, while being applicable to both homophilic and heterophilic datasets.  The method leverages node attributes and adjacency information, demonstrating improved speed and accuracy compared to existing techniques.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Time-Reversal Provides Unsupervised Feedback to LLMs",
@@ -1142,7 +1168,8 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": true,
-    "paper_content": "This paper introduces Time Reversed Language Models (TRLMs) to provide unsupervised feedback to large language models (LLMs).  TRLMs, trained to predict in reverse time, effectively score generated text, improving re-ranking and downstream tasks like citation generation and passage retrieval.  Experimental results demonstrate up to 5% improvement on a benchmark dataset and superior performance over conventional methods.\n"
+    "paper_content": "This paper introduces Time Reversed Language Models (TRLMs) to provide unsupervised feedback to large language models (LLMs).  TRLMs, trained to predict in reverse time, effectively score generated text, improving re-ranking and downstream tasks like citation generation and passage retrieval.  Experimental results demonstrate up to 5% improvement on a benchmark dataset and superior performance over conventional methods.\n",
+    "venue": "spotlight"
   },
   {
     "paper_title": "Latent Representation Matters: Human-like Sketches in One-shot Drawing Tasks",
@@ -1194,7 +1221,8 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper investigates how different inductive biases influence latent spaces in Latent Diffusion Models (LDMs) for one-shot drawing tasks.  It explores various regularizations, including standard and supervised approaches, to enhance the model's ability to generate human-like drawings.  The research aims to close the gap between human and machine performance in creating novel, recognizable drawings from a single example.\n"
+    "paper_content": "This paper investigates how different inductive biases influence latent spaces in Latent Diffusion Models (LDMs) for one-shot drawing tasks.  It explores various regularizations, including standard and supervised approaches, to enhance the model's ability to generate human-like drawings.  The research aims to close the gap between human and machine performance in creating novel, recognizable drawings from a single example.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "DisCEdit: Model Editing by Identifying Discriminative Components",
@@ -1211,7 +1239,8 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": true,
-    "paper_content": "This paper introduces DISCEDIT, a model editing method identifying discriminative components within neural networks.  It leverages a distributional approach, employing novel witness function-based bounds to estimate discriminative ability without relying on unrealistic assumptions.  The resulting algorithms, DISCEDIT-SP and DISCEDIT-U, enable structured pruning and selective class forgetting, respectively, demonstrating significant performance improvements with minimal loss of accuracy.\n"
+    "paper_content": "This paper introduces DISCEDIT, a model editing method identifying discriminative components within neural networks.  It leverages a distributional approach, employing novel witness function-based bounds to estimate discriminative ability without relying on unrealistic assumptions.  The resulting algorithms, DISCEDIT-SP and DISCEDIT-U, enable structured pruning and selective class forgetting, respectively, demonstrating significant performance improvements with minimal loss of accuracy.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Graph Edit Distance with General Costs Using Neural Set Divergence",
@@ -1256,7 +1285,8 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": true,
-    "paper_content": "This paper introduces GRAPHEDX, a neural estimator for Graph Edit Distance (GED).  It addresses the limitations of existing methods by explicitly accounting for different edit operation costs,  formulated as a quadratic assignment problem (QAP),  and leveraging neural set divergence surrogates.\n"
+    "paper_content": "This paper introduces GRAPHEDX, a neural estimator for Graph Edit Distance (GED).  It addresses the limitations of existing methods by explicitly accounting for different edit operation costs,  formulated as a quadratic assignment problem (QAP),  and leveraging neural set divergence surrogates.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Iteratively Refined Early Interaction Alignment for Subgraph Matching based Graph Retrieval",
@@ -1301,7 +1331,8 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": true,
-    "paper_content": "IsoNet++ is a graph neural network for subgraph matching that iteratively refines alignments between query and corpus graphs through early interaction. It outperforms previous methods by using injective alignments, lazy multi-round updates, and node-pair partner interactions that capture critical signals between graphs. Experiments show significant performance improvements across multiple datasets as alignments are progressively refined through successive rounds."
+    "paper_content": "IsoNet++ is a graph neural network for subgraph matching that iteratively refines alignments between query and corpus graphs through early interaction. It outperforms previous methods by using injective alignments, lazy multi-round updates, and node-pair partner interactions that capture critical signals between graphs. Experiments show significant performance improvements across multiple datasets as alignments are progressively refined through successive rounds.",
+    "venue": "poster"
   },
   {
     "paper_title": "FactorSim: Generative Simulation via Factorized Representation",
@@ -1374,7 +1405,8 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "FACTORSIM is a framework that generates simulated code from natural language descriptions, enabling agent training.  The system leverages a factored POMDP representation to improve context management during generation, and aims to overcome limitations of existing LLM-based methods.  Evaluated against a new benchmark, FACTORSIM demonstrates superior prompt alignment and zero-shot transfer abilities in reinforcement learning settings.\n"
+    "paper_content": "FACTORSIM is a framework that generates simulated code from natural language descriptions, enabling agent training.  The system leverages a factored POMDP representation to improve context management during generation, and aims to overcome limitations of existing LLM-based methods.  Evaluated against a new benchmark, FACTORSIM demonstrates superior prompt alignment and zero-shot transfer abilities in reinforcement learning settings.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Linear Causal Representation Learning from Unknown Multi-node Interventions",
@@ -1382,15 +1414,15 @@
     "pdf_url": "https://openreview.net/pdf/97134ff9ae5f0c497e5980844484a73aa21a38ba.pdf",
     "author_list": [
       {
-        "name": "Burak Var\u0131c\u0131",
-        "openreview_id": "~Burak_Var\u0131c\u01311",
+        "name": "Burak Varıcı",
+        "openreview_id": "~Burak_Varıcı1",
         "affiliation_name": "Carnegie Mellon University",
         "affiliation_domain": "cmu.edu",
         "affiliation_country": "US"
       },
       {
-        "name": "Emre Acart\u00fcrk",
-        "openreview_id": "~Emre_Acart\u00fcrk1",
+        "name": "Emre Acartürk",
+        "openreview_id": "~Emre_Acartürk1",
         "affiliation_name": "Rensselaer Polytechnic Institute",
         "affiliation_domain": "rpi.edu",
         "affiliation_country": "US"
@@ -1412,7 +1444,8 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper addresses the problem of causal representation learning (CRL) when the intervened nodes are unknown, a situation common in many applications.  It establishes identifiability conditions for latent causal models under various intervention types, achieving results comparable to known single-node intervention methods.  Furthermore, the paper provides algorithms realizing these identifiability guarantees.\n"
+    "paper_content": "This paper addresses the problem of causal representation learning (CRL) when the intervened nodes are unknown, a situation common in many applications.  It establishes identifiability conditions for latent causal models under various intervention types, achieving results comparable to known single-node intervention methods.  Furthermore, the paper provides algorithms realizing these identifiability guarantees.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Predicting Ground State Properties: Constant Sample Complexity and Deep Learning Algorithms",
@@ -1457,6 +1490,7 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper introduces two machine learning algorithms for predicting ground state properties of quantum systems with constant sample complexity, regardless of system size.  The algorithms, one a modification of an existing model and the other a deep neural network, aim to overcome the limitations of prior methods that require logarithmic or system-size dependent samples.  Numerical experiments on large systems corroborate the improved scaling of the proposed approaches compared to existing techniques.\n"
+    "paper_content": "This paper introduces two machine learning algorithms for predicting ground state properties of quantum systems with constant sample complexity, regardless of system size.  The algorithms, one a modification of an existing model and the other a deep neural network, aim to overcome the limitations of prior methods that require logarithmic or system-size dependent samples.  Numerical experiments on large systems corroborate the improved scaling of the proposed approaches compared to existing techniques.\n",
+    "venue": "poster"
   }
 ]
