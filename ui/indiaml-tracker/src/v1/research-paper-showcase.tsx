@@ -292,7 +292,7 @@ export function ResearchPapersShowcase() {
              {conferences.map(({ name, papers }) => (
                <div key={`${year}-${name}`} className="mb-6">
                  {/* Display the conference name (which is uppercase) */}
-                 <h3 className="text-xl font-medium mb-3 text-gray-700">{name}</h3>
+                 <h3 className="text-xl font-medium mb-3 text-gray-700">{name} ({papers.length} accepted) </h3>
                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                    {papers.map((paper) => (
                      <PaperCard key={paper.paper_id} paper={paper} />
