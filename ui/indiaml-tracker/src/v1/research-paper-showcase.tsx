@@ -9,6 +9,34 @@ interface ConferenceIndex {
   file: string
 }
 
+
+const conferencePriority = {
+  "NeurIPS": 3,
+  "ICML": 2,
+  "ICLR": 1 // Added ICLR as per your sort requirement, although not in the initial type. Adjust if needed.
+  // Add other conferences if necessary, perhaps with priority 0 or lower
+};
+
+const venuePriority = {
+  "oral": 3,
+  "spotlight": 2,
+  "poster": 1
+  // Assign 0 for papers with no venue specified or other venue types
+};
+
+const getIndianAuthorshipPriority = (paper: Paper): number => {
+  if (paper.top_author_from_india === true) {
+    return 3; // Group 1: First author Indian (Highest priority)
+  } else if (paper.majority_authors_from_india === true) {
+    // This condition implies top_author_from_india is false
+    return 2; // Group 2: Majority authors Indian (but first is not)
+  } else {
+    // This condition implies both top_author_from_india and majority_authors_from_india are false
+    return 1; // Group 3: Remaining papers (Lowest priority among these groups)
+  }
+};
+
+
 export function ResearchPapersShowcase() {
   const [conferenceIndex, setConferenceIndex] = useState<ConferenceIndex[]>([])
   const [allPapers, setAllPapers] = useState<Paper[]>([])
@@ -123,6 +151,41 @@ export function ResearchPapersShowcase() {
       matchesConference
     )
   })
+  .sort((a, b) => {
+    // 1. Sort by Indian Authorship Priority (Descending: 3 -> 2 -> 1)
+    const authorshipPrioA = getIndianAuthorshipPriority(a);
+    const authorshipPrioB = getIndianAuthorshipPriority(b);
+  
+    if (authorshipPrioA !== authorshipPrioB) {
+      // If priorities differ, sort based on this primary criterion
+      return authorshipPrioB - authorshipPrioA; // Higher priority value comes first
+    }
+  
+    // --- If authorship priority is the same, proceed to secondary criteria ---
+  
+    // 2. Sort by Year (Descending - recent first)
+    if (a.year !== b.year) {
+      return b.year - a.year;
+    }
+  
+    // 3. Sort by Conference (NeurIPS > ICML > ICLR)
+    const conferencePrioA = conferencePriority[a.conference as keyof typeof conferencePriority] || 0;
+    const conferencePrioB = conferencePriority[b.conference as keyof typeof conferencePriority] || 0;
+    if (conferencePrioA !== conferencePrioB) {
+      return conferencePrioB - conferencePrioA;
+    }
+  
+    // 4. Sort by Venue (Oral > Spotlight > Poster)
+    const venuePrioA = venuePriority[a.venue as keyof typeof venuePriority] ?? 0;
+    const venuePrioB = venuePriority[b.venue as keyof typeof venuePriority] ?? 0;
+    if (venuePrioA !== venuePrioB) {
+      return venuePrioB - venuePrioA;
+    }
+  
+    // 5. If all criteria are equal, maintain relative order (or return 0)
+    return 0;
+  });
+  
   
   return (
     <div className="container mx-auto space-y-6 p-4">
