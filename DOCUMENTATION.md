@@ -85,7 +85,7 @@ flowchart LR
     A[Fetch venue metadata] --> B[Store papers]
     B --> C[Extract authors]
     C --> D[Create paper‑author links]
-    D --> E[Affiliation resolution (4 stages)]
+    D --> E[Affiliation resolution - 4 sstages ]
     E --> F[Generate analytics JSON]
 ```
 
