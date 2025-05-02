@@ -13,6 +13,7 @@
   },
   {
     "label": "ICLR 2025",
-    "file": "iclr-2025.json"
+    "file": "iclr-2025.json",
+    "analytics": "iclr-2025-analytics.json"
   }
 ]
