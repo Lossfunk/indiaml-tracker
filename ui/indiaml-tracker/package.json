@@ -53,14 +53,16 @@
     "next-themes": "^0.3.0",
     "plotly.js": "^3.0.0",
     "qs": "^6.13.0",
-    "react": "^18.2.0",
+    "react": "18.3.1",
     "react-chartjs-2": "^5.2.0",
     "react-confetti": "^6.2.2",
+    "react-dom": "18.3.1",
     "react-icons": "^5.2.0",
     "react-markdown": "^9.0.1",
     "react-plotly.js": "^2.6.0",
     "react-router-dom": "^6.22.3",
     "react-spinners": "^0.14.1",
+    "recharts": "^2.15.3",
     "roughjs": "^4.6.6",
     "sonner": "^1.5.0",
     "tailwind-merge": "^1.13.2",
@@ -70,6 +72,10 @@
     "vite-plugin-svgr": "^4.2.0",
     "zod": "^3.21.4",
     "zustand": "^4.5.2"
+  },
+  "resolutions": {
+    "react": "18.3.1",  
+    "react-dom": "18.3.1"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",

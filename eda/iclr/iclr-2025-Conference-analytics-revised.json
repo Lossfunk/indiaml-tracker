@@ -1,0 +1,646 @@
+[
+  {
+    "institute": "IIT Bombay",
+    "type": "academic",
+    "total_paper_count": 17,
+    "unique_paper_count": 10,
+    "papers": [
+      {
+        "id": "EzrZX9bd4G",
+        "title": "BEEM: Boosting Performance of Early Exit DNNs using Multi-Exit Classifiers as Experts"
+      },
+      {
+        "id": "5pd78GmXC6",
+        "title": "Charting the Design Space of Neural Graph Representations for Subgraph Matching"
+      },
+      {
+        "id": "DFSb67ksVr",
+        "title": "Clique Number Estimation via Differentiable Functions of Adjacency Matrix Permutations"
+      },
+      {
+        "id": "9h45qxXEx0",
+        "title": "Debiasing Federated Learning with Correlated Client Participation"
+      },
+      {
+        "id": "NtwFghsJne",
+        "title": "From Search to Sampling: Generative Models for Robust Algorithmic Recourse"
+      },
+      {
+        "id": "k3gCieTXeY",
+        "title": "INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge"
+      },
+      {
+        "id": "nNiWRRj6r9",
+        "title": "ONLINE EPSILON NET & PIERCING SET FOR GEOMETRIC CONCEPTS"
+      },
+      {
+        "id": "l11DZY5Nxu",
+        "title": "Robust Root Cause Diagnosis using In-Distribution Interventions"
+      },
+      {
+        "id": "h0vC0fm1q7",
+        "title": "Sensitivity Verification for Additive Decision Tree Ensembles"
+      },
+      {
+        "id": "Q1kPHLUbhi",
+        "title": "Towards Self-Supervised Covariance Estimation in Deep Heteroscedastic Regression"
+      }
+    ]
+  },
+  {
+    "institute": "Microsoft",
+    "type": "corporate",
+    "total_paper_count": 8,
+    "unique_paper_count": 6,
+    "papers": [
+      {
+        "id": "9juyeCqL0u",
+        "title": "Causal Order: The Key to Leveraging Imperfect Experts in Causal Inference"
+      },
+      {
+        "id": "xkgfLXZ4e0",
+        "title": "Correlating instruction-tuning (in multimodal models) with vision-language processing (in the brain)"
+      },
+      {
+        "id": "zl3pfz4VCV",
+        "title": "MMTEB: Massive Multilingual Text Embedding Benchmark"
+      },
+      {
+        "id": "0dELcFHig2",
+        "title": "Multi-modal brain encoding models for multi-modal stimuli"
+      },
+      {
+        "id": "3E8YNv1HjU",
+        "title": "Recite, Reconstruct, Recollect: Memorization in LMs as a Multifaceted Phenomenon"
+      },
+      {
+        "id": "l11DZY5Nxu",
+        "title": "Robust Root Cause Diagnosis using In-Distribution Interventions"
+      }
+    ]
+  },
+  {
+    "institute": "Adobe",
+    "type": "corporate",
+    "total_paper_count": 7,
+    "unique_paper_count": 4,
+    "papers": [
+      {
+        "id": "NHxwxc3ql6",
+        "title": "It Helps to Take a Second Opinion: Teaching Smaller LLMs To Deliberate Mutually via Selective Rationale Optimisation"
+      },
+      {
+        "id": "TmCcNuo03f",
+        "title": "Measuring And Improving Engagement of Text-to-Image Generation Models"
+      },
+      {
+        "id": "NfCEVihkdC",
+        "title": "Measuring And Improving Persuasiveness Of Large Language Models"
+      },
+      {
+        "id": "ff2V3UR9sC",
+        "title": "Teaching Human Behavior Improves Content Understanding Abilities Of VLMs"
+      }
+    ]
+  },
+  {
+    "institute": "IIT Delhi",
+    "type": "academic",
+    "total_paper_count": 6,
+    "unique_paper_count": 3,
+    "papers": [
+      {
+        "id": "5x88lQ2MsH",
+        "title": "Bonsai: Gradient-free Graph Condensation for Node Classification"
+      },
+      {
+        "id": "tDIL7UXmSS",
+        "title": "Quantum (Inspired)  $D^2$-sampling with Applications"
+      },
+      {
+        "id": "5RZoYIT3u6",
+        "title": "You Only Prune Once: Designing Calibration-Free Model Compression With Policy Learning"
+      }
+    ]
+  },
+  {
+    "institute": "IIT Madras",
+    "type": "academic",
+    "total_paper_count": 5,
+    "unique_paper_count": 3,
+    "papers": [
+      {
+        "id": "ZbkqhKbggH",
+        "title": "ASTrA: Adversarial Self-supervised Training with Adaptive-Attacks"
+      },
+      {
+        "id": "52UtL8uA35",
+        "title": "Deep Networks Learn Features From Local Discontinuities in the Label Function"
+      },
+      {
+        "id": "qnlG3zPQUy",
+        "title": "ILLUSION: Unveiling Truth with a Comprehensive Multi-Modal, Multi-Lingual Deepfake Dataset"
+      }
+    ]
+  },
+  {
+    "institute": "IIT Kharagpur",
+    "type": "academic",
+    "total_paper_count": 5,
+    "unique_paper_count": 3,
+    "papers": [
+      {
+        "id": "AkBrb7yQ0G",
+        "title": "Periodic Materials Generation using Text-Guided Joint Diffusion Model"
+      },
+      {
+        "id": "wSkvf2WyYz",
+        "title": "SBSC: Step-by-Step Coding for Improving Mathematical Olympiad Performance"
+      },
+      {
+        "id": "TJo6aQb7mK",
+        "title": "Surprising Effectiveness of pretraining Ternary  Language Model at Scale"
+      }
+    ]
+  },
+  {
+    "institute": "IIIT Delhi",
+    "type": "academic",
+    "total_paper_count": 4,
+    "unique_paper_count": 4,
+    "papers": [
+      {
+        "id": "XrsOu4KgDE",
+        "title": "Attributing Culture-Conditioned Generations to Pretraining Corpora"
+      },
+      {
+        "id": "TmCcNuo03f",
+        "title": "Measuring And Improving Engagement of Text-to-Image Generation Models"
+      },
+      {
+        "id": "NfCEVihkdC",
+        "title": "Measuring And Improving Persuasiveness Of Large Language Models"
+      },
+      {
+        "id": "ff2V3UR9sC",
+        "title": "Teaching Human Behavior Improves Content Understanding Abilities Of VLMs"
+      }
+    ]
+  },
+  {
+    "institute": "Fractal",
+    "type": "corporate",
+    "total_paper_count": 4,
+    "unique_paper_count": 1,
+    "papers": [
+      {
+        "id": "wSkvf2WyYz",
+        "title": "SBSC: Step-by-Step Coding for Improving Mathematical Olympiad Performance"
+      }
+    ]
+  },
+  {
+    "institute": "International Institute of Information Technology, Hyderabad, International Institute of Information Technology Hyderabad",
+    "type": "unknown",
+    "total_paper_count": 3,
+    "unique_paper_count": 3,
+    "papers": [
+      {
+        "id": "r5IXBlTCGc",
+        "title": "Consistency Checks for Language Model Forecasters"
+      },
+      {
+        "id": "xkgfLXZ4e0",
+        "title": "Correlating instruction-tuning (in multimodal models) with vision-language processing (in the brain)"
+      },
+      {
+        "id": "l11DZY5Nxu",
+        "title": "Robust Root Cause Diagnosis using In-Distribution Interventions"
+      }
+    ]
+  },
+  {
+    "institute": "Google",
+    "type": "corporate",
+    "total_paper_count": 3,
+    "unique_paper_count": 2,
+    "papers": [
+      {
+        "id": "LO4MEPoqrG",
+        "title": "Does Safety Training of LLMs Generalize to Semantically Related Natural Prompts?"
+      },
+      {
+        "id": "WwmtcGr4lP",
+        "title": "GANDALF: Generative AttentioN based Data Augmentation and predictive modeLing Framework for personalized cancer treatment"
+      }
+    ]
+  },
+  {
+    "institute": "Google DeepMind",
+    "type": "corporate",
+    "total_paper_count": 3,
+    "unique_paper_count": 3,
+    "papers": [
+      {
+        "id": "LO4MEPoqrG",
+        "title": "Does Safety Training of LLMs Generalize to Semantically Related Natural Prompts?"
+      },
+      {
+        "id": "HyjIEf90Tn",
+        "title": "Glauber Generative Model: Discrete Diffusion Models via Binary Classification"
+      },
+      {
+        "id": "pymXpl4qvi",
+        "title": "Understanding and Mitigating Bottlenecks of State Space Models through the Lens of Recency and Over-smoothing"
+      }
+    ]
+  },
+  {
+    "institute": "Fujitsu",
+    "type": "corporate",
+    "total_paper_count": 2,
+    "unique_paper_count": 2,
+    "papers": [
+      {
+        "id": "rnJxelIZrq",
+        "title": "Beyond Mere Token Analysis: A Hypergraph Metric Space Framework for Defending Against Socially Engineered LLM Attacks"
+      },
+      {
+        "id": "jCDF7G3LpF",
+        "title": "EFFICIENT JAILBREAK ATTACK SEQUENCES ON LARGE LANGUAGE MODELS VIA MULTI-ARMED BANDIT-BASED CONTEXT SWITCHING"
+      }
+    ]
+  },
+  {
+    "institute": "Heritage Institute of Technology",
+    "type": "academic",
+    "total_paper_count": 2,
+    "unique_paper_count": 2,
+    "papers": [
+      {
+        "id": "odjMSBSWRt",
+        "title": "DarkBench: Benchmarking Dark Patterns in Large Language Models"
+      },
+      {
+        "id": "zl3pfz4VCV",
+        "title": "MMTEB: Massive Multilingual Text Embedding Benchmark"
+      }
+    ]
+  },
+  {
+    "institute": "Indian Institute of Science, Indian institute of science, Bangalore",
+    "type": "unknown",
+    "total_paper_count": 2,
+    "unique_paper_count": 2,
+    "papers": [
+      {
+        "id": "AsFxRSLtqR",
+        "title": "LR0.FM: LOW-RESOLUTION ZERO-SHOT CLASSIFICATION BENCHMARK FOR FOUNDATION MODELS"
+      },
+      {
+        "id": "90DC0IvlSs",
+        "title": "LevAttention: Time, Space and Streaming Efficient Algorithm for Heavy Attentions"
+      }
+    ]
+  },
+  {
+    "institute": "IIT BHU Varanasi",
+    "type": "academic",
+    "total_paper_count": 2,
+    "unique_paper_count": 2,
+    "papers": [
+      {
+        "id": "vyflgpwfJW",
+        "title": "DiscoveryBench: Towards Data-Driven Discovery with Large Language Models"
+      },
+      {
+        "id": "bW9fGYo44s",
+        "title": "MotionAura: Generating High-Quality and Motion Consistent Videos using Discrete Diffusion"
+      }
+    ]
+  },
+  {
+    "institute": "Indian Institute of Technology Bombay, Indian Institute of Technology, Bombay",
+    "type": "unknown",
+    "total_paper_count": 2,
+    "unique_paper_count": 2,
+    "papers": [
+      {
+        "id": "nNiWRRj6r9",
+        "title": "ONLINE EPSILON NET & PIERCING SET FOR GEOMETRIC CONCEPTS"
+      },
+      {
+        "id": "h0vC0fm1q7",
+        "title": "Sensitivity Verification for Additive Decision Tree Ensembles"
+      }
+    ]
+  },
+  {
+    "institute": "Indian Institute of Technology, Bombay, Dhirubhai Ambani Institute Of Information and Communication Technology",
+    "type": "unknown",
+    "total_paper_count": 2,
+    "unique_paper_count": 2,
+    "papers": [
+      {
+        "id": "EzrZX9bd4G",
+        "title": "BEEM: Boosting Performance of Early Exit DNNs using Multi-Exit Classifiers as Experts"
+      },
+      {
+        "id": "h0vC0fm1q7",
+        "title": "Sensitivity Verification for Additive Decision Tree Ensembles"
+      }
+    ]
+  },
+  {
+    "institute": "IIT Kanpur",
+    "type": "academic",
+    "total_paper_count": 2,
+    "unique_paper_count": 2,
+    "papers": [
+      {
+        "id": "xak8c9l1nu",
+        "title": "Computational Explorations of Total Variation Distance"
+      },
+      {
+        "id": "0nJEgNpb4l",
+        "title": "PEAR: Primitive Enabled Adaptive Relabeling for Boosting Hierarchical Reinforcement Learning"
+      }
+    ]
+  },
+  {
+    "institute": "IIT Jodhpur",
+    "type": "academic",
+    "total_paper_count": 2,
+    "unique_paper_count": 1,
+    "papers": [
+      {
+        "id": "qnlG3zPQUy",
+        "title": "ILLUSION: Unveiling Truth with a Comprehensive Multi-Modal, Multi-Lingual Deepfake Dataset"
+      }
+    ]
+  },
+  {
+    "institute": "IIT Hyderabad",
+    "type": "academic",
+    "total_paper_count": 2,
+    "unique_paper_count": 1,
+    "papers": [
+      {
+        "id": "kbeX97jExm",
+        "title": "Neural Wave Equation for Irregularly Sampled Sequence Data"
+      }
+    ]
+  },
+  {
+    "institute": "IIT Roorkee",
+    "type": "academic",
+    "total_paper_count": 2,
+    "unique_paper_count": 1,
+    "papers": [
+      {
+        "id": "bW9fGYo44s",
+        "title": "MotionAura: Generating High-Quality and Motion Consistent Videos using Discrete Diffusion"
+      }
+    ]
+  },
+  {
+    "institute": "Indo-Korea Science and Technology Center",
+    "type": "academic",
+    "total_paper_count": 2,
+    "unique_paper_count": 1,
+    "papers": [
+      {
+        "id": "AkBrb7yQ0G",
+        "title": "Periodic Materials Generation using Text-Guided Joint Diffusion Model"
+      }
+    ]
+  },
+  {
+    "institute": "Abacus.ai",
+    "type": "corporate",
+    "total_paper_count": 1,
+    "unique_paper_count": 1,
+    "papers": [
+      {
+        "id": "sKYHBTAxVa",
+        "title": "LiveBench: A Challenging, Contamination-Limited LLM Benchmark"
+      }
+    ]
+  },
+  {
+    "institute": "CMRI",
+    "type": "corporate",
+    "total_paper_count": 1,
+    "unique_paper_count": 1,
+    "papers": [
+      {
+        "id": "F5PlYMC5ik",
+        "title": "LOIRE: LifelOng learning on Incremental data via pre-trained language model gRowth Efficiently"
+      }
+    ]
+  },
+  {
+    "institute": "Cohere",
+    "type": "corporate",
+    "total_paper_count": 1,
+    "unique_paper_count": 1,
+    "papers": [
+      {
+        "id": "k3gCieTXeY",
+        "title": "INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge"
+      }
+    ]
+  },
+  {
+    "institute": "DTU",
+    "type": "academic",
+    "total_paper_count": 1,
+    "unique_paper_count": 1,
+    "papers": [
+      {
+        "id": "bW9fGYo44s",
+        "title": "MotionAura: Generating High-Quality and Motion Consistent Videos using Discrete Diffusion"
+      }
+    ]
+  },
+  {
+    "institute": "IIM",
+    "type": "academic",
+    "total_paper_count": 1,
+    "unique_paper_count": 1,
+    "papers": [
+      {
+        "id": "UWdPsY7agk",
+        "title": "Efficient Causal Decision Making with One-sided Feedback"
+      }
+    ]
+  },
+  {
+    "institute": "Indian Institute of Technology, Hyderabad, Dhirubhai Ambani Institute Of Information and Communication Technology",
+    "type": "unknown",
+    "total_paper_count": 1,
+    "unique_paper_count": 1,
+    "papers": [
+      {
+        "id": "kbeX97jExm",
+        "title": "Neural Wave Equation for Irregularly Sampled Sequence Data"
+      }
+    ]
+  },
+  {
+    "institute": "Nirma University",
+    "type": "academic",
+    "total_paper_count": 1,
+    "unique_paper_count": 1,
+    "papers": [
+      {
+        "id": "zl3pfz4VCV",
+        "title": "MMTEB: Massive Multilingual Text Embedding Benchmark"
+      }
+    ]
+  },
+  {
+    "institute": "International Institute of Information Technology Hyderabad, Dhirubhai Ambani Institute Of Information and Communication Technology",
+    "type": "unknown",
+    "total_paper_count": 1,
+    "unique_paper_count": 1,
+    "papers": [
+      {
+        "id": "0dELcFHig2",
+        "title": "Multi-modal brain encoding models for multi-modal stimuli"
+      }
+    ]
+  },
+  {
+    "institute": "IIIT Hyderabad",
+    "type": "academic",
+    "total_paper_count": 1,
+    "unique_paper_count": 1,
+    "papers": [
+      {
+        "id": "xkgfLXZ4e0",
+        "title": "Correlating instruction-tuning (in multimodal models) with vision-language processing (in the brain)"
+      }
+    ]
+  },
+  {
+    "institute": "Krutrim AI",
+    "type": "corporate",
+    "total_paper_count": 1,
+    "unique_paper_count": 1,
+    "papers": [
+      {
+        "id": "b1ivBPLb1n",
+        "title": "BigDocs: An Open Dataset for Training Multimodal Models on Document and Code Tasks"
+      }
+    ]
+  },
+  {
+    "institute": "NeuralSpace",
+    "type": "corporate",
+    "total_paper_count": 1,
+    "unique_paper_count": 1,
+    "papers": [
+      {
+        "id": "k3gCieTXeY",
+        "title": "INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge"
+      }
+    ]
+  },
+  {
+    "institute": "Open Source",
+    "type": "unknown",
+    "total_paper_count": 1,
+    "unique_paper_count": 1,
+    "papers": [
+      {
+        "id": "zl3pfz4VCV",
+        "title": "MMTEB: Massive Multilingual Text Embedding Benchmark"
+      }
+    ]
+  },
+  {
+    "institute": "OpenLocus",
+    "type": "corporate",
+    "total_paper_count": 1,
+    "unique_paper_count": 1,
+    "papers": [
+      {
+        "id": "vyflgpwfJW",
+        "title": "DiscoveryBench: Towards Data-Driven Discovery with Large Language Models"
+      }
+    ]
+  },
+  {
+    "institute": "RV College of Engineering",
+    "type": "academic",
+    "total_paper_count": 1,
+    "unique_paper_count": 1,
+    "papers": [
+      {
+        "id": "zl3pfz4VCV",
+        "title": "MMTEB: Massive Multilingual Text Embedding Benchmark"
+      }
+    ]
+  },
+  {
+    "institute": "ScorelabsAI",
+    "type": "corporate",
+    "total_paper_count": 1,
+    "unique_paper_count": 1,
+    "papers": [
+      {
+        "id": "zvaiz3FjA9",
+        "title": "Designing Concise ConvNets with Columnar Stages"
+      }
+    ]
+  },
+  {
+    "institute": "ServiceNow",
+    "type": "corporate",
+    "total_paper_count": 1,
+    "unique_paper_count": 1,
+    "papers": [
+      {
+        "id": "k3gCieTXeY",
+        "title": "INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge"
+      }
+    ]
+  },
+  {
+    "institute": "Skan.ai",
+    "type": "corporate",
+    "total_paper_count": 1,
+    "unique_paper_count": 1,
+    "papers": [
+      {
+        "id": "ZbkqhKbggH",
+        "title": "ASTrA: Adversarial Self-supervised Training with Adaptive-Attacks"
+      }
+    ]
+  },
+  {
+    "institute": "T-Tech",
+    "type": "corporate",
+    "total_paper_count": 1,
+    "unique_paper_count": 1,
+    "papers": [
+      {
+        "id": "H0qIWXXLUR",
+        "title": "Learn Your Reference Model for Real Good Alignment"
+      }
+    ]
+  },
+  {
+    "institute": "TCS",
+    "type": "corporate",
+    "total_paper_count": 1,
+    "unique_paper_count": 1,
+    "papers": [
+      {
+        "id": "bW9fGYo44s",
+        "title": "MotionAura: Generating High-Quality and Motion Consistent Videos using Discrete Diffusion"
+      }
+    ]
+  }
+]

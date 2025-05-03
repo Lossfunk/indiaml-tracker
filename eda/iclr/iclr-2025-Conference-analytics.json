@@ -98,7 +98,7 @@
         },
         {
           "affiliation_country": "IN",
-          "paper_count": 49,
+          "paper_count": 50,
           "iso_code": "IND",
           "country_name": "India"
         },
@@ -2560,6 +2560,7 @@
     "institutions": [
       {
         "institute": "IIT Bombay",
+        "type": "academic",
         "total_paper_count": 17,
         "unique_paper_count": 10,
         "papers": [
@@ -2607,6 +2608,7 @@
       },
       {
         "institute": "Microsoft",
+        "type": "corporate",
         "total_paper_count": 8,
         "unique_paper_count": 6,
         "papers": [
@@ -2638,6 +2640,7 @@
       },
       {
         "institute": "Adobe",
+        "type": "corporate",
         "total_paper_count": 7,
         "unique_paper_count": 4,
         "papers": [
@@ -2661,6 +2664,7 @@
       },
       {
         "institute": "IIT Delhi",
+        "type": "academic",
         "total_paper_count": 6,
         "unique_paper_count": 3,
         "papers": [
@@ -2680,6 +2684,7 @@
       },
       {
         "institute": "IIT Madras",
+        "type": "academic",
         "total_paper_count": 5,
         "unique_paper_count": 3,
         "papers": [
@@ -2699,6 +2704,7 @@
       },
       {
         "institute": "IIT Kharagpur",
+        "type": "academic",
         "total_paper_count": 5,
         "unique_paper_count": 3,
         "papers": [
@@ -2718,6 +2724,7 @@
       },
       {
         "institute": "IIIT Delhi",
+        "type": "academic",
         "total_paper_count": 4,
         "unique_paper_count": 4,
         "papers": [
@@ -2740,8 +2747,21 @@
         ]
       },
       {
-        "institute": "IIIT Hyderabad",
+        "institute": "Fractal",
+        "type": "corporate",
         "total_paper_count": 4,
+        "unique_paper_count": 1,
+        "papers": [
+          {
+            "id": "wSkvf2WyYz",
+            "title": "SBSC: Step-by-Step Coding for Improving Mathematical Olympiad Performance"
+          }
+        ]
+      },
+      {
+        "institute": "International Institute of Information Technology, Hyderabad, International Institute of Information Technology Hyderabad",
+        "type": "unknown",
+        "total_paper_count": 3,
         "unique_paper_count": 3,
         "papers": [
           {
@@ -2759,18 +2779,8 @@
         ]
       },
       {
-        "institute": "Fractal",
-        "total_paper_count": 4,
-        "unique_paper_count": 1,
-        "papers": [
-          {
-            "id": "wSkvf2WyYz",
-            "title": "SBSC: Step-by-Step Coding for Improving Mathematical Olympiad Performance"
-          }
-        ]
-      },
-      {
         "institute": "Google",
+        "type": "corporate",
         "total_paper_count": 3,
         "unique_paper_count": 2,
         "papers": [
@@ -2786,6 +2796,7 @@
       },
       {
         "institute": "Google DeepMind",
+        "type": "corporate",
         "total_paper_count": 3,
         "unique_paper_count": 3,
         "papers": [
@@ -2804,7 +2815,8 @@
         ]
       },
       {
-        "institute": "Fujitsu Research and Development Center Co. Ltm.",
+        "institute": "Fujitsu",
+        "type": "corporate",
         "total_paper_count": 2,
         "unique_paper_count": 2,
         "papers": [
@@ -2820,6 +2832,7 @@
       },
       {
         "institute": "Heritage Institute of Technology",
+        "type": "academic",
         "total_paper_count": 2,
         "unique_paper_count": 2,
         "papers": [
@@ -2834,7 +2847,8 @@
         ]
       },
       {
-        "institute": "IISc Bangalore",
+        "institute": "Indian Institute of Science, Indian institute of science, Bangalore",
+        "type": "unknown",
         "total_paper_count": 2,
         "unique_paper_count": 2,
         "papers": [
@@ -2849,7 +2863,8 @@
         ]
       },
       {
-        "institute": "IIT BHU",
+        "institute": "IIT BHU Varanasi",
+        "type": "academic",
         "total_paper_count": 2,
         "unique_paper_count": 2,
         "papers": [
@@ -2865,6 +2880,7 @@
       },
       {
         "institute": "Indian Institute of Technology Bombay, Indian Institute of Technology, Bombay",
+        "type": "unknown",
         "total_paper_count": 2,
         "unique_paper_count": 2,
         "papers": [
@@ -2880,6 +2896,7 @@
       },
       {
         "institute": "Indian Institute of Technology, Bombay, Dhirubhai Ambani Institute Of Information and Communication Technology",
+        "type": "unknown",
         "total_paper_count": 2,
         "unique_paper_count": 2,
         "papers": [
@@ -2895,6 +2912,7 @@
       },
       {
         "institute": "IIT Kanpur",
+        "type": "academic",
         "total_paper_count": 2,
         "unique_paper_count": 2,
         "papers": [
@@ -2910,6 +2928,7 @@
       },
       {
         "institute": "IIT Jodhpur",
+        "type": "academic",
         "total_paper_count": 2,
         "unique_paper_count": 1,
         "papers": [
@@ -2921,6 +2940,7 @@
       },
       {
         "institute": "IIT Hyderabad",
+        "type": "academic",
         "total_paper_count": 2,
         "unique_paper_count": 1,
         "papers": [
@@ -2932,6 +2952,7 @@
       },
       {
         "institute": "IIT Roorkee",
+        "type": "academic",
         "total_paper_count": 2,
         "unique_paper_count": 1,
         "papers": [
@@ -2942,7 +2963,8 @@
         ]
       },
       {
-        "institute": "Indo Korea Science and Technology Center",
+        "institute": "Indo-Korea Science and Technology Center",
+        "type": "academic",
         "total_paper_count": 2,
         "unique_paper_count": 1,
         "papers": [
@@ -2954,6 +2976,7 @@
       },
       {
         "institute": "Abacus.ai",
+        "type": "corporate",
         "total_paper_count": 1,
         "unique_paper_count": 1,
         "papers": [
@@ -2965,6 +2988,7 @@
       },
       {
         "institute": "CMRI",
+        "type": "corporate",
         "total_paper_count": 1,
         "unique_paper_count": 1,
         "papers": [
@@ -2976,6 +3000,7 @@
       },
       {
         "institute": "Cohere",
+        "type": "corporate",
         "total_paper_count": 1,
         "unique_paper_count": 1,
         "papers": [
@@ -2986,7 +3011,8 @@
         ]
       },
       {
-        "institute": "Delhi Technological University",
+        "institute": "DTU",
+        "type": "academic",
         "total_paper_count": 1,
         "unique_paper_count": 1,
         "papers": [
@@ -2998,6 +3024,7 @@
       },
       {
         "institute": "IIM",
+        "type": "academic",
         "total_paper_count": 1,
         "unique_paper_count": 1,
         "papers": [
@@ -3009,6 +3036,7 @@
       },
       {
         "institute": "Indian Institute of Technology, Hyderabad, Dhirubhai Ambani Institute Of Information and Communication Technology",
+        "type": "unknown",
         "total_paper_count": 1,
         "unique_paper_count": 1,
         "papers": [
@@ -3020,6 +3048,7 @@
       },
       {
         "institute": "Nirma University",
+        "type": "academic",
         "total_paper_count": 1,
         "unique_paper_count": 1,
         "papers": [
@@ -3031,6 +3060,7 @@
       },
       {
         "institute": "International Institute of Information Technology Hyderabad, Dhirubhai Ambani Institute Of Information and Communication Technology",
+        "type": "unknown",
         "total_paper_count": 1,
         "unique_paper_count": 1,
         "papers": [
@@ -3041,7 +3071,20 @@
         ]
       },
       {
+        "institute": "IIIT Hyderabad",
+        "type": "academic",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "papers": [
+          {
+            "id": "xkgfLXZ4e0",
+            "title": "Correlating instruction-tuning (in multimodal models) with vision-language processing (in the brain)"
+          }
+        ]
+      },
+      {
         "institute": "Krutrim AI",
+        "type": "corporate",
         "total_paper_count": 1,
         "unique_paper_count": 1,
         "papers": [
@@ -3052,7 +3095,8 @@
         ]
       },
       {
-        "institute": "NeuralSpace, Inc.",
+        "institute": "NeuralSpace",
+        "type": "corporate",
         "total_paper_count": 1,
         "unique_paper_count": 1,
         "papers": [
@@ -3064,6 +3108,7 @@
       },
       {
         "institute": "Open Source",
+        "type": "unknown",
         "total_paper_count": 1,
         "unique_paper_count": 1,
         "papers": [
@@ -3075,6 +3120,7 @@
       },
       {
         "institute": "OpenLocus",
+        "type": "corporate",
         "total_paper_count": 1,
         "unique_paper_count": 1,
         "papers": [
@@ -3086,6 +3132,7 @@
       },
       {
         "institute": "RV College of Engineering",
+        "type": "academic",
         "total_paper_count": 1,
         "unique_paper_count": 1,
         "papers": [
@@ -3096,7 +3143,8 @@
         ]
       },
       {
-        "institute": "ScorelabsAI, USA",
+        "institute": "ScorelabsAI",
+        "type": "corporate",
         "total_paper_count": 1,
         "unique_paper_count": 1,
         "papers": [
@@ -3108,6 +3156,7 @@
       },
       {
         "institute": "ServiceNow",
+        "type": "corporate",
         "total_paper_count": 1,
         "unique_paper_count": 1,
         "papers": [
@@ -3119,6 +3168,7 @@
       },
       {
         "institute": "Skan.ai",
+        "type": "corporate",
         "total_paper_count": 1,
         "unique_paper_count": 1,
         "papers": [
@@ -3130,6 +3180,7 @@
       },
       {
         "institute": "T-Tech",
+        "type": "corporate",
         "total_paper_count": 1,
         "unique_paper_count": 1,
         "papers": [
@@ -3140,7 +3191,8 @@
         ]
       },
       {
-        "institute": "Tata Consultancy Services",
+        "institute": "TCS",
+        "type": "corporate",
         "total_paper_count": 1,
         "unique_paper_count": 1,
         "papers": [
@@ -3152,4 +3204,4 @@
       }
     ]
   }
-}
+} 
