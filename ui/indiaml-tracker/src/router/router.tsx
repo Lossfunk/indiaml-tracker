@@ -14,6 +14,7 @@ const V1Items = {
   Maps2024: loadable(() => import("../v1/cc-map")),
   About: loadable(() => import("../v1/about")),
   Motivation: loadable(() => import("../v1/motivation")),
+  Analytics: loadable(() => import("../v1/conference-analytics"))
 };
 
 const AutoRedirectComponent = ({children}: {children: JSX.Element}) => {
@@ -34,6 +35,10 @@ export const router = createBrowserRouter([
       {
         path: "papers",
         element: <V1Items.NeurIPS2024 />,
+      },
+      {
+        path: "analytics",
+        element: <V1Items.Analytics />,
       },
       {
         path: "landing",
