@@ -48,7 +48,7 @@
     --popover: 222.2 84% 4.9%; /* near black */
     --popover-foreground: 210 40% 98%; /* gray-50 */
 
-    --card: 217.2 32.6% 22.5%; /* Custom slightly lighter than background */ /* Example: gray-800/gray-900 blend */
+    --card: 222.2 47.4% 14%; /* A slightly lighter dark gray for cards */
     --card-foreground: 210 40% 98%; /* gray-50 */
 
     --border: 217.2 32.6% 27.5%; /* gray-700 */
@@ -76,18 +76,18 @@
   }
   body {
     @apply bg-background text-foreground;
-     /* Apply Rubik font */
-     font-family: "Rubik", sans-serif;
-     /* Improve font rendering */
-     -webkit-font-smoothing: antialiased;
-     -moz-osx-font-smoothing: grayscale;
+    /* Apply Rubik font */
+    font-family: "Rubik", sans-serif;
+    /* Improve font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-   /* Add focus-visible styles using ring utilities */
-   *:focus-visible {
+  /* Add focus-visible styles using ring utilities */
+  *:focus-visible {
     @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
     border-radius: 2px; /* Optional: match radius */
   }
-   *:focus:not(:focus-visible) {
+  *:focus:not(:focus-visible) {
     @apply ring-0 outline-none; /* Remove outline only if not focus-visible */
   }
 }
@@ -99,17 +99,17 @@
     height: 6px;
   }
   .custom-scrollbar::-webkit-scrollbar-track {
-     /* Use muted bg, adjust alpha if needed */
+    /* Use muted bg, adjust alpha if needed */
     background-color: hsl(var(--muted) / 0.5);
     border-radius: 3px;
   }
   .custom-scrollbar::-webkit-scrollbar-thumb {
-     /* Use muted-foreground */
+    /* Use muted-foreground */
     background-color: hsl(var(--muted-foreground));
     border-radius: 3px;
   }
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-     /* Slightly darker/lighter on hover */
+    /* Slightly darker/lighter on hover */
     background-color: hsl(var(--muted-foreground) / 0.8);
   }
   /* Firefox scrollbar */
@@ -121,19 +121,33 @@
 
 /* Animations (Keep if used elsewhere, the dashboard uses fade-in) */
 @keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(10px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .animate-fade-in {
-   animation: fadeIn 0.5s ease-out forwards;
+  animation: fadeIn 0.5s ease-out forwards;
 }
 
 /* Add other animations like accordion if needed by other parts of the app */
 @keyframes accordion-down {
-  from { height: 0; }
-  to { height: var(--radix-accordion-content-height); }
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
 }
 @keyframes accordion-up {
-  from { height: var(--radix-accordion-content-height); }
-  to { height: 0; }
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
 }

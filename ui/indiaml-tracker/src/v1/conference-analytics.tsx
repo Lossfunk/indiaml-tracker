@@ -7,11 +7,14 @@ import {
     FaGlobeAsia, FaUniversity, FaUserFriends, FaSearch, FaFileAlt,
     FaInfoCircle, FaUserTie, FaTrophy, FaUsers, FaChartPie,
     FaGraduationCap, FaBuilding, FaChalkboardTeacher, FaStar,
-    FaDownload, FaTable, FaChartBar, FaLightbulb, FaChevronDown, FaChevronUp
+    FaDownload, FaTable, FaChartBar, FaLightbulb, FaChevronDown, FaChevronUp,
+    FaMapMarkedAlt
 } from 'react-icons/fa';
 
 // Import the data and its type
 import { dashboardData, DashboardData } from '@/components/dashboard-data'; // Adjust path if needed
+import Plot from 'react-plotly.js';
+import * as PlotlyJS from 'plotly.js'; // Import the core library for types/objects if needed
 
 // --- Constants --- REMOVED COLORS OBJECT
 
@@ -114,6 +117,43 @@ interface NameValueData {
     // Allow any other properties
     [key: string]: any;
 }
+
+
+interface PlotlyDatum {
+  data: PlotlyJS.Data[];
+  layout: Partial<PlotlyJS.Layout>;
+  config?: Partial<PlotlyJS.Config>;
+}
+
+
+
+
+
+
+
+// NEW: Map 2-letter to 3-letter ISO codes for Plotly
+const COUNTRY_CODE_MAP_2_TO_3: { [key: string]: string } = {
+  "US": "USA", "CN": "CHN", "GB": "GBR", "UK": "GBR", "IN": "IND", "CA": "CAN",
+  "HK": "HKG", "SG": "SGP", "DE": "DEU", "CH": "CHE", "KR": "KOR", "JP": "JPN",
+  "AU": "AUS", "IL": "ISR", "FR": "FRA", "NL": "NLD",
+  // Add more countries from your data as needed...
+  // Example: If you have 'BR' -> Brazil, add "BR": "BRA"
+};
+
+interface MapChartViewToggleProps {
+  activeView: 'map' | 'chart';
+  setActiveView: (view: 'map' | 'chart') => void;
+}
+const MapChartViewToggle: React.FC<MapChartViewToggleProps> = ({ activeView, setActiveView }) => (
+   <div className="flex items-center space-x-1 bg-muted p-1 rounded-lg shadow-inner">
+       <button onClick={() => setActiveView('map')} className={`flex items-center space-x-1.5 px-3 py-1.5 text-xs rounded-md transition-colors ${activeView === 'map' ? 'bg-primary text-primary-foreground shadow-sm' : 'bg-transparent text-muted-foreground hover:bg-background hover:text-foreground'}`} aria-pressed={activeView === 'map'}>
+           <FaMapMarkedAlt size={12} /><span>Map</span>
+       </button>
+       <button onClick={() => setActiveView('chart')} className={`flex items-center space-x-1.5 px-3 py-1.5 text-xs rounded-md transition-colors ${activeView === 'chart' ? 'bg-primary text-primary-foreground shadow-sm' : 'bg-transparent text-muted-foreground hover:bg-background hover:text-foreground'}`} aria-pressed={activeView === 'chart'}>
+           <FaChartBar size={12} /><span>Chart</span>
+       </button>
+   </div>
+);
 
 type ViewMode = 'chart' | 'table';
 
@@ -526,6 +566,7 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
         comparison: 'chart',
         institutions: 'chart',
     });
+    const [globalMapChartMode, setGlobalMapChartMode] = useState<'map' | 'chart'>('map');
 
     const { conferenceInfo, globalStats, indiaFocus, interpretations } = dashboardData;
 
@@ -674,6 +715,88 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
              { name: 'Corporate', value: corporatePapers, fillVariable: 'hsl(330, 80%, 60%)', percent: corporatePapers / total }
         ];
     }, [filteredInstitutions]);
+
+    // World Map Data for Plotly
+    const worldMapData = useMemo(() => {
+        const countryGroups = new Map<string, {
+            iso3code: string;
+            paperCount: number;
+            authorCount: number;
+            spotlights: number;
+            orals: number;
+            countryName: string;
+        }>();
+
+        sortedCountries.forEach(country => {
+            const iso3code = COUNTRY_CODE_MAP_2_TO_3[country.affiliation_country];
+            if (iso3code) {
+                countryGroups.set(iso3code, {
+                    iso3code,
+                    paperCount: country.paper_count,
+                    authorCount: country.author_count,
+                    spotlights: country.spotlights,
+                    orals: country.orals,
+                    countryName: country.country_name
+                });
+            }
+        });
+
+        const groupedData = Array.from(countryGroups.values());
+        
+        return {
+            data: [{
+                type: "choropleth",
+                locationmode: "ISO-3",
+                locations: groupedData.map(d => d.iso3code),
+                z: groupedData.map(d => d.paperCount),
+                text: groupedData.map(d => 
+                    `${d.countryName}<br>Papers: ${d.paperCount}<br>Authors: ${d.authorCount}<br>Spotlights: ${d.spotlights}<br>Orals: ${d.orals}`
+                ),
+                hovertemplate: '%{text}<extra></extra>',
+                colorscale: [
+                    [0, '#f7f7f7'],
+                    [0.1, '#fee8c8'],
+                    [0.3, '#fdbb84'],
+                    [0.5, '#e34a33'],
+                    [0.7, '#b30000'],
+                    [1, '#7a0000']
+                ],
+                marker: {
+                    line: {
+                        color: 'rgb(180,180,180)',
+                        width: 0.5
+                    }
+                },
+                colorbar: {
+                    title: 'Paper Count',
+                    thickness: 20,
+                    bgcolor: 'rgba(0,0,0,0)',
+                }
+            }],
+            layout: {
+                title: {
+                    text: 'Global Distribution of Papers by Country',
+                    font: { color: 'hsl(var(--foreground))' }
+                },
+                geo: {
+                    showframe: false,
+                    showcoastlines: true,
+                    coastlinecolor: "RebeccaPurple",
+                    projection: {
+                        type: 'natural earth'
+                    },
+                    bgcolor: 'hsl(var(--background))'
+                },
+                paper_bgcolor: 'hsl(var(--background))',
+                font: { color: 'hsl(var(--foreground))' },
+                margin: { l: 0, r: 0, t: 40, b: 0 }
+            },
+            config: {
+                responsive: true,
+                displayModeBar: false
+            }
+        };
+    }, [sortedCountries]);
 
 
     // --- Event Handlers (Unchanged) ---
@@ -859,6 +982,58 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
                 {/* --- Global Stats Tab --- */}
                 {activeTabIndex === 1 && (
                     <div className="space-y-6 md:space-y-8 animate-fade-in">
+                        {/* Global Research Distribution Map/Chart */}
+                        <div className="bg-card rounded-xl p-4 sm:p-6 border border-border shadow-lg">
+                            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-3">
+                                <div>
+                                    <h2 className="text-xl font-bold text-foreground">Global Research Distribution</h2>
+                                    <p className="text-sm text-muted-foreground">Paper distribution across countries worldwide</p>
+                                </div>
+                                <MapChartViewToggle activeView={globalMapChartMode} setActiveView={setGlobalMapChartMode} />
+                            </div>
+                            {globalMapChartMode === 'map' ? (
+                                <div className="h-[500px] w-full">
+                                    <Plot
+                                        data={worldMapData.data}
+                                        layout={worldMapData.layout}
+                                        config={worldMapData.config}
+                                        style={{ width: '100%', height: '100%' }}
+                                    />
+                                </div>
+                            ) : (
+                                <div className="h-96">
+                                    <ResponsiveContainer width="100%" height="100%">
+                                        <BarChart data={topCountriesByPaper} layout="vertical" margin={{ top: 5, right: 30, left: 100, bottom: 5 }}>
+                                            <CartesianGrid strokeDasharray="3 3" stroke={colorMap.grid} horizontal={false} />
+                                            <XAxis type="number" stroke={colorMap.textAxis} axisLine={false} tickLine={false} />
+                                            <YAxis type="category" dataKey="country_name" stroke={colorMap.textAxis} width={100} tick={{ fontSize: 11, fill: colorMap.textAxis }} interval={0} axisLine={false} tickLine={false} />
+                                            <Tooltip content={<CustomTooltip />} cursor={{ fill: 'hsl(var(--muted))' }} />
+                                            <Bar dataKey="paper_count" name="Papers" radius={[0, 4, 4, 0]} barSize={20}>
+                                                {topCountriesByPaper.map((entry, index) => (
+                                                    <Cell key={`cell-global-bar-${index}`}
+                                                          fill={entry.affiliation_country === 'US' ? colorMap.us :
+                                                                entry.affiliation_country === 'CN' ? colorMap.cn :
+                                                                entry.affiliation_country === 'IN' ? colorMap.in :
+                                                                colorMap.primary}
+                                                          fillOpacity={entry.isHighlight ? 1 : 0.8} />
+                                                ))}
+                                            </Bar>
+                                        </BarChart>
+                                    </ResponsiveContainer>
+                                </div>
+                            )}
+                            <InterpretationPanel
+                                title="Global Research Distribution: Understanding the Landscape"
+                                insights={[
+                                    "The map and chart reveal significant geographic concentration in AI research, with the US, China, and select regions dominating paper output.",
+                                    "Countries with darker shading on the map indicate higher paper counts. This visualization helps identify both established leaders and emerging research hubs.",
+                                    "Notable secondary hubs include UK, Singapore, South Korea, Germany, and Canada, each contributing substantial research output.",
+                                    "Geographic patterns suggest clustering of research activity around major institutions and technology centers."
+                                ]}
+                                legend="Toggle between the interactive world map and bar chart to explore different perspectives on the global research distribution."
+                            />
+                        </div>
+
                         {/* US + China vs Rest of World */}
                         <div className="bg-card rounded-xl p-4 sm:p-6 border border-border shadow-lg">
                             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-3">
@@ -1271,11 +1446,6 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
 
 // --- Example Usage ---
 const App: React.FC = () => {
-    // Add a simple dark mode toggle for demonstration if needed
-    // Example: Add 'dark' class to document.documentElement
-    // useEffect(() => {
-    //     document.documentElement.classList.add('dark'); // Or toggle based on state
-    // }, [])
     return <ICLRDashboard dashboardData={dashboardData} />;
 }
 
