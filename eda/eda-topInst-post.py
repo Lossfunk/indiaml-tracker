@@ -23,8 +23,14 @@ def process_institute_data(data_file, name_mapping_file):
     
     # Create a reverse mapping from variants to canonical names
     reverse_mapping = {}
-    for canonical_name, variants in name_mapping.items():
-        for variant in variants:
+    institute_types = {}  # Store type information (academic/corporate)
+    
+    for canonical_name, info in name_mapping.items():
+        # Store the institute type
+        institute_types[canonical_name] = info.get("type", "unknown")
+        
+        # Map each variation to the canonical name
+        for variant in info.get("variations", []):
             reverse_mapping[variant] = canonical_name
     
     # Extract institutions data
@@ -58,8 +64,12 @@ def process_institute_data(data_file, name_mapping_file):
     # Create final sorted result
     result = []
     for institute, count in sorted(paper_counts.items(), key=lambda x: x[1], reverse=True):
+        # Get institute type, default to "unknown" if not found
+        institute_type = institute_types.get(institute, "unknown")
+        
         result.append({
             "institute": institute,
+            "type": institute_type,
             "total_paper_count": count,
             "unique_paper_count": len(unique_paper_ids[institute]),
             "papers": sorted(institute_papers[institute], key=lambda x: x["title"])
@@ -81,14 +91,24 @@ def generate_summary(grouped_data):
     summary += "## Top Institutes by Paper Count\n\n"
     
     for i, institute in enumerate(grouped_data[:10], 1):
-        summary += f"{i}. {institute['institute']}: {institute['total_paper_count']} total contributions ({institute['unique_paper_count']} unique papers)\n"
+        institute_type = institute['type'].capitalize()
+        summary += f"{i}. {institute['institute']} ({institute_type}): {institute['total_paper_count']} total contributions ({institute['unique_paper_count']} unique papers)\n"
     
     total_institutes = len(grouped_data)
     total_contributions = sum(inst["total_paper_count"] for inst in grouped_data)
     total_unique_papers = sum(inst["unique_paper_count"] for inst in grouped_data)
     
+    # Count by type
+    academic_count = sum(1 for inst in grouped_data if inst["type"] == "academic")
+    corporate_count = sum(1 for inst in grouped_data if inst["type"] == "corporate")
+    unknown_count = sum(1 for inst in grouped_data if inst["type"] == "unknown")
+    
     summary += f"\n## Statistics\n\n"
     summary += f"- Total Institutes: {total_institutes}\n"
+    summary += f"  - Academic Institutes: {academic_count}\n"
+    summary += f"  - Corporate Organizations: {corporate_count}\n"
+    if unknown_count > 0:
+        summary += f"  - Unknown Type: {unknown_count}\n"
     summary += f"- Total Contributions: {total_contributions}\n"
     summary += f"- Total Unique Papers: {total_unique_papers}\n"
     
