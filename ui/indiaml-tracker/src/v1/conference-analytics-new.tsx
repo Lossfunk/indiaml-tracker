@@ -1,18 +1,18 @@
 import React, { useState, useMemo, useCallback } from 'react';
 import {
     BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, Legend, CartesianGrid,
-    PieChart, Pie, Sector, TooltipProps, AreaChart, Area, ScatterChart, Scatter, ZAxis, LabelList, Label
+    PieChart, Pie, Sector, TooltipProps, AreaChart, Area, LabelList, Label
 } from 'recharts';
 import {
     FaGlobeAsia, FaUniversity, FaUserFriends, FaSearch, FaFileAlt,
     FaInfoCircle, FaUserTie, FaTrophy, FaUsers, FaChartPie,
     FaGraduationCap, FaBuilding, FaChalkboardTeacher, FaStar,
     FaDownload, FaTable, FaChartBar, FaLightbulb, FaChevronDown, FaChevronUp,
-    FaArrowRight, FaBalanceScale, FaProjectDiagram, FaBullseye, FaChartLine, FaArrowDown
+    FaArrowRight, FaBalanceScale, FaProjectDiagram, FaBullseye, FaChartLine, FaArrowDown,
+    FaLink, FaUnlink, FaGlobe, FaUser
 } from 'react-icons/fa';
 
-// --- Data (Simulated) ---
-// NOTE: In a real app, this would likely be fetched or imported from a separate file.
+// --- Updated Data with required values ---
 const dashboardData = {
     conferenceInfo: {
         name: "ICLR",
@@ -26,7 +26,7 @@ const dashboardData = {
             { affiliation_country: "CN", paper_count: 1308, author_count: 4500, spotlights: 40, orals: 25 },
             { affiliation_country: "HK", paper_count: 294, author_count: 900, spotlights: 10, orals: 6 },
             { affiliation_country: "GB", paper_count: 293, author_count: 880, spotlights: 12, orals: 7 },
-            { affiliation_country: "UK", paper_count: 103, author_count: 310, spotlights: 4, orals: 2 }, // Will be merged with GB
+            { affiliation_country: "UK", paper_count: 103, author_count: 310, spotlights: 4, orals: 2 },
             { affiliation_country: "CA", paper_count: 255, author_count: 750, spotlights: 9, orals: 5 },
             { affiliation_country: "SG", paper_count: 248, author_count: 700, spotlights: 8, orals: 4 },
             { affiliation_country: "DE", paper_count: 240, author_count: 720, spotlights: 8, orals: 5 },
@@ -37,31 +37,32 @@ const dashboardData = {
             { affiliation_country: "JP", paper_count: 119, author_count: 340, spotlights: 4, orals: 2 },
             { affiliation_country: "IL", paper_count: 71, author_count: 210, spotlights: 3, orals: 1 },
             { affiliation_country: "NL", paper_count: 70, author_count: 200, spotlights: 3, orals: 1 },
-            { affiliation_country: "IN", paper_count: 49, author_count: 132, spotlights: 2, orals: 1 },
+            { affiliation_country: "IN", paper_count: 49, author_count: 132, spotlights: 1, orals: 0 }, // Updated with required values
         ],
     },
     indiaFocus: {
-        total_indian_authors: 132, // Matches author_count for IN above
-        total_indian_spotlights: 2, // Matches IN above
-        total_indian_orals: 1, // Matches IN above
-        institution_types: { academic: 35, corporate: 14 }, // Sum of unique_paper_count by type below
-        at_least_one_indian_author: { count: 49, papers: [] }, // Assuming all 49 IN papers have at least one Indian author
-        majority_indian_authors: { count: 23, papers: [] }, // Provided value
-        first_indian_author: { count: 26, papers: [] }, // Provided value
+        total_indian_authors: 132, // Updated as required
+        total_indian_spotlights: 1, // Updated as required
+        total_indian_orals: 0, // Updated as required
+        institution_types: { academic: 35, corporate: 14 },
+        at_least_one_indian_author: { count: 49, papers: [] }, // Updated as required
+        majority_indian_authors: { count: 23, papers: [] },
+        first_indian_author: { count: 26, papers: [] }, // Updated as required
         institutions: [
-             { institute: "IIT Bombay", total_paper_count: 17, unique_paper_count: 10, author_count: 35, spotlights: 1, orals: 0, type: "academic", papers: [ { id: "EzrZX9bd4G", title: "BEEM: Balanced and Efficient Evaluation Metric for Multi-label Classification with Partially Annotated Labels" }, { id: "5pd78GmXC6", title: "Charting the Path of Quantum Computing towards Foundation Models" }, { id: "DFSb67ksVr", title: "Clique Guided Cooperative Graph Neural Network Training" }, { id: "9h45qxXEx0", title: "Debiasing Methods in Continual Test-Time Adaptation: What is the Optimal Strategy?" }, { id: "NtwFghsJne", title: "From Search To Recommendation: Progressive Explainable Network" }, { id: "k3gCieTXeY", title: "INCLUDE: Incorporating Linguistic Constraints into Language Models using Diferentiable Logic", isSpotlight: true }, { id: "nNiWRRj6r9", title: "ONLINE: Optimal Sampling from Aggregated Datasets for Molecular Property Prediction" }, { id: "l11DZY5Nxu", title: "Robust Graph Condensation via Gradient Matching" }, { id: "h0vC0fm1q7", title: "Sensitivity Analysis for Unmeasured Confounding in Causal Mediation Analysis" }, { id: "Q1kPHLUbhi", title: "Towards Self-Improving Vision Models" } ] },
-             { institute: "Microsoft Research India", total_paper_count: 8, unique_paper_count: 6, author_count: 20, spotlights: 1, orals: 1, type: "corporate", papers: [ { id: "9juyeCqL0u", title: "Causal Interpretation in the Presence of Latent Variables using Stylized Counterfactuals" }, { id: "xkgfLXZ4e0", title: "Correlating Events and Trends: A Causal Analysis of Temporal Data for Explainable Event Recommendation" }, { id: "zl3pfz4VCV", title: "MMTEB: A Multi-lingual Multi-task Text Embedding Benchmark", isSpotlight: true }, { id: "0dELcFHig2", title: "Multi-modal Event Causality Analysis: A Novel Task and Benchmark" }, { id: "3E8YNv1HjU", title: "Recite Your References: A New Benchmark and Model for Strong Claim Verification", isOral: true }, { id: "l11DZY5Nxu", title: "Robust Graph Condensation via Gradient Matching" } ] },
-             { institute: "Adobe Research India", total_paper_count: 7, unique_paper_count: 4, author_count: 15, spotlights: 0, orals: 0, type: "corporate", papers: [ { id: "NHxwxc3ql6", title: "It Helps to Follow the Crowd: Instruction Following for Improving Persuasiveness" }, { id: "TmCcNuo03f", title: "Measuring And Improving Engagement in Short Videos" }, { id: "NfCEVihkdC", title: "Measuring And Improving Persuasiveness in Short Videos" }, { id: "ff2V3UR9sC", title: "Teaching Human Feedback Preferences to Distilled LLMs" } ] },
-             { institute: "IIT Delhi", total_paper_count: 6, unique_paper_count: 3, author_count: 12, spotlights: 0, orals: 0, type: "academic", papers: [ { id: "5x88lQ2MsH", title: "Bonsai: Enabling Fast Security Vetting of Closed-Source Applications using Hardware-Assisted Execution and Neural Network guided Fuzzing" }, { id: "tDIL7UXmSS", title: "Quantum Computing for Finance: A Survey of State-of-the-Art Techniques" }, { id: "5RZoYIT3u6", title: "You Only Need One Step: Fast Super-Resolution using Guided Diffusion Model" } ] },
-             { institute: "IIT Madras", total_paper_count: 5, unique_paper_count: 3, author_count: 10, spotlights: 0, orals: 0, type: "academic", papers: [ { id: "ZbkqhKbggH", title: "ASTrA: A Unified Benchmark for Evaluating Attribute Stealthiness in Face Recognition" }, { id: "52UtL8uA35", title: "Deep Networks Always Grok and Here is Why" }, { id: "qnlG3zPQUy", title: "ILLUSION: Efficient Hierarchical Parameter Adaptation using Intrinsic Dimension Regression" } ] },
-             { institute: "IISc Bangalore", total_paper_count: 4, unique_paper_count: 3, author_count: 9, spotlights: 0, orals: 0, type: "academic", papers: [ { id: "TfT8i94e1o", title: "Accelerating Generative Models via Long-Range Dependency Injection" }, { id: "2gU1v1K7tT", title: "Learning from Similar and Dissimilar Data: A Unified Framework for Cross-Domain Adaptation" }, { id: "l11DZY5Nxu", title: "Robust Graph Condensation via Gradient Matching" } ] },
-             { institute: "Google Research India", total_paper_count: 3, unique_paper_count: 2, author_count: 8, spotlights: 0, orals: 0, type: "corporate", papers: [ { id: "TfT8i94e1o", title: "Accelerating Generative Models via Long-Range Dependency Injection" }, { id: "NfCEVihkdC", title: "Measuring And Improving Persuasiveness in Short Videos" } ] },
-             { institute: "IIT Kanpur", total_paper_count: 4, unique_paper_count: 2, author_count: 7, spotlights: 0, orals: 0, type: "academic", papers: [ { id: "dummy1", title: "Example Paper Title 1" }, { id: "dummy2", title: "Example Paper Title 2" } ] },
-             { institute: "IIIT Hyderabad", total_paper_count: 3, unique_paper_count: 2, author_count: 6, spotlights: 0, orals: 0, type: "academic", papers: [ { id: "dummy3", title: "Example Paper Title 3" }, { id: "dummy4", title: "Example Paper Title 4" } ] },
-             { institute: "TCS Research", total_paper_count: 2, unique_paper_count: 2, author_count: 5, spotlights: 0, orals: 0, type: "corporate", papers: [ { id: "dummy5", title: "Example Paper Title 5" }, { id: "dummy6", title: "Example Paper Title 6" } ] },
+            { institute: "IIT Bombay", total_paper_count: 17, unique_paper_count: 10, author_count: 35, spotlights: 1, orals: 0, type: "academic", papers: [ { id: "EzrZX9bd4G", title: "BEEM: Balanced and Efficient Evaluation Metric for Multi-label Classification with Partially Annotated Labels" }, { id: "5pd78GmXC6", title: "Charting the Path of Quantum Computing towards Foundation Models" }, { id: "DFSb67ksVr", title: "Clique Guided Cooperative Graph Neural Network Training" }, { id: "9h45qxXEx0", title: "Debiasing Methods in Continual Test-Time Adaptation: What is the Optimal Strategy?" }, { id: "NtwFghsJne", title: "From Search To Recommendation: Progressive Explainable Network" }, { id: "k3gCieTXeY", title: "INCLUDE: Incorporating Linguistic Constraints into Language Models using Diferentiable Logic", isSpotlight: true }, { id: "nNiWRRj6r9", title: "ONLINE: Optimal Sampling from Aggregated Datasets for Molecular Property Prediction" }, { id: "l11DZY5Nxu", title: "Robust Graph Condensation via Gradient Matching" }, { id: "h0vC0fm1q7", title: "Sensitivity Analysis for Unmeasured Confounding in Causal Mediation Analysis" }, { id: "Q1kPHLUbhi", title: "Towards Self-Improving Vision Models" } ], authors: Array.from({ length: 35 }, (_, i) => `Author ${i + 1}`) },
+            { institute: "Microsoft Research India", total_paper_count: 8, unique_paper_count: 6, author_count: 20, spotlights: 0, orals: 0, type: "corporate", papers: [ { id: "9juyeCqL0u", title: "Causal Interpretation in the Presence of Latent Variables using Stylized Counterfactuals" }, { id: "xkgfLXZ4e0", title: "Correlating Events and Trends: A Causal Analysis of Temporal Data for Explainable Event Recommendation" }, { id: "zl3pfz4VCV", title: "MMTEB: A Multi-lingual Multi-task Text Embedding Benchmark" }, { id: "0dELcFHig2", title: "Multi-modal Event Causality Analysis: A Novel Task and Benchmark" }, { id: "3E8YNv1HjU", title: "Recite Your References: A New Benchmark and Model for Strong Claim Verification" }, { id: "l11DZY5Nxu", title: "Robust Graph Condensation via Gradient Matching" } ], authors: Array.from({ length: 20 }, (_, i) => `Author ${i + 1}`) },
+            { institute: "Adobe Research India", total_paper_count: 7, unique_paper_count: 4, author_count: 15, spotlights: 0, orals: 0, type: "corporate", papers: [ { id: "NHxwxc3ql6", title: "It Helps to Follow the Crowd: Instruction Following for Improving Persuasiveness" }, { id: "TmCcNuo03f", title: "Measuring And Improving Engagement in Short Videos" }, { id: "NfCEVihkdC", title: "Measuring And Improving Persuasiveness in Short Videos" }, { id: "ff2V3UR9sC", title: "Teaching Human Feedback Preferences to Distilled LLMs" } ], authors: Array.from({ length: 15 }, (_, i) => `Author ${i + 1}`) },
+            { institute: "IIT Delhi", total_paper_count: 6, unique_paper_count: 3, author_count: 12, spotlights: 0, orals: 0, type: "academic", papers: [ { id: "5x88lQ2MsH", title: "Bonsai: Enabling Fast Security Vetting of Closed-Source Applications using Hardware-Assisted Execution and Neural Network guided Fuzzing" }, { id: "tDIL7UXmSS", title: "Quantum Computing for Finance: A Survey of State-of-the-Art Techniques" }, { id: "5RZoYIT3u6", title: "You Only Need One Step: Fast Super-Resolution using Guided Diffusion Model" } ], authors: Array.from({ length: 12 }, (_, i) => `Author ${i + 1}`) },
+            { institute: "IIT Madras", total_paper_count: 5, unique_paper_count: 3, author_count: 10, spotlights: 0, orals: 0, type: "academic", papers: [ { id: "ZbkqhKbggH", title: "ASTrA: A Unified Benchmark for Evaluating Attribute Stealthiness in Face Recognition" }, { id: "52UtL8uA35", title: "Deep Networks Always Grok and Here is Why" }, { id: "qnlG3zPQUy", title: "ILLUSION: Efficient Hierarchical Parameter Adaptation using Intrinsic Dimension Regression" } ], authors: Array.from({ length: 10 }, (_, i) => `Author ${i + 1}`) },
+            { institute: "IISc Bangalore", total_paper_count: 4, unique_paper_count: 3, author_count: 9, spotlights: 0, orals: 0, type: "academic", papers: [ { id: "TfT8i94e1o", title: "Accelerating Generative Models via Long-Range Dependency Injection" }, { id: "2gU1v1K7tT", title: "Learning from Similar and Dissimilar Data: A Unified Framework for Cross-Domain Adaptation" }, { id: "l11DZY5Nxu", title: "Robust Graph Condensation via Gradient Matching" } ], authors: Array.from({ length: 9 }, (_, i) => `Author ${i + 1}`) },
+            { institute: "Google Research India", total_paper_count: 3, unique_paper_count: 2, author_count: 8, spotlights: 0, orals: 0, type: "corporate", papers: [ { id: "TfT8i94e1o", title: "Accelerating Generative Models via Long-Range Dependency Injection" }, { id: "NfCEVihkdC", title: "Measuring And Improving Persuasiveness in Short Videos" } ], authors: Array.from({ length: 8 }, (_, i) => `Author ${i + 1}`) },
+            { institute: "IIT Kanpur", total_paper_count: 4, unique_paper_count: 2, author_count: 7, spotlights: 0, orals: 0, type: "academic", papers: [ { id: "dummy1", title: "Example Paper Title 1" }, { id: "dummy2", title: "Example Paper Title 2" } ], authors: Array.from({ length: 7 }, (_, i) => `Author ${i + 1}`) },
+            { institute: "IIIT Hyderabad", total_paper_count: 3, unique_paper_count: 2, author_count: 6, spotlights: 0, orals: 0, type: "academic", papers: [ { id: "dummy3", title: "Example Paper Title 3" }, { id: "dummy4", title: "Example Paper Title 4" } ], authors: Array.from({ length: 6 }, (_, i) => `Author ${i + 1}`) },
+            { institute: "TCS Research", total_paper_count: 2, unique_paper_count: 2, author_count: 5, spotlights: 0, orals: 0, type: "corporate", papers: [ { id: "dummy5", title: "Example Paper Title 5" }, { id: "dummy6", title: "Example Paper Title 6" } ], authors: Array.from({ length: 5 }, (_, i) => `Author ${i + 1}`) },
         ],
     },
 };
+
 // Type definition for the data structure
 export type DashboardData = typeof dashboardData;
 
@@ -80,15 +81,63 @@ interface InstitutionData {
     orals: number;
     type: 'academic' | 'corporate' | 'unknown';
     papers: PaperSummary[];
-    authors_per_paper?: number; // Added for new scatter plot
-    impact_score?: number; // Added for new scatter plot (spotlights + orals)
+    authors?: string[];
+    authors_per_paper?: number;
+    impact_score?: number;
 }
-interface CountryData { affiliation_country: string; country_name: string; paper_count: number; author_count: number; spotlights: number; orals: number; rank: number; isHighlight?: boolean; spotlight_oral_rate?: number; authors_per_paper?: number; }
-type ProcessedIndiaData = DashboardData['indiaFocus'] & { rank?: number; paper_count?: number; author_count: number; spotlights: number; orals: number; spotlight_oral_rate?: number; authors_per_paper?: number; institutions: InstitutionData[]; } // Ensure institutions has updated type
-interface RechartsTooltipPayload { dataKey?: string | number; name?: string; value?: number | string; payload?: any; fill?: string; stroke?: string; color?: string; }
-interface ActiveShapeProps { cx?: number; cy?: number; midAngle?: number; innerRadius?: number; outerRadius?: number; startAngle?: number; endAngle?: number; fill?: string; payload?: any; percent?: number; value?: number; name?: string; }
-interface NameValueData { name: string; value: number; fillColorClass?: string; fillVariable?: string; percent?: number; [key: string]: any; } // Allow extra props
-
+interface CountryData { 
+    affiliation_country: string; 
+    country_name: string; 
+    paper_count: number; 
+    author_count: number; 
+    spotlights: number; 
+    orals: number; 
+    rank: number; 
+    isHighlight?: boolean; 
+    spotlight_oral_rate?: number; 
+    authors_per_paper?: number; 
+}
+type ProcessedIndiaData = DashboardData['indiaFocus'] & { 
+    rank?: number; 
+    paper_count?: number; 
+    author_count: number; 
+    spotlights: number; 
+    orals: number; 
+    spotlight_oral_rate?: number; 
+    authors_per_paper?: number; 
+    institutions: InstitutionData[]; 
+}
+interface RechartsTooltipPayload { 
+    dataKey?: string | number; 
+    name?: string; 
+    value?: number | string; 
+    payload?: any; 
+    fill?: string; 
+    stroke?: string; 
+    color?: string; 
+}
+interface ActiveShapeProps { 
+    cx?: number; 
+    cy?: number; 
+    midAngle?: number; 
+    innerRadius?: number; 
+    outerRadius?: number; 
+    startAngle?: number; 
+    endAngle?: number; 
+    fill?: string; 
+    payload?: any; 
+    percent?: number; 
+    value?: number; 
+    name?: string; 
+}
+interface NameValueData { 
+    name: string; 
+    value: number; 
+    fillColorClass?: string; 
+    fillVariable?: string; 
+    percent?: number; 
+    [key: string]: any; 
+}
 
 // --- Reusable Helper Functions ---
 const exportToCSV = (data: Record<string, any>[], filename: string): void => {
@@ -100,6 +149,10 @@ const exportToCSV = (data: Record<string, any>[], filename: string): void => {
             ...data.map(row => headers.map(header => {
                 const value = row[header] !== undefined && row[header] !== null ? row[header] : '';
                 let stringValue = String(value);
+                // Handle potential arrays (like authors) - join them
+                if (Array.isArray(value)) {
+                    stringValue = value.join('; '); // Join authors with semicolon
+                }
                 stringValue = stringValue.replace(/"/g, '""'); // Escape double quotes
                 if (stringValue.includes(',')) { stringValue = `"${stringValue}"`; } // Enclose in quotes if contains comma
                 return stringValue;
@@ -143,7 +196,7 @@ interface StatCardProps {
     title: string;
     value: string | number;
     icon?: React.ReactNode;
-    colorClass: string; // Text color e.g., "text-blue-500 dark:text-blue-400"
+    colorClass: string;
     subtitle?: string;
     className?: string;
 }
@@ -170,9 +223,8 @@ const CustomTooltip: React.FC<TooltipProps<number, string>> = ({ active, payload
 
         // Determine the title based on context
         let title = label || data?.country_name || data?.institute || data?.name || "Details";
-        // If it's the authorship chart, make the title more specific
         if (data?.stage) title = data.stage;
-        if (data?.type && (data.type === 'Academic' || data.type === 'Corporate')) title = data.type; // For institution type charts
+        if (data?.type && (data.type === 'Academic' || data.type === 'Corporate')) title = data.type;
 
         return (
             <div className="bg-popover border border-border p-3 rounded-lg shadow-xl opacity-95 text-sm max-w-xs">
@@ -200,7 +252,7 @@ const CustomTooltip: React.FC<TooltipProps<number, string>> = ({ active, payload
                     <p className="text-muted-foreground text-xs mt-1">{`Unique Papers: ${formatValue(data.unique_paper_count)}`}</p>}
 
                 {/* Author Count (if available) */}
-                {data?.author_count !== undefined && data.author_count > 0 &&
+                {data?.author_count !== undefined && data.author_count > 0 && !payload.some(p => p.dataKey === 'author_count' || p.name === 'Authors') &&
                     <p className="text-muted-foreground text-xs mt-1">{`Authors: ${formatValue(data.author_count)}`}</p>}
 
                 {/* Institution Type */}
@@ -218,16 +270,15 @@ const CustomTooltip: React.FC<TooltipProps<number, string>> = ({ active, payload
                         Impact: {data.spotlights ?? 0} Spotlight(s), {data.orals ?? 0} Oral(s)
                     </p>
                 }
-                 {/* Impact Score (for new scatter plot) */}
-                 {data?.impact_score !== undefined && !payload.some(p => p.name === 'Spotlights + Orals') &&
+                 {/* Impact Score (for tooltips) */}
+                 {data?.impact_score !== undefined && !payload.some(p => p.name === 'Spotlights + Orals' || p.name === 'Impact (Spotlights+Orals)') &&
                     <p className="text-muted-foreground text-xs mt-1">{`Impact (Spotlights+Orals): ${formatValue(data.impact_score)}`}</p>
-                }
+                 }
             </div>
         );
     }
     return null;
 };
-
 
 // ## Pie Chart Active Shape Renderer ##
 const renderActiveShape = (props: ActiveShapeProps) => {
@@ -288,8 +339,7 @@ const InterpretationPanel: React.FC<InterpretationPanelProps> = ({ insights, tit
     </div>
 );
 
-
-// ## InstitutionCard Component (Updated) ##
+// ## InstitutionCard Component (UPDATED with Author List) ##
 interface InstitutionCardProps { institution: InstitutionData; index: number; }
 const InstitutionCard: React.FC<InstitutionCardProps> = ({ institution, index }) => {
     const [isExpanded, setIsExpanded] = useState(false);
@@ -300,7 +350,7 @@ const InstitutionCard: React.FC<InstitutionCardProps> = ({ institution, index })
     return (
         <div
             className="bg-card rounded-lg shadow-md overflow-hidden mb-4 border border-border hover:border-primary transition-all duration-300 animate-fade-in"
-            style={{ animationDelay, opacity: 0, animationFillMode: 'forwards' }} // Add fade-in animation
+            style={{ animationDelay, opacity: 0, animationFillMode: 'forwards' }}
         >
             <div
                 className="p-4 cursor-pointer flex justify-between items-center"
@@ -308,12 +358,23 @@ const InstitutionCard: React.FC<InstitutionCardProps> = ({ institution, index })
             >
                 <div className="flex-1 mr-4 overflow-hidden">
                     <h3 className="text-card-foreground font-medium truncate" title={institution.institute}>{institution.institute}</h3>
-                    {/* UPDATED: Added Author count more prominently */}
                     <div className="flex items-center flex-wrap text-sm text-muted-foreground mt-1 space-x-4">
-                        <span className="flex items-center whitespace-nowrap"><FaFileAlt className="mr-1.5 text-blue-500 dark:text-blue-400 flex-shrink-0" />{institution.unique_paper_count} {institution.unique_paper_count === 1 ? 'Paper' : 'Papers'}</span>
-                        <span className="flex items-center whitespace-nowrap"><FaUsers className="mr-1.5 text-pink-500 dark:text-pink-400 flex-shrink-0" />{institution.author_count} {institution.author_count === 1 ? 'Author' : 'Authors'}</span>
+                        {/* Paper Count */}
+                        <span className="flex items-center whitespace-nowrap">
+                            <FaFileAlt className="mr-1.5 text-blue-500 dark:text-blue-400 flex-shrink-0" />
+                            <span className="text-blue-500 dark:text-blue-400 font-medium">{institution.unique_paper_count}</span>
+                            &nbsp;{institution.unique_paper_count === 1 ? 'Paper' : 'Papers'}
+                        </span>
+                        {/* Author Count */}
+                        <span className="flex items-center whitespace-nowrap">
+                            <FaUsers className="mr-1.5 text-pink-500 dark:text-pink-400 flex-shrink-0" />
+                             <span className="text-pink-500 dark:text-pink-400 font-medium">{institution.author_count}</span>
+                             &nbsp;{institution.author_count === 1 ? 'Author' : 'Authors'}
+                        </span>
+                        {/* Spotlights/Orals */}
                         {institution.spotlights > 0 && (<span className="flex items-center whitespace-nowrap"><FaStar className="mr-1.5 text-yellow-500 dark:text-yellow-400 flex-shrink-0" />{institution.spotlights} {institution.spotlights === 1 ? 'Spotlight' : 'Spotlights'}</span>)}
                         {institution.orals > 0 && (<span className="flex items-center whitespace-nowrap"><FaTrophy className="mr-1.5 text-emerald-500 dark:text-emerald-400 flex-shrink-0" />{institution.orals} {institution.orals === 1 ? 'Oral' : 'Orals'}</span>)}
+                        {/* Type */}
                         <span className="flex items-center whitespace-nowrap capitalize">
                             {institution.type === 'academic' ? <FaGraduationCap className="mr-1.5 text-blue-500 dark:text-blue-400 flex-shrink-0" /> : <FaBuilding className="mr-1.5 text-pink-500 dark:text-pink-400 flex-shrink-0" />} {institution.type}
                         </span>
@@ -321,24 +382,45 @@ const InstitutionCard: React.FC<InstitutionCardProps> = ({ institution, index })
                 </div>
                 <div className={`transform transition-transform duration-300 flex-shrink-0 ${isExpanded ? 'rotate-180' : ''}`}><FaChevronDown className="w-5 h-5 text-muted-foreground" /></div>
             </div>
+            {/* --- Expanded Details --- */}
             {isExpanded && (
-                <div id={detailsId} className="px-4 pb-4 pt-2 border-t border-border">
-                    <p className="text-foreground text-sm mb-3 font-medium">Published Papers ({institution.unique_paper_count}):</p>
-                    {institution.papers && institution.papers.length > 0 ? (
-                        <ul className="space-y-2 max-h-60 overflow-y-auto pr-2 custom-scrollbar"> {/* Added custom-scrollbar class */}
-                            {institution.papers.map((paper, idx) => (
-                                <li key={`${paper.id}-${idx}`} className="text-muted-foreground text-sm bg-background p-3 rounded-md shadow-sm">
-                                    <a href={`https://openreview.net/forum?id=${paper.id}`} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors block break-words" title={paper.title}>
-                                        {paper.title} <span className="text-xs text-muted-foreground/70 ml-1">(ID: {paper.id})</span>
-                                    </a>
-                                    {paper.isSpotlight && (<span className="ml-2 mt-1 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300"><FaStar className="mr-1" size={10} />Spotlight</span>)}
-                                    {paper.isOral && (<span className="ml-2 mt-1 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300"><FaTrophy className="mr-1" size={10} />Oral</span>)}
-                                </li>
-                            ))}
-                        </ul>
-                    ) : (
-                        <p className="text-muted-foreground/70 text-sm italic">No specific paper details available.</p>
-                    )}
+                <div id={detailsId} className="px-4 pb-4 pt-2 border-t border-border divide-y divide-border">
+                    {/* Paper List */}
+                    <div className="py-3">
+                        <p className="text-foreground text-sm mb-3 font-medium">Published Papers ({institution.unique_paper_count}):</p>
+                        {institution.papers && institution.papers.length > 0 ? (
+                            <ul className="space-y-2 max-h-60 overflow-y-auto pr-2 custom-scrollbar">
+                                {institution.papers.map((paper, idx) => (
+                                    <li key={`${paper.id}-${idx}`} className="text-muted-foreground text-sm bg-background p-3 rounded-md shadow-sm">
+                                        <a href={`https://openreview.net/forum?id=${paper.id}`} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors block break-words" title={paper.title}>
+                                            {paper.title} <span className="text-xs text-muted-foreground/70 ml-1">(ID: {paper.id})</span>
+                                        </a>
+                                        {paper.isSpotlight && (<span className="ml-2 mt-1 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300"><FaStar className="mr-1" size={10} />Spotlight</span>)}
+                                        {paper.isOral && (<span className="ml-2 mt-1 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300"><FaTrophy className="mr-1" size={10} />Oral</span>)}
+                                    </li>
+                                ))}
+                            </ul>
+                        ) : (
+                            <p className="text-muted-foreground/70 text-sm italic">No specific paper details available.</p>
+                        )}
+                    </div>
+
+                    {/* Author List */}
+                    <div className="py-3">
+                        <p className="text-foreground text-sm mb-3 font-medium">Contributing Authors ({institution.author_count}):</p>
+                        {institution.authors && institution.authors.length > 0 ? (
+                             <ul className="space-y-1.5 max-h-60 overflow-y-auto pr-2 custom-scrollbar text-sm text-muted-foreground">
+                                {institution.authors.map((author, idx) => (
+                                    <li key={`author-${idx}`} className="flex items-center">
+                                        <FaUser className="mr-2 text-pink-400 flex-shrink-0" size={12}/>
+                                        <span>{author}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        ) : (
+                            <p className="text-muted-foreground/70 text-sm italic">Author details not available.</p>
+                        )}
+                    </div>
                 </div>
             )}
         </div>
@@ -370,7 +452,13 @@ const DataTable: React.FC<DataTableProps> = ({ data, title, filename }) => {
                             <tr key={rowIndex} className={`${row.highlight ? 'bg-amber-100 dark:bg-amber-900/30 font-medium' : ''} hover:bg-muted/50 transition-colors`}>
                                 {headers.map((header, colIndex) => (
                                     <td key={`${rowIndex}-${colIndex}`} className="px-6 py-4 whitespace-nowrap text-sm text-card-foreground">
-                                        {typeof row[header] === 'boolean' ? (row[header] ? 'Yes' : 'No') : (row[header]?.toLocaleString() ?? '')}
+                                        {/* Handle array display in table (e.g., authors) */}
+                                        {Array.isArray(row[header])
+                                            ? (row[header] as (string | number)[]).slice(0, 3).join(', ') + ((row[header] as any[]).length > 3 ? '...' : '')
+                                            : typeof row[header] === 'boolean'
+                                                ? (row[header] ? 'Yes' : 'No')
+                                                : (row[header]?.toLocaleString() ?? '')
+                                        }
                                     </td>
                                 ))}
                             </tr>
@@ -381,7 +469,6 @@ const DataTable: React.FC<DataTableProps> = ({ data, title, filename }) => {
         </div>
     );
 };
-
 
 // --- Main Dashboard Component ---
 interface DashboardDataProps {
@@ -449,8 +536,11 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
         // Process institutions first to add calculated fields
         const processedInstitutions = indiaFocus.institutions.map(inst => ({
             ...inst,
+            // Calculate authors per paper and impact score (useful for sorting/tooltips even without scatter)
             authors_per_paper: inst.unique_paper_count > 0 ? (inst.author_count / inst.unique_paper_count) : 0,
             impact_score: (inst.spotlights ?? 0) + (inst.orals ?? 0),
+            // Ensure authors array exists (even if empty) - it's added in the raw data now
+            authors: inst.authors || [],
         }));
 
         const data = {
@@ -533,7 +623,7 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
         ];
     }, [processedIndiaData]);
 
-    // **NEW**: Data for Institution Types Pie Chart
+    // Data for Institution Types Pie Chart
     const institutionTypePieData = useMemo(() => {
         if (!processedIndiaData?.institution_types) return [];
         const academicCount = processedIndiaData.institution_types.academic ?? 0;
@@ -546,12 +636,12 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
         ];
     }, [processedIndiaData]);
 
-
     // Filtered Institutions (sorted by unique papers, then impact, then authors)
     const filteredInstitutions: InstitutionData[] = useMemo(() => {
         if (!processedIndiaData?.institutions) return [];
         return processedIndiaData.institutions
             .filter(inst => inst.institute?.toLowerCase().includes(institutionFilter.toLowerCase()))
+            // Sort by unique papers DESC, then impact DESC, then authors DESC
             .sort((a, b) => (b.unique_paper_count ?? 0) - (a.unique_paper_count ?? 0) || (b.impact_score ?? 0) - (a.impact_score ?? 0) || (b.author_count ?? 0) - (a.author_count ?? 0));
     }, [processedIndiaData, institutionFilter]);
 
@@ -560,7 +650,6 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
     // --- Event Handlers ---
     const handleFilterChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => setInstitutionFilter(event.target.value), []);
     const handlePieEnter = useCallback((_: any, index: number) => setActivePieIndex(index), []);
-    const handlePieLeave = useCallback(() => setActivePieIndex(-1), []); // Add leave handler if needed
 
     // --- Render Logic ---
     if (!processedIndiaData || !usData || !cnData) {
@@ -615,14 +704,13 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
         );
     };
 
-
     return (
         <div className="min-h-screen bg-background text-foreground font-sans">
             {/* Header */}
-            <header className="py-6 md:py-8 bg-card border-b border-border shadow-sm">
+            <header className="py-6 md:py-8 bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-950/30 dark:to-orange-950/30 border-b border-border shadow-sm">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h1 className="text-3xl sm:text-4xl font-bold text-foreground flex items-center justify-center mb-2">
-                        <FaTrophy className="mr-3 text-primary" /> India @ {conferenceInfo?.name ?? 'Conference'} {conferenceInfo?.year ?? ''}
+                        <FaTrophy className="mr-3 text-amber-500" /> India @ {conferenceInfo?.name ?? 'Conference'} {conferenceInfo?.year ?? ''}
                     </h1>
                     <p className="text-muted-foreground text-base sm:text-lg">India's Contributions, Global Context & Institutional Landscape</p>
                     <p className="text-sm text-muted-foreground mt-3">Total Accepted Papers: <span className="font-semibold text-foreground">{totalPapers?.toLocaleString() ?? 'N/A'}</span></p>
@@ -632,49 +720,59 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
             <main>
                 {/* --- Pillar 1: Executive Summary --- */}
                 <Section title="Executive Summary: Impact at a Glance" id="summary" className="bg-muted/30">
-                    {/* Hero Stats */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    {/* Hero Stats Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                         <StatCard
-                            title="Research Output (India)"
-                            value={processedIndiaData.paper_count ?? 'N/A'}
+                            title="Papers Accepted"
+                            value={processedIndiaData.paper_count ?? 49}
                             icon={<FaFileAlt />}
                             colorClass="text-amber-500 dark:text-amber-400"
-                            subtitle={`#${processedIndiaData.rank ?? 'N/A'} globally | ${processedIndiaData.author_count?.toLocaleString() ?? 'N/A'} authors | ${((processedIndiaData.paper_count ?? 0) / (totalPapers || 1) * 100).toFixed(1)}% share`}
+                            subtitle={`#${processedIndiaData.rank ?? 'N/A'} globally | ${((processedIndiaData.paper_count ?? 0) / (totalPapers || 1) * 100).toFixed(1)}% of all ICLR papers`}
                         />
                         <StatCard
-                            title="Spotlights/Orals (India)"
-                            value={(processedIndiaData.spotlights ?? 0) + (processedIndiaData.orals ?? 0)}
-                            icon={<FaStar />}
-                            colorClass="text-yellow-500 dark:text-yellow-400"
-                            subtitle={`${(processedIndiaData.spotlight_oral_rate ?? 0 * 100).toFixed(1)}% Spotlight/Oral Rate (vs US ${(usData?.spotlight_oral_rate ?? 0 * 100).toFixed(1)}%, CN ${(cnData?.spotlight_oral_rate ?? 0 * 100).toFixed(1)}%)`}
+                            title="Authors Accepted"
+                            value={processedIndiaData.author_count ?? 132}
+                            icon={<FaUsers />}
+                            colorClass="text-blue-500 dark:text-blue-400"
+                            subtitle={`Average ${(processedIndiaData?.authors_per_paper ?? 0).toFixed(1)} authors per paper | Building India's ML community`}
                         />
                         <StatCard
-                            title="Research Leadership (India)"
-                            value={`${((processedIndiaData?.first_indian_author?.count ?? 0) / (processedIndiaData?.paper_count || 1) * 100).toFixed(0)}%`}
+                            title="First Authors"
+                            value={processedIndiaData?.first_indian_author?.count ?? 26}
                             icon={<FaUserTie />}
                             colorClass="text-emerald-500 dark:text-emerald-400"
-                            subtitle={`${processedIndiaData?.first_indian_author?.count ?? 0} papers led by Indian first authors`}
+                            subtitle={`${((processedIndiaData?.first_indian_author?.count ?? 0) / (processedIndiaData?.paper_count || 1) * 100).toFixed(0)}% of papers led by Indian first authors`}
+                        />
+                        <StatCard
+                            title="Spotlight Papers"
+                            value={processedIndiaData.spotlights ?? 1}
+                            icon={<FaStar />}
+                            colorClass="text-yellow-500 dark:text-yellow-400"
+                            subtitle={`Demonstrating high-quality research impact on the global stage`}
                         />
                     </div>
 
-                    {/* Breakout Impact Highlights */}
-                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 text-sm">
-                            <div className="bg-card p-4 rounded-lg border border-border shadow-sm">
-                                <FaUniversity className="text-blue-500 mb-2" size={20}/>
-                                <p className="text-foreground font-medium">Institutional Leaders:</p>
-                                <p className="text-muted-foreground">IIT Bombay leads volume (10 papers); MSR India excels in impact (6 papers, 1 spotlight + 1 oral).</p>
-                            </div>
-                             <div className="bg-card p-4 rounded-lg border border-border shadow-sm">
-                                 <FaBalanceScale className="text-green-500 mb-2" size={20}/>
-                                 <p className="text-foreground font-medium">Quality Focus:</p>
-                                 <p className="text-muted-foreground">India's {(processedIndiaData?.spotlight_oral_rate ?? 0 * 100).toFixed(1)}% spotlight/oral rate surpasses US ({(usData?.spotlight_oral_rate ?? 0 * 100).toFixed(1)}%) & China ({(cnData?.spotlight_oral_rate ?? 0 * 100).toFixed(1)}%), showcasing quality.</p>
-                             </div>
-                             <div className="bg-card p-4 rounded-lg border border-border shadow-sm">
-                                 <FaChartLine className="text-purple-500 mb-2" size={20}/>
-                                 <p className="text-foreground font-medium">Authorship Trends:</p>
-                                  <p className="text-muted-foreground">{`${((processedIndiaData?.first_indian_author?.count ?? 0) / (processedIndiaData?.at_least_one_indian_author?.count || 1) * 100).toFixed(0)}%`} first authorship signals growing leadership; {`${((processedIndiaData?.majority_indian_authors?.count ?? 0) / (processedIndiaData?.at_least_one_indian_author?.count || 1) * 100).toFixed(0)}%`} majority-Indian papers show research autonomy.</p>
+                     {/* Breakout Highlights */}
+                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                         <div className="bg-card p-4 rounded-lg border border-border shadow-sm">
+                             <div className="flex items-start mb-3">
+                                 <FaUniversity className="text-blue-500 mr-3 mt-1" size={20}/>
+                                 <div>
+                                     <p className="text-foreground font-medium text-lg">Institutional Leaders:</p>
+                                     <p className="text-muted-foreground">IIT Bombay leads volume (10 papers, 35 authors); MSR India follows with 6 papers and 20 authors.</p>
+                                 </div>
                              </div>
                          </div>
+                         <div className="bg-card p-4 rounded-lg border border-border shadow-sm">
+                             <div className="flex items-start mb-3">
+                                 <FaBalanceScale className="text-green-500 mr-3 mt-1" size={20}/>
+                                 <div>
+                                     <p className="text-foreground font-medium text-lg">Quality Focus:</p>
+                                     <p className="text-muted-foreground">India secured 1 spotlight paper at ICLR 2025, demonstrating quality research capability despite smaller overall representation.</p>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
 
                     {/* Insights Preview */}
                     <InterpretationPanel
@@ -682,10 +780,10 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
                         icon={<FaBullseye />}
                         iconColorClass='text-red-500 dark:text-red-400'
                         insights={[
-                            `India's ${processedIndiaData?.author_count ?? 'N/A'} ML researchers are redefining impact—achieving a ${(processedIndiaData?.spotlight_oral_rate ?? 0 * 100).toFixed(1)}% spotlight/oral rate that outperforms both US and China while producing ${processedIndiaData?.paper_count ?? 'N/A'} papers that signal emerging research leadership.`,
-                            `Positioned #${processedIndiaData?.rank ?? 'N/A'} globally, India holds ${((processedIndiaData?.paper_count ?? 0) / (totalPapers || 1) * 100).toFixed(1)}% of ICLR ${conferenceInfo?.year ?? ''} papers but demonstrates disproportionate impact through lean teams (${(processedIndiaData?.authors_per_paper ?? 0).toFixed(1)} authors/paper) and high-quality output.`,
+                            `India's ${processedIndiaData?.author_count ?? 'N/A'} ML researchers are making their mark with ${processedIndiaData?.paper_count ?? 'N/A'} papers at ICLR 2025, including 1 spotlight paper that demonstrates the quality of research.`,
+                            `Positioned #${processedIndiaData?.rank ?? 'N/A'} globally, India holds ${((processedIndiaData?.paper_count ?? 0) / (totalPapers || 1) * 100).toFixed(1)}% of ICLR ${conferenceInfo?.year ?? ''} papers with efficient teams averaging ${(processedIndiaData?.authors_per_paper ?? 0).toFixed(1)} authors per paper.`,
                             `With ${((processedIndiaData?.first_indian_author?.count ?? 0) / (processedIndiaData?.at_least_one_indian_author?.count || 1) * 100).toFixed(0)}% first authorship and ${((processedIndiaData?.majority_indian_authors?.count ?? 0) / (processedIndiaData?.at_least_one_indian_author?.count || 1) * 100).toFixed(0)}% majority Indian collaborations, the data reveals a maturing research community balancing international collaboration with domestic leadership.`,
-                            "The Indian ML research landscape is concentrated yet diverse—with IIT Bombay leading in volume and Microsoft Research India setting the bar for per-paper impact."
+                            "The Indian ML research landscape is concentrated yet diverse—with IIT Bombay leading in volume and showing strong research impact with its spotlight paper."
                         ]}
                     />
                 </Section>
@@ -710,14 +808,13 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
                                                 <Cell key={`cell-global-${entry.affiliation_country}`}
                                                       fill={entry.affiliation_country === 'US' ? colorMap.us :
                                                             entry.affiliation_country === 'CN' ? colorMap.cn :
-                                                            entry.affiliation_country === 'IN' ? colorMap.in : // Highlight India
+                                                            entry.affiliation_country === 'IN' ? colorMap.in :
                                                             colorMap.primary}
                                                       fillOpacity={entry.isHighlight ? 1 : 0.7} />
                                             ))}
                                         </Bar>
-                                        {/* Add author count as a second bar */}
-                                         <Bar dataKey="author_count" name="Authors" radius={[0, 4, 4, 0]} barSize={10} fill={colorMap.secondary} fillOpacity={0.6} />
-                                         <Legend iconSize={10} wrapperStyle={{ fontSize: '11px', color: 'hsl(var(--foreground))' }}/>
+                                        <Bar dataKey="author_count" name="Authors" radius={[0, 4, 4, 0]} barSize={10} fill={colorMap.secondary} fillOpacity={0.6} />
+                                        <Legend iconSize={10} wrapperStyle={{ fontSize: '11px', color: 'hsl(var(--foreground))' }}/>
                                     </BarChart>
                                 </ResponsiveContainer>
                             </div>
@@ -736,11 +833,11 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
                                                 cx="50%"
                                                 cy="50%"
                                                 labelLine={false}
-                                                label={renderCustomizedLabel} // Use custom label
+                                                label={renderCustomizedLabel}
                                                 outerRadius={80}
                                                 dataKey="value"
                                                 nameKey="name"
-                                                stroke={'hsl(var(--card))'} // Add stroke for separation
+                                                stroke={'hsl(var(--card))'}
                                                 strokeWidth={2}
                                             >
                                                 {usChinaDominancePieData.map((entry, index) => (
@@ -748,7 +845,6 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
                                                 ))}
                                             </Pie>
                                             <Tooltip content={<CustomTooltip />} />
-                                            {/* <Legend iconSize={10} wrapperStyle={{ fontSize: '11px', color: 'hsl(var(--foreground))' }}/> */}
                                         </PieChart>
                                     ) : (
                                         <div className="flex items-center justify-center h-full text-muted-foreground">Data unavailable</div>
@@ -756,13 +852,13 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
                                 </ResponsiveContainer>
                             </div>
                              <div className="mt-4 text-center text-sm text-muted-foreground">
-                                    <p>US + China: <span className="font-bold text-foreground">{(((usData?.paper_count ?? 0) + (cnData?.paper_count ?? 0)) / (totalPapers || 1) * 100).toFixed(1)}%</span> papers</p>
-                                    <p>India: <span className="font-bold text-foreground">{((processedIndiaData?.paper_count ?? 0) / (totalPapers || 1) * 100).toFixed(1)}%</span> papers (<span className="text-amber-600 dark:text-amber-400">Quality Focus</span>)</p>
-                                </div>
+                                 <p>US + China: <span className="font-bold text-foreground">{(((usData?.paper_count ?? 0) + (cnData?.paper_count ?? 0)) / (totalPapers || 1) * 100).toFixed(1)}%</span> papers</p>
+                                 <p>India: <span className="font-bold text-foreground">{((processedIndiaData?.paper_count ?? 0) / (totalPapers || 1) * 100).toFixed(1)}%</span> papers (<span className="text-amber-600 dark:text-amber-400">1 Spotlight</span>)</p>
+                             </div>
                         </div>
                     </div>
 
-                    {/* APAC Dynamics */}
+                    {/* APAC Dynamics - SIMPLIFIED AS REQUESTED */}
                     <div className="mb-8">
                         <h3 className="text-xl font-semibold text-foreground mb-4">APAC Dynamics</h3>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -770,7 +866,7 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
                             <div className="bg-card p-4 sm:p-6 rounded-xl border border-border shadow-lg">
                                 <h4 className="text-lg font-semibold text-foreground mb-1">Regional Players Comparison</h4>
                                 <p className="text-sm text-muted-foreground mb-4">Papers vs. Authors for key APAC countries. India highlighted.</p>
-                                <div className="h-96">
+                                <div className="h-80">
                                     <ResponsiveContainer width="100%" height="100%">
                                         <BarChart data={apacCountriesData} layout="vertical" margin={{ top: 5, right: 20, left: 80, bottom: 5 }}>
                                             <CartesianGrid strokeDasharray="3 3" stroke={colorMap.grid} horizontal={false}/>
@@ -779,51 +875,54 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
                                             <Tooltip content={<CustomTooltip />} cursor={{ fill: 'hsl(var(--muted))' }}/>
                                             <Legend iconSize={10} wrapperStyle={{ fontSize: '11px', color: 'hsl(var(--foreground))' }}/>
                                             <Bar dataKey="paper_count" name="Papers" barSize={12} fill={colorMap.primary}>
-                                                {apacCountriesData.map((entry) => ( <Cell key={`cell-apac-paper-${entry.affiliation_country}`} fill={entry.affiliation_country === 'IN' ? colorMap.in : colorMap.primary} /> ))}
+                                                 {apacCountriesData.map((entry) => ( <Cell key={`cell-apac-paper-${entry.affiliation_country}`} fill={entry.affiliation_country === 'IN' ? colorMap.in : colorMap.primary} /> ))}
                                             </Bar>
                                             <Bar dataKey="author_count" name="Authors" barSize={12} fill={colorMap.secondary} fillOpacity={0.7}>
                                                  {apacCountriesData.map((entry) => ( <Cell key={`cell-apac-author-${entry.affiliation_country}`} fill={entry.affiliation_country === 'IN' ? colorMap.warning : colorMap.secondary} /> ))}
-                                            </Bar>
+                                             </Bar>
                                         </BarChart>
                                     </ResponsiveContainer>
                                 </div>
                             </div>
 
-                            {/* Regional Performance Scatter Plot */}
+                            {/* APAC Region Pie Chart (replacing scatter plot) */}
                             <div className="bg-card p-4 sm:p-6 rounded-xl border border-border shadow-lg">
-                                <h4 className="text-lg font-semibold text-foreground mb-1">Regional Performance Metrics</h4>
-                                <p className="text-sm text-muted-foreground mb-4">Spotlight/Oral Rate vs. Collaboration Size (Bubble size = Papers). India highlighted.</p>
-                                <div className="h-96">
+                                <h4 className="text-lg font-semibold text-foreground mb-1 text-center">APAC Paper Distribution</h4>
+                                <p className="text-sm text-muted-foreground mb-4 text-center">Share of papers across major APAC countries.</p>
+                                <div className="h-80">
                                     <ResponsiveContainer width="100%" height="100%">
-                                        <ScatterChart margin={{ top: 20, right: 30, bottom: 20, left: 20 }}>
-                                            <CartesianGrid strokeDasharray="3 3" stroke={colorMap.grid}/>
-                                            <XAxis type="number" dataKey="authors_per_paper" name="Avg. Authors per Paper" stroke={colorMap.textAxis} fontSize={10} domain={['dataMin - 0.5', 'dataMax + 0.5']} tickFormatter={(val) => val.toFixed(1)}/>
-                                            <YAxis type="number" dataKey="spotlight_oral_rate" name="Spotlight/Oral Rate" stroke={colorMap.textAxis} fontSize={10} tickFormatter={(tick) => `${(tick * 100).toFixed(0)}%`} domain={[0, 'dataMax + 0.02']}/>
-                                            <ZAxis type="number" dataKey="paper_count" range={[100, 1500]} name="Paper Count"/>
-                                            <Tooltip cursor={{ strokeDasharray: '3 3' }} content={<CustomTooltip />}/>
-                                            <Legend iconSize={10} wrapperStyle={{ fontSize: '11px', color: 'hsl(var(--foreground))' }}/>
-                                            <Scatter name="APAC Countries" data={apacCountriesData} >
-                                                {apacCountriesData.map((entry) => (
-                                                    <Cell key={`cell-scatter-${entry.affiliation_country}`}
-                                                          fill={entry.affiliation_country === 'CN' ? colorMap.cn :
-                                                                entry.affiliation_country === 'IN' ? colorMap.in :
-                                                                entry.affiliation_country === 'KR' ? colorMap.highlight : // Example highlight
-                                                                entry.affiliation_country === 'SG' ? colorMap.accent : // Example highlight
-                                                                colorMap.primary}
-                                                          fillOpacity={0.7}
-                                                          stroke={entry.affiliation_country === 'IN' ? colorMap.warning : undefined} // Outline India
-                                                          strokeWidth={entry.affiliation_country === 'IN' ? 2 : 0}
-                                                          />
+                                        <PieChart>
+                                            <Pie
+                                                data={apacCountriesData}
+                                                cx="50%"
+                                                cy="50%"
+                                                labelLine={false}
+                                                label={renderCustomizedLabel}
+                                                outerRadius={80}
+                                                dataKey="paper_count"
+                                                nameKey="country_name"
+                                                stroke={'hsl(var(--card))'}
+                                                strokeWidth={2}
+                                                activeIndex={activePieIndex} 
+                                                activeShape={renderActiveShape} 
+                                                onMouseEnter={handlePieEnter}
+                                            >
+                                                {apacCountriesData.map((entry, index) => (
+                                                    <Cell 
+                                                        key={`cell-apac-pie-${index}`} 
+                                                        fill={entry.affiliation_country === 'CN' ? colorMap.cn :
+                                                              entry.affiliation_country === 'IN' ? colorMap.in :
+                                                              entry.affiliation_country === 'KR' ? colorMap.highlight :
+                                                              entry.affiliation_country === 'SG' ? colorMap.accent :
+                                                              entry.affiliation_country === 'JP' ? 'hsl(var(--primary))' :
+                                                              entry.affiliation_country === 'HK' ? 'hsl(200, 80%, 50%)' :
+                                                              entry.affiliation_country === 'AU' ? 'hsl(140, 60%, 45%)' :
+                                                              colorMap.primary} 
+                                                    />
                                                 ))}
-                                                {/* Label only for India */}
-                                                <LabelList
-                                                    dataKey="country_name"
-                                                    position="right"
-                                                    style={{ fontSize: '9px', fill: 'hsl(var(--foreground))', fontWeight: 'bold' }}
-                                                    formatter={(name: string, entry: any) => entry?.payload?.affiliation_country === 'IN' ? name : ''}
-                                                   />
-                                            </Scatter>
-                                        </ScatterChart>
+                                            </Pie>
+                                            <Tooltip content={<CustomTooltip />} />
+                                        </PieChart>
                                     </ResponsiveContainer>
                                 </div>
                             </div>
@@ -837,17 +936,18 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
                         iconColorClass='text-blue-500 dark:text-blue-400'
                         insights={[
                             `Within the selected APAC group's ~${apacCountriesData.reduce((s,c)=>s+(c.paper_count ?? 0),0)} papers authored by ~${apacCountriesData.reduce((s,c)=>s+(c.author_count ?? 0),0).toLocaleString()} researchers, India contributes ${processedIndiaData?.paper_count ?? 'N/A'} papers and ${processedIndiaData?.author_count ?? 'N/A'} authors.`,
-                            `China dominates volume with ${cnData?.paper_count ?? 'N/A'} papers (~${((cnData?.paper_count ?? 0) / (apacCountriesData.reduce((s,c)=>s+(c.paper_count ?? 0),1) || 1) * 100).toFixed(0)}% of regional total), but India's ${ (processedIndiaData?.spotlight_oral_rate ?? 0 * 100).toFixed(1)}% spotlight/oral rate demonstrates quality-focused research.`
+                            `China dominates volume with ${cnData?.paper_count ?? 'N/A'} papers (~${((cnData?.paper_count ?? 0) / (apacCountriesData.reduce((s,c)=>s+(c.paper_count ?? 0),1) || 1) * 100).toFixed(0)}% of regional total), while India's spotlight paper demonstrates quality-focused research.`,
+                            `India ranks 7th among APAC nations in total papers, but demonstrates strong academic-corporate collaboration with 14 corporate papers, showing industry's growing involvement in ML research.`
                         ]}
                     />
                 </Section>
 
                 {/* --- Pillar 3: India-Only Focus --- */}
-                <Section title="India-Only Focus: Deep Dive" id="india-focus" subtitle="Analyzing authorship patterns and institutional contributions within India." className="bg-muted/30">
-                    {/* Authorship Patterns */}
+                <Section title="India-Only Focus: Deep Dive" id="india-focus" subtitle="Analyzing authorship, collaboration, and institutional contributions within India." className="bg-muted/30">
+                    {/* Authorship & Collaboration Patterns */}
                     <div className="mb-12">
-                        <h3 className="text-xl font-semibold text-foreground mb-4">Authorship Patterns (India-Centric)</h3>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <h3 className="text-xl font-semibold text-foreground mb-4">Authorship & Collaboration Patterns (India-Centric)</h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             {/* Majority/Minority Split */}
                             <div className="bg-card p-4 sm:p-6 rounded-xl border border-border shadow-lg">
                                 <h4 className="text-lg font-semibold text-foreground mb-1 text-center">Majority vs Minority Indian Authors</h4>
@@ -867,12 +967,12 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
                                                      <LabelList dataKey="value" position="right" style={{ fill: 'hsl(var(--foreground))', fontSize: 10 }} />
                                                 </Bar>
                                             </BarChart>
-                                        ) : <div className="flex items-center justify-center h-full text-muted-foreground">Data unavailable</div>}
+                                         ) : <div className="flex items-center justify-center h-full text-muted-foreground">Data unavailable</div>}
                                     </ResponsiveContainer>
                                 </div>
                             </div>
 
-                             {/* First Author Split */}
+                            {/* First Author Split */}
                             <div className="bg-card p-4 sm:p-6 rounded-xl border border-border shadow-lg">
                                 <h4 className="text-lg font-semibold text-foreground mb-1 text-center">First Author Position</h4>
                                 <p className="text-sm text-muted-foreground mb-4 text-center">Breakdown of the {processedIndiaData?.at_least_one_indian_author?.count ?? 0} papers with Indian authors.</p>
@@ -891,106 +991,74 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
                                                      <LabelList dataKey="value" position="right" style={{ fill: 'hsl(var(--foreground))', fontSize: 10 }} />
                                                 </Bar>
                                             </BarChart>
-                                        ) : <div className="flex items-center justify-center h-full text-muted-foreground">Data unavailable</div>}
+                                         ) : <div className="flex items-center justify-center h-full text-muted-foreground">Data unavailable</div>}
                                     </ResponsiveContainer>
                                 </div>
-                            </div>
-
-                             {/* Research Leadership Funnel (Textual Representation) */}
-                            <div className="bg-card p-4 sm:p-6 rounded-xl border border-border shadow-lg flex flex-col justify-center">
-                                <h4 className="text-lg font-semibold text-foreground mb-3">Research Leadership Pipeline</h4>
-                                <div className="space-y-3 text-center">
-                                     <div className="bg-muted p-3 rounded">
-                                         <p className="text-2xl font-bold text-foreground">{processedIndiaData?.at_least_one_indian_author?.count ?? 0}</p>
-                                         <p className="text-sm text-muted-foreground">Papers with Indian Authors</p>
-                                     </div>
-                                     <div className="flex justify-center text-muted-foreground"><FaArrowDown /></div>
-                                      <div className="bg-muted p-3 rounded">
-                                          <p className="text-2xl font-bold text-foreground">{processedIndiaData?.majority_indian_authors?.count ?? 0} <span className="text-base font-normal text-muted-foreground">({(((processedIndiaData?.majority_indian_authors?.count ?? 0) / (processedIndiaData?.at_least_one_indian_author?.count || 1))*100).toFixed(0)}%)</span></p>
-                                          <p className="text-sm text-muted-foreground">Majority Indian Authors</p>
-                                      </div>
-                                     <div className="flex justify-center text-muted-foreground"><FaArrowDown /></div>
-                                      <div className="bg-muted p-3 rounded">
-                                          <p className="text-2xl font-bold text-foreground">{processedIndiaData?.first_indian_author?.count ?? 0} <span className="text-base font-normal text-muted-foreground">({(((processedIndiaData?.first_indian_author?.count ?? 0) / (processedIndiaData?.at_least_one_indian_author?.count || 1))*100).toFixed(0)}%)</span></p>
-                                          <p className="text-sm text-muted-foreground">First Author Indian</p>
-                                      </div>
-                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* --- Institution Types (REVISED) --- */}
+                    {/* --- Institution Types --- */}
                     <div className="mb-8">
                         <h3 className="text-xl font-semibold text-foreground mb-4">Institution Types (India-Specific)</h3>
-                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8"> {/* Changed to 3 columns */}
-                            {/* Academic vs Corporate Comparison (Bar Chart) */}
-                            <div className="bg-card p-4 sm:p-6 rounded-xl border border-border shadow-lg md:col-span-2"> {/* Span 2 cols */}
-                                <h4 className="text-lg font-semibold text-foreground mb-1 text-center">Academic vs Corporate Contribution</h4>
-                                <p className="text-sm text-muted-foreground mb-4 text-center">Comparing paper volume and high-impact papers (Spotlights/Orals).</p>
-                                <div className="h-80">
-                                    <ResponsiveContainer width="100%" height="100%">
-                                        {institutionTypeComparisonData.length > 0 ? (
-                                            <BarChart data={institutionTypeComparisonData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
-                                                <CartesianGrid strokeDasharray="3 3" stroke={colorMap.grid} vertical={false}/>
-                                                <XAxis dataKey="type" stroke={colorMap.textAxis} fontSize={12}/>
-                                                <YAxis stroke={colorMap.textAxis} fontSize={10}/>
-                                                <Tooltip content={<CustomTooltip />}/>
-                                                <Legend iconSize={10} wrapperStyle={{ fontSize: '11px', color: 'hsl(var(--foreground))' }}/>
-                                                <Bar dataKey="Papers" fill={colorMap.academic} name="Papers" barSize={40}>
-                                                     {institutionTypeComparisonData.map((entry, index) => (
-                                                         <Cell key={`cell-type-paper-${index}`} fill={entry.type === 'Academic' ? colorMap.academic : colorMap.corporate} />
-                                                     ))}
-                                                      <LabelList dataKey="Papers" position="top" style={{ fill: 'hsl(var(--foreground))', fontSize: 10 }} />
-                                                </Bar>
-                                                <Bar dataKey="Spotlights/Orals" fill={colorMap.spotlight} name="Spotlights/Orals" barSize={40}>
-                                                     {institutionTypeComparisonData.map((entry, index) => (
-                                                         <Cell key={`cell-type-impact-${index}`} fill={entry.type === 'Academic' ? colorMap.spotlight : colorMap.oral} /> // Different colors for impact
-                                                     ))}
-                                                     <LabelList dataKey="Spotlights/Orals" position="top" style={{ fill: 'hsl(var(--foreground))', fontSize: 10 }} />
-                                                </Bar>
-                                            </BarChart>
-                                        ) : <div className="flex items-center justify-center h-full text-muted-foreground">Data unavailable</div>}
-                                    </ResponsiveContainer>
-                                </div>
-                            </div>
+                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                             {/* Academic vs Corporate Comparison (Bar Chart) */}
+                             <div className="bg-card p-4 sm:p-6 rounded-xl border border-border shadow-lg md:col-span-2">
+                                 <h4 className="text-lg font-semibold text-foreground mb-1 text-center">Academic vs Corporate Contribution</h4>
+                                 <p className="text-sm text-muted-foreground mb-4 text-center">Comparing paper volume and high-impact papers (Spotlights/Orals).</p>
+                                 <div className="h-80">
+                                     <ResponsiveContainer width="100%" height="100%">
+                                         {institutionTypeComparisonData.length > 0 ? (
+                                             <BarChart data={institutionTypeComparisonData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
+                                                 <CartesianGrid strokeDasharray="3 3" stroke={colorMap.grid} vertical={false}/>
+                                                 <XAxis dataKey="type" stroke={colorMap.textAxis} fontSize={12}/>
+                                                 <YAxis stroke={colorMap.textAxis} fontSize={10}/>
+                                                 <Tooltip content={<CustomTooltip />}/>
+                                                 <Legend iconSize={10} wrapperStyle={{ fontSize: '11px', color: 'hsl(var(--foreground))' }}/>
+                                                 <Bar dataKey="Papers" fill={colorMap.academic} name="Papers" barSize={40}>
+                                                      {institutionTypeComparisonData.map((entry, index) => (
+                                                          <Cell key={`cell-type-paper-${index}`} fill={entry.type === 'Academic' ? colorMap.academic : colorMap.corporate} />
+                                                      ))}
+                                                       <LabelList dataKey="Papers" position="top" style={{ fill: 'hsl(var(--foreground))', fontSize: 10 }} />
+                                                 </Bar>
+                                                 <Bar dataKey="Spotlights/Orals" fill={colorMap.spotlight} name="Spotlights/Orals" barSize={40}>
+                                                      {institutionTypeComparisonData.map((entry, index) => (
+                                                          <Cell key={`cell-type-impact-${index}`} fill={entry.type === 'Academic' ? colorMap.spotlight : colorMap.oral} />
+                                                      ))}
+                                                       <LabelList dataKey="Spotlights/Orals" position="top" style={{ fill: 'hsl(var(--foreground))', fontSize: 10 }} />
+                                                 </Bar>
+                                             </BarChart>
+                                          ) : <div className="flex items-center justify-center h-full text-muted-foreground">Data unavailable</div>}
+                                     </ResponsiveContainer>
+                                 </div>
+                             </div>
 
-                            {/* **NEW**: Academic vs Corporate Split (Pie Chart) */}
-                            <div className="bg-card p-4 sm:p-6 rounded-xl border border-border shadow-lg flex flex-col"> {/* Takes 1 col */}
-                                <h4 className="text-lg font-semibold text-foreground mb-1 text-center">Paper Split by Type</h4>
-                                <p className="text-sm text-muted-foreground mb-4 text-center">Share of Indian papers by institution type.</p>
-                                <div className="h-80 flex-grow"> {/* Adjusted height */}
+                             {/* Academic vs Corporate Split (Pie Chart) */}
+                             <div className="bg-card p-4 sm:p-6 rounded-xl border border-border shadow-lg flex flex-col">
+                                 <h4 className="text-lg font-semibold text-foreground mb-1 text-center">Paper Split by Type</h4>
+                                 <p className="text-sm text-muted-foreground mb-4 text-center">Share of Indian papers by institution type.</p>
+                                 <div className="h-80 flex-grow">
                                      <ResponsiveContainer width="100%" height="100%">
                                          {institutionTypePieData.length > 0 ? (
                                              <PieChart>
                                                  <Pie
                                                      data={institutionTypePieData}
-                                                     cx="50%"
-                                                     cy="50%"
-                                                     labelLine={false}
-                                                     label={renderCustomizedLabel}
-                                                     outerRadius={80}
-                                                     dataKey="value"
-                                                     nameKey="name"
-                                                     stroke={'hsl(var(--card))'}
-                                                     strokeWidth={2}
-                                                     activeIndex={activePieIndex}
-                                                     activeShape={renderActiveShape}
-                                                     onMouseEnter={handlePieEnter}
-                                                     // onMouseLeave={handlePieLeave} // Optional: Reset active index on leave
+                                                     cx="50%" cy="50%" labelLine={false} label={renderCustomizedLabel} outerRadius={80} dataKey="value" nameKey="name"
+                                                     stroke={'hsl(var(--card))'} strokeWidth={2}
+                                                     activeIndex={activePieIndex} activeShape={renderActiveShape} onMouseEnter={handlePieEnter}
                                                  >
                                                      {institutionTypePieData.map((entry, index) => (
                                                          <Cell key={`cell-type-pie-${index}`} fill={entry.fill} />
                                                      ))}
                                                  </Pie>
                                                  <Tooltip content={<CustomTooltip />} />
-                                                 {/* <Legend iconSize={10} wrapperStyle={{ fontSize: '11px', color: 'hsl(var(--foreground))' }}/> */}
                                              </PieChart>
                                          ) : (
                                              <div className="flex items-center justify-center h-full text-muted-foreground">Data unavailable</div>
                                          )}
                                      </ResponsiveContainer>
-                                </div>
-                            </div>
+                                 </div>
+                             </div>
                          </div>
                     </div>
 
@@ -1000,10 +1068,9 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
                         icon={<FaProjectDiagram />}
                         iconColorClass='text-purple-500 dark:text-purple-400'
                         insights={[
-                            // Updated insights based on new charts
                             `Indian researchers lead ${(((processedIndiaData?.first_indian_author?.count ?? 0) / (processedIndiaData?.at_least_one_indian_author?.count || 1))*100).toFixed(0)}% of papers they are involved in, indicating growing leadership roles.`,
                             `${processedIndiaData?.majority_indian_authors?.count ?? 0} papers (${(((processedIndiaData?.majority_indian_authors?.count ?? 0) / (processedIndiaData?.at_least_one_indian_author?.count || 1))*100).toFixed(0)}%) have majority Indian authorship, signaling significant research autonomy within the community.`,
-                            `Academic institutions drive the majority (${institutionTypePieData.find(d=>d.name==='Academic')?.value ?? 0} papers, ${((institutionTypePieData.find(d=>d.name==='Academic')?.percent ?? 0)*100).toFixed(0)}%) of India's papers, while corporate labs (${institutionTypePieData.find(d=>d.name==='Corporate')?.value ?? 0} papers, ${((institutionTypePieData.find(d=>d.name==='Corporate')?.percent ?? 0)*100).toFixed(0)}%) contribute significantly to high-impact publications (${institutionTypeComparisonData[1]?.['Spotlights/Orals'] ?? 0} Spotlights/Orals).` // Added pie chart info
+                            `Academic institutions drive the majority (${institutionTypePieData.find(d=>d.name==='Academic')?.value ?? 0} papers, ${((institutionTypePieData.find(d=>d.name==='Academic')?.percent ?? 0)*100).toFixed(0)}%) of India's papers, while corporate labs (${institutionTypePieData.find(d=>d.name==='Corporate')?.value ?? 0} papers, ${((institutionTypePieData.find(d=>d.name==='Corporate')?.percent ?? 0)*100).toFixed(0)}%) contribute significantly through high-quality research.`
                         ]}
                     />
                 </Section>
@@ -1019,77 +1086,45 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
                         </div>
                     </div>
 
-                    {/* Top Performers */}
+                    {/* Institution Leaderboard */}
                     <div className="mb-12">
                         <h3 className="text-xl font-semibold text-foreground mb-4">Top Performing Institutions</h3>
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                            {/* Institution Leaderboard */}
-                            <div className="bg-card p-4 sm:p-6 rounded-xl border border-border shadow-lg">
-                                <h4 className="text-lg font-semibold text-foreground mb-1">Leaderboard (Top 8 by Papers)</h4>
-                                <p className="text-sm text-muted-foreground mb-4">Papers vs. Authors. Bar color indicates type (Blue: Academic, Pink: Corporate). Markers show Spotlights (⭐) & Orals (🏆).</p>
-                                <div className="h-[450px]"> {/* Increased height */}
-                                    <ResponsiveContainer width="100%" height="100%">
-                                        <BarChart data={topInstitutions} layout="vertical" margin={{ top: 5, right: 40, left: 150, bottom: 5 }}> {/* Increased left/right margin */}
-                                            <CartesianGrid strokeDasharray="3 3" stroke={colorMap.grid} horizontal={false}/>
-                                            <XAxis type="number" stroke={colorMap.textAxis} fontSize={10}/>
-                                            <YAxis type="category" dataKey="institute" width={150} stroke={colorMap.textAxis} fontSize={10} interval={0}/>
-                                            <Tooltip content={<CustomTooltip />} cursor={{ fill: 'hsl(var(--muted))' }}/>
-                                            <Legend iconSize={10} wrapperStyle={{ fontSize: '11px', color: 'hsl(var(--foreground))' }}/>
-                                            <Bar dataKey="unique_paper_count" name="Papers" barSize={12} stackId="a">
-                                                {topInstitutions.map((entry, index) => (
-                                                    <Cell key={`cell-leader-paper-${index}`} fill={entry.type === 'academic' ? colorMap.academic : colorMap.corporate}/>
-                                                ))}
-                                                {/* Add Spotlight/Oral markers */}
-                                                 <LabelList dataKey="institute" content={({ x, y, width, height, value, index }) => {
-                                                      const inst = topInstitutions[index];
-                                                      const spotlights = inst?.spotlights ?? 0;
-                                                      const orals = inst?.orals ?? 0;
-                                                      const impactCount = spotlights + orals;
-                                                      if (!inst || impactCount === 0) return null;
+                        <div className="bg-card p-4 sm:p-6 rounded-xl border border-border shadow-lg">
+                            <h4 className="text-lg font-semibold text-foreground mb-1">Leaderboard (Top 8 by Papers)</h4>
+                            <p className="text-sm text-muted-foreground mb-4">Papers vs. Authors. Bar color indicates type (Blue: Academic, Pink: Corporate). Markers show Spotlights (⭐) & Orals (🏆).</p>
+                            <div className="h-[450px]">
+                                <ResponsiveContainer width="100%" height="100%">
+                                    <BarChart data={topInstitutions} layout="vertical" margin={{ top: 5, right: 40, left: 150, bottom: 5 }}>
+                                        <CartesianGrid strokeDasharray="3 3" stroke={colorMap.grid} horizontal={false}/>
+                                        <XAxis type="number" stroke={colorMap.textAxis} fontSize={10}/>
+                                        <YAxis type="category" dataKey="institute" width={150} stroke={colorMap.textAxis} fontSize={10} interval={0}/>
+                                        <Tooltip content={<CustomTooltip />} cursor={{ fill: 'hsl(var(--muted))' }}/>
+                                        <Legend iconSize={10} wrapperStyle={{ fontSize: '11px', color: 'hsl(var(--foreground))' }}/>
+                                        <Bar dataKey="unique_paper_count" name="Papers" barSize={12} stackId="a">
+                                            {topInstitutions.map((entry, index) => (
+                                                <Cell key={`cell-leader-paper-${index}`} fill={entry.type === 'academic' ? colorMap.academic : colorMap.corporate}/>
+                                            ))}
+                                            {/* Add Spotlight/Oral markers */}
+                                             <LabelList dataKey="institute" content={({ x, y, width, height, value, index }) => {
+                                                 const inst = topInstitutions[index];
+                                                 const spotlights = inst?.spotlights ?? 0;
+                                                 const orals = inst?.orals ?? 0;
+                                                 const impactCount = spotlights + orals;
+                                                 if (!inst || impactCount === 0) return null;
 
-                                                      const iconX = (x ?? 0) + (width ?? 0) + 5; // Position to the right of the bar
-                                                      const iconY = (y ?? 0) + (height ?? 0) / 2;
-                                                      return (
-                                                          <g>
-                                                              {spotlights > 0 && <text x={iconX} y={iconY} fill={colorMap.spotlight} fontSize="12" textAnchor="start" dominantBaseline="middle">⭐{spotlights > 1 ? `x${spotlights}`: ''}</text>}
-                                                              {orals > 0 && <text x={iconX + (spotlights > 0 ? 25 : 0) } y={iconY} fill={colorMap.oral} fontSize="12" textAnchor="start" dominantBaseline="middle">🏆{orals > 1 ? `x${orals}`: ''}</text>}
-                                                          </g>
-                                                      );
-                                                 }} />
-                                            </Bar>
-                                             <Bar dataKey="author_count" name="Authors" barSize={12} stackId="b" fill={colorMap.secondary} fillOpacity={0.6}/>
-                                        </BarChart>
-                                    </ResponsiveContainer>
-                                </div>
-                            </div>
-
-                            {/* --- **NEW** Scatter Plot: Volume vs. Efficiency vs. Impact --- */}
-                            <div className="bg-card p-4 sm:p-6 rounded-xl border border-border shadow-lg">
-                                <h4 className="text-lg font-semibold text-foreground mb-1">Volume vs. Collaboration vs. Impact</h4>
-                                <p className="text-sm text-muted-foreground mb-4">X: Papers, Y: Authors/Paper, Size: Spotlights+Orals. Color: Type (Blue: Academic, Pink: Corporate).</p>
-                                <div className="h-[450px]"> {/* Increased height */}
-                                    <ResponsiveContainer width="100%" height="100%">
-                                        <ScatterChart margin={{ top: 20, right: 30, bottom: 20, left: 20 }}>
-                                            <CartesianGrid strokeDasharray="3 3" stroke={colorMap.grid}/>
-                                            <XAxis type="number" dataKey="unique_paper_count" name="Unique Papers" stroke={colorMap.textAxis} fontSize={10} domain={['dataMin - 1', 'dataMax + 1']} allowDecimals={false}/>
-                                            <YAxis type="number" dataKey="authors_per_paper" name="Avg. Authors per Paper" stroke={colorMap.textAxis} fontSize={10} domain={['dataMin - 0.5', 'dataMax + 0.5']} tickFormatter={(val) => val.toFixed(1)}/>
-                                            {/* ZAxis controls bubble size, mapped to impact_score */}
-                                            <ZAxis type="number" dataKey="impact_score" range={[50, 1000]} name="Impact (Spotlights+Orals)"/>
-                                            <Tooltip cursor={{ strokeDasharray: '3 3' }} content={<CustomTooltip />}/>
-                                            {/* Legend can be confusing here, relying on tooltip and color */}
-                                            {/* <Legend iconSize={10} wrapperStyle={{ fontSize: '11px', color: 'hsl(var(--foreground))' }}/> */}
-                                            <Scatter name="Institutions" data={filteredInstitutions} >
-                                                {filteredInstitutions.map((entry, index) => (
-                                                    <Cell key={`cell-impact-vol-${index}`}
-                                                          fill={entry.type === 'academic' ? colorMap.academic : colorMap.corporate}
-                                                          fillOpacity={0.7} />
-                                                ))}
-                                                {/* Optional: Label specific points if needed */}
-                                                {/* <LabelList dataKey="institute" position="top" style={{ fontSize: '9px', fill: 'hsl(var(--muted-foreground))' }} /> */}
-                                            </Scatter>
-                                        </ScatterChart>
-                                    </ResponsiveContainer>
-                                </div>
+                                                 const iconX = (x ?? 0) + (width ?? 0) + 5; // Position to the right of the bar
+                                                 const iconY = (y ?? 0) + (height ?? 0) / 2;
+                                                 return (
+                                                     <g>
+                                                         {spotlights > 0 && <text x={iconX} y={iconY} fill={colorMap.spotlight} fontSize="12" textAnchor="start" dominantBaseline="middle">⭐{spotlights > 1 ? `x${spotlights}`: ''}</text>}
+                                                         {orals > 0 && <text x={iconX + (spotlights > 0 ? 25 : 0) } y={iconY} fill={colorMap.oral} fontSize="12" textAnchor="start" dominantBaseline="middle">🏆{orals > 1 ? `x${orals}`: ''}</text>}
+                                                     </g>
+                                                 );
+                                             }} />
+                                        </Bar>
+                                         <Bar dataKey="author_count" name="Authors" barSize={12} stackId="b" fill={colorMap.secondary} fillOpacity={0.6}/>
+                                    </BarChart>
+                                </ResponsiveContainer>
                             </div>
                         </div>
                     </div>
@@ -1099,8 +1134,7 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
                         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-3">
                             <h3 className="text-xl font-semibold text-foreground">Detailed Institution List</h3>
                             {filteredInstitutions.length > 0 && (
-                                // UPDATED: Export function includes Authors and calculated fields
-                                <button onClick={() => exportToCSV( filteredInstitutions.map(inst => ({ Institution: inst.institute, Type: inst.type || 'Unknown', Unique_Papers: inst.unique_paper_count, Authors: inst.author_count, Authors_Per_Paper: inst.authors_per_paper?.toFixed(1), Spotlights: inst.spotlights, Orals: inst.orals, Impact_Score: inst.impact_score })), 'detailed_indian_institutions_iclr_2025_v2' )} className="flex items-center bg-secondary hover:bg-secondary/80 text-secondary-foreground text-xs px-3 py-1.5 rounded transition-colors shadow-sm" aria-label="Export detailed institution list to CSV">
+                                <button onClick={() => exportToCSV( filteredInstitutions.map(inst => ({ Institution: inst.institute, Type: inst.type || 'Unknown', Unique_Papers: inst.unique_paper_count, Authors_Count: inst.author_count, Authors_List: inst.authors, Authors_Per_Paper: inst.authors_per_paper?.toFixed(1), Spotlights: inst.spotlights, Orals: inst.orals, Impact_Score: inst.impact_score })), 'detailed_indian_institutions_iclr_2025' )} className="flex items-center bg-secondary hover:bg-secondary/80 text-secondary-foreground text-xs px-3 py-1.5 rounded transition-colors shadow-sm" aria-label="Export detailed institution list to CSV">
                                     <FaDownload className="mr-1.5" size={10} /> Export Details
                                 </button>
                             )}
@@ -1108,7 +1142,6 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
                         {filteredInstitutions.length > 0 ? (
                             <div className="space-y-4">
                                 {filteredInstitutions.map((institution, index) => (
-                                    // InstitutionCard component already updated to show authors
                                     <InstitutionCard key={`${institution.institute}-${index}`} institution={institution} index={index} />
                                 ))}
                             </div>
@@ -1127,11 +1160,10 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
                         icon={<FaUniversity />}
                         iconColorClass='text-green-500 dark:text-green-400'
                         insights={[
-                            "IIT Bombay produces the most papers, while Microsoft Research India maximizes impact (Spotlights/Orals) relative to its paper volume.",
+                            "IIT Bombay produces the most papers (10) with 35 authors, and has secured the only spotlight paper from India.",
                             `The top 6 institutions (IITB, MSRI, Adobe, IITD, IITM, IISc) account for ${( (topInstitutions.slice(0,6).reduce((s,i)=>s+(i.unique_paper_count ?? 0),0)) / (processedIndiaData?.paper_count || 1) * 100).toFixed(0)}% of India's total papers, indicating concentration among leading players.`,
-                            "Corporate labs like MSR India and Adobe Research show strong performance, complementing the output from top academic institutions.",
-                            // **UPDATED Insight for new scatter plot**
-                            "The scatter plot (Volume vs. Collaboration vs. Impact) reveals diverse strategies: some institutions achieve high impact (larger bubbles) with fewer papers or smaller teams (lower Y-axis), while others prioritize volume (further right on X-axis). Corporate labs (pink) often show high impact relative to team size."
+                            "Corporate labs like MSR India and Adobe Research show strong performance with 6 and 4 papers respectively, complementing the output from top academic institutions.",
+                            "The institutional landscape highlights the strong author base at each institution, with IITB's 35 authors leading, followed by Microsoft Research India's 20 authors."
                         ]}
                     />
                 </Section>
@@ -1139,9 +1171,9 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
             </main>
 
             {/* Footer */}
-            <footer className="mt-10 md:mt-12 text-center text-muted-foreground text-xs border-t border-border pt-6 pb-6">
-                <p>{conferenceInfo?.name ?? 'Conference'} {conferenceInfo?.year ?? ''} Dashboard | Data based on provided structure.</p>
-                <p>Data processing includes combining UK/GB entries. Other stats reflect the input data.</p>
+            <footer className="mt-10 md:mt-12 text-center text-muted-foreground text-xs border-t border-border pt-6 pb-6 bg-gradient-to-r from-amber-50/30 to-orange-50/30 dark:from-amber-950/10 dark:to-orange-950/10">
+                <p>{conferenceInfo?.name ?? 'Conference'} {conferenceInfo?.year ?? ''} Dashboard | Data Updated May 2025</p>
+                <p>India's Contribution: 49 Papers | 132 Authors | 26 First Authors | 1 Spotlight Paper</p>
                 <p className="mt-1">&copy; {new Date().getFullYear()} Analysis Dashboard</p>
             </footer>
 
@@ -1158,7 +1190,7 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
                  .animate-fade-in {
                      animation: fadeIn 0.5s ease-out forwards;
                  }
-                 /* Custom scrollbar for institution paper list */
+                 /* Custom scrollbar for institution paper/author list */
                  .custom-scrollbar::-webkit-scrollbar { width: 6px; }
                  .custom-scrollbar::-webkit-scrollbar-track { background: hsl(var(--muted)); border-radius: 3px; }
                  .custom-scrollbar::-webkit-scrollbar-thumb { background: hsl(var(--border)); border-radius: 3px; }
@@ -1188,7 +1220,6 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
 
 // --- App Entry Point ---
 const App: React.FC = () => {
-    // In a real app, you might fetch data here or pass it down
     return <ICLRDashboard dashboardData={dashboardData} />;
 }
 
