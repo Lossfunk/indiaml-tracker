@@ -11,66 +11,108 @@ import {
     FaArrowRight, FaBalanceScale, FaProjectDiagram, FaBullseye, FaChartLine, FaArrowDown,
     FaLink, FaUnlink, FaGlobe, FaUser
 } from 'react-icons/fa';
+import { dashboardData } from '@/components/dashboard-data';
 
-// --- Updated Data with required values ---
-const dashboardData = {
+
+
+// Type definitions
+export interface DashboardDataInterface {
     conferenceInfo: {
-        name: "ICLR",
-        year: 2025,
-        track: "Conference",
-        totalAcceptedPapers: 3705,
-    },
+        name: string;
+        year: number;
+        track: string;
+        totalAcceptedPapers: number;
+    };
     globalStats: {
-        countries: [
-            { affiliation_country: "US", paper_count: 1929, author_count: 5800, spotlights: 65, orals: 42 },
-            { affiliation_country: "CN", paper_count: 1308, author_count: 4500, spotlights: 40, orals: 25 },
-            { affiliation_country: "HK", paper_count: 294, author_count: 900, spotlights: 10, orals: 6 },
-            { affiliation_country: "GB", paper_count: 293, author_count: 880, spotlights: 12, orals: 7 },
-            { affiliation_country: "UK", paper_count: 103, author_count: 310, spotlights: 4, orals: 2 },
-            { affiliation_country: "CA", paper_count: 255, author_count: 750, spotlights: 9, orals: 5 },
-            { affiliation_country: "SG", paper_count: 248, author_count: 700, spotlights: 8, orals: 4 },
-            { affiliation_country: "DE", paper_count: 240, author_count: 720, spotlights: 8, orals: 5 },
-            { affiliation_country: "KR", paper_count: 187, author_count: 550, spotlights: 6, orals: 3 },
-            { affiliation_country: "CH", paper_count: 178, author_count: 500, spotlights: 7, orals: 4 },
-            { affiliation_country: "AU", paper_count: 127, author_count: 380, spotlights: 4, orals: 2 },
-            { affiliation_country: "FR", paper_count: 120, author_count: 350, spotlights: 5, orals: 2 },
-            { affiliation_country: "JP", paper_count: 119, author_count: 340, spotlights: 4, orals: 2 },
-            { affiliation_country: "IL", paper_count: 71, author_count: 210, spotlights: 3, orals: 1 },
-            { affiliation_country: "NL", paper_count: 70, author_count: 200, spotlights: 3, orals: 1 },
-            { affiliation_country: "IN", paper_count: 49, author_count: 132, spotlights: 1, orals: 0 }, // Updated with required values
-        ],
-    },
-    indiaFocus: {
-        total_indian_authors: 132, // Updated as required
-        total_indian_spotlights: 1, // Updated as required
-        total_indian_orals: 0, // Updated as required
-        institution_types: { academic: 35, corporate: 14 },
-        at_least_one_indian_author: { count: 49, papers: [] }, // Updated as required
-        majority_indian_authors: { count: 23, papers: [] },
-        first_indian_author: { count: 26, papers: [] }, // Updated as required
-        institutions: [
-            { institute: "IIT Bombay", total_paper_count: 17, unique_paper_count: 10, author_count: 35, spotlights: 1, orals: 0, type: "academic", papers: [ { id: "EzrZX9bd4G", title: "BEEM: Balanced and Efficient Evaluation Metric for Multi-label Classification with Partially Annotated Labels" }, { id: "5pd78GmXC6", title: "Charting the Path of Quantum Computing towards Foundation Models" }, { id: "DFSb67ksVr", title: "Clique Guided Cooperative Graph Neural Network Training" }, { id: "9h45qxXEx0", title: "Debiasing Methods in Continual Test-Time Adaptation: What is the Optimal Strategy?" }, { id: "NtwFghsJne", title: "From Search To Recommendation: Progressive Explainable Network" }, { id: "k3gCieTXeY", title: "INCLUDE: Incorporating Linguistic Constraints into Language Models using Diferentiable Logic", isSpotlight: true }, { id: "nNiWRRj6r9", title: "ONLINE: Optimal Sampling from Aggregated Datasets for Molecular Property Prediction" }, { id: "l11DZY5Nxu", title: "Robust Graph Condensation via Gradient Matching" }, { id: "h0vC0fm1q7", title: "Sensitivity Analysis for Unmeasured Confounding in Causal Mediation Analysis" }, { id: "Q1kPHLUbhi", title: "Towards Self-Improving Vision Models" } ], authors: Array.from({ length: 35 }, (_, i) => `Author ${i + 1}`) },
-            { institute: "Microsoft Research India", total_paper_count: 8, unique_paper_count: 6, author_count: 20, spotlights: 0, orals: 0, type: "corporate", papers: [ { id: "9juyeCqL0u", title: "Causal Interpretation in the Presence of Latent Variables using Stylized Counterfactuals" }, { id: "xkgfLXZ4e0", title: "Correlating Events and Trends: A Causal Analysis of Temporal Data for Explainable Event Recommendation" }, { id: "zl3pfz4VCV", title: "MMTEB: A Multi-lingual Multi-task Text Embedding Benchmark" }, { id: "0dELcFHig2", title: "Multi-modal Event Causality Analysis: A Novel Task and Benchmark" }, { id: "3E8YNv1HjU", title: "Recite Your References: A New Benchmark and Model for Strong Claim Verification" }, { id: "l11DZY5Nxu", title: "Robust Graph Condensation via Gradient Matching" } ], authors: Array.from({ length: 20 }, (_, i) => `Author ${i + 1}`) },
-            { institute: "Adobe Research India", total_paper_count: 7, unique_paper_count: 4, author_count: 15, spotlights: 0, orals: 0, type: "corporate", papers: [ { id: "NHxwxc3ql6", title: "It Helps to Follow the Crowd: Instruction Following for Improving Persuasiveness" }, { id: "TmCcNuo03f", title: "Measuring And Improving Engagement in Short Videos" }, { id: "NfCEVihkdC", title: "Measuring And Improving Persuasiveness in Short Videos" }, { id: "ff2V3UR9sC", title: "Teaching Human Feedback Preferences to Distilled LLMs" } ], authors: Array.from({ length: 15 }, (_, i) => `Author ${i + 1}`) },
-            { institute: "IIT Delhi", total_paper_count: 6, unique_paper_count: 3, author_count: 12, spotlights: 0, orals: 0, type: "academic", papers: [ { id: "5x88lQ2MsH", title: "Bonsai: Enabling Fast Security Vetting of Closed-Source Applications using Hardware-Assisted Execution and Neural Network guided Fuzzing" }, { id: "tDIL7UXmSS", title: "Quantum Computing for Finance: A Survey of State-of-the-Art Techniques" }, { id: "5RZoYIT3u6", title: "You Only Need One Step: Fast Super-Resolution using Guided Diffusion Model" } ], authors: Array.from({ length: 12 }, (_, i) => `Author ${i + 1}`) },
-            { institute: "IIT Madras", total_paper_count: 5, unique_paper_count: 3, author_count: 10, spotlights: 0, orals: 0, type: "academic", papers: [ { id: "ZbkqhKbggH", title: "ASTrA: A Unified Benchmark for Evaluating Attribute Stealthiness in Face Recognition" }, { id: "52UtL8uA35", title: "Deep Networks Always Grok and Here is Why" }, { id: "qnlG3zPQUy", title: "ILLUSION: Efficient Hierarchical Parameter Adaptation using Intrinsic Dimension Regression" } ], authors: Array.from({ length: 10 }, (_, i) => `Author ${i + 1}`) },
-            { institute: "IISc Bangalore", total_paper_count: 4, unique_paper_count: 3, author_count: 9, spotlights: 0, orals: 0, type: "academic", papers: [ { id: "TfT8i94e1o", title: "Accelerating Generative Models via Long-Range Dependency Injection" }, { id: "2gU1v1K7tT", title: "Learning from Similar and Dissimilar Data: A Unified Framework for Cross-Domain Adaptation" }, { id: "l11DZY5Nxu", title: "Robust Graph Condensation via Gradient Matching" } ], authors: Array.from({ length: 9 }, (_, i) => `Author ${i + 1}`) },
-            { institute: "Google Research India", total_paper_count: 3, unique_paper_count: 2, author_count: 8, spotlights: 0, orals: 0, type: "corporate", papers: [ { id: "TfT8i94e1o", title: "Accelerating Generative Models via Long-Range Dependency Injection" }, { id: "NfCEVihkdC", title: "Measuring And Improving Persuasiveness in Short Videos" } ], authors: Array.from({ length: 8 }, (_, i) => `Author ${i + 1}`) },
-            { institute: "IIT Kanpur", total_paper_count: 4, unique_paper_count: 2, author_count: 7, spotlights: 0, orals: 0, type: "academic", papers: [ { id: "dummy1", title: "Example Paper Title 1" }, { id: "dummy2", title: "Example Paper Title 2" } ], authors: Array.from({ length: 7 }, (_, i) => `Author ${i + 1}`) },
-            { institute: "IIIT Hyderabad", total_paper_count: 3, unique_paper_count: 2, author_count: 6, spotlights: 0, orals: 0, type: "academic", papers: [ { id: "dummy3", title: "Example Paper Title 3" }, { id: "dummy4", title: "Example Paper Title 4" } ], authors: Array.from({ length: 6 }, (_, i) => `Author ${i + 1}`) },
-            { institute: "TCS Research", total_paper_count: 2, unique_paper_count: 2, author_count: 5, spotlights: 0, orals: 0, type: "corporate", papers: [ { id: "dummy5", title: "Example Paper Title 5" }, { id: "dummy6", title: "Example Paper Title 6" } ], authors: Array.from({ length: 5 }, (_, i) => `Author ${i + 1}`) },
-        ],
-    },
-};
+        countries: Array<{
+            affiliation_country: string;
+            paper_count: number;
+            author_count: number;
+            spotlights: number;
+            orals: number;
+        }>;
+    };
+    focusCountry: {
+        country_code: string;
+        country_name?: string;
+        total_authors: number;
+        total_spotlights: number;
+        total_orals: number;
+        institution_types: { 
+            academic: number; 
+            corporate: number;
+        };
+        at_least_one_focus_country_author: {
+            count: number;
+            papers: any[];
+        };
+        majority_focus_country_authors: {
+            count: number;
+            papers: any[];
+        };
+        first_focus_country_author: {
+            count: number;
+            papers: any[];
+        };
+        institutions: Array<{
+            institute: string;
+            total_paper_count: number;
+            unique_paper_count: number;
+            author_count: number;
+            spotlights: number;
+            orals: number;
+            type: 'academic' | 'corporate' | 'unknown';
+            papers: Array<{
+                id: string;
+                title: string;
+                isSpotlight?: boolean;
+                isOral?: boolean;
+            }>;
+            authors: string[];
+        }>;
+    };
+    configuration: {
+        countryMap: { [key: string]: string };
+        apacCountries: string[];
+        colorScheme: {
+            us: string;
+            cn: string;
+            focusCountry: string;
+            primary: string;
+            secondary: string;
+            academic: string;
+            corporate: string;
+            spotlight: string;
+            oral: string;
+            [key: string]: string;
+        };
+        dashboardTitle: string;
+        dashboardSubtitle: string;
+        sections: {
+            summary: {
+                title: string;
+                insights: string[];
+            };
+            context: {
+                title: string;
+                subtitle: string;
+                insights: string[];
+            };
+            focusCountry: {
+                title: string;
+                subtitle: string;
+                insights: string[];
+            };
+            institutions: {
+                title: string;
+                subtitle: string;
+                insights: string[];
+            };
+        }
+    };
+}
 
-// Type definition for the data structure
-export type DashboardData = typeof dashboardData;
-
-// --- Constants ---
-const APAC_COUNTRIES: string[] = ['CN', 'IN', 'HK', 'SG', 'JP', 'KR', 'AU']; // Key APAC for comparison
-const CountryMap: { [key: string]: string } = { "US": "United States", "CN": "China", "GB": "United Kingdom", "UK": "United Kingdom", "IN": "India", "CA": "Canada", "HK": "Hong Kong", "SG": "Singapore", "DE": "Germany", "CH": "Switzerland", "KR": "South Korea", "JP": "Japan", "AU": "Australia", "IL": "Israel", "FR": "France", "NL": "Netherlands" };
-
-// --- Type Definitions ---
+// --- Additional Types ---
 interface PaperSummary { id: string; title: string; isSpotlight?: boolean; isOral?: boolean; }
 interface InstitutionData {
     institute: string;
@@ -97,7 +139,7 @@ interface CountryData {
     spotlight_oral_rate?: number; 
     authors_per_paper?: number; 
 }
-type ProcessedIndiaData = DashboardData['indiaFocus'] & { 
+type ProcessedFocusCountryData = DashboardDataInterface['focusCountry'] & { 
     rank?: number; 
     paper_count?: number; 
     author_count: number; 
@@ -106,37 +148,6 @@ type ProcessedIndiaData = DashboardData['indiaFocus'] & {
     spotlight_oral_rate?: number; 
     authors_per_paper?: number; 
     institutions: InstitutionData[]; 
-}
-interface RechartsTooltipPayload { 
-    dataKey?: string | number; 
-    name?: string; 
-    value?: number | string; 
-    payload?: any; 
-    fill?: string; 
-    stroke?: string; 
-    color?: string; 
-}
-interface ActiveShapeProps { 
-    cx?: number; 
-    cy?: number; 
-    midAngle?: number; 
-    innerRadius?: number; 
-    outerRadius?: number; 
-    startAngle?: number; 
-    endAngle?: number; 
-    fill?: string; 
-    payload?: any; 
-    percent?: number; 
-    value?: number; 
-    name?: string; 
-}
-interface NameValueData { 
-    name: string; 
-    value: number; 
-    fillColorClass?: string; 
-    fillVariable?: string; 
-    percent?: number; 
-    [key: string]: any; 
 }
 
 // --- Reusable Helper Functions ---
@@ -281,7 +292,7 @@ const CustomTooltip: React.FC<TooltipProps<number, string>> = ({ active, payload
 };
 
 // ## Pie Chart Active Shape Renderer ##
-const renderActiveShape = (props: ActiveShapeProps) => {
+const renderActiveShape = (props: any) => {
     const RADIAN = Math.PI / 180;
     const { cx = 0, cy = 0, midAngle = 0, innerRadius = 0, outerRadius = 0, startAngle = 0, endAngle = 0, fill = 'hsl(var(--primary))', payload, percent = 0, value = 0, name = '' } = props;
     const sin = Math.sin(-RADIAN * midAngle);
@@ -339,10 +350,34 @@ const InterpretationPanel: React.FC<InterpretationPanelProps> = ({ insights, tit
     </div>
 );
 
-// ## InstitutionCard Component (UPDATED with Author List) ##
+// ## TabButton Component ##
+interface TabButtonProps {
+    active: boolean;
+    onClick: () => void;
+    children: React.ReactNode;
+    icon?: React.ReactNode;
+}
+
+const TabButton: React.FC<TabButtonProps> = ({ active, onClick, children, icon }) => (
+    <button
+        onClick={onClick}
+        className={`flex items-center justify-center px-4 py-2 text-sm font-medium rounded-t-lg transition-colors ${
+            active 
+                ? 'bg-card text-foreground border-t border-l border-r border-border'
+                : 'bg-muted text-muted-foreground hover:bg-muted/80'
+        }`}
+    >
+        {icon && <span className="mr-2">{icon}</span>}
+        {children}
+    </button>
+);
+
+// ## InstitutionCard Component ##
 interface InstitutionCardProps { institution: InstitutionData; index: number; }
 const InstitutionCard: React.FC<InstitutionCardProps> = ({ institution, index }) => {
     const [isExpanded, setIsExpanded] = useState(false);
+    const [activeTab, setActiveTab] = useState<'papers' | 'authors'>('papers');
+    
     const toggleExpansion = useCallback(() => setIsExpanded(prev => !prev), []);
     const animationDelay = `${index * 0.05}s`;
     const detailsId = `institution-details-${institution.institute.replace(/\s+/g, '-')}-${index}`;
@@ -384,41 +419,62 @@ const InstitutionCard: React.FC<InstitutionCardProps> = ({ institution, index })
             </div>
             {/* --- Expanded Details --- */}
             {isExpanded && (
-                <div id={detailsId} className="px-4 pb-4 pt-2 border-t border-border divide-y divide-border">
-                    {/* Paper List */}
-                    <div className="py-3">
-                        <p className="text-foreground text-sm mb-3 font-medium">Published Papers ({institution.unique_paper_count}):</p>
-                        {institution.papers && institution.papers.length > 0 ? (
-                            <ul className="space-y-2 max-h-60 overflow-y-auto pr-2 custom-scrollbar">
-                                {institution.papers.map((paper, idx) => (
-                                    <li key={`${paper.id}-${idx}`} className="text-muted-foreground text-sm bg-background p-3 rounded-md shadow-sm">
-                                        <a href={`https://openreview.net/forum?id=${paper.id}`} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors block break-words" title={paper.title}>
-                                            {paper.title} <span className="text-xs text-muted-foreground/70 ml-1">(ID: {paper.id})</span>
-                                        </a>
-                                        {paper.isSpotlight && (<span className="ml-2 mt-1 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300"><FaStar className="mr-1" size={10} />Spotlight</span>)}
-                                        {paper.isOral && (<span className="ml-2 mt-1 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300"><FaTrophy className="mr-1" size={10} />Oral</span>)}
-                                    </li>
-                                ))}
-                            </ul>
-                        ) : (
-                            <p className="text-muted-foreground/70 text-sm italic">No specific paper details available.</p>
-                        )}
+                <div id={detailsId} className="border-t border-border">
+                    {/* Tabs */}
+                    <div className="flex border-b border-border px-4 pt-3 bg-muted/20">
+                        <TabButton 
+                            active={activeTab === 'papers'} 
+                            onClick={() => setActiveTab('papers')}
+                            icon={<FaFileAlt className="text-blue-500" size={14} />}
+                        >
+                            Papers ({institution.unique_paper_count})
+                        </TabButton>
+                        <TabButton 
+                            active={activeTab === 'authors'} 
+                            onClick={() => setActiveTab('authors')}
+                            icon={<FaUser className="text-pink-500" size={14} />}
+                        >
+                            Authors ({institution.author_count})
+                        </TabButton>
                     </div>
-
-                    {/* Author List */}
-                    <div className="py-3">
-                        <p className="text-foreground text-sm mb-3 font-medium">Contributing Authors ({institution.author_count}):</p>
-                        {institution.authors && institution.authors.length > 0 ? (
-                             <ul className="space-y-1.5 max-h-60 overflow-y-auto pr-2 custom-scrollbar text-sm text-muted-foreground">
-                                {institution.authors.map((author, idx) => (
-                                    <li key={`author-${idx}`} className="flex items-center">
-                                        <FaUser className="mr-2 text-pink-400 flex-shrink-0" size={12}/>
-                                        <span>{author}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        ) : (
-                            <p className="text-muted-foreground/70 text-sm italic">Author details not available.</p>
+                    
+                    {/* Tab Content */}
+                    <div className="px-4 pb-4 pt-3">
+                        {activeTab === 'papers' && (
+                            <div>
+                                {institution.papers && institution.papers.length > 0 ? (
+                                    <ul className="space-y-2 max-h-60 overflow-y-auto pr-2 custom-scrollbar">
+                                        {institution.papers.map((paper, idx) => (
+                                            <li key={`${paper.id}-${idx}`} className="text-muted-foreground text-sm bg-background p-3 rounded-md shadow-sm">
+                                                <a href={`https://openreview.net/forum?id=${paper.id}`} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors block break-words" title={paper.title}>
+                                                    {paper.title} <span className="text-xs text-muted-foreground/70 ml-1">(ID: {paper.id})</span>
+                                                </a>
+                                                {paper.isSpotlight && (<span className="ml-2 mt-1 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300"><FaStar className="mr-1" size={10} />Spotlight</span>)}
+                                                {paper.isOral && (<span className="ml-2 mt-1 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300"><FaTrophy className="mr-1" size={10} />Oral</span>)}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                ) : (
+                                    <p className="text-muted-foreground/70 text-sm italic py-3">No specific paper details available.</p>
+                                )}
+                            </div>
+                        )}
+                        
+                        {activeTab === 'authors' && (
+                            <div>
+                                {institution.authors && institution.authors.length > 0 ? (
+                                    <ul className="space-y-1.5 max-h-60 overflow-y-auto pr-2 custom-scrollbar text-sm text-muted-foreground">
+                                        {institution.authors.map((author, idx) => (
+                                            <li key={`author-${idx}`} className="flex items-center bg-background p-2 rounded-md">
+                                                <FaUser className="mr-2 text-pink-400 flex-shrink-0" size={12}/>
+                                                <span>{author}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                ) : (
+                                    <p className="text-muted-foreground/70 text-sm italic py-3">Author details not available.</p>
+                                )}
+                            </div>
                         )}
                     </div>
                 </div>
@@ -471,16 +527,17 @@ const DataTable: React.FC<DataTableProps> = ({ data, title, filename }) => {
 };
 
 // --- Main Dashboard Component ---
-interface DashboardDataProps {
-    dashboardData: DashboardData;
-}
 
-const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
+const ConferenceDashboard: React.FC = ({ }) => {
     const [institutionFilter, setInstitutionFilter] = useState<string>('');
     const [activePieIndex, setActivePieIndex] = useState<number>(0); // For reusable pie interactions
 
-    const { conferenceInfo, globalStats, indiaFocus } = dashboardData;
+    const { conferenceInfo, globalStats, focusCountry, configuration } = dashboardData;
     const totalPapers = conferenceInfo.totalAcceptedPapers;
+    const countryMap = configuration.countryMap;
+    const colorScheme = configuration.colorScheme;
+    const apacCountries = configuration.apacCountries;
+    const focusCountryCode = focusCountry.country_code;
 
     // --- Memoized Data Processing ---
 
@@ -488,8 +545,11 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
         const countryMap = new Map<string, CountryData>();
         globalStats.countries.forEach(rawCountry => {
             const countryCode = rawCountry.affiliation_country;
-            // Combine UK and GB into United Kingdom
-            const countryName = (countryCode === 'UK' || countryCode === 'GB') ? 'United Kingdom' : (CountryMap[countryCode] || countryCode);
+            // Combine UK and GB into United Kingdom if needed
+            const countryName = (countryCode === 'UK' || countryCode === 'GB') 
+                ? (configuration.countryMap['GB'] || 'United Kingdom') 
+                : (configuration.countryMap[countryCode] || countryCode);
+            
             const existing = countryMap.get(countryName);
             const paperCount = rawCountry.paper_count || 0;
             const authorCount = rawCountry.author_count || 0;
@@ -508,7 +568,7 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
                     country_name: countryName,
                     paper_count: paperCount, author_count: authorCount,
                     spotlights: spotlights, orals: orals, rank: 0,
-                    isHighlight: (countryCode === 'US' || countryCode === 'CN' || countryCode === 'IN'),
+                    isHighlight: (countryCode === 'US' || countryCode === 'CN' || countryCode === focusCountryCode),
                 });
             }
         });
@@ -523,18 +583,18 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
             country.authors_per_paper = country.paper_count > 0 ? (country.author_count / country.paper_count) : 0;
         });
         return sorted;
-    }, [globalStats.countries]);
+    }, [globalStats.countries, configuration.countryMap, focusCountryCode]);
 
     const topCountriesByPaper = useMemo(() => sortedCountries.slice(0, 15), [sortedCountries]);
-    const usData = useMemo(() => sortedCountries.find(c => c.country_name === 'United States'), [sortedCountries]);
-    const cnData = useMemo(() => sortedCountries.find(c => c.country_name === 'China'), [sortedCountries]);
-    const indiaGlobalStats = useMemo(() => sortedCountries.find(c => c.country_name === 'India'), [sortedCountries]);
+    const usData = useMemo(() => sortedCountries.find(c => c.affiliation_country === 'US'), [sortedCountries]);
+    const cnData = useMemo(() => sortedCountries.find(c => c.affiliation_country === 'CN'), [sortedCountries]);
+    const focusCountryGlobalStats = useMemo(() => sortedCountries.find(c => c.affiliation_country === focusCountryCode), [sortedCountries, focusCountryCode]);
 
-    const processedIndiaData: ProcessedIndiaData | null = useMemo(() => {
-        if (!indiaGlobalStats) return null; // Essential check
+    const processedFocusData: ProcessedFocusCountryData | null = useMemo(() => {
+        if (!focusCountryGlobalStats) return null; // Essential check
 
         // Process institutions first to add calculated fields
-        const processedInstitutions = indiaFocus.institutions.map(inst => ({
+        const processedInstitutions = focusCountry.institutions.map(inst => ({
             ...inst,
             // Calculate authors per paper and impact score (useful for sorting/tooltips even without scatter)
             authors_per_paper: inst.unique_paper_count > 0 ? (inst.author_count / inst.unique_paper_count) : 0,
@@ -544,20 +604,20 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
         }));
 
         const data = {
-            ...indiaFocus,
+            ...focusCountry,
             institutions: processedInstitutions, // Use processed institutions
-        } as ProcessedIndiaData;
+        } as ProcessedFocusCountryData;
 
-        data.rank = indiaGlobalStats.rank;
-        data.paper_count = indiaGlobalStats.paper_count;
-        data.author_count = indiaGlobalStats.author_count;
-        data.spotlights = indiaGlobalStats.spotlights;
-        data.orals = indiaGlobalStats.orals;
-        // Use calculated values from indiaGlobalStats
-        data.spotlight_oral_rate = indiaGlobalStats.spotlight_oral_rate ?? 0;
-        data.authors_per_paper = indiaGlobalStats.authors_per_paper ?? 0;
+        data.rank = focusCountryGlobalStats.rank;
+        data.paper_count = focusCountryGlobalStats.paper_count;
+        data.author_count = focusCountryGlobalStats.author_count;
+        data.spotlights = focusCountryGlobalStats.spotlights;
+        data.orals = focusCountryGlobalStats.orals;
+        // Use calculated values from focusCountryGlobalStats
+        data.spotlight_oral_rate = focusCountryGlobalStats.spotlight_oral_rate ?? 0;
+        data.authors_per_paper = focusCountryGlobalStats.authors_per_paper ?? 0;
         return data;
-    }, [indiaFocus, indiaGlobalStats]);
+    }, [focusCountry, focusCountryGlobalStats]);
 
     // Data for US/China Dominance Pie Chart
     const usChinaDominancePieData = useMemo(() => {
@@ -567,53 +627,53 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
         const restCount = Math.max(0, totalPapers - usCount - cnCount); // Ensure non-negative
 
         return [
-            { name: 'United States', value: usCount, percent: usCount / totalPapers, fill: 'hsl(221, 83%, 53%)' }, // Blue
-            { name: 'China', value: cnCount, percent: cnCount / totalPapers, fill: 'hsl(0, 84%, 60%)' },     // Red
-            { name: 'Rest of World', value: restCount, percent: restCount / totalPapers, fill: 'hsl(var(--muted))' } // Muted
+            { name: 'United States', value: usCount, percent: usCount / totalPapers, fill: colorScheme.us }, 
+            { name: 'China', value: cnCount, percent: cnCount / totalPapers, fill: colorScheme.cn },
+            { name: 'Rest of World', value: restCount, percent: restCount / totalPapers, fill: 'hsl(var(--muted))' }
         ];
-    }, [usData, cnData, totalPapers]);
+    }, [usData, cnData, totalPapers, colorScheme]);
 
     // Data for APAC Dynamics
     const apacCountriesData = useMemo(() => {
         return sortedCountries
-            .filter(country => APAC_COUNTRIES.includes(country.affiliation_country))
+            .filter(country => apacCountries.includes(country.affiliation_country))
             .sort((a, b) => b.paper_count - a.paper_count);
-    }, [sortedCountries]);
+    }, [sortedCountries, apacCountries]);
 
     // Data for Authorship Patterns (Bar Charts)
     const authorshipMajorityMinorityData = useMemo(() => {
-        if (!processedIndiaData) return [];
-        const totalWithIndian = processedIndiaData.at_least_one_indian_author?.count ?? 0;
-        if (totalWithIndian === 0) return [];
-        const majorityIndian = processedIndiaData.majority_indian_authors?.count ?? 0;
-        const minorityIndian = Math.max(0, totalWithIndian - majorityIndian);
+        if (!processedFocusData) return [];
+        const totalWithFocusCountry = processedFocusData.at_least_one_focus_country_author?.count ?? 0;
+        if (totalWithFocusCountry === 0) return [];
+        const majorityFocusCountry = processedFocusData.majority_focus_country_authors?.count ?? 0;
+        const minorityFocusCountry = Math.max(0, totalWithFocusCountry - majorityFocusCountry);
         return [
-            { name: 'Majority Indian', value: majorityIndian, fill: 'hsl(142, 71%, 45%)' }, // Green
-            { name: 'Minority Indian', value: minorityIndian, fill: 'hsl(var(--secondary-foreground))' }, // Secondary
+            { name: `Majority ${focusCountry.country_name || 'Focus Country'}`, value: majorityFocusCountry, fill: 'hsl(142, 71%, 45%)' }, // Green
+            { name: `Minority ${focusCountry.country_name || 'Focus Country'}`, value: minorityFocusCountry, fill: 'hsl(var(--secondary-foreground))' }, // Secondary
         ];
-    }, [processedIndiaData]);
+    }, [processedFocusData, focusCountry.country_name]);
 
     const authorshipFirstAuthorData = useMemo(() => {
-        if (!processedIndiaData) return [];
-        const totalWithIndian = processedIndiaData.at_least_one_indian_author?.count ?? 0;
-        if (totalWithIndian === 0) return [];
-        const firstAuthorIndian = processedIndiaData.first_indian_author?.count ?? 0;
-        const nonFirstAuthorIndian = Math.max(0, totalWithIndian - firstAuthorIndian);
+        if (!processedFocusData) return [];
+        const totalWithFocusCountry = processedFocusData.at_least_one_focus_country_author?.count ?? 0;
+        if (totalWithFocusCountry === 0) return [];
+        const firstAuthorFocusCountry = processedFocusData.first_focus_country_author?.count ?? 0;
+        const nonFirstAuthorFocusCountry = Math.max(0, totalWithFocusCountry - firstAuthorFocusCountry);
         return [
-            { name: 'First Author Indian', value: firstAuthorIndian, fill: 'hsl(330, 80%, 60%)' }, // Pink
-            { name: 'Other Position', value: nonFirstAuthorIndian, fill: 'hsl(36, 96%, 50%)' }, // Amber
+            { name: `First Author ${focusCountry.country_name || 'Focus Country'}`, value: firstAuthorFocusCountry, fill: 'hsl(330, 80%, 60%)' }, // Pink
+            { name: 'Other Position', value: nonFirstAuthorFocusCountry, fill: 'hsl(36, 96%, 50%)' }, // Amber
         ];
-    }, [processedIndiaData]);
+    }, [processedFocusData, focusCountry.country_name]);
 
     // Data for Institution Types (Grouped Bar Chart)
     const institutionTypeComparisonData = useMemo(() => {
-        if (!processedIndiaData?.institutions) return [];
-        const academicPapers = processedIndiaData.institution_types?.academic ?? 0;
-        const corporatePapers = processedIndiaData.institution_types?.corporate ?? 0;
-        const academicImpact = processedIndiaData.institutions
+        if (!processedFocusData?.institutions) return [];
+        const academicPapers = processedFocusData.institution_types?.academic ?? 0;
+        const corporatePapers = processedFocusData.institution_types?.corporate ?? 0;
+        const academicImpact = processedFocusData.institutions
             .filter(i => i.type === 'academic')
             .reduce((sum, i) => sum + (i.spotlights ?? 0) + (i.orals ?? 0), 0);
-        const corporateImpact = processedIndiaData.institutions
+        const corporateImpact = processedFocusData.institutions
             .filter(i => i.type === 'corporate')
             .reduce((sum, i) => sum + (i.spotlights ?? 0) + (i.orals ?? 0), 0);
 
@@ -621,29 +681,29 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
             { type: 'Academic', Papers: academicPapers, 'Spotlights/Orals': academicImpact },
             { type: 'Corporate', Papers: corporatePapers, 'Spotlights/Orals': corporateImpact },
         ];
-    }, [processedIndiaData]);
+    }, [processedFocusData]);
 
     // Data for Institution Types Pie Chart
     const institutionTypePieData = useMemo(() => {
-        if (!processedIndiaData?.institution_types) return [];
-        const academicCount = processedIndiaData.institution_types.academic ?? 0;
-        const corporateCount = processedIndiaData.institution_types.corporate ?? 0;
+        if (!processedFocusData?.institution_types) return [];
+        const academicCount = processedFocusData.institution_types.academic ?? 0;
+        const corporateCount = processedFocusData.institution_types.corporate ?? 0;
         const total = academicCount + corporateCount;
         if (total === 0) return [];
         return [
-            { name: 'Academic', value: academicCount, percent: academicCount / total, fill: 'hsl(221, 83%, 53%)' }, // Blue
-            { name: 'Corporate', value: corporateCount, percent: corporateCount / total, fill: 'hsl(330, 80%, 60%)' }, // Pink
+            { name: 'Academic', value: academicCount, percent: academicCount / total, fill: colorScheme.academic }, 
+            { name: 'Corporate', value: corporateCount, percent: corporateCount / total, fill: colorScheme.corporate }, 
         ];
-    }, [processedIndiaData]);
+    }, [processedFocusData, colorScheme]);
 
     // Filtered Institutions (sorted by unique papers, then impact, then authors)
     const filteredInstitutions: InstitutionData[] = useMemo(() => {
-        if (!processedIndiaData?.institutions) return [];
-        return processedIndiaData.institutions
+        if (!processedFocusData?.institutions) return [];
+        return processedFocusData.institutions
             .filter(inst => inst.institute?.toLowerCase().includes(institutionFilter.toLowerCase()))
             // Sort by unique papers DESC, then impact DESC, then authors DESC
             .sort((a, b) => (b.unique_paper_count ?? 0) - (a.unique_paper_count ?? 0) || (b.impact_score ?? 0) - (a.impact_score ?? 0) || (b.author_count ?? 0) - (a.author_count ?? 0));
-    }, [processedIndiaData, institutionFilter]);
+    }, [processedFocusData, institutionFilter]);
 
     const topInstitutions = useMemo(() => filteredInstitutions.slice(0, 8), [filteredInstitutions]);
 
@@ -652,12 +712,12 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
     const handlePieEnter = useCallback((_: any, index: number) => setActivePieIndex(index), []);
 
     // --- Render Logic ---
-    if (!processedIndiaData || !usData || !cnData) {
+    if (!processedFocusData || !usData || !cnData) {
         return (
             <div className="min-h-screen bg-background flex items-center justify-center p-6">
                 <div className="bg-destructive/10 border border-destructive/30 text-destructive px-4 py-3 rounded-lg shadow-lg text-center">
                     <h2 className="font-bold text-lg mb-2">Data Loading Error</h2>
-                    <p>Could not process essential dashboard data (e.g., India, US, or China stats missing). Please check the data source.</p>
+                    <p>Could not process essential dashboard data (e.g., focus country, US, or China stats missing). Please check the data source.</p>
                 </div>
             </div>
         );
@@ -665,25 +725,21 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
 
     // Color mapping for charts
     const colorMap = {
-        us: 'hsl(221, 83%, 53%)', // Blue
-        cn: 'hsl(0, 84%, 60%)',   // Red
-        in: 'hsl(36, 96%, 50%)',  // Amber
-        primary: 'hsl(var(--primary))',
-        secondary: 'hsl(var(--secondary-foreground))',
-        academic: 'hsl(221, 83%, 53%)', // Blue
-        corporate: 'hsl(330, 80%, 60%)', // Pink
-        spotlight: 'hsl(48, 96%, 50%)', // Yellow
-        oral: 'hsl(142, 71%, 45%)', // Green
+        us: colorScheme.us,
+        cn: colorScheme.cn,
+        focusCountry: colorScheme.focusCountry,
+        primary: colorScheme.primary || 'hsl(var(--primary))',
+        secondary: colorScheme.secondary || 'hsl(var(--secondary-foreground))',
+        academic: colorScheme.academic,
+        corporate: colorScheme.corporate,
+        spotlight: colorScheme.spotlight,
+        oral: colorScheme.oral,
         grid: 'hsl(var(--border))',
         textAxis: 'hsl(var(--muted-foreground))',
         highlight: 'hsl(142, 71%, 45%)', // Green
         accent: 'hsl(330, 80%, 60%)', // Pink
         warning: 'hsl(36, 96%, 50%)', // Amber
         rest: 'hsl(var(--muted))', // Muted color for 'Rest of World'
-        majorityIndian: 'hsl(142, 71%, 45%)', // Green
-        minorityIndian: 'hsl(var(--secondary-foreground))',
-        firstAuthorIndian: 'hsl(330, 80%, 60%)', // Pink
-        otherPositionIndian: 'hsl(36, 96%, 50%)', // Amber
     };
 
     // Custom label for Pie Chart percentages
@@ -710,42 +766,42 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
             <header className="py-6 md:py-8 bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-950/30 dark:to-orange-950/30 border-b border-border shadow-sm">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h1 className="text-3xl sm:text-4xl font-bold text-foreground flex items-center justify-center mb-2">
-                        <FaTrophy className="mr-3 text-amber-500" /> India @ {conferenceInfo?.name ?? 'Conference'} {conferenceInfo?.year ?? ''}
+                        <FaTrophy className="mr-3 text-amber-500" /> {configuration.dashboardTitle}
                     </h1>
-                    <p className="text-muted-foreground text-base sm:text-lg">India's Contributions, Global Context & Institutional Landscape</p>
+                    <p className="text-muted-foreground text-base sm:text-lg">{configuration.dashboardSubtitle}</p>
                     <p className="text-sm text-muted-foreground mt-3">Total Accepted Papers: <span className="font-semibold text-foreground">{totalPapers?.toLocaleString() ?? 'N/A'}</span></p>
                 </div>
             </header>
 
             <main>
                 {/* --- Pillar 1: Executive Summary --- */}
-                <Section title="Executive Summary: Impact at a Glance" id="summary" className="bg-muted/30">
+                <Section title={configuration.sections.summary.title} id="summary" className="bg-muted/30">
                     {/* Hero Stats Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                         <StatCard
                             title="Papers Accepted"
-                            value={processedIndiaData.paper_count ?? 49}
+                            value={processedFocusData.paper_count ?? 0}
                             icon={<FaFileAlt />}
                             colorClass="text-amber-500 dark:text-amber-400"
-                            subtitle={`#${processedIndiaData.rank ?? 'N/A'} globally | ${((processedIndiaData.paper_count ?? 0) / (totalPapers || 1) * 100).toFixed(1)}% of all ICLR papers`}
+                            subtitle={`#${processedFocusData.rank ?? 'N/A'} globally | ${((processedFocusData.paper_count ?? 0) / (totalPapers || 1) * 100).toFixed(1)}% of all ${conferenceInfo.name} papers`}
                         />
                         <StatCard
                             title="Authors Accepted"
-                            value={processedIndiaData.author_count ?? 132}
+                            value={processedFocusData.author_count ?? 0}
                             icon={<FaUsers />}
                             colorClass="text-blue-500 dark:text-blue-400"
-                            subtitle={`Average ${(processedIndiaData?.authors_per_paper ?? 0).toFixed(1)} authors per paper | Building India's ML community`}
+                            subtitle={`Average ${(processedFocusData?.authors_per_paper ?? 0).toFixed(1)} authors per paper | Building ${focusCountry.country_name || 'Local'}'s ML community`}
                         />
                         <StatCard
                             title="First Authors"
-                            value={processedIndiaData?.first_indian_author?.count ?? 26}
+                            value={processedFocusData?.first_focus_country_author?.count ?? 0}
                             icon={<FaUserTie />}
                             colorClass="text-emerald-500 dark:text-emerald-400"
-                            subtitle={`${((processedIndiaData?.first_indian_author?.count ?? 0) / (processedIndiaData?.paper_count || 1) * 100).toFixed(0)}% of papers led by Indian first authors`}
+                            subtitle={`${((processedFocusData?.first_focus_country_author?.count ?? 0) / (processedFocusData?.paper_count || 1) * 100).toFixed(0)}% of papers led by ${focusCountry.country_name || 'Focus Country'} first authors`}
                         />
                         <StatCard
                             title="Spotlight Papers"
-                            value={processedIndiaData.spotlights ?? 1}
+                            value={processedFocusData.spotlights ?? 0}
                             icon={<FaStar />}
                             colorClass="text-yellow-500 dark:text-yellow-400"
                             subtitle={`Demonstrating high-quality research impact on the global stage`}
@@ -759,7 +815,11 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
                                  <FaUniversity className="text-blue-500 mr-3 mt-1" size={20}/>
                                  <div>
                                      <p className="text-foreground font-medium text-lg">Institutional Leaders:</p>
-                                     <p className="text-muted-foreground">IIT Bombay leads volume (10 papers, 35 authors); MSR India follows with 6 papers and 20 authors.</p>
+                                     <p className="text-muted-foreground">
+                                        {topInstitutions.length > 0 ? 
+                                          `${topInstitutions[0].institute} leads volume (${topInstitutions[0].unique_paper_count} papers, ${topInstitutions[0].author_count} authors)${topInstitutions.length > 1 ? `; ${topInstitutions[1].institute} follows with ${topInstitutions[1].unique_paper_count} papers and ${topInstitutions[1].author_count} authors` : ''}` 
+                                          : 'Institution data unavailable'}
+                                     </p>
                                  </div>
                              </div>
                          </div>
@@ -768,7 +828,9 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
                                  <FaBalanceScale className="text-green-500 mr-3 mt-1" size={20}/>
                                  <div>
                                      <p className="text-foreground font-medium text-lg">Quality Focus:</p>
-                                     <p className="text-muted-foreground">India secured 1 spotlight paper at ICLR 2025, demonstrating quality research capability despite smaller overall representation.</p>
+                                     <p className="text-muted-foreground">
+                                        {focusCountry.country_name || 'Focus country'} secured {processedFocusData.spotlights} spotlight {processedFocusData.spotlights === 1 ? 'paper' : 'papers'} at {conferenceInfo.name} {conferenceInfo.year}, demonstrating quality research capability{processedFocusData.paper_count && processedFocusData.paper_count < 100 ? ' despite smaller overall representation' : ''}.
+                                     </p>
                                  </div>
                              </div>
                          </div>
@@ -779,23 +841,18 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
                         title="Dashboard Narrative Hook"
                         icon={<FaBullseye />}
                         iconColorClass='text-red-500 dark:text-red-400'
-                        insights={[
-                            `India's ${processedIndiaData?.author_count ?? 'N/A'} ML researchers are making their mark with ${processedIndiaData?.paper_count ?? 'N/A'} papers at ICLR 2025, including 1 spotlight paper that demonstrates the quality of research.`,
-                            `Positioned #${processedIndiaData?.rank ?? 'N/A'} globally, India holds ${((processedIndiaData?.paper_count ?? 0) / (totalPapers || 1) * 100).toFixed(1)}% of ICLR ${conferenceInfo?.year ?? ''} papers with efficient teams averaging ${(processedIndiaData?.authors_per_paper ?? 0).toFixed(1)} authors per paper.`,
-                            `With ${((processedIndiaData?.first_indian_author?.count ?? 0) / (processedIndiaData?.at_least_one_indian_author?.count || 1) * 100).toFixed(0)}% first authorship and ${((processedIndiaData?.majority_indian_authors?.count ?? 0) / (processedIndiaData?.at_least_one_indian_author?.count || 1) * 100).toFixed(0)}% majority Indian collaborations, the data reveals a maturing research community balancing international collaboration with domestic leadership.`,
-                            "The Indian ML research landscape is concentrated yet diverse—with IIT Bombay leading in volume and showing strong research impact with its spotlight paper."
-                        ]}
+                        insights={configuration.sections.summary.insights}
                     />
                 </Section>
 
                 {/* --- Pillar 2: Global & APAC Context --- */}
-                <Section title="Global & APAC Context: India's Standing" id="context" subtitle="Comparing India's research output with global and regional peers.">
+                <Section title={configuration.sections.context.title} id="context" subtitle={configuration.sections.context.subtitle}>
                     {/* Worldwide View */}
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
                         {/* Global Rankings Chart */}
                         <div className="lg:col-span-2 bg-card p-4 sm:p-6 rounded-xl border border-border shadow-lg">
                             <h3 className="text-xl font-semibold text-foreground mb-1">Global Rankings (Top 15 by Papers)</h3>
-                            <p className="text-sm text-muted-foreground mb-4">India highlighted at #{processedIndiaData?.rank ?? 'N/A'}. Bar color indicates country (Blue: US, Red: CN, Amber: IN, Primary: Others). Second bar shows author count.</p>
+                            <p className="text-sm text-muted-foreground mb-4">{focusCountry.country_name || 'Focus country'} highlighted at #{processedFocusData?.rank ?? 'N/A'}. Bar color indicates country (Blue: US, Red: CN, {colorScheme.focusCountry ? 'Amber' : 'Highlight'}: {focusCountry.country_name || 'Focus'}, Primary: Others). Second bar shows author count.</p>
                             <div className="h-96">
                                 <ResponsiveContainer width="100%" height="100%">
                                     <BarChart data={topCountriesByPaper} layout="vertical" margin={{ top: 5, right: 30, left: 100, bottom: 5 }}>
@@ -808,7 +865,7 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
                                                 <Cell key={`cell-global-${entry.affiliation_country}`}
                                                       fill={entry.affiliation_country === 'US' ? colorMap.us :
                                                             entry.affiliation_country === 'CN' ? colorMap.cn :
-                                                            entry.affiliation_country === 'IN' ? colorMap.in :
+                                                            entry.affiliation_country === focusCountryCode ? colorMap.focusCountry :
                                                             colorMap.primary}
                                                       fillOpacity={entry.isHighlight ? 1 : 0.7} />
                                             ))}
@@ -853,19 +910,20 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
                             </div>
                              <div className="mt-4 text-center text-sm text-muted-foreground">
                                  <p>US + China: <span className="font-bold text-foreground">{(((usData?.paper_count ?? 0) + (cnData?.paper_count ?? 0)) / (totalPapers || 1) * 100).toFixed(1)}%</span> papers</p>
-                                 <p>India: <span className="font-bold text-foreground">{((processedIndiaData?.paper_count ?? 0) / (totalPapers || 1) * 100).toFixed(1)}%</span> papers (<span className="text-amber-600 dark:text-amber-400">1 Spotlight</span>)</p>
+                                 <p>{focusCountry.country_name || 'Focus country'}: <span className="font-bold text-foreground">{((processedFocusData?.paper_count ?? 0) / (totalPapers || 1) * 100).toFixed(1)}%</span> papers
+                                 {processedFocusData.spotlights > 0 && <span className="text-amber-600 dark:text-amber-400"> ({processedFocusData.spotlights} {processedFocusData.spotlights === 1 ? 'Spotlight' : 'Spotlights'})</span>}</p>
                              </div>
                         </div>
                     </div>
 
-                    {/* APAC Dynamics - SIMPLIFIED AS REQUESTED */}
+                    {/* APAC Dynamics */}
                     <div className="mb-8">
                         <h3 className="text-xl font-semibold text-foreground mb-4">APAC Dynamics</h3>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                             {/* Regional Players Bar Chart */}
                             <div className="bg-card p-4 sm:p-6 rounded-xl border border-border shadow-lg">
                                 <h4 className="text-lg font-semibold text-foreground mb-1">Regional Players Comparison</h4>
-                                <p className="text-sm text-muted-foreground mb-4">Papers vs. Authors for key APAC countries. India highlighted.</p>
+                                <p className="text-sm text-muted-foreground mb-4">Papers vs. Authors for key APAC countries. {focusCountry.country_name || 'Focus country'} highlighted.</p>
                                 <div className="h-80">
                                     <ResponsiveContainer width="100%" height="100%">
                                         <BarChart data={apacCountriesData} layout="vertical" margin={{ top: 5, right: 20, left: 80, bottom: 5 }}>
@@ -875,17 +933,17 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
                                             <Tooltip content={<CustomTooltip />} cursor={{ fill: 'hsl(var(--muted))' }}/>
                                             <Legend iconSize={10} wrapperStyle={{ fontSize: '11px', color: 'hsl(var(--foreground))' }}/>
                                             <Bar dataKey="paper_count" name="Papers" barSize={12} fill={colorMap.primary}>
-                                                 {apacCountriesData.map((entry) => ( <Cell key={`cell-apac-paper-${entry.affiliation_country}`} fill={entry.affiliation_country === 'IN' ? colorMap.in : colorMap.primary} /> ))}
+                                                 {apacCountriesData.map((entry) => ( <Cell key={`cell-apac-paper-${entry.affiliation_country}`} fill={entry.affiliation_country === focusCountryCode ? colorMap.focusCountry : colorMap.primary} /> ))}
                                             </Bar>
                                             <Bar dataKey="author_count" name="Authors" barSize={12} fill={colorMap.secondary} fillOpacity={0.7}>
-                                                 {apacCountriesData.map((entry) => ( <Cell key={`cell-apac-author-${entry.affiliation_country}`} fill={entry.affiliation_country === 'IN' ? colorMap.warning : colorMap.secondary} /> ))}
+                                                 {apacCountriesData.map((entry) => ( <Cell key={`cell-apac-author-${entry.affiliation_country}`} fill={entry.affiliation_country === focusCountryCode ? colorMap.warning : colorMap.secondary} /> ))}
                                              </Bar>
                                         </BarChart>
                                     </ResponsiveContainer>
                                 </div>
                             </div>
 
-                            {/* APAC Region Pie Chart (replacing scatter plot) */}
+                            {/* APAC Region Pie Chart */}
                             <div className="bg-card p-4 sm:p-6 rounded-xl border border-border shadow-lg">
                                 <h4 className="text-lg font-semibold text-foreground mb-1 text-center">APAC Paper Distribution</h4>
                                 <p className="text-sm text-muted-foreground mb-4 text-center">Share of papers across major APAC countries.</p>
@@ -911,7 +969,7 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
                                                     <Cell 
                                                         key={`cell-apac-pie-${index}`} 
                                                         fill={entry.affiliation_country === 'CN' ? colorMap.cn :
-                                                              entry.affiliation_country === 'IN' ? colorMap.in :
+                                                              entry.affiliation_country === focusCountryCode ? colorMap.focusCountry :
                                                               entry.affiliation_country === 'KR' ? colorMap.highlight :
                                                               entry.affiliation_country === 'SG' ? colorMap.accent :
                                                               entry.affiliation_country === 'JP' ? 'hsl(var(--primary))' :
@@ -934,24 +992,20 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
                         title="APAC Narrative"
                         icon={<FaGlobeAsia />}
                         iconColorClass='text-blue-500 dark:text-blue-400'
-                        insights={[
-                            `Within the selected APAC group's ~${apacCountriesData.reduce((s,c)=>s+(c.paper_count ?? 0),0)} papers authored by ~${apacCountriesData.reduce((s,c)=>s+(c.author_count ?? 0),0).toLocaleString()} researchers, India contributes ${processedIndiaData?.paper_count ?? 'N/A'} papers and ${processedIndiaData?.author_count ?? 'N/A'} authors.`,
-                            `China dominates volume with ${cnData?.paper_count ?? 'N/A'} papers (~${((cnData?.paper_count ?? 0) / (apacCountriesData.reduce((s,c)=>s+(c.paper_count ?? 0),1) || 1) * 100).toFixed(0)}% of regional total), while India's spotlight paper demonstrates quality-focused research.`,
-                            `India ranks 7th among APAC nations in total papers, but demonstrates strong academic-corporate collaboration with 14 corporate papers, showing industry's growing involvement in ML research.`
-                        ]}
+                        insights={configuration.sections.context.insights}
                     />
                 </Section>
 
-                {/* --- Pillar 3: India-Only Focus --- */}
-                <Section title="India-Only Focus: Deep Dive" id="india-focus" subtitle="Analyzing authorship, collaboration, and institutional contributions within India." className="bg-muted/30">
+                {/* --- Pillar 3: Focus Country Deep Dive --- */}
+                <Section title={configuration.sections.focusCountry.title} id="focus-country" subtitle={configuration.sections.focusCountry.subtitle} className="bg-muted/30">
                     {/* Authorship & Collaboration Patterns */}
                     <div className="mb-12">
-                        <h3 className="text-xl font-semibold text-foreground mb-4">Authorship & Collaboration Patterns (India-Centric)</h3>
+                        <h3 className="text-xl font-semibold text-foreground mb-4">Authorship & Collaboration Patterns ({focusCountry.country_name || 'Focus Country'}-Centric)</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             {/* Majority/Minority Split */}
                             <div className="bg-card p-4 sm:p-6 rounded-xl border border-border shadow-lg">
-                                <h4 className="text-lg font-semibold text-foreground mb-1 text-center">Majority vs Minority Indian Authors</h4>
-                                <p className="text-sm text-muted-foreground mb-4 text-center">Breakdown of the {processedIndiaData?.at_least_one_indian_author?.count ?? 0} papers with Indian authors.</p>
+                                <h4 className="text-lg font-semibold text-foreground mb-1 text-center">Majority vs Minority {focusCountry.country_name || 'Focus Country'} Authors</h4>
+                                <p className="text-sm text-muted-foreground mb-4 text-center">Breakdown of the {processedFocusData?.at_least_one_focus_country_author?.count ?? 0} papers with {focusCountry.country_name || 'Focus Country'} authors.</p>
                                 <div className="h-60">
                                     <ResponsiveContainer width="100%" height="100%">
                                         {authorshipMajorityMinorityData.length > 0 ? (
@@ -975,7 +1029,7 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
                             {/* First Author Split */}
                             <div className="bg-card p-4 sm:p-6 rounded-xl border border-border shadow-lg">
                                 <h4 className="text-lg font-semibold text-foreground mb-1 text-center">First Author Position</h4>
-                                <p className="text-sm text-muted-foreground mb-4 text-center">Breakdown of the {processedIndiaData?.at_least_one_indian_author?.count ?? 0} papers with Indian authors.</p>
+                                <p className="text-sm text-muted-foreground mb-4 text-center">Breakdown of the {processedFocusData?.at_least_one_focus_country_author?.count ?? 0} papers with {focusCountry.country_name || 'Focus Country'} authors.</p>
                                 <div className="h-60">
                                     <ResponsiveContainer width="100%" height="100%">
                                         {authorshipFirstAuthorData.length > 0 ? (
@@ -1000,7 +1054,7 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
 
                     {/* --- Institution Types --- */}
                     <div className="mb-8">
-                        <h3 className="text-xl font-semibold text-foreground mb-4">Institution Types (India-Specific)</h3>
+                        <h3 className="text-xl font-semibold text-foreground mb-4">Institution Types ({focusCountry.country_name || 'Focus Country'}-Specific)</h3>
                          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                              {/* Academic vs Corporate Comparison (Bar Chart) */}
                              <div className="bg-card p-4 sm:p-6 rounded-xl border border-border shadow-lg md:col-span-2">
@@ -1036,7 +1090,7 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
                              {/* Academic vs Corporate Split (Pie Chart) */}
                              <div className="bg-card p-4 sm:p-6 rounded-xl border border-border shadow-lg flex flex-col">
                                  <h4 className="text-lg font-semibold text-foreground mb-1 text-center">Paper Split by Type</h4>
-                                 <p className="text-sm text-muted-foreground mb-4 text-center">Share of Indian papers by institution type.</p>
+                                 <p className="text-sm text-muted-foreground mb-4 text-center">Share of {focusCountry.country_name || 'Focus Country'} papers by institution type.</p>
                                  <div className="h-80 flex-grow">
                                      <ResponsiveContainer width="100%" height="100%">
                                          {institutionTypePieData.length > 0 ? (
@@ -1062,26 +1116,22 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
                          </div>
                     </div>
 
-                    {/* India-Only Insights */}
+                    {/* Focus Country Insights */}
                     <InterpretationPanel
-                        title="India-Specific Insights"
+                        title={`${focusCountry.country_name || 'Focus Country'}-Specific Insights`}
                         icon={<FaProjectDiagram />}
                         iconColorClass='text-purple-500 dark:text-purple-400'
-                        insights={[
-                            `Indian researchers lead ${(((processedIndiaData?.first_indian_author?.count ?? 0) / (processedIndiaData?.at_least_one_indian_author?.count || 1))*100).toFixed(0)}% of papers they are involved in, indicating growing leadership roles.`,
-                            `${processedIndiaData?.majority_indian_authors?.count ?? 0} papers (${(((processedIndiaData?.majority_indian_authors?.count ?? 0) / (processedIndiaData?.at_least_one_indian_author?.count || 1))*100).toFixed(0)}%) have majority Indian authorship, signaling significant research autonomy within the community.`,
-                            `Academic institutions drive the majority (${institutionTypePieData.find(d=>d.name==='Academic')?.value ?? 0} papers, ${((institutionTypePieData.find(d=>d.name==='Academic')?.percent ?? 0)*100).toFixed(0)}%) of India's papers, while corporate labs (${institutionTypePieData.find(d=>d.name==='Corporate')?.value ?? 0} papers, ${((institutionTypePieData.find(d=>d.name==='Corporate')?.percent ?? 0)*100).toFixed(0)}%) contribute significantly through high-quality research.`
-                        ]}
+                        insights={configuration.sections.focusCountry.insights}
                     />
                 </Section>
 
-                {/* --- Pillar 4: Indian Institutions --- */}
-                <Section title="Indian Institutions: Internal Ecosystem" id="institutions" subtitle="Analyzing the performance and impact of individual institutions within India.">
+                {/* --- Pillar 4: Institutions --- */}
+                <Section title={configuration.sections.institutions.title} id="institutions" subtitle={configuration.sections.institutions.subtitle}>
                     {/* Search Bar */}
                     <div className="mb-6 max-w-md mx-auto">
                         <div className="relative">
                             <label htmlFor="institution-search" className="sr-only">Search Institutions</label>
-                            <input id="institution-search" type="search" placeholder="Search Indian institutions..." className="bg-input border border-border rounded-lg py-2 pl-10 pr-4 text-foreground w-full focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent shadow-sm placeholder-muted-foreground" value={institutionFilter} onChange={handleFilterChange} />
+                            <input id="institution-search" type="search" placeholder={`Search ${focusCountry.country_name || 'Focus Country'} institutions...`} className="bg-input border border-border rounded-lg py-2 pl-10 pr-4 text-foreground w-full focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent shadow-sm placeholder-muted-foreground" value={institutionFilter} onChange={handleFilterChange} />
                             <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground pointer-events-none" />
                         </div>
                     </div>
@@ -1134,7 +1184,7 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
                         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-3">
                             <h3 className="text-xl font-semibold text-foreground">Detailed Institution List</h3>
                             {filteredInstitutions.length > 0 && (
-                                <button onClick={() => exportToCSV( filteredInstitutions.map(inst => ({ Institution: inst.institute, Type: inst.type || 'Unknown', Unique_Papers: inst.unique_paper_count, Authors_Count: inst.author_count, Authors_List: inst.authors, Authors_Per_Paper: inst.authors_per_paper?.toFixed(1), Spotlights: inst.spotlights, Orals: inst.orals, Impact_Score: inst.impact_score })), 'detailed_indian_institutions_iclr_2025' )} className="flex items-center bg-secondary hover:bg-secondary/80 text-secondary-foreground text-xs px-3 py-1.5 rounded transition-colors shadow-sm" aria-label="Export detailed institution list to CSV">
+                                <button onClick={() => exportToCSV( filteredInstitutions.map(inst => ({ Institution: inst.institute, Type: inst.type || 'Unknown', Unique_Papers: inst.unique_paper_count, Authors_Count: inst.author_count, Authors_List: inst.authors, Authors_Per_Paper: inst.authors_per_paper?.toFixed(1), Spotlights: inst.spotlights, Orals: inst.orals, Impact_Score: inst.impact_score })), `detailed_${focusCountryCode.toLowerCase()}_institutions_${conferenceInfo.name.toLowerCase()}_${conferenceInfo.year}` )} className="flex items-center bg-secondary hover:bg-secondary/80 text-secondary-foreground text-xs px-3 py-1.5 rounded transition-colors shadow-sm" aria-label="Export detailed institution list to CSV">
                                     <FaDownload className="mr-1.5" size={10} /> Export Details
                                 </button>
                             )}
@@ -1159,12 +1209,7 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
                         title="Institutional Ecosystem Insights"
                         icon={<FaUniversity />}
                         iconColorClass='text-green-500 dark:text-green-400'
-                        insights={[
-                            "IIT Bombay produces the most papers (10) with 35 authors, and has secured the only spotlight paper from India.",
-                            `The top 6 institutions (IITB, MSRI, Adobe, IITD, IITM, IISc) account for ${( (topInstitutions.slice(0,6).reduce((s,i)=>s+(i.unique_paper_count ?? 0),0)) / (processedIndiaData?.paper_count || 1) * 100).toFixed(0)}% of India's total papers, indicating concentration among leading players.`,
-                            "Corporate labs like MSR India and Adobe Research show strong performance with 6 and 4 papers respectively, complementing the output from top academic institutions.",
-                            "The institutional landscape highlights the strong author base at each institution, with IITB's 35 authors leading, followed by Microsoft Research India's 20 authors."
-                        ]}
+                        insights={configuration.sections.institutions.insights}
                     />
                 </Section>
 
@@ -1172,8 +1217,8 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
 
             {/* Footer */}
             <footer className="mt-10 md:mt-12 text-center text-muted-foreground text-xs border-t border-border pt-6 pb-6 bg-gradient-to-r from-amber-50/30 to-orange-50/30 dark:from-amber-950/10 dark:to-orange-950/10">
-                <p>{conferenceInfo?.name ?? 'Conference'} {conferenceInfo?.year ?? ''} Dashboard | Data Updated May 2025</p>
-                <p>India's Contribution: 49 Papers | 132 Authors | 26 First Authors | 1 Spotlight Paper</p>
+                <p>{conferenceInfo?.name ?? 'Conference'} {conferenceInfo?.year ?? ''} Dashboard | Data Updated {new Date().toLocaleString('default', { month: 'long', year: 'numeric' })}</p>
+                <p>{focusCountry.country_name || 'Focus Country'}'s Contribution: {processedFocusData.paper_count} Papers | {processedFocusData.author_count} Authors | {processedFocusData.first_focus_country_author?.count} First Authors | {processedFocusData.spotlights} Spotlight {processedFocusData.spotlights === 1 ? 'Paper' : 'Papers'}</p>
                 <p className="mt-1">&copy; {new Date().getFullYear()} Analysis Dashboard</p>
             </footer>
 
@@ -1217,10 +1262,4 @@ const ICLRDashboard: React.FC<DashboardDataProps> = ({ dashboardData }) => {
     );
 };
 
-
-// --- App Entry Point ---
-const App: React.FC = () => {
-    return <ICLRDashboard dashboardData={dashboardData} />;
-}
-
-export default App;
+export default ConferenceDashboard;

@@ -107,7 +107,12 @@ One of the most valuable contributions is running the data pipeline and submitti
    python -m indiaml.analytics.analytics
    python -m indiaml.pipeline.generate_final_jsons
    python -m indiaml.pipeline.generate_summaries
+   python -m indiaml.pipeline.process_accept_type
    ```
+
+```
+   python indiaml/indiaml/pipeline/process_dashboard_data.py  /path/to/your/database.db --institution_mapping institution_mapping.json
+```
 
 4. **Submit your data:**
    - Create a new branch: `git checkout -b data-contribution-YYYYMMDD`
