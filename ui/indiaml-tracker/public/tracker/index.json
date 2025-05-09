@@ -1,5 +1,9 @@
 [
   {
+    "label": "ICLR 2025",
+    "file": "iclr-2025.json"
+  },
+  {
     "label": "ICML 2024",
     "file": "icml-2024-v1.json"
   },

@@ -9,177 +9,195 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python Version](https://img.shields.io/badge/python-3.12%2B-blue)](https://www.python.org/downloads/)
 
+---
+
 ## 📋 Overview
 
-The IndiaML Tracker systematically identifies, analyzes, and highlights India's contributions to global machine learning research. Born from a Twitter exchange between Paras Chopra (Lossfunk Founder) and Sohan Basak (Hardcore technologist, trying to build the future of human AI interaction) in January 2025, the project focuses specifically on research conducted within Indian institutions. This approach aims to showcase domestic innovation and inspire the next generation of researchers.
+The **IndiaML Tracker** systematically identifies, analyzes, and highlights India's contributions to global machine‑learning research. Born from a Twitter exchange between *Paras Chopra* (Lossfunk Founder) and *Sohan Basak* (hard‑core technologist, building the future of human–AI interaction) in **January 2025**, the project focuses on research conducted **within Indian institutions**. By publishing transparent metrics, we aim to showcase domestic innovation and inspire the next generation of researchers.
 
 ### Why We Built This
 
-Despite India's growing presence in global ML research, there was no dedicated platform to quantify this contribution. The IndiaML Tracker addresses this gap by providing metrics about Indian institutions' participation in top-tier ML conferences.
+Despite India's growing presence in top‑tier ML venues, there was **no dedicated platform** quantifying that contribution. IndiaML Tracker addresses this gap by providing institution‑level analytics grounded in openly verifiable data.
 
 Our goals include:
+
 - 🔍 Increasing visibility of Indian research institutions globally
 - 📊 Creating benchmarks for measuring progress in ML research output
 - 🤝 Identifying collaboration opportunities between institutions
 - ✨ Inspiring young researchers by showcasing successful Indian contributions
 
+---
+
+## 🧮 Methodology of Inclusion
+
+> **Where does our data come from?**  
+> Currently, **all paper metadata is sourced from the public [OpenReview](https://openreview.net) API**. OpenReview is used by many—but not all—ML conferences. We therefore treat it as a **significant subset, not the entirety**, of relevant literature.
+
+1. **Inclusion criterion**: A paper is counted as “Indian research” when **≥ 1 author is affiliated with an Indian organisation at the time of publication**.
+2. **Optional filters**:
+   - *First‑author Indian*: first listed author is India‑affiliated.
+   - *Majority Indian*: > 50 % of authors are India‑affiliated.
+3. **Affiliation resolution**: We use deterministic rules first (institution lookup tables), followed by **LLM‑assisted disambiguation** (via OpenRouter). Because LLMs are stochastic, errors can creep in—**please help us correct them!**
+4. **Limitations**:
+   - Conferences that do **not** publish to OpenReview are currently absent.
+   - Pre‑prints (e.g., arXiv) are outside our present scope.
+   - LLM hallucinations or missing metadata can introduce noise.
+
+**Found a missing or mis‑classified paper?** Create an [issue](https://github.com/lossfunk/indiaml-tracker/issues) or open a pull request—we’ll review quickly.
+
+---
+
 ## 🏛️ System Architecture
 
-IndiaML Tracker follows a modular, pipeline-based architecture that enables systematic processing of research paper data:
+IndiaML Tracker follows a **modular, pipeline‑based architecture** that enables systematic processing of research‑paper data:
 
 ![IndiaML Architecture](./indiaml-architecture.svg)
 
-The system employs several design patterns to ensure maintainability and extensibility:
+Key design patterns:
 
-- **Adapter Pattern**: Standardizes data collection from various sources
-- **Factory Pattern**: Creates appropriate adapters based on configuration
-- **Repository Pattern**: Abstracts database operations
-- **Pipeline Pattern**: Structures data processing into discrete stages
+- **Adapter Pattern** – standardises data collection from heterogeneous sources
+- **Factory Pattern** – instantiates the correct adapter from config
+- **Repository Pattern** – abstracts database operations
+- **Pipeline Pattern** – chains discrete processing stages
 
-For complete technical details, please refer to our [Documentation](./DOCUMENTATION.md).
+> **Ongoing work**: We are actively experimenting with **additional data sources** (e.g. ACL Anthology, arXiv bulk metadata) and **more robust pipelines** (e.g. deterministic disambiguation, structured affiliation ontologies) to keep improving coverage and accuracy.
+
+For complete technical details, see [Documentation](./DOCUMENTATION.md).
+
+---
 
 ## 🛠️ Technologies Used
 
-- **Python 3.12+**: Core development language
-- **SQLite**: Lightweight database for data storage
-- **SQLAlchemy**: ORM for database operations
-- **OpenReview API**: Primary data source for paper metadata
-- **LLM Integration**: Advanced affiliation resolution (via OpenRouter)
+| Purpose | Stack |
+|---------|-------|
+| Core language | **Python 3.12+** |
+| Storage | **SQLite** + **SQLAlchemy** ORM |
+| Data source | **OpenReview API** |
+| Affiliation resolution | **LLM integration** via OpenRouter |
+
+---
 
 ## 🤝 How to Contribute
 
-We welcome contributions from the community! Here are the most common ways to help:
+We welcome contributions! The **fastest** way to help is to **run the pipeline and submit data**—this expands the dataset and validates existing entries.
 
 ### 1️⃣ Run the Pipeline and Submit Data
 
-This is the most valuable contribution you can make - it helps expand our dataset and verify existing information.
-
 ```bash
 # Clone the repository
-git clone https://github.com/lossfunk/indiaml-tracker.git
-cd indiaml
+ git clone https://github.com/lossfunk/indiaml-tracker.git
+ cd indiaml-tracker
 
-# Set up environment with uv (recommended)
-uv venv --python=3.12
-uv pip install .
+# (Recommended) set up with uv
+ uv venv --python=3.12
+ uv pip install .
 
-# Alternative setup with pip
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
+# Alternative: standard venv
+ python -m venv venv
+ source venv/bin/activate   # Windows: venv\Scripts\activate
+ pip install -r requirements.txt
 
-# Add your API keys in a .env file
-# OPENROUTER_API_KEY=your_key_here
+# Add your API keys (for LLM steps)
+ echo "OPENROUTER_API_KEY=your_key_here" >> .env
 
-# Run the pipeline
-python -m indiaml.pipeline.process_venue
-python -m indiaml.pipeline.process_authors
-python -m indiaml.pipeline.process_paper_author_mapping
-python -m indiaml.pipeline.patch_unk_cc2
-python -m indiaml.pipeline.patch_unk_cc3
+# Run the pipeline step‑by‑step
+ python -m indiaml.pipeline.process_venue
+ python -m indiaml.pipeline.process_authors
+ python -m indiaml.pipeline.process_paper_author_mapping
+ python -m indiaml.pipeline.patch_unk_cc2
+ python -m indiaml.pipeline.patch_unk_cc3   # <-- inspect logs for unmatched affiliations
+ python -m indiaml.pipeline.patch_unk_cc4
+ # Optional LLM‑based PDF workflow
+ python -m indiaml.pipeline.patch_unk_cc5
+ # Analytics & output
+ python -m indiaml.analytics.analytics
+ python -m indiaml.pipeline.generate_final_jsons
+ python -m indiaml.pipeline.generate_summaries
 ```
 
-After running cc3, please check the logs for unmatched affiliations. At this point, you may want to find ways to add them to `name2cc.py` file, either manually or using a service like ChatGPT. We leave this as a manual step as it requires careful judgment and LLMs are prone to hallucinations.
-
-```bash
-# Complete remaining pipeline steps
-python -m indiaml.pipeline.patch_unk_cc4
-
-# Optional: LLM-based PDF parsed workflow (requires API key)
-python -m indiaml.pipeline.patch_unk_cc5
-
-# Generate analytics and output
-python -m indiaml.analytics.analytics
-python -m indiaml.pipeline.generate_final_jsons
-python -m indiaml.pipeline.generate_summaries
-```
-
-Then submit your updated data by creating a pull request! (don't forget to verify the index.json as well as the generated summaries)
+Then submit a **pull request** with the updated JSON files and summaries.
 
 ### 2️⃣ Verify and Correct Data
 
-Data quality is crucial. You can help by checking and correcting:
-- Author names and affiliations
+Data quality is paramount. You can help by reviewing:
+
+- Author names / affiliations
 - Institutional assignments
 - Country codes
 
-For corrections, open an issue with details or submit a PR with your changes.
+Submit corrections via PR or by opening an issue.
 
 ### 3️⃣ Other Ways to Help
 
-- **Enhance existing components**: Improve algorithms for affiliation resolution or data processing
-- **Add new data sources**: Extend the system to include data from arXiv, ACL Anthology, etc.
-- **Improve documentation**: Make the project more accessible through better documentation
-- **Fix bugs**: Address open issues in the GitHub repository
+- 💡 Enhance affiliation‑resolution algorithms
+- ➕ Add new data sources (arXiv, ACL Anthology…)
+- 📚 Improve documentation
+- 🐛 Fix bugs
 
-For detailed contribution guidelines, see [CONTRIBUTING.md](./CONTRIBUTING.md).
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for full guidelines.
+
+---
 
 ## 📊 What We Deliver
 
-The system provides several key outputs:
+- 📚 A continuously updated database of ML papers with Indian author affiliations
+- 🏢 Institution‑level insights and publication trends
+- 📈 Year‑over‑year tracking of India’s contribution to global ML research
+- 🌐 Visualisation of collaborations between Indian and international institutions
 
-- A comprehensive database of ML research papers with Indian author affiliations
-- Institutional insights and publication pattern analysis
-- Year-over-year tracking of India's growing contribution to global ML research
-- Visualization of research partnerships between Indian and international institutions
+---
 
 ## 🔧 Development Setup
 
 ### Prerequisites
-- Python 3.8+
+
+- Python 3.8+
 - SQLite
 - Git
 
 ### Quick Start
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/lossfunk/indiaml-tracker.git
-   cd indiaml-tracker
-   ```
+```bash
+ # 1. Clone
+ git clone https://github.com/lossfunk/indiaml-tracker.git
+ cd indiaml-tracker
 
-2. Set up environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   pip install -r requirements.txt
-   ```
+ # 2. Virtual env & deps
+ python -m venv venv
+ source venv/bin/activate   # Windows: venv\Scripts\activate
+ pip install -r requirements.txt
 
-3. Create a `.env` file in the project root:
-   ```
-   OPENROUTER_API_KEY=your_api_key_here  # For LLM-based affiliation resolution
-   ```
+ # 3. Environment variables
+ echo "OPENROUTER_API_KEY=your_api_key_here" >> .env
 
-4. Run tests to verify your setup:
-   ```bash
-   python -m unittest discover indiaml.tests
-   ```
+ # 4. Run tests
+ python -m unittest discover indiaml.tests
+```
 
-For detailed technical documentation, see [DOCUMENTATION.md](./DOCUMENTATION.md).
+---
 
 ## 🔍 Troubleshooting
 
-If you encounter issues during setup or while running the pipeline:
+If you hit issues:
 
-1. Check the [Troubleshooting section](./DOCUMENTATION.md#troubleshooting) in our documentation
-2. Look for similar issues in our [GitHub Issues](https://github.com/lossfunk/indiaml-tracker/issues)
-3. If your issue is new, please open a detailed bug report
+1. Check the **Troubleshooting** section in [DOCUMENTATION.md](./DOCUMENTATION.md#troubleshooting).
+2. Search existing [GitHub issues](https://github.com/lossfunk/indiaml-tracker/issues).
+3. Open a new issue with details if it’s novel.
+
+---
 
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=lossfunk/indiaml-tracker&type=Date)](https://www.star-history.com/#lossfunk/indiaml-tracker&Date)
 
-
-## 
-
-### What is "Indian Research"
-- How we define that is "at least one author must be affiliated with an indian organization at the time of publication of the paper"
-- There are two filters "First author Indian" and "Majority Authors Indian", the first author typically is the one doing the significant portion of work. And Majority is just based on whether >50% authors are from india or not.
+---
 
 ## 📜 License
 
-[MIT License](LICENSE)
+Code is released under the **MIT License** (see `LICENSE`).
+
+> **Data notice**: Some metadata originates from third‑party conference proceedings. While we are evaluating an **open data licence** compatible with those sources, **the data itself may ultimately be published under a licence different from MIT** to comply with all relevant laws and terms. We will document any change clearly.
 
 ---
 
-Made with ❤️ by the IndiaML Tracker team. Join us in highlighting India's contributions to global ML research!
+Made with ❤️ by the IndiaML Tracker team — join us in highlighting India’s contributions to global ML research!

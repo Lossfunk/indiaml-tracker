@@ -42,7 +42,8 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper establishes a novel link between total variation distance estimation and probabilistic inference in graphical models.  It presents an efficient algorithm for approximating total variation distance between probability distributions defined over Bayes nets with small treewidth.  Prior methods only handled product distributions; this new approach employs partial couplings of high-dimensional distributions.\n"
+    "paper_content": "This paper establishes a novel link between total variation distance estimation and probabilistic inference in graphical models.  It presents an efficient algorithm for approximating total variation distance between probability distributions defined over Bayes nets with small treewidth.  Prior methods only handled product distributions; this new approach employs partial couplings of high-dimensional distributions.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Online Matrix Completion: A Collaborative Approach with Hott Items",
@@ -66,7 +67,8 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": true,
-    "paper_content": "This paper investigates online matrix completion for recommendation systems, focusing on the efficient recommendation of items to users.  The authors propose two algorithms, PHASEDCLUSTERELIM and DETERMINANTELIM, that leverage user collaboration to reduce the number of sub-optimal items in phases.  These algorithms aim to minimize regret in the face of noisy reward feedback, achieving near-optimal per-user regret bounds.\n"
+    "paper_content": "This paper investigates online matrix completion for recommendation systems, focusing on the efficient recommendation of items to users.  The authors propose two algorithms, PHASEDCLUSTERELIM and DETERMINANTELIM, that leverage user collaboration to reduce the number of sub-optimal items in phases.  These algorithms aim to minimize regret in the face of noisy reward feedback, achieving near-optimal per-user regret bounds.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Risk Estimation in a Markov Cost Process: Lower and Upper Bounds",
@@ -97,7 +99,8 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": true,
-    "paper_content": "This paper analyzes the computational cost of estimating risk measures, such as variance, Value-at-Risk (VaR), and Conditional Value-at-Risk (CVaR), for infinite-horizon discounted Markov cost processes.  It derives lower and upper bounds for estimating these risk measures, demonstrating that  \u03a9(1/\u03f5<sup>2</sup>) samples are required for \u03f5-accuracy, both in expectation and in high probability scenarios.  The findings extend to other risk measures that meet a specific continuity criterion.\n"
+    "paper_content": "This paper analyzes the computational cost of estimating risk measures, such as variance, Value-at-Risk (VaR), and Conditional Value-at-Risk (CVaR), for infinite-horizon discounted Markov cost processes.  It derives lower and upper bounds for estimating these risk measures, demonstrating that  Ω(1/ϵ<sup>2</sup>) samples are required for ϵ-accuracy, both in expectation and in high probability scenarios.  The findings extend to other risk measures that meet a specific continuity criterion.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "WISER: Weak Supervision and Supervised Representation Learning to Improve Drug Response Prediction in Cancer",
@@ -142,7 +145,8 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": true,
-    "paper_content": "This paper introduces WISER, a novel method for predicting personalized drug responses in cancer patients.  It leverages weak supervision in conjunction with supervised representation learning to overcome the challenges of limited drug response data and heterogeneous patient responses.  The method aims to improve upon existing techniques by integrating both supervision stages for enhanced drug response prediction accuracy.\n"
+    "paper_content": "This paper introduces WISER, a novel method for predicting personalized drug responses in cancer patients.  It leverages weak supervision in conjunction with supervised representation learning to overcome the challenges of limited drug response data and heterogeneous patient responses.  The method aims to improve upon existing techniques by integrating both supervision stages for enhanced drug response prediction accuracy.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Why do Variational Autoencoders Really Promote Disentanglement?",
@@ -173,7 +177,8 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": false,
-    "paper_content": "This paper aims to theoretically investigate how the orthogonality properties of variational autoencoder (VAE) decoders contribute to disentanglement in real-world applications.  The authors hypothesize that decoder orthogonality is key to disentanglement, a concept crucial for latent space manipulation in various fields.  Through both theoretical analysis and experimental results, they seek to validate this hypothesis in practical VAE setups.\n"
+    "paper_content": "This paper aims to theoretically investigate how the orthogonality properties of variational autoencoder (VAE) decoders contribute to disentanglement in real-world applications.  The authors hypothesize that decoder orthogonality is key to disentanglement, a concept crucial for latent space manipulation in various fields.  Through both theoretical analysis and experimental results, they seek to validate this hypothesis in practical VAE setups.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "OAK: Enriching Document Representations using Auxiliary Knowledge for Extreme Classification",
@@ -239,7 +244,8 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": true,
-    "paper_content": "This paper introduces OAK, a novel framework for eXtreme Classification (XC).  OAK leverages auxiliary knowledge linked to documents to improve classification accuracy by enriching document embeddings with auxiliary knowledge embeddings.  The framework demonstrates superior performance compared to existing state-of-the-art XC methods on various datasets and in sponsored search applications.\n"
+    "paper_content": "This paper introduces OAK, a novel framework for eXtreme Classification (XC).  OAK leverages auxiliary knowledge linked to documents to improve classification accuracy by enriching document embeddings with auxiliary knowledge embeddings.  The framework demonstrates superior performance compared to existing state-of-the-art XC methods on various datasets and in sponsored search applications.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Weakly Convex Regularisers for Inverse Problems: Convergence of Critical Points and Primal-Dual Optimisation",
@@ -269,7 +275,7 @@
       },
       {
         "name": "",
-        "openreview_id": "~Carola-Bibiane_Sch\u00f6nlieb1",
+        "openreview_id": "~Carola-Bibiane_Schönlieb1",
         "affiliation_name": "University of Cambridge",
         "affiliation_domain": "cam.ac.uk",
         "affiliation_country": "GB"
@@ -277,7 +283,8 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper investigates the convergence of critical points for variational regularisation in inverse problems, particularly focusing on weakly convex regularisers.  It develops a generalized framework for convergence analysis, proving the convergence of the primal-dual hybrid gradient method for associated variational problems.  Finally, the paper applies these theoretical findings to learned regularisation, demonstrating improved performance in, for example, computed tomography reconstruction.\n"
+    "paper_content": "This paper investigates the convergence of critical points for variational regularisation in inverse problems, particularly focusing on weakly convex regularisers.  It develops a generalized framework for convergence analysis, proving the convergence of the primal-dual hybrid gradient method for associated variational problems.  Finally, the paper applies these theoretical findings to learned regularisation, demonstrating improved performance in, for example, computed tomography reconstruction.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Representation Surgery: Theory and Practice of Affine Steering",
@@ -329,7 +336,8 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": false,
-    "paper_content": "This paper develops a theoretical framework and practical methods for \"steering\" neural language model representations to reduce undesirable behaviors, such as generating toxic or biased text.  Specifically, it derives optimal affine steering functions to modify model representations, providing justification for existing techniques and proposing an improved approach.  Empirical experiments demonstrate the effectiveness of these methods in mitigating biases and reducing toxic content generation.\n"
+    "paper_content": "This paper develops a theoretical framework and practical methods for \"steering\" neural language model representations to reduce undesirable behaviors, such as generating toxic or biased text.  Specifically, it derives optimal affine steering functions to modify model representations, providing justification for existing techniques and proposing an improved approach.  Empirical experiments demonstrate the effectiveness of these methods in mitigating biases and reducing toxic content generation.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Causal Discovery with Fewer Conditional Independence Tests",
@@ -360,7 +368,8 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": false,
-    "paper_content": "This paper addresses the computational limitations of existing causal discovery algorithms, which often require an exponential number of conditional independence tests.  It proposes a new method, the Causal Consistent Partition Graph (CCPG), that learns a coarser representation of the causal graph using a polynomial number of tests.  This approach aims to provide an efficient algorithm for recovering the true causal graph in specific cases, particularly when the graph is fully identifiable.\n"
+    "paper_content": "This paper addresses the computational limitations of existing causal discovery algorithms, which often require an exponential number of conditional independence tests.  It proposes a new method, the Causal Consistent Partition Graph (CCPG), that learns a coarser representation of the causal graph using a polynomial number of tests.  This approach aims to provide an efficient algorithm for recovering the true causal graph in specific cases, particularly when the graph is fully identifiable.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Enhancing Trajectory Prediction through Self-Supervised Waypoint Distortion Prediction",
@@ -377,7 +386,8 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": true,
-    "paper_content": "This research paper introduces a novel self-supervised approach, SSWDP, for trajectory prediction.  The goal is to enhance representation learning for improved trajectory prediction accuracy by predicting distortion within observed trajectories.  The authors aim to complement existing methods and demonstrate significant improvements on various benchmark datasets, particularly in environments with distortions.\n"
+    "paper_content": "This research paper introduces a novel self-supervised approach, SSWDP, for trajectory prediction.  The goal is to enhance representation learning for improved trajectory prediction accuracy by predicting distortion within observed trajectories.  The authors aim to complement existing methods and demonstrate significant improvements on various benchmark datasets, particularly in environments with distortions.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "In-Context Principle Learning from Mistakes",
@@ -443,7 +453,8 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper introduces LEAP, a method for improving in-context learning (ICL) in large language models (LLMs).  LEAP intentionally induces errors in example input-output pairs, allowing the model to derive task-specific principles for solving similar problems.  These learned principles, combined with the original examples, then enhance the LLM's performance on unseen test data across various benchmarks, including question answering and math problems.\n"
+    "paper_content": "This paper introduces LEAP, a method for improving in-context learning (ICL) in large language models (LLMs).  LEAP intentionally induces errors in example input-output pairs, allowing the model to derive task-specific principles for solving similar problems.  These learned principles, combined with the original examples, then enhance the LLM's performance on unseen test data across various benchmarks, including question answering and math problems.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "How Far Can Fairness Constraints Help Recover From Biased Data?",
@@ -467,7 +478,8 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": true,
-    "paper_content": "This paper extends previous research on fair classification by demonstrating how fairness constraints can recover accurate and fair classifiers even when the training data is significantly biased.  It generalizes these results to different types of bias, data distributions, and hypothesis classes.  The authors prove that under specific conditions, the optimal fair classifier on biased data equals the optimal classifier on unbiased data, thus suggesting that well-designed fairness constraints can mitigate data bias.\n"
+    "paper_content": "This paper extends previous research on fair classification by demonstrating how fairness constraints can recover accurate and fair classifiers even when the training data is significantly biased.  It generalizes these results to different types of bias, data distributions, and hypothesis classes.  The authors prove that under specific conditions, the optimal fair classifier on biased data equals the optimal classifier on unbiased data, thus suggesting that well-designed fairness constraints can mitigate data bias.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Tandem Transformers for Inference Efficient LLMs",
@@ -519,7 +531,8 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": false,
-    "paper_content": "This paper introduces Tandem Transformers, a novel architecture for large language models (LLMs).  The architecture combines a small, autoregressive model with a larger, block-mode model to accelerate inference.  The goal is to improve inference speed without sacrificing downstream task accuracy by strategically allocating capacity for prompt processing versus response generation.\n"
+    "paper_content": "This paper introduces Tandem Transformers, a novel architecture for large language models (LLMs).  The architecture combines a small, autoregressive model with a larger, block-mode model to accelerate inference.  The goal is to improve inference speed without sacrificing downstream task accuracy by strategically allocating capacity for prompt processing versus response generation.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Testing the Feasibility of Linear Programs with Bandit Feedback",
@@ -550,7 +563,8 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": false,
-    "paper_content": "This paper investigates the feasibility testing of linear programs with bandit feedback.  It develops a novel test for determining if a linear program has a feasible solution, based on low-regret algorithms and a non-asymptotic law of iterated logarithms, within a linear bandit setting.  The method is shown to be reliable and adaptive to the signal level of the problem, with sample costs scaling efficiently.\n"
+    "paper_content": "This paper investigates the feasibility testing of linear programs with bandit feedback.  It develops a novel test for determining if a linear program has a feasible solution, based on low-regret algorithms and a non-asymptotic law of iterated logarithms, within a linear bandit setting.  The method is shown to be reliable and adaptive to the signal level of the problem, with sample costs scaling efficiently.\n",
+    "venue": "spotlight"
   },
   {
     "paper_title": "Policy Evaluation for Variance in Average Reward Reinforcement Learning",
@@ -581,7 +595,8 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper develops a temporal-difference (TD) algorithm for evaluating policies in average reward reinforcement learning problems, focusing on asymptotic variance as a risk measure.  The algorithm, applicable to both tabular and linear function approximation settings, achieves a finite-time convergence rate of O(1/k) and provides the first sequential estimator for asymptotic variance with provable finite sample guarantees. This work aims to facilitate the development of variance-constrained reinforcement learning algorithms.\n"
+    "paper_content": "This paper develops a temporal-difference (TD) algorithm for evaluating policies in average reward reinforcement learning problems, focusing on asymptotic variance as a risk measure.  The algorithm, applicable to both tabular and linear function approximation settings, achieves a finite-time convergence rate of O(1/k) and provides the first sequential estimator for asymptotic variance with provable finite sample guarantees. This work aims to facilitate the development of variance-constrained reinforcement learning algorithms.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Submodular framework for structured-sparse optimal transport",
@@ -626,7 +641,8 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": true,
-    "paper_content": "This paper introduces novel sparsity-constrained optimal transport (OT) formulations for unbalanced OT (UOT).  It leverages a submodular framework to efficiently optimize transport plans with a structured sparsity pattern.  The authors develop efficient algorithms with theoretical guarantees, demonstrating practical applicability in various domains.\n"
+    "paper_content": "This paper introduces novel sparsity-constrained optimal transport (OT) formulations for unbalanced OT (UOT).  It leverages a submodular framework to efficiently optimize transport plans with a structured sparsity pattern.  The authors develop efficient algorithms with theoretical guarantees, demonstrating practical applicability in various domains.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Agnostic Learning of Mixed Linear Regressions with EM and AM Algorithms",
@@ -650,7 +666,8 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": true,
-    "paper_content": "This paper investigates the agnostic learning of mixed linear regressions.  It demonstrates that the EM and AM algorithms, under specific conditions, can learn optimal solutions for the problem even without a generative model. The key is finding the set of linear functions that minimize a predefined loss function for a given dataset.\n"
+    "paper_content": "This paper investigates the agnostic learning of mixed linear regressions.  It demonstrates that the EM and AM algorithms, under specific conditions, can learn optimal solutions for the problem even without a generative model. The key is finding the set of linear functions that minimize a predefined loss function for a given dataset.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Asymptotically Optimal and Computationally Efficient Average Treatment Effect Estimation in A/B testing",
@@ -674,7 +691,8 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": true,
-    "paper_content": "This paper investigates estimating the average treatment effect (ATE) in A/B testing.  It develops asymptotically optimal and computationally efficient adaptive policies for constructing confidence intervals (CIs) for ATE.  The proposed methods minimize the expected sample size while guaranteeing a desired level of precision and confidence.\n"
+    "paper_content": "This paper investigates estimating the average treatment effect (ATE) in A/B testing.  It develops asymptotically optimal and computationally efficient adaptive policies for constructing confidence intervals (CIs) for ATE.  The proposed methods minimize the expected sample size while guaranteeing a desired level of precision and confidence.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "PIPER: Primitive-Informed Preference-based Hierarchical Reinforcement Learning via Hindsight Relabeling",
@@ -719,7 +737,8 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": false,
-    "paper_content": "The paper introduces PIPER, a novel hierarchical reinforcement learning approach.  It aims to address the challenges of non-stationarity and infeasible subgoals by leveraging preference-based learning to create a reward model for relabeling replay buffers.  This approach, replacing human feedback with primitive-in-the-loop feedback using sparse rewards, shows improved performance in sparse-reward robotic tasks compared to existing baselines.\n"
+    "paper_content": "The paper introduces PIPER, a novel hierarchical reinforcement learning approach.  It aims to address the challenges of non-stationarity and infeasible subgoals by leveraging preference-based learning to create a reward model for relabeling replay buffers.  This approach, replacing human feedback with primitive-in-the-loop feedback using sparse rewards, shows improved performance in sparse-reward robotic tasks compared to existing baselines.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "On Online Experimentation without Device Identifiers",
@@ -750,7 +769,8 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": false,
-    "paper_content": "This paper introduces HIFIVE, a variational method for estimating global average treatment effects in online A/B testing.  The method addresses the challenge of fragmented user data across devices, a problem emerging from the decline of identifying user devices and the rise of multi-device usage.  HIFIVE aims to improve the accuracy and robustness of preference estimation for online experimentation under these conditions.\n"
+    "paper_content": "This paper introduces HIFIVE, a variational method for estimating global average treatment effects in online A/B testing.  The method addresses the challenge of fragmented user data across devices, a problem emerging from the decline of identifying user devices and the rise of multi-device usage.  HIFIVE aims to improve the accuracy and robustness of preference estimation for online experimentation under these conditions.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "BRAIn: Bayesian Reward-conditioned Amortized Inference for natural language generation from feedback",
@@ -814,8 +834,8 @@
         "affiliation_country": "US"
       },
       {
-        "name": "Ram\u00f3n Fernandez Astudillo",
-        "openreview_id": "~Ram\u00f3n_Fernandez_Astudillo1",
+        "name": "Ramón Fernandez Astudillo",
+        "openreview_id": "~Ramón_Fernandez_Astudillo1",
         "affiliation_name": "International Business Machines",
         "affiliation_domain": "ibm.com",
         "affiliation_country": "US"
@@ -823,7 +843,8 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This research paper introduces BRAIN, a new reinforcement learning from human feedback (RLHF) method for natural language generation.  It aims to improve upon existing distribution matching techniques by reducing gradient variance and generalizing the target distribution using Bayesian methods.  The proposed approach, a bridge between distribution matching and Direct Preference Optimization (DPO), demonstrates superior performance on summarization and Antropic HH tasks compared to previous methods.\n"
+    "paper_content": "This research paper introduces BRAIN, a new reinforcement learning from human feedback (RLHF) method for natural language generation.  It aims to improve upon existing distribution matching techniques by reducing gradient variance and generalizing the target distribution using Bayesian methods.  The proposed approach, a bridge between distribution matching and Direct Preference Optimization (DPO), demonstrates superior performance on summarization and Antropic HH tasks compared to previous methods.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "PairNet: Training with Observed Pairs to Estimate Individual Treatment Effect",
@@ -854,7 +875,8 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": true,
-    "paper_content": "This paper introduces PairNet, a novel method for estimating individual treatment effects (ITE) from observational data.  PairNet avoids the use of potentially inaccurate pseudo-outcomes, focusing instead on observed outcomes in pairs of examples.  The theoretical analysis and empirical results demonstrate its superior performance compared to existing methods in estimating ITE.\n"
+    "paper_content": "This paper introduces PairNet, a novel method for estimating individual treatment effects (ITE) from observational data.  PairNet avoids the use of potentially inaccurate pseudo-outcomes, focusing instead on observed outcomes in pairs of examples.  The theoretical analysis and empirical results demonstrate its superior performance compared to existing methods in estimating ITE.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "MS-TIP: Imputation Aware Pedestrian Trajectory Prediction",
@@ -892,7 +914,8 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": true,
-    "paper_content": "This paper proposes MS-TIP, a novel approach for pedestrian trajectory prediction that addresses missing data in observed sequences.  MS-TIP leverages transformers for imputation and multi-scale hypergraphs for interaction modeling, aiming to improve prediction accuracy by considering context and interactions at different scales.  The method includes a control point and refinement module for enhanced future trajectory inference.\n"
+    "paper_content": "This paper proposes MS-TIP, a novel approach for pedestrian trajectory prediction that addresses missing data in observed sequences.  MS-TIP leverages transformers for imputation and multi-scale hypergraphs for interaction modeling, aiming to improve prediction accuracy by considering context and interactions at different scales.  The method includes a control point and refinement module for enhanced future trajectory inference.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Finite Time Logarithmic Regret Bounds for Self-Tuning Regulation",
@@ -930,7 +953,8 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": true,
-    "paper_content": "This paper introduces a novel algorithm, PIECE, for the self-tuning regulation problem, which aims to minimize the output variance of a system with an unknown model.  Crucially, the algorithm achieves a logarithmic regret bound for finite time, a significant improvement over existing methods for similar problems.  The proposed PIECE algorithm addresses the often problematic initial transient performance of reinforcement learning algorithms for linear systems by cleverly incorporating techniques for exploration and input clipping.\n"
+    "paper_content": "This paper introduces a novel algorithm, PIECE, for the self-tuning regulation problem, which aims to minimize the output variance of a system with an unknown model.  Crucially, the algorithm achieves a logarithmic regret bound for finite time, a significant improvement over existing methods for similar problems.  The proposed PIECE algorithm addresses the often problematic initial transient performance of reinforcement learning algorithms for linear systems by cleverly incorporating techniques for exploration and input clipping.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Unsupervised Parameter-free Simplicial Representation Learning with Scattering Transforms",
@@ -961,7 +985,8 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": true,
-    "paper_content": "This paper introduces simplicial scattering networks (SSNs), a parameter-free model for learning task-agnostic features from simplicial complex data.  Unlike existing simplicial neural networks, SSNs avoid the high training complexity and reliance on task-specific labels by employing a scattering transform.  The proposed method uses random walk matrices to extract high-frequency information, demonstrating superior performance on various tasks like node classification and graph classification compared to existing simplicial or graph neural networks.\n"
+    "paper_content": "This paper introduces simplicial scattering networks (SSNs), a parameter-free model for learning task-agnostic features from simplicial complex data.  Unlike existing simplicial neural networks, SSNs avoid the high training complexity and reliance on task-specific labels by employing a scattering transform.  The proposed method uses random walk matrices to extract high-frequency information, demonstrating superior performance on various tasks like node classification and graph classification compared to existing simplicial or graph neural networks.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "The WMDP Benchmark: Measuring and Reducing Malicious Use with Unlearning",
@@ -1286,7 +1311,8 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper introduces the WMDP benchmark, a dataset of multiple-choice questions designed to assess hazardous knowledge in large language models (LLMs).  The authors aim to measure and mitigate the potential for malicious use by LLMs related to biosecurity, cybersecurity, and chemical security.  Further, they present a novel unlearning method, RMU, which effectively reduces dangerous knowledge capabilities while preserving general knowledge.\n"
+    "paper_content": "This paper introduces the WMDP benchmark, a dataset of multiple-choice questions designed to assess hazardous knowledge in large language models (LLMs).  The authors aim to measure and mitigate the potential for malicious use by LLMs related to biosecurity, cybersecurity, and chemical security.  Further, they present a novel unlearning method, RMU, which effectively reduces dangerous knowledge capabilities while preserving general knowledge.\n",
+    "venue": "poster"
   },
   {
     "paper_title": "Provably Robust DPO: Aligning Language Models with Noisy Feedback",
@@ -1310,6 +1336,7 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": true,
-    "paper_content": "This paper introduces a novel, provably robust method for Direct Preference Optimization (DPO) in the context of aligning language models with human preferences, specifically addressing the issue of noisy feedback.  The authors develop a new loss function that mitigates the impact of noisy preference data on the learned policy.  Theoretical analysis demonstrates the improved robustness of the proposed method, achieving a sub-optimality gap that scales favorably with the dataset size and noise level.\n"
+    "paper_content": "This paper introduces a novel, provably robust method for Direct Preference Optimization (DPO) in the context of aligning language models with human preferences, specifically addressing the issue of noisy feedback.  The authors develop a new loss function that mitigates the impact of noisy preference data on the learned policy.  Theoretical analysis demonstrates the improved robustness of the proposed method, achieving a sub-optimality gap that scales favorably with the dataset size and noise level.\n",
+    "venue": "poster"
   }
 ]
