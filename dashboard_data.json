@@ -1,4 +1,4 @@
-export const dashboardData = {
+{
   "conferenceInfo": {
     "name": "ICLR",
     "year": 2025,
