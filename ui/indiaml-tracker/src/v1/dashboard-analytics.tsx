@@ -11,9 +11,6 @@ import {
     FaArrowRight, FaBalanceScale, FaProjectDiagram, FaBullseye, FaChartLine, FaArrowDown,
     FaLink, FaUnlink, FaGlobe, FaUser
 } from 'react-icons/fa';
-import { dashboardData } from '@/components/dashboard-data';
-
-
 
 // Type definitions
 export interface DashboardDataInterface {
@@ -22,7 +19,6 @@ export interface DashboardDataInterface {
         year: number;
         track: string;
         totalAcceptedPapers: number;
-        totalAcceptedAuthors: number;
     };
     globalStats: {
         countries: Array<{
@@ -127,8 +123,6 @@ interface InstitutionData {
     authors?: string[];
     authors_per_paper?: number;
     impact_score?: number;
-    normalized_papers?: number;
-    normalized_authors?: number;
 }
 interface CountryData { 
     affiliation_country: string; 
@@ -141,8 +135,6 @@ interface CountryData {
     isHighlight?: boolean; 
     spotlight_oral_rate?: number; 
     authors_per_paper?: number; 
-    normalized_papers?: number;
-    normalized_authors?: number;
 }
 type ProcessedFocusCountryData = DashboardDataInterface['focusCountry'] & { 
     rank?: number; 
@@ -185,15 +177,6 @@ const exportToCSV = (data: Record<string, any>[], filename: string): void => {
         document.body.removeChild(link);
         URL.revokeObjectURL(url);
     } catch (error) { console.error("Error exporting to CSV:", error); }
-};
-
-// Function to normalize values between 0 and 1
-const normalizeValues = (data: any[], key: string) => {
-    const maxValue = Math.max(...data.map(item => item[key] || 0));
-    return data.map(item => ({
-        ...item,
-        [`normalized_${key}`]: maxValue > 0 ? (item[key] || 0) / maxValue : 0
-    }));
 };
 
 // --- Reusable UI Components ---
@@ -389,8 +372,7 @@ const TabButton: React.FC<TabButtonProps> = ({ active, onClick, children, icon }
 // ## InstitutionCard Component ##
 interface InstitutionCardProps { institution: InstitutionData; index: number; }
 const InstitutionCard: React.FC<InstitutionCardProps> = ({ institution, index }) => {
-    // Initialize isExpanded to true for the first card (index === 0)
-    const [isExpanded, setIsExpanded] = useState(index === 0);
+    const [isExpanded, setIsExpanded] = useState(false);
     const [activeTab, setActiveTab] = useState<'papers' | 'authors'>('papers');
     
     const toggleExpansion = useCallback(() => setIsExpanded(prev => !prev), []);
@@ -543,13 +525,17 @@ const DataTable: React.FC<DataTableProps> = ({ data, title, filename }) => {
 
 // --- Main Dashboard Component ---
 
-const ConferenceDashboard: React.FC = ({ }) => {
+// Updated to accept dashboard data as a prop instead of importing it
+interface ConferenceDashboardProps {
+    dashboardData: DashboardDataInterface;
+}
+
+const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({ dashboardData }) => {
     const [institutionFilter, setInstitutionFilter] = useState<string>('');
     const [activePieIndex, setActivePieIndex] = useState<number>(0); // For reusable pie interactions
 
     const { conferenceInfo, globalStats, focusCountry, configuration } = dashboardData;
     const totalPapers = conferenceInfo.totalAcceptedPapers;
-    const totalAuthors = conferenceInfo.totalAcceptedAuthors;
     const countryMap = configuration.countryMap;
     const colorScheme = configuration.colorScheme;
     const apacCountries = configuration.apacCountries;
@@ -598,10 +584,7 @@ const ConferenceDashboard: React.FC = ({ }) => {
             country.spotlight_oral_rate = country.paper_count > 0 ? ((country.spotlights + country.orals) / country.paper_count) : 0;
             country.authors_per_paper = country.paper_count > 0 ? (country.author_count / country.paper_count) : 0;
         });
-
-        // Normalize paper and author counts for consistent scaling
-        const normalizedCountries = normalizeValues(sorted, 'paper_count');
-        return normalizeValues(normalizedCountries, 'author_count');
+        return sorted;
     }, [globalStats.countries, configuration.countryMap, focusCountryCode]);
 
     const topCountriesByPaper = useMemo(() => sortedCountries.slice(0, 15), [sortedCountries]);
@@ -613,7 +596,7 @@ const ConferenceDashboard: React.FC = ({ }) => {
         if (!focusCountryGlobalStats) return null; // Essential check
 
         // Process institutions first to add calculated fields
-        const institutions = focusCountry.institutions.map(inst => ({
+        const processedInstitutions = focusCountry.institutions.map(inst => ({
             ...inst,
             // Calculate authors per paper and impact score (useful for sorting/tooltips even without scatter)
             authors_per_paper: inst.unique_paper_count > 0 ? (inst.author_count / inst.unique_paper_count) : 0,
@@ -621,10 +604,6 @@ const ConferenceDashboard: React.FC = ({ }) => {
             // Ensure authors array exists (even if empty) - it's added in the raw data now
             authors: inst.authors || [],
         }));
-
-        // Normalize institution paper and author counts for consistent scaling
-        const normalizedInstitutions = normalizeValues(institutions, 'unique_paper_count');
-        const processedInstitutions = normalizeValues(normalizedInstitutions, 'author_count');
 
         const data = {
             ...focusCountry,
@@ -658,11 +637,9 @@ const ConferenceDashboard: React.FC = ({ }) => {
 
     // Data for APAC Dynamics
     const apacCountriesData = useMemo(() => {
-        const filteredCountries = sortedCountries
+        return sortedCountries
             .filter(country => apacCountries.includes(country.affiliation_country))
             .sort((a, b) => b.paper_count - a.paper_count);
-        
-        return filteredCountries;
     }, [sortedCountries, apacCountries]);
 
     // Data for Authorship Patterns (Bar Charts)
@@ -748,7 +725,7 @@ const ConferenceDashboard: React.FC = ({ }) => {
         );
     }
 
-    // Color mapping for charts - ensure consistent colors across charts with softer tones
+    // Color mapping for charts
     const colorMap = {
         us: colorScheme.us,
         cn: colorScheme.cn,
@@ -761,12 +738,10 @@ const ConferenceDashboard: React.FC = ({ }) => {
         oral: colorScheme.oral,
         grid: 'hsl(var(--border))',
         textAxis: 'hsl(var(--muted-foreground))',
-        highlight: 'hsl(142, 60%, 55%)', // Softer green
-        accent: 'hsl(330, 60%, 70%)', // Softer pink
-        warning: 'hsl(36, 80%, 65%)', // Softer amber
+        highlight: 'hsl(142, 71%, 45%)', // Green
+        accent: 'hsl(330, 80%, 60%)', // Pink
+        warning: 'hsl(36, 96%, 50%)', // Amber
         rest: 'hsl(var(--muted))', // Muted color for 'Rest of World'
-        papers: 'hsl(210, 70%, 60%)', // Softer blue for papers
-        authors: 'hsl(330, 60%, 70%)', // Softer pink for authors
     };
 
     // Custom label for Pie Chart percentages
@@ -797,7 +772,6 @@ const ConferenceDashboard: React.FC = ({ }) => {
                     </h1>
                     <p className="text-muted-foreground text-base sm:text-lg">{configuration.dashboardSubtitle}</p>
                     <p className="text-sm text-muted-foreground mt-3">Total Accepted Papers: <span className="font-semibold text-foreground">{totalPapers?.toLocaleString() ?? 'N/A'}</span></p>
-                    <p className="text-sm text-muted-foreground mt-3">Total Accepted Authors: <span className="font-semibold text-foreground">{totalAuthors?.toLocaleString() ?? 'N/A'}</span></p>
                 </div>
             </header>
 
@@ -888,26 +862,18 @@ const ConferenceDashboard: React.FC = ({ }) => {
                                         <XAxis type="number" stroke={colorMap.textAxis} axisLine={false} tickLine={false} />
                                         <YAxis type="category" dataKey="country_name" stroke={colorMap.textAxis} width={100} tick={{ fontSize: 11, fill: colorMap.textAxis }} interval={0} axisLine={false} tickLine={false} />
                                         <Tooltip content={<CustomTooltip />} cursor={{ fill: 'hsl(var(--muted))' }} />
-                                        <Bar dataKey="normalized_paper_count" name="Papers" radius={[0, 4, 4, 0]} barSize={18}>
+                                        <Bar dataKey="paper_count" name="Papers" radius={[0, 4, 4, 0]} barSize={18}>
                                             {topCountriesByPaper.map((entry) => (
                                                 <Cell key={`cell-global-${entry.affiliation_country}`}
                                                       fill={entry.affiliation_country === 'US' ? colorMap.us :
                                                             entry.affiliation_country === 'CN' ? colorMap.cn :
                                                             entry.affiliation_country === focusCountryCode ? colorMap.focusCountry :
-                                                            colorMap.papers}
+                                                            colorMap.primary}
                                                       fillOpacity={entry.isHighlight ? 1 : 0.7} />
                                             ))}
-                                            <LabelList dataKey="paper_count" position="right" style={{ fill: 'hsl(var(--foreground))', fontSize: 10 }} />
                                         </Bar>
-                                        <Bar dataKey="normalized_author_count" name="Authors" radius={[0, 4, 4, 0]} barSize={10} fill={colorMap.authors} />
-                                        <Legend 
-                                            iconSize={10} 
-                                            wrapperStyle={{ fontSize: '11px', color: 'hsl(var(--foreground))' }}
-                                            payload={[
-                                                { value: 'Papers', type: 'square', color: colorMap.papers },
-                                                { value: 'Authors', type: 'square', color: colorMap.authors }
-                                            ]}
-                                        />
+                                        <Bar dataKey="author_count" name="Authors" radius={[0, 4, 4, 0]} barSize={10} fill={colorMap.secondary} fillOpacity={0.6} />
+                                        <Legend iconSize={10} wrapperStyle={{ fontSize: '11px', color: 'hsl(var(--foreground))' }}/>
                                     </BarChart>
                                 </ResponsiveContainer>
                             </div>
@@ -967,20 +933,12 @@ const ConferenceDashboard: React.FC = ({ }) => {
                                             <XAxis type="number" stroke={colorMap.textAxis} fontSize={10}/>
                                             <YAxis type="category" dataKey="country_name" width={80} stroke={colorMap.textAxis} fontSize={10} interval={0}/>
                                             <Tooltip content={<CustomTooltip />} cursor={{ fill: 'hsl(var(--muted))' }}/>
-                                            <Legend 
-                                            iconSize={10} 
-                                            wrapperStyle={{ fontSize: '11px', color: 'hsl(var(--foreground))' }}
-                                            payload={[
-                                                { value: 'Papers', type: 'square', color: colorMap.papers },
-                                                { value: 'Authors', type: 'square', color: colorMap.authors }
-                                            ]}
-                                        />
-                                            <Bar dataKey="normalized_paper_count" name="Papers" barSize={12} fill={colorMap.papers}>
-                                                 {apacCountriesData.map((entry) => ( <Cell key={`cell-apac-paper-${entry.affiliation_country}`} fill={entry.affiliation_country === focusCountryCode ? colorMap.focusCountry : colorMap.papers} /> ))}
-                                                 <LabelList dataKey="paper_count" position="right" style={{ fill: 'hsl(var(--foreground))', fontSize: 10 }} />
+                                            <Legend iconSize={10} wrapperStyle={{ fontSize: '11px', color: 'hsl(var(--foreground))' }}/>
+                                            <Bar dataKey="paper_count" name="Papers" barSize={12} fill={colorMap.primary}>
+                                                 {apacCountriesData.map((entry) => ( <Cell key={`cell-apac-paper-${entry.affiliation_country}`} fill={entry.affiliation_country === focusCountryCode ? colorMap.focusCountry : colorMap.primary} /> ))}
                                             </Bar>
-                                            <Bar dataKey="normalized_author_count" name="Authors" barSize={12} fill={colorMap.authors}>
-                                                 {apacCountriesData.map((entry) => ( <Cell key={`cell-apac-author-${entry.affiliation_country}`} fill={entry.affiliation_country === focusCountryCode ? colorMap.warning : colorMap.authors} /> ))}
+                                            <Bar dataKey="author_count" name="Authors" barSize={12} fill={colorMap.secondary} fillOpacity={0.7}>
+                                                 {apacCountriesData.map((entry) => ( <Cell key={`cell-apac-author-${entry.affiliation_country}`} fill={entry.affiliation_country === focusCountryCode ? colorMap.warning : colorMap.secondary} /> ))}
                                              </Bar>
                                         </BarChart>
                                     </ResponsiveContainer>
@@ -1112,14 +1070,7 @@ const ConferenceDashboard: React.FC = ({ }) => {
                                                  <XAxis dataKey="type" stroke={colorMap.textAxis} fontSize={12}/>
                                                  <YAxis stroke={colorMap.textAxis} fontSize={10}/>
                                                  <Tooltip content={<CustomTooltip />}/>
-                                                 <Legend 
-                                                iconSize={10} 
-                                                wrapperStyle={{ fontSize: '11px', color: 'hsl(var(--foreground))' }}
-                                                payload={[
-                                                    { value: 'Papers', type: 'square', color: colorMap.papers },
-                                                    { value: 'Authors', type: 'square', color: colorMap.authors }
-                                                ]}
-                                            />
+                                                 <Legend iconSize={10} wrapperStyle={{ fontSize: '11px', color: 'hsl(var(--foreground))' }}/>
                                                  <Bar dataKey="Papers" fill={colorMap.academic} name="Papers" barSize={40}>
                                                       {institutionTypeComparisonData.map((entry, index) => (
                                                           <Cell key={`cell-type-paper-${index}`} fill={entry.type === 'Academic' ? colorMap.academic : colorMap.corporate} />
@@ -1200,19 +1151,11 @@ const ConferenceDashboard: React.FC = ({ }) => {
                                         <XAxis type="number" stroke={colorMap.textAxis} fontSize={10}/>
                                         <YAxis type="category" dataKey="institute" width={150} stroke={colorMap.textAxis} fontSize={10} interval={0}/>
                                         <Tooltip content={<CustomTooltip />} cursor={{ fill: 'hsl(var(--muted))' }}/>
-                                                                                         <Legend 
-                                                     iconSize={10} 
-                                                     wrapperStyle={{ fontSize: '11px', color: 'hsl(var(--foreground))' }}
-                                                     payload={[
-                                                         { value: 'Papers', type: 'square', color: colorMap.papers },
-                                                         { value: 'Authors', type: 'square', color: colorMap.authors }
-                                                     ]}
-                                                 />
-                                        <Bar dataKey="normalized_unique_paper_count" name="Papers" barSize={12}>
+                                        <Legend iconSize={10} wrapperStyle={{ fontSize: '11px', color: 'hsl(var(--foreground))' }}/>
+                                        <Bar dataKey="unique_paper_count" name="Papers" barSize={12} stackId="a">
                                             {topInstitutions.map((entry, index) => (
                                                 <Cell key={`cell-leader-paper-${index}`} fill={entry.type === 'academic' ? colorMap.academic : colorMap.corporate}/>
                                             ))}
-                                            <LabelList dataKey="unique_paper_count" position="right" style={{ fill: 'hsl(var(--foreground))', fontSize: 10 }} />
                                             {/* Add Spotlight/Oral markers */}
                                              <LabelList dataKey="institute" content={({ x, y, width, height, value, index }) => {
                                                  const inst = topInstitutions[index];
@@ -1231,7 +1174,7 @@ const ConferenceDashboard: React.FC = ({ }) => {
                                                  );
                                              }} />
                                         </Bar>
-                                         <Bar dataKey="normalized_author_count" name="Authors" barSize={12} fill={colorMap.authors} />
+                                         <Bar dataKey="author_count" name="Authors" barSize={12} stackId="b" fill={colorMap.secondary} fillOpacity={0.6}/>
                                     </BarChart>
                                 </ResponsiveContainer>
                             </div>

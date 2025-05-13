@@ -1,0 +1,131 @@
+{
+    "IIT Bombay": {
+        "variations": [
+            "Indian Institute of Technology, Bombay",
+            "Indian Institute of Technology Bombay",
+            "IIT Bombay",
+            "Department of Computer Science and Engineering, IIT Bombay",
+            "Indian Institute of Technology Bombay,"
+        ],
+        "type": "academic"
+    },
+    "Adobe Systems": {
+        "variations": [
+            "Adobe Systems"
+        ],
+        "type": "corporate"
+    },
+    "Ashoka University": {
+        "variations": [
+            "Ashoka University"
+        ],
+        "type": "academic"
+    },
+    "Carnegie Mellon University": {
+        "variations": [
+            "CMU, Carnegie Mellon University"
+        ],
+        "type": "academic"
+    },
+    "Google": {
+        "variations": [
+            "Google"
+        ],
+        "type": "corporate"
+    },
+    "IBM Research - New Delhi": {
+        "variations": [
+            "IBM Research - New Delhi"
+        ],
+        "type": "corporate"
+    },
+    "IIT Delhi": {
+        "variations": [
+            "IIT Delhi"
+        ],
+        "type": "academic"
+    },
+    "Indian Institute of Science, Bangalore": {
+        "variations": [
+            "Indian Institute of Science",
+            "Indian Institute of Science, Bangalore",
+            "Indian Institute of Science, Indian institute of science, Bangalore"
+        ],
+        "type": "academic"
+    },
+    "IIT Hyderabad": {
+        "variations": [
+            "Indian Institute of Technology Hyderabad"
+        ],
+        "type": "academic"
+    },
+    "IIT Kharagpur": {
+        "variations": [
+            "Indian Institute of Technology Kharagpur"
+        ],
+        "type": "academic"
+    },
+    "IIT Kanpur": {
+        "variations": [
+            "Indian Institute of Technology, Kanpur"
+        ],
+        "type": "academic"
+    },
+    "IIT Madras": {
+        "variations": [
+            "Indian Institute of Technology, Madras"
+        ],
+        "type": "academic"
+    },
+    "IIT Patna": {
+        "variations": [
+            "Indian Institute of Technology, Patna"
+        ],
+        "type": "academic"
+    },
+    "IIT Roorkee": {
+        "variations": [
+            "Indian Institute of Technology, Roorkee",
+            "Indian Institute of Technology, Roorkee, Dhirubhai Ambani Institute Of Information and Communication Technology"
+        ],
+        "type": "academic"
+    },
+    "IIIT Delhi": {
+        "variations": [
+            "Indraprastha Institute of Information Technology, Delhi"
+        ],
+        "type": "academic"
+    },
+    "IIIT Hyderabad": {
+        "variations": [
+            "International Institute of Information Technology Hyderabad",
+            "International Institute of Information Technology Hyderabad "
+        ],
+        "type": "academic"
+    },
+    "Microsoft": {
+        "variations": [
+            "Microsoft"
+        ],
+        "type": "corporate"
+    },
+    "Microsoft Research": {
+        "variations": [
+            "Microsoft Research",
+            "Research, Microsoft"
+        ],
+        "type": "corporate"
+    },
+    "Tata Consultancy Services": {
+        "variations": [
+            "Tata Consultancy Services Limited, India"
+        ],
+        "type": "corporate"
+    },
+    "Walmart Global Tech": {
+        "variations": [
+            "Walmart Global Tech"
+        ],
+        "type": "corporate"
+    }
+}

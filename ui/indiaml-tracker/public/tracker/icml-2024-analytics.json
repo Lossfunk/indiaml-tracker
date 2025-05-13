@@ -1,0 +1,1224 @@
+{
+  "conferenceInfo": {
+    "name": "ICML",
+    "year": 2024,
+    "track": "Conference",
+    "totalAcceptedPapers": 2610,
+    "totalAcceptedAuthors": 9216
+  },
+  "globalStats": {
+    "countries": [
+      {
+        "affiliation_country": "US",
+        "paper_count": 1417,
+        "author_count": 4753,
+        "spotlights": 102,
+        "orals": 91
+      },
+      {
+        "affiliation_country": "CN",
+        "paper_count": 772,
+        "author_count": 2970,
+        "spotlights": 64,
+        "orals": 36
+      },
+      {
+        "affiliation_country": "GB",
+        "paper_count": 213,
+        "author_count": 423,
+        "spotlights": 18,
+        "orals": 14
+      },
+      {
+        "affiliation_country": "DE",
+        "paper_count": 176,
+        "author_count": 412,
+        "spotlights": 11,
+        "orals": 13
+      },
+      {
+        "affiliation_country": "UNK",
+        "paper_count": 171,
+        "author_count": 212,
+        "spotlights": 6,
+        "orals": 22
+      },
+      {
+        "affiliation_country": "CA",
+        "paper_count": 161,
+        "author_count": 353,
+        "spotlights": 13,
+        "orals": 15
+      },
+      {
+        "affiliation_country": "HK",
+        "paper_count": 158,
+        "author_count": 283,
+        "spotlights": 8,
+        "orals": 7
+      },
+      {
+        "affiliation_country": "CH",
+        "paper_count": 140,
+        "author_count": 302,
+        "spotlights": 11,
+        "orals": 11
+      },
+      {
+        "affiliation_country": "SG",
+        "paper_count": 134,
+        "author_count": 283,
+        "spotlights": 10,
+        "orals": 9
+      },
+      {
+        "affiliation_country": "KR",
+        "paper_count": 118,
+        "author_count": 362,
+        "spotlights": 6,
+        "orals": 5
+      },
+      {
+        "affiliation_country": "FR",
+        "paper_count": 110,
+        "author_count": 231,
+        "spotlights": 11,
+        "orals": 9
+      },
+      {
+        "affiliation_country": "UK",
+        "paper_count": 102,
+        "author_count": 153,
+        "spotlights": 10,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "JP",
+        "paper_count": 75,
+        "author_count": 157,
+        "spotlights": 3,
+        "orals": 3
+      },
+      {
+        "affiliation_country": "IL",
+        "paper_count": 69,
+        "author_count": 163,
+        "spotlights": 7,
+        "orals": 3
+      },
+      {
+        "affiliation_country": "AU",
+        "paper_count": 68,
+        "author_count": 137,
+        "spotlights": 4,
+        "orals": 4
+      },
+      {
+        "affiliation_country": "NL",
+        "paper_count": 44,
+        "author_count": 77,
+        "spotlights": 3,
+        "orals": 2
+      },
+      {
+        "affiliation_country": "IT",
+        "paper_count": 36,
+        "author_count": 85,
+        "spotlights": 4,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "AI",
+        "paper_count": 32,
+        "author_count": 44,
+        "spotlights": 5,
+        "orals": 5
+      },
+      {
+        "affiliation_country": "AT",
+        "paper_count": 30,
+        "author_count": 57,
+        "spotlights": 2,
+        "orals": 2
+      },
+      {
+        "affiliation_country": "IN",
+        "paper_count": 27,
+        "author_count": 45,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "AE",
+        "paper_count": 25,
+        "author_count": 40,
+        "spotlights": 0,
+        "orals": 2
+      },
+      {
+        "affiliation_country": "SE",
+        "paper_count": 21,
+        "author_count": 55,
+        "spotlights": 0,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "DK",
+        "paper_count": 18,
+        "author_count": 30,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "SA",
+        "paper_count": 17,
+        "author_count": 32,
+        "spotlights": 1,
+        "orals": 3
+      },
+      {
+        "affiliation_country": "RU",
+        "paper_count": 13,
+        "author_count": 45,
+        "spotlights": 0,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "TW",
+        "paper_count": 12,
+        "author_count": 30,
+        "spotlights": 0,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "BE",
+        "paper_count": 11,
+        "author_count": 20,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "FI",
+        "paper_count": 11,
+        "author_count": 23,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "ES",
+        "paper_count": 10,
+        "author_count": 16,
+        "spotlights": 1,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "BR",
+        "paper_count": 10,
+        "author_count": 19,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "PL",
+        "paper_count": 9,
+        "author_count": 33,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "CZ",
+        "paper_count": 7,
+        "author_count": 10,
+        "spotlights": 2,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "MO",
+        "paper_count": 7,
+        "author_count": 8,
+        "spotlights": 0,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "GR",
+        "paper_count": 6,
+        "author_count": 14,
+        "spotlights": 0,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "NO",
+        "paper_count": 5,
+        "author_count": 13,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "VN",
+        "paper_count": 4,
+        "author_count": 7,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "IR",
+        "paper_count": 4,
+        "author_count": 11,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "IE",
+        "paper_count": 4,
+        "author_count": 5,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "BG",
+        "paper_count": 4,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "CO",
+        "paper_count": 3,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "ML",
+        "paper_count": 3,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "PT",
+        "paper_count": 3,
+        "author_count": 5,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "KP",
+        "paper_count": 3,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "CL",
+        "paper_count": 3,
+        "author_count": 8,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "IO",
+        "paper_count": 2,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "CY",
+        "paper_count": 2,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "USA",
+        "paper_count": 2,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "AR",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "AM",
+        "paper_count": 1,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "MY",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "BO",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "LU",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "EU",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "NZ",
+        "paper_count": 1,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "ZA",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "EE",
+        "paper_count": 1,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "TR",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "Australia",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "ST",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "Germany",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "Canada",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      }
+    ]
+  },
+  "focusCountry": {
+    "country_code": "IN",
+    "country_name": "India",
+    "total_authors": 45,
+    "total_spotlights": 1,
+    "total_orals": 0,
+    "institution_types": {
+      "corporate": 2,
+      "academic": 12
+    },
+    "at_least_one_focus_country_author": {
+      "count": 27,
+      "papers": [
+        {
+          "id": "yhpDKSw7yA",
+          "title": "Provably Robust DPO: Aligning Language Models with Noisy Feedback",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "xlr6AUDuJz",
+          "title": "The WMDP Benchmark: Measuring and Reducing Malicious Use with Unlearning",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "wmljUnbjy6",
+          "title": "Unsupervised Parameter-free Simplicial Representation Learning with Scattering Transforms",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "tTtSnpH4fc",
+          "title": "Finite Time Logarithmic Regret Bounds for Self-Tuning Regulation",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "s4Hy0L4mml",
+          "title": "MS-TIP: Imputation Aware Pedestrian Trajectory Prediction",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "o5SVr80Rgg",
+          "title": "PairNet: Training with Observed Pairs to Estimate Individual Treatment Effect",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "nxzXTLByXO",
+          "title": "BRAIn: Bayesian Reward-conditioned Amortized Inference for natural language generation from feedback",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "merZTLSdC9",
+          "title": "On Online Experimentation without Device Identifiers",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "l6Hef6FVd0",
+          "title": "PIPER: Primitive-Informed Preference-based Hierarchical Reinforcement Learning via Hindsight Relabeling",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "eqIGoEoI10",
+          "title": "Asymptotically Optimal and Computationally Efficient Average Treatment Effect Estimation in A/B testing",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "eo88noTbb5",
+          "title": "Agnostic Learning of Mixed Linear Regressions with EM and AM Algorithms",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "bfQCO9Vqhk",
+          "title": "Submodular framework for structured-sparse optimal transport",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "bID9PiBFpT",
+          "title": "Policy Evaluation for Variance in Average Reward Reinforcement Learning",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "TfwGtfPkhV",
+          "title": "Testing the Feasibility of Linear Programs with Bandit Feedback",
+          "isSpotlight": true,
+          "isOral": false
+        },
+        {
+          "id": "TN3fi7dwPo",
+          "title": "Tandem Transformers for Inference Efficient LLMs",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "RfQT6vJt8b",
+          "title": "How Far Can Fairness Constraints Help Recover From Biased Data?",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "OQ7TlOphGX",
+          "title": "Enhancing Trajectory Prediction through Self-Supervised Waypoint Distortion Prediction",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "HpT19AKddu",
+          "title": "Causal Discovery with Fewer Conditional Independence Tests",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "GwA4go0Mw4",
+          "title": "Representation Surgery: Theory and Practice of Affine Steering",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "E8FpcUyPuS",
+          "title": "Weakly Convex Regularisers for Inverse Problems: Convergence of Critical Points and Primal-Dual Optimisation",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "Cbacx90Wkt",
+          "title": "OAK: Enriching Document Representations using Auxiliary Knowledge for Extreme Classification",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "Ao9UUaScAU",
+          "title": "Why do Variational Autoencoders Really Promote Disentanglement?",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "9QRcp2ubDt",
+          "title": "Centralized Selection with Preferences in the Presence of Biases",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "8ySQaphUYH",
+          "title": "WISER: Weak Supervision and Supervised Representation Learning to Improve Drug Response Prediction in Cancer",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "7xzhKEPfBo",
+          "title": "Risk Estimation in a Markov Cost Process: Lower and Upper Bounds",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "7XZKzQtooN",
+          "title": "Online Matrix Completion: A Collaborative Approach with Hott Items",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "6OSLjErBhh",
+          "title": "Total Variation Distance Meets Probabilistic Inference",
+          "isSpotlight": false,
+          "isOral": false
+        }
+      ]
+    },
+    "majority_focus_country_authors": {
+      "count": 8,
+      "papers": [
+        {
+          "id": "wmljUnbjy6",
+          "title": "Unsupervised Parameter-free Simplicial Representation Learning with Scattering Transforms",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "s4Hy0L4mml",
+          "title": "MS-TIP: Imputation Aware Pedestrian Trajectory Prediction",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "o5SVr80Rgg",
+          "title": "PairNet: Training with Observed Pairs to Estimate Individual Treatment Effect",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "bfQCO9Vqhk",
+          "title": "Submodular framework for structured-sparse optimal transport",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "OQ7TlOphGX",
+          "title": "Enhancing Trajectory Prediction through Self-Supervised Waypoint Distortion Prediction",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "Cbacx90Wkt",
+          "title": "OAK: Enriching Document Representations using Auxiliary Knowledge for Extreme Classification",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "8ySQaphUYH",
+          "title": "WISER: Weak Supervision and Supervised Representation Learning to Improve Drug Response Prediction in Cancer",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "7xzhKEPfBo",
+          "title": "Risk Estimation in a Markov Cost Process: Lower and Upper Bounds",
+          "isSpotlight": false,
+          "isOral": false
+        }
+      ]
+    },
+    "first_focus_country_author": {
+      "count": 17,
+      "papers": [
+        {
+          "id": "yhpDKSw7yA",
+          "title": "Provably Robust DPO: Aligning Language Models with Noisy Feedback",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "tTtSnpH4fc",
+          "title": "Finite Time Logarithmic Regret Bounds for Self-Tuning Regulation",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "o5SVr80Rgg",
+          "title": "PairNet: Training with Observed Pairs to Estimate Individual Treatment Effect",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "merZTLSdC9",
+          "title": "On Online Experimentation without Device Identifiers",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "l6Hef6FVd0",
+          "title": "PIPER: Primitive-Informed Preference-based Hierarchical Reinforcement Learning via Hindsight Relabeling",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "eo88noTbb5",
+          "title": "Agnostic Learning of Mixed Linear Regressions with EM and AM Algorithms",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "bfQCO9Vqhk",
+          "title": "Submodular framework for structured-sparse optimal transport",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "TfwGtfPkhV",
+          "title": "Testing the Feasibility of Linear Programs with Bandit Feedback",
+          "isSpotlight": true,
+          "isOral": false
+        },
+        {
+          "id": "TN3fi7dwPo",
+          "title": "Tandem Transformers for Inference Efficient LLMs",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "RfQT6vJt8b",
+          "title": "How Far Can Fairness Constraints Help Recover From Biased Data?",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "OQ7TlOphGX",
+          "title": "Enhancing Trajectory Prediction through Self-Supervised Waypoint Distortion Prediction",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "HpT19AKddu",
+          "title": "Causal Discovery with Fewer Conditional Independence Tests",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "GwA4go0Mw4",
+          "title": "Representation Surgery: Theory and Practice of Affine Steering",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "Cbacx90Wkt",
+          "title": "OAK: Enriching Document Representations using Auxiliary Knowledge for Extreme Classification",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "Ao9UUaScAU",
+          "title": "Why do Variational Autoencoders Really Promote Disentanglement?",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "8ySQaphUYH",
+          "title": "WISER: Weak Supervision and Supervised Representation Learning to Improve Drug Response Prediction in Cancer",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "7xzhKEPfBo",
+          "title": "Risk Estimation in a Markov Cost Process: Lower and Upper Bounds",
+          "isSpotlight": false,
+          "isOral": false
+        }
+      ]
+    },
+    "institutions": [
+      {
+        "institute": "Indian Institute of Science, Bangalore",
+        "total_paper_count": 5,
+        "unique_paper_count": 4,
+        "author_count": 8,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "8ySQaphUYH",
+            "title": "WISER: Weak Supervision and Supervised Representation Learning to Improve Drug Response Prediction in Cancer",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "wmljUnbjy6",
+            "title": "Unsupervised Parameter-free Simplicial Representation Learning with Scattering Transforms",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "7xzhKEPfBo",
+            "title": "Risk Estimation in a Markov Cost Process: Lower and Upper Bounds",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "tTtSnpH4fc",
+            "title": "Finite Time Logarithmic Regret Bounds for Self-Tuning Regulation",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "TfwGtfPkhV",
+            "title": "Testing the Feasibility of Linear Programs with Bandit Feedback",
+            "isSpotlight": true,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "",
+          "Aditya Gopalan",
+          "Prathosh AP",
+          "Avik Kar",
+          "Rahul Singh",
+          "Sundeep Prabhakar Chepuri",
+          "Kumar Shubham",
+          "Sravanthi Gurugubelli"
+        ]
+      },
+      {
+        "institute": "IIT Kanpur",
+        "total_paper_count": 4,
+        "unique_paper_count": 3,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "yhpDKSw7yA",
+            "title": "Provably Robust DPO: Aligning Language Models with Noisy Feedback",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Cbacx90Wkt",
+            "title": "OAK: Enriching Document Representations using Auxiliary Knowledge for Extreme Classification",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "l6Hef6FVd0",
+            "title": "PIPER: Primitive-Informed Preference-based Hierarchical Reinforcement Learning via Hindsight Relabeling",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "6OSLjErBhh",
+            "title": "Total Variation Distance Meets Probabilistic Inference",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Sutanu Gayen",
+          "Sayak Ray Chowdhury",
+          "Utsav Singh"
+        ]
+      },
+      {
+        "institute": "IIT Bombay",
+        "total_paper_count": 3,
+        "unique_paper_count": 3,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "eo88noTbb5",
+            "title": "Agnostic Learning of Mixed Linear Regressions with EM and AM Algorithms",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "o5SVr80Rgg",
+            "title": "PairNet: Training with Observed Pairs to Estimate Individual Treatment Effect",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "merZTLSdC9",
+            "title": "On Online Experimentation without Device Identifiers",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Avishek Ghosh",
+          "",
+          "Lokesh Nagalapatti",
+          "Sunita Sarawagi"
+        ]
+      },
+      {
+        "institute": "IIT Madras",
+        "total_paper_count": 2,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "bID9PiBFpT",
+            "title": "Policy Evaluation for Variance in Average Reward Reinforcement Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "7xzhKEPfBo",
+            "title": "Risk Estimation in a Markov Cost Process: Lower and Upper Bounds",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Prashanth L. A."
+        ]
+      },
+      {
+        "institute": "IIIT Hyderabad",
+        "total_paper_count": 2,
+        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "xlr6AUDuJz",
+            "title": "The WMDP Benchmark: Measuring and Reducing Malicious Use with Unlearning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "GwA4go0Mw4",
+            "title": "Representation Surgery: Theory and Practice of Affine Steering",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Ponnurangam Kumaraguru",
+          "Shashwat Singh"
+        ]
+      },
+      {
+        "institute": "IIT Roorkee",
+        "total_paper_count": 2,
+        "unique_paper_count": 1,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "s4Hy0L4mml",
+            "title": "MS-TIP: Imputation Aware Pedestrian Trajectory Prediction",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "OQ7TlOphGX",
+            "title": "Enhancing Trajectory Prediction through Self-Supervised Waypoint Distortion Prediction",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Achintya Nath",
+          "Ishu Gupta",
+          "Paritosh Kabra",
+          "Pravendra Singh"
+        ]
+      },
+      {
+        "institute": "Tata Consultancy Services",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "corporate",
+        "papers": [
+          {
+            "id": "7xzhKEPfBo",
+            "title": "Risk Estimation in a Markov Cost Process: Lower and Upper Bounds",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          ""
+        ]
+      },
+      {
+        "institute": "IIT Patna",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "8ySQaphUYH",
+            "title": "WISER: Weak Supervision and Supervised Representation Learning to Improve Drug Response Prediction in Cancer",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Syed Mohammed Danish"
+        ]
+      },
+      {
+        "institute": "IIT Delhi",
+        "total_paper_count": 1,
+        "unique_paper_count": 0,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "9QRcp2ubDt",
+            "title": "Centralized Selection with Preferences in the Presence of Biases",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Amit Kumar"
+        ]
+      },
+      {
+        "institute": "IIT Kharagpur",
+        "total_paper_count": 1,
+        "unique_paper_count": 0,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "E8FpcUyPuS",
+            "title": "Weakly Convex Regularisers for Inverse Problems: Convergence of Critical Points and Primal-Dual Optimisation",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Subhadip Mukherjee"
+        ]
+      },
+      {
+        "institute": "IIIT Delhi",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "RfQT6vJt8b",
+            "title": "How Far Can Fairness Constraints Help Recover From Biased Data?",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "mohit sharma"
+        ]
+      },
+      {
+        "institute": "IIT Hyderabad",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "bfQCO9Vqhk",
+            "title": "Submodular framework for structured-sparse optimal transport",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "",
+          "SakethaNath Jagarlapudi"
+        ]
+      },
+      {
+        "institute": "Ashoka University",
+        "total_paper_count": 1,
+        "unique_paper_count": 0,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "eqIGoEoI10",
+            "title": "Asymptotically Optimal and Computationally Efficient Average Treatment Effect Estimation in A/B testing",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Sandeep Kumar Juneja"
+        ]
+      },
+      {
+        "institute": "IBM Research - New Delhi",
+        "total_paper_count": 1,
+        "unique_paper_count": 0,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "corporate",
+        "papers": [
+          {
+            "id": "nxzXTLByXO",
+            "title": "BRAIn: Bayesian Reward-conditioned Amortized Inference for natural language generation from feedback",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Dinesh Raghu"
+        ]
+      }
+    ]
+  },
+  "configuration": {
+    "countryMap": {
+      "US": "United States",
+      "CN": "China",
+      "UK": "United Kingdom",
+      "IN": "India",
+      "JP": "Japan",
+      "DE": "Germany",
+      "FR": "France",
+      "CA": "Canada",
+      "KR": "South Korea",
+      "AU": "Australia",
+      "UNK": "Unknown"
+    },
+    "apacCountries": [
+      "CN",
+      "IN",
+      "JP",
+      "KR",
+      "AU",
+      "SG",
+      "MY",
+      "TH",
+      "VN",
+      "ID"
+    ],
+    "colorScheme": {
+      "us": "hsl(221, 83%, 53%)",
+      "cn": "hsl(0, 84%, 60%)",
+      "focusCountry": "hsl(36, 96%, 50%)",
+      "primary": "hsl(var(--primary))",
+      "secondary": "hsl(var(--secondary-foreground))",
+      "academic": "hsl(221, 83%, 53%)",
+      "corporate": "hsl(330, 80%, 60%)",
+      "spotlight": "hsl(48, 96%, 50%)",
+      "oral": "hsl(142, 71%, 45%)"
+    },
+    "dashboardTitle": "India @ ICML 2024",
+    "dashboardSubtitle": "India's Contributions, Global Context & Institutional Landscape",
+    "sections": {
+      "summary": {
+        "title": "Executive Summary: Impact at a Glance",
+        "insights": [
+          "India's ML researchers are making their mark with 27 papers at ICML 2024, including 1 spotlight and 0 oral presentations that demonstrate the quality of research.",
+          "Positioned globally, India contributes 1.0% to the body of work at ICML 2024.",
+          "Analysis of 17 first authorship and 8 majority authorship collaborations reveals trends in research leadership and international collaboration.",
+          "The India ML research landscape shows a mix of 12 academic and 2 corporate contributions, with leading institutions demonstrating significant research impact."
+        ]
+      },
+      "context": {
+        "title": "Global & APAC Context: India's Standing",
+        "subtitle": "Comparing India's research output with global and regional peers.",
+        "insights": [
+          "The top 5 contributing countries were: United States, China, GB, Germany, Unknown."
+        ]
+      },
+      "focusCountry": {
+        "title": "India Deep Dive",
+        "subtitle": "Analyzing authorship, collaboration, and institutional contributions.",
+        "insights": [
+          "India had 45 unique authors contributing to ICML 2024.",
+          "17 papers had a first author from India.",
+          "8 papers had a majority of authors from India."
+        ]
+      },
+      "institutions": {
+        "title": "Institutions: Internal Ecosystem",
+        "subtitle": "Analyzing the performance and impact of individual institutions within India.",
+        "insights": [
+          "Indian Institute of Science, Bangalore was the top contributing institution from India with 5 papers.",
+          "India had 12 academic and 2 corporate institutions contributing to ICML 2024."
+        ]
+      }
+    }
+  }
+}
