@@ -15,7 +15,8 @@ const V1Items = {
   Motivation: loadable(() => import("../v1/motivation")),
   Analytics: loadable(() => import("../v1/conference-analytics")),
   AnalyticsV2: loadable(() => import("../v1/conference-analytics-new")),
-  AnalyticsV3: loadable(() => import("../v1/conference-analytics-v3"))
+  AnalyticsV3: loadable(() => import("../v1/conference-analytics-v3")),
+  AnalyticsV4: loadable(() => import("../v1/dashboard-container"))
 };
 
 const AutoRedirectComponent = ({children}: {children: JSX.Element}) => {
@@ -48,6 +49,10 @@ export const router = createBrowserRouter([
       {
         path: "analytics-v3",
         element: <V1Items.AnalyticsV3 />,
+      },
+      {
+        path: "analytics-v4",
+        element: <V1Items.AnalyticsV4 />,
       },
       {
         path: "landing",

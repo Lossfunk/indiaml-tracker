@@ -1,3155 +1,2181 @@
 {
-  "conference": "ICLR",
-  "year": 2025,
-  "track": "Conference",
-  "total_accepted_papers": 3705,
-  "global": {
-    "paper_analytics": {
-      "countries": [
-        {
-          "affiliation_country": "US",
-          "paper_count": 1929,
-          "iso_code": "USA",
-          "country_name": "United States"
-        },
-        {
-          "affiliation_country": "CN",
-          "paper_count": 1308,
-          "iso_code": "CHN",
-          "country_name": "China"
-        },
-        {
-          "affiliation_country": "HK",
-          "paper_count": 294,
-          "iso_code": "HKG",
-          "country_name": "Hong Kong"
-        },
-        {
-          "affiliation_country": "GB",
-          "paper_count": 293,
-          "iso_code": "GBR",
-          "country_name": "United Kingdom"
-        },
-        {
-          "affiliation_country": "CA",
-          "paper_count": 255,
-          "iso_code": "CAN",
-          "country_name": "Canada"
-        },
-        {
-          "affiliation_country": "SG",
-          "paper_count": 248,
-          "iso_code": "SGP",
-          "country_name": "Singapore"
-        },
-        {
-          "affiliation_country": "DE",
-          "paper_count": 240,
-          "iso_code": "DEU",
-          "country_name": "Germany"
-        },
-        {
-          "affiliation_country": "KR",
-          "paper_count": 187,
-          "iso_code": "KOR",
-          "country_name": "Korea, Republic of"
-        },
-        {
-          "affiliation_country": "CH",
-          "paper_count": 178,
-          "iso_code": "CHE",
-          "country_name": "Switzerland"
-        },
-        {
-          "affiliation_country": "AU",
-          "paper_count": 127,
-          "iso_code": "AUS",
-          "country_name": "Australia"
-        },
-        {
-          "affiliation_country": "FR",
-          "paper_count": 120,
-          "iso_code": "FRA",
-          "country_name": "France"
-        },
-        {
-          "affiliation_country": "JP",
-          "paper_count": 119,
-          "iso_code": "JPN",
-          "country_name": "Japan"
-        },
-        {
-          "affiliation_country": "UK",
-          "paper_count": 103,
-          "iso_code": null,
-          "country_name": "UK"
-        },
-        {
-          "affiliation_country": "IL",
-          "paper_count": 71,
-          "iso_code": "ISR",
-          "country_name": "Israel"
-        },
-        {
-          "affiliation_country": "NL",
-          "paper_count": 70,
-          "iso_code": "NLD",
-          "country_name": "Netherlands"
-        },
-        {
-          "affiliation_country": "IN",
-          "paper_count": 49,
-          "iso_code": "IND",
-          "country_name": "India"
-        },
-        {
-          "affiliation_country": "IT",
-          "paper_count": 48,
-          "iso_code": "ITA",
-          "country_name": "Italy"
-        },
-        {
-          "affiliation_country": "AE",
-          "paper_count": 48,
-          "iso_code": "ARE",
-          "country_name": "United Arab Emirates"
-        },
-        {
-          "affiliation_country": "AI",
-          "paper_count": 40,
-          "iso_code": "AIA",
-          "country_name": "Anguilla"
-        },
-        {
-          "affiliation_country": "AT",
-          "paper_count": 35,
-          "iso_code": "AUT",
-          "country_name": "Austria"
-        },
-        {
-          "affiliation_country": "TW",
-          "paper_count": 32,
-          "iso_code": "TWN",
-          "country_name": "Taiwan, Province of China"
-        },
-        {
-          "affiliation_country": "SE",
-          "paper_count": 28,
-          "iso_code": "SWE",
-          "country_name": "Sweden"
-        },
-        {
-          "affiliation_country": "DK",
-          "paper_count": 27,
-          "iso_code": "DNK",
-          "country_name": "Denmark"
-        },
-        {
-          "affiliation_country": "SA",
-          "paper_count": 25,
-          "iso_code": "SAU",
-          "country_name": "Saudi Arabia"
-        },
-        {
-          "affiliation_country": "RU",
-          "paper_count": 22,
-          "iso_code": "RUS",
-          "country_name": "Russian Federation"
-        },
-        {
-          "affiliation_country": "BE",
-          "paper_count": 19,
-          "iso_code": "BEL",
-          "country_name": "Belgium"
-        },
-        {
-          "affiliation_country": "VN",
-          "paper_count": 18,
-          "iso_code": "VNM",
-          "country_name": "Viet Nam"
-        },
-        {
-          "affiliation_country": "ES",
-          "paper_count": 18,
-          "iso_code": "ESP",
-          "country_name": "Spain"
-        },
-        {
-          "affiliation_country": "FI",
-          "paper_count": 17,
-          "iso_code": "FIN",
-          "country_name": "Finland"
-        },
-        {
-          "affiliation_country": "PL",
-          "paper_count": 10,
-          "iso_code": "POL",
-          "country_name": "Poland"
-        },
-        {
-          "affiliation_country": "MO",
-          "paper_count": 10,
-          "iso_code": "MAC",
-          "country_name": "Macao"
-        },
-        {
-          "affiliation_country": "NO",
-          "paper_count": 8,
-          "iso_code": "NOR",
-          "country_name": "Norway"
-        },
-        {
-          "affiliation_country": "IE",
-          "paper_count": 7,
-          "iso_code": "IRL",
-          "country_name": "Ireland"
-        },
-        {
-          "affiliation_country": "CZ",
-          "paper_count": 7,
-          "iso_code": "CZE",
-          "country_name": "Czechia"
-        },
-        {
-          "affiliation_country": "IR",
-          "paper_count": 6,
-          "iso_code": "IRN",
-          "country_name": "Iran, Islamic Republic of"
-        },
-        {
-          "affiliation_country": "TR",
-          "paper_count": 5,
-          "iso_code": "TUR",
-          "country_name": "T\u00fcrkiye"
-        },
-        {
-          "affiliation_country": "LU",
-          "paper_count": 4,
-          "iso_code": "LUX",
-          "country_name": "Luxembourg"
-        },
-        {
-          "affiliation_country": "GR",
-          "paper_count": 4,
-          "iso_code": "GRC",
-          "country_name": "Greece"
-        },
-        {
-          "affiliation_country": "BR",
-          "paper_count": 4,
-          "iso_code": "BRA",
-          "country_name": "Brazil"
-        },
-        {
-          "affiliation_country": "BG",
-          "paper_count": 4,
-          "iso_code": "BGR",
-          "country_name": "Bulgaria"
-        },
-        {
-          "affiliation_country": "ZA",
-          "paper_count": 3,
-          "iso_code": "ZAF",
-          "country_name": "South Africa"
-        },
-        {
-          "affiliation_country": "PT",
-          "paper_count": 3,
-          "iso_code": "PRT",
-          "country_name": "Portugal"
-        },
-        {
-          "affiliation_country": "KP",
-          "paper_count": 3,
-          "iso_code": "PRK",
-          "country_name": "Korea, Democratic People's Republic of"
-        },
-        {
-          "affiliation_country": "CO",
-          "paper_count": 3,
-          "iso_code": "COL",
-          "country_name": "Colombia"
-        },
-        {
-          "affiliation_country": "AM",
-          "paper_count": 3,
-          "iso_code": "ARM",
-          "country_name": "Armenia"
-        },
-        {
-          "affiliation_country": "ZW",
-          "paper_count": 2,
-          "iso_code": "ZWE",
-          "country_name": "Zimbabwe"
-        },
-        {
-          "affiliation_country": "USA",
-          "paper_count": 2,
-          "iso_code": null,
-          "country_name": "USA"
-        },
-        {
-          "affiliation_country": "TD",
-          "paper_count": 2,
-          "iso_code": "TCD",
-          "country_name": "Chad"
-        },
-        {
-          "affiliation_country": "SK",
-          "paper_count": 2,
-          "iso_code": "SVK",
-          "country_name": "Slovakia"
-        },
-        {
-          "affiliation_country": "NZ",
-          "paper_count": 2,
-          "iso_code": "NZL",
-          "country_name": "New Zealand"
-        },
-        {
-          "affiliation_country": "IO",
-          "paper_count": 2,
-          "iso_code": "IOT",
-          "country_name": "British Indian Ocean Territory"
-        },
-        {
-          "affiliation_country": "ID",
-          "paper_count": 2,
-          "iso_code": "IDN",
-          "country_name": "Indonesia"
-        },
-        {
-          "affiliation_country": "BD",
-          "paper_count": 2,
-          "iso_code": "BGD",
-          "country_name": "Bangladesh"
-        },
-        {
-          "affiliation_country": "AL",
-          "paper_count": 2,
-          "iso_code": "ALB",
-          "country_name": "Albania"
-        },
-        {
-          "affiliation_country": "US, DE",
-          "paper_count": 1,
-          "iso_code": null,
-          "country_name": "US, DE"
-        },
-        {
-          "affiliation_country": "UA",
-          "paper_count": 1,
-          "iso_code": "UKR",
-          "country_name": "Ukraine"
-        },
-        {
-          "affiliation_country": "South Korea",
-          "paper_count": 1,
-          "iso_code": null,
-          "country_name": "South Korea"
-        },
-        {
-          "affiliation_country": "SI",
-          "paper_count": 1,
-          "iso_code": "SVN",
-          "country_name": "Slovenia"
-        },
-        {
-          "affiliation_country": "RW",
-          "paper_count": 1,
-          "iso_code": "RWA",
-          "country_name": "Rwanda"
-        },
-        {
-          "affiliation_country": "QA",
-          "paper_count": 1,
-          "iso_code": "QAT",
-          "country_name": "Qatar"
-        },
-        {
-          "affiliation_country": "PH",
-          "paper_count": 1,
-          "iso_code": "PHL",
-          "country_name": "Philippines"
-        },
-        {
-          "affiliation_country": "PE",
-          "paper_count": 1,
-          "iso_code": "PER",
-          "country_name": "Peru"
-        },
-        {
-          "affiliation_country": "NP",
-          "paper_count": 1,
-          "iso_code": "NPL",
-          "country_name": "Nepal"
-        },
-        {
-          "affiliation_country": "MY",
-          "paper_count": 1,
-          "iso_code": "MYS",
-          "country_name": "Malaysia"
-        },
-        {
-          "affiliation_country": "MX",
-          "paper_count": 1,
-          "iso_code": "MEX",
-          "country_name": "Mexico"
-        },
-        {
-          "affiliation_country": "MA",
-          "paper_count": 1,
-          "iso_code": "MAR",
-          "country_name": "Morocco"
-        },
-        {
-          "affiliation_country": "LT",
-          "paper_count": 1,
-          "iso_code": "LTU",
-          "country_name": "Lithuania"
-        },
-        {
-          "affiliation_country": "HU",
-          "paper_count": 1,
-          "iso_code": "HUN",
-          "country_name": "Hungary"
-        },
-        {
-          "affiliation_country": "EU",
-          "paper_count": 1,
-          "iso_code": null,
-          "country_name": "EU"
-        },
-        {
-          "affiliation_country": "EE",
-          "paper_count": 1,
-          "iso_code": "EST",
-          "country_name": "Estonia"
-        },
-        {
-          "affiliation_country": "Canada",
-          "paper_count": 1,
-          "iso_code": null,
-          "country_name": "Canada"
-        },
-        {
-          "affiliation_country": "CX",
-          "paper_count": 1,
-          "iso_code": "CXR",
-          "country_name": "Christmas Island"
-        },
-        {
-          "affiliation_country": "CL",
-          "paper_count": 1,
-          "iso_code": "CHL",
-          "country_name": "Chile"
-        },
-        {
-          "affiliation_country": "AU; SG",
-          "paper_count": 1,
-          "iso_code": null,
-          "country_name": "AU; SG"
-        },
-        {
-          "affiliation_country": "AF",
-          "paper_count": 1,
-          "iso_code": "AFG",
-          "country_name": "Afghanistan"
-        }
-      ]
-    },
-    "author_analytics": {
-      "at_least_one_author": {
-        "countries": [
-          {
-            "affiliation_country": "US",
-            "paper_count": 1929,
-            "iso_code": "USA",
-            "country_name": "United States"
-          },
-          {
-            "affiliation_country": "CN",
-            "paper_count": 1308,
-            "iso_code": "CHN",
-            "country_name": "China"
-          },
-          {
-            "affiliation_country": "HK",
-            "paper_count": 294,
-            "iso_code": "HKG",
-            "country_name": "Hong Kong"
-          },
-          {
-            "affiliation_country": "GB",
-            "paper_count": 293,
-            "iso_code": "GBR",
-            "country_name": "United Kingdom"
-          },
-          {
-            "affiliation_country": "CA",
-            "paper_count": 255,
-            "iso_code": "CAN",
-            "country_name": "Canada"
-          },
-          {
-            "affiliation_country": "SG",
-            "paper_count": 248,
-            "iso_code": "SGP",
-            "country_name": "Singapore"
-          },
-          {
-            "affiliation_country": "DE",
-            "paper_count": 240,
-            "iso_code": "DEU",
-            "country_name": "Germany"
-          },
-          {
-            "affiliation_country": "KR",
-            "paper_count": 187,
-            "iso_code": "KOR",
-            "country_name": "Korea, Republic of"
-          },
-          {
-            "affiliation_country": "CH",
-            "paper_count": 178,
-            "iso_code": "CHE",
-            "country_name": "Switzerland"
-          },
-          {
-            "affiliation_country": "AU",
-            "paper_count": 127,
-            "iso_code": "AUS",
-            "country_name": "Australia"
-          },
-          {
-            "affiliation_country": "FR",
-            "paper_count": 120,
-            "iso_code": "FRA",
-            "country_name": "France"
-          },
-          {
-            "affiliation_country": "JP",
-            "paper_count": 119,
-            "iso_code": "JPN",
-            "country_name": "Japan"
-          },
-          {
-            "affiliation_country": "UK",
-            "paper_count": 103,
-            "iso_code": null,
-            "country_name": "UK"
-          },
-          {
-            "affiliation_country": "IL",
-            "paper_count": 71,
-            "iso_code": "ISR",
-            "country_name": "Israel"
-          },
-          {
-            "affiliation_country": "NL",
-            "paper_count": 70,
-            "iso_code": "NLD",
-            "country_name": "Netherlands"
-          },
-          {
-            "affiliation_country": "IN",
-            "paper_count": 50,
-            "iso_code": "IND",
-            "country_name": "India"
-          },
-          {
-            "affiliation_country": "IT",
-            "paper_count": 48,
-            "iso_code": "ITA",
-            "country_name": "Italy"
-          },
-          {
-            "affiliation_country": "AE",
-            "paper_count": 48,
-            "iso_code": "ARE",
-            "country_name": "United Arab Emirates"
-          },
-          {
-            "affiliation_country": "AI",
-            "paper_count": 40,
-            "iso_code": "AIA",
-            "country_name": "Anguilla"
-          },
-          {
-            "affiliation_country": "AT",
-            "paper_count": 35,
-            "iso_code": "AUT",
-            "country_name": "Austria"
-          },
-          {
-            "affiliation_country": "TW",
-            "paper_count": 32,
-            "iso_code": "TWN",
-            "country_name": "Taiwan, Province of China"
-          },
-          {
-            "affiliation_country": "SE",
-            "paper_count": 28,
-            "iso_code": "SWE",
-            "country_name": "Sweden"
-          },
-          {
-            "affiliation_country": "DK",
-            "paper_count": 27,
-            "iso_code": "DNK",
-            "country_name": "Denmark"
-          },
-          {
-            "affiliation_country": "SA",
-            "paper_count": 25,
-            "iso_code": "SAU",
-            "country_name": "Saudi Arabia"
-          },
-          {
-            "affiliation_country": "RU",
-            "paper_count": 22,
-            "iso_code": "RUS",
-            "country_name": "Russian Federation"
-          },
-          {
-            "affiliation_country": "BE",
-            "paper_count": 19,
-            "iso_code": "BEL",
-            "country_name": "Belgium"
-          },
-          {
-            "affiliation_country": "VN",
-            "paper_count": 18,
-            "iso_code": "VNM",
-            "country_name": "Viet Nam"
-          },
-          {
-            "affiliation_country": "ES",
-            "paper_count": 18,
-            "iso_code": "ESP",
-            "country_name": "Spain"
-          },
-          {
-            "affiliation_country": "FI",
-            "paper_count": 17,
-            "iso_code": "FIN",
-            "country_name": "Finland"
-          },
-          {
-            "affiliation_country": "PL",
-            "paper_count": 10,
-            "iso_code": "POL",
-            "country_name": "Poland"
-          },
-          {
-            "affiliation_country": "MO",
-            "paper_count": 10,
-            "iso_code": "MAC",
-            "country_name": "Macao"
-          },
-          {
-            "affiliation_country": "NO",
-            "paper_count": 8,
-            "iso_code": "NOR",
-            "country_name": "Norway"
-          },
-          {
-            "affiliation_country": "IE",
-            "paper_count": 7,
-            "iso_code": "IRL",
-            "country_name": "Ireland"
-          },
-          {
-            "affiliation_country": "CZ",
-            "paper_count": 7,
-            "iso_code": "CZE",
-            "country_name": "Czechia"
-          },
-          {
-            "affiliation_country": "IR",
-            "paper_count": 6,
-            "iso_code": "IRN",
-            "country_name": "Iran, Islamic Republic of"
-          },
-          {
-            "affiliation_country": "TR",
-            "paper_count": 5,
-            "iso_code": "TUR",
-            "country_name": "T\u00fcrkiye"
-          },
-          {
-            "affiliation_country": "LU",
-            "paper_count": 4,
-            "iso_code": "LUX",
-            "country_name": "Luxembourg"
-          },
-          {
-            "affiliation_country": "GR",
-            "paper_count": 4,
-            "iso_code": "GRC",
-            "country_name": "Greece"
-          },
-          {
-            "affiliation_country": "BR",
-            "paper_count": 4,
-            "iso_code": "BRA",
-            "country_name": "Brazil"
-          },
-          {
-            "affiliation_country": "BG",
-            "paper_count": 4,
-            "iso_code": "BGR",
-            "country_name": "Bulgaria"
-          },
-          {
-            "affiliation_country": "ZA",
-            "paper_count": 3,
-            "iso_code": "ZAF",
-            "country_name": "South Africa"
-          },
-          {
-            "affiliation_country": "PT",
-            "paper_count": 3,
-            "iso_code": "PRT",
-            "country_name": "Portugal"
-          },
-          {
-            "affiliation_country": "KP",
-            "paper_count": 3,
-            "iso_code": "PRK",
-            "country_name": "Korea, Democratic People's Republic of"
-          },
-          {
-            "affiliation_country": "CO",
-            "paper_count": 3,
-            "iso_code": "COL",
-            "country_name": "Colombia"
-          },
-          {
-            "affiliation_country": "AM",
-            "paper_count": 3,
-            "iso_code": "ARM",
-            "country_name": "Armenia"
-          },
-          {
-            "affiliation_country": "ZW",
-            "paper_count": 2,
-            "iso_code": "ZWE",
-            "country_name": "Zimbabwe"
-          },
-          {
-            "affiliation_country": "USA",
-            "paper_count": 2,
-            "iso_code": null,
-            "country_name": "USA"
-          },
-          {
-            "affiliation_country": "TD",
-            "paper_count": 2,
-            "iso_code": "TCD",
-            "country_name": "Chad"
-          },
-          {
-            "affiliation_country": "SK",
-            "paper_count": 2,
-            "iso_code": "SVK",
-            "country_name": "Slovakia"
-          },
-          {
-            "affiliation_country": "NZ",
-            "paper_count": 2,
-            "iso_code": "NZL",
-            "country_name": "New Zealand"
-          },
-          {
-            "affiliation_country": "IO",
-            "paper_count": 2,
-            "iso_code": "IOT",
-            "country_name": "British Indian Ocean Territory"
-          },
-          {
-            "affiliation_country": "ID",
-            "paper_count": 2,
-            "iso_code": "IDN",
-            "country_name": "Indonesia"
-          },
-          {
-            "affiliation_country": "BD",
-            "paper_count": 2,
-            "iso_code": "BGD",
-            "country_name": "Bangladesh"
-          },
-          {
-            "affiliation_country": "AL",
-            "paper_count": 2,
-            "iso_code": "ALB",
-            "country_name": "Albania"
-          },
-          {
-            "affiliation_country": "US, DE",
-            "paper_count": 1,
-            "iso_code": null,
-            "country_name": "US, DE"
-          },
-          {
-            "affiliation_country": "UA",
-            "paper_count": 1,
-            "iso_code": "UKR",
-            "country_name": "Ukraine"
-          },
-          {
-            "affiliation_country": "South Korea",
-            "paper_count": 1,
-            "iso_code": null,
-            "country_name": "South Korea"
-          },
-          {
-            "affiliation_country": "SI",
-            "paper_count": 1,
-            "iso_code": "SVN",
-            "country_name": "Slovenia"
-          },
-          {
-            "affiliation_country": "RW",
-            "paper_count": 1,
-            "iso_code": "RWA",
-            "country_name": "Rwanda"
-          },
-          {
-            "affiliation_country": "QA",
-            "paper_count": 1,
-            "iso_code": "QAT",
-            "country_name": "Qatar"
-          },
-          {
-            "affiliation_country": "PH",
-            "paper_count": 1,
-            "iso_code": "PHL",
-            "country_name": "Philippines"
-          },
-          {
-            "affiliation_country": "PE",
-            "paper_count": 1,
-            "iso_code": "PER",
-            "country_name": "Peru"
-          },
-          {
-            "affiliation_country": "NP",
-            "paper_count": 1,
-            "iso_code": "NPL",
-            "country_name": "Nepal"
-          },
-          {
-            "affiliation_country": "MY",
-            "paper_count": 1,
-            "iso_code": "MYS",
-            "country_name": "Malaysia"
-          },
-          {
-            "affiliation_country": "MX",
-            "paper_count": 1,
-            "iso_code": "MEX",
-            "country_name": "Mexico"
-          },
-          {
-            "affiliation_country": "MA",
-            "paper_count": 1,
-            "iso_code": "MAR",
-            "country_name": "Morocco"
-          },
-          {
-            "affiliation_country": "LT",
-            "paper_count": 1,
-            "iso_code": "LTU",
-            "country_name": "Lithuania"
-          },
-          {
-            "affiliation_country": "HU",
-            "paper_count": 1,
-            "iso_code": "HUN",
-            "country_name": "Hungary"
-          },
-          {
-            "affiliation_country": "EU",
-            "paper_count": 1,
-            "iso_code": null,
-            "country_name": "EU"
-          },
-          {
-            "affiliation_country": "EE",
-            "paper_count": 1,
-            "iso_code": "EST",
-            "country_name": "Estonia"
-          },
-          {
-            "affiliation_country": "Canada",
-            "paper_count": 1,
-            "iso_code": null,
-            "country_name": "Canada"
-          },
-          {
-            "affiliation_country": "CX",
-            "paper_count": 1,
-            "iso_code": "CXR",
-            "country_name": "Christmas Island"
-          },
-          {
-            "affiliation_country": "CL",
-            "paper_count": 1,
-            "iso_code": "CHL",
-            "country_name": "Chile"
-          },
-          {
-            "affiliation_country": "AU; SG",
-            "paper_count": 1,
-            "iso_code": null,
-            "country_name": "AU; SG"
-          },
-          {
-            "affiliation_country": "AF",
-            "paper_count": 1,
-            "iso_code": "AFG",
-            "country_name": "Afghanistan"
-          }
-        ]
-      },
-      "authors_by_country": {
-        "countries": [
-          {
-            "affiliation_country": "US",
-            "author_count": 5347,
-            "iso_code": "USA",
-            "country_name": "United States"
-          },
-          {
-            "affiliation_country": "CN",
-            "author_count": 4425,
-            "iso_code": "CHN",
-            "country_name": "China"
-          },
-          {
-            "affiliation_country": "KR",
-            "author_count": 499,
-            "iso_code": "KOR",
-            "country_name": "Korea, Republic of"
-          },
-          {
-            "affiliation_country": "DE",
-            "author_count": 478,
-            "iso_code": "DEU",
-            "country_name": "Germany"
-          },
-          {
-            "affiliation_country": "CA",
-            "author_count": 465,
-            "iso_code": "CAN",
-            "country_name": "Canada"
-          },
-          {
-            "affiliation_country": "GB",
-            "author_count": 445,
-            "iso_code": "GBR",
-            "country_name": "United Kingdom"
-          },
-          {
-            "affiliation_country": "HK",
-            "author_count": 409,
-            "iso_code": "HKG",
-            "country_name": "Hong Kong"
-          },
-          {
-            "affiliation_country": "SG",
-            "author_count": 401,
-            "iso_code": "SGP",
-            "country_name": "Singapore"
-          },
-          {
-            "affiliation_country": "CH",
-            "author_count": 315,
-            "iso_code": "CHE",
-            "country_name": "Switzerland"
-          },
-          {
-            "affiliation_country": "FR",
-            "author_count": 235,
-            "iso_code": "FRA",
-            "country_name": "France"
-          },
-          {
-            "affiliation_country": "JP",
-            "author_count": 223,
-            "iso_code": "JPN",
-            "country_name": "Japan"
-          },
-          {
-            "affiliation_country": "AU",
-            "author_count": 198,
-            "iso_code": "AUS",
-            "country_name": "Australia"
-          },
-          {
-            "affiliation_country": "IL",
-            "author_count": 195,
-            "iso_code": "ISR",
-            "country_name": "Israel"
-          },
-          {
-            "affiliation_country": "TW",
-            "author_count": 119,
-            "iso_code": "TWN",
-            "country_name": "Taiwan, Province of China"
-          },
-          {
-            "affiliation_country": "UK",
-            "author_count": 115,
-            "iso_code": null,
-            "country_name": "UK"
-          },
-          {
-            "affiliation_country": "IN",
-            "author_count": 114,
-            "iso_code": "IND",
-            "country_name": "India"
-          },
-          {
-            "affiliation_country": "NL",
-            "author_count": 111,
-            "iso_code": "NLD",
-            "country_name": "Netherlands"
-          },
-          {
-            "affiliation_country": "IT",
-            "author_count": 110,
-            "iso_code": "ITA",
-            "country_name": "Italy"
-          },
-          {
-            "affiliation_country": "AT",
-            "author_count": 73,
-            "iso_code": "AUT",
-            "country_name": "Austria"
-          },
-          {
-            "affiliation_country": "RU",
-            "author_count": 61,
-            "iso_code": "RUS",
-            "country_name": "Russian Federation"
-          },
-          {
-            "affiliation_country": "SE",
-            "author_count": 60,
-            "iso_code": "SWE",
-            "country_name": "Sweden"
-          },
-          {
-            "affiliation_country": "SA",
-            "author_count": 57,
-            "iso_code": "SAU",
-            "country_name": "Saudi Arabia"
-          },
-          {
-            "affiliation_country": "AE",
-            "author_count": 55,
-            "iso_code": "ARE",
-            "country_name": "United Arab Emirates"
-          },
-          {
-            "affiliation_country": "AI",
-            "author_count": 48,
-            "iso_code": "AIA",
-            "country_name": "Anguilla"
-          },
-          {
-            "affiliation_country": "DK",
-            "author_count": 39,
-            "iso_code": "DNK",
-            "country_name": "Denmark"
-          },
-          {
-            "affiliation_country": "VN",
-            "author_count": 38,
-            "iso_code": "VNM",
-            "country_name": "Viet Nam"
-          },
-          {
-            "affiliation_country": "ES",
-            "author_count": 35,
-            "iso_code": "ESP",
-            "country_name": "Spain"
-          },
-          {
-            "affiliation_country": "FI",
-            "author_count": 32,
-            "iso_code": "FIN",
-            "country_name": "Finland"
-          },
-          {
-            "affiliation_country": "BE",
-            "author_count": 26,
-            "iso_code": "BEL",
-            "country_name": "Belgium"
-          },
-          {
-            "affiliation_country": "PL",
-            "author_count": 23,
-            "iso_code": "POL",
-            "country_name": "Poland"
-          },
-          {
-            "affiliation_country": "CZ",
-            "author_count": 19,
-            "iso_code": "CZE",
-            "country_name": "Czechia"
-          },
-          {
-            "affiliation_country": "IE",
-            "author_count": 13,
-            "iso_code": "IRL",
-            "country_name": "Ireland"
-          },
-          {
-            "affiliation_country": "MO",
-            "author_count": 10,
-            "iso_code": "MAC",
-            "country_name": "Macao"
-          },
-          {
-            "affiliation_country": "IR",
-            "author_count": 10,
-            "iso_code": "IRN",
-            "country_name": "Iran, Islamic Republic of"
-          },
-          {
-            "affiliation_country": "TR",
-            "author_count": 8,
-            "iso_code": "TUR",
-            "country_name": "T\u00fcrkiye"
-          },
-          {
-            "affiliation_country": "NO",
-            "author_count": 8,
-            "iso_code": "NOR",
-            "country_name": "Norway"
-          },
-          {
-            "affiliation_country": "BG",
-            "author_count": 8,
-            "iso_code": "BGR",
-            "country_name": "Bulgaria"
-          },
-          {
-            "affiliation_country": "NZ",
-            "author_count": 7,
-            "iso_code": "NZL",
-            "country_name": "New Zealand"
-          },
-          {
-            "affiliation_country": "BR",
-            "author_count": 6,
-            "iso_code": "BRA",
-            "country_name": "Brazil"
-          },
-          {
-            "affiliation_country": "AM",
-            "author_count": 6,
-            "iso_code": "ARM",
-            "country_name": "Armenia"
-          },
-          {
-            "affiliation_country": "PT",
-            "author_count": 5,
-            "iso_code": "PRT",
-            "country_name": "Portugal"
-          },
-          {
-            "affiliation_country": "GR",
-            "author_count": 5,
-            "iso_code": "GRC",
-            "country_name": "Greece"
-          },
-          {
-            "affiliation_country": "ZA",
-            "author_count": 4,
-            "iso_code": "ZAF",
-            "country_name": "South Africa"
-          },
-          {
-            "affiliation_country": "LU",
-            "author_count": 4,
-            "iso_code": "LUX",
-            "country_name": "Luxembourg"
-          },
-          {
-            "affiliation_country": "SK",
-            "author_count": 3,
-            "iso_code": "SVK",
-            "country_name": "Slovakia"
-          },
-          {
-            "affiliation_country": "KP",
-            "author_count": 3,
-            "iso_code": "PRK",
-            "country_name": "Korea, Democratic People's Republic of"
-          },
-          {
-            "affiliation_country": "ID",
-            "author_count": 3,
-            "iso_code": "IDN",
-            "country_name": "Indonesia"
-          },
-          {
-            "affiliation_country": "HU",
-            "author_count": 3,
-            "iso_code": "HUN",
-            "country_name": "Hungary"
-          },
-          {
-            "affiliation_country": "USA",
-            "author_count": 2,
-            "iso_code": null,
-            "country_name": "USA"
-          },
-          {
-            "affiliation_country": "RW",
-            "author_count": 2,
-            "iso_code": "RWA",
-            "country_name": "Rwanda"
-          },
-          {
-            "affiliation_country": "PH",
-            "author_count": 2,
-            "iso_code": "PHL",
-            "country_name": "Philippines"
-          },
-          {
-            "affiliation_country": "MA",
-            "author_count": 2,
-            "iso_code": "MAR",
-            "country_name": "Morocco"
-          },
-          {
-            "affiliation_country": "IO",
-            "author_count": 2,
-            "iso_code": "IOT",
-            "country_name": "British Indian Ocean Territory"
-          },
-          {
-            "affiliation_country": "CO",
-            "author_count": 2,
-            "iso_code": "COL",
-            "country_name": "Colombia"
-          },
-          {
-            "affiliation_country": "BD",
-            "author_count": 2,
-            "iso_code": "BGD",
-            "country_name": "Bangladesh"
-          },
-          {
-            "affiliation_country": "AL",
-            "author_count": 2,
-            "iso_code": "ALB",
-            "country_name": "Albania"
-          },
-          {
-            "affiliation_country": "ZW",
-            "author_count": 1,
-            "iso_code": "ZWE",
-            "country_name": "Zimbabwe"
-          },
-          {
-            "affiliation_country": "US, DE",
-            "author_count": 1,
-            "iso_code": null,
-            "country_name": "US, DE"
-          },
-          {
-            "affiliation_country": "UA",
-            "author_count": 1,
-            "iso_code": "UKR",
-            "country_name": "Ukraine"
-          },
-          {
-            "affiliation_country": "TD",
-            "author_count": 1,
-            "iso_code": "TCD",
-            "country_name": "Chad"
-          },
-          {
-            "affiliation_country": "South Korea",
-            "author_count": 1,
-            "iso_code": null,
-            "country_name": "South Korea"
-          },
-          {
-            "affiliation_country": "SI",
-            "author_count": 1,
-            "iso_code": "SVN",
-            "country_name": "Slovenia"
-          },
-          {
-            "affiliation_country": "QA",
-            "author_count": 1,
-            "iso_code": "QAT",
-            "country_name": "Qatar"
-          },
-          {
-            "affiliation_country": "PE",
-            "author_count": 1,
-            "iso_code": "PER",
-            "country_name": "Peru"
-          },
-          {
-            "affiliation_country": "NP",
-            "author_count": 1,
-            "iso_code": "NPL",
-            "country_name": "Nepal"
-          },
-          {
-            "affiliation_country": "MY",
-            "author_count": 1,
-            "iso_code": "MYS",
-            "country_name": "Malaysia"
-          },
-          {
-            "affiliation_country": "MX",
-            "author_count": 1,
-            "iso_code": "MEX",
-            "country_name": "Mexico"
-          },
-          {
-            "affiliation_country": "LT",
-            "author_count": 1,
-            "iso_code": "LTU",
-            "country_name": "Lithuania"
-          },
-          {
-            "affiliation_country": "EU",
-            "author_count": 1,
-            "iso_code": null,
-            "country_name": "EU"
-          },
-          {
-            "affiliation_country": "EE",
-            "author_count": 1,
-            "iso_code": "EST",
-            "country_name": "Estonia"
-          },
-          {
-            "affiliation_country": "Canada",
-            "author_count": 1,
-            "iso_code": null,
-            "country_name": "Canada"
-          },
-          {
-            "affiliation_country": "CX",
-            "author_count": 1,
-            "iso_code": "CXR",
-            "country_name": "Christmas Island"
-          },
-          {
-            "affiliation_country": "CL",
-            "author_count": 1,
-            "iso_code": "CHL",
-            "country_name": "Chile"
-          },
-          {
-            "affiliation_country": "AU; SG",
-            "author_count": 1,
-            "iso_code": null,
-            "country_name": "AU; SG"
-          },
-          {
-            "affiliation_country": "AF",
-            "author_count": 1,
-            "iso_code": "AFG",
-            "country_name": "Afghanistan"
-          }
-        ]
-      },
-      "first_author": {
-        "countries": [
-          {
-            "affiliation_country": "US",
-            "paper_count": 1285,
-            "iso_code": "USA",
-            "country_name": "United States"
-          },
-          {
-            "affiliation_country": "CN",
-            "paper_count": 950,
-            "iso_code": "CHN",
-            "country_name": "China"
-          },
-          {
-            "affiliation_country": "KR",
-            "paper_count": 159,
-            "iso_code": "KOR",
-            "country_name": "Korea, Republic of"
-          },
-          {
-            "affiliation_country": "DE",
-            "paper_count": 150,
-            "iso_code": "DEU",
-            "country_name": "Germany"
-          },
-          {
-            "affiliation_country": "HK",
-            "paper_count": 136,
-            "iso_code": "HKG",
-            "country_name": "Hong Kong"
-          },
-          {
-            "affiliation_country": "SG",
-            "paper_count": 130,
-            "iso_code": "SGP",
-            "country_name": "Singapore"
-          },
-          {
-            "affiliation_country": "CA",
-            "paper_count": 121,
-            "iso_code": "CAN",
-            "country_name": "Canada"
-          },
-          {
-            "affiliation_country": "GB",
-            "paper_count": 100,
-            "iso_code": "GBR",
-            "country_name": "United Kingdom"
-          },
-          {
-            "affiliation_country": "CH",
-            "paper_count": 96,
-            "iso_code": "CHE",
-            "country_name": "Switzerland"
-          },
-          {
-            "affiliation_country": "FR",
-            "paper_count": 64,
-            "iso_code": "FRA",
-            "country_name": "France"
-          },
-          {
-            "affiliation_country": "JP",
-            "paper_count": 63,
-            "iso_code": "JPN",
-            "country_name": "Japan"
-          },
-          {
-            "affiliation_country": "AU",
-            "paper_count": 60,
-            "iso_code": "AUS",
-            "country_name": "Australia"
-          },
-          {
-            "affiliation_country": "IL",
-            "paper_count": 49,
-            "iso_code": "ISR",
-            "country_name": "Israel"
-          },
-          {
-            "affiliation_country": "UK",
-            "paper_count": 34,
-            "iso_code": null,
-            "country_name": "UK"
-          },
-          {
-            "affiliation_country": "NL",
-            "paper_count": 33,
-            "iso_code": "NLD",
-            "country_name": "Netherlands"
-          },
-          {
-            "affiliation_country": "IN",
-            "paper_count": 26,
-            "iso_code": "IND",
-            "country_name": "India"
-          },
-          {
-            "affiliation_country": "IT",
-            "paper_count": 25,
-            "iso_code": "ITA",
-            "country_name": "Italy"
-          },
-          {
-            "affiliation_country": "AE",
-            "paper_count": 18,
-            "iso_code": "ARE",
-            "country_name": "United Arab Emirates"
-          },
-          {
-            "affiliation_country": "AT",
-            "paper_count": 17,
-            "iso_code": "AUT",
-            "country_name": "Austria"
-          },
-          {
-            "affiliation_country": "TW",
-            "paper_count": 16,
-            "iso_code": "TWN",
-            "country_name": "Taiwan, Province of China"
-          },
-          {
-            "affiliation_country": "SE",
-            "paper_count": 16,
-            "iso_code": "SWE",
-            "country_name": "Sweden"
-          },
-          {
-            "affiliation_country": "RU",
-            "paper_count": 15,
-            "iso_code": "RUS",
-            "country_name": "Russian Federation"
-          },
-          {
-            "affiliation_country": "FI",
-            "paper_count": 13,
-            "iso_code": "FIN",
-            "country_name": "Finland"
-          },
-          {
-            "affiliation_country": "SA",
-            "paper_count": 12,
-            "iso_code": "SAU",
-            "country_name": "Saudi Arabia"
-          },
-          {
-            "affiliation_country": "ES",
-            "paper_count": 8,
-            "iso_code": "ESP",
-            "country_name": "Spain"
-          },
-          {
-            "affiliation_country": "BE",
-            "paper_count": 8,
-            "iso_code": "BEL",
-            "country_name": "Belgium"
-          },
-          {
-            "affiliation_country": "VN",
-            "paper_count": 7,
-            "iso_code": "VNM",
-            "country_name": "Viet Nam"
-          },
-          {
-            "affiliation_country": "DK",
-            "paper_count": 7,
-            "iso_code": "DNK",
-            "country_name": "Denmark"
-          },
-          {
-            "affiliation_country": "PL",
-            "paper_count": 6,
-            "iso_code": "POL",
-            "country_name": "Poland"
-          },
-          {
-            "affiliation_country": "CZ",
-            "paper_count": 6,
-            "iso_code": "CZE",
-            "country_name": "Czechia"
-          },
-          {
-            "affiliation_country": "AI",
-            "paper_count": 6,
-            "iso_code": "AIA",
-            "country_name": "Anguilla"
-          },
-          {
-            "affiliation_country": "TR",
-            "paper_count": 3,
-            "iso_code": "TUR",
-            "country_name": "T\u00fcrkiye"
-          },
-          {
-            "affiliation_country": "IR",
-            "paper_count": 3,
-            "iso_code": "IRN",
-            "country_name": "Iran, Islamic Republic of"
-          },
-          {
-            "affiliation_country": "ZA",
-            "paper_count": 2,
-            "iso_code": "ZAF",
-            "country_name": "South Africa"
-          },
-          {
-            "affiliation_country": "PT",
-            "paper_count": 2,
-            "iso_code": "PRT",
-            "country_name": "Portugal"
-          },
-          {
-            "affiliation_country": "NZ",
-            "paper_count": 2,
-            "iso_code": "NZL",
-            "country_name": "New Zealand"
-          },
-          {
-            "affiliation_country": "MO",
-            "paper_count": 2,
-            "iso_code": "MAC",
-            "country_name": "Macao"
-          },
-          {
-            "affiliation_country": "IE",
-            "paper_count": 2,
-            "iso_code": "IRL",
-            "country_name": "Ireland"
-          },
-          {
-            "affiliation_country": "BR",
-            "paper_count": 2,
-            "iso_code": "BRA",
-            "country_name": "Brazil"
-          },
-          {
-            "affiliation_country": "USA",
-            "paper_count": 1,
-            "iso_code": null,
-            "country_name": "USA"
-          },
-          {
-            "affiliation_country": "US, DE",
-            "paper_count": 1,
-            "iso_code": null,
-            "country_name": "US, DE"
-          },
-          {
-            "affiliation_country": "TD",
-            "paper_count": 1,
-            "iso_code": "TCD",
-            "country_name": "Chad"
-          },
-          {
-            "affiliation_country": "SK",
-            "paper_count": 1,
-            "iso_code": "SVK",
-            "country_name": "Slovakia"
-          },
-          {
-            "affiliation_country": "SI",
-            "paper_count": 1,
-            "iso_code": "SVN",
-            "country_name": "Slovenia"
-          },
-          {
-            "affiliation_country": "NO",
-            "paper_count": 1,
-            "iso_code": "NOR",
-            "country_name": "Norway"
-          },
-          {
-            "affiliation_country": "MA",
-            "paper_count": 1,
-            "iso_code": "MAR",
-            "country_name": "Morocco"
-          },
-          {
-            "affiliation_country": "KP",
-            "paper_count": 1,
-            "iso_code": "PRK",
-            "country_name": "Korea, Democratic People's Republic of"
-          },
-          {
-            "affiliation_country": "HU",
-            "paper_count": 1,
-            "iso_code": "HUN",
-            "country_name": "Hungary"
-          },
-          {
-            "affiliation_country": "GR",
-            "paper_count": 1,
-            "iso_code": "GRC",
-            "country_name": "Greece"
-          },
-          {
-            "affiliation_country": "BG",
-            "paper_count": 1,
-            "iso_code": "BGR",
-            "country_name": "Bulgaria"
-          },
-          {
-            "affiliation_country": "AL",
-            "paper_count": 1,
-            "iso_code": "ALB",
-            "country_name": "Albania"
-          }
-        ]
-      },
-      "majority_authors": {
-        "countries": [
-          {
-            "affiliation_country": "US",
-            "paper_count": 1292,
-            "iso_code": "USA",
-            "country_name": "United States"
-          },
-          {
-            "affiliation_country": "CN",
-            "paper_count": 917,
-            "iso_code": "CHN",
-            "country_name": "China"
-          },
-          {
-            "affiliation_country": "KR",
-            "paper_count": 144,
-            "iso_code": "KOR",
-            "country_name": "Korea, Republic of"
-          },
-          {
-            "affiliation_country": "DE",
-            "paper_count": 119,
-            "iso_code": "DEU",
-            "country_name": "Germany"
-          },
-          {
-            "affiliation_country": "SG",
-            "paper_count": 97,
-            "iso_code": "SGP",
-            "country_name": "Singapore"
-          },
-          {
-            "affiliation_country": "CA",
-            "paper_count": 90,
-            "iso_code": "CAN",
-            "country_name": "Canada"
-          },
-          {
-            "affiliation_country": "CH",
-            "paper_count": 81,
-            "iso_code": "CHE",
-            "country_name": "Switzerland"
-          },
-          {
-            "affiliation_country": "HK",
-            "paper_count": 73,
-            "iso_code": "HKG",
-            "country_name": "Hong Kong"
-          },
-          {
-            "affiliation_country": "GB",
-            "paper_count": 58,
-            "iso_code": "GBR",
-            "country_name": "United Kingdom"
-          },
-          {
-            "affiliation_country": "JP",
-            "paper_count": 56,
-            "iso_code": "JPN",
-            "country_name": "Japan"
-          },
-          {
-            "affiliation_country": "FR",
-            "paper_count": 46,
-            "iso_code": "FRA",
-            "country_name": "France"
-          },
-          {
-            "affiliation_country": "AU",
-            "paper_count": 46,
-            "iso_code": "AUS",
-            "country_name": "Australia"
-          },
-          {
-            "affiliation_country": "IL",
-            "paper_count": 43,
-            "iso_code": "ISR",
-            "country_name": "Israel"
-          },
-          {
-            "affiliation_country": "IN",
-            "paper_count": 23,
-            "iso_code": "IND",
-            "country_name": "India"
-          },
-          {
-            "affiliation_country": "NL",
-            "paper_count": 20,
-            "iso_code": "NLD",
-            "country_name": "Netherlands"
-          },
-          {
-            "affiliation_country": "IT",
-            "paper_count": 19,
-            "iso_code": "ITA",
-            "country_name": "Italy"
-          },
-          {
-            "affiliation_country": "AT",
-            "paper_count": 18,
-            "iso_code": "AUT",
-            "country_name": "Austria"
-          },
-          {
-            "affiliation_country": "TW",
-            "paper_count": 17,
-            "iso_code": "TWN",
-            "country_name": "Taiwan, Province of China"
-          },
-          {
-            "affiliation_country": "UK",
-            "paper_count": 15,
-            "iso_code": null,
-            "country_name": "UK"
-          },
-          {
-            "affiliation_country": "SE",
-            "paper_count": 13,
-            "iso_code": "SWE",
-            "country_name": "Sweden"
-          },
-          {
-            "affiliation_country": "RU",
-            "paper_count": 13,
-            "iso_code": "RUS",
-            "country_name": "Russian Federation"
-          },
-          {
-            "affiliation_country": "FI",
-            "paper_count": 12,
-            "iso_code": "FIN",
-            "country_name": "Finland"
-          },
-          {
-            "affiliation_country": "SA",
-            "paper_count": 8,
-            "iso_code": "SAU",
-            "country_name": "Saudi Arabia"
-          },
-          {
-            "affiliation_country": "AE",
-            "paper_count": 8,
-            "iso_code": "ARE",
-            "country_name": "United Arab Emirates"
-          },
-          {
-            "affiliation_country": "VN",
-            "paper_count": 6,
-            "iso_code": "VNM",
-            "country_name": "Viet Nam"
-          },
-          {
-            "affiliation_country": "PL",
-            "paper_count": 5,
-            "iso_code": "POL",
-            "country_name": "Poland"
-          },
-          {
-            "affiliation_country": "BE",
-            "paper_count": 5,
-            "iso_code": "BEL",
-            "country_name": "Belgium"
-          },
-          {
-            "affiliation_country": "CZ",
-            "paper_count": 4,
-            "iso_code": "CZE",
-            "country_name": "Czechia"
-          },
-          {
-            "affiliation_country": "DK",
-            "paper_count": 3,
-            "iso_code": "DNK",
-            "country_name": "Denmark"
-          },
-          {
-            "affiliation_country": "TR",
-            "paper_count": 2,
-            "iso_code": "TUR",
-            "country_name": "T\u00fcrkiye"
-          },
-          {
-            "affiliation_country": "PT",
-            "paper_count": 2,
-            "iso_code": "PRT",
-            "country_name": "Portugal"
-          },
-          {
-            "affiliation_country": "NZ",
-            "paper_count": 2,
-            "iso_code": "NZL",
-            "country_name": "New Zealand"
-          },
-          {
-            "affiliation_country": "IR",
-            "paper_count": 2,
-            "iso_code": "IRN",
-            "country_name": "Iran, Islamic Republic of"
-          },
-          {
-            "affiliation_country": "IE",
-            "paper_count": 2,
-            "iso_code": "IRL",
-            "country_name": "Ireland"
-          },
-          {
-            "affiliation_country": "BR",
-            "paper_count": 2,
-            "iso_code": "BRA",
-            "country_name": "Brazil"
-          },
-          {
-            "affiliation_country": "ZA",
-            "paper_count": 1,
-            "iso_code": "ZAF",
-            "country_name": "South Africa"
-          },
-          {
-            "affiliation_country": "SK",
-            "paper_count": 1,
-            "iso_code": "SVK",
-            "country_name": "Slovakia"
-          },
-          {
-            "affiliation_country": "MO",
-            "paper_count": 1,
-            "iso_code": "MAC",
-            "country_name": "Macao"
-          },
-          {
-            "affiliation_country": "MA",
-            "paper_count": 1,
-            "iso_code": "MAR",
-            "country_name": "Morocco"
-          },
-          {
-            "affiliation_country": "HU",
-            "paper_count": 1,
-            "iso_code": "HUN",
-            "country_name": "Hungary"
-          },
-          {
-            "affiliation_country": "GR",
-            "paper_count": 1,
-            "iso_code": "GRC",
-            "country_name": "Greece"
-          },
-          {
-            "affiliation_country": "ES",
-            "paper_count": 1,
-            "iso_code": "ESP",
-            "country_name": "Spain"
-          },
-          {
-            "affiliation_country": "BG",
-            "paper_count": 1,
-            "iso_code": "BGR",
-            "country_name": "Bulgaria"
-          },
-          {
-            "affiliation_country": "AI",
-            "paper_count": 1,
-            "iso_code": "AIA",
-            "country_name": "Anguilla"
-          }
-        ]
-      }
-    }
+  "conferenceInfo": {
+    "name": "ICLR",
+    "year": 2025,
+    "track": "Conference",
+    "totalAcceptedPapers": 3705,
+    "totalAcceptedAuthors": 15066
   },
-  "india": {
-    "at_least_one_indian_author": {
+  "globalStats": {
+    "countries": [
+      {
+        "affiliation_country": "US",
+        "paper_count": 1929,
+        "author_count": 7423,
+        "spotlights": 215,
+        "orals": 132
+      },
+      {
+        "affiliation_country": "CN",
+        "paper_count": 1308,
+        "author_count": 5912,
+        "spotlights": 119,
+        "orals": 61
+      },
+      {
+        "affiliation_country": "HK",
+        "paper_count": 294,
+        "author_count": 606,
+        "spotlights": 33,
+        "orals": 16
+      },
+      {
+        "affiliation_country": "GB",
+        "paper_count": 293,
+        "author_count": 536,
+        "spotlights": 31,
+        "orals": 23
+      },
+      {
+        "affiliation_country": "CA",
+        "paper_count": 255,
+        "author_count": 630,
+        "spotlights": 29,
+        "orals": 17
+      },
+      {
+        "affiliation_country": "SG",
+        "paper_count": 248,
+        "author_count": 591,
+        "spotlights": 26,
+        "orals": 18
+      },
+      {
+        "affiliation_country": "DE",
+        "paper_count": 240,
+        "author_count": 594,
+        "spotlights": 36,
+        "orals": 19
+      },
+      {
+        "affiliation_country": "KR",
+        "paper_count": 187,
+        "author_count": 610,
+        "spotlights": 13,
+        "orals": 8
+      },
+      {
+        "affiliation_country": "CH",
+        "paper_count": 178,
+        "author_count": 414,
+        "spotlights": 25,
+        "orals": 18
+      },
+      {
+        "affiliation_country": "UNK",
+        "paper_count": 135,
+        "author_count": 191,
+        "spotlights": 15,
+        "orals": 14
+      },
+      {
+        "affiliation_country": "AU",
+        "paper_count": 127,
+        "author_count": 282,
+        "spotlights": 14,
+        "orals": 7
+      },
+      {
+        "affiliation_country": "FR",
+        "paper_count": 120,
+        "author_count": 259,
+        "spotlights": 14,
+        "orals": 3
+      },
+      {
+        "affiliation_country": "JP",
+        "paper_count": 119,
+        "author_count": 282,
+        "spotlights": 13,
+        "orals": 7
+      },
+      {
+        "affiliation_country": "UK",
+        "paper_count": 103,
+        "author_count": 152,
+        "spotlights": 16,
+        "orals": 10
+      },
+      {
+        "affiliation_country": "IL",
+        "paper_count": 71,
+        "author_count": 235,
+        "spotlights": 6,
+        "orals": 6
+      },
+      {
+        "affiliation_country": "NL",
+        "paper_count": 70,
+        "author_count": 140,
+        "spotlights": 11,
+        "orals": 2
+      },
+      {
+        "affiliation_country": "IN",
+        "paper_count": 50,
+        "author_count": 133,
+        "spotlights": 5,
+        "orals": 2
+      },
+      {
+        "affiliation_country": "IT",
+        "paper_count": 48,
+        "author_count": 123,
+        "spotlights": 5,
+        "orals": 2
+      },
+      {
+        "affiliation_country": "AE",
+        "paper_count": 48,
+        "author_count": 92,
+        "spotlights": 4,
+        "orals": 3
+      },
+      {
+        "affiliation_country": "AI",
+        "paper_count": 40,
+        "author_count": 53,
+        "spotlights": 6,
+        "orals": 5
+      },
+      {
+        "affiliation_country": "AT",
+        "paper_count": 35,
+        "author_count": 96,
+        "spotlights": 3,
+        "orals": 2
+      },
+      {
+        "affiliation_country": "TW",
+        "paper_count": 32,
+        "author_count": 137,
+        "spotlights": 2,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "SE",
+        "paper_count": 28,
+        "author_count": 64,
+        "spotlights": 4,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "DK",
+        "paper_count": 27,
+        "author_count": 42,
+        "spotlights": 4,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "SA",
+        "paper_count": 25,
+        "author_count": 69,
+        "spotlights": 3,
+        "orals": 2
+      },
+      {
+        "affiliation_country": "RU",
+        "paper_count": 22,
+        "author_count": 69,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "BE",
+        "paper_count": 19,
+        "author_count": 32,
+        "spotlights": 4,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "ES",
+        "paper_count": 18,
+        "author_count": 37,
+        "spotlights": 4,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "VN",
+        "paper_count": 18,
+        "author_count": 46,
+        "spotlights": 1,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "FI",
+        "paper_count": 17,
+        "author_count": 44,
+        "spotlights": 2,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "PL",
+        "paper_count": 10,
+        "author_count": 26,
+        "spotlights": 3,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "MO",
+        "paper_count": 10,
+        "author_count": 12,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "NO",
+        "paper_count": 8,
+        "author_count": 9,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "CZ",
+        "paper_count": 7,
+        "author_count": 20,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "IE",
+        "paper_count": 7,
+        "author_count": 13,
+        "spotlights": 1,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "IR",
+        "paper_count": 6,
+        "author_count": 10,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "TR",
+        "paper_count": 5,
+        "author_count": 8,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "LU",
+        "paper_count": 4,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "GR",
+        "paper_count": 4,
+        "author_count": 5,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "BG",
+        "paper_count": 4,
+        "author_count": 9,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "BR",
+        "paper_count": 4,
+        "author_count": 9,
+        "spotlights": 2,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "PT",
+        "paper_count": 3,
+        "author_count": 5,
+        "spotlights": 2,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "ZA",
+        "paper_count": 3,
+        "author_count": 5,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "AM",
+        "paper_count": 3,
+        "author_count": 6,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "CO",
+        "paper_count": 3,
+        "author_count": 3,
+        "spotlights": 1,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "KP",
+        "paper_count": 3,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "NZ",
+        "paper_count": 2,
+        "author_count": 8,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "ZW",
+        "paper_count": 2,
+        "author_count": 2,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "SK",
+        "paper_count": 2,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "AL",
+        "paper_count": 2,
+        "author_count": 2,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "IO",
+        "paper_count": 2,
+        "author_count": 2,
+        "spotlights": 2,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "BD",
+        "paper_count": 2,
+        "author_count": 2,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "TD",
+        "paper_count": 2,
+        "author_count": 2,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "USA",
+        "paper_count": 2,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "ID",
+        "paper_count": 2,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "PH",
+        "paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "CX",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "EU",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "MX",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "AF",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "MY",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "PE",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "MA",
+        "paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "RW",
+        "paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "South Korea",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "AU; SG",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "SI",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "Canada",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "US, DE",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "UA",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "QA",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "LT",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "NP",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "HU",
+        "paper_count": 1,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "EE",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "CL",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0
+      }
+    ]
+  },
+  "focusCountry": {
+    "country_code": "IN",
+    "country_name": "India",
+    "total_authors": 133,
+    "total_spotlights": 5,
+    "total_orals": 2,
+    "institution_types": {
+      "corporate": 11,
+      "academic": 17
+    },
+    "at_least_one_focus_country_author": {
       "count": 50,
       "papers": [
         {
-          "id": "AkBrb7yQ0G",
-          "title": "Periodic Materials Generation using Text-Guided Joint Diffusion Model",
-          "total_authors": 6,
-          "indian_authors": 6
-        },
-        {
-          "id": "qnlG3zPQUy",
-          "title": "ILLUSION: Unveiling Truth with a Comprehensive Multi-Modal, Multi-Lingual Deepfake Dataset",
-          "total_authors": 6,
-          "indian_authors": 6
+          "id": "zvaiz3FjA9",
+          "title": "Designing Concise ConvNets with Columnar Stages",
+          "isSpotlight": false,
+          "isOral": false
         },
         {
           "id": "zl3pfz4VCV",
           "title": "MMTEB: Massive Multilingual Text Embedding Benchmark",
-          "total_authors": 79,
-          "indian_authors": 6
-        },
-        {
-          "id": "5pd78GmXC6",
-          "title": "Charting the Design Space of Neural Graph Representations for Subgraph Matching",
-          "total_authors": 5,
-          "indian_authors": 5
-        },
-        {
-          "id": "5x88lQ2MsH",
-          "title": "Bonsai: Gradient-free Graph Condensation for Node Classification",
-          "total_authors": 5,
-          "indian_authors": 5
-        },
-        {
-          "id": "bW9fGYo44s",
-          "title": "MotionAura: Generating High-Quality and Motion Consistent Videos using Discrete Diffusion",
-          "total_authors": 5,
-          "indian_authors": 5
-        },
-        {
-          "id": "wSkvf2WyYz",
-          "title": "SBSC: Step-by-Step Coding for Improving Mathematical Olympiad Performance",
-          "total_authors": 5,
-          "indian_authors": 5
-        },
-        {
-          "id": "ff2V3UR9sC",
-          "title": "Teaching Human Behavior Improves Content Understanding Abilities Of VLMs",
-          "total_authors": 7,
-          "indian_authors": 5
-        },
-        {
-          "id": "52UtL8uA35",
-          "title": "Deep Networks Learn Features From Local Discontinuities in the Label Function",
-          "total_authors": 4,
-          "indian_authors": 4
-        },
-        {
-          "id": "NfCEVihkdC",
-          "title": "Measuring And Improving Persuasiveness Of Large Language Models",
-          "total_authors": 4,
-          "indian_authors": 4
-        },
-        {
-          "id": "h0vC0fm1q7",
-          "title": "Sensitivity Verification for Additive Decision Tree Ensembles",
-          "total_authors": 4,
-          "indian_authors": 4
-        },
-        {
-          "id": "jCDF7G3LpF",
-          "title": "EFFICIENT JAILBREAK ATTACK SEQUENCES ON LARGE LANGUAGE MODELS VIA MULTI-ARMED BANDIT-BASED CONTEXT SWITCHING",
-          "total_authors": 4,
-          "indian_authors": 4
-        },
-        {
-          "id": "l11DZY5Nxu",
-          "title": "Robust Root Cause Diagnosis using In-Distribution Interventions",
-          "total_authors": 4,
-          "indian_authors": 4
-        },
-        {
-          "id": "LO4MEPoqrG",
-          "title": "Does Safety Training of LLMs Generalize to Semantically Related Natural Prompts?",
-          "total_authors": 5,
-          "indian_authors": 4
-        },
-        {
-          "id": "TmCcNuo03f",
-          "title": "Measuring And Improving Engagement of Text-to-Image Generation Models",
-          "total_authors": 7,
-          "indian_authors": 4
-        },
-        {
-          "id": "k3gCieTXeY",
-          "title": "INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge",
-          "total_authors": 56,
-          "indian_authors": 4
-        },
-        {
-          "id": "5RZoYIT3u6",
-          "title": "You Only Prune Once: Designing Calibration-Free Model Compression With Policy Learning",
-          "total_authors": 3,
-          "indian_authors": 3
-        },
-        {
-          "id": "NtwFghsJne",
-          "title": "From Search to Sampling: Generative Models for Robust Algorithmic Recourse",
-          "total_authors": 3,
-          "indian_authors": 3
-        },
-        {
-          "id": "kbeX97jExm",
-          "title": "Neural Wave Equation for Irregularly Sampled Sequence Data",
-          "total_authors": 3,
-          "indian_authors": 3
-        },
-        {
-          "id": "nNiWRRj6r9",
-          "title": "ONLINE EPSILON NET & PIERCING SET FOR GEOMETRIC CONCEPTS",
-          "total_authors": 3,
-          "indian_authors": 3
-        },
-        {
-          "id": "rnJxelIZrq",
-          "title": "Beyond Mere Token Analysis: A Hypergraph Metric Space Framework for Defending Against Socially Engineered LLM Attacks",
-          "total_authors": 3,
-          "indian_authors": 3
-        },
-        {
-          "id": "DFSb67ksVr",
-          "title": "Clique Number Estimation via Differentiable Functions of Adjacency Matrix Permutations",
-          "total_authors": 4,
-          "indian_authors": 3
-        },
-        {
-          "id": "NHxwxc3ql6",
-          "title": "It Helps to Take a Second Opinion: Teaching Smaller LLMs To Deliberate Mutually via Selective Rationale Optimisation",
-          "total_authors": 4,
-          "indian_authors": 3
-        },
-        {
-          "id": "H0qIWXXLUR",
-          "title": "Learn Your Reference Model for Real Good Alignment",
-          "total_authors": 8,
-          "indian_authors": 3
+          "isSpotlight": false,
+          "isOral": false
         },
         {
           "id": "xkgfLXZ4e0",
           "title": "Correlating instruction-tuning (in multimodal models) with vision-language processing (in the brain)",
-          "total_authors": 8,
-          "indian_authors": 3
-        },
-        {
-          "id": "EzrZX9bd4G",
-          "title": "BEEM: Boosting Performance of Early Exit DNNs using Multi-Exit Classifiers as Experts",
-          "total_authors": 2,
-          "indian_authors": 2
-        },
-        {
-          "id": "tDIL7UXmSS",
-          "title": "Quantum (Inspired)  $D^2$-sampling with Applications",
-          "total_authors": 2,
-          "indian_authors": 2
-        },
-        {
-          "id": "0dELcFHig2",
-          "title": "Multi-modal brain encoding models for multi-modal stimuli",
-          "total_authors": 5,
-          "indian_authors": 2
-        },
-        {
-          "id": "9juyeCqL0u",
-          "title": "Causal Order: The Key to Leveraging Imperfect Experts in Causal Inference",
-          "total_authors": 6,
-          "indian_authors": 2
-        },
-        {
-          "id": "ZbkqhKbggH",
-          "title": "ASTrA: Adversarial Self-supervised Training with Adaptive-Attacks",
-          "total_authors": 6,
-          "indian_authors": 2
-        },
-        {
-          "id": "vyflgpwfJW",
-          "title": "DiscoveryBench: Towards Data-Driven Discovery with Large Language Models",
-          "total_authors": 10,
-          "indian_authors": 2
-        },
-        {
-          "id": "0nJEgNpb4l",
-          "title": "PEAR: Primitive Enabled Adaptive Relabeling for Boosting Hierarchical Reinforcement Learning",
-          "total_authors": 2,
-          "indian_authors": 1
-        },
-        {
-          "id": "zvaiz3FjA9",
-          "title": "Designing Concise ConvNets with Columnar Stages",
-          "total_authors": 2,
-          "indian_authors": 1
-        },
-        {
-          "id": "HyjIEf90Tn",
-          "title": "Glauber Generative Model: Discrete Diffusion Models via Binary Classification",
-          "total_authors": 3,
-          "indian_authors": 1
-        },
-        {
-          "id": "90DC0IvlSs",
-          "title": "LevAttention: Time, Space and Streaming Efficient Algorithm for Heavy Attentions",
-          "total_authors": 4,
-          "indian_authors": 1
-        },
-        {
-          "id": "AsFxRSLtqR",
-          "title": "LR0.FM: LOW-RESOLUTION ZERO-SHOT CLASSIFICATION BENCHMARK FOR FOUNDATION MODELS",
-          "total_authors": 4,
-          "indian_authors": 1
-        },
-        {
-          "id": "Q1kPHLUbhi",
-          "title": "Towards Self-Supervised Covariance Estimation in Deep Heteroscedastic Regression",
-          "total_authors": 4,
-          "indian_authors": 1
-        },
-        {
-          "id": "UWdPsY7agk",
-          "title": "Efficient Causal Decision Making with One-sided Feedback",
-          "total_authors": 4,
-          "indian_authors": 1
-        },
-        {
-          "id": "XrsOu4KgDE",
-          "title": "Attributing Culture-Conditioned Generations to Pretraining Corpora",
-          "total_authors": 4,
-          "indian_authors": 1
-        },
-        {
-          "id": "9h45qxXEx0",
-          "title": "Debiasing Federated Learning with Correlated Client Participation",
-          "total_authors": 5,
-          "indian_authors": 1
+          "isSpotlight": false,
+          "isOral": false
         },
         {
           "id": "xak8c9l1nu",
           "title": "Computational Explorations of Total Variation Distance",
-          "total_authors": 5,
-          "indian_authors": 1
+          "isSpotlight": true,
+          "isOral": false
         },
         {
-          "id": "F5PlYMC5ik",
-          "title": "LOIRE: LifelOng learning on Incremental data via pre-trained language model gRowth Efficiently",
-          "total_authors": 6,
-          "indian_authors": 1
+          "id": "wSkvf2WyYz",
+          "title": "SBSC: Step-by-Step Coding for Improving Mathematical Olympiad Performance",
+          "isSpotlight": false,
+          "isOral": false
         },
         {
-          "id": "TJo6aQb7mK",
-          "title": "Surprising Effectiveness of pretraining Ternary  Language Model at Scale",
-          "total_authors": 6,
-          "indian_authors": 1
+          "id": "vyflgpwfJW",
+          "title": "DiscoveryBench: Towards Data-Driven Discovery with Large Language Models",
+          "isSpotlight": false,
+          "isOral": false
         },
         {
-          "id": "WwmtcGr4lP",
-          "title": "GANDALF: Generative AttentioN based Data Augmentation and predictive modeLing Framework for personalized cancer treatment",
-          "total_authors": 6,
-          "indian_authors": 1
-        },
-        {
-          "id": "odjMSBSWRt",
-          "title": "DarkBench: Benchmarking Dark Patterns in Large Language Models",
-          "total_authors": 6,
-          "indian_authors": 1
-        },
-        {
-          "id": "pymXpl4qvi",
-          "title": "Understanding and Mitigating Bottlenecks of State Space Models through the Lens of Recency and Over-smoothing",
-          "total_authors": 6,
-          "indian_authors": 1
-        },
-        {
-          "id": "r5IXBlTCGc",
-          "title": "Consistency Checks for Language Model Forecasters",
-          "total_authors": 7,
-          "indian_authors": 1
-        },
-        {
-          "id": "3E8YNv1HjU",
-          "title": "Recite, Reconstruct, Recollect: Memorization in LMs as a Multifaceted Phenomenon",
-          "total_authors": 12,
-          "indian_authors": 1
+          "id": "tDIL7UXmSS",
+          "title": "Quantum (Inspired)  $D^2$-sampling with Applications",
+          "isSpotlight": false,
+          "isOral": false
         },
         {
           "id": "sKYHBTAxVa",
           "title": "LiveBench: A Challenging, Contamination-Limited LLM Benchmark",
-          "total_authors": 17,
-          "indian_authors": 1
+          "isSpotlight": true,
+          "isOral": false
+        },
+        {
+          "id": "rnJxelIZrq",
+          "title": "Beyond Mere Token Analysis: A Hypergraph Metric Space Framework for Defending Against Socially Engineered LLM Attacks",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "r5IXBlTCGc",
+          "title": "Consistency Checks for Language Model Forecasters",
+          "isSpotlight": false,
+          "isOral": true
+        },
+        {
+          "id": "qnlG3zPQUy",
+          "title": "ILLUSION: Unveiling Truth with a Comprehensive Multi-Modal, Multi-Lingual Deepfake Dataset",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "pymXpl4qvi",
+          "title": "Understanding and Mitigating Bottlenecks of State Space Models through the Lens of Recency and Over-smoothing",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "odjMSBSWRt",
+          "title": "DarkBench: Benchmarking Dark Patterns in Large Language Models",
+          "isSpotlight": false,
+          "isOral": true
+        },
+        {
+          "id": "nNiWRRj6r9",
+          "title": "ONLINE EPSILON NET & PIERCING SET FOR GEOMETRIC CONCEPTS",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "l11DZY5Nxu",
+          "title": "Robust Root Cause Diagnosis using In-Distribution Interventions",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "kbeX97jExm",
+          "title": "Neural Wave Equation for Irregularly Sampled Sequence Data",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "k3gCieTXeY",
+          "title": "INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge",
+          "isSpotlight": true,
+          "isOral": false
+        },
+        {
+          "id": "jCDF7G3LpF",
+          "title": "EFFICIENT JAILBREAK ATTACK SEQUENCES ON LARGE LANGUAGE MODELS VIA MULTI-ARMED BANDIT-BASED CONTEXT SWITCHING",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "h0vC0fm1q7",
+          "title": "Sensitivity Verification for Additive Decision Tree Ensembles",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "ff2V3UR9sC",
+          "title": "Teaching Human Behavior Improves Content Understanding Abilities Of VLMs",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "bW9fGYo44s",
+          "title": "MotionAura: Generating High-Quality and Motion Consistent Videos using Discrete Diffusion",
+          "isSpotlight": true,
+          "isOral": false
         },
         {
           "id": "b1ivBPLb1n",
           "title": "BigDocs: An Open Dataset for Training Multimodal Models on Document and Code Tasks",
-          "total_authors": 39,
-          "indian_authors": 1
-        }
-      ]
-    },
-    "majority_indian_authors": {
-      "count": 23,
-      "papers": [
-        {
-          "id": "AkBrb7yQ0G",
-          "title": "Periodic Materials Generation using Text-Guided Joint Diffusion Model",
-          "total_authors": 6,
-          "indian_authors": 6
+          "isSpotlight": false,
+          "isOral": false
         },
         {
-          "id": "qnlG3zPQUy",
-          "title": "ILLUSION: Unveiling Truth with a Comprehensive Multi-Modal, Multi-Lingual Deepfake Dataset",
-          "total_authors": 6,
-          "indian_authors": 6
+          "id": "ZbkqhKbggH",
+          "title": "ASTrA: Adversarial Self-supervised Training with Adaptive-Attacks",
+          "isSpotlight": false,
+          "isOral": false
         },
         {
-          "id": "5pd78GmXC6",
-          "title": "Charting the Design Space of Neural Graph Representations for Subgraph Matching",
-          "total_authors": 5,
-          "indian_authors": 5
+          "id": "XrsOu4KgDE",
+          "title": "Attributing Culture-Conditioned Generations to Pretraining Corpora",
+          "isSpotlight": false,
+          "isOral": false
         },
         {
-          "id": "5x88lQ2MsH",
-          "title": "Bonsai: Gradient-free Graph Condensation for Node Classification",
-          "total_authors": 5,
-          "indian_authors": 5
+          "id": "WwmtcGr4lP",
+          "title": "GANDALF: Generative AttentioN based Data Augmentation and predictive modeLing Framework for personalized cancer treatment",
+          "isSpotlight": false,
+          "isOral": false
         },
         {
-          "id": "bW9fGYo44s",
-          "title": "MotionAura: Generating High-Quality and Motion Consistent Videos using Discrete Diffusion",
-          "total_authors": 5,
-          "indian_authors": 5
-        },
-        {
-          "id": "wSkvf2WyYz",
-          "title": "SBSC: Step-by-Step Coding for Improving Mathematical Olympiad Performance",
-          "total_authors": 5,
-          "indian_authors": 5
-        },
-        {
-          "id": "ff2V3UR9sC",
-          "title": "Teaching Human Behavior Improves Content Understanding Abilities Of VLMs",
-          "total_authors": 7,
-          "indian_authors": 5
-        },
-        {
-          "id": "52UtL8uA35",
-          "title": "Deep Networks Learn Features From Local Discontinuities in the Label Function",
-          "total_authors": 4,
-          "indian_authors": 4
-        },
-        {
-          "id": "NfCEVihkdC",
-          "title": "Measuring And Improving Persuasiveness Of Large Language Models",
-          "total_authors": 4,
-          "indian_authors": 4
-        },
-        {
-          "id": "h0vC0fm1q7",
-          "title": "Sensitivity Verification for Additive Decision Tree Ensembles",
-          "total_authors": 4,
-          "indian_authors": 4
-        },
-        {
-          "id": "jCDF7G3LpF",
-          "title": "EFFICIENT JAILBREAK ATTACK SEQUENCES ON LARGE LANGUAGE MODELS VIA MULTI-ARMED BANDIT-BASED CONTEXT SWITCHING",
-          "total_authors": 4,
-          "indian_authors": 4
-        },
-        {
-          "id": "l11DZY5Nxu",
-          "title": "Robust Root Cause Diagnosis using In-Distribution Interventions",
-          "total_authors": 4,
-          "indian_authors": 4
-        },
-        {
-          "id": "LO4MEPoqrG",
-          "title": "Does Safety Training of LLMs Generalize to Semantically Related Natural Prompts?",
-          "total_authors": 5,
-          "indian_authors": 4
+          "id": "UWdPsY7agk",
+          "title": "Efficient Causal Decision Making with One-sided Feedback",
+          "isSpotlight": false,
+          "isOral": false
         },
         {
           "id": "TmCcNuo03f",
           "title": "Measuring And Improving Engagement of Text-to-Image Generation Models",
-          "total_authors": 7,
-          "indian_authors": 4
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "TJo6aQb7mK",
+          "title": "Surprising Effectiveness of pretraining Ternary  Language Model at Scale",
+          "isSpotlight": true,
+          "isOral": false
+        },
+        {
+          "id": "Q1kPHLUbhi",
+          "title": "Towards Self-Supervised Covariance Estimation in Deep Heteroscedastic Regression",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "NtwFghsJne",
+          "title": "From Search to Sampling: Generative Models for Robust Algorithmic Recourse",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "NfCEVihkdC",
+          "title": "Measuring And Improving Persuasiveness Of Large Language Models",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "NHxwxc3ql6",
+          "title": "It Helps to Take a Second Opinion: Teaching Smaller LLMs To Deliberate Mutually via Selective Rationale Optimisation",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "LO4MEPoqrG",
+          "title": "Does Safety Training of LLMs Generalize to Semantically Related Natural Prompts?",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "HyjIEf90Tn",
+          "title": "Glauber Generative Model: Discrete Diffusion Models via Binary Classification",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "H0qIWXXLUR",
+          "title": "Learn Your Reference Model for Real Good Alignment",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "F5PlYMC5ik",
+          "title": "LOIRE: LifelOng learning on Incremental data via pre-trained language model gRowth Efficiently",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "EzrZX9bd4G",
+          "title": "BEEM: Boosting Performance of Early Exit DNNs using Multi-Exit Classifiers as Experts",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "DFSb67ksVr",
+          "title": "Clique Number Estimation via Differentiable Functions of Adjacency Matrix Permutations",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "AsFxRSLtqR",
+          "title": "LR0.FM: LOW-RESOLUTION ZERO-SHOT CLASSIFICATION BENCHMARK FOR FOUNDATION MODELS",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "AkBrb7yQ0G",
+          "title": "Periodic Materials Generation using Text-Guided Joint Diffusion Model",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "9juyeCqL0u",
+          "title": "Causal Order: The Key to Leveraging Imperfect Experts in Causal Inference",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "9h45qxXEx0",
+          "title": "Debiasing Federated Learning with Correlated Client Participation",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "90DC0IvlSs",
+          "title": "LevAttention: Time, Space and Streaming Efficient Algorithm for Heavy Attentions",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "5x88lQ2MsH",
+          "title": "Bonsai: Gradient-free Graph Condensation for Node Classification",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "5pd78GmXC6",
+          "title": "Charting the Design Space of Neural Graph Representations for Subgraph Matching",
+          "isSpotlight": false,
+          "isOral": false
         },
         {
           "id": "5RZoYIT3u6",
           "title": "You Only Prune Once: Designing Calibration-Free Model Compression With Policy Learning",
-          "total_authors": 3,
-          "indian_authors": 3
-        },
-        {
-          "id": "NtwFghsJne",
-          "title": "From Search to Sampling: Generative Models for Robust Algorithmic Recourse",
-          "total_authors": 3,
-          "indian_authors": 3
-        },
-        {
-          "id": "kbeX97jExm",
-          "title": "Neural Wave Equation for Irregularly Sampled Sequence Data",
-          "total_authors": 3,
-          "indian_authors": 3
-        },
-        {
-          "id": "nNiWRRj6r9",
-          "title": "ONLINE EPSILON NET & PIERCING SET FOR GEOMETRIC CONCEPTS",
-          "total_authors": 3,
-          "indian_authors": 3
-        },
-        {
-          "id": "rnJxelIZrq",
-          "title": "Beyond Mere Token Analysis: A Hypergraph Metric Space Framework for Defending Against Socially Engineered LLM Attacks",
-          "total_authors": 3,
-          "indian_authors": 3
-        },
-        {
-          "id": "DFSb67ksVr",
-          "title": "Clique Number Estimation via Differentiable Functions of Adjacency Matrix Permutations",
-          "total_authors": 4,
-          "indian_authors": 3
-        },
-        {
-          "id": "NHxwxc3ql6",
-          "title": "It Helps to Take a Second Opinion: Teaching Smaller LLMs To Deliberate Mutually via Selective Rationale Optimisation",
-          "total_authors": 4,
-          "indian_authors": 3
-        },
-        {
-          "id": "EzrZX9bd4G",
-          "title": "BEEM: Boosting Performance of Early Exit DNNs using Multi-Exit Classifiers as Experts",
-          "total_authors": 2,
-          "indian_authors": 2
-        },
-        {
-          "id": "tDIL7UXmSS",
-          "title": "Quantum (Inspired)  $D^2$-sampling with Applications",
-          "total_authors": 2,
-          "indian_authors": 2
-        }
-      ]
-    },
-    "first_indian_author": {
-      "count": 26,
-      "papers": [
-        {
-          "id": "EzrZX9bd4G",
-          "title": "BEEM: Boosting Performance of Early Exit DNNs using Multi-Exit Classifiers as Experts",
-          "first_author": "Divya Jyoti Bajpai",
-          "affiliation_name": "Indian Institute of Technology, Bombay, Dhirubhai Ambani Institute Of Information and Communication Technology"
-        },
-        {
-          "id": "rnJxelIZrq",
-          "title": "Beyond Mere Token Analysis: A Hypergraph Metric Space Framework for Defending Against Socially Engineered LLM Attacks",
-          "first_author": "",
-          "affiliation_name": "Fujitsu Research and Development Center Co. Ltm."
-        },
-        {
-          "id": "5x88lQ2MsH",
-          "title": "Bonsai: Gradient-free Graph Condensation for Node Classification",
-          "first_author": "Mridul Gupta",
-          "affiliation_name": "Indian Institute of Technology, Delhi"
-        },
-        {
-          "id": "5pd78GmXC6",
-          "title": "Charting the Design Space of Neural Graph Representations for Subgraph Matching",
-          "first_author": "Vaibhav Raj",
-          "affiliation_name": "Department of Computer Science and Engineering, IIT Bombay"
-        },
-        {
-          "id": "DFSb67ksVr",
-          "title": "Clique Number Estimation via Differentiable Functions of Adjacency Matrix Permutations",
-          "first_author": "Indradyumna Roy",
-          "affiliation_name": "Indian Institute of Technology Bombay"
+          "isSpotlight": false,
+          "isOral": false
         },
         {
           "id": "52UtL8uA35",
           "title": "Deep Networks Learn Features From Local Discontinuities in the Label Function",
-          "first_author": "Prithaj Banerjee",
-          "affiliation_name": "Indian Institute of Technology, Madras"
-        },
-        {
-          "id": "zvaiz3FjA9",
-          "title": "Designing Concise ConvNets with Columnar Stages",
-          "first_author": "Ashish Kumar",
-          "affiliation_name": "ScorelabsAI, USA"
-        },
-        {
-          "id": "LO4MEPoqrG",
-          "title": "Does Safety Training of LLMs Generalize to Semantically Related Natural Prompts?",
-          "first_author": "Sravanti Addepalli",
-          "affiliation_name": "Google"
-        },
-        {
-          "id": "jCDF7G3LpF",
-          "title": "EFFICIENT JAILBREAK ATTACK SEQUENCES ON LARGE LANGUAGE MODELS VIA MULTI-ARMED BANDIT-BASED CONTEXT SWITCHING",
-          "first_author": "Aditya Ramesh",
-          "affiliation_name": "Fujitsu Research and Development Center Co. Ltm."
-        },
-        {
-          "id": "NtwFghsJne",
-          "title": "From Search to Sampling: Generative Models for Robust Algorithmic Recourse",
-          "first_author": "Prateek Garg",
-          "affiliation_name": "Indian Institute of Technology Bombay"
-        },
-        {
-          "id": "qnlG3zPQUy",
-          "title": "ILLUSION: Unveiling Truth with a Comprehensive Multi-Modal, Multi-Lingual Deepfake Dataset",
-          "first_author": "Kartik Thakral",
-          "affiliation_name": "Indian Institute of Technology Jodhpur, India"
-        },
-        {
-          "id": "NHxwxc3ql6",
-          "title": "It Helps to Take a Second Opinion: Teaching Smaller LLMs To Deliberate Mutually via Selective Rationale Optimisation",
-          "first_author": "Sohan Patnaik",
-          "affiliation_name": "Adobe Systems"
-        },
-        {
-          "id": "TmCcNuo03f",
-          "title": "Measuring And Improving Engagement of Text-to-Image Generation Models",
-          "first_author": "Varun Khurana",
-          "affiliation_name": "Adobe Systems"
-        },
-        {
-          "id": "NfCEVihkdC",
-          "title": "Measuring And Improving Persuasiveness Of Large Language Models",
-          "first_author": "Somesh Kumar Singh",
-          "affiliation_name": "Indraprastha Institute of Information Technology, Delhi"
-        },
-        {
-          "id": "bW9fGYo44s",
-          "title": "MotionAura: Generating High-Quality and Motion Consistent Videos using Discrete Diffusion",
-          "first_author": "Onkar Kishor Susladkar",
-          "affiliation_name": "Indian Institute of Technology, Roorkee"
-        },
-        {
-          "id": "kbeX97jExm",
-          "title": "Neural Wave Equation for Irregularly Sampled Sequence Data",
-          "first_author": "Arkaprava Majumdar",
-          "affiliation_name": "Indian Institute of Technology, Hyderabad"
-        },
-        {
-          "id": "nNiWRRj6r9",
-          "title": "ONLINE EPSILON NET & PIERCING SET FOR GEOMETRIC CONCEPTS",
-          "first_author": "Sujoy Bhore",
-          "affiliation_name": "Indian Institute of Technology Bombay, Indian Institute of Technology, Bombay"
-        },
-        {
-          "id": "0nJEgNpb4l",
-          "title": "PEAR: Primitive Enabled Adaptive Relabeling for Boosting Hierarchical Reinforcement Learning",
-          "first_author": "Utsav Singh",
-          "affiliation_name": "Indian Institute of Technology, Kanpur"
-        },
-        {
-          "id": "AkBrb7yQ0G",
-          "title": "Periodic Materials Generation using Text-Guided Joint Diffusion Model",
-          "first_author": "KISHALAY DAS",
-          "affiliation_name": "Indian Institute of Technology Kharagpur,"
-        },
-        {
-          "id": "tDIL7UXmSS",
-          "title": "Quantum (Inspired)  $D^2$-sampling with Applications",
-          "first_author": "Poojan Chetan Shah",
-          "affiliation_name": "Indian Institute of Technology, Delhi"
+          "isSpotlight": false,
+          "isOral": false
         },
         {
           "id": "3E8YNv1HjU",
           "title": "Recite, Reconstruct, Recollect: Memorization in LMs as a Multifaceted Phenomenon",
-          "first_author": "USVSN Sai Prashanth",
-          "affiliation_name": "Microsoft"
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "0nJEgNpb4l",
+          "title": "PEAR: Primitive Enabled Adaptive Relabeling for Boosting Hierarchical Reinforcement Learning",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "0dELcFHig2",
+          "title": "Multi-modal brain encoding models for multi-modal stimuli",
+          "isSpotlight": false,
+          "isOral": false
+        }
+      ]
+    },
+    "majority_focus_country_authors": {
+      "count": 23,
+      "papers": [
+        {
+          "id": "wSkvf2WyYz",
+          "title": "SBSC: Step-by-Step Coding for Improving Mathematical Olympiad Performance",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "tDIL7UXmSS",
+          "title": "Quantum (Inspired)  $D^2$-sampling with Applications",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "rnJxelIZrq",
+          "title": "Beyond Mere Token Analysis: A Hypergraph Metric Space Framework for Defending Against Socially Engineered LLM Attacks",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "qnlG3zPQUy",
+          "title": "ILLUSION: Unveiling Truth with a Comprehensive Multi-Modal, Multi-Lingual Deepfake Dataset",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "nNiWRRj6r9",
+          "title": "ONLINE EPSILON NET & PIERCING SET FOR GEOMETRIC CONCEPTS",
+          "isSpotlight": false,
+          "isOral": false
         },
         {
           "id": "l11DZY5Nxu",
           "title": "Robust Root Cause Diagnosis using In-Distribution Interventions",
-          "first_author": "Lokesh Nagalapatti",
-          "affiliation_name": "Indian Institute of Technology, Bombay"
+          "isSpotlight": false,
+          "isOral": false
         },
         {
-          "id": "wSkvf2WyYz",
-          "title": "SBSC: Step-by-Step Coding for Improving Mathematical Olympiad Performance",
-          "first_author": "Kunal Singh",
-          "affiliation_name": "Fractal Analytics"
+          "id": "kbeX97jExm",
+          "title": "Neural Wave Equation for Irregularly Sampled Sequence Data",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "jCDF7G3LpF",
+          "title": "EFFICIENT JAILBREAK ATTACK SEQUENCES ON LARGE LANGUAGE MODELS VIA MULTI-ARMED BANDIT-BASED CONTEXT SWITCHING",
+          "isSpotlight": false,
+          "isOral": false
         },
         {
           "id": "h0vC0fm1q7",
           "title": "Sensitivity Verification for Additive Decision Tree Ensembles",
-          "first_author": "Arhaan Ahmad",
-          "affiliation_name": "Indian Institute of Technology, Bombay"
+          "isSpotlight": false,
+          "isOral": false
         },
         {
           "id": "ff2V3UR9sC",
           "title": "Teaching Human Behavior Improves Content Understanding Abilities Of VLMs",
-          "first_author": "Somesh Kumar Singh",
-          "affiliation_name": "Indraprastha Institute of Information Technology, Delhi"
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "bW9fGYo44s",
+          "title": "MotionAura: Generating High-Quality and Motion Consistent Videos using Discrete Diffusion",
+          "isSpotlight": true,
+          "isOral": false
+        },
+        {
+          "id": "TmCcNuo03f",
+          "title": "Measuring And Improving Engagement of Text-to-Image Generation Models",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "NtwFghsJne",
+          "title": "From Search to Sampling: Generative Models for Robust Algorithmic Recourse",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "NfCEVihkdC",
+          "title": "Measuring And Improving Persuasiveness Of Large Language Models",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "NHxwxc3ql6",
+          "title": "It Helps to Take a Second Opinion: Teaching Smaller LLMs To Deliberate Mutually via Selective Rationale Optimisation",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "LO4MEPoqrG",
+          "title": "Does Safety Training of LLMs Generalize to Semantically Related Natural Prompts?",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "EzrZX9bd4G",
+          "title": "BEEM: Boosting Performance of Early Exit DNNs using Multi-Exit Classifiers as Experts",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "DFSb67ksVr",
+          "title": "Clique Number Estimation via Differentiable Functions of Adjacency Matrix Permutations",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "AkBrb7yQ0G",
+          "title": "Periodic Materials Generation using Text-Guided Joint Diffusion Model",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "5x88lQ2MsH",
+          "title": "Bonsai: Gradient-free Graph Condensation for Node Classification",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "5pd78GmXC6",
+          "title": "Charting the Design Space of Neural Graph Representations for Subgraph Matching",
+          "isSpotlight": false,
+          "isOral": false
         },
         {
           "id": "5RZoYIT3u6",
           "title": "You Only Prune Once: Designing Calibration-Free Model Compression With Policy Learning",
-          "first_author": "Ayan Sengupta",
-          "affiliation_name": "Indian Institute of Technology, Delhi"
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "52UtL8uA35",
+          "title": "Deep Networks Learn Features From Local Discontinuities in the Label Function",
+          "isSpotlight": false,
+          "isOral": false
+        }
+      ]
+    },
+    "first_focus_country_author": {
+      "count": 26,
+      "papers": [
+        {
+          "id": "zvaiz3FjA9",
+          "title": "Designing Concise ConvNets with Columnar Stages",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "wSkvf2WyYz",
+          "title": "SBSC: Step-by-Step Coding for Improving Mathematical Olympiad Performance",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "tDIL7UXmSS",
+          "title": "Quantum (Inspired)  $D^2$-sampling with Applications",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "rnJxelIZrq",
+          "title": "Beyond Mere Token Analysis: A Hypergraph Metric Space Framework for Defending Against Socially Engineered LLM Attacks",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "qnlG3zPQUy",
+          "title": "ILLUSION: Unveiling Truth with a Comprehensive Multi-Modal, Multi-Lingual Deepfake Dataset",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "nNiWRRj6r9",
+          "title": "ONLINE EPSILON NET & PIERCING SET FOR GEOMETRIC CONCEPTS",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "l11DZY5Nxu",
+          "title": "Robust Root Cause Diagnosis using In-Distribution Interventions",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "kbeX97jExm",
+          "title": "Neural Wave Equation for Irregularly Sampled Sequence Data",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "jCDF7G3LpF",
+          "title": "EFFICIENT JAILBREAK ATTACK SEQUENCES ON LARGE LANGUAGE MODELS VIA MULTI-ARMED BANDIT-BASED CONTEXT SWITCHING",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "h0vC0fm1q7",
+          "title": "Sensitivity Verification for Additive Decision Tree Ensembles",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "ff2V3UR9sC",
+          "title": "Teaching Human Behavior Improves Content Understanding Abilities Of VLMs",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "bW9fGYo44s",
+          "title": "MotionAura: Generating High-Quality and Motion Consistent Videos using Discrete Diffusion",
+          "isSpotlight": true,
+          "isOral": false
+        },
+        {
+          "id": "TmCcNuo03f",
+          "title": "Measuring And Improving Engagement of Text-to-Image Generation Models",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "NtwFghsJne",
+          "title": "From Search to Sampling: Generative Models for Robust Algorithmic Recourse",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "NfCEVihkdC",
+          "title": "Measuring And Improving Persuasiveness Of Large Language Models",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "NHxwxc3ql6",
+          "title": "It Helps to Take a Second Opinion: Teaching Smaller LLMs To Deliberate Mutually via Selective Rationale Optimisation",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "LO4MEPoqrG",
+          "title": "Does Safety Training of LLMs Generalize to Semantically Related Natural Prompts?",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "EzrZX9bd4G",
+          "title": "BEEM: Boosting Performance of Early Exit DNNs using Multi-Exit Classifiers as Experts",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "DFSb67ksVr",
+          "title": "Clique Number Estimation via Differentiable Functions of Adjacency Matrix Permutations",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "AkBrb7yQ0G",
+          "title": "Periodic Materials Generation using Text-Guided Joint Diffusion Model",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "5x88lQ2MsH",
+          "title": "Bonsai: Gradient-free Graph Condensation for Node Classification",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "5pd78GmXC6",
+          "title": "Charting the Design Space of Neural Graph Representations for Subgraph Matching",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "5RZoYIT3u6",
+          "title": "You Only Prune Once: Designing Calibration-Free Model Compression With Policy Learning",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "52UtL8uA35",
+          "title": "Deep Networks Learn Features From Local Discontinuities in the Label Function",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "3E8YNv1HjU",
+          "title": "Recite, Reconstruct, Recollect: Memorization in LMs as a Multifaceted Phenomenon",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "0nJEgNpb4l",
+          "title": "PEAR: Primitive Enabled Adaptive Relabeling for Boosting Hierarchical Reinforcement Learning",
+          "isSpotlight": false,
+          "isOral": false
         }
       ]
     },
     "institutions": [
       {
         "institute": "IIT Bombay",
-        "total_paper_count": 17,
-        "unique_paper_count": 10,
+        "total_paper_count": 10,
+        "unique_paper_count": 7,
+        "author_count": 15,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "academic",
         "papers": [
           {
-            "id": "EzrZX9bd4G",
-            "title": "BEEM: Boosting Performance of Early Exit DNNs using Multi-Exit Classifiers as Experts"
-          },
-          {
-            "id": "5pd78GmXC6",
-            "title": "Charting the Design Space of Neural Graph Representations for Subgraph Matching"
-          },
-          {
-            "id": "DFSb67ksVr",
-            "title": "Clique Number Estimation via Differentiable Functions of Adjacency Matrix Permutations"
-          },
-          {
-            "id": "9h45qxXEx0",
-            "title": "Debiasing Federated Learning with Correlated Client Participation"
-          },
-          {
-            "id": "NtwFghsJne",
-            "title": "From Search to Sampling: Generative Models for Robust Algorithmic Recourse"
+            "id": "Q1kPHLUbhi",
+            "title": "Towards Self-Supervised Covariance Estimation in Deep Heteroscedastic Regression",
+            "isSpotlight": false,
+            "isOral": false
           },
           {
             "id": "k3gCieTXeY",
-            "title": "INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge"
-          },
-          {
-            "id": "nNiWRRj6r9",
-            "title": "ONLINE EPSILON NET & PIERCING SET FOR GEOMETRIC CONCEPTS"
+            "title": "INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge",
+            "isSpotlight": true,
+            "isOral": false
           },
           {
             "id": "l11DZY5Nxu",
-            "title": "Robust Root Cause Diagnosis using In-Distribution Interventions"
+            "title": "Robust Root Cause Diagnosis using In-Distribution Interventions",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "EzrZX9bd4G",
+            "title": "BEEM: Boosting Performance of Early Exit DNNs using Multi-Exit Classifiers as Experts",
+            "isSpotlight": false,
+            "isOral": false
           },
           {
             "id": "h0vC0fm1q7",
-            "title": "Sensitivity Verification for Additive Decision Tree Ensembles"
+            "title": "Sensitivity Verification for Additive Decision Tree Ensembles",
+            "isSpotlight": false,
+            "isOral": false
           },
           {
-            "id": "Q1kPHLUbhi",
-            "title": "Towards Self-Supervised Covariance Estimation in Deep Heteroscedastic Regression"
+            "id": "9h45qxXEx0",
+            "title": "Debiasing Federated Learning with Correlated Client Participation",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "nNiWRRj6r9",
+            "title": "ONLINE EPSILON NET & PIERCING SET FOR GEOMETRIC CONCEPTS",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "5pd78GmXC6",
+            "title": "Charting the Design Space of Neural Graph Representations for Subgraph Matching",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "NtwFghsJne",
+            "title": "From Search to Sampling: Generative Models for Robust Algorithmic Recourse",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "DFSb67ksVr",
+            "title": "Clique Number Estimation via Differentiable Functions of Adjacency Matrix Permutations",
+            "isSpotlight": false,
+            "isOral": false
           }
+        ],
+        "authors": [
+          "",
+          "Manjesh Kumar Hanawal",
+          "Prateek Garg",
+          "Snegha A",
+          "Sunita Sarawagi",
+          "Devdan Dey",
+          "Ashwin Ramachandran",
+          "Abir De",
+          "Arhaan Ahmad",
+          "Aziz Shameem",
+          "Lokesh Nagalapatti",
+          "Vaibhav Raj",
+          "Indradyumna Roy",
+          "Pranay Sharma",
+          "Ashutosh Gupta"
         ]
       },
       {
-        "institute": "Microsoft",
-        "total_paper_count": 8,
-        "unique_paper_count": 6,
+        "institute": "Fujitsu",
+        "total_paper_count": 4,
+        "unique_paper_count": 2,
+        "author_count": 10,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "corporate",
         "papers": [
           {
-            "id": "9juyeCqL0u",
-            "title": "Causal Order: The Key to Leveraging Imperfect Experts in Causal Inference"
+            "id": "7gGl6HB5Zd",
+            "title": "Manifold Induced Biases for Zero-shot and Few-shot Detection of Generated Images",
+            "isSpotlight": false,
+            "isOral": false
           },
           {
-            "id": "xkgfLXZ4e0",
-            "title": "Correlating instruction-tuning (in multimodal models) with vision-language processing (in the brain)"
+            "id": "rnJxelIZrq",
+            "title": "Beyond Mere Token Analysis: A Hypergraph Metric Space Framework for Defending Against Socially Engineered LLM Attacks",
+            "isSpotlight": false,
+            "isOral": false
           },
           {
-            "id": "zl3pfz4VCV",
-            "title": "MMTEB: Massive Multilingual Text Embedding Benchmark"
+            "id": "9EfBeXaXf0",
+            "title": "Optimization by Parallel Quasi-Quantum Annealing with Gradient-Based Sampling",
+            "isSpotlight": false,
+            "isOral": false
           },
           {
-            "id": "0dELcFHig2",
-            "title": "Multi-modal brain encoding models for multi-modal stimuli"
-          },
-          {
-            "id": "3E8YNv1HjU",
-            "title": "Recite, Reconstruct, Recollect: Memorization in LMs as a Multifaceted Phenomenon"
-          },
-          {
-            "id": "l11DZY5Nxu",
-            "title": "Robust Root Cause Diagnosis using In-Distribution Interventions"
+            "id": "jCDF7G3LpF",
+            "title": "EFFICIENT JAILBREAK ATTACK SEQUENCES ON LARGE LANGUAGE MODELS VIA MULTI-ARMED BANDIT-BASED CONTEXT SWITCHING",
+            "isSpotlight": false,
+            "isOral": false
           }
-        ]
-      },
-      {
-        "institute": "Adobe",
-        "total_paper_count": 7,
-        "unique_paper_count": 4,
-        "papers": [
-          {
-            "id": "NHxwxc3ql6",
-            "title": "It Helps to Take a Second Opinion: Teaching Smaller LLMs To Deliberate Mutually via Selective Rationale Optimisation"
-          },
-          {
-            "id": "TmCcNuo03f",
-            "title": "Measuring And Improving Engagement of Text-to-Image Generation Models"
-          },
-          {
-            "id": "NfCEVihkdC",
-            "title": "Measuring And Improving Persuasiveness Of Large Language Models"
-          },
-          {
-            "id": "ff2V3UR9sC",
-            "title": "Teaching Human Behavior Improves Content Understanding Abilities Of VLMs"
-          }
-        ]
-      },
-      {
-        "institute": "IIT Delhi",
-        "total_paper_count": 6,
-        "unique_paper_count": 3,
-        "papers": [
-          {
-            "id": "5x88lQ2MsH",
-            "title": "Bonsai: Gradient-free Graph Condensation for Node Classification"
-          },
-          {
-            "id": "tDIL7UXmSS",
-            "title": "Quantum (Inspired)  $D^2$-sampling with Applications"
-          },
-          {
-            "id": "5RZoYIT3u6",
-            "title": "You Only Prune Once: Designing Calibration-Free Model Compression With Policy Learning"
-          }
-        ]
-      },
-      {
-        "institute": "IIT Madras",
-        "total_paper_count": 5,
-        "unique_paper_count": 3,
-        "papers": [
-          {
-            "id": "ZbkqhKbggH",
-            "title": "ASTrA: Adversarial Self-supervised Training with Adaptive-Attacks"
-          },
-          {
-            "id": "52UtL8uA35",
-            "title": "Deep Networks Learn Features From Local Discontinuities in the Label Function"
-          },
-          {
-            "id": "qnlG3zPQUy",
-            "title": "ILLUSION: Unveiling Truth with a Comprehensive Multi-Modal, Multi-Lingual Deepfake Dataset"
-          }
-        ]
-      },
-      {
-        "institute": "IIT Kharagpur",
-        "total_paper_count": 5,
-        "unique_paper_count": 3,
-        "papers": [
-          {
-            "id": "AkBrb7yQ0G",
-            "title": "Periodic Materials Generation using Text-Guided Joint Diffusion Model"
-          },
-          {
-            "id": "wSkvf2WyYz",
-            "title": "SBSC: Step-by-Step Coding for Improving Mathematical Olympiad Performance"
-          },
-          {
-            "id": "TJo6aQb7mK",
-            "title": "Surprising Effectiveness of pretraining Ternary  Language Model at Scale"
-          }
+        ],
+        "authors": [
+          "",
+          "Hisashi Kojima",
+          "Omer Hofman",
+          "Roman Vainshtein",
+          "Aditya Ramesh",
+          "Yuma Ichikawa",
+          "Sadbhavana Babar",
+          "Aditya Saibewar",
+          "Shivam Bhardwaj",
+          "Amit Giloni"
         ]
       },
       {
         "institute": "IIIT Delhi",
         "total_paper_count": 4,
-        "unique_paper_count": 4,
+        "unique_paper_count": 3,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
         "papers": [
           {
-            "id": "XrsOu4KgDE",
-            "title": "Attributing Culture-Conditioned Generations to Pretraining Corpora"
-          },
-          {
             "id": "TmCcNuo03f",
-            "title": "Measuring And Improving Engagement of Text-to-Image Generation Models"
+            "title": "Measuring And Improving Engagement of Text-to-Image Generation Models",
+            "isSpotlight": false,
+            "isOral": false
           },
           {
             "id": "NfCEVihkdC",
-            "title": "Measuring And Improving Persuasiveness Of Large Language Models"
+            "title": "Measuring And Improving Persuasiveness Of Large Language Models",
+            "isSpotlight": false,
+            "isOral": false
           },
           {
             "id": "ff2V3UR9sC",
-            "title": "Teaching Human Behavior Improves Content Understanding Abilities Of VLMs"
+            "title": "Teaching Human Behavior Improves Content Understanding Abilities Of VLMs",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "XrsOu4KgDE",
+            "title": "Attributing Culture-Conditioned Generations to Pretraining Corpora",
+            "isSpotlight": false,
+            "isOral": false
           }
+        ],
+        "authors": [
+          "",
+          "Somesh Kumar Singh",
+          "Arnav Goel"
         ]
       },
       {
-        "institute": "IIIT Hyderabad",
-        "total_paper_count": 4,
-        "unique_paper_count": 3,
+        "institute": "IIT Madras",
+        "total_paper_count": 3,
+        "unique_paper_count": 2,
+        "author_count": 6,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
         "papers": [
           {
-            "id": "r5IXBlTCGc",
-            "title": "Consistency Checks for Language Model Forecasters"
+            "id": "ZbkqhKbggH",
+            "title": "ASTrA: Adversarial Self-supervised Training with Adaptive-Attacks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "52UtL8uA35",
+            "title": "Deep Networks Learn Features From Local Discontinuities in the Label Function",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "qnlG3zPQUy",
+            "title": "ILLUSION: Unveiling Truth with a Comprehensive Multi-Modal, Multi-Lingual Deepfake Dataset",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Harish G. Ramaswamy",
+          "Settur Jithamanyu",
+          "Chandra Shekar Lakshminarayanan",
+          "Akanksha Singh",
+          "Mahesh Lorik Yadav",
+          "Prithaj Banerjee"
+        ]
+      },
+      {
+        "institute": "IIT Delhi",
+        "total_paper_count": 3,
+        "unique_paper_count": 3,
+        "author_count": 10,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "tDIL7UXmSS",
+            "title": "Quantum (Inspired)  $D^2$-sampling with Applications",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "5x88lQ2MsH",
+            "title": "Bonsai: Gradient-free Graph Condensation for Node Classification",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "5RZoYIT3u6",
+            "title": "You Only Prune Once: Designing Calibration-Free Model Compression With Policy Learning",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "",
+          "Tanmoy Chakraborty",
+          "Ragesh Jaiswal",
+          "Samyak Jain",
+          "HARIPRASAD KODAMANA",
+          "Poojan Chetan Shah",
+          "Siddhant Chaudhary",
+          "Vansh Ramani",
+          "Mridul Gupta",
+          "Ayan Sengupta"
+        ]
+      },
+      {
+        "institute": "IIT Kharagpur",
+        "total_paper_count": 3,
+        "unique_paper_count": 2,
+        "author_count": 5,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "AkBrb7yQ0G",
+            "title": "Periodic Materials Generation using Text-Guided Joint Diffusion Model",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "TJo6aQb7mK",
+            "title": "Surprising Effectiveness of pretraining Ternary  Language Model at Scale",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "wSkvf2WyYz",
+            "title": "SBSC: Step-by-Step Coding for Improving Mathematical Olympiad Performance",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "",
+          "KISHALAY DAS",
+          "Sayandeep Bhowmick",
+          "Subhojyoti Khastagir",
+          "Tejas Pandey"
+        ]
+      },
+      {
+        "institute": "International Institute of Information Technology, Hyderabad, International Institute of Information Technology Hyderabad",
+        "total_paper_count": 3,
+        "unique_paper_count": 1,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 1,
+        "type": "unknown",
+        "papers": [
+          {
+            "id": "l11DZY5Nxu",
+            "title": "Robust Root Cause Diagnosis using In-Distribution Interventions",
+            "isSpotlight": false,
+            "isOral": false
           },
           {
             "id": "xkgfLXZ4e0",
-            "title": "Correlating instruction-tuning (in multimodal models) with vision-language processing (in the brain)"
+            "title": "Correlating instruction-tuning (in multimodal models) with vision-language processing (in the brain)",
+            "isSpotlight": false,
+            "isOral": false
           },
           {
-            "id": "l11DZY5Nxu",
-            "title": "Robust Root Cause Diagnosis using In-Distribution Interventions"
+            "id": "r5IXBlTCGc",
+            "title": "Consistency Checks for Language Model Forecasters",
+            "isSpotlight": false,
+            "isOral": true
           }
+        ],
+        "authors": [
+          "Ashutosh Srivastava",
+          "Vineeth Bhat",
+          "Akshett Rai Jindal"
         ]
       },
       {
-        "institute": "Fractal",
-        "total_paper_count": 4,
+        "institute": "IIT Kanpur",
+        "total_paper_count": 2,
         "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "academic",
         "papers": [
           {
-            "id": "wSkvf2WyYz",
-            "title": "SBSC: Step-by-Step Coding for Improving Mathematical Olympiad Performance"
+            "id": "xak8c9l1nu",
+            "title": "Computational Explorations of Total Variation Distance",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "0nJEgNpb4l",
+            "title": "PEAR: Primitive Enabled Adaptive Relabeling for Boosting Hierarchical Reinforcement Learning",
+            "isSpotlight": false,
+            "isOral": false
           }
+        ],
+        "authors": [
+          "Sutanu Gayen",
+          "Utsav Singh"
         ]
       },
       {
-        "institute": "Google",
-        "total_paper_count": 3,
-        "unique_paper_count": 2,
-        "papers": [
-          {
-            "id": "LO4MEPoqrG",
-            "title": "Does Safety Training of LLMs Generalize to Semantically Related Natural Prompts?"
-          },
-          {
-            "id": "WwmtcGr4lP",
-            "title": "GANDALF: Generative AttentioN based Data Augmentation and predictive modeLing Framework for personalized cancer treatment"
-          }
-        ]
-      },
-      {
-        "institute": "Google DeepMind",
-        "total_paper_count": 3,
-        "unique_paper_count": 3,
-        "papers": [
-          {
-            "id": "LO4MEPoqrG",
-            "title": "Does Safety Training of LLMs Generalize to Semantically Related Natural Prompts?"
-          },
-          {
-            "id": "HyjIEf90Tn",
-            "title": "Glauber Generative Model: Discrete Diffusion Models via Binary Classification"
-          },
-          {
-            "id": "pymXpl4qvi",
-            "title": "Understanding and Mitigating Bottlenecks of State Space Models through the Lens of Recency and Over-smoothing"
-          }
-        ]
-      },
-      {
-        "institute": "Fujitsu Research and Development Center Co. Ltm.",
+        "institute": "Indian Institute of Science, Indian institute of science, Bangalore",
         "total_paper_count": 2,
-        "unique_paper_count": 2,
+        "unique_paper_count": 0,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "unknown",
         "papers": [
-          {
-            "id": "rnJxelIZrq",
-            "title": "Beyond Mere Token Analysis: A Hypergraph Metric Space Framework for Defending Against Socially Engineered LLM Attacks"
-          },
-          {
-            "id": "jCDF7G3LpF",
-            "title": "EFFICIENT JAILBREAK ATTACK SEQUENCES ON LARGE LANGUAGE MODELS VIA MULTI-ARMED BANDIT-BASED CONTEXT SWITCHING"
-          }
-        ]
-      },
-      {
-        "institute": "Heritage Institute of Technology",
-        "total_paper_count": 2,
-        "unique_paper_count": 2,
-        "papers": [
-          {
-            "id": "odjMSBSWRt",
-            "title": "DarkBench: Benchmarking Dark Patterns in Large Language Models"
-          },
-          {
-            "id": "zl3pfz4VCV",
-            "title": "MMTEB: Massive Multilingual Text Embedding Benchmark"
-          }
-        ]
-      },
-      {
-        "institute": "IISc Bangalore",
-        "total_paper_count": 2,
-        "unique_paper_count": 2,
-        "papers": [
-          {
-            "id": "AsFxRSLtqR",
-            "title": "LR0.FM: LOW-RESOLUTION ZERO-SHOT CLASSIFICATION BENCHMARK FOR FOUNDATION MODELS"
-          },
           {
             "id": "90DC0IvlSs",
-            "title": "LevAttention: Time, Space and Streaming Efficient Algorithm for Heavy Attentions"
-          }
-        ]
-      },
-      {
-        "institute": "IIT BHU",
-        "total_paper_count": 2,
-        "unique_paper_count": 2,
-        "papers": [
-          {
-            "id": "vyflgpwfJW",
-            "title": "DiscoveryBench: Towards Data-Driven Discovery with Large Language Models"
+            "title": "LevAttention: Time, Space and Streaming Efficient Algorithm for Heavy Attentions",
+            "isSpotlight": false,
+            "isOral": false
           },
           {
-            "id": "bW9fGYo44s",
-            "title": "MotionAura: Generating High-Quality and Motion Consistent Videos using Discrete Diffusion"
+            "id": "AsFxRSLtqR",
+            "title": "LR0.FM: LOW-RESOLUTION ZERO-SHOT CLASSIFICATION BENCHMARK FOR FOUNDATION MODELS",
+            "isSpotlight": false,
+            "isOral": false
           }
-        ]
-      },
-      {
-        "institute": "Indian Institute of Technology Bombay, Indian Institute of Technology, Bombay",
-        "total_paper_count": 2,
-        "unique_paper_count": 2,
-        "papers": [
-          {
-            "id": "nNiWRRj6r9",
-            "title": "ONLINE EPSILON NET & PIERCING SET FOR GEOMETRIC CONCEPTS"
-          },
-          {
-            "id": "h0vC0fm1q7",
-            "title": "Sensitivity Verification for Additive Decision Tree Ensembles"
-          }
+        ],
+        "authors": [
+          "Chiranjib Bhattacharyya",
+          "Shyam Marjit"
         ]
       },
       {
         "institute": "Indian Institute of Technology, Bombay, Dhirubhai Ambani Institute Of Information and Communication Technology",
         "total_paper_count": 2,
         "unique_paper_count": 2,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "unknown",
         "papers": [
           {
             "id": "EzrZX9bd4G",
-            "title": "BEEM: Boosting Performance of Early Exit DNNs using Multi-Exit Classifiers as Experts"
+            "title": "BEEM: Boosting Performance of Early Exit DNNs using Multi-Exit Classifiers as Experts",
+            "isSpotlight": false,
+            "isOral": false
           },
           {
             "id": "h0vC0fm1q7",
-            "title": "Sensitivity Verification for Additive Decision Tree Ensembles"
+            "title": "Sensitivity Verification for Additive Decision Tree Ensembles",
+            "isSpotlight": false,
+            "isOral": false
           }
+        ],
+        "authors": [
+          "Tanay Vineet Tayal",
+          "Divya Jyoti Bajpai"
         ]
       },
       {
-        "institute": "IIT Kanpur",
-        "total_paper_count": 2,
-        "unique_paper_count": 2,
-        "papers": [
-          {
-            "id": "xak8c9l1nu",
-            "title": "Computational Explorations of Total Variation Distance"
-          },
-          {
-            "id": "0nJEgNpb4l",
-            "title": "PEAR: Primitive Enabled Adaptive Relabeling for Boosting Hierarchical Reinforcement Learning"
-          }
-        ]
-      },
-      {
-        "institute": "IIT Jodhpur",
+        "institute": "IIT BHU Varanasi",
         "total_paper_count": 2,
         "unique_paper_count": 1,
-        "papers": [
-          {
-            "id": "qnlG3zPQUy",
-            "title": "ILLUSION: Unveiling Truth with a Comprehensive Multi-Modal, Multi-Lingual Deepfake Dataset"
-          }
-        ]
-      },
-      {
-        "institute": "IIT Hyderabad",
-        "total_paper_count": 2,
-        "unique_paper_count": 1,
-        "papers": [
-          {
-            "id": "kbeX97jExm",
-            "title": "Neural Wave Equation for Irregularly Sampled Sequence Data"
-          }
-        ]
-      },
-      {
-        "institute": "IIT Roorkee",
-        "total_paper_count": 2,
-        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "academic",
         "papers": [
           {
             "id": "bW9fGYo44s",
-            "title": "MotionAura: Generating High-Quality and Motion Consistent Videos using Discrete Diffusion"
+            "title": "MotionAura: Generating High-Quality and Motion Consistent Videos using Discrete Diffusion",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "vyflgpwfJW",
+            "title": "DiscoveryBench: Towards Data-Driven Discovery with Large Language Models",
+            "isSpotlight": false,
+            "isOral": false
           }
+        ],
+        "authors": [
+          "Aryan Prakhar",
+          "Jishu Sen Gupta"
         ]
       },
       {
-        "institute": "Indo Korea Science and Technology Center",
+        "institute": "Indian Institute of Technology Bombay, Indian Institute of Technology, Bombay",
         "total_paper_count": 2,
+        "unique_paper_count": 2,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "unknown",
+        "papers": [
+          {
+            "id": "nNiWRRj6r9",
+            "title": "ONLINE EPSILON NET & PIERCING SET FOR GEOMETRIC CONCEPTS",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "h0vC0fm1q7",
+            "title": "Sensitivity Verification for Additive Decision Tree Ensembles",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "",
+          "Sujoy Bhore",
+          "Satyam Singh"
+        ]
+      },
+      {
+        "institute": "Heritage Institute of Technology",
+        "total_paper_count": 2,
+        "unique_paper_count": 0,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 1,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "zl3pfz4VCV",
+            "title": "MMTEB: Massive Multilingual Text Embedding Benchmark",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "odjMSBSWRt",
+            "title": "DarkBench: Benchmarking Dark Patterns in Large Language Models",
+            "isSpotlight": false,
+            "isOral": true
+          }
+        ],
+        "authors": [
+          "Akash Kundu"
+        ]
+      },
+      {
+        "institute": "International Institute of Information Technology Hyderabad, Dhirubhai Ambani Institute Of Information and Communication Technology",
+        "total_paper_count": 1,
+        "unique_paper_count": 0,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "unknown",
+        "papers": [
+          {
+            "id": "0dELcFHig2",
+            "title": "Multi-modal brain encoding models for multi-modal stimuli",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Mounika Marreddy"
+        ]
+      },
+      {
+        "institute": "Indo-Korea Science and Technology Center",
+        "total_paper_count": 1,
         "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
         "papers": [
           {
             "id": "AkBrb7yQ0G",
-            "title": "Periodic Materials Generation using Text-Guided Joint Diffusion Model"
+            "title": "Periodic Materials Generation using Text-Guided Joint Diffusion Model",
+            "isSpotlight": false,
+            "isOral": false
           }
-        ]
-      },
-      {
-        "institute": "Abacus.ai",
-        "total_paper_count": 1,
-        "unique_paper_count": 1,
-        "papers": [
-          {
-            "id": "sKYHBTAxVa",
-            "title": "LiveBench: A Challenging, Contamination-Limited LLM Benchmark"
-          }
+        ],
+        "authors": [
+          "Seung-Cheol Lee",
+          "Satadeep Bhattacharjee"
         ]
       },
       {
         "institute": "CMRI",
         "total_paper_count": 1,
-        "unique_paper_count": 1,
+        "unique_paper_count": 0,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "corporate",
         "papers": [
           {
             "id": "F5PlYMC5ik",
-            "title": "LOIRE: LifelOng learning on Incremental data via pre-trained language model gRowth Efficiently"
+            "title": "LOIRE: LifelOng learning on Incremental data via pre-trained language model gRowth Efficiently",
+            "isSpotlight": false,
+            "isOral": false
           }
+        ],
+        "authors": [
+          "Qian Hu"
         ]
       },
       {
-        "institute": "Cohere",
+        "institute": "T-Tech",
         "total_paper_count": 1,
-        "unique_paper_count": 1,
+        "unique_paper_count": 0,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "corporate",
         "papers": [
           {
-            "id": "k3gCieTXeY",
-            "title": "INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge"
+            "id": "H0qIWXXLUR",
+            "title": "Learn Your Reference Model for Real Good Alignment",
+            "isSpotlight": false,
+            "isOral": false
           }
-        ]
-      },
-      {
-        "institute": "Delhi Technological University",
-        "total_paper_count": 1,
-        "unique_paper_count": 1,
-        "papers": [
-          {
-            "id": "bW9fGYo44s",
-            "title": "MotionAura: Generating High-Quality and Motion Consistent Videos using Discrete Diffusion"
-          }
+        ],
+        "authors": [
+          "Nikita Surnachev",
+          "Yaroslav Aksenov",
+          "Boris Shaposhnikov",
+          "Alexey Gorbatovski"
         ]
       },
       {
         "institute": "IIM",
         "total_paper_count": 1,
-        "unique_paper_count": 1,
+        "unique_paper_count": 0,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
         "papers": [
           {
             "id": "UWdPsY7agk",
-            "title": "Efficient Causal Decision Making with One-sided Feedback"
+            "title": "Efficient Causal Decision Making with One-sided Feedback",
+            "isSpotlight": false,
+            "isOral": false
           }
+        ],
+        "authors": [
+          "PULAK GHOSH"
+        ]
+      },
+      {
+        "institute": "Skan.ai",
+        "total_paper_count": 1,
+        "unique_paper_count": 0,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "corporate",
+        "papers": [
+          {
+            "id": "ZbkqhKbggH",
+            "title": "ASTrA: Adversarial Self-supervised Training with Adaptive-Attacks",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Gautam Vashishtha"
+        ]
+      },
+      {
+        "institute": "Krutrim AI",
+        "total_paper_count": 1,
+        "unique_paper_count": 0,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "corporate",
+        "papers": [
+          {
+            "id": "b1ivBPLb1n",
+            "title": "BigDocs: An Open Dataset for Training Multimodal Models on Document and Code Tasks",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Shubham Agarwal"
+        ]
+      },
+      {
+        "institute": "IIT Roorkee",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "bW9fGYo44s",
+            "title": "MotionAura: Generating High-Quality and Motion Consistent Videos using Discrete Diffusion",
+            "isSpotlight": true,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Sparsh Mittal",
+          "Onkar Kishor Susladkar"
+        ]
+      },
+      {
+        "institute": "DTU",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "bW9fGYo44s",
+            "title": "MotionAura: Generating High-Quality and Motion Consistent Videos using Discrete Diffusion",
+            "isSpotlight": true,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Chirag Sehgal"
+        ]
+      },
+      {
+        "institute": "TCS",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "corporate",
+        "papers": [
+          {
+            "id": "bW9fGYo44s",
+            "title": "MotionAura: Generating High-Quality and Motion Consistent Videos using Discrete Diffusion",
+            "isSpotlight": true,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Rekha Singhal"
+        ]
+      },
+      {
+        "institute": "NeuralSpace",
+        "total_paper_count": 1,
+        "unique_paper_count": 0,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "corporate",
+        "papers": [
+          {
+            "id": "k3gCieTXeY",
+            "title": "INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge",
+            "isSpotlight": true,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Aditya Kumar Dalmia"
+        ]
+      },
+      {
+        "institute": "IIT Hyderabad",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "kbeX97jExm",
+            "title": "Neural Wave Equation for Irregularly Sampled Sequence Data",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "P. K. Srijith",
+          "Arkaprava Majumdar"
         ]
       },
       {
         "institute": "Indian Institute of Technology, Hyderabad, Dhirubhai Ambani Institute Of Information and Communication Technology",
         "total_paper_count": 1,
         "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "unknown",
         "papers": [
           {
             "id": "kbeX97jExm",
-            "title": "Neural Wave Equation for Irregularly Sampled Sequence Data"
+            "title": "Neural Wave Equation for Irregularly Sampled Sequence Data",
+            "isSpotlight": false,
+            "isOral": false
           }
+        ],
+        "authors": [
+          "M Anand Krishna"
         ]
       },
       {
-        "institute": "Nirma University",
+        "institute": "IIT Jodhpur",
         "total_paper_count": 1,
         "unique_paper_count": 1,
+        "author_count": 5,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
         "papers": [
           {
-            "id": "zl3pfz4VCV",
-            "title": "MMTEB: Massive Multilingual Text Embedding Benchmark"
+            "id": "qnlG3zPQUy",
+            "title": "ILLUSION: Unveiling Truth with a Comprehensive Multi-Modal, Multi-Lingual Deepfake Dataset",
+            "isSpotlight": false,
+            "isOral": false
           }
+        ],
+        "authors": [
+          "Akshat Jain",
+          "",
+          "Kartik Thakral",
+          "Rishabh Ranjan",
+          "Richa Singh"
         ]
       },
       {
-        "institute": "International Institute of Information Technology Hyderabad, Dhirubhai Ambani Institute Of Information and Communication Technology",
+        "institute": "Abacus.ai",
         "total_paper_count": 1,
-        "unique_paper_count": 1,
+        "unique_paper_count": 0,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "corporate",
         "papers": [
           {
-            "id": "0dELcFHig2",
-            "title": "Multi-modal brain encoding models for multi-modal stimuli"
+            "id": "sKYHBTAxVa",
+            "title": "LiveBench: A Challenging, Contamination-Limited LLM Benchmark",
+            "isSpotlight": true,
+            "isOral": false
           }
-        ]
-      },
-      {
-        "institute": "Krutrim AI",
-        "total_paper_count": 1,
-        "unique_paper_count": 1,
-        "papers": [
-          {
-            "id": "b1ivBPLb1n",
-            "title": "BigDocs: An Open Dataset for Training Multimodal Models on Document and Code Tasks"
-          }
-        ]
-      },
-      {
-        "institute": "NeuralSpace, Inc.",
-        "total_paper_count": 1,
-        "unique_paper_count": 1,
-        "papers": [
-          {
-            "id": "k3gCieTXeY",
-            "title": "INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge"
-          }
-        ]
-      },
-      {
-        "institute": "Open Source",
-        "total_paper_count": 1,
-        "unique_paper_count": 1,
-        "papers": [
-          {
-            "id": "zl3pfz4VCV",
-            "title": "MMTEB: Massive Multilingual Text Embedding Benchmark"
-          }
+        ],
+        "authors": [
+          "Shubh-Agrawal"
         ]
       },
       {
         "institute": "OpenLocus",
         "total_paper_count": 1,
-        "unique_paper_count": 1,
+        "unique_paper_count": 0,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "corporate",
         "papers": [
           {
             "id": "vyflgpwfJW",
-            "title": "DiscoveryBench: Towards Data-Driven Discovery with Large Language Models"
+            "title": "DiscoveryBench: Towards Data-Driven Discovery with Large Language Models",
+            "isSpotlight": false,
+            "isOral": false
           }
+        ],
+        "authors": [
+          "Abhijeetsingh Meena",
+          "Tirth Vora"
+        ]
+      },
+      {
+        "institute": "Fractal",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "corporate",
+        "papers": [
+          {
+            "id": "wSkvf2WyYz",
+            "title": "SBSC: Step-by-Step Coding for Improving Mathematical Olympiad Performance",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Ankan Biswas",
+          "Siva Kishore Gollapalli",
+          "Kunal Singh",
+          "Pradeep Moturi"
+        ]
+      },
+      {
+        "institute": "IIIT Hyderabad",
+        "total_paper_count": 1,
+        "unique_paper_count": 0,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "xkgfLXZ4e0",
+            "title": "Correlating instruction-tuning (in multimodal models) with vision-language processing (in the brain)",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Manish Shrivastava"
+        ]
+      },
+      {
+        "institute": "Open Source",
+        "total_paper_count": 1,
+        "unique_paper_count": 0,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "unknown",
+        "papers": [
+          {
+            "id": "zl3pfz4VCV",
+            "title": "MMTEB: Massive Multilingual Text Embedding Benchmark",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Ashwin Mathur"
         ]
       },
       {
         "institute": "RV College of Engineering",
         "total_paper_count": 1,
-        "unique_paper_count": 1,
+        "unique_paper_count": 0,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
         "papers": [
           {
             "id": "zl3pfz4VCV",
-            "title": "MMTEB: Massive Multilingual Text Embedding Benchmark"
+            "title": "MMTEB: Massive Multilingual Text Embedding Benchmark",
+            "isSpotlight": false,
+            "isOral": false
           }
+        ],
+        "authors": [
+          "Gayatri K"
         ]
       },
       {
-        "institute": "ScorelabsAI, USA",
+        "institute": "Nirma University",
+        "total_paper_count": 1,
+        "unique_paper_count": 0,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "zl3pfz4VCV",
+            "title": "MMTEB: Massive Multilingual Text Embedding Benchmark",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Henil Shalin Panchal"
+        ]
+      },
+      {
+        "institute": "ScorelabsAI",
         "total_paper_count": 1,
         "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "corporate",
         "papers": [
           {
             "id": "zvaiz3FjA9",
-            "title": "Designing Concise ConvNets with Columnar Stages"
+            "title": "Designing Concise ConvNets with Columnar Stages",
+            "isSpotlight": false,
+            "isOral": false
           }
-        ]
-      },
-      {
-        "institute": "ServiceNow",
-        "total_paper_count": 1,
-        "unique_paper_count": 1,
-        "papers": [
-          {
-            "id": "k3gCieTXeY",
-            "title": "INCLUDE: Evaluating Multilingual Language Understanding with Regional Knowledge"
-          }
-        ]
-      },
-      {
-        "institute": "Skan.ai",
-        "total_paper_count": 1,
-        "unique_paper_count": 1,
-        "papers": [
-          {
-            "id": "ZbkqhKbggH",
-            "title": "ASTrA: Adversarial Self-supervised Training with Adaptive-Attacks"
-          }
-        ]
-      },
-      {
-        "institute": "T-Tech",
-        "total_paper_count": 1,
-        "unique_paper_count": 1,
-        "papers": [
-          {
-            "id": "H0qIWXXLUR",
-            "title": "Learn Your Reference Model for Real Good Alignment"
-          }
-        ]
-      },
-      {
-        "institute": "Tata Consultancy Services",
-        "total_paper_count": 1,
-        "unique_paper_count": 1,
-        "papers": [
-          {
-            "id": "bW9fGYo44s",
-            "title": "MotionAura: Generating High-Quality and Motion Consistent Videos using Discrete Diffusion"
-          }
+        ],
+        "authors": [
+          "Ashish Kumar"
         ]
       }
     ]
+  },
+  "configuration": {
+    "countryMap": {
+      "US": "United States",
+      "CN": "China",
+      "UK": "United Kingdom",
+      "IN": "India",
+      "JP": "Japan",
+      "DE": "Germany",
+      "FR": "France",
+      "CA": "Canada",
+      "KR": "South Korea",
+      "AU": "Australia",
+      "UNK": "Unknown"
+    },
+    "apacCountries": [
+      "CN",
+      "IN",
+      "JP",
+      "KR",
+      "AU",
+      "SG",
+      "MY",
+      "TH",
+      "VN",
+      "ID"
+    ],
+    "colorScheme": {
+      "us": "hsl(221, 83%, 53%)",
+      "cn": "hsl(0, 84%, 60%)",
+      "focusCountry": "hsl(36, 96%, 50%)",
+      "primary": "hsl(var(--primary))",
+      "secondary": "hsl(var(--secondary-foreground))",
+      "academic": "hsl(221, 83%, 53%)",
+      "corporate": "hsl(330, 80%, 60%)",
+      "spotlight": "hsl(48, 96%, 50%)",
+      "oral": "hsl(142, 71%, 45%)"
+    },
+    "dashboardTitle": "India @ ICLR 2025",
+    "dashboardSubtitle": "India's Contributions, Global Context & Institutional Landscape",
+    "sections": {
+      "summary": {
+        "title": "Executive Summary: Impact at a Glance",
+        "insights": [
+          "India's ML researchers are making their mark with 50 papers at ICLR 2025, including 5 spotlight and 2 oral presentations that demonstrate the quality of research.",
+          "Positioned globally, India contributes 1.3% to the body of work at ICLR 2025.",
+          "Analysis of 26 first authorship and 23 majority authorship collaborations reveals trends in research leadership and international collaboration.",
+          "The India ML research landscape shows a mix of 17 academic and 11 corporate contributions, with leading institutions demonstrating significant research impact."
+        ]
+      },
+      "context": {
+        "title": "Global & APAC Context: India's Standing",
+        "subtitle": "Comparing India's research output with global and regional peers.",
+        "insights": [
+          "The top 5 contributing countries were: United States, China, HK, GB, Canada."
+        ]
+      },
+      "focusCountry": {
+        "title": "India Deep Dive",
+        "subtitle": "Analyzing authorship, collaboration, and institutional contributions.",
+        "insights": [
+          "India had 133 unique authors contributing to ICLR 2025.",
+          "26 papers had a first author from India.",
+          "23 papers had a majority of authors from India."
+        ]
+      },
+      "institutions": {
+        "title": "Institutions: Internal Ecosystem",
+        "subtitle": "Analyzing the performance and impact of individual institutions within India.",
+        "insights": [
+          "IIT Bombay was the top contributing institution from India with 10 papers.",
+          "India had 17 academic and 11 corporate institutions contributing to ICLR 2025."
+        ]
+      }
+    }
   }
 }

@@ -1,0 +1,146 @@
+{
+    "Adobe Systems": {
+      "variations": [
+        "Adobe Systems"
+      ],
+      "type": "corporate"
+    },
+    "Ashoka University": {
+      "variations": [
+        "Ashoka University"
+      ],
+      "type": "academic"
+    },
+    "BITS Pilani": {
+      "variations": [
+        "BITS Pilani, Birla Institute of Technology and Science",
+        "BITS Pilani"
+      ],
+      "type": "academic"
+    },
+    "BITS Goa Campus": {
+      "variations": [
+        "Birla Institute of Tchnology and Science - KK Birla Goa Campus",
+        "BITS Goa Campus"
+      ],
+      "type": "academic"
+    },
+    "DA-IICT": {
+      "variations": [
+        "Dhirubhai Ambani Institute Of Information and Communication Technology",
+        "DA-IICT"
+      ],
+      "type": "academic"
+    },
+    "Google": {
+      "variations": [
+        "Google",
+        "Research, Google"
+      ],
+      "type": "corporate"
+    },
+    "Google DeepMind": {
+      "variations": [
+        "Google DeepMind",
+        "Google Deepmind"
+      ],
+      "type": "corporate"
+    },
+    "IIIT Hyderabad": {
+      "variations": [
+        "International Institute of Information Technology Hyderabad",
+        "IIIT Hyderabad",
+        "International Institute of Information Technology, Hyderabad"
+      ],
+      "type": "academic"
+    },
+    "IIT Bombay": {
+      "variations": [
+        "Indian Institute of Technology, Bombay",
+        "IIT Bombay",
+        "Indian Institute of Technology Bombay",
+        "Indian Institute of Technology Bombay,",
+        "Indian Institute of Technology Bombay, Indian Institute of Technology, Bombay"
+      ],
+      "type": "academic"
+    },
+    "IIT Delhi": {
+      "variations": [
+        "Indian Institute of Technology, Delhi",
+        "IIT Delhi",
+        "Indian Institute of Technology Delhi"
+      ],
+      "type": "academic"
+    },
+    "IIT Kanpur": {
+      "variations": [
+        "Indian Institute of Technology, Kanpur",
+        "IIT Kanpur",
+        "Indian Institute of Technology Kanpur (IIT Kanpur)"
+      ],
+      "type": "academic"
+    },
+    "IIM Ahmedabad": {
+      "variations": [
+        "Indian Institute of Management, Ahmedabad",
+        "IIM Ahmedabad"
+      ],
+      "type": "academic"
+    },
+    "IISc Bangalore": {
+      "variations": [
+        "Indian Institute of Science",
+        "IISc Bangalore",
+        "Indian Institute of Science, Indian institute of science, Bangalore"
+      ],
+      "type": "academic"
+    },
+    "ISI": {
+      "variations": [
+        "Indian Statistical Institute",
+        "ISI"
+      ],
+      "type": "academic"
+    },
+    "IBM": {
+      "variations": [
+        "International Business Machines",
+        "IBM"
+      ],
+      "type": "corporate"
+    },
+    "Microsoft": {
+      "variations": [
+        "Microsoft",
+        "Research, Microsoft"
+      ],
+      "type": "corporate"
+    },
+    "Microsoft Research": {
+      "variations": [
+        "Microsoft Research"
+      ],
+      "type": "corporate"
+    },
+    "TCS": {
+      "variations": [
+        "Tata Consultancy Services Limited, India",
+        "TCS"
+      ],
+      "type": "corporate"
+    },
+    "TIFR": {
+      "variations": [
+        "Tata Institute of Fundamental Research",
+        "TIFR",
+        "Tata Institute of Fundamental Research, Mumbai"
+      ],
+      "type": "academic"
+    },
+    "Washington State University at Pullman": {
+      "variations": [
+        "Washington State University at Pullman"
+      ],
+      "type": "academic"
+    }
+  }

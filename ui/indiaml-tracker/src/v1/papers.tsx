@@ -1,7 +1,5 @@
-import React from "react";
-import { easeIn, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { FaGithub, FaRegSmileWink } from "react-icons/fa";
-import Confetti from "react-confetti";
 import { ResearchPapersShowcase } from "./research-paper-showcase";
 
 export default function Home() {

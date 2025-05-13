@@ -1,0 +1,113 @@
+{
+  "conferenceInfo": {
+    "name": "ICLR",
+    "year": 2025,
+    "track": "Conference",
+    "totalAcceptedPapers": 0
+  },
+  "globalStats": {
+    "countries": []
+  },
+  "focusCountry": {
+    "country_code": "IN",
+    "country_name": "India",
+    "total_authors": 0,
+    "total_spotlights": 0,
+    "total_orals": 0,
+    "institution_types": {},
+    "at_least_one_focus_country_author": {
+      "count": 0,
+      "papers": []
+    },
+    "majority_focus_country_authors": {
+      "count": 0,
+      "papers": []
+    },
+    "first_focus_country_author": {
+      "count": 0,
+      "papers": []
+    },
+    "institutions": []
+  },
+  "configuration": {
+    "countryMap": {
+      "US": "United States",
+      "CN": "China",
+      "GB": "United Kingdom",
+      "UK": "United Kingdom",
+      "IN": "India",
+      "CA": "Canada",
+      "HK": "Hong Kong",
+      "SG": "Singapore",
+      "DE": "Germany",
+      "CH": "Switzerland",
+      "KR": "South Korea",
+      "JP": "Japan",
+      "AU": "Australia",
+      "IL": "Israel",
+      "FR": "France",
+      "NL": "Netherlands"
+    },
+    "apacCountries": [
+      "CN",
+      "IN",
+      "HK",
+      "SG",
+      "JP",
+      "KR",
+      "AU"
+    ],
+    "colorScheme": {
+      "us": "hsl(221, 83%, 53%)",
+      "cn": "hsl(0, 84%, 60%)",
+      "focusCountry": "hsl(36, 96%, 50%)",
+      "primary": "hsl(var(--primary))",
+      "secondary": "hsl(var(--secondary-foreground))",
+      "academic": "hsl(221, 83%, 53%)",
+      "corporate": "hsl(330, 80%, 60%)",
+      "spotlight": "hsl(48, 96%, 50%)",
+      "oral": "hsl(142, 71%, 45%)"
+    },
+    "dashboardTitle": "India @ ICLR 2025",
+    "dashboardSubtitle": "India's Contributions, Global Context & Institutional Landscape",
+    "sections": {
+      "summary": {
+        "title": "Executive Summary: Impact at a Glance",
+        "insights": [
+          "India's ML researchers are making their mark with papers at ICLR 2025, including spotlight and oral presentations that demonstrate the quality of research.",
+          "Positioned globally, India contributes to the body of work at ICLR 2025.",
+          "Analysis of first authorship and majority authorship collaborations reveals trends in research leadership and international collaboration.",
+          "The Indian ML research landscape shows a mix of academic and corporate contributions, with leading institutions demonstrating significant research impact."
+        ]
+      },
+      "context": {
+        "title": "Global & APAC Context: India's Standing",
+        "subtitle": "Comparing India's research output with global and regional peers.",
+        "insights": [
+          "Within the selected APAC group's papers, the focus country contributes papers and authors.",
+          "China dominates volume with papers, while the focus country's spotlight papers demonstrate quality-focused research.",
+          "The focus country ranks among APAC nations in total papers, but demonstrates strong academic-corporate collaboration."
+        ]
+      },
+      "focusCountry": {
+        "title": "India Deep Dive",
+        "subtitle": "Analyzing authorship, collaboration, and institutional contributions.",
+        "insights": [
+          "Researchers from India are increasingly taking lead authorship roles.",
+          "A notable portion of papers with Indian authors feature a majority of authors from India, signaling strong domestic research groups.",
+          "Academic institutions are the primary drivers of paper volume, with corporate labs also making significant high-quality contributions."
+        ]
+      },
+      "institutions": {
+        "title": "Institutions: Internal Ecosystem",
+        "subtitle": "Analyzing the performance and impact of individual institutions within India.",
+        "insights": [
+          "Leading institutions produce the most papers and have a high concentration of authors, often securing spotlight/oral presentations.",
+          "The top few institutions account for a significant percentage of the country's total papers.",
+          "Corporate research labs show strong performance, complementing the output from top academic institutions.",
+          "The institutional landscape highlights the distribution of research talent across various organizations."
+        ]
+      }
+    }
+  }
+}
