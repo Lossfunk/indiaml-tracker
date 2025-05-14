@@ -12,7 +12,7 @@ import {
     FaLink, FaUnlink, FaGlobe, FaUser
 } from 'react-icons/fa';
 
-// --- Type definitions ---
+// --- Type definitions (from ConferenceDashboard) ---
 export interface DashboardDataInterface {
     conferenceInfo: {
         name: string;
@@ -128,9 +128,6 @@ interface CountryData {
 type ProcessedFocusCountryData = DashboardDataInterface['focusCountry'] & { 
     rank?: number; 
     paper_count?: number; 
-    // author_count, spotlights, orals are already in DashboardDataInterface['focusCountry']
-    // but we are adding them from global stats aggregation for the focus country.
-    // So, redefine them here to make it clear they are part of the processed data.
     author_count: number; 
     spotlights: number; 
     orals: number; 
@@ -181,7 +178,7 @@ const exportToCSV = (data: Record<string, any>[], filename: string): void => {
 };
 
 const normalizeValues = (data: any[], key: string) => {
-    if (!data || data.length === 0) return []; // Guard against empty or null data
+    if (!data || data.length === 0) return [];
     const values = data.map(item => item[key] || 0);
     if (values.length === 0) return data.map(item => ({ ...item, [`normalized_${key}`]: 0 }));
 
@@ -192,8 +189,7 @@ const normalizeValues = (data: any[], key: string) => {
     }));
 };
 
-// --- Reusable UI Components ---
-// (Section, StatCard, CustomTooltip, renderActiveShape, InterpretationPanel, TabButton, InstitutionCard, DataTable remain the same)
+// --- Reusable UI Components (Section, StatCard, etc. - unchanged) ---
 interface SectionProps {
     title: string;
     subtitle?: string;
@@ -489,20 +485,26 @@ const DataTable: React.FC<DataTableProps> = ({ data, title, filename }) => {
 // --- Main Dashboard Component ---
 interface ConferenceDashboardProps {
     conference: string; 
-    year: string;       
+    year: string;
+    conferenceSelectorElement: React.ReactNode; // Prop to pass the selector UI
 }
 
-const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({ conference, year }) => {
-    // State Hooks - Must be at the top level
+const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({ conference, year, conferenceSelectorElement }) => {
+    // State Hooks
     const [fetchedDashboardData, setFetchedDashboardData] = useState<DashboardDataInterface | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const [institutionFilter, setInstitutionFilter] = useState<string>('');
     const [activePieIndex, setActivePieIndex] = useState<number>(0);
 
-    // Effect Hook - For data fetching
+    // Effect Hook for data fetching
     useEffect(() => {
         const fetchData = async () => {
+            if (!conference || !year) { 
+                setLoading(false);
+                setError("Conference and year must be selected.");
+                return;
+            }
             setLoading(true);
             setError(null);
             setFetchedDashboardData(null); 
@@ -528,16 +530,13 @@ const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({ conference, y
         fetchData();
     }, [conference, year]);
 
-    // Memoized Data Processing Hooks - Must be at the top level
-    // These hooks now safely access fetchedDashboardData properties using optional chaining
-    // and have fetchedDashboardData in their dependency array.
-
+    // Memoized Data Processing Hooks
     const sortedCountries: CountryData[] = useMemo(() => {
         if (!fetchedDashboardData?.globalStats?.countries || !fetchedDashboardData?.configuration?.countryMap || !fetchedDashboardData?.focusCountry?.country_code) {
             return [];
         }
         const { globalStats, configuration, focusCountry } = fetchedDashboardData;
-        const focusCountryCodeVal = focusCountry.country_code; // Use a distinct variable name
+        const focusCountryCodeVal = focusCountry.country_code;
 
         const currentCountryMap = new Map<string, CountryData>();
         globalStats.countries.forEach(rawCountry => {
@@ -579,7 +578,7 @@ const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({ conference, y
         
         const normalizedPapers = normalizeValues(sorted, 'paper_count');
         return normalizeValues(normalizedPapers, 'author_count');
-    }, [fetchedDashboardData, normalizeValues]); // normalizeValues is stable
+    }, [fetchedDashboardData]); 
 
     const topCountriesByPaper = useMemo(() => sortedCountries.slice(0, 15), [sortedCountries]);
     const usData = useMemo(() => sortedCountries.find(c => c.affiliation_country === 'US'), [sortedCountries]);
@@ -592,24 +591,17 @@ const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({ conference, y
 
     const processedFocusData: ProcessedFocusCountryData | null = useMemo(() => {
         if (!focusCountryGlobalStats || !fetchedDashboardData?.focusCountry) return null;
-    
-        const { focusCountry } = fetchedDashboardData; // Safe to destructure here
-    
+        const { focusCountry } = fetchedDashboardData;
         const institutions = (focusCountry.institutions || []).map(inst => ({
             ...inst,
             authors_per_paper: inst.unique_paper_count > 0 ? (inst.author_count / inst.unique_paper_count) : 0,
             impact_score: (inst.spotlights ?? 0) + (inst.orals ?? 0),
             authors: inst.authors || [],
         }));
-        
         const normalizedInstitutions = normalizeValues(institutions, 'unique_paper_count');
         const processedInstitutions = normalizeValues(normalizedInstitutions, 'author_count');
-    
-        // Construct the ProcessedFocusCountryData object
         const data: ProcessedFocusCountryData = {
-            // Spread properties from the fetched focusCountry data
             ...focusCountry, 
-            // Override or add properties based on global aggregations and processing
             institutions: processedInstitutions,
             rank: focusCountryGlobalStats.rank,
             paper_count: focusCountryGlobalStats.paper_count,
@@ -620,11 +612,10 @@ const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({ conference, y
             authors_per_paper: focusCountryGlobalStats.authors_per_paper ?? 0,
         };
         return data;
-    }, [focusCountryGlobalStats, fetchedDashboardData?.focusCountry, normalizeValues]);
+    }, [focusCountryGlobalStats, fetchedDashboardData?.focusCountry]);
     
-
     const usChinaDominancePieData = useMemo(() => {
-        if (!usData || !cnData || !fetchedDashboardData?.conferenceInfo?.totalAcceptedPapers) return [];
+        if (!usData || !cnData || !fetchedDashboardData?.conferenceInfo?.totalAcceptedPapers || !fetchedDashboardData?.configuration?.colorScheme) return [];
         const totalPapers = fetchedDashboardData.conferenceInfo.totalAcceptedPapers;
         if (totalPapers === 0) return [];
         const usCount = usData.paper_count;
@@ -707,11 +698,11 @@ const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({ conference, y
 
     const topInstitutions = useMemo(() => filteredInstitutions.slice(0, 8), [filteredInstitutions]);
 
-    // Event Handlers (useCallback) - Must be at the top level
+    // Event Handlers
     const handleFilterChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => setInstitutionFilter(event.target.value), []);
     const handlePieEnter = useCallback((_: any, index: number) => setActivePieIndex(index), []);
 
-    // Early returns AFTER all hooks have been declared
+    // Early returns
     if (loading) {
         return <div className="min-h-screen bg-background flex items-center justify-center p-6 text-foreground"><div className="text-xl">Loading dashboard data for {conference.toUpperCase()} {year}...</div></div>;
     }
@@ -721,37 +712,32 @@ const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({ conference, y
                 <div className="bg-destructive/10 border border-destructive/30 text-destructive px-6 py-4 rounded-lg shadow-lg text-center max-w-md">
                     <h2 className="font-bold text-lg mb-2">Error Loading Dashboard</h2>
                     <p className="text-sm">{error}</p>
-                    <p className="text-xs mt-3">Please ensure <code>public/tracker/index.json</code> and the corresponding analytics file are correctly set up.</p>
                 </div>
             </div>
         );
     }
-    // This check ensures fetchedDashboardData is an object for the rendering logic below
     if (!fetchedDashboardData) { 
-        return <div className="min-h-screen bg-background flex items-center justify-center p-6 text-muted-foreground">No data available for {conference.toUpperCase()} {year} after loading.</div>;
+        return <div className="min-h-screen bg-background flex items-center justify-center p-6 text-muted-foreground">No data available for {conference.toUpperCase()} {year}.</div>;
     }
 
-    // Destructure for use in render logic (now safe)
-    const { conferenceInfo, focusCountry, configuration } = fetchedDashboardData; // globalStats is used via fetchedDashboardData in memos
+    // Destructure for render logic
+    const { conferenceInfo, focusCountry, configuration } = fetchedDashboardData;
     const totalPapers = conferenceInfo.totalAcceptedPapers;
     const totalAuthors = conferenceInfo.totalAcceptedAuthors;
-    const colorScheme = configuration.colorScheme; // Used directly in render
-    const focusCountryCode = focusCountry.country_code; // Used in render for export filename
+    const colorScheme = configuration.colorScheme;
+    const focusCountryCode = focusCountry.country_code;
 
-    // Second level of early return, based on processed data (now safe as hooks are called)
     if (!processedFocusData || !usData || !cnData || !focusCountryGlobalStats) {
         return (
              <div className="min-h-screen bg-background flex items-center justify-center p-6">
                  <div className="bg-destructive/10 border border-destructive/30 text-destructive px-4 py-3 rounded-lg shadow-lg text-center">
                      <h2 className="font-bold text-lg mb-2">Data Processing Error</h2>
-                     <p className="text-sm">Could not process essential derived dashboard data. Some key statistics (e.g., for focus country, US, or China) might be missing or inconsistent in the fetched analytics file.</p>
-                     <p className="text-xs mt-2">Conference: {conferenceInfo.name} {conferenceInfo.year}, Focus: {focusCountry.country_name || focusCountry.country_code}</p>
+                     <p className="text-sm">Could not process essential derived data. Check analytics file structure.</p>
                  </div>
              </div>
          );
      }
 
-    // Color map for charts, defined before return, uses colorScheme from fetchedDashboardData.configuration
     const colorMap = {
         us: colorScheme.us, cn: colorScheme.cn, focusCountry: colorScheme.focusCountry,
         primary: colorScheme.primary || 'hsl(var(--primary))', secondary: colorScheme.secondary || 'hsl(var(--secondary-foreground))',
@@ -767,7 +753,7 @@ const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({ conference, y
         const x = cx + radius * Math.cos(-midAngle * RADIAN);
         const y = cy + radius * Math.sin(-midAngle * RADIAN);
         const percentValue = (percent * 100).toFixed(0);
-        if (percent < 0.05) return null; // Don't render for very small slices
+        if (percent < 0.05) return null;
         return (
             <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central" fontSize="10" fontWeight="bold">
                 {`${name.substring(0,10)}${name.length > 10 ? '...' : ''} ${percentValue}%`}
@@ -778,20 +764,42 @@ const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({ conference, y
     // Main Render Logic
     return (
         <div className="min-h-screen bg-background text-foreground font-sans">
-            {/* Header */}
+            {/* Header: Modified to include conferenceSelectorElement and improved stat display */}
             <header className="py-6 md:py-8 bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-950/30 dark:to-orange-950/30 border-b border-border shadow-sm">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h1 className="text-3xl sm:text-4xl font-bold text-foreground flex items-center justify-center mb-2">
-                        <FaTrophy className="mr-3 text-amber-500" /> {configuration.dashboardTitle}
-                    </h1>
-                    <p className="text-muted-foreground text-base sm:text-lg">{configuration.dashboardSubtitle}</p>
-                    <p className="text-sm text-muted-foreground mt-3">Total Accepted Papers: <span className="font-semibold text-foreground">{totalPapers?.toLocaleString() ?? 'N/A'}</span></p>
-                    <p className="text-sm text-muted-foreground mt-1">Total Accepted Authors: <span className="font-semibold text-foreground">{totalAuthors?.toLocaleString() ?? 'N/A'}</span></p>
-                     <p className="text-xs text-muted-foreground mt-1">Displaying: {conferenceInfo.name} {conferenceInfo.year} (Focus: {focusCountry.country_name || focusCountry.country_code})</p>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="flex flex-col sm:flex-row justify-between items-center mb-2 sm:mb-3">
+                        <div className="flex-grow text-center sm:text-left mb-3 sm:mb-0">
+                            <h1 className="text-3xl sm:text-4xl font-bold text-foreground flex items-center justify-center sm:justify-start">
+                                <FaTrophy className="mr-3 text-amber-500" /> {configuration.dashboardTitle}
+                            </h1>
+                        </div>
+                        <div className="ml-0 sm:ml-4 flex-shrink-0">
+                            {conferenceSelectorElement} 
+                        </div>
+                    </div>
+                    
+                    <div className="text-center sm:text-left">
+                        <p className="text-muted-foreground text-base sm:text-lg mb-3">{configuration.dashboardSubtitle}</p>
+                        
+                        {/* Improved Stats Display */}
+                        <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-3 mb-2">
+                            <div className="bg-card/70 dark:bg-card/40 border border-border rounded-lg px-3 py-1.5 shadow-sm text-sm">
+                                <span className="text-muted-foreground">Total Papers: </span>
+                                <span className="font-semibold text-foreground">{totalPapers?.toLocaleString() ?? 'N/A'}</span>
+                            </div>
+                            <div className="bg-card/70 dark:bg-card/40 border border-border rounded-lg px-3 py-1.5 shadow-sm text-sm">
+                                <span className="text-muted-foreground">Total Authors: </span>
+                                <span className="font-semibold text-foreground">{totalAuthors?.toLocaleString() ?? 'N/A'}</span>
+                            </div>
+                        </div>
+                        
+                        <p className="text-xs text-muted-foreground">Displaying: {conferenceInfo.name} {conferenceInfo.year} (Focus: {focusCountry.country_name || focusCountry.country_code})</p>
+                    </div>
                 </div>
             </header>
 
             <main>
+                {/* Sections remain the same */}
                 <Section title={configuration.sections.summary.title} id="summary" className="bg-muted/30">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                         <StatCard
@@ -874,7 +882,7 @@ const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({ conference, y
                                                 <Cell key={`cell-global-${entry.affiliation_country}`}
                                                       fill={entry.affiliation_country === 'US' ? colorMap.us :
                                                             entry.affiliation_country === 'CN' ? colorMap.cn :
-                                                            entry.affiliation_country === focusCountry.country_code ? colorMap.focusCountry : // Use focusCountry.country_code from fetched data
+                                                            entry.affiliation_country === focusCountry.country_code ? colorMap.focusCountry :
                                                             colorMap.papers}
                                                       fillOpacity={entry.isHighlight ? 1 : 0.7} />
                                             ))}
@@ -1246,39 +1254,141 @@ const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({ conference, y
     );
 };
 
+// --- App Component (Modified for Dropdown in Header) ---
 const App = () => {
-  const [currentConference, setCurrentConference] = useState("icml");
-  const [currentYear, setCurrentYear] = useState("2024");
+  const [currentConference, setCurrentConference] = useState<string>("");
+  const [currentYear, setCurrentYear] = useState<string>("");
+  const [conferenceOptions, setConferenceOptions] = useState<TrackerIndexEntry[]>([]);
+  const [isLoadingOptions, setIsLoadingOptions] = useState<boolean>(true);
+  const [optionsError, setOptionsError] = useState<string | null>(null);
 
-  const handleSetConference = (conf: string, year: string) => {
-    setCurrentConference(conf);
-    setCurrentYear(year);
-  };
+  const handleConferenceChange = useCallback((event: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedValue = event.target.value;
+    if (selectedValue) {
+      const [venue, year] = selectedValue.split('|');
+      setCurrentConference(venue);
+      setCurrentYear(year);
+      // Update URL without page reload if you want the URL to reflect dropdown changes
+      // const newUrl = `${window.location.pathname}?conference=${venue}&year=${year}${window.location.hash}`;
+      // window.history.pushState({ path: newUrl }, '', newUrl);
+    }
+  }, []); // Empty: setCurrentConference and setCurrentYear are stable
+
+  useEffect(() => {
+    const fetchConferenceOptions = async () => {
+      setIsLoadingOptions(true);
+      setOptionsError(null);
+      try {
+        const response = await fetch('/tracker/index.json');
+        if (!response.ok) {
+          throw new Error(`Failed to fetch /tracker/index.json: ${response.status} ${response.statusText}`);
+        }
+        const data: TrackerIndexEntry[] = await response.json();
+        
+        const sortedData = data.sort((a, b) => {
+          const yearComparison = parseInt(b.year, 10) - parseInt(a.year, 10);
+          if (yearComparison !== 0) return yearComparison;
+          return a.label.localeCompare(b.label);
+        });
+        
+        setConferenceOptions(sortedData);
+
+        const queryParams = new URLSearchParams(window.location.search);
+        const queryConference = queryParams.get('conference');
+        const queryYear = queryParams.get('year');
+
+        let foundInQuery = false;
+        if (queryConference && queryYear) {
+          const matchingOption = sortedData.find(
+            opt => opt.venue.toLowerCase() === queryConference.toLowerCase() && opt.year === queryYear
+          );
+          if (matchingOption) {
+            setCurrentConference(matchingOption.venue);
+            setCurrentYear(matchingOption.year);
+            foundInQuery = true;
+          } else {
+            console.warn(`Conference/year from URL (${queryConference}/${queryYear}) not found. Defaulting.`);
+          }
+        }
+
+        if (!foundInQuery && sortedData.length > 0) {
+          setCurrentConference(sortedData[0].venue);
+          setCurrentYear(sortedData[0].year);
+        } else if (!foundInQuery && sortedData.length === 0) {
+            // setError("No conference options available and no valid URL parameters."); // This setError is for ConferenceDashboard
+            setOptionsError("No conference options available in index.json."); // This is for App component's options loading
+        }
+
+      } catch (e: any) {
+        console.error("Error fetching conference options:", e);
+        setOptionsError(e.message || "Failed to load conference options.");
+      } finally {
+        setIsLoadingOptions(false);
+      }
+    };
+
+    fetchConferenceOptions();
+  }, []);
+
+  // Memoize the conference selector element to pass as a prop
+  const conferenceSelectorElement = useMemo(() => {
+    if (isLoadingOptions) {
+      return <p className="text-xs sm:text-sm text-muted-foreground animate-pulse">Loading...</p>;
+    }
+    if (optionsError && conferenceOptions.length === 0) { // Only show critical error if no options loaded
+      return <p className="text-xs sm:text-sm text-destructive">Error loading list!</p>; 
+    }
+    if (conferenceOptions.length === 0 && !isLoadingOptions) { // No options, not loading, no error
+        return <p className="text-xs sm:text-sm text-muted-foreground">N/A</p>;
+    }
+
+
+    return (
+      <div className="flex items-center gap-1 sm:gap-2">
+        <label htmlFor="conference-select-header" className="sr-only text-xs sm:text-sm font-medium text-muted-foreground whitespace-nowrap">
+          Data:
+        </label>
+        <select
+          id="conference-select-header"
+          value={currentConference && currentYear ? `${currentConference}|${currentYear}` : ""}
+          onChange={handleConferenceChange}
+          className="bg-card/80 dark:bg-card/50 border-border text-foreground text-xs sm:text-sm rounded-md focus:ring-primary focus:border-primary p-1.5 sm:p-2 shadow-sm w-auto appearance-none focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-offset-background"
+          aria-label="Select a conference and year"
+        >
+          {/* Show placeholder only if no valid selection AND options are available */}
+          {(!currentConference || !currentYear) && conferenceOptions.length > 0 && <option value="" disabled>Select...</option>}
+          {conferenceOptions.map((option) => (
+            <option key={`${option.venue}-${option.year}`} value={`${option.venue}|${option.year}`}>
+              {option.label} 
+            </option>
+          ))}
+        </select>
+      </div>
+    );
+  }, [isLoadingOptions, optionsError, conferenceOptions, currentConference, currentYear, handleConferenceChange]);
 
   return (
     <div className="bg-background text-foreground min-h-screen">
-      <div className="p-4 text-center bg-muted/20 border-b border-border">
-        <span className="mr-2 text-sm text-muted-foreground">Load Data:</span>
-        <button 
-          onClick={() => handleSetConference("icml", "2024")} 
-          className={`px-3 py-1 text-xs rounded mr-2 ${currentConference === "icml" && currentYear === "2024" ? "bg-primary text-primary-foreground" : "bg-secondary text-secondary-foreground"}`}
-        >
-          ICML 2024
-        </button>
-        <button 
-          onClick={() => handleSetConference("iclr", "2024")} 
-          className={`px-3 py-1 text-xs rounded mr-2 ${currentConference === "iclr" && currentYear === "2024" ? "bg-primary text-primary-foreground" : "bg-secondary text-secondary-foreground"}`}
-        >
-          ICLR 2024
-        </button>
-         <button 
-          onClick={() => handleSetConference("neurips", "2023")} 
-          className={`px-3 py-1 text-xs rounded ${currentConference === "neurips" && currentYear === "2023" ? "bg-primary text-primary-foreground" : "bg-secondary text-secondary-foreground"}`}
-        >
-          NeurIPS 2023
-        </button>
-      </div>
-      <ConferenceDashboard conference={currentConference} year={currentYear} />
+      {/* ConferenceDashboard now receives the selector as a prop */}
+      {/* Conditionally render dashboard once essential states are set */}
+      {(currentConference && currentYear) || isLoadingOptions ? ( 
+        <ConferenceDashboard 
+            conference={currentConference} 
+            year={currentYear} 
+            conferenceSelectorElement={conferenceSelectorElement} 
+        />
+      ) : ( 
+        <div className="min-h-[calc(100vh-100px)] flex flex-col items-center justify-center p-6">
+            {optionsError ? (
+                <>
+                    <p className="text-destructive text-lg mb-2">Error loading conference data.</p>
+                    <p className="text-muted-foreground text-sm">{optionsError}</p>
+                </>
+            ) : (
+                 <p className="text-muted-foreground text-lg">Please select a conference or provide valid URL parameters.</p>
+            )}
+        </div>
+      )}
     </div>
   );
 };
