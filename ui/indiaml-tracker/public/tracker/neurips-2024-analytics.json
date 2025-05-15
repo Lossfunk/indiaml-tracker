@@ -1,61 +1,1271 @@
 {
   "conferenceInfo": {
-    "name": "ICLR",
-    "year": 2025,
+    "name": "NeurIPS",
+    "year": 2024,
     "track": "Conference",
-    "totalAcceptedPapers": 0
+    "totalAcceptedPapers": 4035,
+    "totalAcceptedAuthors": 14821
   },
   "globalStats": {
-    "countries": []
+    "countries": [
+      {
+        "affiliation_country": "US",
+        "paper_count": 2025,
+        "author_count": 6757,
+        "spotlights": 172,
+        "orals": 36
+      },
+      {
+        "affiliation_country": "CN",
+        "paper_count": 1446,
+        "author_count": 6351,
+        "spotlights": 97,
+        "orals": 29
+      },
+      {
+        "affiliation_country": "GB",
+        "paper_count": 353,
+        "author_count": 682,
+        "spotlights": 36,
+        "orals": 4
+      },
+      {
+        "affiliation_country": "HK",
+        "paper_count": 294,
+        "author_count": 583,
+        "spotlights": 22,
+        "orals": 7
+      },
+      {
+        "affiliation_country": "SG",
+        "paper_count": 262,
+        "author_count": 580,
+        "spotlights": 21,
+        "orals": 4
+      },
+      {
+        "affiliation_country": "CA",
+        "paper_count": 237,
+        "author_count": 524,
+        "spotlights": 28,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "DE",
+        "paper_count": 227,
+        "author_count": 549,
+        "spotlights": 24,
+        "orals": 4
+      },
+      {
+        "affiliation_country": "KR",
+        "paper_count": 170,
+        "author_count": 570,
+        "spotlights": 6,
+        "orals": 2
+      },
+      {
+        "affiliation_country": "FR",
+        "paper_count": 164,
+        "author_count": 366,
+        "spotlights": 24,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "CH",
+        "paper_count": 163,
+        "author_count": 386,
+        "spotlights": 12,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "UK",
+        "paper_count": 149,
+        "author_count": 223,
+        "spotlights": 18,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "AU",
+        "paper_count": 110,
+        "author_count": 216,
+        "spotlights": 3,
+        "orals": 3
+      },
+      {
+        "affiliation_country": "JP",
+        "paper_count": 105,
+        "author_count": 216,
+        "spotlights": 4,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "UNK",
+        "paper_count": 84,
+        "author_count": 91,
+        "spotlights": 9,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "IL",
+        "paper_count": 77,
+        "author_count": 160,
+        "spotlights": 5,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "IT",
+        "paper_count": 65,
+        "author_count": 165,
+        "spotlights": 3,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "NL",
+        "paper_count": 50,
+        "author_count": 115,
+        "spotlights": 3,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "AE",
+        "paper_count": 42,
+        "author_count": 66,
+        "spotlights": 1,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "TW",
+        "paper_count": 35,
+        "author_count": 93,
+        "spotlights": 2,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "AI",
+        "paper_count": 34,
+        "author_count": 44,
+        "spotlights": 4,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "IN",
+        "paper_count": 34,
+        "author_count": 64,
+        "spotlights": 4,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "AT",
+        "paper_count": 33,
+        "author_count": 75,
+        "spotlights": 2,
+        "orals": 3
+      },
+      {
+        "affiliation_country": "RU",
+        "paper_count": 28,
+        "author_count": 91,
+        "spotlights": 4,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "DK",
+        "paper_count": 27,
+        "author_count": 58,
+        "spotlights": 7,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "SE",
+        "paper_count": 27,
+        "author_count": 53,
+        "spotlights": 4,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "SA",
+        "paper_count": 25,
+        "author_count": 51,
+        "spotlights": 2,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "BE",
+        "paper_count": 20,
+        "author_count": 40,
+        "spotlights": 2,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "ES",
+        "paper_count": 18,
+        "author_count": 31,
+        "spotlights": 2,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "FI",
+        "paper_count": 18,
+        "author_count": 43,
+        "spotlights": 2,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "MO",
+        "paper_count": 12,
+        "author_count": 16,
+        "spotlights": 2,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "GR",
+        "paper_count": 12,
+        "author_count": 16,
+        "spotlights": 3,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "VN",
+        "paper_count": 10,
+        "author_count": 19,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "BR",
+        "paper_count": 9,
+        "author_count": 15,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "PL",
+        "paper_count": 7,
+        "author_count": 25,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "CZ",
+        "paper_count": 7,
+        "author_count": 11,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "NO",
+        "paper_count": 7,
+        "author_count": 10,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "CL",
+        "paper_count": 6,
+        "author_count": 7,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "TR",
+        "paper_count": 6,
+        "author_count": 15,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "PT",
+        "paper_count": 6,
+        "author_count": 15,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "EU",
+        "paper_count": 5,
+        "author_count": 8,
+        "spotlights": 0,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "BG",
+        "paper_count": 4,
+        "author_count": 5,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "LU",
+        "paper_count": 4,
+        "author_count": 8,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "IR",
+        "paper_count": 4,
+        "author_count": 20,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "NZ",
+        "paper_count": 3,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "PH",
+        "paper_count": 3,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "ZW",
+        "paper_count": 3,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "IE",
+        "paper_count": 2,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "CX",
+        "paper_count": 2,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "MY",
+        "paper_count": 2,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "CO",
+        "paper_count": 2,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "KP",
+        "paper_count": 2,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "SI",
+        "paper_count": 2,
+        "author_count": 5,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "AC",
+        "paper_count": 2,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "TH",
+        "paper_count": 1,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "RE",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "UY",
+        "paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "AM",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "IO",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "US, IL",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "CY",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "TD",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "Germany",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "NA",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "HR",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "EG",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      }
+    ]
   },
   "focusCountry": {
     "country_code": "IN",
     "country_name": "India",
-    "total_authors": 0,
-    "total_spotlights": 0,
+    "total_authors": 64,
+    "total_spotlights": 4,
     "total_orals": 0,
-    "institution_types": {},
+    "institution_types": {
+      "corporate": 1,
+      "academic": 12
+    },
     "at_least_one_focus_country_author": {
-      "count": 0,
-      "papers": []
+      "count": 34,
+      "papers": [
+        {
+          "id": "ybLXvqJyQA",
+          "title": "Predicting Ground State Properties: Constant Sample Complexity and Deep Learning Algorithms",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "weemASPtzg",
+          "title": "Linear Causal Representation Learning from Unknown Multi-node Interventions",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "wBzvYh3PRA",
+          "title": "FactorSim: Generative Simulation via Factorized Representation",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "udTwwF7tks",
+          "title": "Iteratively Refined Early Interaction Alignment for Subgraph Matching based Graph Retrieval",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "u7JRmrGutT",
+          "title": "Graph Edit Distance with General Costs Using Neural Set Divergence",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "tuiqq1G8I5",
+          "title": "DisCEdit: Model Editing by Identifying Discriminative Components",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "tZRpvLXevU",
+          "title": "Latent Representation Matters: Human-like Sketches in One-shot Drawing Tasks",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "nY0BrZdqLt",
+          "title": "Time-Reversal Provides Unsupervised Feedback to LLMs",
+          "isSpotlight": true,
+          "isOral": false
+        },
+        {
+          "id": "nN6NSd1Qds",
+          "title": "UGC: Universal Graph Coarsening",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "fzlMza6dRZ",
+          "title": "GraphTrail: Translating GNN Predictions into Human-Interpretable Logical Rules",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "e6WrwIvgzX",
+          "title": "AutoMix: Automatically Mixing Language Models",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "aC9mB1PqYJ",
+          "title": "Learning Mixtures of Unknown Causal Interventions",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "YXQW4qQe2U",
+          "title": "Optimal Top-Two Method for Best Arm Identification and Fluid Analysis",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "Y1rOWS2Z4i",
+          "title": "Long-Horizon Planning for Multi-Agent Robots in Partially Observable Environments",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "XL9aaXl0u6",
+          "title": "Sample Complexity of Interventional Causal Representation Learning",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "WSsht66fbC",
+          "title": "Safety through feedback in Constrained RL",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "UPxFYvHsyN",
+          "title": "TFS-NeRF: Template-Free NeRF for Semantic 3D Reconstruction of Dynamic Scene",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "TxffvJMnBy",
+          "title": "Optimal Algorithms for Online Convex Optimization with Adversarial Constraints",
+          "isSpotlight": true,
+          "isOral": false
+        },
+        {
+          "id": "TZ5k9IYBBf",
+          "title": "RanDumb: Random Representations Outperform Online Continually Learned Representations",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "T7dS1Ghwwu",
+          "title": "Conformal Prediction for Class-wise Coverage via Augmented Label Rank Calibration",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "SvmJJJS0q1",
+          "title": "Detecting and Measuring Confounding Using Causal Mechanism Shifts",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "SdLOs1FR4h",
+          "title": "FUGAL: Feature-fortified Unrestricted Graph Alignment",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "QVG7j29Sta",
+          "title": "Accuracy is Not All You Need",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "PK8xOCBQRO",
+          "title": "Transfer Learning for Latent Variable Network Models",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "MyVyH5Jo1l",
+          "title": "Quantifying the Gain in Weak-to-Strong Generalization",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "HwO1mNluoL",
+          "title": "Mitigating Biases in Blackbox Feature Extractors for Image Classification Tasks",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "HbV5vRJMOY",
+          "title": "Mixture of Nested Experts: Adaptive Processing of Visual Tokens",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "FTPDBQuT4G",
+          "title": "Generalized Linear Bandits with Limited Adaptivity",
+          "isSpotlight": true,
+          "isOral": false
+        },
+        {
+          "id": "8JauriwDeH",
+          "title": "Near-Optimal Streaming Heavy-Tailed Statistical Estimation with Clipped SGD",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "7Mo1NOosNT",
+          "title": "COLD: Causal reasOning in cLosed Daily activities",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "5k9XeHIK3L",
+          "title": "Text2CAD: Generating Sequential CAD Designs from Beginner-to-Expert Level Text Prompts",
+          "isSpotlight": true,
+          "isOral": false
+        },
+        {
+          "id": "3lQgEPRxeu",
+          "title": "Learning General Parameterized Policies for Infinite Horizon Average Reward Constrained MDPs via Primal-Dual Policy Gradient Algorithm",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "3O5YCEWETq",
+          "title": "Tiny Time Mixers (TTMs): Fast Pre-trained Models for Enhanced Zero/Few-Shot Forecasting of Multivariate Time Series",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "1po4j1Tv7O",
+          "title": "Sample-Efficient Constrained Reinforcement Learning with General Parameterization",
+          "isSpotlight": false,
+          "isOral": false
+        }
+      ]
     },
     "majority_focus_country_authors": {
-      "count": 0,
-      "papers": []
+      "count": 12,
+      "papers": [
+        {
+          "id": "udTwwF7tks",
+          "title": "Iteratively Refined Early Interaction Alignment for Subgraph Matching based Graph Retrieval",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "u7JRmrGutT",
+          "title": "Graph Edit Distance with General Costs Using Neural Set Divergence",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "tuiqq1G8I5",
+          "title": "DisCEdit: Model Editing by Identifying Discriminative Components",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "nY0BrZdqLt",
+          "title": "Time-Reversal Provides Unsupervised Feedback to LLMs",
+          "isSpotlight": true,
+          "isOral": false
+        },
+        {
+          "id": "nN6NSd1Qds",
+          "title": "UGC: Universal Graph Coarsening",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "fzlMza6dRZ",
+          "title": "GraphTrail: Translating GNN Predictions into Human-Interpretable Logical Rules",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "YXQW4qQe2U",
+          "title": "Optimal Top-Two Method for Best Arm Identification and Fluid Analysis",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "TxffvJMnBy",
+          "title": "Optimal Algorithms for Online Convex Optimization with Adversarial Constraints",
+          "isSpotlight": true,
+          "isOral": false
+        },
+        {
+          "id": "QVG7j29Sta",
+          "title": "Accuracy is Not All You Need",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "HwO1mNluoL",
+          "title": "Mitigating Biases in Blackbox Feature Extractors for Image Classification Tasks",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "FTPDBQuT4G",
+          "title": "Generalized Linear Bandits with Limited Adaptivity",
+          "isSpotlight": true,
+          "isOral": false
+        },
+        {
+          "id": "7Mo1NOosNT",
+          "title": "COLD: Causal reasOning in cLosed Daily activities",
+          "isSpotlight": false,
+          "isOral": false
+        }
+      ]
     },
     "first_focus_country_author": {
-      "count": 0,
-      "papers": []
+      "count": 13,
+      "papers": [
+        {
+          "id": "udTwwF7tks",
+          "title": "Iteratively Refined Early Interaction Alignment for Subgraph Matching based Graph Retrieval",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "tuiqq1G8I5",
+          "title": "DisCEdit: Model Editing by Identifying Discriminative Components",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "nY0BrZdqLt",
+          "title": "Time-Reversal Provides Unsupervised Feedback to LLMs",
+          "isSpotlight": true,
+          "isOral": false
+        },
+        {
+          "id": "nN6NSd1Qds",
+          "title": "UGC: Universal Graph Coarsening",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "fzlMza6dRZ",
+          "title": "GraphTrail: Translating GNN Predictions into Human-Interpretable Logical Rules",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "YXQW4qQe2U",
+          "title": "Optimal Top-Two Method for Best Arm Identification and Fluid Analysis",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "TxffvJMnBy",
+          "title": "Optimal Algorithms for Online Convex Optimization with Adversarial Constraints",
+          "isSpotlight": true,
+          "isOral": false
+        },
+        {
+          "id": "SdLOs1FR4h",
+          "title": "FUGAL: Feature-fortified Unrestricted Graph Alignment",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "QVG7j29Sta",
+          "title": "Accuracy is Not All You Need",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "HwO1mNluoL",
+          "title": "Mitigating Biases in Blackbox Feature Extractors for Image Classification Tasks",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "HbV5vRJMOY",
+          "title": "Mixture of Nested Experts: Adaptive Processing of Visual Tokens",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "7Mo1NOosNT",
+          "title": "COLD: Causal reasOning in cLosed Daily activities",
+          "isSpotlight": false,
+          "isOral": false
+        },
+        {
+          "id": "1po4j1Tv7O",
+          "title": "Sample-Efficient Constrained Reinforcement Learning with General Parameterization",
+          "isSpotlight": false,
+          "isOral": false
+        }
+      ]
     },
-    "institutions": []
+    "institutions": [
+      {
+        "institute": "IISc Bangalore",
+        "total_paper_count": 4,
+        "unique_paper_count": 2,
+        "author_count": 5,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "HwO1mNluoL",
+            "title": "Mitigating Biases in Blackbox Feature Extractors for Image Classification Tasks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "FTPDBQuT4G",
+            "title": "Generalized Linear Bandits with Limited Adaptivity",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "ybLXvqJyQA",
+            "title": "Predicting Ground State Properties: Constant Sample Complexity and Deep Learning Algorithms",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "tuiqq1G8I5",
+            "title": "DisCEdit: Model Editing by Identifying Discriminative Components",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          
+          "Nirjhar Das",
+          "Abhipsa Basu",
+          "Chiranjib Bhattacharyya",
+          "Venkatesh Babu Radhakrishnan"
+        ]
+      },
+      {
+        "institute": "IIT Delhi",
+        "total_paper_count": 4,
+        "unique_paper_count": 3,
+        "author_count": 8,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "nN6NSd1Qds",
+            "title": "UGC: Universal Graph Coarsening",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "e6WrwIvgzX",
+            "title": "AutoMix: Automatically Mixing Language Models",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "fzlMza6dRZ",
+            "title": "GraphTrail: Translating GNN Predictions into Human-Interpretable Logical Rules",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "SdLOs1FR4h",
+            "title": "FUGAL: Feature-fortified Unrestricted Graph Alignment",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          
+          "Harshith Reddy Vonteri",
+          "Burouj Armgaan",
+          "Sandeep Kumar",
+          "Mohit Kataria",
+          "Aditya Bommakanti",
+          "Mausam",
+          "Manthan Dalmia"
+        ]
+      },
+      {
+        "institute": "IIT Kanpur",
+        "total_paper_count": 3,
+        "unique_paper_count": 2,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "7Mo1NOosNT",
+            "title": "COLD: Causal reasOning in cLosed Daily activities",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "1po4j1Tv7O",
+            "title": "Sample-Efficient Constrained Reinforcement Learning with General Parameterization",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "3lQgEPRxeu",
+            "title": "Learning General Parameterized Policies for Infinite Horizon Average Reward Constrained MDPs via Primal-Dual Policy Gradient Algorithm",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Abhinav Joshi",
+          "Ashutosh Modi",
+          "Washim Uddin Mondal",
+          "Areeb Ahmad"
+        ]
+      },
+      {
+        "institute": "IIIT Hyderabad",
+        "total_paper_count": 2,
+        "unique_paper_count": 0,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "TZ5k9IYBBf",
+            "title": "RanDumb: Random Representations Outperform Online Continually Learned Representations",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "WSsht66fbC",
+            "title": "Safety through feedback in Constrained RL",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Shiven Sinha",
+          ""
+        ]
+      },
+      {
+        "institute": "TIFR",
+        "total_paper_count": 2,
+        "unique_paper_count": 2,
+        "author_count": 3,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "TxffvJMnBy",
+            "title": "Optimal Algorithms for Online Convex Optimization with Adversarial Constraints",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "YXQW4qQe2U",
+            "title": "Optimal Top-Two Method for Best Arm Identification and Fluid Analysis",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Agniv Bandyopadhyay",
+          "Abhishek Sinha",
+          "Rahul Vaze"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology, Bombay, Dhirubhai Ambani Institute Of Information and Communication Technology",
+        "total_paper_count": 2,
+        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "unknown",
+        "papers": [
+          {
+            "id": "udTwwF7tks",
+            "title": "Iteratively Refined Early Interaction Alignment for Subgraph Matching based Graph Retrieval",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "UPxFYvHsyN",
+            "title": "TFS-NeRF: Template-Free NeRF for Semantic 3D Reconstruction of Dynamic Scene",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Ashwin Ramachandran",
+          "Biplab Banerjee"
+        ]
+      },
+      {
+        "institute": "IIT Bombay",
+        "total_paper_count": 2,
+        "unique_paper_count": 1,
+        "author_count": 5,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "udTwwF7tks",
+            "title": "Iteratively Refined Early Interaction Alignment for Subgraph Matching based Graph Retrieval",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "u7JRmrGutT",
+            "title": "Graph Edit Distance with General Costs Using Neural Set Divergence",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          
+          "Indradyumna Roy",
+          "Abir De",
+          "Saswat Meher",
+          "Vaibhav Raj"
+        ]
+      },
+      {
+        "institute": "BITS Pilani",
+        "total_paper_count": 1,
+        "unique_paper_count": 0,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "5k9XeHIK3L",
+            "title": "Text2CAD: Generating Sequential CAD Designs from Beginner-to-Expert Level Text Prompts",
+            "isSpotlight": true,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Sk Aziz Ali"
+        ]
+      },
+      {
+        "institute": "ISI",
+        "total_paper_count": 1,
+        "unique_paper_count": 0,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "PK8xOCBQRO",
+            "title": "Transfer Learning for Latent Variable Network Models",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Soumendu Sundar Mukherjee"
+        ]
+      },
+      {
+        "institute": "Washington State University at Pullman",
+        "total_paper_count": 1,
+        "unique_paper_count": 0,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "T7dS1Ghwwu",
+            "title": "Conformal Prediction for Class-wise Coverage via Augmented Label Rank Calibration",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "SUBHANKAR GHOSH"
+        ]
+      },
+      {
+        "institute": "International Institute of Information Technology Hyderabad ",
+        "total_paper_count": 1,
+        "unique_paper_count": 0,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "unknown",
+        "papers": [
+          {
+            "id": "TZ5k9IYBBf",
+            "title": "RanDumb: Random Representations Outperform Online Continually Learned Representations",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Ponnurangam Kumaraguru"
+        ]
+      },
+      {
+        "institute": "TCS",
+        "total_paper_count": 1,
+        "unique_paper_count": 0,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "corporate",
+        "papers": [
+          {
+            "id": "Y1rOWS2Z4i",
+            "title": "Long-Horizon Planning for Multi-Agent Robots in Partially Observable Environments",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Aditya Kapoor"
+        ]
+      },
+      {
+        "institute": "Ashoka University",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "YXQW4qQe2U",
+            "title": "Optimal Top-Two Method for Best Arm Identification and Fluid Analysis",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Sandeep Kumar Juneja"
+        ]
+      },
+      {
+        "institute": "IIM Ahmedabad",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "nY0BrZdqLt",
+            "title": "Time-Reversal Provides Unsupervised Feedback to LLMs",
+            "isSpotlight": true,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Rahul Madhavan"
+        ]
+      },
+      {
+        "institute": "BITS Goa Campus",
+        "total_paper_count": 1,
+        "unique_paper_count": 0,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "tZRpvLXevU",
+            "title": "Latent Representation Matters: Human-like Sketches in One-shot Drawing Tasks",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Aditya Agrawal"
+        ]
+      }
+    ]
   },
   "configuration": {
     "countryMap": {
       "US": "United States",
       "CN": "China",
-      "GB": "United Kingdom",
       "UK": "United Kingdom",
       "IN": "India",
-      "CA": "Canada",
-      "HK": "Hong Kong",
-      "SG": "Singapore",
-      "DE": "Germany",
-      "CH": "Switzerland",
-      "KR": "South Korea",
       "JP": "Japan",
-      "AU": "Australia",
-      "IL": "Israel",
+      "DE": "Germany",
       "FR": "France",
-      "NL": "Netherlands"
+      "CA": "Canada",
+      "KR": "South Korea",
+      "AU": "Australia",
+      "UNK": "Unknown"
     },
     "apacCountries": [
       "CN",
       "IN",
-      "HK",
-      "SG",
       "JP",
       "KR",
-      "AU"
+      "AU",
+      "SG",
+      "MY",
+      "TH",
+      "VN",
+      "ID"
     ],
     "colorScheme": {
       "us": "hsl(221, 83%, 53%)",
@@ -68,46 +1278,52 @@
       "spotlight": "hsl(48, 96%, 50%)",
       "oral": "hsl(142, 71%, 45%)"
     },
-    "dashboardTitle": "India @ ICLR 2025",
+    "dashboardTitle": "India @ NeurIPS 2024",
     "dashboardSubtitle": "India's Contributions, Global Context & Institutional Landscape",
     "sections": {
       "summary": {
         "title": "Executive Summary: Impact at a Glance",
         "insights": [
-          "India's ML researchers are making their mark with papers at ICLR 2025, including spotlight and oral presentations that demonstrate the quality of research.",
-          "Positioned globally, India contributes to the body of work at ICLR 2025.",
-          "Analysis of first authorship and majority authorship collaborations reveals trends in research leadership and international collaboration.",
-          "The Indian ML research landscape shows a mix of academic and corporate contributions, with leading institutions demonstrating significant research impact."
+          "India's ML researchers are making their mark with 34 papers at NeurIPS 2024, including 4 spotlight and 0 oral presentations that demonstrate the quality of research.",
+          "Positioned globally, India contributes 0.8% to the body of work at NeurIPS 2024.",
+          "Analysis of 13 first authorship and 12 majority authorship collaborations reveals trends in research leadership and international collaboration.",
+          "The India ML research landscape shows a mix of 12 academic and 1 corporate contributions, with leading institutions demonstrating significant research impact."
         ]
       },
       "context": {
         "title": "Global & APAC Context: India's Standing",
         "subtitle": "Comparing India's research output with global and regional peers.",
         "insights": [
-          "Within the selected APAC group's papers, the focus country contributes papers and authors.",
-          "China dominates volume with papers, while the focus country's spotlight papers demonstrate quality-focused research.",
-          "The focus country ranks among APAC nations in total papers, but demonstrates strong academic-corporate collaboration."
+          "The top 5 contributing countries were: United States, China, GB, HK, SG."
         ]
       },
       "focusCountry": {
         "title": "India Deep Dive",
         "subtitle": "Analyzing authorship, collaboration, and institutional contributions.",
         "insights": [
-          "Researchers from India are increasingly taking lead authorship roles.",
-          "A notable portion of papers with Indian authors feature a majority of authors from India, signaling strong domestic research groups.",
-          "Academic institutions are the primary drivers of paper volume, with corporate labs also making significant high-quality contributions."
+          "India had 64 unique authors contributing to NeurIPS 2024.",
+          "13 papers had a first author from India.",
+          "12 papers had a majority of authors from India."
         ]
       },
       "institutions": {
         "title": "Institutions: Internal Ecosystem",
         "subtitle": "Analyzing the performance and impact of individual institutions within India.",
         "insights": [
-          "Leading institutions produce the most papers and have a high concentration of authors, often securing spotlight/oral presentations.",
-          "The top few institutions account for a significant percentage of the country's total papers.",
-          "Corporate research labs show strong performance, complementing the output from top academic institutions.",
-          "The institutional landscape highlights the distribution of research talent across various organizations."
+          "IISc Bangalore was the top contributing institution from India with 4 papers.",
+          "India had 12 academic and 1 corporate institutions contributing to NeurIPS 2024."
         ]
       }
     }
-  }
+  },
+  "credits": [
+    {
+      "name": "Sohan",
+      "link": "https://x.com/HiSohan"
+    },
+    {
+      "name": "Paras",
+      "link": "https://x.com/paraschopra"
+    }
+  ]
 }

@@ -1233,7 +1233,6 @@
           }
         ],
         "authors": [
-          "",
           "Manjesh Kumar Hanawal",
           "Prateek Garg",
           "Snegha A",
@@ -1285,7 +1284,6 @@
           }
         ],
         "authors": [
-          "",
           "Hisashi Kojima",
           "Omer Hofman",
           "Roman Vainshtein",
@@ -1332,7 +1330,6 @@
           }
         ],
         "authors": [
-          "",
           "Somesh Kumar Singh",
           "Arnav Goel"
         ]
@@ -1403,7 +1400,6 @@
           }
         ],
         "authors": [
-          "",
           "Tanmoy Chakraborty",
           "Ragesh Jaiswal",
           "Samyak Jain",
@@ -1444,7 +1440,6 @@
           }
         ],
         "authors": [
-          "",
           "KISHALAY DAS",
           "Sayandeep Bhowmick",
           "Subhojyoti Khastagir",
@@ -1616,7 +1611,7 @@
           }
         ],
         "authors": [
-          "",
+          
           "Sujoy Bhore",
           "Satyam Singh"
         ]
@@ -1931,7 +1926,7 @@
         ],
         "authors": [
           "Akshat Jain",
-          "",
+          
           "Kartik Thakral",
           "Rishabh Ranjan",
           "Richa Singh"
@@ -2163,9 +2158,10 @@
         "title": "India Deep Dive",
         "subtitle": "Analyzing authorship, collaboration, and institutional contributions.",
         "insights": [
-          "India had 133 unique authors contributing to ICLR 2025.",
-          "26 papers had a first author from India.",
-          "23 papers had a majority of authors from India."
+          "India has a strong presence at ICLR 2025 with 50 accepted papers, including 5 spotlights and 2 orals, showcasing notable contributions to the field.",
+          "With 133 unique authors and significant first (26 papers) and majority authorship (23 papers), India demonstrates growing research leadership.",
+          "The healthy mix of 17 academic and 11 corporate institutions highlights the diverse and collaborative nature of India's ML ecosystem.",
+          "To further enhance impact, increasing the number of oral presentations could be a focus, signifying a greater proportion of highly-rated, impactful research."
         ]
       },
       "institutions": {
@@ -2177,5 +2173,15 @@
         ]
       }
     }
-  }
+  },
+  "credits": [
+    {
+      "name": "Sohan",
+      "link": "https://x.com/HiSohan"
+    },
+    {
+      "name": "Paras",
+      "link": "https://x.com/paraschopra"
+    }
+  ]
 }

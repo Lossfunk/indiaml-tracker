@@ -816,7 +816,7 @@
           }
         ],
         "authors": [
-          "",
+          
           "Aditya Gopalan",
           "Prathosh AP",
           "Avik Kar",
@@ -896,7 +896,7 @@
         ],
         "authors": [
           "Avishek Ghosh",
-          "",
+          
           "Lokesh Nagalapatti",
           "Sunita Sarawagi"
         ]
@@ -1100,7 +1100,7 @@
           }
         ],
         "authors": [
-          "",
+          
           "SakethaNath Jagarlapudi"
         ]
       },
@@ -1220,5 +1220,15 @@
         ]
       }
     }
-  }
+  },
+  "credits": [
+    {
+      "name": "Sohan",
+      "link": "https://x.com/HiSohan"
+    },
+    {
+      "name": "Paras",
+      "link": "https://x.com/paraschopra"
+    }
+  ]
 }
