@@ -712,7 +712,7 @@
           }
         ],
         "authors": [
-          "",
+          
           "Burouj Armgaan",
           "N M Anoop Krishnan",
           "Samidha Verma",
@@ -765,7 +765,7 @@
           }
         ],
         "authors": [
-          "",
+          
           "Prateek Chanda",
           "Shivam Patel",
           "Saiful Haq",
@@ -795,7 +795,7 @@
           }
         ],
         "authors": [
-          "",
+          
           "Md Shad Akhtar"
         ]
       },
@@ -1052,5 +1052,15 @@
         ]
       }
     }
-  }
+  },
+  "credits": [
+    {
+      "name": "Sohan",
+      "link": "https://x.com/HiSohan"
+    },
+    {
+      "name": "Paras",
+      "link": "https://x.com/paraschopra"
+    }
+  ]
 }

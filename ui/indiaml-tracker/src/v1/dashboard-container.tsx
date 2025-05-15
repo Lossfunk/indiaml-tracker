@@ -93,6 +93,10 @@ export interface DashboardDataInterface {
             institutions: { title: string; subtitle: string; insights: string[]; };
         }
     };
+    credits: {
+        name: string;
+        link: string;
+    }
 }
 
 interface PaperSummary { id: string; title: string; isSpotlight?: boolean; isOral?: boolean; }
@@ -216,11 +220,16 @@ interface StatCardProps {
     className?: string;
 }
 const StatCard: React.FC<StatCardProps> = ({ title, value, icon, colorClass, subtitle, className = '' }) => (
-    <div className={`bg-card border border-border p-6 rounded-xl shadow-lg flex flex-col text-center items-center ${className}`}>
-        {icon && <div className={`${colorClass} text-3xl mb-3`}>{icon}</div>}
-        <p className={`text-4xl md:text-5xl font-bold text-foreground mb-1`}>{value}</p>
-        <h3 className="text-muted-foreground font-medium text-sm uppercase tracking-wider mb-2">{title}</h3>
-        {subtitle && <p className="text-muted-foreground text-xs">{subtitle}</p>}
+    <div className={`bg-card border border-border p-6 rounded-xl shadow-lg flex flex-col ${className}`}>
+        {icon && (<>
+        <div className='flex items-center gap-3'>
+        <div className={`${colorClass} text-2xl mb-3`}>{icon}</div>
+        <div className='text-muted-foreground font-medium text-sm uppercase tracking-wider mb-2'>{title}</div>
+        </div>
+        </>)}
+        <p className={`text-4xl mt-5 md:text-5xl font-bold text-foreground mb-1`}>{value}</p>
+        {/* <h3 className="text-muted-foreground font-medium text-sm uppercase tracking-wider mb-2">{title}</h3> */}
+        {subtitle && <p className="text-muted-foreground text-xs mt-3">{subtitle}</p>}
     </div>
 );
 
@@ -721,7 +730,7 @@ const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({ conference, y
     }
 
     // Destructure for render logic
-    const { conferenceInfo, focusCountry, configuration } = fetchedDashboardData;
+    const { conferenceInfo, focusCountry, configuration, credits } = fetchedDashboardData;
     const totalPapers = conferenceInfo.totalAcceptedPapers;
     const totalAuthors = conferenceInfo.totalAcceptedAuthors;
     const colorScheme = configuration.colorScheme;
@@ -732,7 +741,7 @@ const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({ conference, y
              <div className="min-h-screen bg-background flex items-center justify-center p-6">
                  <div className="bg-destructive/10 border border-destructive/30 text-destructive px-4 py-3 rounded-lg shadow-lg text-center">
                      <h2 className="font-bold text-lg mb-2">Data Processing Error</h2>
-                     <p className="text-sm">Could not process essential derived data. Check analytics file structure.</p>
+                     <p className="text-sm">Could not process essential derived data. Check ytics file structure.</p>
                  </div>
              </div>
          );
@@ -792,9 +801,7 @@ const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({ conference, y
                                 <span className="font-semibold text-foreground">{totalAuthors?.toLocaleString() ?? 'N/A'}</span>
                             </div>
                         </div>
-                        
-                        <p className="text-xs text-muted-foreground">Displaying: {conferenceInfo.name} {conferenceInfo.year} (Focus: {focusCountry.country_name || focusCountry.country_code})</p>
-                    </div>
+                                            </div>
                 </div>
             </header>
 
@@ -814,21 +821,21 @@ const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({ conference, y
                             value={processedFocusData.author_count ?? 0}
                             icon={<FaUsers />}
                             colorClass="text-blue-500 dark:text-blue-400"
-                            subtitle={`Avg ${(processedFocusData?.authors_per_paper ?? 0).toFixed(1)} authors/paper | Building ${focusCountry.country_name || 'Local'}'s ML community`}
+                            subtitle={`Avg ${(processedFocusData?.authors_per_paper ?? 0).toFixed(1)} authors/paper`}
                         />
                         <StatCard
                             title="First Authors"
                             value={processedFocusData?.first_focus_country_author?.count ?? 0}
                             icon={<FaUserTie />}
                             colorClass="text-emerald-500 dark:text-emerald-400"
-                            subtitle={`${((processedFocusData?.first_focus_country_author?.count ?? 0) / (processedFocusData?.paper_count || 1) * 100).toFixed(0)}% of papers led by ${focusCountry.country_name || 'Focus Country'} first authors`}
+                            subtitle={`${((processedFocusData?.first_focus_country_author?.count ?? 0) / (processedFocusData?.paper_count || 1) * 100).toFixed(0)}% of papers led by ${focusCountry.country_name || 'Focus Country'}n authors`}
                         />
                         <StatCard
                             title="Spotlight Papers"
                             value={processedFocusData.spotlights ?? 0}
                             icon={<FaStar />}
                             colorClass="text-yellow-500 dark:text-yellow-400"
-                            subtitle={`Demonstrating high-quality research impact on the global stage`}
+                            subtitle={`${Math.round(processedFocusData.spotlight_oral_rate * 100)}% spotlight rate`}
                         />
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
@@ -858,7 +865,7 @@ const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({ conference, y
                          </div>
                      </div>
                     <InterpretationPanel
-                        title="Dashboard Narrative Hook"
+                        title="Key Findings Overview"
                         icon={<FaBullseye />}
                         iconColorClass='text-red-500 dark:text-red-400'
                         insights={configuration.sections.summary.insights}
@@ -1216,12 +1223,23 @@ const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({ conference, y
                 </Section>
             </main>
 
-            <footer className="mt-10 md:mt-12 text-center text-muted-foreground text-xs border-t border-border pt-6 pb-6 bg-gradient-to-r from-amber-50/30 to-orange-50/30 dark:from-amber-950/10 dark:to-orange-950/10">
-                <p>{conferenceInfo?.name ?? 'Conference'} {conferenceInfo?.year ?? ''} Dashboard | Data Updated {new Date().toLocaleString('default', { month: 'long', year: 'numeric' })}</p>
-                {processedFocusData && (
-                     <p>{focusCountry.country_name || 'Focus Country'}'s Contribution: {processedFocusData.paper_count} Papers | {processedFocusData.author_count} Authors | {processedFocusData.first_focus_country_author?.count} First Authors | {processedFocusData.spotlights} Spotlight {processedFocusData.spotlights === 1 ? 'Paper' : 'Papers'}</p>
-                )}
-                <p className="mt-1">&copy; {new Date().getFullYear()} Analysis Dashboard</p>
+            <footer className="mt-10 md:mt-12 max-w-7xl px-7 mx-auto text-muted-foreground text-xs border-t border-border pt-6 pb-6 bg-gradient-to-r from-amber-50/30 to-orange-50/30 dark:from-amber-950/10 dark:to-orange-950/10">
+                <p className='font-bold '>{conferenceInfo?.name ?? 'Conference'} {conferenceInfo?.year ?? ''} Dashboard </p>
+                <p className='mt-2'> <span className='mr-1'>Report Prepared by: </span> 
+                {credits.length === 0 ? null : credits.length === 1 ? (
+  <a key={0} href={credits[0].link}>{credits[0].name}</a>
+) : (
+  credits.map((x, index) => (
+    <span key={index}> 
+      <a href={x.link}>{x.name}</a>
+      {index < credits.length - 2 && ", "}
+      {index === credits.length - 2 && " and "}
+    </span>
+  ))
+)}
+                </p>
+                <p className="mt-1">Dashboard was prepared in part with the help of Generative AI technology and there may be inaccuracies or omissions. Please report data quality issues <a href="https://github.com/Lossfunk/indiaml-tracker/issues">on Github</a> </p>
+                <p className="mt-1">&copy; {new Date().getFullYear()} <a href="https://lossfunk.com">Lossfunk</a> India@ML</p>
             </footer>
 
             <style jsx global>{`
