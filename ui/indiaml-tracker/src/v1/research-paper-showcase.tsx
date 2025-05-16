@@ -293,7 +293,7 @@ export function ResearchPapersShowcase() {
                                    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-black focus:ring-indigo-500"
                         aria-label={`View analytics for ${name} ${year}`}
                     >
-                        Analytics
+                        Detailed Summary of India @ {name} {year}
                     </button>
                  </div>
                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
