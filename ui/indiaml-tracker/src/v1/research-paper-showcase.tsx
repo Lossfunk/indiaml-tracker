@@ -285,7 +285,7 @@ export function ResearchPapersShowcase() {
                         {name} ({papers.length} accepted)
                     </h3>
                     <button
-                        onClick={() => navigate(`/analytics?conference=${name}&year=${year}`)}
+                        onClick={() => navigate(`/conference-summary?conference=${name}&year=${year}`)}
                         // Updated button classes for link-like appearance and dark mode
                         className="ml-4 px-3 py-1 text-sm font-medium rounded-md transition-colors 
                                    text-indigo-600 hover:text-indigo-800 hover:underline
