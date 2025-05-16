@@ -1841,7 +1841,7 @@ const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
                         ?
                       </span>
                     </PopoverTrigger>
-                    <PopoverContent className="w-80 text-sm text-muted-foreground">
+                    <PopoverContent className="w-96 text-sm text-muted-foreground">
                       <p className="font-semibold text-foreground mb-2">
                         Majority vs Minority Authorship Explanation:
                       </p>
@@ -1946,7 +1946,7 @@ const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
                         ?
                       </span>
                     </PopoverTrigger>
-                    <PopoverContent className="w-80 text-sm text-muted-foreground">
+                    <PopoverContent className="w-96 text-sm text-muted-foreground">
                       <p className="font-semibold text-foreground mb-2">
                         First Author position Explanation:
                       </p>
