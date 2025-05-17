@@ -287,11 +287,6 @@ export function ResearchPapersShowcase() {
     if (isExpanded) {
       return papers; // Show all papers if expanded
     } else {
-      // Show 2 rows of papers based on grid columns (responsive)
-      // 1 column on small screens (2 papers)
-      // 2 columns on medium screens (4 papers)
-      // 3 columns on large screens (6 papers)
-      // We'll use 6 as the default (2 rows × 3 columns for large screens)
       return papers.slice(0, 6);
     }
   };
@@ -299,17 +294,20 @@ export function ResearchPapersShowcase() {
   // --- Rendering ---
   return (
     <div className="container mx-auto space-y-6 p-4 font-sans">
-      <FilterBar
-        searchTerm={searchTerm}
-        setSearchTerm={setSearchTerm}
-        isFirstAuthorIndian={isFirstAuthorIndian}
-        setIsFirstAuthorIndian={setIsFirstAuthorIndian}
-        isMajorityAuthorsIndian={isMajorityAuthorsIndian}
-        setIsMajorityAuthorsIndian={setIsMajorityAuthorsIndian}
-        selectedConferences={selectedConferences}
-        setSelectedConferences={setSelectedConferences}
-        // conferenceOptions={Object.entries(fileToKeyMap).map(([fileId, confKey]) => ({ value: confKey, label: confKey }))}
-      />
+      {/* Sticky Wrapper for FilterBar */}
+      <div className="sticky top-0 z-50 bg-white dark:bg-gray-950 -mx-4 px-4 py-3">
+        <FilterBar
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+          isFirstAuthorIndian={isFirstAuthorIndian}
+          setIsFirstAuthorIndian={setIsFirstAuthorIndian}
+          isMajorityAuthorsIndian={isMajorityAuthorsIndian}
+          setIsMajorityAuthorsIndian={setIsMajorityAuthorsIndian}
+          selectedConferences={selectedConferences}
+          setSelectedConferences={setSelectedConferences}
+          // conferenceOptions={Object.entries(fileToKeyMap).map(([fileId, confKey]) => ({ value: confKey, label: confKey }))}
+        />
+      </div>
 
       {loading ? (
         <div className="flex justify-center items-center h-40">
@@ -404,6 +402,3 @@ export function ResearchPapersShowcase() {
     </div>
   )
 }
-
-// Make sure FilterBar, PaperCard components and Paper type are defined elsewhere.
-// Also, ensure react-router-dom is installed and <Router> (or <BrowserRouter>) is set up in your application's root.
