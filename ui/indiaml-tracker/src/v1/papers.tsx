@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaRegSmileWink } from "react-icons/fa";
 import { ResearchPapersShowcase } from "./research-paper-showcase";
+import { ExternalLinkIcon } from "lucide-react";
 
 export default function Home() {
   return (
@@ -51,7 +52,8 @@ export default function Home() {
             className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-md text-gray-100 bg-indigo-600 hover:bg-indigo-500 transition-colors"
           >
             <FaGithub className="mr-2" />
-            View Research Data & Pipelines on GitHub
+            View Research Data & Pipelines  
+            <ExternalLinkIcon className="h-3"/>
           </a>
           <p className="text-xs text-gray-600 dark:text-gray-500 mt-2">
             Explore data pipelines and research materials for India's ML
