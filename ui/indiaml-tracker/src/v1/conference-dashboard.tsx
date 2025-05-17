@@ -55,6 +55,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { ExternalLink, ExternalLinkIcon } from "lucide-react";
 
 // --- Type definitions (from ConferenceDashboard) ---
 export interface DashboardDataInterface {
