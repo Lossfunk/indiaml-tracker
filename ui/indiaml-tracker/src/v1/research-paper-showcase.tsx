@@ -63,7 +63,21 @@ export function ResearchPapersShowcase() {
   const [selectedConferences, setSelectedConferences] = useState<string[]>([])
   const [loading, setLoading] = useState(true)
   const [fileToKeyMap, setFileToKeyMap] = useState<Record<string, string>>({})
+  const [expandedConferences, setExpandedConferences] = useState<Set<string>>(new Set())
   const navigate = useNavigate();
+
+  // Function to toggle conference expansion
+  const toggleConferenceExpansion = (conferenceKey: string) => {
+    setExpandedConferences(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(conferenceKey)) {
+        newSet.delete(conferenceKey);
+      } else {
+        newSet.add(conferenceKey);
+      }
+      return newSet;
+    });
+  };
 
   // --- Fetching Logic ---
   useEffect(() => {
@@ -255,6 +269,33 @@ export function ResearchPapersShowcase() {
 
   }, [filteredPapers]);
 
+  // --- Paper Display Logic ---
+  // Track if all conferences should be collapsed
+  const [collapseAll, setCollapseAll] = useState<boolean>(false);
+  
+  // Effect to collapse all conferences when collapseAll is toggled
+  useEffect(() => {
+    if (collapseAll) {
+      setExpandedConferences(new Set());
+    }
+  }, [collapseAll]);
+  
+  // Determine number of papers to show for each conference (2 rows based on screen size)
+  const getPapersToShow = (papers: Paper[], conferenceKey: string) => {
+    const isExpanded = expandedConferences.has(conferenceKey);
+    
+    if (isExpanded) {
+      return papers; // Show all papers if expanded
+    } else {
+      // Show 2 rows of papers based on grid columns (responsive)
+      // 1 column on small screens (2 papers)
+      // 2 columns on medium screens (4 papers)
+      // 3 columns on large screens (6 papers)
+      // We'll use 6 as the default (2 rows × 3 columns for large screens)
+      return papers.slice(0, 6);
+    }
+  };
+
   // --- Rendering ---
   return (
     <div className="container mx-auto space-y-6 p-4 font-sans">
@@ -272,42 +313,92 @@ export function ResearchPapersShowcase() {
 
       {loading ? (
         <div className="flex justify-center items-center h-40">
-          <p className="text-lg font-medium text-gray-600 dark:text-gray-400">Loading papers...</p> {/* Added dark mode text for loading */}
+          <p className="text-lg font-medium text-gray-600 dark:text-gray-400">Loading papers...</p>
         </div>
       ) : groupedAndSortedPapers.length > 0 ? (
          groupedAndSortedPapers.map(({ year, conferences }) => (
            <div key={year} className="mt-8 first:mt-0">
-             <h2 className="text-3xl font-bold mb-6 border-b border-gray-300 dark:border-gray-700 pb-3 text-gray-800 dark:text-gray-200">{year}</h2> {/* Added dark mode styles */}
-             {conferences.map(({ name, papers }) => ( // `name` is conference name (UPPERCASE)
-               <div key={`${year}-${name}`} className="mb-8">
-                 <div className="flex items-center mb-4"> {/* Container for heading and button */}
-                    <h3 className="text-2xl font-semibold text-gray-700 dark:text-gray-300"> {/* Added dark mode styles */}
-                        {name} ({papers.length} accepted)
-                    </h3>
-                    <button
-                        onClick={() => navigate(`/conference-summary?conference=${name}&year=${year}`)}
-                        // Updated button classes for link-like appearance and dark mode
-                        className="ml-4 px-3 py-1 text-sm font-medium rounded-md transition-colors 
-                                   text-indigo-600 hover:text-indigo-800 hover:underline
-                                   dark:text-indigo-400 dark:hover:text-indigo-300
-                                   focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-black focus:ring-indigo-500"
-                        aria-label={`View analytics for ${name} ${year}`}
-                    >
-                        Detailed Summary of India @ {name} {year}
-                    </button>
+             <div className="flex justify-between items-center mb-6 border-b border-gray-300 dark:border-gray-700 pb-3">
+               <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-200">{year}</h2>
+               <button
+                 onClick={() => setCollapseAll(prev => !prev)}
+                 className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 underline focus:outline-none transition-colors"
+               >
+                 {collapseAll ? "Expand All" : "Collapse All"}
+               </button>
+             </div>
+             {conferences.map(({ name, papers }) => {
+               const conferenceKey = `${year}-${name}`;
+               const isExpanded = expandedConferences.has(conferenceKey);
+               const papersToShow = getPapersToShow(papers, conferenceKey);
+               const hasMorePapers = papers.length > papersToShow.length;
+               
+               return (
+                 <div key={conferenceKey} className="mb-8">
+                   <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center">
+                        <h3 className="text-2xl font-semibold text-gray-700 dark:text-gray-300">
+                            {name} ({papers.length} accepted)
+                        </h3>
+                        <button
+                            onClick={() => navigate(`/conference-summary?conference=${name}&year=${year}`)}
+                            className="ml-4 px-3 py-1 text-sm font-medium rounded-md transition-colors 
+                                      text-indigo-600 hover:text-indigo-800 hover:underline
+                                      dark:text-indigo-400 dark:hover:text-indigo-300
+                                      focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-black focus:ring-indigo-500"
+                            aria-label={`View analytics for ${name} ${year}`}
+                        >
+                            Detailed Summary of India @ {name} {year}
+                        </button>
+                      </div>
+                      <button
+                        onClick={() => toggleConferenceExpansion(conferenceKey)}
+                        className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 underline focus:outline-none"
+                        aria-expanded={isExpanded}
+                      >
+                        {isExpanded ? "Collapse" : "Expand"}
+                      </button>
+                   </div>
+                   
+                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                     {papersToShow.map((paper) => (
+                       <PaperCard key={paper.paper_id} paper={paper} />
+                     ))}
+                   </div>
+                   
+                   {hasMorePapers && (
+                     <div className="mt-3 ml-2">
+                       <button
+                         onClick={() => toggleConferenceExpansion(conferenceKey)}
+                         className="text-sm text-indigo-600 hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-300 
+                                    underline focus:outline-none transition-colors"
+                         aria-expanded={isExpanded}
+                       >
+                         {isExpanded ? `Show less papers` : `See more papers (${papers.length - papersToShow.length} more)`}
+                       </button>
+                     </div>
+                   )}
+
+                   {/* Show collapse button at the bottom when expanded */}
+                   {isExpanded && papers.length > 6 && (
+                     <div className="mt-6 mb-3 ml-2">
+                       <button
+                         onClick={() => toggleConferenceExpansion(conferenceKey)}
+                         className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 
+                                   underline focus:outline-none transition-colors"
+                       >
+                         Collapse Section
+                       </button>
+                     </div>
+                   )}
                  </div>
-                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                   {papers.map((paper) => (
-                     <PaperCard key={paper.paper_id} paper={paper} />
-                   ))}
-                 </div>
-               </div>
-             ))}
+               );
+             })}
            </div>
          ))
        ) : (
          <div className="col-span-full text-center py-10">
-           <p className="text-lg font-medium text-gray-500 dark:text-gray-400">No papers match your filters.</p> {/* Added dark mode text */}
+           <p className="text-lg font-medium text-gray-500 dark:text-gray-400">No papers match your filters.</p>
          </div>
        )}
     </div>
