@@ -1336,13 +1336,13 @@ const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
             {/* Improved Stats Display */}
             <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-3 mb-2">
               <div className="bg-card/70 dark:bg-card/40 border border-border rounded-lg px-3 py-1.5 shadow-sm text-sm">
-                <span className="text-muted-foreground">Total Papers: </span>
+                <span className="text-muted-foreground">Global Papers in index: </span>
                 <span className="font-semibold text-foreground">
                   {totalPapers?.toLocaleString() ?? "N/A"}
                 </span>
               </div>
               <div className="bg-card/70 dark:bg-card/40 border border-border rounded-lg px-3 py-1.5 shadow-sm text-sm">
-                <span className="text-muted-foreground">Total Authors: </span>
+                <span className="text-muted-foreground">Global Authors in index: </span>
                 <span className="font-semibold text-foreground">
                   {totalAuthors?.toLocaleString() ?? "N/A"}
                 </span>
