@@ -406,6 +406,8 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
               </span>
             ))
           )}
+
+          {" "} at <a href="https://lossfunk.com">Lossfunk</a>
         </p>
         <p className="mt-1">
           Dashboard was prepared in part with the help of Generative AI
