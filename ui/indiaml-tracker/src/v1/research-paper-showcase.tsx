@@ -533,21 +533,10 @@ export function ResearchPapersShowcase() {
                     <div className="flex flex-col">
                       {/* Title and View Analytics Button */}
                       <div className="flex justify-between items-center px-5 py-4">
-                        <div className="flex items-center">
+                        <div>
                           <h3 className="text-xl font-semibold text-white">
                             {name} ({kpis.totalPapers} accepted)
                           </h3>
-                          {/* Moved expand button - now appears as a chevron icon */}
-                          <button
-                            onClick={() => toggleConferenceExpansion(conferenceKey)}
-                            className="ml-3 p-1 text-gray-400 hover:text-white focus:outline-none transition-colors rounded-full hover:bg-slate-700"
-                            aria-expanded={isExpanded}
-                            title={isExpanded ? "Collapse papers" : "Expand papers"}
-                          >
-                            <svg xmlns="http://www.w3.org/2000/svg" className={`h-5 w-5 transition-transform ${isExpanded ? 'rotate-180' : ''}`} viewBox="0 0 20 20" fill="currentColor">
-                              <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                            </svg>
-                          </button>
                         </div>
                         
                         {/* View Analytics Button */}
@@ -620,6 +609,20 @@ export function ResearchPapersShowcase() {
                         </div>
                       </div>
                       
+                      {/* Expand/Collapse Toggle Button - Moved to bottom of card */}
+                      {/* <div className="flex justify-end px-5 pb-3">
+                        <button
+                          onClick={() => toggleConferenceExpansion(conferenceKey)}
+                          className="flex items-center text-gray-400 hover:text-white focus:outline-none transition-colors rounded-md hover:bg-slate-700 px-2 py-1 text-sm"
+                          aria-expanded={isExpanded}
+                          title={isExpanded ? "Collapse papers" : "Expand papers"}
+                        >
+                          <span className="mr-1">{isExpanded ? "Collapse papers" : "Expand papers"}</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" className={`h-4 w-4 transition-transform ${isExpanded ? 'rotate-180' : ''}`} viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                          </svg>
+                        </button>
+                      </div> */}
                     </div>
                   </div>
                   
