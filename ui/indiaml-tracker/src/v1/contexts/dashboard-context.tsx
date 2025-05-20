@@ -1,4 +1,4 @@
-// src/contexts/DashboardContext.tsx
+// src/contexts/dashboard-context.tsx
 
 import React, { createContext, useContext, ReactNode } from 'react';
 import { DashboardContextState } from '../types/dashboard';
