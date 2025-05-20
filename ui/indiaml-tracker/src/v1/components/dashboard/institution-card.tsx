@@ -35,7 +35,7 @@ export const InstitutionCard: React.FC<InstitutionCardProps> = ({
 
   return (
     <div
-      className="bg-card rounded-lg shadow-md overflow-hidden mb-4 border border-border hover:border-primary transition-all duration-300 animate-fade-in"
+      className="bg-card rounded-lg shadow-md overflow-hidden mb-4 mt-8 border border-border hover:border-primary transition-all duration-300 animate-fade-in"
       style={{ animationDelay, opacity: 0, animationFillMode: "forwards" }}
     >
       <div
@@ -47,7 +47,7 @@ export const InstitutionCard: React.FC<InstitutionCardProps> = ({
       >
         <div className="flex-1 mr-4 overflow-hidden">
           <h3
-            className="text-card-foreground font-medium truncate"
+            className="text-card-foreground text-3xl pb-5 truncate"
             title={institution.institute}
           >
             {institution.institute}

@@ -608,21 +608,6 @@ export function ResearchPapersShowcase() {
                           </div>
                         </div>
                       </div>
-                      
-                      {/* Expand/Collapse Toggle Button - Moved to bottom of card */}
-                      {/* <div className="flex justify-end px-5 pb-3">
-                        <button
-                          onClick={() => toggleConferenceExpansion(conferenceKey)}
-                          className="flex items-center text-gray-400 hover:text-white focus:outline-none transition-colors rounded-md hover:bg-slate-700 px-2 py-1 text-sm"
-                          aria-expanded={isExpanded}
-                          title={isExpanded ? "Collapse papers" : "Expand papers"}
-                        >
-                          <span className="mr-1">{isExpanded ? "Collapse papers" : "Expand papers"}</span>
-                          <svg xmlns="http://www.w3.org/2000/svg" className={`h-4 w-4 transition-transform ${isExpanded ? 'rotate-180' : ''}`} viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                          </svg>
-                        </button>
-                      </div> */}
                     </div>
                   </div>
                   
