@@ -178,6 +178,7 @@ export const GlobalDistributionChart: React.FC<GlobalDistributionChartProps> = (
             animationEasing="ease-in-out"
             barSize={28}
             radius={[8, 8, 0, 0]}
+            fill={colorMap.rest} // Add this line to fix the legend color
           >
             {chartData.map((entry, index) => (
               <Cell 
