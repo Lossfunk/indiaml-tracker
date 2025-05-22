@@ -1,11 +1,13 @@
 // src/utils/dataTransformers.ts
 
-import { 
-    CountryData, 
-    DashboardDataInterface, 
-    InstitutionData, 
+import { chartColors, colorSchemes } from './chart-colors';
+import {
+    CountryData,
+    DashboardDataInterface,
+    InstitutionData,
     ProcessedFocusCountryData,
-    ChartDataItem 
+    ChartDataItem,
+    ColorMapInterface
   } from "../types/dashboard";
   
   /**
@@ -182,7 +184,7 @@ import {
         name: "Rest of World",
         value: restCount,
         percent: restCount / totalPapers,
-        fill: "hsl(var(--muted))",
+        fill: colorScheme.rest || "hsl(var(--muted))",
       },
     ];
   };
@@ -192,7 +194,8 @@ import {
    */
   export const createAuthorshipData = (
     processedFocusData: ProcessedFocusCountryData | null,
-    focusCountryName: string = "Focus Country"
+    focusCountryName: string = "Focus Country",
+    colorScheme?: DashboardDataInterface['configuration']['colorScheme']
   ): {
     majorityMinorityData: ChartDataItem[],
     firstAuthorData: ChartDataItem[]
@@ -223,12 +226,12 @@ import {
       {
         name: `Majority ${focusCountryName}`,
         value: majorityFocusCountry,
-        fill: "hsl(142, 71%, 45%)",
+        fill: colorScheme?.focusCountry || "hsl(142, 71%, 45%)",
       },
       {
         name: `Minority ${focusCountryName}`,
         value: minorityFocusCountry,
-        fill: "hsl(var(--secondary-foreground))",
+        fill: colorScheme?.secondary || "hsl(var(--secondary-foreground))",
       },
     ];
     
@@ -245,12 +248,12 @@ import {
       {
         name: `First Author ${focusCountryName}`,
         value: firstAuthorFocusCountry,
-        fill: "hsl(330, 80%, 60%)",
+        fill: colorScheme?.primary || "hsl(330, 80%, 60%)",
       },
       {
         name: "Other Position",
         value: nonFirstAuthorFocusCountry,
-        fill: "hsl(36, 96%, 50%)",
+        fill: colorScheme?.warning || "hsl(36, 96%, 50%)",
       },
     ];
     
@@ -353,28 +356,42 @@ import {
   
   /**
    * Create a color map from the configuration
+   * Now uses the centralized chart color system for consistency
    */
   export const createColorMap = (
     colorScheme: DashboardDataInterface['configuration']['colorScheme']
   ): ColorMapInterface => {
     return {
-      us: colorScheme.us,
-      cn: colorScheme.cn,
-      focusCountry: colorScheme.focusCountry,
-      primary: colorScheme.primary || "hsl(var(--primary))",
-      secondary: colorScheme.secondary || "hsl(var(--secondary-foreground))",
-      academic: colorScheme.academic,
-      corporate: colorScheme.corporate,
-      spotlight: colorScheme.spotlight,
-      oral: colorScheme.oral,
-      grid: "hsl(var(--border))",
+      // Main country colors - Override with config or use our new chart colors
+      us: colorScheme.us || chartColors.us,
+      cn: colorScheme.cn || chartColors.cn,
+      focusCountry: colorScheme.focusCountry || chartColors.focusCountry,
+      
+      // Theme colors
+      primary: colorScheme.primary || chartColors.accent,
+      secondary: colorScheme.secondary || chartColors.withOpacity(chartColors.muted, 0.9),
+      
+      // Institution types
+      academic: colorScheme.academic || chartColors.academic,
+      corporate: colorScheme.corporate || chartColors.corporate,
+      
+      // Paper types
+      spotlight: colorScheme.spotlight || chartColors.spotlight,
+      oral: colorScheme.oral || chartColors.oral,
+      
+      // Chart elements
+      grid: chartColors.grid,
       textAxis: "hsl(var(--muted-foreground))",
-      highlight: "hsl(142, 60%, 55%)",
-      accent: "hsl(330, 60%, 70%)",
-      warning: "hsl(36, 80%, 65%)",
-      rest: "hsl(var(--muted))",
-      papers: "hsl(210, 70%, 60%)",
-      authors: "hsl(330, 60%, 70%)",
+      
+      // Accents and highlights
+      highlight: chartColors.highlight,
+      accent: chartColors.accent,
+      warning: chartColors.warning,
+      rest: chartColors.rest,
+      
+      // Data types
+      papers: chartColors.papers,
+      authors: chartColors.authors,
     };
   };
   

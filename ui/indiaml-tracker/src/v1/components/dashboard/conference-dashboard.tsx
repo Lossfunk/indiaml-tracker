@@ -147,12 +147,12 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       {/* Header */}
-      <header className="py-6 md:py-8 bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-950/30 dark:to-orange-950/30 border-b border-border shadow-sm">
+      <header className="py-6 md:py-8 bg-gradient-to-r from-amber-50 via-orange-50 to-amber-100 dark:from-amber-950/40 dark:via-orange-950/30 dark:to-amber-950/40 border-b border-border shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row justify-between items-center mb-2 sm:mb-3">
             <div className="flex-grow text-center sm:text-left mb-3 sm:mb-0">
               <h1 className="text-3xl sm:text-4xl font-bold text-foreground flex items-center justify-center sm:justify-start">
-                <FaTrophy className="mr-3 text-amber-500" />{" "}
+                <FaTrophy className="mr-3 text-amber-500 drop-shadow-md" />{" "}
                 {configuration.dashboardTitle}
               </h1>
             </div>
@@ -168,13 +168,13 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
 
             {/* Stats Display */}
             <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-3 mb-2">
-              <div className="bg-card/70 dark:bg-card/40 border border-border rounded-lg px-3 py-1.5 shadow-sm text-sm">
+              <div className="bg-card/70 dark:bg-card/40 border border-border rounded-lg px-3 py-1.5 shadow-sm text-sm backdrop-blur-sm hover:shadow-md transition-shadow duration-200">
                 <span className="text-muted-foreground">Global Papers in index: </span>
                 <span className="font-semibold text-foreground">
                   {totalPapers?.toLocaleString() ?? "N/A"}
                 </span>
               </div>
-              <div className="bg-card/70 dark:bg-card/40 border border-border rounded-lg px-3 py-1.5 shadow-sm text-sm">
+              <div className="bg-card/70 dark:bg-card/40 border border-border rounded-lg px-3 py-1.5 shadow-sm text-sm backdrop-blur-sm hover:shadow-md transition-shadow duration-200">
                 <span className="text-muted-foreground">Global Authors in index: </span>
                 <span className="font-semibold text-foreground">
                   {totalAuthors?.toLocaleString() ?? "N/A"}
@@ -190,7 +190,7 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
         <Section
           title={configuration.sections.summary.title}
           id="summary"
-          className="bg-muted/30"
+          className="bg-gradient-to-b from-muted/10 to-muted/40"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             <StatCard
@@ -235,7 +235,7 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            <div className="bg-card p-4 rounded-lg border border-border shadow-sm">
+            <div className="bg-card p-4 rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow duration-200">
               <div className="flex items-start mb-3">
                 <FaUniversity className="text-blue-500 mr-3 mt-1" size={20} />
                 <div>
@@ -257,7 +257,7 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
               </div>
             </div>
             
-            <div className="bg-card p-4 rounded-lg border border-border shadow-sm">
+            <div className="bg-card p-4 rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow duration-200">
               <div className="flex items-start mb-3">
                 <FaBalanceScale
                   className="text-green-500 mr-3 mt-1"
@@ -299,12 +299,12 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
           subtitle="Worldwide paper distribution across countries at the conference"
         >
           {/* Full-width Global Distribution Chart */}
-          <div className="mb-10">
+          <div className="mb-10 overflow-hidden">
             <h3 className="text-xl font-semibold flex items-center mb-4">
               <FaGlobeAmericas className="mr-2 text-blue-500" />
               Global Research Landscape
             </h3>
-            <div className="bg-card border border-border rounded-lg p-5 shadow-sm">
+            <div className="bg-card border border-border rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow duration-200">
               {/* Summary Stats */}
               <div className="flex flex-wrap justify-between items-center mb-6 gap-4">
                 <p className="text-sm text-muted-foreground">
@@ -313,11 +313,11 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
                 </p>
                 
                 <div className="flex flex-wrap gap-3">
-                  <div className="px-3 py-1 bg-muted/30 rounded-full text-xs flex items-center gap-1.5">
+                  <div className="px-3 py-1.5 bg-muted/30 rounded-full text-xs flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full" style={{backgroundColor: data.configuration.colorScheme.papers}}></span>
                     <span>Total Countries: <b>{sortedCountries.length}</b></span>
                   </div>
-                  <div className="px-3 py-1 bg-muted/30 rounded-full text-xs flex items-center gap-1.5"
+                  <div className="px-3 py-1.5 bg-muted/30 rounded-full text-xs flex items-center gap-2"
                        style={{backgroundColor: `${data.configuration.colorScheme.focusCountry}20`}}>
                     <span>{focusCountryName} Rank: <b>#{focusCountryGlobalStats?.rank || 'N/A'}</b></span>
                   </div>
@@ -332,7 +332,7 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
                   us: data.configuration.colorScheme.us,
                   cn: data.configuration.colorScheme.cn,
                   focusCountry: data.configuration.colorScheme.focusCountry,
-                  rest: "hsl(var(--muted))"
+                  rest: "hsl(var(--primary))"
                 }}
                 height={550}
                 maxBars={15}
@@ -340,9 +340,12 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
                 title="Global Paper Distribution"
               />
               
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6 pt-4 border-t border-border">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6 pt-6 border-t border-border">
                 <div className="flex items-center p-3 bg-muted/30 rounded-lg">
-                  <div className="w-3 h-3 rounded-full mr-2" style={{backgroundColor: data.configuration.colorScheme.us}}></div>
+                  <div className="w-3 h-3 rounded-full mr-2" style={{
+                    backgroundColor: data.configuration.colorScheme.us,
+                    boxShadow: `0 0 4px 0 ${data.configuration.colorScheme.us}40`
+                  }}></div>
                   <div>
                     <p className="text-xs font-medium">United States</p>
                     <p className="text-xs text-muted-foreground">{usData?.paper_count || 0} papers ({((usData?.paper_count || 0) / (data.conferenceInfo.totalAcceptedPapers || 1) * 100).toFixed(1)}%)</p>
@@ -350,7 +353,10 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
                 </div>
                 
                 <div className="flex items-center p-3 bg-muted/30 rounded-lg">
-                  <div className="w-3 h-3 rounded-full mr-2" style={{backgroundColor: data.configuration.colorScheme.cn}}></div>
+                  <div className="w-3 h-3 rounded-full mr-2" style={{
+                    backgroundColor: data.configuration.colorScheme.cn,
+                    boxShadow: `0 0 4px 0 ${data.configuration.colorScheme.cn}40`
+                  }}></div>
                   <div>
                     <p className="text-xs font-medium">China</p>
                     <p className="text-xs text-muted-foreground">{cnData?.paper_count || 0} papers ({((cnData?.paper_count || 0) / (data.conferenceInfo.totalAcceptedPapers || 1) * 100).toFixed(1)}%)</p>
@@ -358,7 +364,10 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
                 </div>
                 
                 <div className="flex items-center p-3 bg-muted/30 rounded-lg">
-                  <div className="w-3 h-3 rounded-full mr-2" style={{backgroundColor: data.configuration.colorScheme.focusCountry}}></div>
+                  <div className="w-3 h-3 rounded-full mr-2" style={{
+                    backgroundColor: data.configuration.colorScheme.focusCountry,
+                    boxShadow: `0 0 4px 0 ${data.configuration.colorScheme.focusCountry}40`
+                  }}></div>
                   <div>
                     <p className="text-xs font-medium">{focusCountryName}</p>
                     <p className="text-xs text-muted-foreground">{focusCountryGlobalStats?.paper_count || 0} papers ({((focusCountryGlobalStats?.paper_count || 0) / (data.conferenceInfo.totalAcceptedPapers || 1) * 100).toFixed(1)}%)</p>
@@ -385,7 +394,7 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
           title={configuration.sections.context.title}
           id="context"
           subtitle={configuration.sections.context.subtitle}
-          className="bg-muted/30"
+          className="bg-gradient-to-b from-muted/10 to-muted/40"
         >
           {/* Global Distribution Chart - Full Width */}
           <div className="mb-10">
@@ -393,7 +402,7 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
               <FaGlobeAmericas className="mr-2 text-blue-500" />
               Global Research Distribution
             </h3>
-            <div className="bg-card border border-border rounded-lg p-5 shadow-sm">
+            <div className="bg-card border border-border rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow duration-200">
               <GlobalDistributionChart
                 countries={sortedCountries}
                 focusCountry={focusCountryGlobalStats}
@@ -417,7 +426,7 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
               <FaChartPie className="mr-2 text-yellow-500" />
               US-China Duopoly & {focusCountryName}'s Position
             </h3>
-            <div className="bg-card border border-border rounded-lg p-5 shadow-sm">
+            <div className="bg-card border border-border rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow duration-200">
               <div className="flex flex-col md:flex-row gap-6">
                 <div className="w-full md:w-1/2 flex flex-col items-center justify-center">
                   <PieChart
@@ -437,9 +446,12 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
                 <div className="w-full md:w-1/2">
                   <h4 className="text-lg font-medium mb-4">Key Insights</h4>
                   <div className="grid grid-cols-1 gap-4">
-                    <div className="bg-muted/30 p-4 rounded-lg border border-border/50">
+                    <div className="bg-muted/30 p-4 rounded-lg border border-border/60 shadow-sm hover:shadow transition-shadow duration-200">
                       <div className="flex items-center gap-3 mb-2">
-                        <div className="w-3 h-3 rounded-full" style={{backgroundColor: data.configuration.colorScheme.us}}></div>
+                        <div className="w-3 h-3 rounded-full" style={{
+                          backgroundColor: data.configuration.colorScheme.us,
+                          boxShadow: `0 0 4px 0 ${data.configuration.colorScheme.us}40`
+                        }}></div>
                         <p className="text-sm font-medium">US-China AI Duopoly</p>
                       </div>
                       <div className="grid grid-cols-2 gap-3">
@@ -456,10 +468,13 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
                       </div>
                     </div>
                     
-                    <div className="bg-muted/30 p-4 rounded-lg border border-border/50"
-                         style={{borderColor: data.configuration.colorScheme.focusCountry}}>
+                    <div className="bg-muted/30 p-4 rounded-lg border border-border/60 shadow-sm hover:shadow transition-shadow duration-200"
+                         style={{borderColor: data.configuration.colorScheme.focusCountry, borderWidth: '1.5px'}}>
                       <div className="flex items-center gap-3 mb-2">
-                        <div className="w-3 h-3 rounded-full" style={{backgroundColor: data.configuration.colorScheme.focusCountry}}></div>
+                        <div className="w-3 h-3 rounded-full" style={{
+                          backgroundColor: data.configuration.colorScheme.focusCountry,
+                          boxShadow: `0 0 4px 0 ${data.configuration.colorScheme.focusCountry}40`
+                        }}></div>
                         <p className="text-sm font-medium">{focusCountryName}'s Position</p>
                       </div>
                       <div className="grid grid-cols-2 gap-3">
@@ -488,7 +503,7 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
                       </div>
                     </div>
                     
-                    <div className="bg-muted/30 p-3 rounded-lg border border-border/50">
+                    <div className="bg-muted/30 p-3 rounded-lg border border-border/60 shadow-sm hover:shadow transition-shadow duration-200">
                       <p className="text-sm">The {focusCountryName} AI ecosystem shows
                         <span className="font-medium"> {
                           (focusCountryGlobalStats?.rank || 0) <= 5 ? 'exceptionally strong' :
@@ -543,7 +558,7 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
             {/* APAC Visualizations - Enhanced */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
               {/* Enhanced APAC Bar Chart */}
-              <div className="bg-card border border-border rounded-lg p-4 shadow-sm">
+              <div className="bg-card border border-border rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow duration-200">
                 <h4 className="text-base font-medium mb-4">APAC Countries Research Output</h4>
                 <BarChart
                   data={apacCountriesData}
@@ -558,6 +573,7 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
                     c => c.affiliation_country === focusCountryCode
                   )}
                   highlightColor={data.configuration.colorScheme.focusCountry}
+                  showLegend={true}
                 />
                 <div className="mt-4 p-3 bg-muted/30 rounded-lg border border-border/50">
                   <h5 className="text-sm font-medium flex items-center gap-2">
@@ -585,11 +601,13 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
                     data={apacCountriesData.map(country => ({
                       name: country.country_name,
                       value: country.paper_count,
-                      color: country.affiliation_country === focusCountryCode
+                      fill: country.affiliation_country === focusCountryCode
                         ? data.configuration.colorScheme.focusCountry
                         : country.affiliation_country === 'cn'
                           ? data.configuration.colorScheme.cn
-                          : undefined
+                          : country.affiliation_country === 'us'
+                            ? data.configuration.colorScheme.us
+                            : `hsl(${Math.floor(Math.random() * 360)}, 70%, 60%)`
                     }))}
                     title="APAC Paper Distribution"
                     height={300}
@@ -630,6 +648,7 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
                       title={`Majority vs Minority Contribution`}
                       height={220}
                       showLabels={true}
+                      showLegend={true}
                     />
                   </div>
                   <div className="w-full md:w-5/12 mt-4 md:mt-0 p-3">
@@ -656,6 +675,7 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
                       title={`First vs Non-First Author Papers`}
                       height={220}
                       showLabels={true}
+                      showLegend={true}
                     />
                   </div>
                   <div className="w-full md:w-5/12 mt-4 md:mt-0 p-3">
@@ -696,17 +716,18 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
               <FaUniversity className="mr-2 text-indigo-500" />
               Top 10 Institutes in {focusCountryName}
             </h3>
-            <div className="bg-card border border-border rounded-lg p-4 shadow-sm">
+            <div className="bg-card border border-border rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow duration-200">
               <BarChart
                 data={topInstitutions.slice(0, 10)}
                 xAxisDataKey="institute"
                 height={450}
                 bars={[
-                  { dataKey: "unique_paper_count", name: "Papers", fill: "hsl(210, 70%, 60%)" },
-                  { dataKey: "author_count", name: "Authors", fill: "hsl(330, 60%, 70%)" }
+                  { dataKey: "unique_paper_count", name: "Papers", fill: data.configuration.colorScheme.papers },
+                  { dataKey: "author_count", name: "Authors", fill: data.configuration.colorScheme.authors }
                 ]}
                 layout="vertical"
                 margin={{ top: 5, right: 20, left: 170, bottom: 5 }}
+                showLegend={true}
               />
             </div>
           </div>
@@ -718,15 +739,16 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
               Academic vs Corporate Impact in {focusCountryName}
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-card border border-border rounded-lg p-4 shadow-sm">
+              <div className="bg-card border border-border rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow duration-200">
                 <BarChart
                   data={institutionTypeComparisonData}
                   xAxisDataKey="type"
                   height={300}
                   bars={[
                     { dataKey: "Papers", fill: data.configuration.colorScheme.papers, name: "Research Papers" },
-                    { dataKey: "Spotlights/Orals", fill: data.configuration.colorScheme.spotlight, name: "High-Impact Papers" }
+                    { dataKey: "Spotlights/Orals", fill: data.configuration.colorScheme.spotlight, name: "Spotlight/Orals" }
                   ]}
+                  showLegend={true}
                 />
               </div>
               <div className="bg-card border border-border rounded-lg p-4 shadow-sm">
@@ -738,6 +760,7 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
                     showLabels={true}
                     innerRadius={60}
                     outerRadius={100}
+                    showLegend={true}
                   />
                 </div>
               </div>
@@ -861,7 +884,7 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
         </Section>
       </main>
 
-      <footer className="mt-10 md:mt-12 max-w-7xl px-7 mx-auto text-muted-foreground text-xs border-t border-border pt-6 pb-6 bg-gradient-to-r from-amber-50/30 to-orange-50/30 dark:from-amber-950/10 dark:to-orange-950/10">
+      <footer className="mt-10 md:mt-12 max-w-7xl px-7 mx-auto text-muted-foreground text-xs border-t border-border pt-6 pb-6 bg-gradient-to-r from-amber-50/40 via-orange-50/30 to-amber-50/40 dark:from-amber-950/20 dark:via-orange-950/10 dark:to-amber-950/20">
         <p className="font-bold ">
           {conferenceInfo?.name ?? "Conference"} {conferenceInfo?.year ?? ""}{" "}
           Dashboard{" "}
