@@ -1,4 +1,5 @@
 import React from 'react';
+import { chartColors } from '../../utils/chart-colors';
 import {
   ResponsiveContainer,
   BarChart,
@@ -41,7 +42,7 @@ export const GlobalDistributionChart: React.FC<GlobalDistributionChartProps> = (
   // Don't render if no data
   if (!countries || countries.length === 0) {
     return (
-      <div className="flex items-center justify-center h-full min-h-[300px] bg-muted/20 rounded-lg border border-border">
+      <div className="flex items-center justify-center h-full min-h-[300px] bg-muted/20 rounded-lg border border-border animate-pulse shadow-inner">
         <span className="text-muted-foreground">No country data available</span>
       </div>
     );
@@ -93,13 +94,34 @@ export const GlobalDistributionChart: React.FC<GlobalDistributionChartProps> = (
     if (active && payload && payload.length) {
       const data = payload[0].payload as CountryData;
       return (
-        <div className="bg-card p-2 border border-border rounded-md shadow-sm">
-          <p className="text-sm font-medium">{data.country_name}</p>
-          <div className="text-xs space-y-1 mt-1">
-            <p>Papers: {data.paper_count}</p>
-            <p>Authors: {data.author_count}</p>
-            <p>Spotlights/Orals: {data.spotlights + data.orals}</p>
-            <p>Global Rank: #{data.rank}</p>
+        <div className="bg-card p-4 border border-border rounded-lg shadow-lg backdrop-blur-md bg-opacity-95 dark:bg-opacity-90">
+          <div className="flex items-center gap-2 mb-2">
+            <div
+              className="w-4 h-4 rounded-full"
+              style={{
+                backgroundColor: payload[0].fill,
+                boxShadow: `0 0 10px 0 ${payload[0].fill}80`
+              }}
+            ></div>
+            <p className="text-sm font-semibold">{data.country_name}</p>
+          </div>
+          <div className="text-xs space-y-2">
+            <p className="flex justify-between">
+              <span className="text-muted-foreground">Papers:</span>
+              <span className="font-bold">{data.paper_count}</span>
+            </p>
+            <p className="flex justify-between">
+              <span className="text-muted-foreground">Authors:</span>
+              <span className="font-bold">{data.author_count}</span>
+            </p>
+            <p className="flex justify-between">
+              <span className="text-muted-foreground">Spotlights/Orals:</span>
+              <span className="font-bold">{data.spotlights + data.orals}</span>
+            </p>
+            <p className="flex justify-between border-t border-border pt-2 mt-2.5">
+              <span className="text-muted-foreground">Global Rank:</span>
+              <span className="font-bold text-sm">#{data.rank}</span>
+            </p>
           </div>
         </div>
       );
@@ -110,43 +132,60 @@ export const GlobalDistributionChart: React.FC<GlobalDistributionChartProps> = (
   return (
     <div className="w-full">
       {title && (
-        <h4 className="text-lg font-medium text-center mb-3">{title}</h4>
+        <h4 className="text-lg font-semibold text-center mb-4.5 tracking-tight text-foreground">{title}</h4>
       )}
       <ResponsiveContainer width="100%" height={height}>
         <BarChart
           data={chartData}
-          margin={{ top: 20, right: 30, left: 30, bottom: 70 }}
+          margin={{ top: 20, right: 30, left: 30, bottom: 75 }}
         >
-          <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
-          <XAxis 
-            dataKey="country_name" 
+          <CartesianGrid strokeDasharray="3 3" stroke={chartColors.withOpacity(chartColors.grid, 0.4)} />
+          <XAxis
+            dataKey="country_name"
             angle={-45}
             textAnchor="end"
             height={70}
-            tick={{ fontSize: 12, fill: 'hsl(var(--muted-foreground))' }}
+            tick={{ fontSize: 11, fill: 'hsl(var(--muted-foreground))' }}
+            tickLine={{ stroke: chartColors.withOpacity(chartColors.grid, 0.6) }}
+            axisLine={{ stroke: chartColors.withOpacity(chartColors.grid, 0.6) }}
           />
-          <YAxis 
-            label={{ 
-              value: 'Papers', 
-              angle: -90, 
+          <YAxis
+            label={{
+              value: 'Papers',
+              angle: -90,
               position: 'insideLeft',
-              style: { fill: 'hsl(var(--muted-foreground))', fontSize: 12 }
+              style: { fill: 'hsl(var(--muted-foreground))', fontSize: 11, fontWeight: 500 }
             }}
-            tick={{ fontSize: 12, fill: 'hsl(var(--muted-foreground))' }}
+            tick={{ fontSize: 11, fill: 'hsl(var(--muted-foreground))' }}
+            tickLine={{ stroke: chartColors.withOpacity(chartColors.grid, 0.6) }}
+            axisLine={{ stroke: chartColors.withOpacity(chartColors.grid, 0.6) }}
           />
-          <Tooltip content={<CustomTooltip />} />
-          <Legend />
-          <ReferenceLine y={0} stroke="hsl(var(--border))" />
-          <Bar 
-            dataKey="paper_count" 
+          <Tooltip content={<CustomTooltip />} cursor={{ fill: chartColors.withOpacity(chartColors.muted, 0.15) }} />
+          <Legend
+            wrapperStyle={{
+              paddingTop: '18px',
+              fontSize: '0.75rem',
+              fontWeight: 500
+            }}
+            iconType="circle"
+            iconSize={10}
+          />
+          <ReferenceLine y={0} stroke={chartColors.withOpacity(chartColors.grid, 0.6)} />
+          <Bar
+            dataKey="paper_count"
             name="Papers"
+            animationDuration={1200}
+            animationEasing="ease-in-out"
+            barSize={28}
+            radius={[8, 8, 0, 0]}
           >
             {chartData.map((entry, index) => (
               <Cell 
                 key={`cell-${index}`} 
                 fill={entry.fill}
-                stroke="hsl(var(--border))"
+                stroke="hsl(var(--background))"
                 strokeWidth={1}
+                style={{ filter: 'drop-shadow(0 6px 12px rgba(0, 0, 0, 0.32))' }}
               />
             ))}
           </Bar>

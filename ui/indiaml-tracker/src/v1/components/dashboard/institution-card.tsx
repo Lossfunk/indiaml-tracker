@@ -35,7 +35,7 @@ export const InstitutionCard: React.FC<InstitutionCardProps> = ({
 
   return (
     <div
-      className="bg-card rounded-lg shadow-md overflow-hidden mb-4 mt-8 border border-border hover:border-primary transition-all duration-300 animate-fade-in"
+      className="bg-card rounded-lg shadow-md overflow-hidden mb-4 mt-8 border border-border hover:border-primary hover:shadow-lg transition-all duration-300 animate-fade-in"
       style={{ animationDelay, opacity: 0, animationFillMode: "forwards" }}
     >
       <div
@@ -47,12 +47,12 @@ export const InstitutionCard: React.FC<InstitutionCardProps> = ({
       >
         <div className="flex-1 mr-4 overflow-hidden">
           <h3
-            className="text-card-foreground text-3xl pb-5 truncate"
+            className="text-card-foreground text-3xl pb-5 truncate font-semibold"
             title={institution.institute}
           >
             {institution.institute}
           </h3>
-          <div className="flex items-center flex-wrap text-sm text-muted-foreground mt-1 space-x-4">
+          <div className="flex items-center flex-wrap text-sm text-muted-foreground mt-1 space-x-4 gap-y-2">
             <span className="flex items-center whitespace-nowrap">
               <FaFileAlt className="mr-1.5 text-blue-500 dark:text-blue-400 flex-shrink-0" />
               <span className="text-blue-500 dark:text-blue-400 font-medium">
@@ -69,14 +69,14 @@ export const InstitutionCard: React.FC<InstitutionCardProps> = ({
             </span>
             {institution.spotlights > 0 && (
               <span className="flex items-center whitespace-nowrap">
-                <FaStar className="mr-1.5 text-yellow-500 dark:text-yellow-400 flex-shrink-0" />
+                <FaStar className="mr-1.5 text-yellow-500 dark:text-yellow-400 flex-shrink-0" size={14} />
                 {institution.spotlights}{" "}
                 {institution.spotlights === 1 ? "Spotlight" : "Spotlights"}
               </span>
             )}
             {institution.orals > 0 && (
               <span className="flex items-center whitespace-nowrap">
-                <FaTrophy className="mr-1.5 text-emerald-500 dark:text-emerald-400 flex-shrink-0" />
+                <FaTrophy className="mr-1.5 text-emerald-500 dark:text-emerald-400 flex-shrink-0" size={14} />
                 {institution.orals} {institution.orals === 1 ? "Oral" : "Orals"}
               </span>
             )}
@@ -100,7 +100,7 @@ export const InstitutionCard: React.FC<InstitutionCardProps> = ({
       </div>
       {isExpanded && (
         <div id={detailsId} className="border-t border-border">
-          <div className="flex border-b border-border px-4 pt-3 bg-muted/20">
+          <div className="flex border-b border-border px-4 pt-3 bg-muted/30">
             <TabButton
               active={activeTab === "papers"}
               onClick={() => setActiveTab("papers")}
@@ -124,7 +124,7 @@ export const InstitutionCard: React.FC<InstitutionCardProps> = ({
                     {institution.papers.map((paper, idx) => (
                       <li
                         key={`${paper.id}-${idx}`}
-                        className="text-muted-foreground text-sm bg-background p-3 rounded-md shadow-sm"
+                        className="text-muted-foreground text-sm bg-background p-3 rounded-md shadow-sm transition-all duration-200 hover:shadow-md"
                       >
                         <a
                           href={`https://openreview.net/forum?id=${paper.id}`}
@@ -139,13 +139,13 @@ export const InstitutionCard: React.FC<InstitutionCardProps> = ({
                           </span>
                         </a>
                         {paper.isSpotlight && (
-                          <span className="ml-2 mt-1 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300">
+                          <span className="ml-2 mt-1 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300 shadow-sm">
                             <FaStar className="mr-1" size={10} />
                             Spotlight
                           </span>
                         )}
                         {paper.isOral && (
-                          <span className="ml-2 mt-1 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300">
+                          <span className="ml-2 mt-1 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300 shadow-sm">
                             <FaTrophy className="mr-1" size={10} />
                             Oral
                           </span>
@@ -167,7 +167,7 @@ export const InstitutionCard: React.FC<InstitutionCardProps> = ({
                     {institution.authors.map((author, idx) => (
                       <li
                         key={`author-${idx}`}
-                        className="flex items-center bg-background p-2 rounded-md"
+                        className="flex items-center bg-background p-2.5 rounded-md hover:bg-muted/30 transition-colors duration-200"
                       >
                         <FaUser
                           className="mr-2 text-pink-400 flex-shrink-0"

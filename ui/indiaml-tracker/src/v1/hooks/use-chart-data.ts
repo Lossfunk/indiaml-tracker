@@ -63,7 +63,8 @@ export const useFocusCountrySectionData = (
     
     return createAuthorshipData(
       processedFocusData,
-      data.focusCountry.country_name
+      data.focusCountry.country_name,
+      data.configuration.colorScheme
     );
   }, [data, processedFocusData]);
   

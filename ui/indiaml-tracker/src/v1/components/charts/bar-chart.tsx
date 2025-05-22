@@ -1,4 +1,5 @@
 import React from 'react';
+import { chartColors } from '../../utils/chart-colors';
 import {
   ResponsiveContainer,
   BarChart as RechartsBarChart,
@@ -48,13 +49,13 @@ export const BarChart: React.FC<BarChartProps> = ({
   margin = { top: 5, right: 20, left: 0, bottom: 5 },
   layout = 'horizontal',
   highlightIndex = null,
-  highlightColor = 'hsl(var(--primary))',
+  highlightColor = chartColors.highlight,
   labelFormatter
 }) => {
   // Don't render if no data or empty data
   if (!data || data.length === 0 || !bars || bars.length === 0) {
     return (
-      <div className="flex items-center justify-center h-full min-h-[200px] bg-muted/20 rounded-lg border border-border">
+      <div className="flex items-center justify-center h-full min-h-[200px] bg-muted/20 rounded-lg border border-border animate-pulse shadow-inner">
         <span className="text-muted-foreground">No data available</span>
       </div>
     );
@@ -64,13 +65,28 @@ export const BarChart: React.FC<BarChartProps> = ({
   const CustomTooltip = ({ active, payload, label }: any) => {
     if (active && payload && payload.length) {
       return (
-        <div className="custom-tooltip bg-card p-2 border border-border rounded-md shadow-sm">
-          <p className="font-medium text-xs mb-1">{labelFormatter ? labelFormatter(label) : label}</p>
-          {payload.map((entry: any, index: number) => (
-            <p key={`tooltip-item-${index}`} className="text-xs" style={{ color: entry.color }}>
-              {`${entry.name || entry.dataKey}: ${entry.value}`}
-            </p>
-          ))}
+        <div className="custom-tooltip bg-card p-4 border border-border rounded-lg shadow-lg backdrop-blur-md bg-opacity-95 dark:bg-opacity-90">
+          <p className="font-medium text-sm mb-2.5 border-b border-border pb-2">{labelFormatter ? labelFormatter(label) : label}</p>
+          <div className="space-y-2">
+            {payload.map((entry: any, index: number) => (
+              <p
+                key={`tooltip-item-${index}`}
+                className="text-xs flex justify-between items-center"
+              >
+                <span className="flex items-center">
+                  <span
+                    className="w-3 h-3 mr-2.5 rounded-full inline-block"
+                    style={{
+                      backgroundColor: entry.color,
+                      boxShadow: `0 0 8px 0 ${entry.color}70`
+                    }}
+                  ></span>
+                  <span className="text-muted-foreground">{entry.name || entry.dataKey}:</span>
+                </span>
+                <span className="font-semibold">{entry.value}</span>
+              </p>
+            ))}
+          </div>
         </div>
       );
     }
@@ -80,7 +96,7 @@ export const BarChart: React.FC<BarChartProps> = ({
   return (
     <div className={`w-full ${className}`}>
       {title && (
-        <h4 className="text-sm font-medium text-center mb-3 text-foreground">{title}</h4>
+        <h4 className="text-sm font-semibold text-center mb-3.5 text-foreground tracking-tight">{title}</h4>
       )}
       <ResponsiveContainer width={width} height={height}>
         <RechartsBarChart
@@ -88,41 +104,52 @@ export const BarChart: React.FC<BarChartProps> = ({
           margin={margin}
           layout={layout}
         >
-          {showGrid && <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />}
+          {showGrid && <CartesianGrid strokeDasharray="3 3" stroke={chartColors.withOpacity(chartColors.grid, 0.4)} />}
           
           {layout === 'horizontal' ? (
             <>
-              <XAxis 
-                dataKey={xAxisDataKey} 
-                tick={{ fontSize: 12, fill: 'hsl(var(--muted-foreground))' }}
+              <XAxis
+                dataKey={xAxisDataKey}
+                tick={{ fontSize: 11, fill: 'hsl(var(--muted-foreground))' }}
+                tickLine={{ stroke: chartColors.withOpacity(chartColors.grid, 0.6) }}
+                axisLine={{ stroke: chartColors.withOpacity(chartColors.grid, 0.6) }}
               />
-              <YAxis 
-                tick={{ fontSize: 12, fill: 'hsl(var(--muted-foreground))' }}
+              <YAxis
+                tick={{ fontSize: 11, fill: 'hsl(var(--muted-foreground))' }}
+                tickLine={{ stroke: chartColors.withOpacity(chartColors.grid, 0.6) }}
+                axisLine={{ stroke: chartColors.withOpacity(chartColors.grid, 0.6) }}
               />
             </>
           ) : (
             <>
-              <XAxis 
+              <XAxis
                 type="number"
-                tick={{ fontSize: 12, fill: 'hsl(var(--muted-foreground))' }}
+                tick={{ fontSize: 11, fill: 'hsl(var(--muted-foreground))' }}
+                tickLine={{ stroke: chartColors.withOpacity(chartColors.grid, 0.6) }}
+                axisLine={{ stroke: chartColors.withOpacity(chartColors.grid, 0.6) }}
               />
-              <YAxis 
+              <YAxis
                 dataKey={xAxisDataKey}
-                type="category" 
-                tick={{ fontSize: 12, fill: 'hsl(var(--muted-foreground))' }}
+                type="category"
+                tick={{ fontSize: 11, fill: 'hsl(var(--muted-foreground))' }}
+                tickLine={{ stroke: chartColors.withOpacity(chartColors.grid, 0.6) }}
+                axisLine={{ stroke: chartColors.withOpacity(chartColors.grid, 0.6) }}
                 width={100}
               />
             </>
           )}
           
-          {showTooltip && <Tooltip content={<CustomTooltip />} />}
+          {showTooltip && <Tooltip content={<CustomTooltip />} cursor={{ fill: chartColors.withOpacity(chartColors.muted, 0.15) }} />}
           
           {showLegend && (
-            <Legend 
+            <Legend
               wrapperStyle={{
                 fontSize: '0.75rem',
-                paddingTop: '10px'
+                paddingTop: '12px',
+                paddingBottom: '8px'
               }}
+              iconSize={10}
+              iconType="circle"
             />
           )}
           
@@ -133,12 +160,25 @@ export const BarChart: React.FC<BarChartProps> = ({
               fill={bar.fill}
               name={bar.name || bar.dataKey}
               stackId={bar.stackId}
+              animationDuration={1200}
+              animationEasing="ease-in-out"
+              barSize={28}
+              radius={[8, 8, 0, 0]}
+              stroke="hsl(var(--background))"
+              strokeWidth={1}
+              style={{ filter: 'drop-shadow(0 5px 10px rgba(0, 0, 0, 0.25))' }}
             >
-              {highlightIndex !== null && 
+              {highlightIndex !== null &&
                 data.map((entry, i) => (
-                  <Cell 
-                    key={`cell-${i}`} 
-                    fill={i === highlightIndex ? highlightColor : bar.fill} 
+                  <Cell
+                    key={`cell-${i}`}
+                    fill={i === highlightIndex ? highlightColor : bar.fill}
+                    style={{
+                      filter: i === highlightIndex
+                        ? 'drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4))'
+                        : 'drop-shadow(0 5px 8px rgba(0, 0, 0, 0.22))',
+                      opacity: i === highlightIndex ? 1 : 0.9
+                    }}
                   />
                 ))
               }

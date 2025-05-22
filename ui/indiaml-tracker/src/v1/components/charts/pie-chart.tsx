@@ -1,4 +1,5 @@
 import React from 'react';
+import { chartColors } from '../../utils/chart-colors';
 import {
   ResponsiveContainer,
   PieChart as RechartsPieChart,
@@ -12,6 +13,8 @@ interface PieChartDataItem {
   name: string;
   value: number;
   fill?: string;
+  color?: string;
+  percent?: number;
 }
 
 interface PieChartProps {
@@ -46,7 +49,7 @@ export const PieChart: React.FC<PieChartProps> = ({
   // Don't render if no data
   if (!data || data.length === 0) {
     return (
-      <div className="flex items-center justify-center h-full min-h-[200px] bg-muted/20 rounded-lg border border-border">
+      <div className="flex items-center justify-center h-full min-h-[200px] bg-muted/20 rounded-lg border border-border animate-pulse shadow-inner">
         <span className="text-muted-foreground">No data available</span>
       </div>
     );
@@ -68,10 +71,11 @@ export const PieChart: React.FC<PieChartProps> = ({
       <text 
         x={x} 
         y={y} 
-        fill="hsl(var(--foreground))" 
+        fill="hsl(var(--foreground))"
+        fontWeight={500}
         textAnchor={x > cx ? 'start' : 'end'} 
         dominantBaseline="central"
-        style={{ fontSize: '0.75rem', fontWeight: 500 }}
+        style={{ fontSize: '0.75rem', fontWeight: 600 }}
       >
         {labelFormatter 
           ? labelFormatter(data[index]) 
@@ -87,11 +91,21 @@ export const PieChart: React.FC<PieChartProps> = ({
       const percentage = ((item.value / total) * 100).toFixed(1);
       
       return (
-        <div className="bg-card p-2 border border-border rounded-md shadow-sm text-xs">
-          <p className="font-medium mb-1">{item.name}</p>
-          <p className="text-muted-foreground">
-            {item.value} ({percentage}%)
-          </p>
+        <div className="bg-card p-4 border border-border rounded-lg shadow-lg backdrop-blur-md bg-opacity-95 dark:bg-opacity-90">
+          <p className="font-medium text-sm mb-2.5 border-b border-border pb-2">{item.name}</p>
+          <div className="flex items-center gap-2">
+            <div
+              className="w-4 h-4 rounded-full"
+              style={{
+                backgroundColor: item.payload.fill || item.payload.color,
+                boxShadow: `0 0 10px 0 ${item.payload.fill || item.payload.color}80`
+              }}
+            ></div>
+            <div className="text-xs">
+              <span className="font-bold">{item.value}</span>
+              <span className="text-muted-foreground ml-2">({percentage}%)</span>
+            </div>
+          </div>
         </div>
       );
     }
@@ -101,7 +115,7 @@ export const PieChart: React.FC<PieChartProps> = ({
   return (
     <div className={`w-full ${className}`}>
       {title && (
-        <h4 className="text-sm font-medium text-center mb-3 text-foreground">{title}</h4>
+        <h4 className="text-sm font-semibold text-center mb-3.5 text-foreground tracking-tight">{title}</h4>
       )}
       <ResponsiveContainer width={width} height={height}>
         <RechartsPieChart>
@@ -113,23 +127,34 @@ export const PieChart: React.FC<PieChartProps> = ({
             label={renderCustomizedLabel}
             innerRadius={innerRadius}
             outerRadius={outerRadius}
-            paddingAngle={2}
+            paddingAngle={4}
             dataKey="value"
+            animationDuration={1200}
+            animationEasing="ease-in-out"
           >
             {data.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={entry.fill || `hsl(${index * 45}, 70%, 60%)`} />
+              <Cell
+                key={`cell-${index}`}
+                fill={entry.fill || entry.color || chartColors.getPieChartColors(data.length)[index]}
+                stroke="hsl(var(--background))"
+                strokeWidth={1}
+                style={{ filter: 'drop-shadow(0 6px 12px rgba(0, 0, 0, 0.32))' }}
+              />
             ))}
           </Pie>
           {showTooltip && <Tooltip content={<CustomTooltip />} />}
           {showLegend && (
-            <Legend 
-              layout="horizontal" 
-              verticalAlign="bottom" 
-              align="center" 
-              wrapperStyle={{ 
+            <Legend
+              layout="horizontal"
+              verticalAlign="bottom"
+              align="center"
+              wrapperStyle={{
                 fontSize: '0.75rem',
-                paddingTop: '10px'
+                paddingTop: '24px',
+                fontWeight: 500
               }}
+              iconType="circle"
+              iconSize={10}
             />
           )}
         </RechartsPieChart>
