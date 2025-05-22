@@ -866,7 +866,7 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
                   </p>
                 </div>
                 <div className="bg-card p-3 rounded-lg border border-border shadow-sm">
-                  <p className="text-sm text-muted-foreground">High-Impact Papers</p>
+                  <p className="text-sm text-muted-foreground">Spotlights</p>
                   <p className="text-2xl font-bold text-yellow-500">
                     {processedFocusData?.total_spotlights || 0} + {processedFocusData?.total_orals || 0}
                   </p>
