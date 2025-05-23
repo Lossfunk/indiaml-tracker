@@ -274,8 +274,8 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
                     {focusCountryName} contributed{" "}
                     {processedFocusData.spotlights} featured{" "}
                     {processedFocusData.spotlights === 1
-                      ? "publication"
-                      : "publications"}{" "}
+                      ? "paper"
+                      : "papers"}{" "}
                     at {conferenceInfo.name} {conferenceInfo.year}, representing{" "}
                     {(
                       (processedFocusData.spotlights /
@@ -497,7 +497,7 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
                       <div className="grid grid-cols-2 gap-3">
                         <div>
                           <span className="text-xs text-muted-foreground block">
-                            Combined publications
+                            Combined papers
                           </span>
                           <span className="text-base font-medium">
                             {(usData?.paper_count || 0) +
@@ -653,7 +653,7 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
                   </div>
                   <div className="bg-card px-3 py-2 rounded-md border border-border shadow-sm">
                     <p className="text-xs text-muted-foreground">
-                      Total APAC Publications
+                      Total APAC Papers
                     </p>
                     <p className="text-base font-medium">
                       {apacCountriesData.reduce(
@@ -696,7 +696,7 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
                   bars={[
                     {
                       dataKey: "paper_count",
-                      name: "Publications",
+                      name: "Papers",
                       fill: data.configuration.colorScheme.papers,
                     },
                     {
@@ -796,7 +796,7 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
                           %
                         </span>
                         <span className="text-xs text-muted-foreground ml-1">
-                          of regional publications
+                          of regional papers
                         </span>
                       </div>
                       <div>
@@ -820,13 +820,13 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <div className="bg-card border border-border rounded-lg p-4 shadow-sm">
                 <h4 className="text-base font-medium mb-3">
-                  {focusCountryName} Authorship Analysis
+                Majority Authors from {focusCountryName} 
                 </h4>
                 <div className="flex flex-col md:flex-row items-center">
                   <div className="w-full md:w-7/12">
                     <PieChart
                       data={authorshipMajorityMinorityData}
-                      title={`Authorship Composition Analysis`}
+                      title={`Majority vs Minority`}
                       height={220}
                       showLabels={true}
                       showLegend={true}
@@ -836,22 +836,22 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
                     <h5 className="text-sm font-medium mb-2">Key Insights</h5>
                     <ul className="list-disc pl-5 space-y-1.5 text-xs text-muted-foreground">
                       <li>
-                        Publications with predominantly {focusCountryName}{" "}
+                        Papers with Majority (&gt;50%) {focusCountryName}{" "}
                         authors:{" "}
                         <span className="font-medium text-foreground">
                           {processedFocusData?.majority_focus_country_authors
                             ?.count || 0}{" "}
-                          publications
+                          papers
                         </span>
                       </li>
                       <li>
-                        Publications with partial {focusCountryName} authorship:{" "}
+                        Papers with minority {focusCountryName} authorship:{" "}
                         <span className="font-medium text-foreground">
                           {(processedFocusData
                             ?.at_least_one_focus_country_author?.count || 0) -
                             (processedFocusData?.majority_focus_country_authors
                               ?.count || 0)}{" "}
-                          publications
+                          papers
                         </span>
                       </li>
                       <li>
@@ -872,13 +872,13 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
 
               <div className="bg-card border border-border rounded-lg p-4 shadow-sm">
                 <h4 className="text-base font-medium mb-3">
-                  {focusCountryName} Research Leadership
+                First Authors from {focusCountryName}
                 </h4>
                 <div className="flex flex-col md:flex-row items-center">
                   <div className="w-full md:w-7/12">
                     <PieChart
                       data={authorshipFirstAuthorData}
-                      title={`Primary vs Supporting Authorship`}
+                      title={`First vs Supporting Authors`}
                       height={220}
                       showLabels={true}
                       showLegend={true}
@@ -886,18 +886,18 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
                   </div>
                   <div className="w-full md:w-5/12 mt-4 md:mt-0 p-3">
                     <h5 className="text-sm font-medium mb-2">
-                      Research Direction Analysis
+                      Key Insights
                     </h5>
                     <ul className="list-disc pl-5 space-y-1.5 text-xs text-muted-foreground">
                       <li>
-                        Publications with {focusCountryName} primary authors:{" "}
+                        Papers with {focusCountryName} first authors:{" "}
                         <span className="font-medium text-foreground">
                           {processedFocusData?.first_focus_country_author
                             ?.count || 0}
                         </span>
                       </li>
                       <li>
-                        Publications with {focusCountryName} supporting
+                        Papers with {focusCountryName} supporting
                         contributors:{" "}
                         <span className="font-medium text-foreground">
                           {(processedFocusData
@@ -952,7 +952,7 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
                 bars={[
                   {
                     dataKey: "unique_paper_count",
-                    name: "Publications",
+                    name: "Papers",
                     fill: data.configuration.colorScheme.papers,
                   },
                   {
@@ -1126,7 +1126,7 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
                 </div>
                 <div className="bg-card p-3 rounded-lg border border-border shadow-sm">
                   <p className="text-sm text-muted-foreground">
-                    Featured Publications
+                    Featured Papers
                   </p>
                   <p className="text-2xl font-bold text-yellow-500">
                     {processedFocusData?.total_spotlights || 0} +{" "}

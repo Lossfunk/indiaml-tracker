@@ -115,7 +115,7 @@ export const PieChart: React.FC<PieChartProps> = ({
   return (
     <div className={`w-full ${className}`}>
       {title && (
-        <h4 className="text-sm font-semibold text-center mb-3.5 text-foreground tracking-tight">{title}</h4>
+        <h4 className="text-xs mt-3 font-semibold text-center mb-3.5 text-foreground tracking-tight">{title}</h4>
       )}
       <ResponsiveContainer width={width} height={height}>
         <RechartsPieChart>

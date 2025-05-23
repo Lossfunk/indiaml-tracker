@@ -1584,7 +1584,7 @@
         "insights": [
           "Indian researchers contributed 34 papers to NeurIPS 2024, with 4 achieving prestigious spotlight recognition—demonstrating a strong 11.8% quality acceptance rate that exceeds typical conference standards.",
           "With 64 unique authors from India's leading institutions, the research spans critical AI domains including graph neural networks, reinforcement learning, causal inference, and optimization theory.",
-          "India demonstrates significant research leadership with 13 first-author publications and 12 majority-Indian collaborations, indicating both independent research capacity and effective international partnerships.",
+          "India demonstrates significant research leadership with 13 first-author papers and 12 majority-Indian collaborations, indicating both independent research capacity and effective international partnerships.",
           "The research ecosystem encompasses 13 premier institutions—12 academic and 1 corporate—led by IISc Bangalore and the IIT system, establishing India as an emerging hub for fundamental AI research."
         ]
       },
@@ -1592,7 +1592,7 @@
         "title": "Global Research Standing",
         "subtitle": "India's position in the international machine learning research landscape",
         "insights": [
-          "India ranks 21st globally with 0.84% of total NeurIPS 2024 publications, positioning the country as an emerging contributor in the global AI research ecosystem alongside established research powerhouses.",
+          "India ranks 21st globally with 0.84% of total NeurIPS 2024 papers, positioning the country as an emerging contributor in the global AI research ecosystem alongside established research powerhouses.",
           "In the Asia-Pacific region, India holds 8th position, trailing regional leaders China (1,446 papers), Hong Kong (294), Singapore (262), and South Korea (170), indicating significant growth potential.",
           "The research quality metrics—with 4 spotlight papers from 34 total submissions—demonstrate that Indian contributions meet the highest international standards for methodological rigor and innovation.",
           "India's research footprint reflects a strategic focus on foundational AI research areas that align with global priorities in machine learning theory and applications."
@@ -1603,7 +1603,7 @@
         "subtitle": "Authorship patterns, collaboration networks, and research leadership trends",
         "insights": [
           "The 64 unique Indian researchers at NeurIPS 2024 represent a diverse academic ecosystem spanning premier institutes, demonstrating the breadth and depth of India's machine learning talent pipeline.",
-          "Research leadership patterns show 13 first-author publications, indicating India's capacity for driving original research agendas, while 12 majority-Indian papers reflect strong domestic collaboration and mentorship networks.",
+          "Research leadership patterns show 13 first-author papers, indicating India's capacity for driving original research agendas, while 12 majority-Indian papers reflect strong domestic collaboration and mentorship networks.",
           "Cross-institutional collaboration is evident across the IIT system (11 papers, 19 authors across 4 campuses), IISc Bangalore, and specialized research institutes like TIFR, suggesting a well-connected national research network.",
           "The absence of oral presentations highlights an opportunity for India to advance from solid foundational research to breakthrough contributions that reshape field directions."
         ]
@@ -1612,7 +1612,7 @@
         "title": "Institutional Research Excellence",
         "subtitle": "Performance analysis of India's leading AI research institutions",
         "insights": [
-          "IISc Bangalore leads with 4 publications and 1 spotlight paper, establishing itself as India's premier AI research institution with a focus on optimization and machine learning theory.",
+          "IISc Bangalore leads with 4 papers and 1 spotlight paper, establishing itself as India's premier AI research institution with a focus on optimization and machine learning theory.",
           "The IIT system demonstrates remarkable collective impact with 11 papers across IIT Delhi (4), IIT Kanpur (3), and IIT Bombay (2), showcasing the strength of India's technical education infrastructure.",
           "TIFR contributes 2 high-quality papers including 1 spotlight in theoretical machine learning, while specialized institutions like IIIT Hyderabad focus on applied AI research, reflecting diverse institutional strengths.",
           "The limited corporate representation (1 TCS paper) suggests untapped potential for industry-academia collaboration, presenting opportunities for enhanced research translation and technology transfer."
