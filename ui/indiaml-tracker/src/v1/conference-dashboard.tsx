@@ -52,7 +52,7 @@ const App: React.FC = () => {
         <div className="text-center">
           <ConferenceSelector onSelectionChange={handleConferenceChange} />
           <p className="mt-4 text-muted-foreground">
-            Please select a conference to continue
+            Please select a conference to access analytics dashboard
           </p>
         </div>
       </div>

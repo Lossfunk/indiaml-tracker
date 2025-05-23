@@ -43,7 +43,7 @@ export const GlobalDistributionChart: React.FC<GlobalDistributionChartProps> = (
   if (!countries || countries.length === 0) {
     return (
       <div className="flex items-center justify-center h-full min-h-[300px] bg-muted/20 rounded-lg border border-border animate-pulse shadow-inner">
-        <span className="text-muted-foreground">No country data available</span>
+        <span className="text-muted-foreground">Geographic distribution visualization unavailable</span>
       </div>
     );
   }
@@ -107,19 +107,19 @@ export const GlobalDistributionChart: React.FC<GlobalDistributionChartProps> = (
           </div>
           <div className="text-xs space-y-2">
             <p className="flex justify-between">
-              <span className="text-muted-foreground">Papers:</span>
+              <span className="text-muted-foreground">Scientific Output:</span>
               <span className="font-bold">{data.paper_count}</span>
             </p>
             <p className="flex justify-between">
-              <span className="text-muted-foreground">Authors:</span>
+              <span className="text-muted-foreground">Academic Contributors:</span>
               <span className="font-bold">{data.author_count}</span>
             </p>
             <p className="flex justify-between">
-              <span className="text-muted-foreground">Spotlights/Orals:</span>
+              <span className="text-muted-foreground">Distinguished Publications:</span>
               <span className="font-bold">{data.spotlights + data.orals}</span>
             </p>
             <p className="flex justify-between border-t border-border pt-2 mt-2.5">
-              <span className="text-muted-foreground">Global Rank:</span>
+              <span className="text-muted-foreground">Global Impact Ranking:</span>
               <span className="font-bold text-sm">#{data.rank}</span>
             </p>
           </div>
@@ -151,7 +151,7 @@ export const GlobalDistributionChart: React.FC<GlobalDistributionChartProps> = (
           />
           <YAxis
             label={{
-              value: 'Papers',
+              value: 'Scientific Contributions',
               angle: -90,
               position: 'insideLeft',
               style: { fill: 'hsl(var(--muted-foreground))', fontSize: 11, fontWeight: 500 }
