@@ -19,7 +19,7 @@ export default function Home() {
       >
         {/* Animated Title (one-time animation) */}
         <motion.h1
-          className="text-3xl md:text-4xl font-extrabold mb-6 flex flex-col items-center justify-center gap-2"
+          className="text-3xl md:text-4xl font-bold font-serif mb-6 flex flex-col items-center justify-center gap-2"
           initial={{ scale: 1, opacity: 0 }}
           animate={{ scale: 1, opacity: 1, y: [50, 0] }}
           transition={{ duration: 1, ease: "anticipate" }}
@@ -29,7 +29,7 @@ export default function Home() {
 
         {/* Subtitle (slides in once) */}
         <motion.h6
-          className="text-base md:text-lg text-gray-800 dark:text-gray-300"
+          className="text-base font-serif md:text-lg text-gray-800 dark:text-gray-300"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
@@ -49,7 +49,7 @@ export default function Home() {
             href="https://github.com/lossfunk/indiaml-tracker/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-md text-gray-100 bg-indigo-600 hover:bg-indigo-500 transition-colors"
+            className="inline-flex font-serif font-semibold items-center px-4 py-2 text-sm font-medium rounded-md text-gray-100 bg-indigo-600 hover:bg-indigo-500 transition-colors"
           >
             <FaGithub className="mr-2" />
             View Research Data & Pipelines  

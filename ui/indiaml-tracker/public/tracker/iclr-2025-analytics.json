@@ -2449,7 +2449,7 @@
         ]
       },
       "context": {
-        "title": "Global Context",
+        "title": "US-China Duopoly and how India is positioned",
         "subtitle": "How India's ML Research output compares globally",
         "insights": [
           "India holds 16th position globally, following the United States (1,929 papers), China (1,308), Hong Kong (294), United Kingdom (293), and Canada (255).",
@@ -2458,8 +2458,8 @@
         ]
       },
       "focusCountry": {
-        "title": "India's Research Portfolio: Depth, Breadth, and Leadership",
-        "subtitle": "Examining authorship patterns, collaboration networks, and research quality indicators.",
+        "title": "India's Research Landscape",
+        "subtitle": "A Deep Dive into the Research Landscape of India.",
         "insights": [
           "India's 133 participating researchers produced work spanning diverse machine learning domains, with 5 spotlight papers and 2 oral presentations showcasing cutting-edge contributions.",
           "Research leadership metrics indicate strong indigenous capabilities: 26 first-author papers and 23 majority-author collaborations demonstrate India's growing role as a research originator rather than just contributor.",

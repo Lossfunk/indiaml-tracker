@@ -94,7 +94,8 @@ export function FilterBar({
     <motion.div
       className="
         relative flex flex-wrap items-center gap-4 p-4 rounded-lg shadow-md border 
-        bg-gradient-to-r from-gray-900 via-black to-gray-900 
+        bg-gradient-to-r dark:from-gray-900 dark:via-black dark:to-gray-900
+        from-gray-200 to-slate-200 
         text-gray-100
       "
       initial={{ opacity: 0, y: 25 }}
@@ -133,7 +134,7 @@ export function FilterBar({
             checked={isFirstAuthorIndian}
             onCheckedChange={setIsFirstAuthorIndian}
           />
-          <Label htmlFor="first-author" className="text-sm text-gray-300">
+          <Label htmlFor="first-author" className="text-sm text-gray-800 dark:text-gray-300">
             First Author Indian
           </Label>
         </div>
@@ -143,7 +144,7 @@ export function FilterBar({
             checked={isMajorityAuthorsIndian}
             onCheckedChange={setIsMajorityAuthorsIndian}
           />
-          <Label htmlFor="majority-authors" className="text-sm text-gray-300">
+          <Label htmlFor="majority-authors" className="text-sm text-gray-800 dark:text-gray-300">
             Majority Authors Indian
           </Label>
         </div>
