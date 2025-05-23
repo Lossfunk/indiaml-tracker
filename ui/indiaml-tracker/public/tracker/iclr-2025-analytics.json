@@ -2436,11 +2436,11 @@
       "HR": "hsl(60, 80%, 55%)",
       "EG": "hsl(120, 85%, 45%)"
     },
-    "dashboardTitle": "India's Machine Learning Research Excellence at ICLR 2025",
+    "dashboardTitle": "India @ ICLR 2025",
     "dashboardSubtitle": "Comprehensive Analysis of Research Impact, Global Standing, and Institutional Contributions",
     "sections": {
       "summary": {
-        "title": "Executive Summary: Research Impact and Global Position",
+        "title": "Overview",
         "insights": [
           "India demonstrates significant research leadership with 50 accepted papers at ICLR 2025, ranking 6th globally and representing 1.3% of all conference contributions.",
           "Quality indicators remain competitive with a 10.0% spotlight rate and 4.0% oral presentation rate, though opportunities exist to enhance high-impact research visibility.",
@@ -2449,10 +2449,10 @@
         ]
       },
       "context": {
-        "title": "Global Research Landscape: India's Competitive Position",
-        "subtitle": "Benchmarking India's research output against international leaders and regional peers in machine learning.",
+        "title": "Global Context",
+        "subtitle": "How India's ML Research output compares globally",
         "insights": [
-          "India holds the 6th position globally, following the United States (1,929 papers), China (1,308), Hong Kong (294), United Kingdom (293), and Canada (255).",
+          "India holds 16th position globally, following the United States (1,929 papers), China (1,308), Hong Kong (294), United Kingdom (293), and Canada (255).",
           "India's research quality metrics align closely with global standards: spotlight rates of 10.0% versus 10.5% global average, demonstrating consistent research excellence.",
           "Within the Asia-Pacific region, India trails China and Hong Kong but maintains a substantial presence, contributing meaningfully to the global machine learning discourse."
         ]

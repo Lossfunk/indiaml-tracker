@@ -58,26 +58,26 @@ export const InstitutionCard: React.FC<InstitutionCardProps> = ({
               <span className="text-blue-500 dark:text-blue-400 font-medium">
                 {Math.max(institution.total_paper_count, institution.unique_paper_count)}
               </span>
-              &nbsp;{Math.max(institution.total_paper_count, institution.unique_paper_count) === 1 ? "Paper" : "Papers"}
+              &nbsp;{Math.max(institution.total_paper_count, institution.unique_paper_count) === 1 ? "Scientific Publication" : "Scientific Publications"}
             </span>
             <span className="flex items-center whitespace-nowrap">
               <FaUsers className="mr-1.5 text-pink-500 dark:text-pink-400 flex-shrink-0" />
               <span className="text-pink-500 dark:text-pink-400 font-medium">
                 {institution.author_count}
               </span>
-              &nbsp;{institution.author_count === 1 ? "Author" : "Authors"}
+              &nbsp;{institution.author_count === 1 ? "Academic Contributor" : "Academic Contributors"}
             </span>
             {institution.spotlights > 0 && (
               <span className="flex items-center whitespace-nowrap">
                 <FaStar className="mr-1.5 text-yellow-500 dark:text-yellow-400 flex-shrink-0" size={14} />
                 {institution.spotlights}{" "}
-                {institution.spotlights === 1 ? "Spotlight" : "Spotlights"}
+                {institution.spotlights === 1 ? "Distinguished Publication" : "Distinguished Publications"}
               </span>
             )}
             {institution.orals > 0 && (
               <span className="flex items-center whitespace-nowrap">
                 <FaTrophy className="mr-1.5 text-emerald-500 dark:text-emerald-400 flex-shrink-0" size={14} />
-                {institution.orals} {institution.orals === 1 ? "Oral" : "Orals"}
+                {institution.orals} {institution.orals === 1 ? "Plenary Presentation" : "Plenary Presentations"}
               </span>
             )}
             <span className="flex items-center whitespace-nowrap capitalize">
@@ -106,14 +106,14 @@ export const InstitutionCard: React.FC<InstitutionCardProps> = ({
               onClick={() => setActiveTab("papers")}
               icon={<FaFileAlt className="text-blue-500" size={14} />}
             >
-              Papers ({institution.unique_paper_count})
+              Publication Portfolio ({institution.unique_paper_count})
             </TabButton>
             <TabButton
               active={activeTab === "authors"}
               onClick={() => setActiveTab("authors")}
               icon={<FaUser className="text-pink-500" size={14} />}
             >
-              Authors ({institution.author_count})
+              Affiliated Researchers ({institution.author_count})
             </TabButton>
           </div>
           <div className="px-4 pb-4 pt-3">
@@ -141,13 +141,13 @@ export const InstitutionCard: React.FC<InstitutionCardProps> = ({
                         {paper.isSpotlight && (
                           <span className="ml-2 mt-1 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300 shadow-sm">
                             <FaStar className="mr-1" size={10} />
-                            Spotlight
+                            Distinguished Publication
                           </span>
                         )}
                         {paper.isOral && (
                           <span className="ml-2 mt-1 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300 shadow-sm">
                             <FaTrophy className="mr-1" size={10} />
-                            Oral
+                            Plenary Presentation
                           </span>
                         )}
                       </li>
@@ -155,7 +155,7 @@ export const InstitutionCard: React.FC<InstitutionCardProps> = ({
                   </ul>
                 ) : (
                   <p className="text-muted-foreground/70 text-sm italic py-3">
-                    No specific paper details available.
+                    Publication catalog currently unavailable.
                   </p>
                 )}
               </div>
@@ -179,7 +179,7 @@ export const InstitutionCard: React.FC<InstitutionCardProps> = ({
                   </ul>
                 ) : (
                   <p className="text-muted-foreground/70 text-sm italic py-3">
-                    Author details not available.
+                    Researcher affiliation data unavailable.
                   </p>
                 )}
               </div>

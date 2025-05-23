@@ -50,7 +50,7 @@ export const PieChart: React.FC<PieChartProps> = ({
   if (!data || data.length === 0) {
     return (
       <div className="flex items-center justify-center h-full min-h-[200px] bg-muted/20 rounded-lg border border-border animate-pulse shadow-inner">
-        <span className="text-muted-foreground">No data available</span>
+        <span className="text-muted-foreground">Visualization dataset unavailable</span>
       </div>
     );
   }

@@ -151,7 +151,7 @@ import {
   };
   
   /**
-   * Create data for US-China dominance pie chart
+   * Generate data for US-China scientific contribution comparative analysis
    */
   export const createUsChinaDominancePieData = (
     usData: CountryData | undefined,
@@ -181,7 +181,7 @@ import {
         fill: colorScheme.cn,
       },
       {
-        name: "Rest of World",
+        name: "Global Scientific Community",
         value: restCount,
         percent: restCount / totalPapers,
         fill: colorScheme.rest || "hsl(var(--muted))",
@@ -190,7 +190,7 @@ import {
   };
   
   /**
-   * Create authorship majority/minority data
+   * Generate comprehensive publication authorship composition analytics
    */
   export const createAuthorshipData = (
     processedFocusData: ProcessedFocusCountryData | null,
@@ -224,12 +224,12 @@ import {
     
     const majorityMinorityData = [
       {
-        name: `Majority ${focusCountryName}`,
+        name: `Primary ${focusCountryName} Authorship`,
         value: majorityFocusCountry,
         fill: colorScheme?.focusCountry || "hsl(142, 71%, 45%)",
       },
       {
-        name: `Minority ${focusCountryName}`,
+        name: `Collaborative ${focusCountryName} Contribution`,
         value: minorityFocusCountry,
         fill: colorScheme?.secondary || "hsl(var(--secondary-foreground))",
       },
@@ -246,12 +246,12 @@ import {
     
     const firstAuthorData = [
       {
-        name: `First Author ${focusCountryName}`,
+        name: `${focusCountryName} Principal Investigator`,
         value: firstAuthorFocusCountry,
         fill: colorScheme?.primary || "hsl(330, 80%, 60%)",
       },
       {
-        name: "Other Position",
+        name: "Secondary Contributor",
         value: nonFirstAuthorFocusCountry,
         fill: colorScheme?.warning || "hsl(36, 96%, 50%)",
       },
@@ -264,14 +264,14 @@ import {
   };
   
   /**
-   * Create institution type comparison data
+   * Generate institutional affiliation classification analytics
    */
   export const createInstitutionTypeData = (
     processedFocusData: ProcessedFocusCountryData | null,
     colorScheme: DashboardDataInterface['configuration']['colorScheme']
   ): {
-    comparisonData: Array<{ type: string; Papers: number; "Spotlights/Orals": number }>,
-    pieData: ChartDataItem[]
+   comparisonData: Array<{ type: string; Publications: number; "Distinguished Publications": number }>,
+   pieData: ChartDataItem[]
   } => {
     // Default empty arrays
     const emptyResult = {
@@ -300,13 +300,13 @@ import {
     const comparisonData = [
       {
         type: "Academic",
-        Papers: academicPapers,
-        "Spotlights/Orals": academicImpact,
+        Publications: academicPapers,
+        "Distinguished Publications": academicImpact,
       },
       {
         type: "Corporate",
-        Papers: corporatePapers,
-        "Spotlights/Orals": corporateImpact,
+        Publications: corporatePapers,
+        "Distinguished Publications": corporateImpact,
       },
     ];
     
@@ -336,7 +336,7 @@ import {
   };
   
   /**
-   * Filter and sort institutions
+   * Filter and prioritize institutional research contributions
    */
   export const filterInstitutions = (
     institutions: InstitutionData[] = [],
@@ -355,8 +355,8 @@ import {
   };
   
   /**
-   * Create a color map from the configuration
-   * Now uses the centralized chart color system for consistency
+   * Establish comprehensive visual identity system from configuration
+   * Leverages the centralized chart color scheme for design consistency
    */
   export const createColorMap = (
     colorScheme: DashboardDataInterface['configuration']['colorScheme']
