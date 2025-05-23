@@ -72,13 +72,6 @@
         "orals": 18
       },
       {
-        "affiliation_country": "UNK",
-        "paper_count": 135,
-        "author_count": 191,
-        "spotlights": 15,
-        "orals": 14
-      },
-      {
         "affiliation_country": "AU",
         "paper_count": 127,
         "author_count": 282,
@@ -2442,19 +2435,19 @@
       "summary": {
         "title": "Overview",
         "insights": [
-          "India demonstrates significant research leadership with 50 accepted papers at ICLR 2025, ranking 6th globally and representing 1.3% of all conference contributions.",
-          "Quality indicators remain competitive with a 10.0% spotlight rate and 4.0% oral presentation rate, though opportunities exist to enhance high-impact research visibility.",
-          "Strong research autonomy is evident through 52% first-author papers and 46% majority-author collaborations, indicating robust indigenous research capabilities.",
-          "A balanced research ecosystem emerges from 28 contributing institutions—17 academic and 11 corporate—fostering diverse perspectives in machine learning advancement."
+          "With 50 papers accepted, India has 85% more paper accepts as compared to 2024",
+          "However, author accepts jumped from 57 to 133, marking a 133% increment",
+          "In ICLR 2024, the Author/Paper ratio was 2.11 and in ICLR 2025, it has increased to 2.66 per paper",
+          "This is indicative of both an improved research ecosystem and better collaboration"
         ]
       },
       "context": {
         "title": "US-China Duopoly and how India is positioned",
         "subtitle": "How India's ML Research output compares globally",
         "insights": [
-          "India holds 16th position globally, following the United States (1,929 papers), China (1,308), Hong Kong (294), United Kingdom (293), and Canada (255).",
-          "India's research quality metrics align closely with global standards: spotlight rates of 10.0% versus 10.5% global average, demonstrating consistent research excellence.",
-          "Within the Asia-Pacific region, India trails China and Hong Kong but maintains a substantial presence, contributing meaningfully to the global machine learning discourse."
+          "US and China together holds 87.4% of papers, keeping a strong duopoly in their research output",
+          "While India has improved significantly, the number 50 pales in comparison to 1900+",
+          "Even within APAC, India trails countries like Australia, Japan and Singapore, indicating a strong indicator "
         ]
       },
       "focusCountry": {

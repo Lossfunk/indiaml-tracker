@@ -687,7 +687,7 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
               {/* Enhanced APAC Bar Chart */}
               <div className="bg-card border border-border rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow duration-200">
                 <h4 className="text-base font-medium mb-4">
-                  Asia-Pacific Research Contributions
+                  APAC Research Contributions
                 </h4>
                 <BarChart
                   data={apacCountriesData}

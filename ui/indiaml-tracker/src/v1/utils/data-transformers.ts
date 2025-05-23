@@ -181,7 +181,7 @@ import {
         fill: colorScheme.cn,
       },
       {
-        name: "Global Scientific Community",
+        name: "Rest",
         value: restCount,
         percent: restCount / totalPapers,
         fill: colorScheme.rest || "hsl(var(--muted))",
