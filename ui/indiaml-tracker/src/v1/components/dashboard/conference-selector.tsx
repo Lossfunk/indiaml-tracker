@@ -3,6 +3,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { TrackerIndexEntry } from '../../types/dashboard';
 import { fetchConferenceOptions, getUrlParameters, updateUrlParameters } from '../../services/dashboard-api';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { FiFilter } from 'react-icons/fi';
 
 interface ConferenceSelectorProps {
   onSelectionChange: (conference: string, year: string) => void;
@@ -67,9 +69,8 @@ export const ConferenceSelector: React.FC<ConferenceSelectorProps> = ({
     loadOptions();
   }, [initialConference, initialYear, onSelectionChange]);
   
-  // Handle conference change
-  const handleChange = useCallback((event: React.ChangeEvent<HTMLSelectElement>) => {
-    const value = event.target.value;
+  // Handle conference change - updated for shadcn Select
+  const handleChange = useCallback((value: string) => {
     if (value) {
       setSelectedValue(value);
       const [conference, year] = value.split("|");
@@ -81,22 +82,33 @@ export const ConferenceSelector: React.FC<ConferenceSelectorProps> = ({
   // Render based on state
   if (loading) {
     return (
-      <p className="text-xs sm:text-sm text-muted-foreground animate-pulse">
-        Loading...
-      </p>
+      <div className="flex items-center gap-1 sm:gap-2">
+        <FiFilter className="h-4 w-4 text-muted-foreground animate-pulse" />
+        <p className="text-xs sm:text-sm text-muted-foreground animate-pulse">
+          Loading...
+        </p>
+      </div>
     );
   }
   
   if (error && options.length === 0) {
     return (
-      <p className="text-xs sm:text-sm text-destructive">
-        Error loading list!
-      </p>
+      <div className="flex items-center gap-1 sm:gap-2">
+        <FiFilter className="h-4 w-4 text-muted-foreground" />
+        <p className="text-xs sm:text-sm text-destructive">
+          Error loading list!
+        </p>
+      </div>
     );
   }
   
   if (options.length === 0 && !loading) {
-    return <p className="text-xs sm:text-sm text-muted-foreground">No conferences available</p>;
+    return (
+      <div className="flex items-center gap-1 sm:gap-2">
+        <FiFilter className="h-4 w-4 text-muted-foreground" />
+        <p className="text-xs sm:text-sm text-muted-foreground">No conferences available</p>
+      </div>
+    );
   }
   
   return (
@@ -107,27 +119,26 @@ export const ConferenceSelector: React.FC<ConferenceSelectorProps> = ({
       >
         Data:
       </label>
-      <select
-        id="conference-select"
-        value={selectedValue}
-        onChange={handleChange}
-        className="bg-card/80 dark:bg-card/50 border-border text-foreground text-xs sm:text-sm rounded-md focus:ring-primary focus:border-primary p-1.5 sm:p-2 shadow-sm w-auto appearance-none focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-offset-background"
-        aria-label="Select a conference and year"
-      >
-        {!selectedValue && options.length > 0 && (
-          <option value="" disabled>
-            Select...
-          </option>
-        )}
-        {options.map((option) => (
-          <option
-            key={`${option.venue}-${option.year}`}
-            value={`${option.venue}|${option.year}`}
-          >
-            {option.label}
-          </option>
-        ))}
-      </select>
+      <FiFilter className="h-4 w-4 text-muted-foreground" />
+      <Select value={selectedValue} onValueChange={handleChange}>
+        <SelectTrigger 
+          id="conference-select"
+          className="bg-card/80 dark:bg-card/50 border-border text-foreground text-xs sm:text-sm rounded-md focus:ring-primary focus:border-primary shadow-sm w-auto"
+          aria-label="Select a conference and year"
+        >
+          <SelectValue placeholder="Select..." />
+        </SelectTrigger>
+        <SelectContent>
+          {options.map((option) => (
+            <SelectItem
+              key={`${option.venue}-${option.year}`}
+              value={`${option.venue}|${option.year}`}
+            >
+              {option.label}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
     </div>
   );
 };

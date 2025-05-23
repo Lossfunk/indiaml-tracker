@@ -1320,7 +1320,7 @@
     "dashboardSubtitle": "Analyzing Scientific Contributions, Global Standing, and Institutional Excellence in Machine Learning Research",
     "sections": {
       "summary": {
-        "title": "Research Impact Overview: Quality and Scale",
+        "title": "Overview",
         "insights": [
           "India demonstrates exceptional research quality at ICLR 2024, achieving a 29.6% spotlight acceptance rate—significantly above the global average of 17.8%—across 27 accepted papers.",
           "Securing 6th position globally by publication volume, India contributes 1.2% of all conference papers while representing 0.7% of the author base, indicating efficient research output per researcher.",
@@ -1329,11 +1329,11 @@
         ]
       },
       "context": {
-        "title": "Global Research Landscape: Competitive Positioning",
+        "title": "How India is Positioned Globally",
         "subtitle": "India's performance relative to leading research nations and regional peers",
         "insights": [
-          "The global research hierarchy shows the United States (1,320 papers), China (676 papers), and Great Britain (255 papers) as dominant contributors, with India ranking 6th among all participating nations.",
-          "India's spotlight acceptance rate of 29.6% surpasses major research powers including the US (16.8%), China (19.1%), and Great Britain (19.2%), indicating superior research quality metrics.",
+          "The global research hierarchy shows the United States (1,320 papers), China (676 papers), and Great Britain (255 papers) as dominant contributors, with India ranking 18th among all participating nations.",
+          "India's spotlight acceptance rate of 29.6% surpasses major research powers including the US (16.8%), China (19.1%), and Great Britain (19.2%), However, our research volume is on the lower side",
           "Within the Asia-Pacific region, India ranks prominently alongside China, Hong Kong, Singapore, and South Korea as a significant contributor to machine learning research."
         ]
       },
