@@ -972,7 +972,7 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
           <div className="mb-10">
             <h3 className="text-xl font-semibold flex items-center mb-4">
               <FaChartBar className="mr-2 text-orange-500" />
-              Academic vs Industry Research Contribution in {focusCountryName}
+              Academic vs Corporate Contribution in {focusCountryName}
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-card border border-border rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow duration-200">

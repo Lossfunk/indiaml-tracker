@@ -270,7 +270,7 @@ import {
     processedFocusData: ProcessedFocusCountryData | null,
     colorScheme: DashboardDataInterface['configuration']['colorScheme']
   ): {
-   comparisonData: Array<{ type: string; Publications: number; "Distinguished Publications": number }>,
+   comparisonData: Array<{ type: string; Papers: number; "Spotlights/Orals": number }>,
    pieData: ChartDataItem[]
   } => {
     // Default empty arrays
@@ -300,13 +300,13 @@ import {
     const comparisonData = [
       {
         type: "Academic",
-        Publications: academicPapers,
-        "Distinguished Publications": academicImpact,
+        Papers: academicPapers,
+        "Spotlights/Orals": academicImpact,
       },
       {
         type: "Corporate",
-        Publications: corporatePapers,
-        "Distinguished Publications": corporateImpact,
+        Papers: corporatePapers,
+        "Spotlights/Orals": corporateImpact,
       },
     ];
     
