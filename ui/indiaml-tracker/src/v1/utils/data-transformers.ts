@@ -224,12 +224,12 @@ import {
     
     const majorityMinorityData = [
       {
-        name: `Primary ${focusCountryName} Authorship`,
+        name: `First Author from ${focusCountryName}`,
         value: majorityFocusCountry,
         fill: colorScheme?.focusCountry || "hsl(142, 71%, 45%)",
       },
       {
-        name: `Collaborative ${focusCountryName} Contribution`,
+        name: `Minority Author from ${focusCountryName}`,
         value: minorityFocusCountry,
         fill: colorScheme?.secondary || "hsl(var(--secondary-foreground))",
       },
