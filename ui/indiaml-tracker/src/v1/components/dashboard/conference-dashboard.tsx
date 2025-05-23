@@ -623,10 +623,10 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
           </div>
 
           {/* APAC Dynamics */}
-          <div className="mb-6">
-            <h3 className="text-xl font-semibold flex items-center mb-4">
+          <div className="mb-6 mt-20">
+            <h3 className="text-2xl font-semibold flex items-center mb-4">
               <FaGlobeAsia className="mr-2 text-green-500" />
-              Asia-Pacific Regional Analysis
+              APAC Analysis
             </h3>
 
             {/* Enhanced APAC Overview */}
@@ -984,12 +984,12 @@ export const ConferenceDashboard: React.FC<ConferenceDashboardProps> = ({
                     {
                       dataKey: "Papers",
                       fill: data.configuration.colorScheme.papers,
-                      name: "Research Publications",
+                      name: "Papers",
                     },
                     {
                       dataKey: "Spotlights/Orals",
                       fill: data.configuration.colorScheme.spotlight,
-                      name: "Featured Presentations",
+                      name: "Spotlights",
                     },
                   ]}
                   showLegend={true}
