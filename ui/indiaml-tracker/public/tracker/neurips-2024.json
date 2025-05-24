@@ -155,13 +155,6 @@
         "affiliation_name": "BITS Pilani, Birla Institute of Technology and Science",
         "affiliation_domain": "hyderabad.bits-pilani.ac.in",
         "affiliation_country": "IN"
-      },
-      {
-        "name": "Didier Stricker",
-        "openreview_id": "~Didier_Stricker1",
-        "affiliation_name": "Unknown",
-        "affiliation_domain": "unknown.edu",
-        "affiliation_country": "UNK"
       }
     ],
     "top_author_from_india": false,
@@ -184,9 +177,9 @@
       {
         "name": "Areeb Ahmad",
         "openreview_id": "~Areeb_Ahmad2",
-        "affiliation_name": "Unknown",
-        "affiliation_domain": "unknown.edu",
-        "affiliation_country": "UNK"
+        "affiliation_name": "Indian Institute of Technology Kanpur (IIT Kanpur)",
+        "affiliation_domain": "iitk.ac.in",
+        "affiliation_country": "IN"
       },
       {
         "name": "Ashutosh Modi",
@@ -965,10 +958,10 @@
         "affiliation_country": "US"
       },
       {
-        "name": "",
+        "name": "Aman Madaan",
         "openreview_id": "~Aman_Madaan1",
-        "affiliation_name": "Carnegie Mellon University",
-        "affiliation_domain": "cmu.edu",
+        "affiliation_name": "xAI",
+        "affiliation_domain": "x.ai",
         "affiliation_country": "US"
       },
       {
@@ -1002,16 +995,16 @@
       {
         "name": "Dheeraj Rajagopal",
         "openreview_id": "~Dheeraj_Rajagopal1",
-        "affiliation_name": "Unknown",
-        "affiliation_domain": "unknown.edu",
-        "affiliation_country": "UNK"
+        "affiliation_name": "Fastino AI",
+        "affiliation_domain": "fastino.ai",
+        "affiliation_country": "US"
       },
       {
         "name": "Karthik Kappaganthu",
         "openreview_id": "~Karthik_Kappaganthu1",
-        "affiliation_name": "Unknown",
-        "affiliation_domain": "unknown.edu",
-        "affiliation_country": "UNK"
+        "affiliation_name": "Google",
+        "affiliation_domain": "google.com",
+        "affiliation_country": "US"
       },
       {
         "name": "",

@@ -107,7 +107,44 @@ One of the most valuable contributions is running the data pipeline and submitti
    python -m indiaml.analytics.analytics
    python -m indiaml.pipeline.generate_final_jsons
    python -m indiaml.pipeline.generate_summaries
+   python -m indiaml.pipeline.process_accept_type
    ```
+
+
+4. **Dashboard**
+
+```bash
+   python eda/eda_institution_list.py --db_path data/venues-iclr-2024-v3.db --country_code IN
+```
+
+This creates a `affiliations.txt` file. We can copy paste into chatgpt/gemini with the following prompt
+
+```
+[ {
+  "IIT Bombay": {
+    "variations": [
+      "Indian Institute of Technology, Bombay",
+      "Indian Institute of Technology Bombay",
+      "IIT Bombay",
+      "Department of Computer Science and Engineering, IIT Bombay",
+      "Indian Institute of Technology Bombay,"
+    ],
+    "type": "academic" (or "corporate")
+},
+...
+
+-----
+
+<Paste contents of affiliation.txt>
+-----
+
+Create an inverted index similar to the example provided for all the entries given
+```
+
+then save the output json under `eda/<iclr-2025>/inverted-index.json` and then run
+```bash
+   python eda/eda-complete-analytics.py --db_path eda/venues-iclr-2024-v3.db --country_code IN --institution_file eda/iclr-2024/inverted-index.json --conference_name ICLR --conference_year 2024 --conference_track Conference --output ui/indiaml-tracker/public/tracker/iclr-2024-analytics.json 
+```
 
 4. **Submit your data:**
    - Create a new branch: `git checkout -b data-contribution-YYYYMMDD`

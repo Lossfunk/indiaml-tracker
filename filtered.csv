@@ -1,0 +1,65 @@
+accept_type,venue,year,paper_id,pdf_url,paper_title,first_author
+spotlight,NEURIPS,2024,TxffvJMnBy,https://openreview.net/pdf/269618651cc4c3886e154ec85079164a62691bdc.pdf,Optimal Algorithms for Online Convex Optimization with Adversarial Constraints,Abhishek Sinha
+spotlight,ICML,2024,TfwGtfPkhV,https://openreview.net/pdf/a89b112bea8fde3d1e91d41d41e6dd7fdf86aff2.pdf,Testing the Feasibility of Linear Programs with Bandit Feedback,Aditya Gopalan
+spotlight,ICLR,2024,eUgS9Ig8JG,https://openreview.net/pdf/b5b2e785dec69b9ea0c8b01d6e2eca5896246cce.pdf,SaNN: Simple Yet Powerful Simplicial-aware Neural Networks,Sravanthi Gurugubelli
+spotlight,ICLR,2024,TrKq4Wlwcz,https://openreview.net/pdf/b2522b24d83cf73195d3d49d25c22b11f9633228.pdf,"Large Content And Behavior Models To Understand, Simulate, And Optimize Content And Behavior",Ashmit Khandelwal
+spotlight,ICLR,2024,SQrHpTllXa,https://openreview.net/pdf/0a15c1a222a5d423ce19524261f01484f4e7b695.pdf,CABINET: Content Relevance-based Noise Reduction for Table Question Answering,Sohan Patnaik
+spotlight,ICLR,2025,bW9fGYo44s,https://openreview.net/pdf/45b7da6fce6fc272027212b6c17632d43a4c1530.pdf,MotionAura: Generating High-Quality and Motion Consistent Videos using Discrete Diffusion,Onkar Kishor Susladkar
+spotlight,NEURIPS,2024,nY0BrZdqLt,https://openreview.net/pdf/08ee7a3ea3b3fd8e7bf896a4e8fac2fc695aab87.pdf,Time-Reversal Provides Unsupervised Feedback to LLMs,Yerram Varun
+poster,NEURIPS,2024,7Mo1NOosNT,https://openreview.net/pdf/015330ba1dcf5481f996a511f4b038f8acfab65f.pdf,COLD: Causal reasOning in cLosed Daily activities,Abhinav Joshi
+poster,NEURIPS,2024,1po4j1Tv7O,https://openreview.net/pdf/b178b4957c9f40578fc6a3a1e59fd2b08dc2b708.pdf,Sample-Efficient Constrained Reinforcement Learning with General Parameterization,Washim Uddin Mondal
+poster,ICML,2024,yhpDKSw7yA,https://openreview.net/pdf/3f1185c2cb457015bf09600ef1508b8737fcf2a4.pdf,Provably Robust DPO: Aligning Language Models with Noisy Feedback,Sayak Ray Chowdhury
+poster,ICML,2024,tTtSnpH4fc,https://openreview.net/pdf/a7f969be6c3977786d11395298655bfc29c99967.pdf,Finite Time Logarithmic Regret Bounds for Self-Tuning Regulation,Rahul Singh
+poster,ICML,2024,merZTLSdC9,https://openreview.net/pdf/0615d619c3602e2d636f310e2ddca4c631b9613c.pdf,On Online Experimentation without Device Identifiers,
+poster,NEURIPS,2024,HbV5vRJMOY,https://openreview.net/pdf/34a8b1b90acda923db4408bc2dca4c3d5f6d3531.pdf,Mixture of Nested Experts: Adaptive Processing of Visual Tokens,Gagan Jain
+poster,ICML,2024,l6Hef6FVd0,https://openreview.net/pdf/486d2e3f8b1d6cd84cc050e257c70fda5c2f6980.pdf,PIPER: Primitive-Informed Preference-based Hierarchical Reinforcement Learning via Hindsight Relabeling,Utsav Singh
+poster,ICML,2024,eo88noTbb5,https://openreview.net/pdf/17a75d2d4ceb5ac28e380f4e82e1c0df8d09dbb8.pdf,Agnostic Learning of Mixed Linear Regressions with EM and AM Algorithms,Avishek Ghosh
+poster,ICML,2024,bfQCO9Vqhk,https://openreview.net/pdf/15e9e2ce1a2a6304834b144d8443de2478e30aa7.pdf,Submodular framework for structured-sparse optimal transport,
+poster,ICML,2024,o5SVr80Rgg,https://openreview.net/pdf/8542c0b81c30deb10c2d35fd220b4d912812d24a.pdf,PairNet: Training with Observed Pairs to Estimate Individual Treatment Effect,Lokesh Nagalapatti
+poster,NEURIPS,2024,HwO1mNluoL,https://openreview.net/pdf/3ccdc8010ed3b8d63897bedec7328d708c92eaa3.pdf,Mitigating Biases in Blackbox Feature Extractors for Image Classification Tasks,Abhipsa Basu
+poster,ICLR,2025,0nJEgNpb4l,https://openreview.net/pdf/12d3031a9f935c986708176a7e99e20965bed69f.pdf,PEAR: Primitive Enabled Adaptive Relabeling for Boosting Hierarchical Reinforcement Learning,Utsav Singh
+poster,NEURIPS,2024,SdLOs1FR4h,https://openreview.net/pdf/17aef8ff1d289ba15e7ffd178b132deee4f747e3.pdf,FUGAL: Feature-fortified Unrestricted Graph Alignment,Aditya Bommakanti
+poster,ICML,2024,TN3fi7dwPo,https://openreview.net/pdf/c14bbb8bb8638326ffae116b81072096457da928.pdf,Tandem Transformers for Inference Efficient LLMs,Aishwarya P S
+poster,NEURIPS,2024,YXQW4qQe2U,https://openreview.net/pdf/4c086ee463f48a315e6fd957d196e6a78530c83d.pdf,Optimal Top-Two Method for Best Arm Identification and Fluid Analysis,Agniv Bandyopadhyay
+poster,NEURIPS,2024,fzlMza6dRZ,https://openreview.net/pdf/476e9d9dcd1fe989b9ed65ef25c804d563cf1340.pdf,GraphTrail: Translating GNN Predictions into Human-Interpretable Logical Rules,Burouj Armgaan
+poster,NEURIPS,2024,nN6NSd1Qds,https://openreview.net/pdf/7835e160109c7dd1023e90ff5f2eb18f64b1e6cb.pdf,UGC: Universal Graph Coarsening,Mohit Kataria
+poster,NEURIPS,2024,tuiqq1G8I5,https://openreview.net/pdf/c7df4a98dbe1cbf0192e59c5f5fa58b1b3a7693e.pdf,DisCEdit: Model Editing by Identifying Discriminative Components,Chiranjib Bhattacharyya
+poster,NEURIPS,2024,udTwwF7tks,https://openreview.net/pdf/4ae7afbdb746c97e2bfe511705355b40c1bce0e3.pdf,Iteratively Refined Early Interaction Alignment for Subgraph Matching based Graph Retrieval,Ashwin Ramachandran
+poster,ICLR,2024,2iGiSHmeAN,https://openreview.net/pdf/7068bcb7f8feb34ebb6a585e0060e3135e592aac.pdf,BroGNet: Momentum-Conserving Graph Neural Stochastic Differential Equation for Learning Brownian Dynamics,Suresh Bishnoi
+poster,ICLR,2024,78iGZdqxYY,https://openreview.net/pdf/6734ad0e165c7017f3c6c0f400183a1bae684654.pdf,Mirage: Model-agnostic Graph Distillation for Graph Classification,Mridul Gupta
+poster,ICLR,2024,Ixi4j6LtdX,https://openreview.net/pdf/79548908914d91f19b250084cc53384846d7ddbb.pdf,A Good Learner can Teach Better: Teacher-Student Collaborative Knowledge Distillation,Ayan Sengupta
+poster,ICLR,2024,fjpfCOV4ru,https://openreview.net/pdf/6096e5c08f636d6144a7e20b80523e0168fe0a4a.pdf,"Ito Diffusion Approximation of Universal Ito Chains for Sampling, Optimization and Boosting",Aleksei Ustimenko
+poster,NEURIPS,2024,QVG7j29Sta,https://openreview.net/pdf/7ecf82af167db2fa1a4c2972d42f903ce9507ee9.pdf,Accuracy is Not All You Need,Abhinav Dutta
+poster,ICML,2024,RfQT6vJt8b,https://openreview.net/pdf/409965515edccbc49d377b009df2f47a57479ebd.pdf,How Far Can Fairness Constraints Help Recover From Biased Data?,mohit sharma
+poster,ICML,2024,OQ7TlOphGX,https://openreview.net/pdf/6f5199a867ae97c4ee3f4303b1afe90f767d9d65.pdf,Enhancing Trajectory Prediction through Self-Supervised Waypoint Distortion Prediction,Pravendra Singh
+poster,ICML,2024,HpT19AKddu,https://openreview.net/pdf/23331b236f09db1c4293895ed7d92c5d7c76991f.pdf,Causal Discovery with Fewer Conditional Independence Tests,Kirankumar Shiragur
+poster,ICLR,2025,52UtL8uA35,https://openreview.net/pdf/5ddcb1a74b2e9e4e8ed76a05e032a40ee172bf40.pdf,Deep Networks Learn Features From Local Discontinuities in the Label Function,Prithaj Banerjee
+poster,ICLR,2025,5RZoYIT3u6,https://openreview.net/pdf/a4ec37f08d2849b2cd4d8f203d00b3bf1aa3f16a.pdf,You Only Prune Once: Designing Calibration-Free Model Compression With Policy Learning,Ayan Sengupta
+poster,ICLR,2025,5pd78GmXC6,https://openreview.net/pdf/53d17f44d595659cf050490be6c4b87018988e38.pdf,Charting the Design Space of Neural Graph Representations for Subgraph Matching,Vaibhav Raj
+poster,ICLR,2025,5x88lQ2MsH,https://openreview.net/pdf/cda993376dcff91230258e560227e99852269d47.pdf,Bonsai: Gradient-free Graph Condensation for Node Classification,Mridul Gupta
+poster,ICLR,2025,AkBrb7yQ0G,https://openreview.net/pdf/8ad46240b718392d7de78aefb2230245544e7a1f.pdf,Periodic Materials Generation using Text-Guided Joint Diffusion Model,KISHALAY DAS
+poster,ICLR,2025,DFSb67ksVr,https://openreview.net/pdf/c827a3961d4fc71d35f295fe47af1a56513b177c.pdf,Clique Number Estimation via Differentiable Functions of Adjacency Matrix Permutations,Indradyumna Roy
+poster,ICLR,2025,EzrZX9bd4G,https://openreview.net/pdf/debbb712eb9e26bf61695ebf77801a55131c9e21.pdf,BEEM: Boosting Performance of Early Exit DNNs using Multi-Exit Classifiers as Experts,Divya Jyoti Bajpai
+poster,ICLR,2025,LO4MEPoqrG,https://openreview.net/pdf/f432171f3c6052c0ec517871292566b7399bd96f.pdf,Does Safety Training of LLMs Generalize to Semantically Related Natural Prompts?,Sravanti Addepalli
+poster,ICLR,2025,NHxwxc3ql6,https://openreview.net/pdf/799ba059f2d6b50ca4668376ba1cdd8d72138627.pdf,It Helps to Take a Second Opinion: Teaching Smaller LLMs To Deliberate Mutually via Selective Rationale Optimisation,Sohan Patnaik
+poster,ICLR,2025,NfCEVihkdC,https://openreview.net/pdf/ac884658f87199ebcb457a610bf628ecf481891f.pdf,Measuring And Improving Persuasiveness Of Large Language Models,Somesh Kumar Singh
+poster,ICLR,2025,NtwFghsJne,https://openreview.net/pdf/c6c8ec06c7f9ef53d5ac4216c2471b1d20415fd0.pdf,From Search to Sampling: Generative Models for Robust Algorithmic Recourse,Prateek Garg
+poster,ICLR,2025,TmCcNuo03f,https://openreview.net/pdf/8a918fd68fecd9209403ab6e44f832e47c2e540b.pdf,Measuring And Improving Engagement of Text-to-Image Generation Models,Varun Khurana
+poster,ICLR,2025,ff2V3UR9sC,https://openreview.net/pdf/c838bbe0a12f56b1fde9d76191b41894a12cd638.pdf,Teaching Human Behavior Improves Content Understanding Abilities Of VLMs,Somesh Kumar Singh
+poster,ICLR,2024,uvFhCUPjtI,https://openreview.net/pdf/5386623c7dfc54fe602556b341b906eb0ec58d06.pdf,Beyond Spatio-Temporal Representations: Evolving Fourier Transform for Temporal Graphs,Anson Bastos
+poster,ICLR,2025,h0vC0fm1q7,https://openreview.net/pdf/0baccd0626487637d58895c5bf4daa1f701f0d6f.pdf,Sensitivity Verification for Additive Decision Tree Ensembles,Arhaan Ahmad
+poster,ICLR,2025,kbeX97jExm,https://openreview.net/pdf/8ed140ad99d8ff52315acf85732ba20a69b155a7.pdf,Neural Wave Equation for Irregularly Sampled Sequence Data,Arkaprava Majumdar
+poster,ICLR,2025,l11DZY5Nxu,https://openreview.net/pdf/704fab6788807803612ad2b12344cc35a2a74913.pdf,Robust Root Cause Diagnosis using In-Distribution Interventions,Lokesh Nagalapatti
+poster,ICLR,2025,nNiWRRj6r9,https://openreview.net/pdf/696d482ba820dd1fb2c61d652aea1b70e1287ef9.pdf,ONLINE EPSILON NET & PIERCING SET FOR GEOMETRIC CONCEPTS,Sujoy Bhore
+poster,ICLR,2025,qnlG3zPQUy,https://openreview.net/pdf/b4b0f39d84d66fbd58c0ce677e7f47db34c37ab8.pdf,"ILLUSION: Unveiling Truth with a Comprehensive Multi-Modal, Multi-Lingual Deepfake Dataset",Kartik Thakral
+poster,ICLR,2025,rnJxelIZrq,https://openreview.net/pdf/cedd874528d6099323a83a93e025814f28b8e16e.pdf,Beyond Mere Token Analysis: A Hypergraph Metric Space Framework for Defending Against Socially Engineered LLM Attacks,
+poster,ICLR,2025,tDIL7UXmSS,https://openreview.net/pdf/200469483697d3ac66abe0d44a5efe9482fa9101.pdf,Quantum (Inspired)  $D^2$-sampling with Applications,Poojan Chetan Shah
+poster,ICLR,2025,wSkvf2WyYz,https://openreview.net/pdf/df1273af2e4a905f17436545415573e192eb813f.pdf,SBSC: Step-by-Step Coding for Improving Mathematical Olympiad Performance,Kunal Singh
+poster,ICLR,2025,zvaiz3FjA9,https://openreview.net/pdf/8eb49e491feecae804537675c711f98f57149f2f.pdf,Designing Concise ConvNets with Columnar Stages,Ashish Kumar
+poster,ICML,2024,7xzhKEPfBo,https://openreview.net/pdf/61c68b6da42e9185837b464227ecbcbc75504505.pdf,Risk Estimation in a Markov Cost Process: Lower and Upper Bounds,
+poster,ICML,2024,8ySQaphUYH,https://openreview.net/pdf/07f74f6818e7261951b0dfd09d5666e670e5e9d0.pdf,WISER: Weak Supervision and Supervised Representation Learning to Improve Drug Response Prediction in Cancer,Kumar Shubham
+poster,ICML,2024,Ao9UUaScAU,https://openreview.net/pdf/71efc1da1d0fe38f66103886bdf9d41d7a430479.pdf,Why do Variational Autoencoders Really Promote Disentanglement?,Pratik Bhowal
+poster,ICML,2024,Cbacx90Wkt,https://openreview.net/pdf/c0530913b6c22d453b2332a2be5cbf1c57e67ff0.pdf,OAK: Enriching Document Representations using Auxiliary Knowledge for Extreme Classification,Shikhar Mohan
+poster,ICML,2024,GwA4go0Mw4,https://openreview.net/pdf/b913a137f582939ceef4f0e95b210de1e8e9e8cc.pdf,Representation Surgery: Theory and Practice of Affine Steering,Shashwat Singh
+poster,ICLR,2025,jCDF7G3LpF,https://openreview.net/pdf/bc16e7d0bc5f4d8c4b1a1d6e943556544f77ff36.pdf,EFFICIENT JAILBREAK ATTACK SEQUENCES ON LARGE LANGUAGE MODELS VIA MULTI-ARMED BANDIT-BASED CONTEXT SWITCHING,Aditya Ramesh
+poster,ICLR,2024,uz7d2N2zul,https://openreview.net/pdf/cd650d7bda1c2da0c78084f2b993c15c2ec0925f.pdf,Bayesian Coreset Optimization for Personalized Federated Learning,Prateek Chanda

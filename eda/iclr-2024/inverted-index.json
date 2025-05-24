@@ -1,0 +1,110 @@
+{
+    "Adobe": {
+      "variations": [
+        "Adobe",
+        "Adobe Systems"
+      ],
+      "type": "corporate"
+    },
+    "Amazon": {
+      "variations": [
+        "Amazon"
+      ],
+      "type": "corporate"
+    },
+    "Google": {
+      "variations": [
+        "Google"
+      ],
+      "type": "corporate"
+    },
+    "Google Deepmind": {
+      "variations": [
+        "Google Deepmind"
+      ],
+      "type": "corporate"
+    },
+    "IIIT Delhi": {
+      "variations": [
+        "Indraprastha Institute of Information Technology, Delhi"
+      ],
+      "type": "academic"
+    },
+    "IIT Bombay": {
+      "variations": [
+        "IIT Bombay",
+        "Indian Institute of Technology Bombay",
+        "Indian Institute of Technology Bombay, Indian Institute of Technology Bombay",
+        "Indian Institute of Technology Bombay, Indian Institute of Technology, Bombay",
+        "Indian Institute of Technology, Bombay"
+      ],
+      "type": "academic"
+    },
+    "IIT Delhi": {
+      "variations": [
+        "Indian Institute of Technology Delhi",
+        "Indian Institute of Technology, Delhi"
+      ],
+      "type": "academic"
+    },
+    "IIT Hyderabad": {
+      "variations": [
+        "Indian Institute of Technology, Hyderabad"
+      ],
+      "type": "academic"
+    },
+    "IIT Kanpur": {
+      "variations": [
+        "Indian Institute of Technology, Kanpur"
+      ],
+      "type": "academic"
+    },
+    "IIT Madras": {
+      "variations": [
+        "Indian Institute of Technology, Madras, Dhirubhai Ambani Institute Of Information and Communication Technology"
+      ],
+      "type": "academic"
+    },
+    "Indian Institute of Science": {
+      "variations": [
+        "Indian Institute of Science",
+        "Indian Institute of Science, Bangalore",
+        "Indian Institute of Science, Dhirubhai Ambani Institute Of Information and Communication Technology"
+      ],
+      "type": "academic"
+    },
+    "Jadavpur University": {
+      "variations": [
+        "Jadavpur University"
+      ],
+      "type": "academic"
+    },
+    "Microsoft": {
+      "variations": [
+        "Microsoft",
+        "Microsoft Research",
+        "Microsoft Research, India",
+        "Research, Microsoft"
+      ],
+      "type": "corporate"
+    },
+    "Pocket FM": {
+      "variations": [
+        "Pocket FM"
+      ],
+      "type": "corporate"
+    },
+    "ShareChat": {
+      "variations": [
+        "ShareChat"
+      ],
+      "type": "corporate"
+    },
+    "Tata Consultancy Services": {
+      "variations": [
+        "TCS Research & Innovation",
+        "Tata Consultancy Services Limited, India"
+      ],
+      "type": "corporate"
+    }
+  }

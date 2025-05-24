@@ -1,8 +1,7 @@
-import React from "react";
-import { easeIn, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { FaGithub, FaRegSmileWink } from "react-icons/fa";
-import Confetti from "react-confetti";
 import { ResearchPapersShowcase } from "./research-paper-showcase";
+import { ExternalLinkIcon } from "lucide-react";
 
 export default function Home() {
   return (
@@ -20,7 +19,7 @@ export default function Home() {
       >
         {/* Animated Title (one-time animation) */}
         <motion.h1
-          className="text-3xl md:text-4xl font-extrabold mb-6 flex flex-col items-center justify-center gap-2"
+          className="text-3xl md:text-4xl font-semibold  mb-6 flex flex-col items-center justify-center gap-2"
           initial={{ scale: 1, opacity: 0 }}
           animate={{ scale: 1, opacity: 1, y: [50, 0] }}
           transition={{ duration: 1, ease: "anticipate" }}
@@ -50,10 +49,11 @@ export default function Home() {
             href="https://github.com/lossfunk/indiaml-tracker/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-md text-gray-100 bg-indigo-600 hover:bg-indigo-500 transition-colors"
+            className="inline-flex  font-semibold items-center px-4 py-2 text-sm rounded-md text-gray-100 bg-indigo-600 hover:bg-indigo-500 transition-colors"
           >
             <FaGithub className="mr-2" />
-            View Research Data & Pipelines on GitHub
+            View Research Data & Pipelines  
+            <ExternalLinkIcon className="h-3"/>
           </a>
           <p className="text-xs text-gray-600 dark:text-gray-500 mt-2">
             Explore data pipelines and research materials for India's ML

@@ -1,0 +1,989 @@
+[
+  {
+    "paper_title": "PEAR: Primitive Enabled Adaptive Relabeling for Boosting Hierarchical Reinforcement Learning",
+    "pdf_url": "https://openreview.net/pdf/12d3031a9f935c986708176a7e99e20965bed69f.pdf",
+    "paper_summary": "This paper presents PEAR, a two-phase approach for hierarchical reinforcement learning (HRL).  PEAR leverages adaptive relabeling of expert demonstrations to generate efficient subgoal supervision.  The method then optimizes the HRL agent using a combination of reinforcement learning and imitation learning, resulting in a practical HRL framework that performs well on challenging robotic control tasks.\n",
+    "authors": [
+      {
+        "name": "Utsav Singh",
+        "openreview_id": "~Utsav_Singh1",
+        "links": {
+          "homepage": "https://www.cse.iitk.ac.in/users/utsavz/"
+        }
+      },
+      {
+        "name": "",
+        "openreview_id": "~Vinay_P_Namboodiri1",
+        "links": {
+          "orcid": "https://orcid.org/0000-0001-5262-9722",
+          "gscholar": "https://scholar.google.co.in/citations?user=JyHi9OoAAAAJ&hl=en&oi=ao",
+          "homepage": "https://vinaypn.github.io"
+        }
+      }
+    ]
+  },
+  {
+    "paper_title": "Deep Networks Learn Features From Local Discontinuities in the Label Function",
+    "pdf_url": "https://openreview.net/pdf/5ddcb1a74b2e9e4e8ed76a05e032a40ee172bf40.pdf",
+    "paper_summary": "This paper investigates the feature learning mechanism in deep neural networks, focusing on how discontinuities in the true label function influence model learning.  It introduces a novel deep architecture, the Deep Linearly Gated Network (DLGN), to analyze this mechanism.  The study aims to demonstrate the movement of model function discontinuities towards label function discontinuities during training and provide a means for mechanistic interpretability.\n",
+    "authors": [
+      {
+        "name": "Prithaj Banerjee",
+        "openreview_id": "~Prithaj_Banerjee1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/prithaj-banerjee-946a3a104/",
+          "gscholar": "https://scholar.google.com/citations?user=rlr99eAAAAAJ&hl=en",
+          "homepage": "https://www.cse.iitm.ac.in/profile.php?arg=Mjc4Mg=="
+        }
+      },
+      {
+        "name": "Harish G. Ramaswamy",
+        "openreview_id": "~Harish_Guruprasad_Ramaswamy1",
+        "links": {}
+      },
+      {
+        "name": "Mahesh Lorik Yadav",
+        "openreview_id": "~Mahesh_Lorik_Yadav1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/mahesh-yadav-25779716a/"
+        }
+      },
+      {
+        "name": "Chandra Shekar Lakshminarayanan",
+        "openreview_id": "~Chandra_Shekar_Lakshminarayanan2",
+        "links": {
+          "homepage": "https://iitpkd.ac.in/people/cnarayanan"
+        }
+      }
+    ]
+  },
+  {
+    "paper_title": "You Only Prune Once: Designing Calibration-Free Model Compression With Policy Learning",
+    "pdf_url": "https://openreview.net/pdf/a4ec37f08d2849b2cd4d8f203d00b3bf1aa3f16a.pdf",
+    "paper_summary": "This paper introduces PruneNet, a novel model compression method for large language models (LLMs).  PruneNet learns a pruning policy to compress models without external calibration data, achieving high performance with reduced computational requirements.  The method outperforms existing techniques in preserving zero-shot performance and robustness on multitask language understanding tasks, demonstrating its superior efficiency and effectiveness.\n",
+    "authors": [
+      {
+        "name": "Ayan Sengupta",
+        "openreview_id": "~Ayan_Sengupta1",
+        "links": {
+          "gscholar": "https://scholar.google.com/citations?user=90EGfboAAAAJ&hl=en",
+          "homepage": "https://victor7246.github.io/"
+        }
+      },
+      {
+        "name": "Siddhant Chaudhary",
+        "openreview_id": "~Siddhant_Chaudhary1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/siddhant-chaudhary-84182110a/",
+          "gscholar": "https://scholar.google.com/citations?user=WZ9a08wAAAAJ&hl=en",
+          "homepage": "https://codetalker7.github.io/"
+        }
+      },
+      {
+        "name": "Tanmoy Chakraborty",
+        "openreview_id": "~Tanmoy_Chakraborty2",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/tanmoy-chakraborty-89553324/",
+          "orcid": "https://orcid.org/0000-0002-0210-0369",
+          "gscholar": "https://scholar.google.co.in/citations?user=C5S9JnIAAAAJ&hl=en",
+          "homepage": "http://tanmoychak.com"
+        }
+      }
+    ]
+  },
+  {
+    "paper_title": "Charting the Design Space of Neural Graph Representations for Subgraph Matching",
+    "pdf_url": "https://openreview.net/pdf/53d17f44d595659cf050490be6c4b87018988e38.pdf",
+    "paper_summary": "This paper investigates the design space of neural graph representations for subgraph matching.  It aims to systematically explore various design choices in neural graph matching networks, including interaction methods (attention vs. permutation-based) and node/edge alignment strategies.  The authors analyze existing methods and identify unexplored combinations, seeking to reveal better performance and general design principles for neural graph matching.\n",
+    "authors": [
+      {
+        "name": "Vaibhav Raj",
+        "openreview_id": "~Vaibhav_Raj1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/vaibhav-raj-8446421b9/"
+        }
+      },
+      {
+        "name": "Indradyumna Roy",
+        "openreview_id": "~Indradyumna_Roy1",
+        "links": {
+          "gscholar": "https://scholar.google.com/citations?user=qb70i84AAAAJ",
+          "homepage": "https://indradyumna.github.io/"
+        }
+      },
+      {
+        "name": "Ashwin Ramachandran",
+        "openreview_id": "~Ashwin_Ramachandran1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/ashwin-ramachandran-042152204/",
+          "gscholar": "https://scholar.google.com/citations?user=y7H-6IgAAAAJ&hl=en",
+          "homepage": "https://ashwinramachandran2002.github.io/"
+        }
+      },
+      {
+        "name": "",
+        "openreview_id": "~Soumen_Chakrabarti1",
+        "links": {
+          "gscholar": "https://scholar.google.com.tw/citations?user=LfF2zfQAAAAJ",
+          "homepage": "https://www.cse.iitb.ac.in/~soumen/"
+        }
+      },
+      {
+        "name": "Abir De",
+        "openreview_id": "~Abir_De1",
+        "links": {
+          "gscholar": "https://scholar.google.co.in/citations?user=_9ZKKbIAAAAJ&hl=en"
+        }
+      }
+    ]
+  },
+  {
+    "paper_title": "Bonsai: Gradient-free Graph Condensation for Node Classification",
+    "pdf_url": "https://openreview.net/pdf/cda993376dcff91230258e560227e99852269d47.pdf",
+    "paper_summary": "This paper introduces Bonsai, a novel, linear-time graph condensation method for node classification in Graph Neural Networks (GNNs).  Bonsai overcomes limitations of existing methods by using exemplar computation trees, enabling model-agnostic condensation and avoiding training on the full dataset.  The approach is mathematically sound, resulting in better performance and significantly faster training than existing techniques.\n",
+    "authors": [
+      {
+        "name": "Mridul Gupta",
+        "openreview_id": "~Mridul_Gupta2",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/mridul1618/",
+          "orcid": "https://orcid.org/0009-0003-4343-4263",
+          "gscholar": "https://scholar.google.com/citations?user=g_cTs3YAAAAJ&hl=en&oi=sra",
+          "homepage": "https://web.iitd.ac.in/~aiz218322"
+        }
+      },
+      {
+        "name": "Samyak Jain",
+        "openreview_id": "~Samyak_Jain5",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/samyak-jain1729/"
+        }
+      },
+      {
+        "name": "Vansh Ramani",
+        "openreview_id": "~Vansh_Ramani1",
+        "links": {
+          "linkedin": "https://linkedin.com/in/ramanivansh/",
+          "gscholar": "https://scholar.google.ch/citations?user=hKH8NPoAAAAJ&hl=en",
+          "homepage": "https://vanshramani.framer.website/"
+        }
+      },
+      {
+        "name": "HARIPRASAD KODAMANA",
+        "openreview_id": "~HARIPRASAD_KODAMANA1",
+        "links": {
+          "gscholar": "https://scholar.google.co.in/citations?user=YBcs36wAAAAJ&hl=en",
+          "homepage": "https://web.iitd.ac.in/~kodamana/"
+        }
+      },
+      {
+        "name": "",
+        "openreview_id": "~Sayan_Ranu2",
+        "links": {
+          "orcid": "https://orcid.org/0000-0003-4147-9372",
+          "gscholar": "https://scholar.google.com/citations?user=K4w5qYUAAAAJ&hl=en",
+          "homepage": "https://www.cse.iitd.ac.in/~sayan/index.html"
+        }
+      }
+    ]
+  },
+  {
+    "paper_title": "Periodic Materials Generation using Text-Guided Joint Diffusion Model",
+    "pdf_url": "https://openreview.net/pdf/8ad46240b718392d7de78aefb2230245544e7a1f.pdf",
+    "paper_summary": "This paper introduces TGDMat, a novel diffusion model for generating 3D periodic materials.  It aims to improve upon existing models by learning the joint distribution of atom types, coordinates, and lattice structure in an end-to-end framework, incorporating global structural knowledge through textual descriptions.  The results demonstrate superior performance on both material generation and prediction tasks compared to existing baselines.\n",
+    "authors": [
+      {
+        "name": "KISHALAY DAS",
+        "openreview_id": "~KISHALAY_DAS1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/kishalay-das-kd-309850143/",
+          "gscholar": "https://scholar.google.com/citations?user=AMP0uJsAAAAJ&hl=en",
+          "homepage": "https://kdmsit.github.io/index.html"
+        }
+      },
+      {
+        "name": "Subhojyoti Khastagir",
+        "openreview_id": "~Subhojyoti_Khastagir1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/subhojyoti-khastagir-2a4716152/"
+        }
+      },
+      {
+        "name": "",
+        "openreview_id": "~Pawan_Goyal1",
+        "links": {
+          "gscholar": "https://scholar.google.com.tw/citations?user=F14FHsIAAAAJ",
+          "homepage": "http://cse.iitkgp.ac.in/~pawang/"
+        }
+      },
+      {
+        "name": "Seung-Cheol Lee",
+        "openreview_id": "~Seung-Cheol_Lee1",
+        "links": {
+          "orcid": "https://orcid.org/0000-0002-9741-6955",
+          "homepage": "https://www.ikst.res.in"
+        }
+      },
+      {
+        "name": "Satadeep Bhattacharjee",
+        "openreview_id": "~Satadeep_Bhattacharjee1",
+        "links": {
+          "homepage": "https://ikst.res.in/"
+        }
+      },
+      {
+        "name": "",
+        "openreview_id": "~Niloy_Ganguly1",
+        "links": {
+          "gscholar": "https://scholar.google.com/citations?user=hCbFmUUAAAAJ&hl=en",
+          "homepage": "http://www.facweb.iitkgp.ac.in/~niloy/"
+        }
+      }
+    ]
+  },
+  {
+    "paper_title": "Clique Number Estimation via Differentiable Functions of Adjacency Matrix Permutations",
+    "pdf_url": "https://openreview.net/pdf/c827a3961d4fc71d35f295fe47af1a56513b177c.pdf",
+    "paper_summary": "This paper introduces a differentiable estimator for predicting a graph's clique number.  The approach formulates the maximum clique problem as finding dense submatrices within a permuted adjacency matrix, using a differentiable mechanism to search for optimal permutations.  The method is designed for situations where explicit clique demonstrations are unavailable but clique size estimation is crucial.\n",
+    "authors": [
+      {
+        "name": "Indradyumna Roy",
+        "openreview_id": "~Indradyumna_Roy1",
+        "links": {
+          "gscholar": "https://scholar.google.com/citations?user=qb70i84AAAAJ",
+          "homepage": "https://indradyumna.github.io/"
+        }
+      },
+      {
+        "name": "Eeshaan Jain",
+        "openreview_id": "~Eeshaan_Jain1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/eeshaanjain/",
+          "gscholar": "https://scholar.google.com/citations?user=r5rqqJEAAAAJ&hl=en",
+          "homepage": "https://eeshaanjain.github.io"
+        }
+      },
+      {
+        "name": "",
+        "openreview_id": "~Soumen_Chakrabarti1",
+        "links": {
+          "gscholar": "https://scholar.google.com.tw/citations?user=LfF2zfQAAAAJ",
+          "homepage": "https://www.cse.iitb.ac.in/~soumen/"
+        }
+      },
+      {
+        "name": "Abir De",
+        "openreview_id": "~Abir_De1",
+        "links": {
+          "gscholar": "https://scholar.google.co.in/citations?user=_9ZKKbIAAAAJ&hl=en"
+        }
+      }
+    ]
+  },
+  {
+    "paper_title": "BEEM: Boosting Performance of Early Exit DNNs using Multi-Exit Classifiers as Experts",
+    "pdf_url": "https://openreview.net/pdf/debbb712eb9e26bf61695ebf77801a55131c9e21.pdf",
+    "paper_summary": "This paper proposes a new method, BEEM, to improve the performance of early exit deep neural networks (DNNs).  BEEM leverages multi-exit classifiers as \"experts\" to aggregate confidence scores, considering only consistent predictions from neighboring experts.  The goal is to achieve faster inference speed with comparable or improved accuracy compared to traditional DNN inference, utilizing the COCO and GLUE datasets.\n",
+    "authors": [
+      {
+        "name": "Divya Jyoti Bajpai",
+        "openreview_id": "~Divya_Jyoti_Bajpai1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/divya-jyoti-bajpai-139128209",
+          "homepage": "https://www.ieor.iitb.ac.in/node/2823"
+        }
+      },
+      {
+        "name": "Manjesh Kumar Hanawal",
+        "openreview_id": "~Manjesh_Kumar_Hanawal1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/manjesh-kumar-hanawal-a260055/",
+          "orcid": "https://orcid.org/0000-0002-1807-5487",
+          "gscholar": "https://scholar.google.com/citations?user=vtVK3KUAAAAJ&hl=en",
+          "homepage": "https://www.ieor.iitb.ac.in/mlions"
+        }
+      }
+    ]
+  },
+  {
+    "paper_title": "Does Safety Training of LLMs Generalize to Semantically Related Natural Prompts?",
+    "pdf_url": "https://openreview.net/pdf/f432171f3c6052c0ec517871292566b7399bd96f.pdf",
+    "paper_summary": "This research investigates the vulnerability of safety-trained large language models (LLMs) to natural, semantically related prompts.  The paper aims to evaluate whether these models, despite alignment techniques, remain safe against prompts that are not specifically crafted as adversarial attacks.  A novel method, Response Guided Question Augmentation (ReG-QA), is proposed to systematically generate such prompts and assess the models' robustness.\n",
+    "authors": [
+      {
+        "name": "Sravanti Addepalli",
+        "openreview_id": "~Sravanti_Addepalli1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/sravanti-addepalli/",
+          "gscholar": "https://scholar.google.com/citations?user=MOO12i0AAAAJ&hl=en"
+        }
+      },
+      {
+        "name": "Yerram Varun",
+        "openreview_id": "~Yerram_Varun1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/yvarun25221/",
+          "homepage": "https://varun221.github.io/"
+        }
+      },
+      {
+        "name": "Arun Suggala",
+        "openreview_id": "~Arun_Suggala1",
+        "links": {
+          "gscholar": "https://scholar.google.com/citations?user=CKgmfDMAAAAJ&hl=en"
+        }
+      },
+      {
+        "name": "",
+        "openreview_id": "~Karthikeyan_Shanmugam1",
+        "links": {
+          "orcid": "https://orcid.org/0009-0008-2879-5868",
+          "gscholar": "https://scholar.google.ca/citations?user=m4DyPcUAAAAJ&hl=en",
+          "homepage": "https://sites.google.com/corp/view/karthikeyan-shanmugam/"
+        }
+      },
+      {
+        "name": "",
+        "openreview_id": "~Prateek_Jain1",
+        "links": {
+          "gscholar": "https://scholar.google.com/citations?user=qYhRbJoAAAAJ&hl=en",
+          "homepage": "http://prateekjain.org"
+        }
+      }
+    ]
+  },
+  {
+    "paper_title": "It Helps to Take a Second Opinion: Teaching Smaller LLMs To Deliberate Mutually via Selective Rationale Optimisation",
+    "pdf_url": "https://openreview.net/pdf/799ba059f2d6b50ca4668376ba1cdd8d72138627.pdf",
+    "paper_summary": "This paper introduces COALITION, a framework designed to enhance the rationale-generating capabilities of smaller language models (SLMs).  The approach leverages two variants of the same SLM interacting to generate and refine rationales, ultimately improving the SLM's ability to produce accurate answers.  The framework, trained via Selective Rationale Optimization, aims to address the limitations of relying on larger, often opaque language models for training smaller models and improve their performance on tasks like mathematical problems, commonsense reasoning, and natural language inference.\n",
+    "authors": [
+      {
+        "name": "Sohan Patnaik",
+        "openreview_id": "~Sohan_Patnaik1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/sohan-patnaik-29061a1a4/",
+          "gscholar": "https://scholar.google.com/citations?hl=en&user=3ZRTryQAAAAJ&scilu=&scisig=AMD79ooAAAAAYY6sRdFKFHS2HfVeyviuk8m3rzvhPe-u&gmla=AJsN-F6FJEWEj7PhAJjf_XfIMVyOKbZ8YlEmwZBbVs8NMAct5wG_guhFHDxloF-mmQT1Xj5s07oYRYFY8Jk8YZZdcTs33LMPcyCDXUfMAcm6Fze0Y44hy7M&sciund=16405773873469585805"
+        }
+      },
+      {
+        "name": "Milan Aggarwal",
+        "openreview_id": "~Milan_Aggarwal2",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/milan-aggarwal-31a954b5/",
+          "gscholar": "https://scholar.google.com/citations?user=YiMNG_QAAAAJ&hl=en&oi=ao"
+        }
+      },
+      {
+        "name": "Sumit Bhatia",
+        "openreview_id": "~Sumit_Bhatia1",
+        "links": {
+          "gscholar": "https://scholar.google.com/citations?user=8HVTWNkAAAAJ",
+          "homepage": "http://sumitbhatia.net/"
+        }
+      },
+      {
+        "name": "",
+        "openreview_id": "~Balaji_Krishnamurthy1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/balaji-krishnamurthy-4241695/",
+          "gscholar": "https://scholar.google.com/citations?user=n8iUBg8AAAAJ&hl=en"
+        }
+      }
+    ]
+  },
+  {
+    "paper_title": "Measuring And Improving Persuasiveness Of Large Language Models",
+    "pdf_url": "https://openreview.net/pdf/ac884658f87199ebcb457a610bf628ecf481891f.pdf",
+    "paper_summary": "This paper introduces PersuasionBench and PersuasionArena, large-scale benchmarks and arenas to evaluate the persuasive abilities of large language models (LLMs).  The research aims to measure both simulative and generative persuasion capabilities,  highlighting that persuasiveness correlates with model size but can be enhanced through targeted training in smaller models.\n",
+    "authors": [
+      {
+        "name": "Somesh Kumar Singh",
+        "openreview_id": "~Somesh_Kumar_Singh2",
+        "links": {
+          "gscholar": "https://scholar.google.com/citations?user=3Unw6gkAAAAJ&hl=en",
+          "homepage": "https://someshsingh22.github.io/"
+        }
+      },
+      {
+        "name": "Yaman Kumar Singla",
+        "openreview_id": "~Yaman_Kumar_Singla1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/yaman-kumar/",
+          "orcid": "https://orcid.org/0000-0001-7880-8219",
+          "gscholar": "https://scholar.google.co.in/citations?hl=en&user=Y7rIA24AAAAJ",
+          "homepage": "https://sites.google.com/view/yaman-kumar/"
+        }
+      },
+      {
+        "name": "Harini S I",
+        "openreview_id": "~Harini_S_I1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/harini-s-i-a140b61bb/",
+          "gscholar": "https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=Q35ix-YAAAAJ",
+          "homepage": "https://harini-si.github.io/"
+        }
+      },
+      {
+        "name": "",
+        "openreview_id": "~Balaji_Krishnamurthy1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/balaji-krishnamurthy-4241695/",
+          "gscholar": "https://scholar.google.com/citations?user=n8iUBg8AAAAJ&hl=en"
+        }
+      }
+    ]
+  },
+  {
+    "paper_title": "From Search to Sampling: Generative Models for Robust Algorithmic Recourse",
+    "pdf_url": "https://openreview.net/pdf/c6c8ec06c7f9ef53d5ac4216c2471b1d20415fd0.pdf",
+    "paper_summary": "This paper introduces GenRe, a generative model for algorithmic recourse.  GenRe aims to jointly train recourse objectives (proximity, plausibility, and validity) for improved recommendations, unlike previous methods that optimize these separately.  The authors show that GenRe, using a forward sampling approach during inference, outperforms existing baselines in terms of cost, plausibility, and validity of generated recourse suggestions.\n",
+    "authors": [
+      {
+        "name": "Prateek Garg",
+        "openreview_id": "~Prateek_Garg3",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/prateekgg/",
+          "orcid": "https://orcid.org/0009-0005-5348-8905",
+          "gscholar": "https://scholar.google.com/citations?user=meuyHdkAAAAJ&hl=en&authuser=3"
+        }
+      },
+      {
+        "name": "Lokesh Nagalapatti",
+        "openreview_id": "~Lokesh_Nagalapatti1",
+        "links": {
+          "gscholar": "https://scholar.google.com/citations?user=BkkZbo0AAAAJ&hl=en&authuser=1",
+          "homepage": "https://nlokesh.netlify.app/"
+        }
+      },
+      {
+        "name": "Sunita Sarawagi",
+        "openreview_id": "~Sunita_Sarawagi1",
+        "links": {
+          "gscholar": "https://scholar.google.com.tw/citations?user=Hg4HmTAAAAAJ",
+          "homepage": "https://www.cse.iitb.ac.in/~sunita/"
+        }
+      }
+    ]
+  },
+  {
+    "paper_title": "Measuring And Improving Engagement of Text-to-Image Generation Models",
+    "pdf_url": "https://openreview.net/pdf/8a918fd68fecd9209403ab6e44f832e47c2e540b.pdf",
+    "paper_summary": "This paper introduces a new dataset, EngagingImageNet, and a model, EngageNet, to measure and improve viewer engagement in text-to-image generation models.  It argues existing metrics fail to capture this crucial aspect, and proposes methods to condition image generation for better user outcomes.  The authors aim to create a benchmark, the Engagement Arena, to spur further research in this field.\n",
+    "authors": [
+      {
+        "name": "Varun Khurana",
+        "openreview_id": "~Varun_Khurana1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/kvarun07/",
+          "gscholar": "https://scholar.google.com/citations?user=pJXPThwAAAAJ"
+        }
+      },
+      {
+        "name": "Yaman Kumar Singla",
+        "openreview_id": "~Yaman_Kumar_Singla1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/yaman-kumar/",
+          "orcid": "https://orcid.org/0000-0001-7880-8219",
+          "gscholar": "https://scholar.google.co.in/citations?hl=en&user=Y7rIA24AAAAJ",
+          "homepage": "https://sites.google.com/view/yaman-kumar/"
+        }
+      },
+      {
+        "name": "Jayakumar Subramanian",
+        "openreview_id": "~Jayakumar_Subramanian1",
+        "links": {
+          "orcid": "https://orcid.org/0000-0003-4621-2677",
+          "gscholar": "https://scholar.google.com/citations?user=LewRar8AAAAJ&hl=en"
+        }
+      },
+      {
+        "name": "",
+        "openreview_id": "~Changyou_Chen1",
+        "links": {
+          "gscholar": "https://scholar.google.com/citations?user=LtEcKBcAAAAJ&hl=en",
+          "homepage": "https://www.cse.buffalo.edu/~changyou/"
+        }
+      },
+      {
+        "name": "",
+        "openreview_id": "~Rajiv_Ratn_Shah1",
+        "links": {
+          "gscholar": "https://scholar.google.com.sg/citations?hl=en&user=WAChZv4AAAAJ",
+          "homepage": "https://iiitd.ac.in/rajivratn"
+        }
+      },
+      {
+        "name": "",
+        "openreview_id": "~zhiqiang_xu1",
+        "links": {
+          "orcid": "https://orcid.org/0000-0002-5693-8933",
+          "homepage": "https://scholar.google.com/citations?user=0R20iBMAAAAJ&hl=en"
+        }
+      },
+      {
+        "name": "",
+        "openreview_id": "~Balaji_Krishnamurthy1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/balaji-krishnamurthy-4241695/",
+          "gscholar": "https://scholar.google.com/citations?user=n8iUBg8AAAAJ&hl=en"
+        }
+      }
+    ]
+  },
+  {
+    "paper_title": "MotionAura: Generating High-Quality and Motion Consistent Videos using Discrete Diffusion",
+    "pdf_url": "https://openreview.net/pdf/45b7da6fce6fc272027212b6c17632d43a4c1530.pdf",
+    "paper_summary": "This paper introduces MotionAura, a novel text-to-video generation model leveraging discrete diffusion models.  The model utilizes a pre-trained 3D VAE to predict discrete tokens, resulting in temporally coherent videos aligned with text prompts.  The paper also presents a spectral transformer-based denoising network for improved video generation and inpainting.\n",
+    "authors": [
+      {
+        "name": "Onkar Kishor Susladkar",
+        "openreview_id": "~Onkar_Kishor_Susladkar1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/onkar-susladkar-248752169/",
+          "orcid": "https://orcid.org/0000-0003-4511-1858",
+          "gscholar": "https://scholar.google.com/citations?user=pxBOqNkAAAAJ&hl=en"
+        }
+      },
+      {
+        "name": "Jishu Sen Gupta",
+        "openreview_id": "~Jishu_Sen_Gupta1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/jishu-sengupta-949444258/"
+        }
+      },
+      {
+        "name": "Chirag Sehgal",
+        "openreview_id": "~Chirag_Sehgal1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/chiragsehgal224/"
+        }
+      },
+      {
+        "name": "Sparsh Mittal",
+        "openreview_id": "~Sparsh_Mittal1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/sparsh-mittal-b77aa715/",
+          "orcid": "https://orcid.org/0000-0002-2908-993X",
+          "gscholar": "https://scholar.google.com.tw/citations?user=Hz44YrEAAAAJ",
+          "homepage": "http://faculty.iitr.ac.in/~sparshfec/"
+        }
+      },
+      {
+        "name": "Rekha Singhal",
+        "openreview_id": "~Rekha_Singhal1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/rekha-singhal-7122635/"
+        }
+      }
+    ]
+  },
+  {
+    "paper_title": "Teaching Human Behavior Improves Content Understanding Abilities Of VLMs",
+    "pdf_url": "https://openreview.net/pdf/c838bbe0a12f56b1fde9d76191b41894a12cd638.pdf",
+    "paper_summary": "This research investigates improving vision-language model (VLM) content understanding by incorporating receiver behavior, such as likes and comments.  The authors demonstrate that training VLMs on these behaviors enhances VLM performance across various content understanding tasks.  This approach leverages readily available, publicly-sourced receiver behavior data, offering a performance boost and a potential free resource for VLM improvement.\n",
+    "authors": [
+      {
+        "name": "Somesh Kumar Singh",
+        "openreview_id": "~Somesh_Kumar_Singh2",
+        "links": {
+          "gscholar": "https://scholar.google.com/citations?user=3Unw6gkAAAAJ&hl=en",
+          "homepage": "https://someshsingh22.github.io/"
+        }
+      },
+      {
+        "name": "Harini S I",
+        "openreview_id": "~Harini_S_I1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/harini-s-i-a140b61bb/",
+          "gscholar": "https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=Q35ix-YAAAAJ",
+          "homepage": "https://harini-si.github.io/"
+        }
+      },
+      {
+        "name": "Yaman Kumar Singla",
+        "openreview_id": "~Yaman_Kumar_Singla1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/yaman-kumar/",
+          "orcid": "https://orcid.org/0000-0001-7880-8219",
+          "gscholar": "https://scholar.google.co.in/citations?hl=en&user=Y7rIA24AAAAJ",
+          "homepage": "https://sites.google.com/view/yaman-kumar/"
+        }
+      },
+      {
+        "name": "",
+        "openreview_id": "~Changyou_Chen1",
+        "links": {
+          "gscholar": "https://scholar.google.com/citations?user=LtEcKBcAAAAJ&hl=en",
+          "homepage": "https://www.cse.buffalo.edu/~changyou/"
+        }
+      },
+      {
+        "name": "",
+        "openreview_id": "~Rajiv_Ratn_Shah1",
+        "links": {
+          "gscholar": "https://scholar.google.com.sg/citations?hl=en&user=WAChZv4AAAAJ",
+          "homepage": "https://iiitd.ac.in/rajivratn"
+        }
+      },
+      {
+        "name": "Veeky Baths",
+        "openreview_id": "~Veeky_Baths1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/mwlite/in/veeky-baths-3824623b",
+          "gscholar": "https://scholar.google.com/citations?user=s84fzIoAAAAJ&hl=en&oi=ao",
+          "homepage": "https://www.bits-pilani.ac.in/goa/veeky/profile"
+        }
+      },
+      {
+        "name": "",
+        "openreview_id": "~Balaji_Krishnamurthy1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/balaji-krishnamurthy-4241695/",
+          "gscholar": "https://scholar.google.com/citations?user=n8iUBg8AAAAJ&hl=en"
+        }
+      }
+    ]
+  },
+  {
+    "paper_title": "Sensitivity Verification for Additive Decision Tree Ensembles",
+    "pdf_url": "https://openreview.net/pdf/0baccd0626487637d58895c5bf4daa1f701f0d6f.pdf",
+    "paper_summary": "This paper develops a formal verification framework for analyzing feature sensitivity in additive decision tree ensembles, considering the confidence of the model's output.  It demonstrates the theoretical (NP-)hardness of this problem and provides a pseudo-Boolean constraint encoding for a tunable sensitivity analysis algorithm, balancing accuracy and runtime.  The authors evaluate their approach on existing GBDT benchmarks, showing improved performance compared to existing methods.\n",
+    "authors": [
+      {
+        "name": "Arhaan Ahmad",
+        "openreview_id": "~Arhaan_Ahmad1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/arhaan-ahmad-418191182/"
+        }
+      },
+      {
+        "name": "Tanay Vineet Tayal",
+        "openreview_id": "~Tanay_Vineet_Tayal1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/tanay-tayal-340541105/?trk=opento_sprofile_topcard"
+        }
+      },
+      {
+        "name": "Ashutosh Gupta",
+        "openreview_id": "~Ashutosh_Gupta2",
+        "links": {
+          "homepage": "https://www.cse.iitb.ac.in/~akg/"
+        }
+      },
+      {
+        "name": "",
+        "openreview_id": "~S._Akshay1",
+        "links": {
+          "orcid": "https://orcid.org/0000-0002-2471-5997",
+          "gscholar": "https://scholar.google.com.tw/citations?user=mtufk2wAAAAJ",
+          "homepage": "https://www.cse.iitb.ac.in/~akshayss/"
+        }
+      }
+    ]
+  },
+  {
+    "paper_title": "EFFICIENT JAILBREAK ATTACK SEQUENCES ON LARGE LANGUAGE MODELS VIA MULTI-ARMED BANDIT-BASED CONTEXT SWITCHING",
+    "pdf_url": "https://openreview.net/pdf/bc16e7d0bc5f4d8c4b1a1d6e943556544f77ff36.pdf",
+    "paper_summary": "This paper introduces a novel jailbreak attack on large language models (LLMs).  It leverages a multi-armed bandit (MAB) approach to create sequential context-switching queries (CSQs) that systematically weaken the model's safety boundaries.  The authors demonstrate significantly improved attack success rates compared to existing methods.\n",
+    "authors": [
+      {
+        "name": "Aditya Ramesh",
+        "openreview_id": "~Aditya_Ramesh3",
+        "links": {
+          "gscholar": "https://scholar.google.com/citations?hl=en&user=6Z-2kMsAAAAJ"
+        }
+      },
+      {
+        "name": "Shivam Bhardwaj",
+        "openreview_id": "~Shivam_Bhardwaj1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/shivam-bhardwaj-ph-d-51335815/",
+          "gscholar": "https://scholar.google.com/citations?view_op=list_works&hl=en&user=ThzXq00AAAAJ&gmla=ALUCkoW-MRFcWKn8lqERTSO4bG1iLKKdUM_02WGuPIxkoJ6CWuDh1B2VxKE7SmoJwJL-j3ymZ3yzWZCcc69QRhvIIPcM41e9GCmtooVx92RlU_ylhiJL"
+        }
+      },
+      {
+        "name": "Aditya Saibewar",
+        "openreview_id": "~Aditya_Saibewar1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/aditya-saibewar-ba55ab128/"
+        }
+      },
+      {
+        "name": "",
+        "openreview_id": "~Manohar_Kaul1",
+        "links": {
+          "gscholar": "https://scholar.google.com.tw/citations?user=jNroyK4AAAAJ",
+          "homepage": "http://www.iith.ac.in/~mkaul/"
+        }
+      }
+    ]
+  },
+  {
+    "paper_title": "Neural Wave Equation for Irregularly Sampled Sequence Data",
+    "pdf_url": "https://openreview.net/pdf/8ed140ad99d8ff52315acf85732ba20a69b155a7.pdf",
+    "paper_summary": "This paper introduces a novel deep learning method, the neural wave equation, for sequence labeling tasks involving irregularly sampled data.  It aims to improve upon existing neural ODE-based architectures by allowing continuous modeling of depth and time, thereby enhancing flexibility and adaptability to varying data complexities.  The authors demonstrate the method's superior performance on several sequence labeling problems compared to previous models.\n",
+    "authors": [
+      {
+        "name": "Arkaprava Majumdar",
+        "openreview_id": "~Arkaprava_Majumdar1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/arkaprava-majumdar-b61003179/"
+        }
+      },
+      {
+        "name": "M Anand Krishna",
+        "openreview_id": "~M_Anand_Krishna1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/anand-krishna-4aa30315a/"
+        }
+      },
+      {
+        "name": "P. K. Srijith",
+        "openreview_id": "~P._K._Srijith1",
+        "links": {
+          "gscholar": "https://scholar.google.com.tw/citations?user=C1YpEWsAAAAJ",
+          "homepage": "https://sites.google.com/site/pksrijith/home"
+        }
+      }
+    ]
+  },
+  {
+    "paper_title": "Robust Root Cause Diagnosis using In-Distribution Interventions",
+    "pdf_url": "https://openreview.net/pdf/704fab6788807803612ad2b12344cc35a2a74913.pdf",
+    "paper_summary": "This paper introduces In-Distribution Interventions (IDI), a novel algorithm for robustly diagnosing root causes of anomalies in complex systems.  IDI predicts root causes by considering both anomalous node values and the effect of intervening on these values to resolve the anomaly, avoiding the unreliability of counterfactual estimates from historical data.  Experiments on synthetic and real datasets demonstrate IDI's superior accuracy compared to existing methods in identifying true root causes.\n",
+    "authors": [
+      {
+        "name": "Lokesh Nagalapatti",
+        "openreview_id": "~Lokesh_Nagalapatti1",
+        "links": {
+          "gscholar": "https://scholar.google.com/citations?user=BkkZbo0AAAAJ&hl=en&authuser=1",
+          "homepage": "https://nlokesh.netlify.app/"
+        }
+      },
+      {
+        "name": "Ashutosh Srivastava",
+        "openreview_id": "~Ashutosh_Srivastava2",
+        "links": {
+          "linkedin": "https://linkedin.com/in/srivhash"
+        }
+      },
+      {
+        "name": "Sunita Sarawagi",
+        "openreview_id": "~Sunita_Sarawagi1",
+        "links": {
+          "gscholar": "https://scholar.google.com.tw/citations?user=Hg4HmTAAAAAJ",
+          "homepage": "https://www.cse.iitb.ac.in/~sunita/"
+        }
+      },
+      {
+        "name": "Amit Sharma",
+        "openreview_id": "~Amit_Sharma3",
+        "links": {
+          "orcid": "https://orcid.org/0000-0002-2086-3191",
+          "gscholar": "https://scholar.google.co.in/citations?user=CXgQufgAAAAJ&hl=en",
+          "homepage": "http://amitsharma.in/"
+        }
+      }
+    ]
+  },
+  {
+    "paper_title": "ONLINE EPSILON NET & PIERCING SET FOR GEOMETRIC CONCEPTS",
+    "pdf_url": "https://openreview.net/pdf/696d482ba820dd1fb2c61d652aea1b70e1287ef9.pdf",
+    "paper_summary": "N/A",
+    "authors": [
+      {
+        "name": "Sujoy Bhore",
+        "openreview_id": "~Sujoy_Bhore1",
+        "links": {}
+      },
+      {
+        "name": "Devdan Dey",
+        "openreview_id": "~Devdan_Dey1",
+        "links": {
+          "orcid": "https://orcid.org/0009-0009-4898-4161"
+        }
+      },
+      {
+        "name": "Satyam Singh",
+        "openreview_id": "~Satyam_Singh1",
+        "links": {}
+      }
+    ]
+  },
+  {
+    "paper_title": "ILLUSION: Unveiling Truth with a Comprehensive Multi-Modal, Multi-Lingual Deepfake Dataset",
+    "pdf_url": "https://openreview.net/pdf/b4b0f39d84d66fbd58c0ce677e7f47db34c37ab8.pdf",
+    "paper_summary": "The paper introduces ILLUSION, a large-scale, multi-modal deepfake dataset.  It comprises 1.3 million samples spanning audio-visual forgeries, 26 languages, and various manipulation protocols to address the limitations of existing datasets.  The goal is to create a dataset robust enough to evaluate and advance deepfake detection research, bridging the gap between synthetic and real-world complexities.\n",
+    "authors": [
+      {
+        "name": "Kartik Thakral",
+        "openreview_id": "~Kartik_Thakral1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/thakral-kartik?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BGLN%2FUjpdSz2kzFL0fm6ROg%3D%3D",
+          "orcid": "https://orcid.org/0000-0002-2528-9950",
+          "gscholar": "https://scholar.google.com/citations?user=dSqzxC4AAAAJ&hl=en&oi=ao",
+          "homepage": "https://sites.google.com/iitj.ac.in/thakralkartik"
+        }
+      },
+      {
+        "name": "Rishabh Ranjan",
+        "openreview_id": "~Rishabh_Ranjan4",
+        "links": {
+          "gscholar": "https://scholar.google.com/citations?user=1SqJwKMAAAAJ&hl=en",
+          "homepage": "https://sites.google.com/view/rishabhranjan/"
+        }
+      },
+      {
+        "name": "Akanksha Singh",
+        "openreview_id": "~Akanksha_Singh1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/-singh-akanksha/",
+          "orcid": "https://orcid.org/0009-0004-3264-8829"
+        }
+      },
+      {
+        "name": "Akshat Jain",
+        "openreview_id": "~Akshat_Jain2",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/akshat-jain-103550201/"
+        }
+      },
+      {
+        "name": "",
+        "openreview_id": "~Mayank_Vatsa1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/mayankvatsa/",
+          "orcid": "https://orcid.org/0000-0001-5952-2274",
+          "gscholar": "https://scholar.google.com.tw/citations?user=-DAxp-cAAAAJ",
+          "homepage": "http://home.iitj.ac.in/~mvatsa/"
+        }
+      },
+      {
+        "name": "Richa Singh",
+        "openreview_id": "~Richa_Singh1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/richa-singh-40ba237/",
+          "orcid": "https://orcid.org/0000-0003-4060-4573",
+          "gscholar": "https://scholar.google.com/citations?user=okqK5UAAAAAJ&hl=en",
+          "homepage": "http://home.iitj.ac.in/~richa/"
+        }
+      }
+    ]
+  },
+  {
+    "paper_title": "Beyond Mere Token Analysis: A Hypergraph Metric Space Framework for Defending Against Socially Engineered LLM Attacks",
+    "pdf_url": "https://openreview.net/pdf/cedd874528d6099323a83a93e025814f28b8e16e.pdf",
+    "paper_summary": "This research paper proposes a novel defense mechanism for large language models (LLMs) against socially engineered attacks.  It leverages hypergraphs and the Gromov-Hausdorff distance to create a metric space representing prompts, enabling a safety filter to distinguish between benign and malicious prompts.  The method is designed to address the growing threat of sophisticated, human-like attacks and exhibits improved performance compared to existing, more generic defenses.\n",
+    "authors": [
+      {
+        "name": "",
+        "openreview_id": "~Manohar_Kaul1",
+        "links": {
+          "gscholar": "https://scholar.google.com.tw/citations?user=jNroyK4AAAAJ",
+          "homepage": "http://www.iith.ac.in/~mkaul/"
+        }
+      },
+      {
+        "name": "Aditya Saibewar",
+        "openreview_id": "~Aditya_Saibewar1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/aditya-saibewar-ba55ab128/"
+        }
+      },
+      {
+        "name": "Sadbhavana Babar",
+        "openreview_id": "~Sadbhavana_Babar1",
+        "links": {
+          "gscholar": "https://scholar.google.com/citations?user=jiJszXYAAAAJ"
+        }
+      }
+    ]
+  },
+  {
+    "paper_title": "Quantum (Inspired)  $D^2$-sampling with Applications",
+    "pdf_url": "https://openreview.net/pdf/200469483697d3ac66abe0d44a5efe9482fa9101.pdf",
+    "paper_summary": "This paper develops a quantum algorithm for approximating D[2]-sampling, a fundamental component of k-means++ clustering.  The algorithm, along with a dequantized version, achieves a time complexity of O[\u02dc](\u03b6\u00b2k\u00b2).  This leads to a quantum-inspired classical implementation of k-means++ with a faster running time than existing methods for large datasets.\n",
+    "authors": [
+      {
+        "name": "Poojan Chetan Shah",
+        "openreview_id": "~Poojan_Chetan_Shah1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/poojan-shah-b077ab25b"
+        }
+      },
+      {
+        "name": "Ragesh Jaiswal",
+        "openreview_id": "~Ragesh_Jaiswal1",
+        "links": {}
+      }
+    ]
+  },
+  {
+    "paper_title": "SBSC: Step-by-Step Coding for Improving Mathematical Olympiad Performance",
+    "pdf_url": "https://openreview.net/pdf/df1273af2e4a905f17436545415573e192eb813f.pdf",
+    "paper_summary": "This paper introduces SBSC, a multi-turn framework for LLMs to solve mathematical Olympiad problems.  SBSC allows the model to generate a sequence of programs, each addressing a sub-task, ultimately reaching the solution.  Experiments demonstrate significant improvement over existing state-of-the-art methods, especially when evaluated on competition-level datasets.\n",
+    "authors": [
+      {
+        "name": "Kunal Singh",
+        "openreview_id": "~Kunal_Singh1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/i-kunal-singh/",
+          "gscholar": "https://scholar.google.com/citations?user=gXFleqAAAAAJ&hl=en"
+        }
+      },
+      {
+        "name": "Ankan Biswas",
+        "openreview_id": "~Ankan_Biswas1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/ankanbiswas7/"
+        }
+      },
+      {
+        "name": "Sayandeep Bhowmick",
+        "openreview_id": "~Sayandeep_Bhowmick1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/sayandeep-bhowmick-b19000286/"
+        }
+      },
+      {
+        "name": "Pradeep Moturi",
+        "openreview_id": "~Pradeep_Moturi1",
+        "links": {
+          "gscholar": "https://scholar.google.com/citations?user=SLlkxYoAAAAJ&hl=en&authuser=1",
+          "homepage": "https://www.linkedin.com/in/pradeepmoturi"
+        }
+      },
+      {
+        "name": "Siva Kishore Gollapalli",
+        "openreview_id": "~Siva_Kishore_Gollapalli1",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/siva-kishore-gollapalli-700978203/"
+        }
+      }
+    ]
+  },
+  {
+    "paper_title": "Designing Concise ConvNets with Columnar Stages",
+    "pdf_url": "https://openreview.net/pdf/8eb49e491feecae804537675c711f98f57149f2f.pdf",
+    "paper_summary": "This paper introduces CoSNet, a new convolutional neural network (ConvNet) design focused on resource-constrained deployments.  CoSNet aims to improve upon existing concise ConvNets by considering factors beyond runtime optimization, such as computational cost (FLOPs and parameters), in addition to depth reduction.  The proposed design specifically targets efficient resource use through a novel columnar stacking methodology, while maintaining competitive performance with existing state-of-the-art ConvNets.\n",
+    "authors": [
+      {
+        "name": "Ashish Kumar",
+        "openreview_id": "~Ashish_Kumar2",
+        "links": {
+          "linkedin": "https://www.linkedin.com/in/ashishkumar822/",
+          "gscholar": "https://scholar.google.com/citations?user=n-oRDEYAAAAJ&hl=en",
+          "homepage": "https://ashishkumar822.github.io"
+        }
+      },
+      {
+        "name": "Jaesik Park",
+        "openreview_id": "~Jaesik_Park3",
+        "links": {
+          "gscholar": "https://scholar.google.com/citations?user=_3q6KBIAAAAJ&hl=en",
+          "homepage": "http://jaesik.info"
+        }
+      }
+    ]
+  }
+]
