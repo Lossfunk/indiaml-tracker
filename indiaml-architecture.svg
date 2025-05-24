@@ -324,7 +324,7 @@
      font-size="16px"
      text-anchor="middle"
      fill="#ffffff"
-     id="text240">venues_config.py</text>
+     id="text240">Conference Venue Configuration</text>
   <rect
      x="798.64191"
      y="208.08267"
@@ -343,7 +343,7 @@
      font-size="16px"
      text-anchor="middle"
      fill="#ffffff"
-     id="text244">name2cc.py</text>
+     id="text244">Name to Country Mapper</text>
   <rect
      x="798.64191"
      y="293.08267"
@@ -362,7 +362,7 @@
      font-size="16px"
      text-anchor="middle"
      fill="#ffffff"
-     id="text248">d2cc.py</text>
+     id="text248">Domain to Country Mapper</text>
   <rect
      x="798.64191"
      y="378.08267"
@@ -381,7 +381,7 @@
      font-size="16px"
      text-anchor="middle"
      fill="#ffffff"
-     id="text252">db_config.py</text>
+     id="text252">Database Configuration</text>
   <!-- Adapters Layer -->
   <rect
      x="180"
@@ -400,7 +400,7 @@
      font-size="16"
      text-anchor="middle"
      fill="white"
-     id="text256">BaseAdapter</text>
+     id="text256">Base Adapter Interface</text>
   <rect
      x="180"
      y="295"
@@ -418,7 +418,7 @@
      font-size="14"
      text-anchor="middle"
      fill="white"
-     id="text260">NeurIPSAdapter</text>
+     id="text260">NeurIPS Adapter</text>
   <rect
      x="330"
      y="295"
@@ -436,7 +436,7 @@
      font-size="14"
      text-anchor="middle"
      fill="white"
-     id="text264">ICMLAdapter</text>
+     id="text264">ICML Adapter</text>
   <rect
      x="480"
      y="295"
@@ -454,7 +454,7 @@
      font-size="14"
      text-anchor="middle"
      fill="white"
-     id="text268">ICAIAdapter</text>
+     id="text268">ICAI Adapter</text>
   <rect
      x="630"
      y="210"
@@ -472,7 +472,7 @@
      font-size="16"
      text-anchor="middle"
      fill="white"
-     id="text272">adapter_factory.py</text>
+     id="text272">Adapter Factory</text>
   <!-- Pipeline Layer -->
   <rect
      x="110"
@@ -491,7 +491,7 @@
      font-size="16"
      text-anchor="middle"
      fill="white"
-     id="text276">process_venue.py</text>
+     id="text276">Conference Venue Processing</text>
   <rect
      x="290"
      y="390"
@@ -509,7 +509,7 @@
      font-size="16"
      text-anchor="middle"
      fill="white"
-     id="text280">paper_author_mapping.py</text>
+     id="text280">Paper-Author Mapping</text>
   <rect
      x="510"
      y="390"
@@ -527,7 +527,7 @@
      font-size="16"
      text-anchor="middle"
      fill="white"
-     id="text284">venudao.py</text>
+     id="text284">Venue Data Access</text>
   <rect
      x="110"
      y="475"
@@ -545,7 +545,7 @@
      font-size="16"
      text-anchor="middle"
      fill="white"
-     id="text288">process_authors.py</text>
+     id="text288">Author Data Processing</text>
   <rect
      x="290"
      y="475"
@@ -563,7 +563,7 @@
      font-size="16"
      text-anchor="middle"
      fill="white"
-     id="text292">affiliation_checker.py</text>
+     id="text292">Institution Affiliation Validator</text>
   <rect
      x="510"
      y="475"
@@ -581,7 +581,7 @@
      font-size="16"
      text-anchor="middle"
      fill="white"
-     id="text296">models.py</text>
+     id="text296">Database Models</text>
   <text
      x="590"
      y="525"
@@ -607,7 +607,7 @@
      font-size="16"
      text-anchor="middle"
      fill="white"
-     id="text302">patch_unk_cc2.py</text>
+     id="text302">Country Code Fixer V2</text>
   <rect
      x="290"
      y="560"
@@ -625,7 +625,7 @@
      font-size="16"
      text-anchor="middle"
      fill="white"
-     id="text306">patch_unk_cc3.py</text>
+     id="text306">Country Code Fixer V3</text>
   <rect
      x="470"
      y="560"
@@ -643,7 +643,7 @@
      font-size="16"
      text-anchor="middle"
      fill="white"
-     id="text310">patch_unk_cc4.py</text>
+     id="text310">Country Code Fixer V4</text>
   <rect
      x="650"
      y="560"
@@ -661,7 +661,7 @@
      font-size="16"
      text-anchor="middle"
      fill="white"
-     id="text314">patch_unk_cc5.py</text>
+     id="text314">Country Code Fixer V5</text>
   <!-- LLM Integration Components -->
   <rect
      x="690"
@@ -726,7 +726,7 @@
      font-size="16"
      text-anchor="middle"
      fill="white"
-     id="text342">analytics.py</text>
+     id="text342">Conference Analytics</text>
   <rect
      x="380"
      y="770"
@@ -744,7 +744,7 @@
      font-size="16"
      text-anchor="middle"
      fill="white"
-     id="text-finalJSON">generate_final_jsons.py</text>
+     id="text-finalJSON">Dashboard Data Generator</text>
   <rect
      x="600"
      y="770"
@@ -762,7 +762,7 @@
      font-size="16"
      text-anchor="middle"
      fill="white"
-     id="text-summaries">generate_summaries.py</text>
+     id="text-summaries">Paper Summary Generator</text>
   <rect
      x="200"
      y="855"
