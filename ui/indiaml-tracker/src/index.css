@@ -1,118 +1,153 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
- 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
- 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
- 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
- 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
- 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
- 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
- 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
- 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
- 
-    --ring: 215 20.2% 65.1%;
- 
+    /* Define light mode variables */
+    --background: 0 0% 100%; /* white */
+    --foreground: 222.2 84% 4.9%; /* near black */
+
+    --muted: 210 40% 96.1%; /* gray-100 */
+    --muted-foreground: 215.4 16.3% 46.9%; /* gray-500 */
+
+    --popover: 0 0% 100%; /* white */
+    --popover-foreground: 222.2 84% 4.9%; /* near black */
+
+    --card: 0 0% 100%; /* white */
+    --card-foreground: 222.2 84% 4.9%; /* near black */
+
+    --border: 214.3 31.8% 91.4%; /* gray-200 */
+    --input: 214.3 31.8% 91.4%; /* gray-200 */
+
+    --primary: 243.8 89.5% 66.3%; /* indigo-500 */
+    --primary-foreground: 210 40% 98%; /* gray-50 */
+
+    --secondary: 210 40% 96.1%; /* gray-100 */
+    --secondary-foreground: 222.2 47.4% 11.2%; /* near black */
+
+    --accent: 210 40% 96.1%; /* gray-100 */
+    --accent-foreground: 222.2 47.4% 11.2%; /* near black */
+
+    --destructive: 0 84.2% 60.2%; /* red-500 */
+    --destructive-foreground: 210 40% 98%; /* gray-50 */
+
+    --ring: 215 20.2% 65.1%; /* gray-400 */
+
     --radius: 0.5rem;
   }
- 
+
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
- 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
- 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
- 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
- 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
- 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
- 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
- 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
- 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 85.7% 97.3%;
- 
-    --ring: 217.2 32.6% 17.5%;
+    /* Define dark mode variables */
+    --background: 222.2 84% 4.9%; /* near black */
+    --foreground: 210 40% 98%; /* gray-50 */
+
+    --muted: 217.2 32.6% 17.5%; /* gray-800 */
+    --muted-foreground: 215 20.2% 65.1%; /* gray-400 */
+
+    --popover: 222.2 84% 4.9%; /* near black */
+    --popover-foreground: 210 40% 98%; /* gray-50 */
+
+    --card: 222.2 47.4% 14%; /* A slightly lighter dark gray for cards */
+    --card-foreground: 210 40% 98%; /* gray-50 */
+
+    --border: 217.2 32.6% 27.5%; /* gray-700 */
+    --input: 217.2 32.6% 27.5%; /* gray-700 */
+
+    --primary: 243.8 89.5% 70.3%; /* indigo-400 */
+    --primary-foreground: 222.2 47.4% 11.2%; /* near black */
+
+    --secondary: 217.2 32.6% 17.5%; /* gray-800 */
+    --secondary-foreground: 210 40% 98%; /* gray-50 */
+
+    --accent: 217.2 32.6% 17.5%; /* gray-800 */
+    --accent-foreground: 210 40% 98%; /* gray-50 */
+
+    --destructive: 0 72.2% 50.6%; /* red-600 */
+    --destructive-foreground: 0 85.7% 97.3%; /* red-50 */
+
+    --ring: 217.2 32.6% 17.5%; /* gray-800 */
   }
 }
- 
+
 @layer base {
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
+    /* Apply Rubik font */
+    font-family: "Rubik", sans-serif;
+    /* Improve font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-  .light {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
+  /* Add focus-visible styles using ring utilities */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+    border-radius: 2px; /* Optional: match radius */
+  }
+  *:focus:not(:focus-visible) {
+    @apply ring-0 outline-none; /* Remove outline only if not focus-visible */
   }
 }
 
+/* Custom Scrollbar Styles */
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    /* Use muted bg, adjust alpha if needed */
+    background-color: hsl(var(--muted) / 0.5);
+    border-radius: 3px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    /* Use muted-foreground */
+    background-color: hsl(var(--muted-foreground));
+    border-radius: 3px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    /* Slightly darker/lighter on hover */
+    background-color: hsl(var(--muted-foreground) / 0.8);
+  }
+  /* Firefox scrollbar */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--muted-foreground)) hsl(var(--muted) / 0.5);
+  }
+}
+
+/* Animations (Keep if used elsewhere, the dashboard uses fade-in) */
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
 }
 
-@keyframes fadeOut {
-  0% { opacity: 1; }
-  100% { opacity: 0; }
+/* Add other animations like accordion if needed by other parts of the app */
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
 }
-
-@keyframes slideIn {
-  0% { transform: translateY(100%); }
-  100% { transform: translateY(0); }
-}
-
-@keyframes slideOut {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(100%); }
-}
-
-.fade-in {
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-.fade-out {
-  animation: fadeOut 0.5s ease-in-out;
-}
-
-.slide-in {
-  animation: slideIn 0.5s ease-in-out;
-}
-
-.slide-out {
-  animation: slideOut 0.5s ease-in-out;
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
 }

@@ -1,0 +1,244 @@
+{
+  "IIT Bombay": {
+    "variations": [
+      "Indian Institute of Technology, Bombay",
+      "Indian Institute of Technology Bombay",
+      "IIT Bombay",
+      "Department of Computer Science and Engineering, IIT Bombay",
+      "Indian Institute of Technology Bombay,"
+    ],
+    "type": "academic"
+  },
+  "IIT Delhi": {
+    "variations": [
+      "Indian Institute of Technology, Delhi",
+      "Indian Institute of Technology Delhi",
+      "IIT Delhi"
+    ],
+    "type": "academic"
+  },
+  "IIT Madras": {
+    "variations": [
+      "Indian Institute of Technology, Madras",
+      "Indian Institute of Technology Madras",
+      "Indian Institute of Technology Madras,"
+    ],
+    "type": "academic"
+  },
+  "IIT Kanpur": {
+    "variations": [
+      "Indian Institute of Technology, Kanpur"
+    ],
+    "type": "academic"
+  },
+  "IIT Kharagpur": {
+    "variations": [
+      "Indian Institute of Technology Kharagpur",
+      "Indian Institute of Technology, Kharagpur",
+      "IIT Kharagpur",
+      "Indian Institute of Technology Kharagpur,"
+    ],
+    "type": "academic"
+  },
+  "IIT Roorkee": {
+    "variations": [
+      "Indian Institute of Technology, Roorkee",
+      "Indian Institution Technology Roorkee"
+    ],
+    "type": "academic"
+  },
+  "IIT Hyderabad": {
+    "variations": [
+      "Indian Institute of Technology, Hyderabad",
+      "Indian Institute of Technology Hyderabad"
+    ],
+    "type": "academic"
+  },
+  "IIT Jodhpur": {
+    "variations": [
+      "Indian Institute of Technology Jodhpur, India",
+      "IIT Jodhpur"
+    ],
+    "type": "academic"
+  },
+  "IIT BHU Varanasi": {
+    "variations": [
+      "Indian Institute of Technology (Banaras Hindu University) Varanasi"
+    ],
+    "type": "academic"
+  },
+  "IIIT Hyderabad": {
+    "variations": [
+      "International Institute of Information Technology, Hyderabad",
+      "International Institute of Information Technology Hyderabad",
+      "International Institute of Information Technology Hyderabad, India"
+    ],
+    "type": "academic"
+  },
+  "IIIT Delhi": {
+    "variations": [
+      "Indraprastha Institute of Information Technology, Delhi"
+    ],
+    "type": "academic"
+  },
+  "IISc": {
+    "variations": [
+      "Indian Institute of Science",
+      "Indian institute of science, Bangalore"
+    ],
+    "type": "academic"
+  },
+  "DAIICT": {
+    "variations": [
+      "Dhirubhai Ambani Institute Of Information and Communication Technology"
+    ],
+    "type": "academic"
+  },
+  "Heritage Institute of Technology": {
+    "variations": [
+      "Heritage Institute of Technology"
+    ],
+    "type": "academic"
+  },
+  "RV College of Engineering": {
+    "variations": [
+      "R V College of Engineering"
+    ],
+    "type": "academic"
+  },
+  "Nirma University": {
+    "variations": [
+      "Institute of Technology,Nirma University"
+    ],
+    "type": "academic"
+  },
+  "Indo-Korea Science and Technology Center": {
+    "variations": [
+      "Indo Korea Science and Technology Center",
+      "Indo Korea Science and Technology Center, Bangalore, India"
+    ],
+    "type": "academic"
+  },
+  "IIM": {
+    "variations": [
+      "Indian Institute of Management"
+    ],
+    "type": "academic"
+  },
+  "DTU": {
+    "variations": [
+      "Delhi Technological University (Delhi College of Engineering)"
+    ],
+    "type": "academic"
+  },
+  "Microsoft": {
+    "variations": [
+      "Microsoft",
+      "Microsoft Research",
+      "Research, Microsoft"
+    ],
+    "type": "corporate"
+  },
+  "Adobe": {
+    "variations": [
+      "Adobe Systems",
+      "Adobe "
+    ],
+    "type": "corporate"
+  },
+  "Google": {
+    "variations": [
+      "Google",
+      "Research, Google"
+    ],
+    "type": "corporate"
+  },
+  "Google DeepMind": {
+    "variations": [
+      "Google Deepmind",
+      "Google DeepMind"
+    ],
+    "type": "corporate"
+  },
+  "Fujitsu": {
+    "variations": [
+      "Fujitsu Research and Development Center Co. Ltm."
+    ],
+    "type": "corporate"
+  },
+  "TCS": {
+    "variations": [
+      "Tata Consultancy Services Limited, India"
+    ],
+    "type": "corporate"
+  },
+  "T-Tech": {
+    "variations": [
+      "T-Tech"
+    ],
+    "type": "corporate"
+  },
+  "Skan.ai": {
+    "variations": [
+      "Skan.ai"
+    ],
+    "type": "corporate"
+  },
+  "ServiceNow": {
+    "variations": [
+      "ServiceNow"
+    ],
+    "type": "corporate"
+  },
+  "ScorelabsAI": {
+    "variations": [
+      "ScorelabsAI, USA"
+    ],
+    "type": "corporate"
+  },
+  "OpenLocus": {
+    "variations": [
+      "OpenLocus"
+    ],
+    "type": "corporate"
+  },
+  "NeuralSpace": {
+    "variations": [
+      "NeuralSpace, Inc."
+    ],
+    "type": "corporate"
+  },
+  "Krutrim AI": {
+    "variations": [
+      "Krutrim AI"
+    ],
+    "type": "corporate"
+},
+  "Fractal": {
+    "variations": [
+      "Fractal Analytics",
+      "Fractal AI Research",
+      "Fractal AI",
+      "Fractal"
+    ],
+    "type": "corporate"
+  },
+  "Cohere": {
+    "variations": [
+      "Cohere"
+    ],
+    "type": "corporate"
+  },
+  "CMRI": {
+    "variations": [
+      "CMRI"
+    ],
+    "type": "corporate"
+  },
+  "Abacus.ai": {
+    "variations": [
+      "Abacus.ai"
+    ],
+    "type": "corporate"
+  }
+}

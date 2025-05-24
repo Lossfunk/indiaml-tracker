@@ -23,9 +23,7 @@ export function TopNav() {
                 <AnimatedLogo />
               </div>
 
-              <div>
-                India@ML
-              </div>
+              <div>India@ML</div>
             </div>
             {/* India@ML */}
           </Link>
@@ -44,14 +42,25 @@ export function TopNav() {
               <span className="sr-only">Toggle theme</span>
             </Button>
 
+            <Button
+              variant="ghost"
+              className="text-gray-900 dark:text-gray-200 hover:text-gray-800"
+              asChild
+            >
+              {/* <Link to="/motivation">Our Motivation</Link> */}
+              <Link to="/conference-summary?conference=ICLR&year=2025">
+                Conference Summaries
+              </Link>
+            </Button>
+
             {/* Motivation Link */}
             <Button
               variant="ghost"
               className="text-gray-900 dark:text-gray-200 hover:text-gray-800"
               asChild
             >
-              <Link to="/motivation">Motivation</Link>
-            </Button>
+              <Link to="/motivation">Our Motivation</Link>
+              </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -93,6 +102,6 @@ export function TopNav() {
           </div>
         </div>
       </div>
-    </nav >
+    </nav>
   );
 }

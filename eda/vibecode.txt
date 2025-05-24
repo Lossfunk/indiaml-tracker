@@ -1,0 +1,136 @@
+This database schema is designed to store information about research papers, their authors, affiliations, and the venues (like conferences) where they are published. It uses four main tables: `papers`, `authors`, `paper_authors`, and `venue_infos`.
+
+### Schema Explanation:
+
+1.  **`venue_infos` Table:**
+    * This table stores details about the publication venues.
+    * `id`: A unique integer identifier for each venue entry (Primary Key).
+    * `conference`: The name of the conference or journal (e.g., "ICLR").
+    * `year`: The year the conference was held or the journal volume was published.
+    * `track`: Specifies a particular track within a conference (e.g., "Conference", "Workshop").
+    * The `UNIQUE` constraint `uix_conference_year_track` ensures that each combination of conference, year, and track is unique, preventing duplicate venue entries.
+
+2.  **`papers` Table:**
+    * This table holds information about individual research papers.
+    * `id`: A unique string identifier for each paper, often an ID from a source like OpenReview (Primary Key, e.g., "zzR1Uskhj0").
+    * `venue_info_id`: An integer that links the paper to a specific venue in the `venue_infos` table (Foreign Key).
+    * `title`: The title of the research paper.
+    * `status`: The submission status of the paper (e.g., "accepted", "rejected", "withdrawn").
+    * `pdf_url`: A URL pointing to the PDF version of the paper.
+    * `pdf_path`: A local file system path where the PDF might be stored.
+    * `pdate`: The publication date of the paper (datetime).
+    * `odate`: An "original date," which could represent the submission date or another relevant timestamp (datetime).
+    * `raw_authors`: A JSON field that stores the author information as it was initially retrieved, typically a list of objects where each object contains details like the author's name and their OpenReview ID. This field provides a raw snapshot of author data associated with the paper before it's potentially normalized into the `authors` and `paper_authors` tables. For example: `[{"name": "Ruiyuan Huang", "openreview_id": "~Ruiyuan_Huang1"}, {"name": "Zengfeng Huang", "openreview_id": "~Zengfeng_Huang1"}]`.
+    * `accept_type`: Text describing the type of acceptance if the paper was accepted (e.g., "poster", "spotlight", "oral presentation").
+
+3.  **`authors` Table:**
+    * This table stores information about the authors of the papers.
+    * `id`: A unique integer identifier for each author (Primary Key).
+    * `full_name`: The complete name of the author.
+    * `email`: The author's email address.
+    * `openreview_id`: The author's unique identifier from OpenReview (e.g., "~Ruiyuan_Huang1"). This field has a `UNIQUE` constraint.
+    * `orcid`: The author's ORCID iD, a persistent digital identifier.
+    * `google_scholar_link`: A URL to the author's Google Scholar profile.
+    * `linkedin`: A URL to the author's LinkedIn profile.
+    * `homepage`: A URL to the author's personal or institutional homepage.
+    * `affiliation_history`: A JSON field that stores a list of the author's affiliations over time. Each entry in the list is an object detailing the `position`, `start` and `end` years (or null if ongoing), and `institution` details (like `domain`, `name`, `country`, `stateProvince`, `city`, `department`). This allows tracking an author's career progression and affiliations at different points in time. For example: `[{"position": "PhD student", "start": 2021, "end": null, "institution": {"domain": "fudan.edu.cn", "name": "Fudan University", ...}}]`.
+
+4.  **`paper_authors` Table:**
+    * This is an associative (or junction) table that links papers to their authors and defines the order and affiliation for each author on a specific paper.
+    * `paper_id`: The ID of the paper (Foreign Key referencing `papers.id`).
+    * `author_id`: The ID of the author (Foreign Key referencing `authors.id`).
+    * `position`: An integer indicating the sequence of the author in the paper's author list (e.g., 0 for the first author, 1 for the second, and so on). This is crucial as author order often signifies contribution levels.
+    * `affiliation_name`: The name of the author's institution at the time of the paper's publication (e.g., "Fudan University").
+    * `affiliation_domain`: The domain name of the affiliation (e.g., "fudan.edu.cn").
+    * `affiliation_state_province`: The state or province of the affiliation.
+    * `affiliation_country`: The country of the affiliation (e.g., "CN" for China).
+    * The combination of `paper_id` and `author_id` forms the Primary Key for this table, ensuring that an author is linked to a paper only once, though they appear in a specific position.
+
+### Purpose of Fields and Relationships:
+
+* **Finding Authors of a Paper:** To find all authors of a specific paper, you would query the `paper_authors` table using the `paper_id`. You can then join with the `authors` table to get more details about each author and use the `position` field to order them correctly.
+* **Author Sequence:** The `position` field in the `paper_authors` table is critical because the order of authors on a research paper usually indicates the level of contribution or seniority. The first author is often the primary contributor, and the last author can be a senior supervisor.
+* **JSON Fields:**
+    * `papers.raw_authors`: This field serves as a staging area or a direct record of the author data as sourced (e.g., from an API). It's useful for initial data ingestion before author entities are fully resolved and linked. It ensures no raw data is lost even if the structured linking process encounters issues.
+    * `authors.affiliation_history`: This JSON field provides a flexible way to store an author's complete affiliation history without needing a separate complex table structure for historical affiliations. It allows for queries that might try to determine an author's affiliation around the time a paper was published (as seen in the `resolve_affiliation` Python function example).
+    * Any fields that are not available or set to "UNK" is believed to be Unknown.
+* **Affiliation for a Specific Paper:** The `paper_authors` table stores `affiliation_name`, `affiliation_domain`, etc. This represents the author's affiliation *as it pertains to that specific paper*. This is important because an author's affiliation might change over time, and the one listed on the paper is the relevant one for that publication. The `authors.affiliation_history` provides a broader historical context.
+
+### Exemplary SQL Queries:
+
+1.  **Find all authors for a specific paper, ordered by their position:**
+    ```sql
+    SELECT
+        a.full_name,
+        pa.position,
+        pa.affiliation_name
+    FROM
+        paper_authors pa
+    JOIN
+        authors a ON pa.author_id = a.id
+    WHERE
+        pa.paper_id = 'zxg6601zoc'  -- Example paper ID
+    ORDER BY
+        pa.position;
+    ```
+
+2.  **Find all papers written by a specific author (e.g., by OpenReview ID):**
+    ```sql
+    SELECT
+        p.title,
+        p.status,
+        vi.conference,
+        vi.year
+    FROM
+        papers p
+    JOIN
+        paper_authors pa ON p.id = pa.paper_id
+    JOIN
+        authors a ON pa.author_id = a.id
+    JOIN
+        venue_infos vi ON p.venue_info_id = vi.id
+    WHERE
+        a.openreview_id = '~Ruiyuan_Huang1'; -- Example author OpenReview ID
+    ```
+
+3.  **Find all "accepted" papers for a specific conference and year:**
+    ```sql
+    SELECT
+        p.id,
+        p.title,
+        p.status,
+        p.accept_type
+    FROM
+        papers p
+    JOIN
+        venue_infos vi ON p.venue_info_id = vi.id
+    WHERE
+        vi.conference = 'ICLR' AND vi.year = 2025 AND p.status = 'accepted';
+    ```
+
+4.  **Count the number of papers submitted to each track of a specific conference and year:**
+    ```sql
+    SELECT
+        vi.track,
+        COUNT(p.id) AS number_of_papers
+    FROM
+        papers p
+    JOIN
+        venue_infos vi ON p.venue_info_id = vi.id
+    WHERE
+        vi.conference = 'ICLR' AND vi.year = 2025
+    GROUP BY
+        vi.track;
+    ```
+
+5.  **Get the raw author list for a specific paper:**
+    ```sql
+    SELECT
+        raw_authors
+    FROM
+        papers
+    WHERE
+        id = 'zz9jAssrwL'; -- Example paper ID
+    ```
+
+This schema provides a structured way to manage academic publication data, allowing for detailed queries about papers, authors, their contributions, affiliations, and publication venues.
