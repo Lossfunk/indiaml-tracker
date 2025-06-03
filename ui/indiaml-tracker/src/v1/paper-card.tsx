@@ -249,20 +249,13 @@ export const PaperCard = forwardRef<HTMLDivElement, PaperCardProps>(
                             </Badge>
                           )}
                         </TooltipTrigger>
-                        <AnimatePresence>
-                          <TooltipContent
-                            as={motion.div}
-                            initial={{ opacity: 0, y: 4 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: 4 }}
-                            transition={{ duration: 0.2 }}
-                            side="top"
-                            sideOffset={10}
-                            className="z-50 max-w-xs sm:max-w-sm p-3 text-sm leading-normal text-white bg-slate-800 rounded-lg shadow-xl whitespace-pre-line"
-                          >
-                            {getAuthorInfo(author)}
-                          </TooltipContent>
-                        </AnimatePresence>
+                        <TooltipContent
+                          side="top"
+                          sideOffset={10}
+                          className="z-50 max-w-xs sm:max-w-sm p-3 text-sm leading-normal text-white bg-slate-800 rounded-lg shadow-xl whitespace-pre-line"
+                        >
+                          {getAuthorInfo(author)}
+                        </TooltipContent>
                       </Tooltip>
                     )
                   })}
@@ -303,62 +296,42 @@ export const PaperCard = forwardRef<HTMLDivElement, PaperCardProps>(
                     </span>
                   )}
 
-                  {/* Presentation Type Icon - Enhanced with color */}
+                  {/* Presentation Type - Enhanced with visible text for mobile */}
                   {paper.venue && (
-                    <TooltipProvider>
-                      <Tooltip delayDuration={100}>
-                        <TooltipTrigger>
-                          {paper.venue.toLowerCase().includes("oral") ? (
-                            <div className="p-1.5 bg-teal-100/30 dark:bg-teal-900/20 rounded-full text-teal-600 dark:text-teal-300 hover:bg-teal-200/40 dark:hover:bg-teal-800/30">
-                              <Presentation className="h-4 w-4" />
-                            </div>
-                          ) : paper.venue.toLowerCase().includes("spotlight") ? (
-                            <div className="p-1.5 bg-amber-100/30 dark:bg-amber-900/20 rounded-full text-amber-600 dark:text-amber-300 hover:bg-amber-200/40 dark:hover:bg-amber-800/30">
-                              <Star className="h-4 w-4" />
-                            </div>
-                          ) : (
-                            <div className="p-1.5 bg-slate-100/30 dark:bg-slate-800/40 rounded-full text-indigo-400 dark:text-indigo-400/70 hover:bg-slate-200/40 dark:hover:bg-slate-700/50">
-                              <ImageIcon className="h-4 w-4" />
-                            </div>
-                          )}
-                        </TooltipTrigger>
-                        <TooltipContent side="top" sideOffset={4} className="bg-slate-800 text-white p-2 rounded-md text-xs">
-                          {presentationInfo.text}
-                        </TooltipContent>
-                      </Tooltip>
-                    </TooltipProvider>
+                    <div className="flex items-center gap-1.5">
+                      {paper.venue.toLowerCase().includes("oral") ? (
+                        <div className="flex items-center gap-1.5 px-2 py-1 bg-teal-100/30 dark:bg-teal-900/20 rounded-full text-teal-600 dark:text-teal-300">
+                          <Presentation className="h-4 w-4" />
+                          <span className="text-xs font-medium">Oral</span>
+                        </div>
+                      ) : paper.venue.toLowerCase().includes("spotlight") ? (
+                        <div className="flex items-center gap-1.5 px-2 py-1 bg-amber-100/30 dark:bg-amber-900/20 rounded-full text-amber-600 dark:text-amber-300">
+                          <Star className="h-4 w-4" />
+                          <span className="text-xs font-medium">Spotlight</span>
+                        </div>
+                      ) : (
+                        <div className="flex items-center gap-1.5 px-2 py-1 bg-slate-100/30 dark:bg-slate-800/40 rounded-full text-indigo-400 dark:text-indigo-400/70">
+                          <ImageIcon className="h-4 w-4" />
+                          <span className="text-xs font-medium">Poster</span>
+                        </div>
+                      )}
+                    </div>
                   )}
 
-                  {/* First Author Icon - With muted color */}
+                  {/* First Author - With visible text for mobile */}
                   {paper.top_author_from_india === true && (
-                    <TooltipProvider>
-                      <Tooltip delayDuration={100}>
-                        <TooltipTrigger>
-                          <div className="p-1.5 bg-slate-100/30 dark:bg-slate-800/40 rounded-full text-slate-500 dark:text-slate-400 hover:bg-slate-200/40 dark:hover:bg-slate-700/50">
-                            <Trophy className="h-4 w-4" />
-                          </div>
-                        </TooltipTrigger>
-                        <TooltipContent side="top" sideOffset={4} className="bg-slate-800 text-white p-2 rounded-md text-xs">
-                          First Author affiliated with an Indian institution
-                        </TooltipContent>
-                      </Tooltip>
-                    </TooltipProvider>
+                    <div className="flex items-center gap-1.5 px-2 py-1 bg-slate-100/30 dark:bg-slate-800/40 rounded-full text-slate-500 dark:text-slate-400">
+                      <Trophy className="h-4 w-4" />
+                      <span className="text-xs font-medium">First Author</span>
+                    </div>
                   )}
                   
-                  {/* Majority Authors Icon - With muted color */}
+                  {/* Majority Authors - With visible text for mobile */}
                   {paper.majority_authors_from_india === true && paper.top_author_from_india !== true && (
-                    <TooltipProvider>
-                      <Tooltip delayDuration={100}>
-                        <TooltipTrigger>
-                          <div className="p-1.5 bg-slate-100/30 dark:bg-slate-800/40 rounded-full text-slate-500 dark:text-slate-400 hover:bg-slate-200/40 dark:hover:bg-slate-700/50">
-                            <Trophy className="h-4 w-4" />
-                          </div>
-                        </TooltipTrigger>
-                        <TooltipContent side="top" sideOffset={4} className="bg-slate-800 text-white p-2 rounded-md text-xs">
-                          Majority of Authors affiliated with Indian institutions
-                        </TooltipContent>
-                      </Tooltip>
-                    </TooltipProvider>
+                    <div className="flex items-center gap-1.5 px-2 py-1 bg-slate-100/30 dark:bg-slate-800/40 rounded-full text-slate-500 dark:text-slate-400">
+                      <Trophy className="h-4 w-4" />
+                      <span className="text-xs font-medium">Majority Authors</span>
+                    </div>
                   )}
                 </div>
 
