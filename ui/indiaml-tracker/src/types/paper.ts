@@ -11,9 +11,9 @@ export interface Paper {
 
   }[];
   abstract: string;
-  conference: "NeurIPS" | "ICML";
+  conference: "NeurIPS" | "ICML" | "ICLR" | string;
   year: number;
-  venue?: "oral" | "poster" | "spotlight";
+  venue?: "oral" | "poster" | "spotlight" | "unknown" | string;
   paper_content: string;
   paper_title: string;
   accepted_in: string[];

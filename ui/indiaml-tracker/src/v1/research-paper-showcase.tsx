@@ -382,7 +382,7 @@ export function ResearchPapersShowcase() {
         : [];
 
       return {
-        totalPapers: focusCountry?.at_least_one_focus_country_author?.count || papers.length,
+        totalPapers: papers.length,
         spotlightCount: focusCountry?.total_spotlights || 
           papers.filter(p => p.venue?.toLowerCase() === "spotlight").length,
         authorCount: focusCountry?.total_authors || 0,
@@ -506,16 +506,16 @@ export function ResearchPapersShowcase() {
 
       {loading ? (
         <div className="flex justify-center items-center h-40">
-          <p className="text-lg font-medium text-gray-600 dark:text-gray-400">Loading papers...</p>
+          <p className="text-sm sm:text-lg font-medium text-gray-600 dark:text-gray-400">Loading papers...</p>
         </div>
       ) : groupedAndSortedPapers.length > 0 ? (
         groupedAndSortedPapers.map(({ year, conferences }) => (
-          <div key={year} className="mt-8 first:mt-0">
-            <div className="flex justify-between items-center mb-6 border-b border-gray-300 dark:border-gray-700 pb-3">
-              <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-200">{year}</h2>
+          <div key={year} className="mt-4 sm:mt-8 first:mt-0">
+            <div className="flex justify-between items-center mb-3 sm:mb-6 border-b border-gray-300 dark:border-gray-700 pb-2 sm:pb-3">
+              <h2 className="text-xl sm:text-3xl font-bold text-gray-800 dark:text-gray-200">{year}</h2>
               <button
                 onClick={() => setCollapseAll(prev => !prev)}
-                className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 underline focus:outline-none transition-colors"
+                className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 underline focus:outline-none transition-colors"
               >
                 {collapseAll ? "Expand All" : "Collapse All"}
               </button>
@@ -529,12 +529,12 @@ export function ResearchPapersShowcase() {
               return (
                 <div key={conferenceKey} className="mb-8">
                   {/* Enhanced KPI Card Section with Dark Theme and Redesigned Layout */}
-                  <div className="mb-6 bg-white dark:bg-slate-800/95 rounded-lg border border-slate-700 shadow-md overflow-hidden text-white">
+                  <div className="mb-3 sm:mb-6 bg-white dark:bg-slate-800/95 rounded-lg border border-slate-700 shadow-md overflow-hidden text-white">
                     <div className="flex flex-col">
                       {/* Title and View Analytics Button */}
-                      <div className="flex justify-between items-center px-5 py-4">
+                      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center px-3 sm:px-5 py-2 sm:py-4 gap-2 sm:gap-0">
                         <div>
-                          <h3 className="text-xl font-semibold text-black dark:text-white">
+                          <h3 className="text-sm sm:text-xl font-semibold text-black dark:text-white">
                             {name} ({kpis.totalPapers} accepted)
                           </h3>
                         </div>
@@ -542,86 +542,86 @@ export function ResearchPapersShowcase() {
                         {/* View Analytics Button */}
                         <button
                           onClick={() => navigate(`/conference-summary?conference=${name}&year=${year}`)}
-                          className="hover:bg-gray-600 py-1.5 px-4 rounded-md transition-colors 
+                          className="hover:bg-gray-600 py-1 sm:py-1.5 px-2 sm:px-4 rounded-md transition-colors 
                                   focus:outline-none focus:ring-1 focus:ring-white focus:ring-opacity-50 
-                                  flex items-center shadow-md text-sm"
+                                  flex items-center shadow-md text-xs sm:text-sm"
                         >
-                          <span className="font-medium dark:text-yellow-200 text-orange-500">View detailed overview of </span> 
-                          <span className="font-bold ml-1 dark:text-yellow-200 text-orange-500">India@{name} {year}</span>
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                          <span className="font-medium dark:text-yellow-200 text-orange-500 hidden sm:inline">View detailed overview of </span> 
+                          <span className="font-bold sm:ml-1 dark:text-yellow-200 text-orange-500">India@{name} {year}</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4 ml-1 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                           </svg>
                         </button>
                       </div>
                       
                       {/* Metrics Section with Icons on Left */}
-                      <div className="px-5 pb-5 grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-8">
+                      <div className="px-3 sm:px-5 pb-3 sm:pb-5 grid grid-cols-2 md:grid-cols-4 gap-x-2 sm:gap-x-4 gap-y-3 sm:gap-y-8">
                         {/* Accepted Papers */}
                         <div className="flex items-center">
-                          <div className="text-black dark:text-white opacity-30 mr-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <div className="text-black dark:text-white opacity-30 mr-2 sm:mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 sm:h-14 sm:w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                             </svg>
                           </div>
                           <div className="flex flex-col">
-                            <span className="text-xs font-medium uppercase tracking-wider text-gray-700 dark:text-gray-400 mb-1">ACCEPTED PAPERS</span>
-                            <span className="text-4xl font-bold text-gray-700 dark:text-white leading-none">{kpis.totalPapers}</span>
+                            <span className="text-[8px] sm:text-xs font-medium uppercase tracking-wider text-gray-700 dark:text-gray-400 mb-0.5 sm:mb-1">ACCEPTED PAPERS</span>
+                            <span className="text-lg sm:text-4xl font-bold text-gray-700 dark:text-white leading-none">{kpis.totalPapers}</span>
                           </div>
                         </div>
                         
                         {/* Spotlights */}
                         <div className="flex items-center">
-                          <div className="text-black dark:text-white opacity-30 mr-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <div className="text-black dark:text-white opacity-30 mr-2 sm:mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 sm:h-14 sm:w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                             </svg>
                           </div>
                           <div className="flex flex-col">
-                            <span className="text-xs font-medium uppercase tracking-wider text-gray-700 dark:text-gray-400 mb-1">SPOTLIGHTS</span>
-                            <span className="text-4xl font-bold text-gray-700 dark:text-white leading-none">{kpis.spotlightCount}</span>
+                            <span className="text-[8px] sm:text-xs font-medium uppercase tracking-wider text-gray-700 dark:text-gray-400 mb-0.5 sm:mb-1">SPOTLIGHTS</span>
+                            <span className="text-lg sm:text-4xl font-bold text-gray-700 dark:text-white leading-none">{kpis.spotlightCount}</span>
                           </div>
                         </div>
                         
                         {/* Authors */}
                         <div className="flex items-center">
-                          <div className="text-black dark:text-white opacity-30 mr-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <div className="text-black dark:text-white opacity-30 mr-2 sm:mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 sm:h-14 sm:w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                             </svg>
                           </div>
                           <div className="flex flex-col">
-                            <span className="text-xs font-medium uppercase tracking-wider text-gray-700 dark:text-gray-400 mb-1">AUTHORS</span>
-                            <span className="text-4xl font-bold text-gray-700 dark:text-white leading-none">{kpis.authorCount}</span>
+                            <span className="text-[8px] sm:text-xs font-medium uppercase tracking-wider text-gray-700 dark:text-gray-400 mb-0.5 sm:mb-1">AUTHORS</span>
+                            <span className="text-lg sm:text-4xl font-bold text-gray-700 dark:text-white leading-none">{kpis.authorCount}</span>
                           </div>
                         </div>
                         
                         {/* Global Rank */}
                         <div className="flex items-center">
-                          <div className="text-black dark:text-white opacity-30 mr-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <div className="text-black dark:text-white opacity-30 mr-2 sm:mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 sm:h-14 sm:w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
                             </svg>
                           </div>
                           <div className="flex flex-col">
-                            <span className="text-xs font-medium uppercase tracking-wider text-gray-700 dark:text-gray-400 mb-1">GLOBAL RANK</span>
-                            <span className="text-4xl font-bold text-gray-700 dark:text-white leading-none">#{kpis.indiaRank}</span>
+                            <span className="text-[8px] sm:text-xs font-medium uppercase tracking-wider text-gray-700 dark:text-gray-400 mb-0.5 sm:mb-1">GLOBAL RANK</span>
+                            <span className="text-lg sm:text-4xl font-bold text-gray-700 dark:text-white leading-none">#{kpis.indiaRank}</span>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
                     {papersToShow.map((paper) => (
                       <PaperCard key={paper.paper_id} paper={paper} />
                     ))}
                   </div>
                   
                   {hasMorePapers && (
-                    <div className="mt-3 ml-2">
+                    <div className="mt-2 sm:mt-3 ml-1 sm:ml-2">
                       <button
                         onClick={() => toggleConferenceExpansion(conferenceKey)}
-                        className="text-sm text-indigo-600 hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-300 
+                        className="text-xs sm:text-sm text-indigo-600 hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-300 
                                   underline focus:outline-none transition-colors"
                         aria-expanded={isExpanded}
                       >
@@ -632,10 +632,10 @@ export function ResearchPapersShowcase() {
 
                   {/* Show collapse button at the bottom when expanded */}
                   {isExpanded && papers.length > 6 && (
-                    <div className="mt-6 mb-3 ml-2">
+                    <div className="mt-4 sm:mt-6 mb-2 sm:mb-3 ml-1 sm:ml-2">
                       <button
                         onClick={() => toggleConferenceExpansion(conferenceKey)}
-                        className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 
+                        className="text-xs sm:text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 
                                   underline focus:outline-none transition-colors"
                       >
                         Collapse Section
