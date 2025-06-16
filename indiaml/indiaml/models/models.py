@@ -45,6 +45,8 @@ class Paper(Base):
     authors = relationship("PaperAuthor", back_populates="paper", cascade="all, delete-orphan")
 
 
+
+
 class Author(Base):
     __tablename__ = 'authors'
     
@@ -59,6 +61,8 @@ class Author(Base):
     affiliation_history = Column(JSON, nullable=True)
 
     papers = relationship("PaperAuthor", back_populates="author", cascade="all, delete-orphan")
+
+
 
 
 class PaperAuthor(Base):
