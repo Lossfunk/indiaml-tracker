@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timezone
 from sqlalchemy.orm import relationship, declarative_base
 from sqlalchemy import (
     Column,
@@ -9,6 +9,7 @@ from sqlalchemy import (
     ForeignKey,
     UniqueConstraint,
     ForeignKeyConstraint,
+    func,
 )
 from sqlalchemy.types import JSON
 
@@ -22,10 +23,15 @@ class Institution(Base):
     """Stores the canonical information for an institution."""
     __tablename__ = 'institutions'
     id = Column(Integer, primary_key=True)
-    name = Column(String, nullable=False, unique=True)
+    name = Column(String, nullable=False)
     ror_id = Column(String, unique=True, nullable=True)
-    created_at = Column(DateTime, default=datetime.utcnow)
-    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    created_at = Column(DateTime(timezone=True), default=func.now())
+    updated_at = Column(DateTime(timezone=True), default=func.now(), onupdate=func.now())
+    
+    # Updated: Remove unique constraint on name, rely on ROR ID for deduplication
+    __table_args__ = (
+        UniqueConstraint('name', 'ror_id', name='uix_institution_name_ror'),
+    )
     
     paper_affiliations = relationship("PaperAuthorAffiliation", back_populates="institution")
 
@@ -67,14 +73,13 @@ class Paper(Base):
     id = Column(String, primary_key=True, comment="e.g., OpenReview ID")
     venue_info_id = Column(Integer, ForeignKey('venue_infos.id'), nullable=False)
 
-
     title = Column(String, nullable=False)
     status = Column(String) # accepted, rejected, etc.
     status_type = Column(String, nullable=True)  # e.g "oral", "poster", "spotlight" or "desk rejected" etc
 
     raw_authors = Column(JSON, nullable=True)
-    created_at = Column(DateTime, default=datetime.utcnow)
-    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    created_at = Column(DateTime(timezone=True), default=func.now())
+    updated_at = Column(DateTime(timezone=True), default=func.now(), onupdate=func.now())
     
     venue_info = relationship("VenueInfo", back_populates="papers")
     authors = relationship("PaperAuthor", back_populates="paper", cascade="all, delete-orphan")
@@ -88,8 +93,22 @@ class Author(Base):
     full_name = Column(String, nullable=False)
     openreview_id = Column(String, unique=True, nullable=True)
     orcid = Column(String, unique=True, nullable=True)
-    created_at = Column(DateTime, default=datetime.utcnow)
-    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+
+    google_scholar_link = Column(String, nullable=True)
+    linkedin = Column(String, nullable=True)
+    homepage = Column(String, nullable=True)
+    affiliation_history = Column(JSON, nullable=True)
+    email = Column(String, unique=False, nullable=True)  # Email is not unique, can be null
+    twitter = Column(String, nullable=True)
+    github = Column(String, nullable=True)
+    icml_id = Column(String, nullable=True)
+    iclr_id = Column(String, nullable=True)
+    neurips_id = Column(String, nullable=True)
+    researchgate_id = Column(String, nullable=True)
+    dblp_id = Column(String, nullable=True)
+
+    created_at = Column(DateTime(timezone=True), default=func.now())
+    updated_at = Column(DateTime(timezone=True), default=func.now(), onupdate=func.now())
     
     papers = relationship("PaperAuthor", back_populates="author", cascade="all, delete-orphan")
 
