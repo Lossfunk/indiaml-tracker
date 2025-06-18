@@ -44,6 +44,12 @@ class Institution(Base):
     
     paper_affiliations = relationship("PaperAuthorAffiliation", back_populates="institution")
 
+
+
+
+
+
+
 class Keyword(Base):
     """
     Stores the canonical, unique string for each keyword. This is the simple,
@@ -75,6 +81,13 @@ class VenueInfo(Base):
     # Relationship to Paper is unchanged
     papers = relationship("Paper", back_populates="venue_info", cascade="all, delete-orphan")
 
+
+
+
+
+
+
+
 class Paper(Base):
     """Represents a single paper."""
     __tablename__ = 'papers'
@@ -85,6 +98,15 @@ class Paper(Base):
     title = Column(String, nullable=False)
     status = Column(String) # accepted, rejected, etc.
     status_type = Column(String, nullable=True)  # e.g "oral", "poster", "spotlight" or "desk rejected" etc
+    pdf_url = Column(String, nullable=True)
+    pdf_url_mirrors = Column(JSON, nullable=True)  # List of mirror URLs for the PDF
+
+    openreview_id = Column(String, unique=True, nullable=True)  # e.g., "~John_Smith1/Conference_2023"
+    arxiv_id = Column(String, nullable=True)  # e.g., "arXiv:1234.5678"
+    links = Column(JSON, nullable=True)  # Additional links related to the paper such as ICML, ICLR, NeurIPS IDs
+
+    summary = Column(String, nullable=True)
+    abstract = Column(String, nullable=True)
 
     raw_authors = Column(JSON, nullable=True)
     created_at = Column(DateTime(timezone=True), default=func.now())
@@ -93,6 +115,12 @@ class Paper(Base):
     venue_info = relationship("VenueInfo", back_populates="papers")
     authors = relationship("PaperAuthor", back_populates="paper", cascade="all, delete-orphan")
     keywords = relationship("PaperKeyword", back_populates="paper", cascade="all, delete-orphan")
+
+
+
+
+
+
 
 class Author(Base):
     """Represents a single, unique author."""
@@ -120,6 +148,11 @@ class Author(Base):
     updated_at = Column(DateTime(timezone=True), default=func.now(), onupdate=func.now())
     
     papers = relationship("PaperAuthor", back_populates="author", cascade="all, delete-orphan")
+
+
+
+
+
 
 
 # --- Association Tables ---
