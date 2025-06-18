@@ -24,7 +24,16 @@ class Institution(Base):
     __tablename__ = 'institutions'
     id = Column(Integer, primary_key=True)
     name = Column(String, nullable=False)
+
     ror_id = Column(String, unique=True, nullable=True)
+    openalex_id = Column(String, unique=True, nullable=True)
+    homepage = Column(String, nullable=True)
+    country = Column(String, nullable=True)
+    latitude = Column(Float, nullable=True)
+    longitude = Column(Float, nullable=True)
+    wikidata_id = Column(String, unique=True, nullable=True)
+    wikipedia_link = Column(String, nullable=True)
+    # Timestamps for creation and updates
     created_at = Column(DateTime(timezone=True), default=func.now())
     updated_at = Column(DateTime(timezone=True), default=func.now(), onupdate=func.now())
     
