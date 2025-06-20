@@ -46,7 +46,6 @@ def summarize_paper_openai(pdf_path: pathlib.Path, client: OpenAI, model: str, p
         max_tokens=512,
     )
 
-
     return response.choices[0].message.content.strip()
 
 

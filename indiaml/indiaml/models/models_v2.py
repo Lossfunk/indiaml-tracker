@@ -129,6 +129,8 @@ class Author(Base):
     id = Column(Integer, primary_key=True)
     full_name = Column(String, nullable=False)
     openreview_id = Column(String, unique=True, nullable=True)
+    picture_url = Column(String, nullable=True)  # URL to author's pictur
+    bio = Column(String, nullable=True)  # Can be empty string, null, or actual bio
     orcid = Column(String, unique=True, nullable=True)
 
     google_scholar_link = Column(String, nullable=True)
@@ -138,9 +140,12 @@ class Author(Base):
     email = Column(String, unique=False, nullable=True)  # Email is not unique, can be null
     twitter = Column(String, nullable=True)
     github = Column(String, nullable=True)
+
+    #####
     icml_id = Column(String, nullable=True)
     iclr_id = Column(String, nullable=True)
     neurips_id = Column(String, nullable=True)
+
     researchgate_id = Column(String, nullable=True)
     dblp_id = Column(String, nullable=True)
 
@@ -160,7 +165,7 @@ class Author(Base):
 class PaperAuthor(Base):
     """Links a Paper to an Author, including the author's position."""
     __tablename__ = 'paper_authors'
-    
+
     paper_id = Column(String, ForeignKey('papers.id'), primary_key=True)
     author_id = Column(Integer, ForeignKey('authors.id'), primary_key=True)
     position = Column(Integer, nullable=False)

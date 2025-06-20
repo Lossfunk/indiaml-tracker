@@ -1,8 +1,20 @@
-from indiaml.models.conference_schema import EventResponse, Event, EventMedia
+import re
+from typing import List, Optional
+from indiaml.pipeline_v2.author_extractor import map_authors
+from indiaml.models.conference_schema import (
+    EventResponse,
+    ConferenceEvent,
+    ConferenceEventMedia,
+    PaperAuthor,
+)
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from indiaml.config.logging_config import get_logger
+from indiaml.config.pipeline_v2_config import Config
 from indiaml.models.models_v2 import Paper, VenueInfo, Author
 from uuid import uuid4
+from .paper_extractor import map_conference_event_to_paper
+from functional import seq
+from .institute_extractor import extract_institute_data
 
 json_file = "./eda/icml-2025.json"
 conference = "ICML"
@@ -10,16 +22,13 @@ year = "2025"
 track = "Conference"
 # purpose: resolve the appropriate pipeline runner based on the config
 
-class Config(BaseSettings):
-    output_directory: str = "./output"
-    logs_directory: str = "./logs"
 
 logger = get_logger(__name__)
 
-logger.info("Loading configuration from %s", json_file) 
+logger.info("Loading configuration from %s", json_file)
 
 
-json_contents = open(json_file, 'r', encoding='utf-8').read()
+json_contents = open(json_file, "r", encoding="utf-8").read()
 
 # print(json_contents)
 
@@ -28,44 +37,45 @@ event_response = EventResponse.model_validate_json(json_contents)
 logger.info("Parsed JSON data successfully")
 logger.info("Conference: %s, Year: %s, Track: %s", conference, year, track)
 
-# logger.info(parsed_json)
-
-event_response.results[0]
-
-print(event_response.results[0])
 
 
+insts = seq(event_response.results).map(lambda x: seq(x.authors).map(lambda y: y.institution)).flatten().distinct().to_list()
+logger.info("Extracted Institutions: %s", insts)
 
-
-paper_data = event_response.results[0]
-
-def extract_status(raw_status: str) -> str:
-    """Extracts the status from the raw status string."""
-    if "accept" in raw_status.lower():
-        return "accepted"
-    elif "reject" in raw_status.lower():
-        return "rejected"
-    else:
-        return "unknown"
+# paper_data = list(filter(lambda x: isinstance(x, ConferenceEvent) and x.id == 45967, event_response.results))[0]
 
 
 
-def extract_status_type(raw_status: str) -> str:
-    """Extracts the status type from the raw status string."""
-    if "oral" in raw_status.lower():
-        return "oral"
-    elif "spotlight" in raw_status.lower():
-        return "spotlight"
-    elif "poster" in raw_status.lower():
-        return "poster"
-    else:
-        return "other"
+# venue_info = VenueInfo(
+#     id=uuid4().int,  # Generate a unique ID for the venue
+#     conference=conference,
+#     year=year,
+#     track=track,
+# )
 
 
-paper_model = Paper(
-    id = uuid4().hex,
-    title = paper_data.name,
-    status = extract_status(paper_data.eventtype),
-    status_type = extract_status_type(paper_data.event_type),
-    pdf_url = paper_data.paper_pdf_url, 
-)
+# paper = map_conference_event_to_paper(paper_data, venue_info)
+# logger.info("Mapped Event to Paper: %s", paper)
+
+
+
+# authors: List[Author] = (
+#     seq(paper_data.authors)
+#     .map(lambda author: map_authors(author, venue_info))
+#     .to_list()
+# )
+
+
+# for author in paper_data.authors:
+#     logger.info("Author: %s", author.fullname)
+#     institution = author.institution or "Unknown"
+#     logger.info("Author Institution: %s", institution)
+
+#     logger.info("Extracting Paper name: %s", paper_data.name)
+#     logger.info("Extracting Paper abstract: %s", paper_data.abstract)
+
+#     details = extract_institute_data(institution)
+#     logger.info("Extracted Institution Details: %s", details)
+#     print()
+
+

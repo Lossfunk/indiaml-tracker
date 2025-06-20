@@ -7,7 +7,7 @@ from datetime import datetime
 # These models represent the structure of your JSON data.
 # These are compatible with ICML.cc, ICLR.cc, and NeurIPS.cc event data scraped directly from their website
 
-class Author(BaseModel):
+class PaperAuthor(BaseModel):
     """Represents an author of a paper."""
     id: int
     fullname: str
@@ -17,7 +17,7 @@ class Author(BaseModel):
     picture_url: Optional[str] = None
     usertimezone: Optional[str] = None  # Only some authors have this field
 
-class EventMedia(BaseModel):
+class ConferenceEventMedia(BaseModel):
     """Represents a media item associated with an event."""
     id: int
     modified: str  # ISO datetime string
@@ -30,12 +30,12 @@ class EventMedia(BaseModel):
     uri: Optional[str] = None
     resourcetype: str  # e.g., "UriEventmedia"
 
-class Event(BaseModel):
+class ConferenceEvent(BaseModel):
     """Represents a single event, such as a poster or talk."""
     id: int
     uid: str
     name: str
-    authors: List[Author]
+    authors: List[PaperAuthor]
     abstract: str
     topic: Optional[str] = None  # Can be null or something like "Deep Learning->Theory"
     keywords: List[Any] = Field(default_factory=list)  # Appears to be empty lists in examples
@@ -61,7 +61,7 @@ class Event(BaseModel):
     parent1: Optional[str] = None  # URL to parent event
     parent2: Optional[str] = None
     parent2_id: Optional[int] = None
-    eventmedia: List[EventMedia] = Field(default_factory=list)
+    eventmedia: List[ConferenceEventMedia] = Field(default_factory=list)
     show_in_schedule_overview: bool = False
     visible: bool = True
     poster_position: Optional[str] = None
@@ -76,4 +76,4 @@ class EventResponse(BaseModel):
     count: int
     next: Optional[str] = None  # For pagination
     previous: Optional[str] = None  # For pagination
-    results: List[Event]
+    results: List[ConferenceEvent]

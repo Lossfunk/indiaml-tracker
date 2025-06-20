@@ -27,12 +27,20 @@ VENUE_CONFIGS: List[VenueConfig] = [
     #     source_id="ICML.cc/2024/Conference",
     #     adapter_class="ICMLAdapter"
     # ),
+    # VenueConfig(
+    #     conference="ICLR",
+    #     year=2024,
+    #     track="Conference",
+    #     source_adapter="openreview",
+    #     source_id="ICLR.cc/2024/Conference",
+    #     adapter_class="ICAIAdapter"
+    # ),
     VenueConfig(
-        conference="ICLR",
-        year=2024,
+        conference="ICML",
+        year=2025,
         track="Conference",
         source_adapter="openreview",
-        source_id="ICLR.cc/2024/Conference",
+        source_id="ICLR.cc/2025/Conference",
         adapter_class="ICAIAdapter"
     ),
     # VenueConfig(

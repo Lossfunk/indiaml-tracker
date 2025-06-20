@@ -5,7 +5,7 @@ from dataclasses import dataclass
 
 @dataclass
 class AuthorDTO:
-    canonical_id: str
+    canonical_id: Optional[str]
     name: str # Preferred name of the author
 
     alternate_names = Optional[List[str]]  # List of alternate names
