@@ -41,22 +41,28 @@ export const ConferenceSelector: React.FC<ConferenceSelectorProps> = ({
         if (conference && year) {
           const matchingOption = data.find(
             (opt) => 
-              opt.venue.toLowerCase() === conference.toLowerCase() && 
+              opt.venue?.toLowerCase() === conference.toLowerCase() && 
               opt.year === year
           );
           
-          if (matchingOption) {
+          if (matchingOption && matchingOption.venue && matchingOption.year) {
             setSelectedValue(`${matchingOption.venue}|${matchingOption.year}`);
             onSelectionChange(matchingOption.venue, matchingOption.year);
           } else if (data.length > 0) {
-            // Use first option if no match
-            setSelectedValue(`${data[0].venue}|${data[0].year}`);
-            onSelectionChange(data[0].venue, data[0].year);
+            // Use first option if no match - find first valid option
+            const firstValidOption = data.find(opt => opt.venue && opt.year);
+            if (firstValidOption) {
+              setSelectedValue(`${firstValidOption.venue}|${firstValidOption.year}`);
+              onSelectionChange(firstValidOption.venue, firstValidOption.year);
+            }
           }
         } else if (data.length > 0) {
-          // Default to first option
-          setSelectedValue(`${data[0].venue}|${data[0].year}`);
-          onSelectionChange(data[0].venue, data[0].year);
+          // Default to first valid option
+          const firstValidOption = data.find(opt => opt.venue && opt.year);
+          if (firstValidOption) {
+            setSelectedValue(`${firstValidOption.venue}|${firstValidOption.year}`);
+            onSelectionChange(firstValidOption.venue, firstValidOption.year);
+          }
         }
       } catch (err: any) {
         setError(err.message || "Failed to load conferences");
@@ -129,14 +135,16 @@ export const ConferenceSelector: React.FC<ConferenceSelectorProps> = ({
           <SelectValue placeholder="Select..." />
         </SelectTrigger>
         <SelectContent>
-          {options.map((option) => (
-            <SelectItem
-              key={`${option.venue}-${option.year}`}
-              value={`${option.venue}|${option.year}`}
-            >
-              {option.label}
-            </SelectItem>
-          ))}
+          {options
+            .filter((option) => option.venue && option.year)
+            .map((option) => (
+              <SelectItem
+                key={`${option.venue}-${option.year}`}
+                value={`${option.venue}|${option.year}`}
+              >
+                {option.label}
+              </SelectItem>
+            ))}
         </SelectContent>
       </Select>
     </div>
