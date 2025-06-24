@@ -172,7 +172,8 @@ class ConferenceAnalytics:
             SELECT 
                 p.id,
                 p.title,
-                p.status
+                p.status,
+                p.accept_type
             FROM 
                 papers p
             JOIN
@@ -185,12 +186,14 @@ class ConferenceAnalytics:
         papers = {}
         for row in self.cursor.fetchall():
             paper_id = row['id']
+            accept_type = row['accept_type'] or 'poster'  # Default to poster if None
+            
             papers[paper_id] = {
                 'id': paper_id,
                 'title': row['title'],
                 'status': row['status'],
-                'isSpotlight': False,  # Not available in this database schema
-                'isOral': False,      # Not available in this database schema
+                'isSpotlight': accept_type.lower() == 'spotlight',
+                'isOral': accept_type.lower() == 'oral',
                 'authors': [],
                 'countries': set(),
                 'institutions': [],
