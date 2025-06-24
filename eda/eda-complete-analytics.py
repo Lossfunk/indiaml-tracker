@@ -172,7 +172,6 @@ class ConferenceAnalytics:
             SELECT 
                 p.id,
                 p.title,
-                p.accept_type,
                 p.status
             FROM 
                 papers p
@@ -189,10 +188,9 @@ class ConferenceAnalytics:
             papers[paper_id] = {
                 'id': paper_id,
                 'title': row['title'],
-                'accept_type': row['accept_type'],
                 'status': row['status'],
-                'isSpotlight': 'spotlight' in (row['accept_type'] or '').lower(),
-                'isOral': 'oral' in (row['accept_type'] or '').lower(),
+                'isSpotlight': False,  # Not available in this database schema
+                'isOral': False,      # Not available in this database schema
                 'authors': [],
                 'countries': set(),
                 'institutions': [],
@@ -706,7 +704,17 @@ class ConferenceAnalytics:
                         "insights": []
                     }
                 }
-            }
+            },
+            "credits": [
+                {
+                    "name": "Sohan",
+                    "link": "https://x.com/HiSohan"
+                },
+                {
+                    "name": "Paras",
+                    "link": "https://x.com/paraschopra"
+                }
+            ]
         }
     
     def _update_global_stats(self, output: Dict, country_stats: Dict) -> None:
