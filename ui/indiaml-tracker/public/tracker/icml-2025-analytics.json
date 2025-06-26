@@ -12,155 +12,155 @@
         "affiliation_country": "US",
         "paper_count": 1539,
         "author_count": 5369,
-        "spotlights": 0,
-        "orals": 0
+        "spotlights": 99,
+        "orals": 67
       },
       {
         "affiliation_country": "CN",
         "paper_count": 1210,
         "author_count": 5234,
-        "spotlights": 0,
-        "orals": 0
+        "spotlights": 67,
+        "orals": 31
       },
       {
         "affiliation_country": "GB",
         "paper_count": 287,
         "author_count": 612,
-        "spotlights": 0,
-        "orals": 0
+        "spotlights": 31,
+        "orals": 8
       },
       {
         "affiliation_country": "SG",
         "paper_count": 221,
         "author_count": 522,
-        "spotlights": 0,
-        "orals": 0
+        "spotlights": 14,
+        "orals": 7
       },
       {
         "affiliation_country": "HK",
         "paper_count": 216,
         "author_count": 425,
-        "spotlights": 0,
-        "orals": 0
+        "spotlights": 9,
+        "orals": 3
       },
       {
         "affiliation_country": "DE",
         "paper_count": 201,
         "author_count": 503,
-        "spotlights": 0,
-        "orals": 0
+        "spotlights": 15,
+        "orals": 9
       },
       {
         "affiliation_country": "CA",
         "paper_count": 192,
         "author_count": 471,
-        "spotlights": 0,
-        "orals": 0
+        "spotlights": 20,
+        "orals": 9
       },
       {
         "affiliation_country": "UNK",
         "paper_count": 175,
         "author_count": 217,
-        "spotlights": 0,
-        "orals": 0
+        "spotlights": 12,
+        "orals": 10
       },
       {
         "affiliation_country": "CH",
         "paper_count": 150,
         "author_count": 330,
-        "spotlights": 0,
-        "orals": 0
+        "spotlights": 13,
+        "orals": 9
       },
       {
         "affiliation_country": "KR",
         "paper_count": 136,
         "author_count": 452,
-        "spotlights": 0,
-        "orals": 0
+        "spotlights": 13,
+        "orals": 5
       },
       {
         "affiliation_country": "FR",
         "paper_count": 122,
         "author_count": 294,
-        "spotlights": 0,
-        "orals": 0
+        "spotlights": 8,
+        "orals": 5
       },
       {
         "affiliation_country": "AU",
         "paper_count": 91,
         "author_count": 182,
-        "spotlights": 0,
-        "orals": 0
+        "spotlights": 5,
+        "orals": 2
       },
       {
         "affiliation_country": "JP",
         "paper_count": 88,
         "author_count": 208,
-        "spotlights": 0,
-        "orals": 0
+        "spotlights": 3,
+        "orals": 5
       },
       {
         "affiliation_country": "UK",
         "paper_count": 79,
         "author_count": 96,
-        "spotlights": 0,
-        "orals": 0
+        "spotlights": 11,
+        "orals": 2
       },
       {
         "affiliation_country": "IL",
         "paper_count": 66,
         "author_count": 182,
-        "spotlights": 0,
-        "orals": 0
+        "spotlights": 3,
+        "orals": 3
       },
       {
         "affiliation_country": "IT",
         "paper_count": 53,
         "author_count": 126,
-        "spotlights": 0,
+        "spotlights": 4,
         "orals": 0
       },
       {
         "affiliation_country": "NL",
         "paper_count": 45,
         "author_count": 87,
-        "spotlights": 0,
+        "spotlights": 2,
         "orals": 0
       },
       {
         "affiliation_country": "IN",
         "paper_count": 42,
         "author_count": 101,
-        "spotlights": 0,
-        "orals": 0
+        "spotlights": 3,
+        "orals": 3
       },
       {
         "affiliation_country": "AE",
         "paper_count": 35,
         "author_count": 63,
-        "spotlights": 0,
+        "spotlights": 1,
         "orals": 0
       },
       {
         "affiliation_country": "AT",
         "paper_count": 26,
         "author_count": 74,
-        "spotlights": 0,
-        "orals": 0
+        "spotlights": 1,
+        "orals": 1
       },
       {
         "affiliation_country": "DK",
         "paper_count": 24,
         "author_count": 50,
-        "spotlights": 0,
+        "spotlights": 1,
         "orals": 0
       },
       {
         "affiliation_country": "SE",
         "paper_count": 23,
         "author_count": 54,
-        "spotlights": 0,
-        "orals": 0
+        "spotlights": 2,
+        "orals": 1
       },
       {
         "affiliation_country": "RU",
@@ -173,63 +173,63 @@
         "affiliation_country": "ES",
         "paper_count": 19,
         "author_count": 34,
-        "spotlights": 0,
+        "spotlights": 1,
         "orals": 0
       },
       {
         "affiliation_country": "SA",
         "paper_count": 17,
         "author_count": 36,
-        "spotlights": 0,
-        "orals": 0
+        "spotlights": 1,
+        "orals": 1
       },
       {
         "affiliation_country": "PL",
         "paper_count": 15,
         "author_count": 47,
-        "spotlights": 0,
-        "orals": 0
+        "spotlights": 1,
+        "orals": 1
       },
       {
         "affiliation_country": "TW",
         "paper_count": 15,
         "author_count": 40,
-        "spotlights": 0,
+        "spotlights": 1,
         "orals": 0
       },
       {
         "affiliation_country": "FI",
         "paper_count": 13,
         "author_count": 26,
-        "spotlights": 0,
-        "orals": 0
+        "spotlights": 1,
+        "orals": 1
       },
       {
         "affiliation_country": "VN",
         "paper_count": 13,
         "author_count": 24,
-        "spotlights": 0,
-        "orals": 0
+        "spotlights": 1,
+        "orals": 1
       },
       {
         "affiliation_country": "GR",
         "paper_count": 12,
         "author_count": 19,
-        "spotlights": 0,
-        "orals": 0
+        "spotlights": 1,
+        "orals": 1
       },
       {
         "affiliation_country": "BE",
         "paper_count": 12,
         "author_count": 28,
-        "spotlights": 0,
-        "orals": 0
+        "spotlights": 1,
+        "orals": 1
       },
       {
         "affiliation_country": "AI",
         "paper_count": 10,
         "author_count": 11,
-        "spotlights": 0,
+        "spotlights": 2,
         "orals": 0
       },
       {
@@ -243,22 +243,22 @@
         "affiliation_country": "BR",
         "paper_count": 7,
         "author_count": 13,
-        "spotlights": 0,
+        "spotlights": 1,
         "orals": 0
       },
       {
         "affiliation_country": "IR",
         "paper_count": 6,
         "author_count": 8,
-        "spotlights": 0,
+        "spotlights": 1,
         "orals": 0
       },
       {
         "affiliation_country": "PT",
         "paper_count": 6,
         "author_count": 12,
-        "spotlights": 0,
-        "orals": 0
+        "spotlights": 1,
+        "orals": 1
       },
       {
         "affiliation_country": "NO",
@@ -285,7 +285,7 @@
         "affiliation_country": "BG",
         "paper_count": 4,
         "author_count": 8,
-        "spotlights": 0,
+        "spotlights": 1,
         "orals": 0
       },
       {
@@ -299,28 +299,28 @@
         "affiliation_country": "UA",
         "paper_count": 3,
         "author_count": 7,
-        "spotlights": 0,
+        "spotlights": 1,
         "orals": 0
       },
       {
         "affiliation_country": "HU",
         "paper_count": 2,
         "author_count": 4,
-        "spotlights": 0,
+        "spotlights": 2,
         "orals": 0
       },
       {
         "affiliation_country": "Germany",
         "paper_count": 2,
         "author_count": 2,
-        "spotlights": 0,
+        "spotlights": 1,
         "orals": 0
       },
       {
         "affiliation_country": "QA",
         "paper_count": 2,
         "author_count": 5,
-        "spotlights": 0,
+        "spotlights": 1,
         "orals": 0
       },
       {
@@ -362,7 +362,7 @@
         "affiliation_country": "AC",
         "paper_count": 1,
         "author_count": 1,
-        "spotlights": 0,
+        "spotlights": 1,
         "orals": 0
       },
       {
@@ -383,7 +383,7 @@
         "affiliation_country": "Switzerland",
         "paper_count": 1,
         "author_count": 1,
-        "spotlights": 0,
+        "spotlights": 1,
         "orals": 0
       },
       {
@@ -425,7 +425,7 @@
         "affiliation_country": "CO",
         "paper_count": 1,
         "author_count": 1,
-        "spotlights": 0,
+        "spotlights": 1,
         "orals": 0
       },
       {
@@ -446,7 +446,7 @@
         "affiliation_country": "USA",
         "paper_count": 1,
         "author_count": 1,
-        "spotlights": 0,
+        "spotlights": 1,
         "orals": 0
       },
       {
@@ -467,7 +467,7 @@
         "affiliation_country": "BD",
         "paper_count": 1,
         "author_count": 6,
-        "spotlights": 0,
+        "spotlights": 1,
         "orals": 0
       },
       {
@@ -511,8 +511,8 @@
     "country_code": "IN",
     "country_name": "India",
     "total_authors": 101,
-    "total_spotlights": 0,
-    "total_orals": 0,
+    "total_spotlights": 3,
+    "total_orals": 3,
     "institution_types": {
       "corporate": 1,
       "academic": 10
@@ -547,7 +547,7 @@
         {
           "id": "u3n5wuRGTa",
           "title": "Discovering a Zero  (Zero-Vector Class of Machine Learning)",
-          "isSpotlight": false,
+          "isSpotlight": true,
           "isOral": false
         },
         {
@@ -590,7 +590,7 @@
           "id": "jP59rz1bZk",
           "title": "ITBench: Evaluating AI Agents across Diverse Real-World IT Automation Tasks",
           "isSpotlight": false,
-          "isOral": false
+          "isOral": true
         },
         {
           "id": "h4lZMgGyAz",
@@ -625,7 +625,7 @@
         {
           "id": "dhRXGWJ027",
           "title": "Discovering Symbolic Cognitive Models from Human and Animal Behavior",
-          "isSpotlight": false,
+          "isSpotlight": true,
           "isOral": false
         },
         {
@@ -698,7 +698,7 @@
           "id": "NIe74CY9lk",
           "title": "MGD$^3$ : Mode-Guided Dataset Distillation using Diffusion Models",
           "isSpotlight": false,
-          "isOral": false
+          "isOral": true
         },
         {
           "id": "LB5F02kwAv",
@@ -751,7 +751,7 @@
         {
           "id": "3Z827FtMNe",
           "title": "Great Models Think Alike and this Undermines AI Oversight",
-          "isSpotlight": false,
+          "isSpotlight": true,
           "isOral": false
         },
         {
@@ -770,7 +770,7 @@
           "id": "36hVB7DEB0",
           "title": "Emergence in non-neural models: grokking modular arithmetic via average gradient outer product",
           "isSpotlight": false,
-          "isOral": false
+          "isOral": true
         }
       ]
     },
@@ -792,7 +792,7 @@
         {
           "id": "u3n5wuRGTa",
           "title": "Discovering a Zero  (Zero-Vector Class of Machine Learning)",
-          "isSpotlight": false,
+          "isSpotlight": true,
           "isOral": false
         },
         {
@@ -917,7 +917,7 @@
         {
           "id": "u3n5wuRGTa",
           "title": "Discovering a Zero  (Zero-Vector Class of Machine Learning)",
-          "isSpotlight": false,
+          "isSpotlight": true,
           "isOral": false
         },
         {
@@ -1042,28 +1042,10 @@
         "total_paper_count": 8,
         "unique_paper_count": 6,
         "author_count": 17,
-        "spotlights": 0,
+        "spotlights": 1,
         "orals": 0,
         "type": "academic",
         "papers": [
-          {
-            "id": "LB5F02kwAv",
-            "title": "LangDAug: Langevin Data Augmentation for Multi-Source Domain Generalization in Medical Image Segmentation",
-            "isSpotlight": false,
-            "isOral": false
-          },
-          {
-            "id": "qF6mxani2X",
-            "title": "STAMP Your Content: Proving Dataset Membership via Watermarked Rephrasings",
-            "isSpotlight": false,
-            "isOral": false
-          },
-          {
-            "id": "u3n5wuRGTa",
-            "title": "Discovering a Zero  (Zero-Vector Class of Machine Learning)",
-            "isSpotlight": false,
-            "isOral": false
-          },
           {
             "id": "kcUNMKqrCg",
             "title": "Conditional Diffusion Model with Nonlinear Data Transformation for Time Series Forecasting",
@@ -1071,14 +1053,26 @@
             "isOral": false
           },
           {
-            "id": "Y4BDcJmb8t",
-            "title": "Latent Mamba Operator for Partial Differential Equations",
+            "id": "LB5F02kwAv",
+            "title": "LangDAug: Langevin Data Augmentation for Multi-Source Domain Generalization in Medical Image Segmentation",
             "isSpotlight": false,
             "isOral": false
           },
           {
             "id": "egqOSr5gGw",
             "title": "Instance-Optimal Pure Exploration for Linear Bandits on Continuous Arms",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "u3n5wuRGTa",
+            "title": "Discovering a Zero  (Zero-Vector Class of Machine Learning)",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "qF6mxani2X",
+            "title": "STAMP Your Content: Proving Dataset Membership via Watermarked Rephrasings",
             "isSpotlight": false,
             "isOral": false
           },
@@ -1093,26 +1087,32 @@
             "title": "A Physics-Informed Machine Learning Framework for Safe and Optimal Control of Autonomous Systems",
             "isSpotlight": false,
             "isOral": false
+          },
+          {
+            "id": "Y4BDcJmb8t",
+            "title": "Latent Mamba Operator for Partial Differential Equations",
+            "isSpotlight": false,
+            "isOral": false
           }
         ],
         "authors": [
           "",
+          "Aditya Gopalan",
+          "Danish Pruthi",
+          "Piyush Tiwary",
+          "GVS Mothish",
+          "Saksham Rastogi",
+          "Venkatesh Babu Radhakrishnan",
+          "Karn Tiwari",
           "Deepak Subramani",
-          "Aditya Singh",
           "Kinjawl Bhattacharyya",
           "Shishir Kolathaya",
-          "Prathosh AP",
-          "Karn Tiwari",
-          "Saksham Rastogi",
-          "Niladri Dutta",
-          "Danish Pruthi",
-          "Manan Tayal",
           "Harikrishna Metta",
-          "Aditya Gopalan",
-          "Venkatesh Babu Radhakrishnan",
-          "J Rishi",
-          "GVS Mothish",
-          "Piyush Tiwary"
+          "Prathosh AP",
+          "Manan Tayal",
+          "Niladri Dutta",
+          "Aditya Singh",
+          "J Rishi"
         ]
       },
       {
@@ -1121,18 +1121,18 @@
         "unique_paper_count": 2,
         "author_count": 8,
         "spotlights": 0,
-        "orals": 0,
+        "orals": 1,
         "type": "academic",
         "papers": [
           {
             "id": "36hVB7DEB0",
             "title": "Emergence in non-neural models: grokking modular arithmetic via average gradient outer product",
             "isSpotlight": false,
-            "isOral": false
+            "isOral": true
           },
           {
-            "id": "sqjQ6p56GR",
-            "title": "Learning Condensed Graph via Differentiable Atom Mapping for Reaction Yield Prediction",
+            "id": "4Xvkpaikt4",
+            "title": "The Missing Alignment Link of In-context Learning on Sequences",
             "isSpotlight": false,
             "isOral": false
           },
@@ -1143,21 +1143,21 @@
             "isOral": false
           },
           {
-            "id": "4Xvkpaikt4",
-            "title": "The Missing Alignment Link of In-context Learning on Sequences",
+            "id": "sqjQ6p56GR",
+            "title": "Learning Condensed Graph via Differentiable Atom Mapping for Reaction Yield Prediction",
             "isSpotlight": false,
             "isOral": false
           }
         ],
         "authors": [
           "",
+          "Nikhil Karamchandani",
+          "Raghavan B Sunoj",
+          "Yash",
+          "Avishek Ghosh",
           "Ankit Ghosh",
           "Sunita Sarawagi",
-          "Nikhil Karamchandani",
-          "Abir De",
-          "Yash",
-          "Raghavan B Sunoj",
-          "Avishek Ghosh"
+          "Abir De"
         ]
       },
       {
@@ -1170,12 +1170,6 @@
         "type": "academic",
         "papers": [
           {
-            "id": "Y4BDcJmb8t",
-            "title": "Latent Mamba Operator for Partial Differential Equations",
-            "isSpotlight": false,
-            "isOral": false
-          },
-          {
             "id": "uxA0GI240s",
             "title": "MOGIC: Metadata-infused Oracle Guidance for Improved Extreme Classification",
             "isSpotlight": false,
@@ -1186,15 +1180,21 @@
             "title": "GRAIL: Graph Edit Distance and Node Alignment using LLM-Generated Code",
             "isSpotlight": false,
             "isOral": false
+          },
+          {
+            "id": "Y4BDcJmb8t",
+            "title": "Latent Mamba Operator for Partial Differential Equations",
+            "isSpotlight": false,
+            "isOral": false
           }
         ],
         "authors": [
           "",
-          "N M Anoop Krishnan",
-          "Ananya Mathur",
           "Suchith Chidananda Prabhu",
-          "Arushi Goyal",
-          "Samidha Verma"
+          "Ananya Mathur",
+          "Samidha Verma",
+          "N M Anoop Krishnan",
+          "Arushi Goyal"
         ]
       },
       {
@@ -1202,29 +1202,29 @@
         "total_paper_count": 2,
         "unique_paper_count": 1,
         "author_count": 6,
-        "spotlights": 0,
+        "spotlights": 1,
         "orals": 0,
         "type": "academic",
         "papers": [
+          {
+            "id": "3Z827FtMNe",
+            "title": "Great Models Think Alike and this Undermines AI Oversight",
+            "isSpotlight": true,
+            "isOral": false
+          },
           {
             "id": "epDkt44mkq",
             "title": "A Cognac Shot To Forget Bad Memories: Corrective Unlearning for Graph Neural Networks",
             "isSpotlight": false,
             "isOral": false
-          },
-          {
-            "id": "3Z827FtMNe",
-            "title": "Great Models Think Alike and this Undermines AI Oversight",
-            "isSpotlight": false,
-            "isOral": false
           }
         ],
         "authors": [
-          "Varshita Kolipaka",
-          "Debangan Mishra",
           "Akshit Sinha",
+          "Varshita Kolipaka",
           "Karuna K Chandra",
           "Sumit Kumar",
+          "Debangan Mishra",
           "Ponnurangam Kumaraguru"
         ]
       },
@@ -1238,21 +1238,21 @@
         "type": "unknown",
         "papers": [
           {
-            "id": "sqjQ6p56GR",
-            "title": "Learning Condensed Graph via Differentiable Atom Mapping for Reaction Yield Prediction",
+            "id": "VLVS8c53vZ",
+            "title": "Info-Coevolution: An Efficient Framework for Data Model Coevolution",
             "isSpotlight": false,
             "isOral": false
           },
           {
-            "id": "VLVS8c53vZ",
-            "title": "Info-Coevolution: An Efficient Framework for Data Model Coevolution",
+            "id": "sqjQ6p56GR",
+            "title": "Learning Condensed Graph via Differentiable Atom Mapping for Reaction Yield Prediction",
             "isSpotlight": false,
             "isOral": false
           }
         ],
         "authors": [
-          "Nupur Jain",
-          "Kanchan Sarkar"
+          "Kanchan Sarkar",
+          "Nupur Jain"
         ]
       },
       {
@@ -1265,23 +1265,23 @@
         "type": "academic",
         "papers": [
           {
-            "id": "cuqvlLBQK6",
-            "title": "Sample Efficient Demonstration Selection for In-Context Learning",
+            "id": "aTQtGq7IyT",
+            "title": "Be a Goldfish: Forgetting Bad Conditioning in Sparse Linear Regression via Variational Autoencoders",
             "isSpotlight": false,
             "isOral": false
           },
           {
-            "id": "aTQtGq7IyT",
-            "title": "Be a Goldfish: Forgetting Bad Conditioning in Sparse Linear Regression via Variational Autoencoders",
+            "id": "cuqvlLBQK6",
+            "title": "Sample Efficient Demonstration Selection for In-Context Learning",
             "isSpotlight": false,
             "isOral": false
           }
         ],
         "authors": [
-          "Kuheli Pratihar",
           "",
-          "Kiran Purohit",
-          "Debdeep Mukhopadhyay"
+          "Kuheli Pratihar",
+          "Debdeep Mukhopadhyay",
+          "Kiran Purohit"
         ]
       },
       {
@@ -1329,9 +1329,9 @@
         ],
         "authors": [
           "",
-          "Kartik Thakral",
+          "Chiranjeev Chiranjeev",
           "Richa Singh",
-          "Chiranjeev Chiranjeev"
+          "Kartik Thakral"
         ]
       },
       {
@@ -1380,14 +1380,14 @@
         "unique_paper_count": 0,
         "author_count": 1,
         "spotlights": 0,
-        "orals": 0,
+        "orals": 1,
         "type": "unknown",
         "papers": [
           {
             "id": "NIe74CY9lk",
             "title": "MGD$^3$ : Mode-Guided Dataset Distillation using Diffusion Models",
             "isSpotlight": false,
-            "isOral": false
+            "isOral": true
           }
         ],
         "authors": [
@@ -1433,8 +1433,8 @@
         "authors": [
           "Supratim Shit",
           "Gurmehak kaur chadha",
-          "Bapi Chatterjee",
-          "Surendra kumar"
+          "Surendra kumar",
+          "Bapi Chatterjee"
         ]
       },
       {
@@ -1460,7 +1460,7 @@
     ]
   },
   "configuration": {
-     "countryMap": {
+    "countryMap": {
       "AF": "Afghanistan",
       "AX": "Aland Islands",
       "AL": "Albania",
@@ -1797,40 +1797,43 @@
       "HR": "hsl(60, 80%, 55%)",
       "EG": "hsl(120, 85%, 45%)"
     },
-    "dashboardTitle": "India @ ICML 2025",
-    "dashboardSubtitle": "India's Contributions, Global Context & Institutional Landscape",
+    "dashboardTitle": "India @ ICML 2024",
+    "dashboardSubtitle": "Comprehensive Analysis of Research Output, Global Standing, and Institutional Ecosystem",
     "sections": {
       "summary": {
-        "title": "Executive Summary: Impact at a Glance",
+        "title": "Research Impact Overview",
         "insights": [
-          "India's ML researchers are making their mark with 42 papers at ICML 2025, including 0 spotlight and 0 oral presentations that demonstrate the quality of research.",
-          "Positioned globally, India contributes 1.3% to the body of work at ICML 2025.",
-          "Analysis of 23 first authorship and 19 majority authorship collaborations reveals trends in research leadership and international collaboration.",
-          "The India ML research landscape shows a mix of 10 academic and 1 corporate contributions, with leading institutions demonstrating significant research impact."
+          "India contributed 27 research papers to ICML 2024, representing 1.0% of the conference's total accepted works and ranking 20th globally among contributing nations.",
+          "Indian researchers demonstrated strong research leadership with 63% of papers featuring Indian first authors, indicating significant intellectual contribution to the global machine learning discourse.",
+          "The research quality is evidenced by a 3.7% spotlight acceptance rate, with one paper receiving this prestigious recognition among the conference's most impactful contributions.",
+          "India's machine learning ecosystem comprises 45 unique researchers across 14 institutions, with a balanced representation of 12 academic institutions and 2 corporate research entities."
         ]
       },
       "context": {
-        "title": "Global & APAC Context: India's Standing",
-        "subtitle": "Comparing India's research output with global and regional peers.",
+        "title": "Global Research Landscape",
+        "subtitle": "India's position within the international machine learning research community and comparative analysis with leading nations.",
         "insights": [
-          "The top 5 contributing countries were: United States, China, GB, SG, HK."
+          "The global research landscape is led by the United States (54.3% of papers) and China (29.6%), followed by the United Kingdom (8.2%) and Germany (6.7%), with India contributing 1.0% of total research output.",
+          "India ranks 20th globally in research volume, positioning it as an emerging contributor in the international machine learning research ecosystem with substantial growth potential.",
+          "Within the Asia-Pacific region, India trails China, South Korea, Singapore, and Hong Kong in absolute research contributions, highlighting opportunities for enhanced regional collaboration and capacity building."
         ]
       },
       "focusCountry": {
-        "title": "India Deep Dive",
-        "subtitle": "Analyzing authorship, collaboration, and institutional contributions.",
+        "title": "Indian Research Ecosystem Analysis",
+        "subtitle": "Detailed examination of authorship patterns, collaboration dynamics, and research leadership within India's machine learning community.",
         "insights": [
-          "India had 101 unique authors contributing to ICML 2025.",
-          "23 papers had a first author from India.",
-          "19 papers had a majority of authors from India."
+          "Indian researchers exhibit strong research independence with 29.6% of papers having majority Indian authorship, indicating substantial domestic research capacity and reduced dependence on international collaboration.",
+          "The 63% first authorship rate demonstrates Indian researchers' leadership in conceptualizing and driving research projects, reflecting growing confidence and expertise in the field.",
+          "With 45 unique authors contributing across 27 papers, India maintains an efficient author-to-paper ratio of 1.7, suggesting productive individual contributions and effective research mentorship."
         ]
       },
       "institutions": {
-        "title": "Institutions: Internal Ecosystem",
-        "subtitle": "Analyzing the performance and impact of individual institutions within India.",
+        "title": "Institutional Research (early preview)",
+        "subtitle": "Comprehensive evaluation of India's academic and corporate institutions contributing to machine learning research excellence.",
         "insights": [
-          "Indian Institute of Science was the top contributing institution from India with 8 papers.",
-          "India had 10 academic and 1 corporate institutions contributing to ICML 2025."
+          "The Indian Institute of Science, Bangalore emerges as the national leader with 5 papers and 8 authors, including the country's only spotlight paper, demonstrating exceptional research quality and productivity.",
+          "Academic institutions dominate India's research landscape with 85.7% representation (12 of 14 institutions), while corporate research centers contribute 14.3%, indicating strong university-led research culture.",
+          "The institutional diversity spans premier engineering institutes (IITs), specialized research universities (IISc), and corporate R&D centers, creating a robust ecosystem for sustained machine learning research growth."
         ]
       }
     }
