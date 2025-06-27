@@ -1,4 +1,4 @@
-# Academic Papers Dataset Schema Documentation
+# Paperlists Papers Dataset Schema Documentation
 
 ## Overview
 This is a document outlining the structure of paperlists json structure (reverse engineered + edited using claude)
