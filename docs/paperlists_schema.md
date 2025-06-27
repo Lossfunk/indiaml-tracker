@@ -87,6 +87,7 @@ The dataset uses a **"+" delimiter** to represent authors with multiple institut
 }
 ```
 
+
 **Interpretation**: The 4th author has dual affiliation (Google DeepMind + McGill University) with dual roles (Research Team Lead + Associate Professor).
 
 ## Review Process Data
