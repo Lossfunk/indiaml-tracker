@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "cairosvg>=2.8.2",
     "ipykernel>=6.29.5",
     "openai>=1.66.2",
     "openreview-py>=1.46.3",
@@ -13,5 +14,6 @@ dependencies = [
     "pydantic>=2.10.6",
     "pymupdf4llm>=0.0.17",
     "python-dotenv>=1.0.1",
+    "reportlab>=4.4.2",
     "sqlalchemy>=2.0.39",
 ]
