@@ -172,8 +172,8 @@ class ConferenceAnalytics:
             SELECT 
                 p.id,
                 p.title,
-                p.accept_type,
-                p.status
+                p.status,
+                p.accept_type
             FROM 
                 papers p
             JOIN
@@ -186,13 +186,14 @@ class ConferenceAnalytics:
         papers = {}
         for row in self.cursor.fetchall():
             paper_id = row['id']
+            accept_type = row['accept_type'] or 'poster'  # Default to poster if None
+            
             papers[paper_id] = {
                 'id': paper_id,
                 'title': row['title'],
-                'accept_type': row['accept_type'],
                 'status': row['status'],
-                'isSpotlight': 'spotlight' in (row['accept_type'] or '').lower(),
-                'isOral': 'oral' in (row['accept_type'] or '').lower(),
+                'isSpotlight': accept_type.lower() == 'spotlight',
+                'isOral': accept_type.lower() == 'oral',
                 'authors': [],
                 'countries': set(),
                 'institutions': [],
@@ -706,7 +707,17 @@ class ConferenceAnalytics:
                         "insights": []
                     }
                 }
-            }
+            },
+            "credits": [
+                {
+                    "name": "Sohan",
+                    "link": "https://x.com/HiSohan"
+                },
+                {
+                    "name": "Paras",
+                    "link": "https://x.com/paraschopra"
+                }
+            ]
         }
     
     def _update_global_stats(self, output: Dict, country_stats: Dict) -> None:

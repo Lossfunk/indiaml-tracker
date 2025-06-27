@@ -1,0 +1,172 @@
+{
+  "Adobe": {
+    "variations": [
+      "Adobe",
+      "Adobe Research",
+      "Adobe Systems"
+    ],
+    "type": "corporate"
+  },
+  "Amazon": {
+    "variations": [
+      "Amazon"
+    ],
+    "type": "corporate"
+  },
+  "AryaXAI.com": {
+    "variations": [
+      "AryaXAI.com"
+    ],
+    "type": "corporate"
+  },
+  "Dolby": {
+    "variations": [
+      "Dolby"
+    ],
+    "type": "corporate"
+  },
+  "Google": {
+    "variations": [
+      "Google",
+      "Google Research",
+      "Google DeepMind",
+      "Google Deepmind"
+    ],
+    "type": "corporate"
+  },
+  "International Business Machines": {
+    "variations": [
+      "International Business Machines",
+      "IBM TJ Watson Research Center"
+    ],
+    "type": "corporate"
+  },
+  "J.P. Morgan Chase": {
+    "variations": [
+      "J.P. Morgan Chase"
+    ],
+    "type": "corporate"
+  },
+  "Microsoft": {
+    "variations": [
+      "Microsoft",
+      "Microsoft AI",
+      "Microsoft Research",
+      "Research, Microsoft"
+    ],
+    "type": "corporate"
+  },
+  "Pocket FM": {
+    "variations": [
+      "Pocket FM"
+    ],
+    "type": "corporate"
+  },
+  "Tata Consultancy Services": {
+    "variations": [
+      "TCS Research & Innovation",
+      "Tata Consultancy Services Limited, India"
+    ],
+    "type": "corporate"
+  },
+  "Indian Institute of Technology Bombay": {
+    "variations": [
+      "IIT Bombay",
+      "Indian Institute of Technology, Bombay",
+      "Indian Institute of Technology Bombay",
+      "Indian Institute of Technology Bombay,",
+      "Department of Chemistry and Centre for Machine Intelligence and Data Science, Indian Institute of Technology, Bombay"
+    ],
+    "type": "academic"
+  },
+  "Indian Institute of Technology Delhi": {
+    "variations": [
+      "Indian Institute of Technology Delhi",
+      "Indian Institute of Technology, Delhi"
+    ],
+    "type": "academic"
+  },
+  "Indian Institute of Technology Hyderabad": {
+    "variations": [
+      "Indian Institute of Technology Hyderabad",
+      "Indian Institute of Technology, Hyderabad"
+    ],
+    "type": "academic"
+  },
+  "Indian Institute of Technology Jodhpur": {
+    "variations": [
+      "Indian Institute of Technology Jodhpur, India",
+      "Indian Institute of Technology, Jodhpur"
+    ],
+    "type": "academic"
+  },
+  "Indian Institute of Technology Kharagpur": {
+    "variations": [
+      "Indian Institute of Technology Kharagpur"
+    ],
+    "type": "academic"
+  },
+  "Indian Institute of Technology Kanpur": {
+    "variations": [
+      "Indian Institute of Technology Kanpur"
+    ],
+    "type": "academic"
+  },
+  "Indian Institute of Technology Roorkee": {
+    "variations": [
+      "IIT Roorkee",
+      "Indian Institute of Technology Roorkee"
+    ],
+    "type": "academic"
+  },
+  "Indian Institute of Technology Madras": {
+    "variations": [
+      "Indian Institute of Technology Madras, Dhirubhai Ambani Institute Of Information and Communication Technology"
+    ],
+    "type": "academic"
+  },
+  "Indian Institute of Management Ahmedabad": {
+    "variations": [
+      "Indian Institute of Management, Ahmedabad"
+    ],
+    "type": "academic"
+  },
+  "Indian Institute of Science": {
+    "variations": [
+      "Indian Institute of Science",
+      "Indian Institute of Science, Bangalore",
+      "Indian Institute of Science, Bangalore ",
+      "Indian Institute of Science, Indian institute of science, Bangalore",
+      "Indian institute of science, Bangalore",
+      "Indian Institute of Science, Dhirubhai Ambani Institute Of Information and Communication Technology"
+    ],
+    "type": "academic"
+  },
+  "Indian Statistical Institute": {
+    "variations": [
+      "Indian Statistical Institute"
+    ],
+    "type": "academic"
+  },
+  "Indraprastha Institute of Information Technology, Delhi": {
+    "variations": [
+      "Indraprastha Institute of Information Technology, Delhi",
+      "Department of Computer Science and Engineering, Indraprastha Institute of Information Technology Delhi"
+    ],
+    "type": "academic"
+  },
+  "International Institute of Information Technology, Hyderabad": {
+    "variations": [
+      "International Institute of Information Technology Hyderabad ",
+      "International Institute of Information Technology, Hyderabad",
+      "International Institute of Information Technology, Hyderabad, International Institute of Information Technology Hyderabad"
+    ],
+    "type": "academic"
+  },
+  "Jadavpur University": {
+    "variations": [
+      "Jadavpur University"
+    ],
+    "type": "academic"
+  }
+}

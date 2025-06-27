@@ -35,8 +35,7 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": true,
-    "paper_content": "This paper introduces BROGNET, a framework combining stochastic differential equations (SDEs) and graph neural networks (GNNs) to learn Brownian dynamics.  The authors modify BROGNET to inherently conserve linear momentum, leading to better performance in modeling Brownian systems.  The paper demonstrates BROGNET's superior performance and zero-shot generalizability on various Brownian systems compared to existing baselines.\n",
-    "venue": "poster"
+    "paper_content": "This paper introduces BROGNET, a framework combining stochastic differential equations (SDEs) and graph neural networks (GNNs) to learn Brownian dynamics from trajectories.  The authors modify the architecture to enforce momentum conservation, improving the model's performance and data efficiency in learning the dynamics of various Brownian systems.  The paper demonstrates superior performance compared to baselines, and zero-shot generalizability to larger system sizes and different temperatures.\n"
   },
   {
     "paper_title": "Adaptive Instrument Design for Indirect Experiments",
@@ -60,15 +59,14 @@
       {
         "name": "",
         "openreview_id": "~Vasilis_Syrgkanis1",
-        "affiliation_name": "Unknown",
-        "affiliation_domain": "unknown.edu",
-        "affiliation_country": "UNK"
+        "affiliation_name": "Stanford University",
+        "affiliation_domain": "stanford.edu",
+        "affiliation_country": "US"
       }
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper aims to improve the efficiency of indirect experiments by developing an adaptive data collection policy for instrumental variables.  The method, utilizing influence functions, seeks to minimize the mean-squared error of treatment effect estimates.  The approach is demonstrated through experiments in various real-world applications, showcasing its potential to enhance sample efficiency compared to existing methods.\n",
-    "venue": "poster"
+    "paper_content": "This paper aims to improve the efficiency of indirect experiments, which estimate treatment effects by leveraging instrumental variables.  It develops a computational method using influence functions to optimize data collection policies for instrumental variables, thereby minimizing the mean squared error of treatment effect estimates.  The approach addresses the challenges of indirect experiments, where sample efficiency depends on instrument compliance and choice of estimator, unlike direct experiments.\n"
   },
   {
     "paper_title": "Enhancing Tail Performance in Extreme Classifiers by Label Variance Reduction",
@@ -85,8 +83,8 @@
       {
         "name": "Rahul Chand",
         "openreview_id": "~Rahul_Chand1",
-        "affiliation_name": "Unknown",
-        "affiliation_domain": "unknown.edu",
+        "affiliation_name": "Microsoft",
+        "affiliation_domain": "microsoft.com",
         "affiliation_country": "UNK"
       },
       {
@@ -101,7 +99,7 @@
         "openreview_id": "~Bhawna_Paliwal1",
         "affiliation_name": "Microsoft Research",
         "affiliation_domain": "microsoft.com",
-        "affiliation_country": "US"
+        "affiliation_country": "IN"
       },
       {
         "name": "Mudit Dhawan",
@@ -162,8 +160,7 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper investigates the impact of label variance on the performance of extreme classification models, specifically focusing on tail labels.  It proposes a knowledge distillation framework, LEVER, to transfer knowledge from a specialized tail-robust teacher model to improve tail label performance in these models.  The framework aims to enhance tail performance metrics like precision and coverage in extreme classification tasks.\n",
-    "venue": "poster"
+    "paper_content": "This paper investigates the performance limitations of extreme classification models on \"tail labels\" (labels with few representative training samples), focusing on the previously under-examined factor of label variance.  It proposes a knowledge distillation framework, LEVER, to transfer knowledge from a specialized tail-robust teacher model to improve tail performance in extreme classifiers.  The approach aims for enhanced tail performance and provides formal guarantees for generalization, empirically demonstrating improved results in existing datasets and creating new ones for more rigorous future evaluation.\n"
   },
   {
     "paper_title": "Mirage: Model-agnostic Graph Distillation for Graph Classification",
@@ -201,8 +198,7 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": true,
-    "paper_content": "This paper introduces MIRAGE, a new graph distillation algorithm for graph classification tasks.  MIRAGE aims to create smaller, synthetic training datasets that maintain model performance, circumventing limitations of existing methods that rely on the full dataset and are tied to specific GNN architectures.  The algorithm achieves this by focusing on the frequency distribution of message-passing GNN computation trees rather than emulating gradient flows.\n",
-    "venue": "poster"
+    "paper_content": "This paper presents MIRAGE, a novel graph distillation algorithm for graph classification tasks.  It aims to create a smaller, synthetic training dataset from the original, without sacrificing model accuracy, and to overcome the limitations of existing methods which rely on the full dataset or are architecture-specific.  MIRAGE achieves this by analyzing the computation trees within the GNN's message-passing process and compressing the frequency distribution of these trees.\n"
   },
   {
     "paper_title": "A Good Learner can Teach Better: Teacher-Student Collaborative Knowledge Distillation",
@@ -233,8 +229,7 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": true,
-    "paper_content": "This paper introduces MPDistil, a new meta-policy distillation technique for knowledge transfer.  It aims to improve knowledge distillation by fostering collaboration and competition between teacher and student models during fine-tuning.  The research evaluates MPDistil's effectiveness on various language modeling benchmarks, demonstrating significant performance enhancements compared to existing methods.\n",
-    "venue": "poster"
+    "paper_content": "This paper introduces MPDistil, a meta-policy distillation technique for knowledge distillation.  It aims to improve knowledge transfer from a larger \"teacher\" model to a smaller \"student\" model by fostering collaboration and competition between the models during fine-tuning.  The authors hypothesize that this approach will yield superior performance in smaller models, achieving a better trade-off between performance and computational requirements.\n"
   },
   {
     "paper_title": "Learning from Label Proportions: Bootstrapping Supervised Learners via Belief Propagation",
@@ -279,8 +274,7 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper introduces a novel algorithm for learning from label proportions (LLP).  The method iteratively refines instance-level pseudo-labels using belief propagation and embedding refinement to improve predictions.  The algorithm leverages both bag-level aggregated labels and covariate similarity to achieve strong performance gains, especially for large bag sizes, compared to existing methods.\n",
-    "venue": "poster"
+    "paper_content": "This paper introduces a novel algorithm for learning from label proportions (LLP).  The method iteratively refines instance-level pseudo-labels using belief propagation and covariate information to improve embedding quality, ultimately leading to a more accurate classifier.  The algorithm shows substantial performance gains (up to 15%) over existing state-of-the-art methods with minimal additional computation, especially for large bag sizes.\n"
   },
   {
     "paper_title": "CABINET: Content Relevance-based Noise Reduction for Table Question Answering",
@@ -325,8 +319,7 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": true,
-    "paper_content": "The paper introduces CABINET, a framework designed to improve Large Language Model (LLM) performance on table question answering.  CABINET uses an unsupervised relevance scorer to prioritize relevant table data before input to the LLM, mitigating the negative impact of irrelevant information.  The framework leverages a weakly supervised module to further enhance relevance scoring.\n",
-    "venue": "spotlight"
+    "paper_content": "The paper introduces CABINET, a framework designed to enhance Large Language Models' (LLMs) performance in table question answering.  It achieves this by focusing LLMs on relevant table data through a relevance scorer, mitigating the negative impact of irrelevant information.  CABINET outperforms existing baselines and achieves state-of-the-art results on relevant datasets.\n"
   },
   {
     "paper_title": "Distributionally Robust Optimization with Bias and Variance Reduction",
@@ -346,12 +339,25 @@
         "affiliation_name": "Indian Institute of Technology, Madras, Dhirubhai Ambani Institute Of Information and Communication Technology",
         "affiliation_domain": "iitm.ac.in",
         "affiliation_country": "IN"
+      },
+      {
+        "name": "Ronak Mehta",
+        "openreview_id": "~Ronak_Mehta2",
+        "affiliation_name": "University of Washington",
+        "affiliation_domain": "washington.edu",
+        "affiliation_country": "US"
+      },
+      {
+        "name": "Zaid Harchaoui",
+        "openreview_id": "~Zaid_Harchaoui1",
+        "affiliation_name": "University of Washington",
+        "affiliation_domain": "washington.edu",
+        "affiliation_country": "US"
       }
     ],
     "top_author_from_india": false,
-    "majority_authors_from_india": true,
-    "paper_content": "This paper aims to develop stochastic algorithms for spectral risk minimization, a type of distributionally robust optimization (DRO).  Specifically, it introduces Prospect, a stochastic gradient-based algorithm designed for efficiency and convergence, in contrast to existing methods that may require multiple hyperparameters or suffer from convergence issues. The paper focuses on the use of the superquantile/CVaR as a DRO objective.\n",
-    "venue": "spotlight"
+    "majority_authors_from_india": false,
+    "paper_content": "This paper aims to develop stochastic algorithms for spectral risk minimization, specifically focusing on distributionally robust optimization (DRO).  The authors introduce Prospect, a novel stochastic gradient-based algorithm, designed to address limitations of existing methods.  Prospect offers faster convergence and requires only a single hyperparameter, setting it apart from previous methods.\n"
   },
   {
     "paper_title": "Large Content And Behavior Models To Understand, Simulate, And Optimize Content And Behavior",
@@ -368,9 +374,9 @@
       {
         "name": "Aditya Agrawal",
         "openreview_id": "~Aditya_Agrawal3",
-        "affiliation_name": "Birla Institute of Tchnology and Science - KK Birla Goa Campus",
-        "affiliation_domain": "goa.bits-pilani.ac.in",
-        "affiliation_country": "IN"
+        "affiliation_name": "Carnegie Mellon University",
+        "affiliation_domain": "cmu.edu",
+        "affiliation_country": "US"
       },
       {
         "name": "Aanisha Bhattacharyya",
@@ -389,8 +395,8 @@
       {
         "name": "Somesh Singh",
         "openreview_id": "~Somesh_Singh1",
-        "affiliation_name": "Unknown",
-        "affiliation_domain": "unknown.edu",
+        "affiliation_name": "UNK",
+        "affiliation_domain": "UNK",
         "affiliation_country": "UNK"
       },
       {
@@ -417,7 +423,7 @@
       {
         "name": "",
         "openreview_id": "~Changyou_Chen1",
-        "affiliation_name": "State University of New York, Buffalo",
+        "affiliation_name": "State University of New York at Buffalo",
         "affiliation_domain": "buffalo.edu",
         "affiliation_country": "US"
       },
@@ -431,8 +437,7 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": true,
-    "paper_content": "This paper introduces Large Content and Behavior Models (LCBMs), which are designed to improve upon existing communication models by incorporating receiver behavior data (e.g., likes, shares) into their training.  LCBMs aim to predict and optimize communication for desired receiver behaviors. The paper demonstrates LCBMs' ability on tasks such as behavior simulation and content understanding, using a new Content Behavior Corpus (CBC) dataset.\n",
-    "venue": "spotlight"
+    "paper_content": "This paper introduces Large Content and Behavior Models (LCBMs), which utilize receiver behaviors (e.g., shares, likes) in training corpora to enhance content understanding and predict receiver behaviors.  The models aim to improve communication effectiveness by predicting and optimizing user behavior, moving beyond existing language models' focus on semantic understanding.  The paper also presents a new Content Behavior Corpus (CBC) to facilitate further research in this area.\n"
   },
   {
     "paper_title": "Faithful Explanations of Black-box NLP Models Using LLM-generated Counterfactuals",
@@ -442,9 +447,9 @@
       {
         "name": "Yair Ori Gat",
         "openreview_id": "~Yair_Ori_Gat1",
-        "affiliation_name": "Unknown",
-        "affiliation_domain": "unknown.edu",
-        "affiliation_country": "UNK"
+        "affiliation_name": "Technion, IIT",
+        "affiliation_domain": "technion.ac.il",
+        "affiliation_country": "IL"
       },
       {
         "name": "Nitay Calderon",
@@ -484,8 +489,7 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper introduces two model-agnostic methods for generating faithful explanations of black-box NLP models.  The methods utilize counterfactual approximations, employing a large language model for generation or a matching approach learned with the model's training data.  The goal is to provide accurate causal explanations by contrasting model predictions with those of counterfactual examples.\n",
-    "venue": "poster"
+    "paper_content": "This paper develops two model-agnostic methods for explaining black-box NLP models.  These methods use counterfactual approximations to illustrate the causal relationships behind model predictions.  The first approach leverages large language models, while the second learns an embedding space guided by an LLM to provide efficient and accurate explanations.\n"
   },
   {
     "paper_title": "GNNX-BENCH: Unravelling the Utility of Perturbation-based GNN Explainers through In-depth Benchmarking",
@@ -509,7 +513,7 @@
       {
         "name": "Burouj Armgaan",
         "openreview_id": "~Burouj_Armgaan1",
-        "affiliation_name": "Indian Institute of Technology, Delhi",
+        "affiliation_name": "Indian Institute of Technology Delhi",
         "affiliation_domain": "iitd.ac.in",
         "affiliation_country": "IN"
       },
@@ -537,8 +541,7 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": true,
-    "paper_content": "This paper aims to benchmark perturbation-based explainability methods for Graph Neural Networks (GNNs).  It systematically evaluates and compares various techniques, identifying Pareto-optimal methods and analyzing their stability under noise and domain constraints.  The study ultimately provides a comprehensive understanding of current explainability methods and their implications for real-world applications.\n",
-    "venue": "poster"
+    "paper_content": "This paper presents a benchmarking study to evaluate and compare perturbation-based explainability methods for Graph Neural Networks (GNNs).  The study aims to systematically analyze the efficacy and stability of these methods, considering factors like noise, different architectures, and domain constraints.  The goal is to identify Pareto-optimal methods, pinpoint stability limitations, and assess the practicality of counterfactual explanations.\n"
   },
   {
     "paper_title": "Learning model uncertainty as variance-minimizing instance weights",
@@ -569,8 +572,7 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": true,
-    "paper_content": "This paper proposes a new method for learning model uncertainty by reweighting training instances.  It uses an auxiliary network trained with a meta-objective to minimize dropout variance, a proxy for Bayesian predictive uncertainty.  The approach aims to capture diverse sources of uncertainty, leading to improved performance in various real-world applications and datasets, particularly in selective classification.\n",
-    "venue": "poster"
+    "paper_content": "This paper introduces a novel method for learning model uncertainty by reweighting training instances.  The proposed method uses an auxiliary network trained via a bilevel optimization framework to minimize dropout variance, approximating Bayesian predictive uncertainty.  The resulting approach effectively captures various uncertainty types, leading to improved performance in selective classification and other real-world applications across diverse datasets.\n"
   },
   {
     "paper_title": "On Differentially Private Federated Linear Contextual Bandits",
@@ -594,8 +596,7 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": true,
-    "paper_content": "This paper addresses privacy concerns in federated linear contextual bandits (LCBs).  It proposes a two-step algorithmic framework incorporating privacy protocols to ensure user privacy while maintaining efficient regret bounds.  The framework is evaluated under different differential privacy constraints, demonstrating improved regret performance, particularly in scenarios without a trusted server.\n",
-    "venue": "poster"
+    "paper_content": "This paper addresses the privacy and regret issues in federated linear contextual bandit (LCB) algorithms.  It proposes a two-step framework combining a generic federated LCB algorithm with flexible differential privacy (DP) protocols.  The framework offers theoretical guarantees under silo-level local and shuffle models of DP, ultimately aiming to achieve nearly optimal regret while preserving user privacy.\n"
   },
   {
     "paper_title": "SaNN: Simple Yet Powerful Simplicial-aware Neural Networks",
@@ -619,8 +620,7 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": true,
-    "paper_content": "This paper introduces a scalable simplicial-aware neural network (SaNN) model.  SaNN efficiently learns low-dimensional embeddings of simplices in simplicial complexes, leveraging pre-aggregated features, thereby overcoming the computational limitations of existing simplicial neural networks.  The paper theoretically demonstrates SaNN's enhanced expressive power compared to existing graph-based models for representing higher-order interactions.\n",
-    "venue": "spotlight"
+    "paper_content": "This paper introduces a scalable simplicial-aware neural network (SaNN) model for learning higher-order graph representations.  SaNN addresses the computational limitations of existing simplicial neural networks (SNNs) by pre-aggregating features, enabling efficient training and constant-time inference regardless of simplicial complex size.  The model's theoretical properties and empirical performance on various tasks demonstrate its strength in capturing higher-order interactions and achieving state-of-the-art results compared to existing methods.\n"
   },
   {
     "paper_title": "Task Planning for Visual Room Rearrangement under Partial Observability",
@@ -658,8 +658,7 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": true,
-    "paper_content": "This paper introduces a novel task planner for visually guided room rearrangements.  The planner incorporates a search network leveraging large language models, a deep reinforcement learning network, and a graph-based state representation to optimize action sequences.  The system is designed to minimize agent movement and effectively handle complex scenarios like obstructed objects, achieving significantly better performance than existing methods.\n",
-    "venue": "poster"
+    "paper_content": "This paper introduces a novel task planner for visual room rearrangement under partial observability.  The planner utilizes a search network, deep reinforcement learning, and a graph-based state representation to efficiently interleave object search and rearrangement, minimizing steps and traversal.  The approach significantly outperforms existing methods by incorporating commonsense knowledge and optimizing planning, as demonstrated on a new benchmark dataset.\n"
   },
   {
     "paper_title": "LLM Augmented LLMs: Expanding Capabilities through Composition",
@@ -697,16 +696,16 @@
       {
         "name": "Sriram Ganapathy",
         "openreview_id": "~Sriram_Ganapathy1",
-        "affiliation_name": "Google Research",
-        "affiliation_domain": "google.com",
-        "affiliation_country": "US"
+        "affiliation_name": "Indian Institute of Science, Bangalore",
+        "affiliation_domain": "iisc.ac.in",
+        "affiliation_country": "IN"
       },
       {
         "name": "Abhishek Bapna",
         "openreview_id": "~Abhishek_Bapna1",
         "affiliation_name": "Google Research India",
-        "affiliation_domain": "google.com",
-        "affiliation_country": "IN"
+        "affiliation_domain": "UNK",
+        "affiliation_country": "UNK"
       },
       {
         "name": "",
@@ -720,13 +719,12 @@
         "openreview_id": "~Partha_Talukdar1",
         "affiliation_name": "Google Research",
         "affiliation_domain": "google.com",
-        "affiliation_country": "US"
+        "affiliation_country": "IN"
       }
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper proposes CALM, a method for efficiently augmenting large language models (LLMs) with specialized models.  CALM leverages cross-attention between existing LLMs and smaller, domain-specific models to improve performance on new tasks without retraining the main LLM.  The approach is demonstrated to improve model performance substantially on tasks like translation and code generation, outperforming standard fine-tuning techniques.\n",
-    "venue": "poster"
+    "paper_content": "This paper proposes CALM, a method for efficiently augmenting large language models (LLMs) with specialized models.  CALM leverages cross-attention to compose the representations of existing LLMs, enabling new capabilities without retraining the entire base model.  The approach preserves existing model capabilities, scales well to diverse domains, and demonstrates improvements in tasks like translation and code generation.\n"
   },
   {
     "paper_title": "OctoPack: Instruction Tuning Code Large Language Models",
@@ -783,7 +781,7 @@
         "affiliation_country": "IN"
       },
       {
-        "name": "Xiangru Tang",
+        "name": "Robert Tang",
         "openreview_id": "~Xiangru_Tang2",
         "affiliation_name": "Yale University",
         "affiliation_domain": "yale.edu",
@@ -792,9 +790,9 @@
       {
         "name": "Leandro Von Werra",
         "openreview_id": "~Leandro_Von_Werra1",
-        "affiliation_name": "UNK",
-        "affiliation_domain": "UNK",
-        "affiliation_country": "UNK"
+        "affiliation_name": "Hugging Face",
+        "affiliation_domain": "hf.co",
+        "affiliation_country": "CH"
       },
       {
         "name": "Shayne Longpre",
@@ -806,8 +804,7 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper introduces OCTOPACK, a method for instruction tuning large language models (LLMs) on code using Git commit data.  The approach, leveraging a massive 4 terabyte dataset (COMMITPACK) of code changes paired with human instructions, achieves state-of-the-art performance on code generation benchmarks.  Furthermore, the paper expands evaluation to a more comprehensive benchmark (HUMANEVALPACK) encompassing diverse coding tasks and languages, demonstrating the generalizability of the method.\n",
-    "venue": "spotlight"
+    "paper_content": "This paper introduces OCTOPACK, a method for instruction-tuning large language models (LLMs) using code.  The authors compile COMMITPACK, a massive dataset of Git commits, and fine-tune LLMs on this data to achieve state-of-the-art performance on code-related tasks.  They also expand an existing benchmark, creating HUMANEVALPACK, to further evaluate the models' ability to handle diverse code tasks and programming languages.\n"
   },
   {
     "paper_title": "Leveraging Uncertainty Estimates To Improve Classifier Performance",
@@ -838,8 +835,7 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper investigates improving binary classifier performance by incorporating uncertainty estimates into the decision boundary selection process.  It analyzes the dependence of model score estimation bias on uncertainty and score, demonstrating the potential benefits of considering uncertainty using a theoretical and empirical approach.  Proposed algorithms based on dynamic programming and isotonic regression are evaluated on real-world datasets, showing improved recall at high precision bounds compared to traditional methods.\n",
-    "venue": "poster"
+    "paper_content": "This paper investigates improving binary classifier performance by incorporating uncertainty estimates into decision boundary selection.  The authors analyze the impact of uncertainty on model score bias, demonstrate the theoretical and practical benefits of this approach, and present algorithms for incorporating uncertainty.  Evaluation on real datasets shows a 25-40% gain in recall at high precision bounds compared to traditional methods.\n"
   },
   {
     "paper_title": "Selective Mixup Fine-Tuning for Optimizing Non-Decomposable Objectives",
@@ -849,15 +845,15 @@
       {
         "name": "Shrinivas Ramasubramanian",
         "openreview_id": "~Shrinivas_Ramasubramanian1",
-        "affiliation_name": "Fujitsu Research and Development Center Co. Ltm.",
-        "affiliation_domain": "fujitsu.com",
-        "affiliation_country": "JP"
+        "affiliation_name": "CMU, Carnegie Mellon University",
+        "affiliation_domain": "andrew.cmu.edu",
+        "affiliation_country": "US"
       },
       {
         "name": "Harsh Rangwani",
         "openreview_id": "~Harsh_Rangwani1",
-        "affiliation_name": "Indian Institute of Science",
-        "affiliation_domain": "iisc.ac.in",
+        "affiliation_name": "Adobe Research",
+        "affiliation_domain": "adobe.com",
         "affiliation_country": "IN"
       },
       {
@@ -891,8 +887,7 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": true,
-    "paper_content": "This paper introduces SelMix, a new fine-tuning technique for pre-trained models.  SelMix aims to optimize non-decomposable objectives like worst-case recall, which are crucial for real-world model evaluation, by selectively adjusting feature mixes between samples.  The method avoids the need to retrain the entire model from scratch for each objective, thereby improving practicality.\n",
-    "venue": "spotlight"
+    "paper_content": "This paper introduces SelMix, a novel fine-tuning technique for pre-trained models.  SelMix addresses the challenge of optimizing non-decomposable performance objectives, such as worst-case recall, by selectively mixing features of samples from different classes.  The method avoids the need to retrain the entire model from scratch for each objective, enhancing its practical applicability compared to existing approaches.\n"
   },
   {
     "paper_title": "f-FERM: A  Scalable Framework for  Robust Fair Empirical Risk Minimization",
@@ -923,8 +918,7 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper introduces f-FERM, a scalable framework for fair empirical risk minimization.  It aims to address the limitations of existing fairness methods, which often struggle with stochastic optimization, through a unified approach based on f-divergence measures.  The framework is designed to maintain theoretical convergence guarantees and achieve superior fairness-accuracy tradeoffs, even with varying batch sizes, including distribution shifts between training and test data.\n",
-    "venue": "poster"
+    "paper_content": "This paper introduces f-FERM, a scalable framework for fair empirical risk minimization.  It aims to address limitations in existing fairness approaches by offering a stochastic optimization method with theoretical convergence guarantees.  Experiments demonstrate its effectiveness in various batch sizes and in scenarios with distributional shifts.\n"
   },
   {
     "paper_title": "DSPy: Compiling Declarative Language Model Calls into State-of-the-Art Pipelines",
@@ -941,16 +935,16 @@
       {
         "name": "Arnav Singhvi",
         "openreview_id": "~Arnav_Singhvi1",
-        "affiliation_name": "UC Berkeley",
-        "affiliation_domain": "berkeley.edu",
+        "affiliation_name": "Computer Science Department, Stanford University",
+        "affiliation_domain": "cs.stanford.edu",
         "affiliation_country": "US"
       },
       {
         "name": "Paridhi Maheshwari",
         "openreview_id": "~Paridhi_Maheshwari1",
         "affiliation_name": "Amazon Alexa AI",
-        "affiliation_domain": "amazon.com",
-        "affiliation_country": "US"
+        "affiliation_domain": "UNK",
+        "affiliation_country": "UNK"
       },
       {
         "name": "Zhiyuan Zhang",
@@ -970,13 +964,13 @@
         "name": "Sri Vardhamanan A",
         "openreview_id": "~Sri_Vardhamanan_A1",
         "affiliation_name": "Dashworks Technologies, Inc.",
-        "affiliation_domain": "dashworks.ai",
+        "affiliation_domain": "UNK",
         "affiliation_country": "UNK"
       },
       {
         "name": "Saiful Haq",
         "openreview_id": "~Saiful_Haq1",
-        "affiliation_name": "Indian Institute of Technology Bombay, Indian Institute of Technology, Bombay",
+        "affiliation_name": "Indian Institute of Technology Bombay",
         "affiliation_domain": "cse.iitb.ac.in",
         "affiliation_country": "IN"
       },
@@ -998,8 +992,8 @@
         "name": "Hanna Moazam",
         "openreview_id": "~Hanna_Moazam1",
         "affiliation_name": "Microsoft Qatar",
-        "affiliation_domain": "microsoft.com",
-        "affiliation_country": "QA"
+        "affiliation_domain": "UNK",
+        "affiliation_country": "UNK"
       },
       {
         "name": "",
@@ -1025,8 +1019,7 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "DSPy is a programming model designed to create and optimize language model (LM) pipelines.  It abstracts LM pipelines as computational graphs, allowing for parameterized modules that learn prompting, finetuning, augmentation, and reasoning techniques.  A compiler within DSPy optimizes these pipelines by generating and collecting demonstrations.\n",
-    "venue": "spotlight"
+    "paper_content": "DSPy is a programming model designed to create and optimize language model (LM) pipelines.  It abstracts LM pipelines as graphs, allowing for parameterized modules that can learn techniques like prompting, fine-tuning, and augmentation.  The system compiles these pipelines to maximize a given metric, demonstrating improved performance on various tasks compared to existing methods.\n"
   },
   {
     "paper_title": "Beyond Spatio-Temporal Representations: Evolving Fourier Transform for Temporal Graphs",
@@ -1050,7 +1043,7 @@
       {
         "name": "Abhishek Nadgeri",
         "openreview_id": "~Abhishek_Nadgeri1",
-        "affiliation_name": "RWTH Aachen University",
+        "affiliation_name": "RWTH Aachen",
         "affiliation_domain": "rwth-aachen.de",
         "affiliation_country": "DE"
       },
@@ -1071,8 +1064,7 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": false,
-    "paper_content": "This paper introduces the Evolving Graph Fourier Transform (EFT), a novel spectral method for analyzing temporal graphs.  It overcomes limitations of existing techniques by providing an efficient and invertible transform to analyze evolving graph spectra, addressing the computational challenges of the temporal aspect.  The authors validate the efficacy of EFT on large-scale temporal graph data sets, demonstrating its ability to effectively capture evolving graph structure.\n",
-    "venue": "poster"
+    "paper_content": "This paper introduces the Evolving Graph Fourier Transform (EFT), a novel spectral transform for temporal graphs.  It addresses the limitations of existing methods by capturing the evolving graph spectra in a computationally efficient manner,  and demonstrates its effectiveness on large-scale temporal graph benchmarks, achieving state-of-the-art performance.\n"
   },
   {
     "paper_title": "Bayesian Coreset Optimization for Personalized Federated Learning",
@@ -1103,8 +1095,7 @@
     ],
     "top_author_from_india": true,
     "majority_authors_from_india": true,
-    "paper_content": "This paper introduces CORESET-PFEDBAYES, a federated learning method that uses coresets of client data to reduce computational cost.  It theoretically demonstrates minimax optimality of the average generalization error and provides a closed-form function for generalization error comparison.  The method is evaluated on benchmark datasets showing improved performance compared to random sampling and existing submodular optimization approaches.\n",
-    "venue": "poster"
+    "paper_content": "This paper proposes CORESET-PFEDBAYES, a personalized federated learning method.  It uses coresets of representative data points from each client to reduce computational burden while maintaining near-optimal generalization error.  The method theoretically analyzes the error and empirically demonstrates improved performance compared to random sampling and existing submodular optimization approaches.\n"
   },
   {
     "paper_title": "Encoding Unitig-level Assembly Graphs with Heterophilous Constraints for Metagenomic Contigs Binning",
@@ -1142,8 +1133,7 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper introduces UNITIGBIN, a novel metagenomic binning tool.  It leverages unitig-level assembly graphs and heterophilous constraints from single-copy marker genes to improve binning accuracy compared to existing methods.  The authors demonstrate UNITIGBIN's superior performance on both synthetic and real datasets.\n",
-    "venue": "poster"
+    "paper_content": "This paper introduces UNITIGBIN, a novel metagenomic binning tool.  It leverages unitig-level assembly graphs and single-copy marker genes to improve binning accuracy.  Extensive testing on synthetic and real datasets demonstrates UNITIGBIN's superior performance compared to existing tools.\n"
   },
   {
     "paper_title": "Fixed-Budget Differentially Private Best Arm Identification",
@@ -1181,8 +1171,7 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper investigates best arm identification (BAI) in linear bandits under a fixed budget and differential privacy constraints.  It aims to minimize the error probability of identifying the best arm while adhering to a specified privacy level.  The authors develop a new policy, analyze its error probability, and derive corresponding lower bounds, demonstrating how these bounds relate to the problem's characteristics and privacy parameters.\n",
-    "venue": "poster"
+    "paper_content": "This paper investigates best arm identification (BAI) in linear bandits under a fixed budget and differential privacy constraints.  It develops a policy guaranteeing \u03b5-differential privacy and provides both upper and lower bounds on the error probability of identifying the best arm.  These bounds demonstrate exponential decay with the budget and consider factors including arm sub-optimality gaps, privacy parameters, and problem complexity.\n"
   },
   {
     "paper_title": "Benchmarking Algorithms for Federated Domain Generalization",
@@ -1213,8 +1202,7 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper introduces a benchmark for Federated Domain Generalization (FedDG), a novel machine learning task.  It aims to evaluate existing FedDG methods under realistic conditions of client heterogeneity and diverse datasets by creating a standardized benchmark with adjustable parameters.  The paper also proposes a new data partitioning method for controlling client heterogeneity.\n",
-    "venue": "spotlight"
+    "paper_content": "This paper introduces a benchmark for Federated Domain Generalization (FDG), addressing the limitations of existing evaluations in terms of client and dataset diversity.  It develops a novel data partition method and evaluates 14 FDG methods across seven datasets, highlighting significant performance gaps, particularly with large numbers of clients and high heterogeneity. The authors aim to foster further research in the field by releasing the benchmark code.\n"
   },
   {
     "paper_title": "Correlated Noise Provably Beats Independent Noise for Differentially Private Learning",
@@ -1266,7 +1254,6 @@
     ],
     "top_author_from_india": false,
     "majority_authors_from_india": false,
-    "paper_content": "This paper investigates differentially private learning algorithms using correlated noise.  It aims to demonstrate that correlated noise (DP-FTRL) provably outperforms the standard independent noise approach (DP-SGD) in terms of utility and to develop a more computationally efficient method for finding optimal noise correlations.  The authors achieve this by providing analytical bounds on learning utility for various correlation functions and developing an efficient algorithm for determining nearly optimal correlations.\n",
-    "venue": "poster"
+    "paper_content": "This paper analyzes differentially private learning algorithms, focusing on the use of correlated noise.  It provides a theoretical framework for understanding how correlated noise improves learning utility compared to traditional independent noise methods.  The authors derive analytical bounds for linear regression and general convex functions, showcasing the utility gains and presenting a more computationally efficient method for noise correlation optimization.\n"
   }
 ]
