@@ -1,0 +1,21 @@
+[
+  {
+    "title": "NextCoder: Robust Adaptation of Code LMs to Diverse Code Edits",
+    "authors": [
+      {"name": "Tushar Aggarwal", "flag": "🇮🇳"},
+      {"name": "Swayam Singh", "flag": "🇮🇳"},
+      {"name": "Abhijeet Awasthi", "flag": "🇮🇳"}
+    ],
+    "conference": "ICML 2025",
+    "presentation_type": "Research Paper"
+  },
+  {
+    "title": "Teaching Transformers Causal Reasoning through Axiomatic Training",
+    "authors": [
+      {"name": "Aniket Vashishtha", "flag": "🇺🇸"},
+      {"name": "Abhinav Kumar", "flag": "🇺🇸"}
+    ],
+    "conference": "ICML 2025",
+    "presentation_type": "Research Paper"
+  }
+]
