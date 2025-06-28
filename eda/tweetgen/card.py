@@ -66,7 +66,7 @@ SVG_TEMPLATE = '''<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
   {{TITLE_LINES}}
   
   <!-- Authors section -->
-  <text x="60" y="260" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600">AUTHORS</text>
+  <text x="60" y="{{AUTHORS_LABEL_Y}}" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600">AUTHORS</text>
   
   {{AUTHORS}}
 </svg>'''
@@ -102,14 +102,53 @@ def wrap_title(title: str, max_chars_per_line: int = 35) -> List[str]:
     
     return lines
 
-def generate_title_svg(title: str) -> str:
-    """Generate SVG text elements for title."""
+def calculate_dynamic_layout(title: str, authors: List[Dict[str, str]]) -> Dict[str, Any]:
+    """Calculate dynamic layout positions to prevent overlapping."""
     lines = wrap_title(title)
-    title_svg = ""
-    base_y = 140
     
-    for i, line in enumerate(lines):
-        y_pos = base_y + (i * 55)
+    # Title positioning
+    title_base_y = 140
+    title_line_height = 55
+    title_end_y = title_base_y + (len(lines) * title_line_height)
+    
+    # Authors section positioning with buffer
+    buffer_space = 40
+    authors_label_y = title_end_y + buffer_space
+    authors_start_y = authors_label_y + 36  # Space for "AUTHORS" label
+    
+    # Author grid calculation
+    max_authors_display = 10
+    authors_to_show = min(len(authors), max_authors_display)
+    remaining_authors = max(0, len(authors) - max_authors_display)
+    
+    # Grid layout - adjust columns based on number of authors
+    if authors_to_show <= 3:
+        cols = authors_to_show
+    elif authors_to_show <= 6:
+        cols = 3
+    else:
+        cols = 4
+    
+    rows = (authors_to_show + cols - 1) // cols  # Ceiling division
+    
+    return {
+        'title_lines': lines,
+        'title_base_y': title_base_y,
+        'title_line_height': title_line_height,
+        'authors_label_y': authors_label_y,
+        'authors_start_y': authors_start_y,
+        'authors_to_show': authors_to_show,
+        'remaining_authors': remaining_authors,
+        'grid_cols': cols,
+        'grid_rows': rows
+    }
+
+def generate_title_svg(title: str, layout: Dict[str, Any]) -> str:
+    """Generate SVG text elements for title using dynamic layout."""
+    title_svg = ""
+    
+    for i, line in enumerate(layout['title_lines']):
+        y_pos = layout['title_base_y'] + (i * layout['title_line_height'])
         title_svg += f'  <text x="60" y="{y_pos}" fill="#1e293b" font-family="Georgia, \'Times New Roman\', serif" font-size="42" font-weight="700">\n'
         title_svg += f'    {line}\n'
         title_svg += f'  </text>\n'
@@ -240,16 +279,21 @@ def get_flag_color(country_code: str) -> str:
     }
     return colors.get(country_code, "#64748b")  # Default gray
 
-def generate_authors_svg(authors: List[Dict[str, str]]) -> str:
-    """Generate SVG text elements for authors with flag representation."""
+def generate_authors_svg(authors: List[Dict[str, str]], layout: Dict[str, Any]) -> str:
+    """Generate SVG text elements for authors with flag representation using dynamic layout."""
     authors_svg = ""
-    cols = 3
+    
+    # Use layout parameters
+    cols = layout['grid_cols']
     base_x = 60
-    base_y = 296
+    base_y = layout['authors_start_y']
     col_width = 190
     row_height = 40
     
-    for i, author in enumerate(authors):
+    # Show only the authors that fit (max 10)
+    authors_to_display = authors[:layout['authors_to_show']]
+    
+    for i, author in enumerate(authors_to_display):
         row = i // cols
         col = i % cols
         
@@ -267,6 +311,29 @@ def generate_authors_svg(authors: List[Dict[str, str]]) -> str:
         # Name
         authors_svg += f'  <text x="{x_pos + 25}" y="{y_pos + 4}" fill="#374151" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="500">{author["name"]}</text>\n'
     
+    # Add "+X more" if there are remaining authors
+    if layout['remaining_authors'] > 0:
+        # Calculate position for "+X more" text
+        total_displayed = layout['authors_to_show']
+        last_row = (total_displayed - 1) // cols
+        last_col = (total_displayed - 1) % cols
+        
+        # Position "+X more" in the next available slot
+        if last_col + 1 < cols:
+            # Same row, next column
+            more_row = last_row
+            more_col = last_col + 1
+        else:
+            # Next row, first column
+            more_row = last_row + 1
+            more_col = 0
+        
+        more_x_pos = base_x + (more_col * col_width)
+        more_y_pos = base_y + (more_row * row_height)
+        
+        # Add "+X more" text
+        authors_svg += f'  <text x="{more_x_pos}" y="{more_y_pos + 4}" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="500" font-style="italic">+{layout["remaining_authors"]} more</text>\n'
+    
     return authors_svg
 
 def calculate_conference_offset(conference: str) -> int:
@@ -276,13 +343,19 @@ def calculate_conference_offset(conference: str) -> int:
     return base_offset + len(conference) * char_width
 
 def generate_svg(paper_data: Dict[str, Any]) -> str:
-    """Generate SVG for a single paper."""
-    title_svg = generate_title_svg(paper_data['title'])
-    authors_svg = generate_authors_svg(paper_data['authors'])
+    """Generate SVG for a single paper using dynamic layout."""
+    # Calculate dynamic layout
+    layout = calculate_dynamic_layout(paper_data['title'], paper_data['authors'])
+    
+    # Generate components using layout
+    title_svg = generate_title_svg(paper_data['title'], layout)
+    authors_svg = generate_authors_svg(paper_data['authors'], layout)
     conference_offset = calculate_conference_offset(paper_data['conference'])
     
+    # Replace template placeholders
     svg_content = SVG_TEMPLATE.replace('{{TITLE_LINES}}', title_svg)
     svg_content = svg_content.replace('{{AUTHORS}}', authors_svg)
+    svg_content = svg_content.replace('{{AUTHORS_LABEL_Y}}', str(layout['authors_label_y']))
     svg_content = svg_content.replace('{{CONFERENCE}}', paper_data['conference'])
     svg_content = svg_content.replace('{{PRESENTATION_TYPE}}', paper_data['presentation_type'])
     svg_content = svg_content.replace('{{CONFERENCE_X_OFFSET}}', str(conference_offset))
@@ -378,13 +451,23 @@ def main():
     image_paths = []
     
     for i, paper in enumerate(papers_data):
-        print(f"Processing paper {i+1}/{len(papers_data)}: {paper['title'][:50]}...")
+        # Handle both 'title' and 'paper_title' keys
+        title = paper.get('title', paper.get('paper_title', 'Untitled'))
+        print(f"Processing paper {i+1}/{len(papers_data)}: {title[:50]}...")
+        
+        # Ensure paper has the expected format for generate_svg
+        paper_data = {
+            'title': title,
+            'authors': paper.get('authors', []),
+            'conference': paper.get('conference', 'ICML 2025'),
+            'presentation_type': paper.get('presentation_type', 'Research Paper')
+        }
         
         # Generate SVG
-        svg_content = generate_svg(paper)
+        svg_content = generate_svg(paper_data)
         
         # Create filename
-        safe_title = clean_filename(paper['title'][:50])
+        safe_title = clean_filename(title[:50])
         base_filename = f"{i+1:03d}_{safe_title}"
         
         # Save SVG

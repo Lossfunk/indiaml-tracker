@@ -182,7 +182,8 @@ def generate_card_for_paper(paper: Dict[str, Any], output_dir: Path, paper_index
     authors = extract_authors_from_paper(paper)
     card_authors = []
     
-    for author in authors[:8]:  # Limit to 8 authors for card display
+    # No longer limit to 8 authors - let the layout engine handle it
+    for author in authors:
         card_authors.append({
             "name": author["name"],
             "flag": get_country_flag(author["country"])
