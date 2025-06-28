@@ -239,6 +239,22 @@ wheels = [
 ]
 
 [[package]]
+name = "exa-py"
+version = "1.14.13"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "httpx" },
+    { name = "openai" },
+    { name = "pydantic" },
+    { name = "requests" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/82/02/6a328cb347c7ec36d84e0f746e1abf5cdc0f09276d14e40d9ad0e2f5efac/exa_py-1.14.13.tar.gz", hash = "sha256:fb86287d12ef44c1386586ef811c35b8818ed008083d4c884ee55964bfd5cbf1", size = 32576, upload-time = "2025-06-27T02:24:19.711Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/25/d1/0ab4e64bd859fdda9b27a97b883688bf969768ccc7d166463cbeeee3a9ed/exa_py-1.14.13-py3-none-any.whl", hash = "sha256:d5d6331181d08bff91205fbaf91db4c52685d7dc66b01377b192c955688cb5c5", size = 42051, upload-time = "2025-06-27T02:24:18.712Z" },
+]
+
+[[package]]
 name = "executing"
 version = "2.2.0"
 source = { registry = "https://pypi.org/simple" }
@@ -341,6 +357,7 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "cairosvg" },
+    { name = "exa-py" },
     { name = "ipykernel" },
     { name = "openai" },
     { name = "openreview-py" },
@@ -356,6 +373,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "cairosvg", specifier = ">=2.8.2" },
+    { name = "exa-py", specifier = ">=1.14.13" },
     { name = "ipykernel", specifier = ">=6.29.5" },
     { name = "openai", specifier = ">=1.66.2" },
     { name = "openreview-py", specifier = ">=1.46.3" },

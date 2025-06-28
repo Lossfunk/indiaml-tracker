@@ -9,7 +9,7 @@ Usage:
     python tweet_generator.py input.json --exa-api-key YOUR_API_KEY --output tweets.md
 
 Requirements:
-    pip install requests pillow cairosvg reportlab
+    pip install exa_py pillow cairosvg reportlab
 """
 
 import json
@@ -19,87 +19,74 @@ import sys
 import subprocess
 from pathlib import Path
 from typing import List, Dict, Any, Optional
-import requests
-import time
+import asyncio
 import re
 from datetime import datetime
+import exa_py
 
 # Import card generation functionality
 from card import generate_svg, convert_svg_to_image, clean_filename
 
 class ExaAPIClient:
-    """Client for interacting with Exa API to find Twitter profiles."""
+    """Client for interacting with Exa API to find Twitter profiles using exa_py AsyncExa."""
     
     def __init__(self, api_key: str):
-        self.api_key = api_key
-        self.base_url = "https://api.exa.ai"
-        self.headers = {
-            "Authorization": f"Bearer {api_key}",
-            "Content-Type": "application/json"
-        }
+        self.exa = exa_py.AsyncExa(api_key)
     
-    def search_twitter_profile(self, author_name: str, affiliation: str = "") -> Optional[str]:
+    async def search_twitter_profile(self, author_name: str, paper_title: str = "", affiliation: str = "") -> Optional[str]:
         """Search for Twitter profile of an author using Exa API."""
         try:
-            # Construct search query
-            query = f"{author_name} Twitter profile"
+            # Construct search query for finding Twitter profile
+            query = f"What is the Twitter handle or X.com profile for {author_name}"
+            if paper_title:
+                query += f", author of the paper '{paper_title}'"
             if affiliation:
-                query += f" {affiliation}"
+                query += f" from {affiliation}"
+            query += "? Please provide the Twitter/X username or profile URL."
             
-            # Add site restriction to Twitter
-            query += " site:twitter.com OR site:x.com"
+            # Use exa.answer API to find Twitter profile
+            response = await self.exa.answer(query, text=True)
             
-            payload = {
-                "query": query,
-                "type": "neural",
-                "useAutoprompt": True,
-                "numResults": 3,
-                "includeDomains": ["twitter.com", "x.com"]
-            }
-            
-            response = requests.post(
-                f"{self.base_url}/search",
-                headers=self.headers,
-                json=payload,
-                timeout=30
-            )
-            
-            if response.status_code == 200:
-                results = response.json()
-                if results.get("results"):
-                    # Return the first result's URL
-                    return results["results"][0].get("url")
-            else:
-                print(f"Error searching for {author_name}: {response.status_code}")
+            if response and hasattr(response, 'answer') and response.answer:
+                answer_text = response.answer
                 
+                # Extract Twitter handle from the answer
+                twitter_handle = self._extract_twitter_handle(answer_text)
+                return twitter_handle
+                    
         except Exception as e:
             print(f"Exception searching for {author_name}: {str(e)}")
         
         return None
     
-    def get_answer(self, query: str) -> Optional[str]:
+    def _extract_twitter_handle(self, text: str) -> Optional[str]:
+        """Extract Twitter handle or URL from text response."""
+        # Look for @username pattern
+
+        print("Exa Answer ---",text)
+        handle_match = re.search(r'@([a-zA-Z0-9_]+)', text)
+        if handle_match:
+            return f"@{handle_match.group(1)}"
+        
+        # Look for twitter.com or x.com URLs
+        url_match = re.search(r'(?:https?://)?(?:www\.)?(?:twitter\.com/|x\.com/)([^/\s]+)', text)
+        if url_match:
+            username = url_match.group(1)
+            return f"@{username}"
+        
+        # Look for just the username mentioned
+        username_match = re.search(r'(?:username|handle|profile).*?([a-zA-Z0-9_]{3,15})', text, re.IGNORECASE)
+        if username_match:
+            return f"@{username_match.group(1)}"
+        
+        return None
+    
+    async def get_answer(self, query: str) -> Optional[str]:
         """Get an answer from Exa API for a specific query."""
         try:
-            payload = {
-                "query": query,
-                "useAutoprompt": True,
-                "numResults": 5,
-                "type": "neural"
-            }
-            
-            response = requests.post(
-                f"{self.base_url}/answer",
-                headers=self.headers,
-                json=payload,
-                timeout=30
-            )
-            
-            if response.status_code == 200:
-                result = response.json()
-                return result.get("answer", "")
-            else:
-                print(f"Error getting answer: {response.status_code}")
-                
+            response = await self.exa.answer(query, text=True)
+            if response and hasattr(response, 'answer'):
+                return response.answer
         except Exception as e:
             print(f"Exception getting answer: {str(e)}")
         
@@ -143,7 +130,7 @@ def get_country_flag(country_code: str) -> str:
     }
     return flag_map.get(country_code, "🌍")
 
-def find_twitter_profiles(authors: List[Dict[str, str]], exa_client: ExaAPIClient) -> Dict[str, str]:
+async def find_twitter_profiles(authors: List[Dict[str, str]], exa_client: ExaAPIClient, paper_title: str = "") -> Dict[str, str]:
     """Find Twitter profiles for all authors."""
     twitter_profiles = {}
     
@@ -152,26 +139,32 @@ def find_twitter_profiles(authors: List[Dict[str, str]], exa_client: ExaAPIClien
     for i, author in enumerate(authors):
         print(f"  [{i+1}/{len(authors)}] Searching for {author['name']}...")
         
-        twitter_url = exa_client.search_twitter_profile(
+        twitter_url = await exa_client.search_twitter_profile(
             author['name'], 
+            paper_title,
             author.get('affiliation', '')
         )
         
         if twitter_url:
-            # Extract username from URL
-            username_match = re.search(r'(?:twitter\.com/|x\.com/)([^/?]+)', twitter_url)
-            if username_match:
-                username = username_match.group(1)
-                twitter_profiles[author['name']] = f"@{username}"
-                print(f"    Found: @{username}")
-            else:
+            # Check if it's already a handle format
+            if twitter_url.startswith('@'):
                 twitter_profiles[author['name']] = twitter_url
                 print(f"    Found: {twitter_url}")
+            else:
+                # Extract username from URL
+                username_match = re.search(r'(?:twitter\.com/|x\.com/)([^/?]+)', twitter_url)
+                if username_match:
+                    username = username_match.group(1)
+                    twitter_profiles[author['name']] = f"@{username}"
+                    print(f"    Found: @{username}")
+                else:
+                    twitter_profiles[author['name']] = twitter_url
+                    print(f"    Found: {twitter_url}")
         else:
             print(f"    Not found")
         
         # Rate limiting - be respectful to the API
-        time.sleep(1)
+        await asyncio.sleep(1)
     
     return twitter_profiles
 
@@ -218,43 +211,43 @@ def generate_tweet_thread(paper: Dict[str, Any], twitter_profiles: Dict[str, str
     content = paper.get("paper_content", "")
     pdf_url = paper.get("pdf_url", "")
     
-    # Create author mentions
-    author_mentions = []
+    # Determine conference details
+    conference_title = "ICML"
+    conference_year = "2025"
+    presentation_type = paper.get("presentation_type", "poster")  # Default to poster if not specified
+    
+    # Check if any authors are from India
+    has_indian_authors = any(author.get("country") == "IN" for author in authors)
+    india_text = " from India" if has_indian_authors else ""
+    
+    # Create author list with Twitter mentions and LinkedIn placeholders
+    author_lines = []
     for author in authors:
         name = author["name"]
-        if name in twitter_profiles:
-            author_mentions.append(twitter_profiles[name])
-        else:
-            author_mentions.append(name)
+        twitter_mention = twitter_profiles.get(name, "")
+        linkedin = ""  # Placeholder for LinkedIn - could be enhanced later
+        
+        author_line = name
+        if twitter_mention:
+            author_line += f" {twitter_mention}"
+        if linkedin:
+            author_line += f" {linkedin}"
+        
+        author_lines.append(author_line)
     
-    # Limit author mentions to avoid tweet length issues
-    if len(author_mentions) > 6:
-        displayed_authors = author_mentions[:6]
-        displayed_authors.append(f"and {len(author_mentions) - 6} others")
-    else:
-        displayed_authors = author_mentions
+    authors_text = "\n".join(author_lines)
     
-    authors_text = ", ".join(displayed_authors)
-    
-    # Generate tweet thread
+    # Generate tweet in the requested format
     tweet_thread = f"""
 ## {title}
 
-**Tweet 1/3** 🧵
-📄 New paper at #ICML2025: "{title}"
+**Tweet:**
+{conference_title} {conference_year} {presentation_type} paper{india_text}
 
-{content[:200]}{'...' if len(content) > 200 else ''}
+{content if content else title}
 
-🧵 Thread below 👇
-
-**Tweet 2/3**
-👥 Authors: {authors_text}
-
-🔬 This work explores {content[:150]}{'...' if len(content) > 150 else ''}
-
-**Tweet 3/3**
-📊 Key insights from this research:
-{content[150:300] if len(content) > 150 else content}{'...' if len(content) > 300 else ''}
+Authors
+{authors_text}
 
 📖 Read the full paper: {pdf_url}
 🖼️ Paper card: {card_filename}
@@ -264,7 +257,7 @@ def generate_tweet_thread(paper: Dict[str, Any], twitter_profiles: Dict[str, str
     
     return tweet_thread.strip()
 
-def process_papers(input_file: str, exa_api_key: str, output_dir: str, output_file: str):
+async def process_papers(input_file: str, exa_api_key: str, output_dir: str, output_file: str):
     """Main processing function."""
     
     # Load papers data
@@ -296,7 +289,7 @@ def process_papers(input_file: str, exa_api_key: str, output_dir: str, output_fi
         print(f"Authors: {len(authors)} found")
         
         # Find Twitter profiles
-        twitter_profiles = find_twitter_profiles(authors, exa_client)
+        twitter_profiles = await find_twitter_profiles(authors, exa_client, paper['paper_title'])
         print(f"Twitter profiles found: {len(twitter_profiles)}")
         
         # Generate card
@@ -386,7 +379,7 @@ def main():
         input_file = args.input_json
     
     try:
-        process_papers(input_file, args.exa_api_key, args.output_dir, args.output_file)
+        asyncio.run(process_papers(input_file, args.exa_api_key, args.output_dir, args.output_file))
     finally:
         # Clean up temporary file
         if args.limit and os.path.exists("temp_limited_papers.json"):
