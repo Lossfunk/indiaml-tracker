@@ -24,6 +24,7 @@ from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.utils import ImageReader
 import io
+import base64
 
 # SVG Template
 SVG_TEMPLATE = '''<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
@@ -55,13 +56,14 @@ SVG_TEMPLATE = '''<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
   <text x="60" y="80" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="600">{{CONFERENCE}}</text>
   <text x="{{CONFERENCE_X_OFFSET}}" y="80" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="500">• {{PRESENTATION_TYPE}}</text>
   
-  <!-- India@ML branding -->
-  <text x="580" y="80" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600">India@ML</text>
-  
-  <!-- Lossfunk logo placeholder -->
-  <rect x="680" y="60" width="60" height="40" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1" rx="8"/>
-  <text x="710" y="75" text-anchor="middle" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500">LOSSFUNK</text>
-  <text x="710" y="88" text-anchor="middle" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="8">LOGO</text>
+  <!-- Lossfunk logo and India@ML branding container (constrained to max width) -->
+  <g id="branding-container">
+    <!-- Lossfunk logo -->
+    <image x="550" y="55" height="30" href="{{LOSSFUNK_LOGO_PATH}}" preserveAspectRatio="xMidYMid meet"/>
+    
+    <!-- India@ML text -->
+    <text x="620" y="80" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600">India@ML</text>
+  </g>
   
   {{TITLE_LINES}}
   
@@ -75,7 +77,7 @@ def clean_filename(filename: str) -> str:
     """Clean filename for filesystem compatibility."""
     return re.sub(r'[<>:"/\\|?*]', '_', filename)
 
-def wrap_title(title: str, max_chars_per_line: int = 35) -> List[str]:
+def wrap_title(title: str, max_chars_per_line: int = 30) -> List[str]:
     """Wrap title into multiple lines."""
     words = title.split()
     lines = []
@@ -338,9 +340,25 @@ def generate_authors_svg(authors: List[Dict[str, str]], layout: Dict[str, Any]) 
 
 def calculate_conference_offset(conference: str) -> int:
     """Calculate x-offset for presentation type based on conference name length."""
-    base_offset = 180
+    base_offset = 80
     char_width = 10  # Approximate character width
     return base_offset + len(conference) * char_width
+
+def get_logo_base64() -> str:
+    """Convert lossfunk logo to base64 data URI."""
+    current_dir = Path(__file__).parent
+    logo_path = current_dir / "lossfunk_logo.png"
+    
+    try:
+        with open(logo_path, 'rb') as f:
+            logo_data = f.read()
+        
+        # Convert to base64
+        logo_base64 = base64.b64encode(logo_data).decode('utf-8')
+        return f"data:image/png;base64,{logo_base64}"
+    except FileNotFoundError:
+        print(f"Warning: Logo file not found at {logo_path}")
+        return ""
 
 def generate_svg(paper_data: Dict[str, Any]) -> str:
     """Generate SVG for a single paper using dynamic layout."""
@@ -352,6 +370,9 @@ def generate_svg(paper_data: Dict[str, Any]) -> str:
     authors_svg = generate_authors_svg(paper_data['authors'], layout)
     conference_offset = calculate_conference_offset(paper_data['conference'])
     
+    # Get the lossfunk logo as base64 data URI
+    logo_data_uri = get_logo_base64()
+    
     # Replace template placeholders
     svg_content = SVG_TEMPLATE.replace('{{TITLE_LINES}}', title_svg)
     svg_content = svg_content.replace('{{AUTHORS}}', authors_svg)
@@ -359,6 +380,7 @@ def generate_svg(paper_data: Dict[str, Any]) -> str:
     svg_content = svg_content.replace('{{CONFERENCE}}', paper_data['conference'])
     svg_content = svg_content.replace('{{PRESENTATION_TYPE}}', paper_data['presentation_type'])
     svg_content = svg_content.replace('{{CONFERENCE_X_OFFSET}}', str(conference_offset))
+    svg_content = svg_content.replace('{{LOSSFUNK_LOGO_PATH}}', logo_data_uri)
     
     return svg_content
 
