@@ -3,6 +3,7 @@ Enhanced PaperlistsTransformer with comprehensive existence checking, detailed l
 This version processes papers individually with extensive logging, time metrics, and post-import verification.
 """
 
+import argparse
 import json
 import re
 import random
@@ -12,22 +13,30 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine, func, text
 from indiaml_v2.models.models import *  # Import all the SQLAlchemy models
 from indiaml_v2.logging_config import get_logger
+from indiaml_v2.config import ImporterConfig, load_config
 
 class PaperlistsTransformer:
-    def __init__(self, database_url: str = "sqlite:///paperlists.db"):
+    def __init__(self, config: ImporterConfig = None, database_url: str = None):
+        # Load configuration
+        self.config = config or ImporterConfig()
+        
+        # Override database URL if provided
+        if database_url:
+            self.config.database_url = database_url
+        
         # Initialize comprehensive logging
-        self.logger = get_logger("paperlist_importer", "logs")
-        self.logger.start_operation("initializing_transformer", database_url=database_url)
+        self.logger = get_logger("paperlist_importer", self.config.log_directory)
+        self.logger.start_operation("initializing_transformer", database_url=self.config.database_url)
         
         # Database setup
-        self.engine = create_engine(database_url, echo=False)
+        self.engine = create_engine(self.config.database_url, echo=False)
         Base.metadata.create_all(self.engine)
         
         # Configure session with better settings
         Session = sessionmaker(
             bind=self.engine,
-            autoflush=False,
-            expire_on_commit=False
+            autoflush=self.config.session_autoflush,
+            expire_on_commit=self.config.session_expire_on_commit
         )
         self.session = Session()
         
@@ -96,7 +105,7 @@ class PaperlistsTransformer:
         
         # Track processing time for batches
         batch_start_time = time.time()
-        batch_size = 10
+        batch_size = self.config.batch_size
         
         for i, paper_data in enumerate(paperlists_json):
             paper_id = paper_data.get('id', f'unknown_{i}')
@@ -289,18 +298,10 @@ class PaperlistsTransformer:
         if existing_conference:
             return existing_conference
         
-        # Create new conference
-        full_names = {
-            "ICML": "International Conference on Machine Learning",
-            "NeurIPS": "Conference on Neural Information Processing Systems",
-            "ICLR": "International Conference on Learning Representations",
-            "AAAI": "Association for the Advancement of Artificial Intelligence",
-            "IJCAI": "International Joint Conference on Artificial Intelligence"
-        }
-        
+        # Create new conference using config
         conference = Conference(
             name=conference_name,
-            full_name=full_names.get(conference_name, conference_name),
+            full_name=self.config.conference_full_names.get(conference_name, conference_name),
             year=year
         )
         
@@ -558,7 +559,7 @@ class PaperlistsTransformer:
             while self.session.query(Author).filter_by(id=author_id).first():
                 author_id = f"{base_id}_{counter}"
                 counter += 1
-                if counter > 1000:
+                if counter > self.config.max_author_id_attempts:
                     import time
                     author_id = f"{base_id}_{int(time.time())}"
                     break
@@ -865,14 +866,17 @@ class PaperlistsTransformer:
         return "ICML"
     
     def classify_track(self, track_name: str) -> Tuple[str, str]:
-        """Classify track type and generate full name"""
+        """Classify track type and generate full name using configuration"""
         track_lower = track_name.lower()
         
-        if track_lower == 'main':
-            return 'main', 'Main Conference'
-        elif track_lower == 'position':
-            return 'position', 'Position Papers'
-        elif 'workshop' in track_lower or 'ws' in track_lower:
+        # Check exact matches first
+        if track_lower in self.config.track_classifications:
+            track_type = self.config.track_classifications[track_lower]
+            full_name = self.config.default_track_names.get(track_type, track_name)
+            return track_type, full_name
+        
+        # Check partial matches for special cases
+        if 'workshop' in track_lower or 'ws' in track_lower:
             return 'workshop', f'Workshop: {track_name}'
         elif 'tutorial' in track_lower:
             return 'tutorial', f'Tutorial: {track_name}'
@@ -896,7 +900,7 @@ class PaperlistsTransformer:
                 self.logger.warning(f"Paper count mismatch: expected {expected_count}, got {actual_count}")
             
             # Randomly sample papers for verification
-            sample_size = min(10, len(original_data), actual_count)
+            sample_size = min(self.config.verification_sample_size, len(original_data), actual_count)
             if sample_size == 0:
                 self.logger.warning("No papers to verify")
                 return
@@ -1029,7 +1033,7 @@ class PaperlistsTransformer:
                 .join(Institution)\
                 .group_by(Country.name)\
                 .order_by(func.count(Institution.id).desc())\
-                .limit(5).all()
+                .limit(self.config.top_countries_limit).all()
             
             self.logger.info("🌍 Top 5 Countries by Institution Count:")
             for country, count in top_countries:
@@ -1060,79 +1064,151 @@ class PaperlistsTransformer:
             self.logger.end_operation("cleanup_resources", success=True)
 
 
-# Enhanced usage example with comprehensive logging
+def parse_arguments():
+    """Parse command line arguments"""
+    parser = argparse.ArgumentParser(
+        description="Import paperlist JSON data into SQLite database",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  python paperlist_importer.py data.json
+  python paperlist_importer.py data.json --database custom.db
+  python paperlist_importer.py data.json --config config.json --log-level DEBUG
+        """
+    )
+    
+    parser.add_argument(
+        'json_file',
+        help='Path to the JSON file containing paperlist data'
+    )
+    
+    parser.add_argument(
+        '--database', '-d',
+        default=None,
+        help='Path to SQLite database file (default: from config or paperlists.db)'
+    )
+    
+    parser.add_argument(
+        '--config', '-c',
+        default=None,
+        help='Path to configuration JSON file (optional)'
+    )
+    
+    parser.add_argument(
+        '--log-level', '-l',
+        choices=['DEBUG', 'INFO', 'WARNING', 'ERROR'],
+        default='INFO',
+        help='Set logging level (default: INFO)'
+    )
+    
+    return parser.parse_args()
+
+
 def main():
-    """Main function with enhanced logging and error handling"""
+    """Main function with CLI argument support and enhanced logging"""
     transformer = None
-    logger = get_logger("paperlist_importer_main", "logs")
     
     try:
-        logger.start_operation("main_import_process")
+        # Parse command line arguments
+        args = parse_arguments()
         
-        # Load paperlists JSON data
-        logger.info("Loading paperlists JSON data...")
-        data_file = 'paperlists_data.json'
+        # Load configuration
+        config = load_config(args.config)
+        
+        # Override database URL if provided via CLI
+        if args.database:
+            config.database_url = f'sqlite:///{args.database}'
+        
+        # Initialize logger with config
+        logger = get_logger("paperlist_importer_main", config.log_directory)
+        
+        # Set log level
+        import logging
+        logger.logger.setLevel(getattr(logging, args.log_level))
+        
+        logger.start_operation("main_import_process", 
+                             json_file=args.json_file,
+                             database=config.database_url,
+                             log_level=args.log_level)
+        
+        # Load JSON data
+        logger.info(f"Loading data from: {args.json_file}")
         
         try:
-            with open(data_file, 'r') as f:
+            with open(args.json_file, 'r') as f:
                 paperlists_data = json.load(f)
             
-            logger.log_file_operation("read", data_file, 
+            logger.log_file_operation("read", args.json_file, 
                                     size=len(json.dumps(paperlists_data)), 
                                     success=True)
             logger.log_data_stats("loaded_data", len(paperlists_data))
             
         except FileNotFoundError:
-            logger.error(f"Data file not found: {data_file}")
-            logger.info("Please ensure 'paperlists_data.json' exists in the current directory")
-            return
+            logger.error(f"JSON file not found: {args.json_file}")
+            return 1
         except json.JSONDecodeError as e:
-            logger.error(f"Invalid JSON in {data_file}: {e}")
-            return
+            logger.error(f"Invalid JSON in {args.json_file}: {e}")
+            return 1
         
-        # Initialize transformer with logging
-        logger.info("Initializing PaperlistsTransformer...")
-        database_url = 'sqlite:///paperlists.db'
-        transformer = PaperlistsTransformer(database_url)
+        # Initialize transformer with config
+        logger.info("Initializing PaperlistsTransformer with configuration...")
+        transformer = PaperlistsTransformer(config)
         
-        logger.info(f"Starting to process {len(paperlists_data)} papers with comprehensive logging...")
+        logger.info(f"Starting to process {len(paperlists_data)} papers...")
         
-        # Transform data with detailed logging and verification
+        # Transform data
         start_time = time.time()
         transformer.transform_paperlists_data(paperlists_data)
         total_time = time.time() - start_time
         
         logger.success(f"Import process completed successfully in {total_time:.2f} seconds")
-        logger.log_file_operation("created", "paperlists.db", success=True)
-        logger.info("Database created at: paperlists.db")
-        logger.info("Check the 'logs' directory for detailed processing logs")
+        logger.log_file_operation("created", config.database_url.replace('sqlite:///', ''), success=True)
+        logger.info(f"Database created at: {config.database_url.replace('sqlite:///', '')}")
+        logger.info(f"Check the '{config.log_directory}' directory for detailed processing logs")
+        
+        return 0
         
     except KeyboardInterrupt:
-        logger.warning("Import process interrupted by user")
+        if 'logger' in locals():
+            logger.warning("Import process interrupted by user")
+        else:
+            print("Import process interrupted by user")
+        return 1
     except Exception as e:
-        logger.log_exception(e, "main import process")
-        logger.error("Import process failed - check logs for details")
+        if 'logger' in locals():
+            logger.log_exception(e, "main import process")
+            logger.error("Import process failed - check logs for details")
+        else:
+            print(f"Import process failed: {e}")
+        return 1
     finally:
         if transformer:
-            logger.info("Cleaning up resources...")
+            if 'logger' in locals():
+                logger.info("Cleaning up resources...")
             transformer.cleanup()
         
-        logger.end_operation("main_import_process", success=True)
-        logger.info("🎯 Import process finished. Check logs for detailed analysis.")
+        if 'logger' in locals():
+            logger.end_operation("main_import_process", success=True)
+            logger.info("🎯 Import process finished. Check logs for detailed analysis.")
 
 
 def main_with_custom_file(json_file: str, db_file: str = "paperlists.db"):
-    """Main function with custom file paths and enhanced logging"""
+    """Legacy function for backward compatibility - use main() with CLI args instead"""
+    import sys
+    print("Warning: main_with_custom_file is deprecated. Use CLI arguments instead:")
+    print(f"python {sys.argv[0]} {json_file} --database {db_file}")
+    
+    # For backward compatibility, still support this function
+    config = ImporterConfig()
+    config.database_url = f'sqlite:///{db_file}'
+    
     transformer = None
-    logger = get_logger("paperlist_importer_custom", "logs")
+    logger = get_logger("paperlist_importer_custom", config.log_directory)
     
     try:
         logger.start_operation("custom_import_process", 
                              json_file=json_file, 
                              db_file=db_file)
-        
-        # Load custom JSON data
-        logger.info(f"Loading data from: {json_file}")
         
         with open(json_file, 'r') as f:
             paperlists_data = json.load(f)
@@ -1142,11 +1218,8 @@ def main_with_custom_file(json_file: str, db_file: str = "paperlists.db"):
                                 success=True)
         logger.log_data_stats("loaded_custom_data", len(paperlists_data))
         
-        # Initialize transformer with custom database
-        database_url = f'sqlite:///{db_file}'
-        transformer = PaperlistsTransformer(database_url)
+        transformer = PaperlistsTransformer(config)
         
-        # Process data
         start_time = time.time()
         transformer.transform_paperlists_data(paperlists_data)
         total_time = time.time() - start_time
@@ -1164,4 +1237,5 @@ def main_with_custom_file(json_file: str, db_file: str = "paperlists.db"):
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+    sys.exit(main())

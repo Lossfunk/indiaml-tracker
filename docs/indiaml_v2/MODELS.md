@@ -1,193 +1,632 @@
-Entity Relationship Diagram - Paperlists Database Schema
-Core Entities and Relationships
+# SQLAlchemy Models Documentation
 
-┌─────────────────┐       ┌─────────────────┐       ┌─────────────────┐
-│      Paper      │──────│   PaperAuthor   │──────│     Author      │
-│                 │ 1:N  │                 │ N:1  │                 │
-│ • id (PK)       │      │ • paper_id (FK) │      │ • id (PK)       │
-│ • title         │      │ • author_id(FK) │      │ • name          │
-│ • status        │      │ • author_order  │      │ • gender        │
-│ • track_id (FK) │      │ • affiliation   │      │ • orcid         │
-│ • abstract      │      │   _at_time      │      │ • homepage_url  │
-│ • primary_area  │      └─────────────────┘      │ • google_scholar│
-│ • openreview_url│                               │ • linkedin_url  │
-│ • pdf_url       │                               │ • twitter_url   │
-│ • github_url    │                               └─────────────────┘
-└─────────────────┘                                        │
-         │                                                  │ 1:N
-         │ N:1                                              ▼
-         ▼                                        ┌─────────────────┐
-┌─────────────────┐                               │   Affiliation   │
-│      Track      │                               │                 │
-│                 │                               │ • id (PK)       │
-│ • id (PK)       │                               │ • author_id(FK) │
-│ • conference_   │                               │ • institution   │
-│   _id (FK)      │                               │   _id (FK)      │
-│ • name          │                               │ • position      │
-│ • short_name    │                               │ • department    │
-│ • track_type    │                               │ • is_primary    │
-│ • description   │                               └─────────────────┘
-│ • organizers    │                                        │
-│ • website_url   │                                        │ N:1
-└─────────────────┘                                        ▼
-         │                                        ┌─────────────────┐
-         │ N:1                                    │   Institution   │
-         ▼                                        │                 │
-┌─────────────────┐                               │ • id (PK)       │
-│   Conference    │                               │ • name          │
-│                 │                               │ • normalized_   │
-│ • id (PK)       │                               │   _name         │
-│ • name          │                               │ • abbreviation  │
-│ • full_name     │                               │ • domain        │
-│ • year          │                               │ • website_url   │
-│ • location      │                               │ • country_id(FK)│
-│ • start_date    │                               │ • campus        │
-│ • end_date      │                               └─────────────────┘
-│ • website_url   │                                        │
-└─────────────────┘                                        │ N:1
-                                                           ▼
-┌─────────────────┐                               ┌─────────────────┐
-│     Review      │                               │     Country     │
-│                 │                               │                 │
-│ • id (PK)       │                               │ • id (PK)       │
-│ • paper_id (FK) │──────┐                        │ • name          │
-│ • reviewer_id   │      │ N:1                    │ • code          │
-│ • rating        │      ▼                        └─────────────────┘
-│ • confidence    │  Paper (above)
-│ • word_counts   │
-└─────────────────┘
-         │
-         │ 1:1
-         ▼
-┌─────────────────┐
-│ ReviewStatistics│
-│                 │
-│ • paper_id (FK) │
-│ • rating_mean   │
-│ • rating_std    │
-│ • confidence_   │
-│   _mean/_std    │
-└─────────────────┘
+This document provides detailed documentation for the SQLAlchemy models used in the IndiaML v2 database schema.
 
-┌─────────────────┐
-│     Citation    │
-│                 │
-│ • paper_id (FK) │──────┐
-│ • gs_citations  │      │ 1:1
-│ • gs_url        │      ▼
-│ • last_updated  │  Paper (above)
-└─────────────────┘
+## Overview
 
-┌─────────────────┐       ┌─────────────────┐       ┌─────────────────┐
-│    Keyword      │──────│  PaperKeyword   │──────│      Paper      │
-│                 │ 1:N  │                 │ N:1  │   (above)       │
-│ • id (PK)       │      │ • paper_id (FK) │      └─────────────────┘
-│ • keyword       │      │ • keyword_id(FK)│
-│ • normalized    │      └─────────────────┘
-└─────────────────┘
+The models are defined in `indiaml_v2/models/models.py` and represent the complete database schema for storing and analyzing academic paper data. All models inherit from SQLAlchemy's `declarative_base()` and include comprehensive relationships, indexes, and constraints.
 
-┌─────────────────┐
-│ ExternalProfile │
-│                 │
-│ • id (PK)       │
-│ • author_id(FK) │──────┐
-│ • platform      │      │ N:1
-│ • profile_url   │      ▼
-│ • is_verified   │  Author (above)
-└─────────────────┘
+## Base Configuration
 
-Key Design Decisions
-1. Conference and Track Modeling
+```python
+from sqlalchemy.orm import declarative_base
+Base = declarative_base()
+```
 
-    Problem: Papers belong to different tracks within conferences (workshops, main conference, etc.)
-    Solution: Separate Conference and Track tables with proper relationships
-    Benefits: Can model complex conference structures, track organizers, different deadlines
+All models inherit from this base class and are automatically mapped to database tables.
 
-2. Track Types
+## Core Entity Models
 
-Support for various conference components:
+### Paper Model
 
-    main: Main conference track
-    workshop: Workshop sessions
-    tutorial: Tutorial sessions
-    demo: Demonstration track
-    poster_session: Poster sessions
-    position: Position papers
-    other: Custom track types
+**Primary entity representing academic papers**
 
-3. Multi-Affiliation Handling
+```python
+class Paper(Base):
+    __tablename__ = 'papers'
+    
+    # Primary identification
+    id = Column(String(50), primary_key=True)  # e.g., "3vjsUgCsZ4"
+    title = Column(Text, nullable=False)
+    
+    # Conference and categorization
+    status = Column(String(20))  # "Poster", "Oral", "Spotlight"
+    track_id = Column(Integer, ForeignKey('tracks.id'))
+    primary_area = Column(String(100))
+    
+    # Content fields
+    abstract = Column(Text)
+    tldr = Column(Text)  # Too Long; Didn't Read summary
+    supplementary_material = Column(Text)
+    bibtex = Column(Text)
+    
+    # URLs and external links
+    site_url = Column(String(500))      # Conference presentation URL
+    openreview_url = Column(String(500))
+    pdf_url = Column(String(500))
+    github_url = Column(String(500))
+    project_url = Column(String(500))
+    
+    # Metrics
+    author_count = Column(Integer)
+    pdf_size = Column(Integer, default=0)
+    
+    # Timestamps
+    created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+```
 
-    Problem: Original schema uses complex "+" syntax (e.g., "0+1;2;3+0")
-    Solution: Separate Affiliation table with foreign keys to Author and Institution
-    Benefits: Clean many-to-many relationship, easy querying, no parsing needed
+**Relationships:**
+- `track`: Many-to-one with Track
+- `paper_authors`: One-to-many with PaperAuthor (cascade delete)
+- `keywords`: One-to-many with PaperKeyword (cascade delete)
+- `reviews`: One-to-many with Review (cascade delete)
+- `citations`: One-to-one with Citation (cascade delete)
+- `review_statistics`: One-to-one with ReviewStatistics (cascade delete)
 
-2. Normalized Institution Data
+**Indexes:**
+- `idx_paper_status` on `status`
+- `idx_paper_primary_area` on `primary_area`
+- `idx_paper_track` on `track_id`
 
-    Problem: Raw institution names are inconsistent
-    Solution: Institution table with normalized_name field
-    Benefits: Enables proper aggregation, deduplication, and canonical representation
+### Author Model
 
-3. Flexible External Profiles
+**Represents individual researchers and their profiles**
 
-    Design: Generic ExternalProfile table for any platform
-    Benefits: Extensible for Twitter, ResearchGate, Academia.edu, etc.
+```python
+class Author(Base):
+    __tablename__ = 'authors'
+    
+    # Primary identification
+    id = Column(String(100), primary_key=True)  # Generated or from authorids
+    name = Column(String(200), nullable=False)
+    name_site = Column(String(200))  # Name as displayed on conference site
+    
+    # Profile identifiers
+    openreview_id = Column(String(100))  # From or_profile field
+    gender = Column(String(20))  # "M", "F", "Unspecified"
+    
+    # External profiles and links
+    homepage_url = Column(String(500))
+    dblp_id = Column(String(200))
+    google_scholar_url = Column(String(500))
+    orcid = Column(String(50))  # ORCID identifier
+    linkedin_url = Column(String(500))
+    twitter_url = Column(String(500))
+    
+    # Contact information
+    primary_email = Column(String(200))
+    
+    # Timestamps
+    created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+```
 
-4. Review Data Structure
+**Relationships:**
+- `paper_authors`: One-to-many with PaperAuthor
+- `affiliations`: One-to-many with Affiliation (cascade delete)
+- `external_profiles`: One-to-many with ExternalProfile (backref)
 
-    Split: Individual reviews vs. aggregated statistics
-    Benefits: Maintains raw data while providing pre-computed metrics
+**Constraints:**
+- `UNIQUE(orcid)` - ORCID must be unique when provided
 
-Query Examples
-Find all papers in workshops for a specific conference:
+**Indexes:**
+- `idx_author_name` on `name`
+- `idx_author_orcid` on `orcid`
 
-sql
+### Institution Model
 
-SELECT p.title, t.name as track_name, c.name as conference
-FROM papers p
-JOIN tracks t ON p.track_id = t.id
-JOIN conferences c ON t.conference_id = c.id
-WHERE c.name = 'ICML' 
-  AND c.year = 2025 
-  AND t.track_type = 'workshop';
+**Represents academic and research institutions**
 
-Find collaboration patterns within a conference track:
+```python
+class Institution(Base):
+    __tablename__ = 'institutions'
+    
+    # Primary identification
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    name = Column(String(300), nullable=False)  # Original institution name
+    normalized_name = Column(String(300), nullable=False)  # Canonical name
+    abbreviation = Column(String(50))
+    
+    # Geographic location
+    country_id = Column(Integer, ForeignKey('countries.id'), nullable=False)
+    campus = Column(String(200))  # e.g., "San Diego", "Shenzhen"
+    
+    # Contact and web presence
+    domain = Column(String(200))  # Primary email domain
+    website_url = Column(String(500))
+    
+    # Classification
+    institution_type = Column(String(50))  # "University", "Company", "Research Institute"
+    
+    # Timestamps
+    created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+```
 
-sql
+**Relationships:**
+- `country`: Many-to-one with Country
+- `affiliations`: One-to-many with Affiliation
 
-SELECT t.name as track, i1.normalized_name as inst1, i2.normalized_name as inst2, COUNT(*) as collaborations
-FROM papers p
-JOIN tracks t ON p.track_id = t.id
-JOIN conferences c ON t.conference_id = c.id
-JOIN paper_authors pa1 ON p.id = pa1.paper_id
-JOIN paper_authors pa2 ON p.id = pa2.paper_id AND pa1.author_id != pa2.author_id
-JOIN authors a1 ON pa1.author_id = a1.id
-JOIN authors a2 ON pa2.author_id = a2.id
-JOIN affiliations af1 ON a1.id = af1.author_id
-JOIN affiliations af2 ON a2.id = af2.author_id
-JOIN institutions i1 ON af1.institution_id = i1.id
-JOIN institutions i2 ON af2.institution_id = i2.id
-WHERE c.name = 'ICML' AND c.year = 2025
-  AND i1.id < i2.id
-GROUP BY t.name, i1.normalized_name, i2.normalized_name
-ORDER BY collaborations DESC;
+**Constraints:**
+- `UNIQUE(normalized_name, country_id, campus)` - Prevents duplicate institutions
 
-Find highly cited papers from specific research areas:
+**Indexes:**
+- `idx_institution_normalized_name` on `normalized_name`
+- `idx_institution_normalized_name_country` on `(normalized_name, country_id)`
+- `idx_institution_domain` on `domain`
+- `idx_institution_country` on `country_id`
 
-sql
+### Country Model
 
-SELECT p.title, c.google_scholar_citations, p.primary_area
-FROM papers p
-JOIN citations c ON p.id = c.paper_id
-WHERE p.primary_area LIKE '%reinforcement_learning%'
-  AND c.google_scholar_citations > 10
-ORDER BY c.google_scholar_citations DESC;
+**Represents countries for geographic analysis**
 
-Migration Strategy
+```python
+class Country(Base):
+    __tablename__ = 'countries'
+    
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    name = Column(String(100), nullable=False, unique=True)
+    code = Column(String(3))  # ISO country code if available
+```
 
-    Extract and normalize institution names
-    Parse author affiliations and create proper relationships
-    Handle multi-affiliations by creating multiple Affiliation records
-    Populate external profiles from existing URL fields
-    Create review records from aggregated data
-    Normalize keywords into separate entities
+**Relationships:**
+- `institutions`: One-to-many with Institution
 
+**Indexes:**
+- `idx_country_name` on `name`
+
+## Relationship Models
+
+### PaperAuthor Model
+
+**Junction table linking papers to authors with ordering**
+
+```python
+class PaperAuthor(Base):
+    __tablename__ = 'paper_authors'
+    
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    paper_id = Column(String(50), ForeignKey('papers.id'), nullable=False)
+    author_id = Column(String(100), ForeignKey('authors.id'), nullable=False)
+    author_order = Column(Integer, nullable=False)  # 1st, 2nd, 3rd author, etc.
+    
+    # Affiliation context for this specific paper
+    affiliation_at_time = Column(Text)  # Raw affiliation string from paper
+    
+    created_at = Column(DateTime, default=datetime.utcnow)
+```
+
+**Relationships:**
+- `paper`: Many-to-one with Paper
+- `author`: Many-to-one with Author
+
+**Constraints:**
+- `UNIQUE(paper_id, author_id)` - One relationship per paper-author pair
+- `UNIQUE(paper_id, author_order)` - Unique ordering per paper
+
+**Indexes:**
+- `idx_paper_author_paper` on `paper_id`
+- `idx_paper_author_author` on `author_id`
+
+### Affiliation Model
+
+**Links authors to institutions with role information**
+
+```python
+class Affiliation(Base):
+    __tablename__ = 'affiliations'
+    
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    author_id = Column(String(100), ForeignKey('authors.id'), nullable=False)
+    institution_id = Column(Integer, ForeignKey('institutions.id'), nullable=False)
+    
+    # Role and position information
+    position = Column(String(200))  # "PhD student", "Professor", etc.
+    department = Column(String(200))  # Department within institution
+    email_domain = Column(String(200))  # Specific email domain
+    
+    # Temporal validity (if known)
+    start_date = Column(DateTime)
+    end_date = Column(DateTime)
+    is_primary = Column(Boolean, default=False)  # Primary affiliation flag
+    
+    # Timestamps
+    created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+```
+
+**Relationships:**
+- `author`: Many-to-one with Author
+- `institution`: Many-to-one with Institution
+
+**Indexes:**
+- `idx_affiliation_author` on `author_id`
+- `idx_affiliation_institution` on `institution_id`
+- `idx_affiliation_position` on `position`
+
+## Content Models
+
+### Keyword and PaperKeyword Models
+
+**Manages paper keywords and topics**
+
+```python
+class Keyword(Base):
+    __tablename__ = 'keywords'
+    
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    keyword = Column(String(200), nullable=False, unique=True)
+    normalized_keyword = Column(String(200))  # Lowercase, trimmed version
+```
+
+```python
+class PaperKeyword(Base):
+    __tablename__ = 'paper_keywords'
+    
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    paper_id = Column(String(50), ForeignKey('papers.id'), nullable=False)
+    keyword_id = Column(Integer, ForeignKey('keywords.id'), nullable=False)
+```
+
+**Relationships:**
+- `Keyword.papers`: One-to-many with PaperKeyword
+- `PaperKeyword.paper`: Many-to-one with Paper
+- `PaperKeyword.keyword`: Many-to-one with Keyword
+
+**Constraints:**
+- `UNIQUE(paper_id, keyword_id)` in PaperKeyword
+
+## Review and Citation Models
+
+### Review Model
+
+**Individual paper reviews and scores**
+
+```python
+class Review(Base):
+    __tablename__ = 'reviews'
+    
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    paper_id = Column(String(50), ForeignKey('papers.id'), nullable=False)
+    reviewer_id = Column(String(100))  # Anonymous reviewer identifier
+    
+    # Core review scores (1-5 scale)
+    recommendation = Column(Integer)  # Accept/reject recommendation
+    rating = Column(Integer)  # Overall rating
+    confidence = Column(Integer)  # Reviewer confidence
+    
+    # Position paper specific metrics
+    support = Column(Integer)
+    significance = Column(Integer)
+    discussion_potential = Column(Integer)
+    argument_clarity = Column(Integer)
+    related_work = Column(Integer)
+    
+    # Review content metrics
+    word_count_summary = Column(Integer)
+    word_count_strengths_weaknesses = Column(Integer)
+    word_count_questions = Column(Integer)
+    word_count_total = Column(Integer)
+    
+    # Interaction metrics
+    reviewer_replies = Column(Integer, default=0)
+    author_replies = Column(Integer, default=0)
+    
+    created_at = Column(DateTime, default=datetime.utcnow)
+```
+
+**Relationships:**
+- `paper`: Many-to-one with Paper
+
+**Constraints:**
+- `CHECK(recommendation >= 1 AND recommendation <= 5)`
+- `CHECK(rating >= 1 AND rating <= 5)`
+
+**Indexes:**
+- `idx_review_paper` on `paper_id`
+- `idx_review_rating` on `rating`
+- `idx_review_recommendation` on `recommendation`
+
+### ReviewStatistics Model
+
+**Aggregated review metrics per paper**
+
+```python
+class ReviewStatistics(Base):
+    __tablename__ = 'review_statistics'
+    
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    paper_id = Column(String(50), ForeignKey('papers.id'), nullable=False, unique=True)
+    
+    # Score statistics (mean and standard deviation)
+    rating_mean = Column(Float)
+    rating_std = Column(Float)
+    confidence_mean = Column(Float)
+    confidence_std = Column(Float)
+    support_mean = Column(Float)
+    support_std = Column(Float)
+    significance_mean = Column(Float)
+    significance_std = Column(Float)
+    
+    # Word count statistics
+    word_count_summary_mean = Column(Float)
+    word_count_summary_std = Column(Float)
+    word_count_review_mean = Column(Float)
+    word_count_review_std = Column(Float)
+    
+    # Correlation metrics
+    rating_confidence_correlation = Column(Float)
+    
+    # Count metrics
+    total_reviews = Column(Integer)
+    total_reviewers = Column(Integer)
+    
+    last_calculated = Column(DateTime, default=datetime.utcnow)
+```
+
+**Relationships:**
+- `paper`: One-to-one with Paper
+
+**Indexes:**
+- `idx_review_stats_rating_mean` on `rating_mean`
+
+### Citation Model
+
+**Citation metrics and external links**
+
+```python
+class Citation(Base):
+    __tablename__ = 'citations'
+    
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    paper_id = Column(String(50), ForeignKey('papers.id'), nullable=False, unique=True)
+    
+    # Google Scholar metrics
+    google_scholar_citations = Column(Integer, default=0)
+    google_scholar_url = Column(String(500))
+    google_scholar_versions = Column(Integer, default=0)
+    
+    # Other citation sources (extensible)
+    semantic_scholar_citations = Column(Integer)
+    semantic_scholar_url = Column(String(500))
+    
+    last_updated = Column(DateTime, default=datetime.utcnow)
+```
+
+**Relationships:**
+- `paper`: One-to-one with Paper
+
+**Indexes:**
+- `idx_citation_gs_count` on `google_scholar_citations`
+
+## Conference and Track Models
+
+### Conference Model
+
+**Conference/venue information**
+
+```python
+class Conference(Base):
+    __tablename__ = 'conferences'
+    
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    name = Column(String(200), nullable=False)  # "ICML", "NeurIPS", etc.
+    full_name = Column(String(500))  # Full conference name
+    year = Column(Integer, nullable=False)
+    
+    # Event details
+    location = Column(String(200))
+    start_date = Column(DateTime)
+    end_date = Column(DateTime)
+    website_url = Column(String(500))
+    
+    created_at = Column(DateTime, default=datetime.utcnow)
+```
+
+**Relationships:**
+- `tracks`: One-to-many with Track (cascade delete)
+
+**Constraints:**
+- `UNIQUE(name, year)` - One conference per year
+
+**Indexes:**
+- `idx_conference_year` on `year`
+- `idx_conference_name` on `name`
+
+### Track Model
+
+**Conference tracks (main, workshops, tutorials, etc.)**
+
+```python
+class Track(Base):
+    __tablename__ = 'tracks'
+    
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    conference_id = Column(Integer, ForeignKey('conferences.id'), nullable=False)
+    
+    # Track identification
+    name = Column(String(300), nullable=False)  # Full track name
+    short_name = Column(String(100))  # Short identifier
+    track_type = Column(String(50))  # "main", "workshop", "tutorial", etc.
+    
+    # Track metadata
+    description = Column(Text)
+    organizers = Column(Text)  # Could be JSON for complex cases
+    website_url = Column(String(500))
+    submission_url = Column(String(500))
+    
+    # Important dates
+    submission_deadline = Column(DateTime)
+    notification_date = Column(DateTime)
+    
+    # Status
+    is_active = Column(Boolean, default=True)
+    
+    # Timestamps
+    created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+```
+
+**Relationships:**
+- `conference`: Many-to-one with Conference
+- `papers`: One-to-many with Paper
+
+**Constraints:**
+- `UNIQUE(conference_id, short_name)` - Unique track names per conference
+
+**Indexes:**
+- `idx_track_conference` on `conference_id`
+- `idx_track_type` on `track_type`
+- `idx_track_name` on `name`
+
+## Extension Models
+
+### ExternalProfile Model
+
+**Flexible storage for additional author profiles**
+
+```python
+class ExternalProfile(Base):
+    __tablename__ = 'external_profiles'
+    
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    author_id = Column(String(100), ForeignKey('authors.id'), nullable=False)
+    platform = Column(String(50), nullable=False)  # "twitter", "researchgate", etc.
+    profile_url = Column(String(500), nullable=False)
+    profile_id = Column(String(200))  # Platform-specific ID
+    
+    # Verification status
+    is_verified = Column(Boolean, default=False)
+    verified_at = Column(DateTime)
+    
+    # Timestamps
+    created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+```
+
+**Relationships:**
+- `author`: Many-to-one with Author (backref)
+
+**Constraints:**
+- `UNIQUE(author_id, platform)` - One profile per platform per author
+
+**Indexes:**
+- `idx_external_profile_author` on `author_id`
+- `idx_external_profile_platform` on `platform`
+
+## Model Usage Examples
+
+### Creating Entities
+
+```python
+from models.models import Paper, Author, Institution, Country
+
+# Create a country
+country = Country(name="United States", code="US")
+
+# Create an institution
+institution = Institution(
+    name="Massachusetts Institute of Technology",
+    normalized_name="MIT",
+    country=country,
+    domain="mit.edu",
+    institution_type="University"
+)
+
+# Create an author
+author = Author(
+    id="john_doe_mit",
+    name="John Doe",
+    orcid="0000-0000-0000-0001",
+    homepage_url="https://johndoe.mit.edu"
+)
+
+# Create a paper
+paper = Paper(
+    id="abc123",
+    title="A Novel Approach to Machine Learning",
+    status="Oral",
+    abstract="This paper presents...",
+    author_count=3
+)
+```
+
+### Querying with Relationships
+
+```python
+# Find all papers by an author
+author_papers = session.query(Paper).join(PaperAuthor).filter(
+    PaperAuthor.author_id == "john_doe_mit"
+).all()
+
+# Find all authors from an institution
+mit_authors = session.query(Author).join(Affiliation).join(Institution).filter(
+    Institution.normalized_name == "MIT"
+).all()
+
+# Get papers with high citation counts
+highly_cited = session.query(Paper).join(Citation).filter(
+    Citation.google_scholar_citations > 100
+).order_by(Citation.google_scholar_citations.desc()).all()
+```
+
+### Complex Queries with Statistics
+
+```python
+# Papers with high review scores
+top_papers = session.query(Paper, ReviewStatistics).join(ReviewStatistics).filter(
+    ReviewStatistics.rating_mean > 4.0,
+    ReviewStatistics.total_reviews >= 3
+).order_by(ReviewStatistics.rating_mean.desc()).all()
+
+# Institution collaboration analysis
+collaborations = session.query(
+    Institution.normalized_name.label('inst1'),
+    Institution.normalized_name.label('inst2'),
+    func.count(Paper.id).label('paper_count')
+).select_from(Paper)\
+.join(PaperAuthor, Paper.id == PaperAuthor.paper_id)\
+.join(Author, PaperAuthor.author_id == Author.id)\
+.join(Affiliation, Author.id == Affiliation.author_id)\
+.join(Institution, Affiliation.institution_id == Institution.id)\
+.group_by(Institution.id)\
+.having(func.count(Paper.id) > 5).all()
+```
+
+## Performance Considerations
+
+### Indexing Strategy
+- **Primary keys**: Automatic indexes for fast lookups
+- **Foreign keys**: Indexes on all foreign key columns
+- **Search fields**: Indexes on commonly searched fields (name, orcid, etc.)
+- **Compound indexes**: Multi-column indexes for complex queries
+
+### Relationship Loading
+- **Lazy loading**: Default for most relationships to avoid N+1 queries
+- **Eager loading**: Use `joinedload()` for frequently accessed relationships
+- **Batch loading**: Use `selectinload()` for one-to-many relationships
+
+### Query Optimization
+- **Select specific columns**: Avoid loading unnecessary data
+- **Use joins**: Prefer joins over separate queries
+- **Limit results**: Use `LIMIT` for large datasets
+- **Index usage**: Ensure queries use appropriate indexes
+
+## Data Integrity
+
+### Constraints
+- **Primary keys**: Ensure entity uniqueness
+- **Foreign keys**: Maintain referential integrity
+- **Unique constraints**: Prevent duplicate data
+- **Check constraints**: Validate data ranges and formats
+
+### Cascading Operations
+- **Cascade delete**: Remove dependent records when parent is deleted
+- **Cascade update**: Update foreign keys when parent key changes
+- **Restrict**: Prevent deletion if dependent records exist
+
+### Validation
+- **Model validation**: Use SQLAlchemy validators for data validation
+- **Business logic**: Implement validation in application layer
+- **Database constraints**: Enforce constraints at database level
