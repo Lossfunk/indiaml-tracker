@@ -1,17 +1,25 @@
 """
-Enhanced PaperlistsTransformer with comprehensive existence checking and one-by-one processing.
-This version processes papers individually and checks for existence before every insert operation.
+Enhanced PaperlistsTransformer with comprehensive existence checking, detailed logging, and verification.
+This version processes papers individually with extensive logging, time metrics, and post-import verification.
 """
 
 import json
 import re
+import random
+import time
 from typing import Dict, List, Optional, Tuple
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine, func, text
 from indiaml_v2.models.models import *  # Import all the SQLAlchemy models
+from indiaml_v2.logging_config import get_logger
 
 class PaperlistsTransformer:
     def __init__(self, database_url: str = "sqlite:///paperlists.db"):
+        # Initialize comprehensive logging
+        self.logger = get_logger("paperlist_importer", "logs")
+        self.logger.start_operation("initializing_transformer", database_url=database_url)
+        
+        # Database setup
         self.engine = create_engine(database_url, echo=False)
         Base.metadata.create_all(self.engine)
         
@@ -30,62 +38,139 @@ class PaperlistsTransformer:
         self.conference_cache = {}
         self.track_cache = {}
         
+        # Statistics tracking
+        self.stats = {
+            'papers_processed': 0,
+            'papers_skipped': 0,
+            'papers_failed': 0,
+            'authors_created': 0,
+            'institutions_created': 0,
+            'countries_created': 0,
+            'keywords_created': 0,
+            'reviews_created': 0,
+            'citations_created': 0,
+            'start_time': time.time()
+        }
+        
         # Create indexes explicitly for SQLite optimization
         self._ensure_indexes()
+        
+        self.logger.end_operation("initializing_transformer", success=True)
+        self.logger.success("PaperlistsTransformer initialized successfully")
     
     def _ensure_indexes(self):
         """Ensure critical indexes exist for SQLite performance"""
+        self.logger.start_operation("creating_database_indexes")
         try:
             with self.engine.connect() as conn:
-                conn.execute(text("CREATE INDEX IF NOT EXISTS idx_institution_normalized_lookup ON institutions (normalized_name)"))
-                conn.execute(text("CREATE INDEX IF NOT EXISTS idx_institution_normalized_country ON institutions (normalized_name, country_id)"))
-                conn.execute(text("CREATE INDEX IF NOT EXISTS idx_author_orcid_lookup ON authors (orcid)"))
-                conn.execute(text("CREATE INDEX IF NOT EXISTS idx_author_openreview_lookup ON authors (openreview_id)"))
+                indexes = [
+                    "CREATE INDEX IF NOT EXISTS idx_institution_normalized_lookup ON institutions (normalized_name)",
+                    "CREATE INDEX IF NOT EXISTS idx_institution_normalized_country ON institutions (normalized_name, country_id)",
+                    "CREATE INDEX IF NOT EXISTS idx_author_orcid_lookup ON authors (orcid)",
+                    "CREATE INDEX IF NOT EXISTS idx_author_openreview_lookup ON authors (openreview_id)",
+                    "CREATE INDEX IF NOT EXISTS idx_paper_id_lookup ON papers (id)",
+                    "CREATE INDEX IF NOT EXISTS idx_keyword_normalized_lookup ON keywords (normalized_keyword)"
+                ]
+                
+                for index_sql in indexes:
+                    conn.execute(text(index_sql))
+                    
                 conn.commit()
+                self.logger.success(f"Created {len(indexes)} database indexes for performance optimization")
+                
         except Exception as e:
-            print(f"Index creation warning: {e}")
+            self.logger.error(f"Index creation warning: {e}")
+        finally:
+            self.logger.end_operation("creating_database_indexes", success=True)
     
     def transform_paperlists_data(self, paperlists_json: List[Dict]):
-        """Main transformation function - one paper at a time with individual commits"""
+        """Main transformation function with comprehensive logging and time metrics"""
+        self.logger.start_operation("transform_paperlists_data", total_papers=len(paperlists_json))
+        
         successful_count = 0
         error_count = 0
         skipped_count = 0
         
         total_papers = len(paperlists_json)
-        print(f"Starting to process {total_papers} papers one by one...")
+        self.logger.info(f"Starting to process {total_papers} papers one by one with detailed logging")
+        
+        # Track processing time for batches
+        batch_start_time = time.time()
+        batch_size = 10
         
         for i, paper_data in enumerate(paperlists_json):
             paper_id = paper_data.get('id', f'unknown_{i}')
+            paper_title = paper_data.get('title', 'Unknown Title')[:50] + "..."
+            
+            # Start timing this paper
+            paper_start_time = time.time()
             
             try:
                 # Check if paper already exists
                 if self.paper_exists(paper_id):
-                    print(f"Paper {paper_id} already exists, skipping...")
+                    self.logger.info(f"Paper {paper_id} already exists, skipping", 
+                                   paper_id=paper_id, title=paper_title)
                     skipped_count += 1
+                    self.stats['papers_skipped'] += 1
                     continue
                 
-                # Process single paper
-                print(f"Processing paper {i+1}/{total_papers}: {paper_id}")
+                # Process single paper with detailed logging
+                self.logger.info(f"Processing paper {i+1}/{total_papers}: {paper_id}", 
+                               paper_id=paper_id, title=paper_title, progress=f"{i+1}/{total_papers}")
+                
                 self.process_single_paper_with_checks(paper_data)
                 
                 # Commit immediately after each paper
                 self.session.commit()
                 successful_count += 1
+                self.stats['papers_processed'] += 1
                 
-                if successful_count % 10 == 0:
-                    print(f"Successfully processed {successful_count} papers...")
+                # Log paper processing time
+                paper_duration = time.time() - paper_start_time
+                self.logger.success(f"Paper {paper_id} processed successfully in {paper_duration:.3f}s",
+                                  paper_id=paper_id, duration=paper_duration)
+                
+                # Log batch progress
+                if successful_count % batch_size == 0:
+                    batch_duration = time.time() - batch_start_time
+                    avg_time_per_paper = batch_duration / batch_size
+                    estimated_remaining = (total_papers - i - 1) * avg_time_per_paper
+                    
+                    self.logger.progress(f"Batch completed: {successful_count} papers processed", 
+                                       batch_size=batch_size, 
+                                       batch_duration=batch_duration,
+                                       avg_time_per_paper=avg_time_per_paper,
+                                       estimated_remaining_time=estimated_remaining)
+                    
+                    batch_start_time = time.time()
                     
             except Exception as e:
-                print(f"Error processing paper {paper_id}: {e}")
+                paper_duration = time.time() - paper_start_time
+                self.logger.error(f"Error processing paper {paper_id} after {paper_duration:.3f}s: {e}",
+                                paper_id=paper_id, title=paper_title, duration=paper_duration, error=str(e))
+                
                 # Rollback this paper's changes
                 self.session.rollback()
                 error_count += 1
+                self.stats['papers_failed'] += 1
                 continue
         
-        print(f"Processing completed!")
-        print(f"Successfully processed: {successful_count}")
-        print(f"Errors: {error_count}")
-        print(f"Skipped (already existed): {skipped_count}")
+        # Final statistics
+        total_duration = time.time() - self.stats['start_time']
+        
+        self.logger.success("Processing completed successfully!")
+        self.logger.log_data_stats("final_processing_stats", 
+                                 total_papers, 
+                                 successful=successful_count,
+                                 errors=error_count, 
+                                 skipped=skipped_count,
+                                 total_duration=total_duration,
+                                 avg_time_per_paper=total_duration/max(1, successful_count))
+        
+        # Perform post-import verification
+        self.verify_import_success(paperlists_json, successful_count)
+        
+        self.logger.end_operation("transform_paperlists_data", success=True)
     
     def paper_exists(self, paper_id: str) -> bool:
         """Check if paper already exists in database"""
@@ -798,40 +883,284 @@ class PaperlistsTransformer:
         else:
             return 'other', track_name
     
+    def verify_import_success(self, original_data: List[Dict], expected_count: int):
+        """Verify import success by randomly sampling and comparing data"""
+        self.logger.start_operation("post_import_verification", expected_count=expected_count)
+        
+        try:
+            # Get actual count from database
+            actual_count = self.session.query(Paper).count()
+            self.logger.info(f"Database contains {actual_count} papers, expected {expected_count}")
+            
+            if actual_count < expected_count:
+                self.logger.warning(f"Paper count mismatch: expected {expected_count}, got {actual_count}")
+            
+            # Randomly sample papers for verification
+            sample_size = min(10, len(original_data), actual_count)
+            if sample_size == 0:
+                self.logger.warning("No papers to verify")
+                return
+            
+            self.logger.info(f"Randomly sampling {sample_size} papers for verification")
+            
+            # Get random sample from original data
+            sampled_papers = random.sample(original_data, sample_size)
+            verification_results = {
+                'verified': 0,
+                'failed': 0,
+                'missing': 0,
+                'data_mismatches': []
+            }
+            
+            for i, original_paper in enumerate(sampled_papers):
+                paper_id = original_paper.get('id')
+                if not paper_id:
+                    continue
+                
+                self.logger.debug(f"Verifying paper {i+1}/{sample_size}: {paper_id}")
+                
+                # Check if paper exists in database
+                db_paper = self.session.query(Paper).filter_by(id=paper_id).first()
+                if not db_paper:
+                    verification_results['missing'] += 1
+                    self.logger.error(f"Paper {paper_id} missing from database", paper_id=paper_id)
+                    continue
+                
+                # Verify paper data
+                verification_success = self._verify_paper_data(original_paper, db_paper, verification_results)
+                
+                if verification_success:
+                    verification_results['verified'] += 1
+                    self.logger.success(f"Paper {paper_id} verification passed", paper_id=paper_id)
+                else:
+                    verification_results['failed'] += 1
+                    self.logger.error(f"Paper {paper_id} verification failed", paper_id=paper_id)
+            
+            # Log verification summary
+            self.logger.log_data_stats("verification_results", 
+                                     sample_size,
+                                     verified=verification_results['verified'],
+                                     failed=verification_results['failed'],
+                                     missing=verification_results['missing'],
+                                     success_rate=verification_results['verified']/max(1, sample_size))
+            
+            # Log database statistics
+            self._log_database_statistics()
+            
+        except Exception as e:
+            self.logger.error(f"Verification failed: {e}")
+        finally:
+            self.logger.end_operation("post_import_verification", success=True)
+    
+    def _verify_paper_data(self, original: Dict, db_paper: Paper, results: Dict) -> bool:
+        """Verify individual paper data matches between original and database"""
+        mismatches = []
+        
+        # Check basic paper fields
+        checks = [
+            ('title', original.get('title', ''), db_paper.title),
+            ('status', original.get('status'), db_paper.status),
+            ('primary_area', original.get('primary_area'), db_paper.primary_area),
+            ('author_count', original.get('author_num', 0), db_paper.author_count)
+        ]
+        
+        for field_name, original_value, db_value in checks:
+            if str(original_value).strip() != str(db_value or '').strip():
+                mismatches.append({
+                    'field': field_name,
+                    'original': original_value,
+                    'database': db_value
+                })
+        
+        # Check author count by querying relationships
+        actual_author_count = self.session.query(PaperAuthor).filter_by(paper=db_paper).count()
+        expected_author_count = len(self.parse_semicolon_field(original.get('author', '')))
+        
+        if actual_author_count != expected_author_count:
+            mismatches.append({
+                'field': 'actual_author_count',
+                'original': expected_author_count,
+                'database': actual_author_count
+            })
+        
+        # Check keywords
+        original_keywords = set(k.strip().lower() for k in original.get('keywords', '').split(';') if k.strip())
+        db_keywords = set(pk.keyword.normalized_keyword for pk in 
+                         self.session.query(PaperKeyword).filter_by(paper=db_paper).all())
+        
+        if original_keywords != db_keywords:
+            mismatches.append({
+                'field': 'keywords',
+                'original': len(original_keywords),
+                'database': len(db_keywords)
+            })
+        
+        if mismatches:
+            results['data_mismatches'].append({
+                'paper_id': db_paper.id,
+                'mismatches': mismatches
+            })
+            return False
+        
+        return True
+    
+    def _log_database_statistics(self):
+        """Log comprehensive database statistics"""
+        try:
+            stats = {
+                'papers': self.session.query(Paper).count(),
+                'authors': self.session.query(Author).count(),
+                'institutions': self.session.query(Institution).count(),
+                'countries': self.session.query(Country).count(),
+                'keywords': self.session.query(Keyword).count(),
+                'reviews': self.session.query(Review).count(),
+                'citations': self.session.query(Citation).count(),
+                'affiliations': self.session.query(Affiliation).count(),
+                'paper_authors': self.session.query(PaperAuthor).count(),
+                'paper_keywords': self.session.query(PaperKeyword).count()
+            }
+            
+            self.logger.info("📊 Final Database Statistics:")
+            for entity, count in stats.items():
+                self.logger.info(f"  {entity.title()}: {count:,}")
+            
+            # Log top countries and institutions
+            top_countries = self.session.query(Country.name, func.count(Institution.id))\
+                .join(Institution)\
+                .group_by(Country.name)\
+                .order_by(func.count(Institution.id).desc())\
+                .limit(5).all()
+            
+            self.logger.info("🌍 Top 5 Countries by Institution Count:")
+            for country, count in top_countries:
+                self.logger.info(f"  {country}: {count} institutions")
+            
+            # Log processing performance
+            total_time = time.time() - self.stats['start_time']
+            papers_per_second = self.stats['papers_processed'] / max(1, total_time)
+            
+            self.logger.info("⚡ Performance Metrics:")
+            self.logger.info(f"  Total processing time: {total_time:.2f} seconds")
+            self.logger.info(f"  Papers processed per second: {papers_per_second:.2f}")
+            self.logger.info(f"  Average time per paper: {total_time/max(1, self.stats['papers_processed']):.3f}s")
+            
+        except Exception as e:
+            self.logger.error(f"Failed to log database statistics: {e}")
+    
     def cleanup(self):
-        """Clean up resources"""
+        """Clean up resources with logging"""
+        self.logger.start_operation("cleanup_resources")
         try:
             self.session.close()
             self.engine.dispose()
+            self.logger.success("Resources cleaned up successfully")
         except Exception as e:
-            print(f"Warning during cleanup: {e}")
+            self.logger.error(f"Warning during cleanup: {e}")
+        finally:
+            self.logger.end_operation("cleanup_resources", success=True)
 
 
-# Usage example
+# Enhanced usage example with comprehensive logging
 def main():
+    """Main function with enhanced logging and error handling"""
     transformer = None
+    logger = get_logger("paperlist_importer_main", "logs")
+    
     try:
+        logger.start_operation("main_import_process")
+        
         # Load paperlists JSON data
-        with open('paperlists_data.json', 'r') as f:
+        logger.info("Loading paperlists JSON data...")
+        data_file = 'paperlists_data.json'
+        
+        try:
+            with open(data_file, 'r') as f:
+                paperlists_data = json.load(f)
+            
+            logger.log_file_operation("read", data_file, 
+                                    size=len(json.dumps(paperlists_data)), 
+                                    success=True)
+            logger.log_data_stats("loaded_data", len(paperlists_data))
+            
+        except FileNotFoundError:
+            logger.error(f"Data file not found: {data_file}")
+            logger.info("Please ensure 'paperlists_data.json' exists in the current directory")
+            return
+        except json.JSONDecodeError as e:
+            logger.error(f"Invalid JSON in {data_file}: {e}")
+            return
+        
+        # Initialize transformer with logging
+        logger.info("Initializing PaperlistsTransformer...")
+        database_url = 'sqlite:///paperlists.db'
+        transformer = PaperlistsTransformer(database_url)
+        
+        logger.info(f"Starting to process {len(paperlists_data)} papers with comprehensive logging...")
+        
+        # Transform data with detailed logging and verification
+        start_time = time.time()
+        transformer.transform_paperlists_data(paperlists_data)
+        total_time = time.time() - start_time
+        
+        logger.success(f"Import process completed successfully in {total_time:.2f} seconds")
+        logger.log_file_operation("created", "paperlists.db", success=True)
+        logger.info("Database created at: paperlists.db")
+        logger.info("Check the 'logs' directory for detailed processing logs")
+        
+    except KeyboardInterrupt:
+        logger.warning("Import process interrupted by user")
+    except Exception as e:
+        logger.log_exception(e, "main import process")
+        logger.error("Import process failed - check logs for details")
+    finally:
+        if transformer:
+            logger.info("Cleaning up resources...")
+            transformer.cleanup()
+        
+        logger.end_operation("main_import_process", success=True)
+        logger.info("🎯 Import process finished. Check logs for detailed analysis.")
+
+
+def main_with_custom_file(json_file: str, db_file: str = "paperlists.db"):
+    """Main function with custom file paths and enhanced logging"""
+    transformer = None
+    logger = get_logger("paperlist_importer_custom", "logs")
+    
+    try:
+        logger.start_operation("custom_import_process", 
+                             json_file=json_file, 
+                             db_file=db_file)
+        
+        # Load custom JSON data
+        logger.info(f"Loading data from: {json_file}")
+        
+        with open(json_file, 'r') as f:
             paperlists_data = json.load(f)
         
-        # Initialize transformer
-        transformer = PaperlistsTransformer('sqlite:///paperlists.db')
+        logger.log_file_operation("read", json_file, 
+                                size=len(json.dumps(paperlists_data)), 
+                                success=True)
+        logger.log_data_stats("loaded_custom_data", len(paperlists_data))
         
-        print(f"Processing {len(paperlists_data)} papers one by one...")
+        # Initialize transformer with custom database
+        database_url = f'sqlite:///{db_file}'
+        transformer = PaperlistsTransformer(database_url)
         
-        # Transform data (one by one processing)
+        # Process data
+        start_time = time.time()
         transformer.transform_paperlists_data(paperlists_data)
+        total_time = time.time() - start_time
         
-        print("Database created at: paperlists.db")
+        logger.success(f"Custom import completed in {total_time:.2f} seconds")
+        logger.log_file_operation("created", db_file, success=True)
         
-    except FileNotFoundError:
-        print("Error: paperlists_data.json file not found")
     except Exception as e:
-        print(f"Error during processing: {e}")
+        logger.log_exception(e, "custom import process")
     finally:
         if transformer:
             transformer.cleanup()
+        
+        logger.end_operation("custom_import_process", success=True)
 
 
 if __name__ == "__main__":
