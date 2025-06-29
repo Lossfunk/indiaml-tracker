@@ -165,11 +165,13 @@ class Affiliation(Base):
     # Relationships
     author = relationship("Author", back_populates="affiliations")
     institution = relationship("Institution", back_populates="affiliations")
+    paper_author_affiliations = relationship("PaperAuthorAffiliation", back_populates="affiliation")
     
     __table_args__ = (
         Index('idx_affiliation_author', 'author_id'),
         Index('idx_affiliation_institution', 'institution_id'),
         Index('idx_affiliation_position', 'position'),
+        UniqueConstraint('author_id', 'institution_id', name='uq_author_institution'),  # Ensure deduplication
     )
 
 # Paper-Author Junction Table
@@ -181,8 +183,8 @@ class PaperAuthor(Base):
     author_id = Column(String(100), ForeignKey('authors.id'), nullable=False)
     author_order = Column(Integer, nullable=False)  # 1st author, 2nd author, etc.
     
-    # Specific affiliation for this paper (if different from primary)
-    affiliation_at_time = Column(Text)  # Raw affiliation string as it appeared in paper
+    # Raw affiliation string as it appeared in paper (for reference only)
+    raw_affiliation_text = Column(Text)  # Keep for reference but not used for relationships
     
     # Timestamps
     created_at = Column(DateTime, default=datetime.utcnow)
@@ -190,12 +192,40 @@ class PaperAuthor(Base):
     # Relationships
     paper = relationship("Paper", back_populates="paper_authors")
     author = relationship("Author", back_populates="paper_authors")
+    paper_author_affiliations = relationship("PaperAuthorAffiliation", back_populates="paper_author", cascade="all, delete-orphan")
     
     __table_args__ = (
         UniqueConstraint('paper_id', 'author_id', name='uq_paper_author'),
         UniqueConstraint('paper_id', 'author_order', name='uq_paper_author_order'),
         Index('idx_paper_author_paper', 'paper_id'),
         Index('idx_paper_author_author', 'author_id'),
+    )
+
+# Paper-Author-Affiliation Junction Table (for multi-affiliations)
+class PaperAuthorAffiliation(Base):
+    __tablename__ = 'paper_author_affiliations'
+    
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    paper_author_id = Column(Integer, ForeignKey('paper_authors.id'), nullable=False)
+    affiliation_id = Column(Integer, ForeignKey('affiliations.id'), nullable=False)
+    
+    # Position and contact info specific to this paper-author-affiliation combination
+    position = Column(String(200))  # Position for this specific affiliation
+    email_domain = Column(String(200))  # Email domain for this affiliation
+    is_primary = Column(Boolean, default=False)  # Is this the primary affiliation for this paper-author
+    
+    # Timestamps
+    created_at = Column(DateTime, default=datetime.utcnow)
+    
+    # Relationships
+    paper_author = relationship("PaperAuthor", back_populates="paper_author_affiliations")
+    affiliation = relationship("Affiliation", back_populates="paper_author_affiliations")
+    
+    __table_args__ = (
+        UniqueConstraint('paper_author_id', 'affiliation_id', name='uq_paper_author_affiliation'),
+        Index('idx_paper_author_affiliation_paper_author', 'paper_author_id'),
+        Index('idx_paper_author_affiliation_affiliation', 'affiliation_id'),
+        Index('idx_paper_author_affiliation_primary', 'is_primary'),
     )
 
 # Keywords Table

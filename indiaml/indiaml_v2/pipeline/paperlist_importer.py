@@ -12,6 +12,7 @@ from typing import Dict, List, Optional, Tuple
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine, func, text
 from indiaml_v2.models.models import *  # Import all the SQLAlchemy models
+from indiaml_v2.models.models import PaperAuthorAffiliation  # Explicitly import the new model
 from indiaml_v2.logging_config import get_logger
 from indiaml_v2.config import ImporterConfig, load_config
 
@@ -388,16 +389,18 @@ class PaperlistsTransformer:
                         paper=paper,
                         author=author,
                         author_order=i + 1,
-                        affiliation_at_time=self.safe_get(raw_affs, i)
+                        raw_affiliation_text=self.safe_get(raw_affs, i)
                     )
                     self.session.add(paper_author)
                     self.session.flush()
+                else:
+                    paper_author = existing_paper_author
                 
-                # Process affiliations for this author
+                # Process affiliations for this author-paper combination
                 aff_indices = self.safe_get(aff_unique_indices, i, '')
                 if aff_indices:
-                    self.process_author_affiliations_with_checks(
-                        author, aff_indices, institution_map,
+                    self.process_paper_author_affiliations_with_checks(
+                        paper_author, author, aff_indices, institution_map,
                         self.safe_get(positions, i),
                         self.safe_get(email_domains, i)
                     )
@@ -596,10 +599,112 @@ class PaperlistsTransformer:
             print(f"Error creating author {name}: {e}")
             return None
     
+    def process_paper_author_affiliations_with_checks(self, paper_author: PaperAuthor, author: Author, 
+                                                     aff_indices: str, institution_map: Dict[str, Institution],
+                                                     position: str, email_domain: str):
+        """Process paper-author affiliations with multi-affiliation support and deduplication"""
+        
+        try:
+            # Handle multi-affiliations (+ delimited)
+            if '+' in aff_indices:
+                indices = aff_indices.split('+')
+            else:
+                indices = [aff_indices]
+            
+            # Handle multiple positions and domains
+            positions = position.split('+') if position and '+' in position else [position]
+            email_domains = email_domain.split('+') if email_domain and '+' in email_domain else [email_domain]
+            
+            for idx, aff_idx in enumerate(indices):
+                if aff_idx.strip() and aff_idx in institution_map:
+                    institution = institution_map[aff_idx]
+                    
+                    if institution:
+                        # Get or create deduplicated affiliation
+                        affiliation = self.get_or_create_affiliation_with_deduplication(
+                            author=author,
+                            institution=institution,
+                            position=self.safe_get(positions, idx, ''),
+                            email_domain=self.safe_get(email_domains, idx, '')
+                        )
+                        
+                        if affiliation:
+                            # Check if paper-author-affiliation relationship already exists
+                            existing_paa = self.session.query(PaperAuthorAffiliation).filter_by(
+                                paper_author=paper_author,
+                                affiliation=affiliation
+                            ).first()
+                            
+                            if not existing_paa:
+                                # Create new paper-author-affiliation relationship
+                                paper_author_affiliation = PaperAuthorAffiliation(
+                                    paper_author=paper_author,
+                                    affiliation=affiliation,
+                                    position=self.safe_get(positions, idx, ''),
+                                    email_domain=self.safe_get(email_domains, idx, ''),
+                                    is_primary=(idx == 0)  # First affiliation is primary
+                                )
+                                self.session.add(paper_author_affiliation)
+                                self.session.flush()
+                        
+        except Exception as e:
+            print(f"Error processing paper-author affiliations for author {author.name}: {e}")
+    
+    def get_or_create_affiliation_with_deduplication(self, author: Author, institution: Institution,
+                                                   position: str = '', email_domain: str = '') -> Optional[Affiliation]:
+        """Get or create affiliation with proper deduplication based on author-institution combination"""
+        
+        try:
+            # Check if affiliation already exists (deduplication based on author + institution)
+            existing_affiliation = self.session.query(Affiliation).filter_by(
+                author=author,
+                institution=institution
+            ).first()
+            
+            if existing_affiliation:
+                # Update position and email_domain if they're more specific/complete
+                updated = False
+                if position and not existing_affiliation.position:
+                    existing_affiliation.position = position
+                    updated = True
+                if email_domain and not existing_affiliation.email_domain:
+                    existing_affiliation.email_domain = email_domain
+                    updated = True
+                
+                if updated:
+                    self.session.flush()
+                
+                return existing_affiliation
+            
+            # Create new affiliation
+            affiliation = Affiliation(
+                author=author,
+                institution=institution,
+                position=position,
+                email_domain=email_domain,
+                is_primary=False  # Will be set at paper-author-affiliation level
+            )
+            
+            self.session.add(affiliation)
+            self.session.flush()
+            return affiliation
+            
+        except Exception as e:
+            print(f"Error creating/getting affiliation for {author.name} at {institution.name}: {e}")
+            # Try to get existing one in case of race condition
+            return self.session.query(Affiliation).filter_by(
+                author=author,
+                institution=institution
+            ).first()
+
     def process_author_affiliations_with_checks(self, author: Author, aff_indices: str,
                                                institution_map: Dict[str, Institution],
                                                position: str, email_domain: str):
-        """Process author affiliations with existence checks"""
+        """Legacy method - kept for backward compatibility but redirects to new logic"""
+        
+        # This method is now deprecated in favor of process_paper_author_affiliations_with_checks
+        # but kept for any legacy code that might still call it
+        print(f"Warning: process_author_affiliations_with_checks is deprecated. Use process_paper_author_affiliations_with_checks instead.")
         
         try:
             # Handle multi-affiliations
@@ -617,22 +722,13 @@ class PaperlistsTransformer:
                     institution = institution_map[aff_idx]
                     
                     if institution:
-                        # Check if affiliation already exists
-                        existing_affiliation = self.session.query(Affiliation).filter_by(
-                            author=author, institution=institution
-                        ).first()
-                        
-                        if not existing_affiliation:
-                            # Create new affiliation
-                            affiliation = Affiliation(
-                                author=author,
-                                institution=institution,
-                                position=self.safe_get(positions, idx, ''),
-                                email_domain=self.safe_get(email_domains, idx, ''),
-                                is_primary=(idx == 0)
-                            )
-                            self.session.add(affiliation)
-                            self.session.flush()
+                        # Use the new deduplication method
+                        self.get_or_create_affiliation_with_deduplication(
+                            author=author,
+                            institution=institution,
+                            position=self.safe_get(positions, idx, ''),
+                            email_domain=self.safe_get(email_domains, idx, '')
+                        )
                         
         except Exception as e:
             print(f"Error processing affiliations for author {author.name}: {e}")
