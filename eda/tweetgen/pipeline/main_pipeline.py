@@ -10,7 +10,7 @@ import sys
 from pathlib import Path
 from typing import Dict, List, Any, Optional
 from .state_manager import StateManager
-from .sqlite_extractor import SQLiteExtractor
+from .json_extractor import JSONExtractor
 from .author_enricher import AuthorEnricher
 from .analytics_processor import AnalyticsProcessor
 from .tweet_generator import TweetGenerator
@@ -34,7 +34,7 @@ class TweetGenerationPipeline:
         self.state_manager = StateManager(conference, str(self.config.output_dir))
         
         # Initialize pipeline components with config
-        self.sqlite_extractor = SQLiteExtractor(self.state_manager, self.config)
+        self.json_extractor = JSONExtractor(self.state_manager, self.config)
         self.author_enricher = AuthorEnricher(self.state_manager, self.config)
         self.analytics_processor = AnalyticsProcessor(self.state_manager, self.config)
         self.tweet_generator = TweetGenerator(self.state_manager, self.config)
@@ -70,7 +70,7 @@ class TweetGenerationPipeline:
             # Step 2: Data Extraction
             if not self.state_manager.is_step_completed("data_extraction"):
                 print("\n📊 Step 2: Data Extraction")
-                conference_info = self.sqlite_extractor.get_conference_info(config["sqlite_file"])
+                conference_info = self.json_extractor.get_conference_info(self.conference)
                 results["conference_info"] = conference_info
                 self.state_manager.mark_step_complete("data_extraction", {"conference_info": conference_info})
                 print("  ✅ Data extraction complete")
@@ -78,19 +78,19 @@ class TweetGenerationPipeline:
                 state = self.state_manager.load_state()
                 results["conference_info"] = state.get("step_metadata", {}).get("data_extraction", {}).get("conference_info", {})
             
-            # Step 3: SQLite Processing
-            if not self.state_manager.is_step_completed("sqlite_processing"):
-                print("\n🗄️  Step 3: SQLite Processing")
-                data = self.sqlite_extractor.extract_data(config["sqlite_file"])
+            # Step 3: JSON Processing
+            if not self.state_manager.is_step_completed("json_processing"):
+                print("\n📄 Step 3: JSON Processing")
+                data = self.json_extractor.extract_data(self.conference)
                 results["papers"] = data["papers"]
                 results["authors"] = data["authors"]
                 
                 # Calculate statistics
-                stats = self.sqlite_extractor.get_paper_statistics(data["papers"])
+                stats = self.json_extractor.get_paper_statistics(data["papers"])
                 print(f"  📊 Statistics: {stats['total_papers']} papers, {stats['total_indian_authors']} Indian authors")
                 
-                self.state_manager.mark_step_complete("sqlite_processing", {"statistics": stats})
-                print("  ✅ SQLite processing complete")
+                self.state_manager.mark_step_complete("json_processing", {"statistics": stats})
+                print("  ✅ JSON processing complete")
             else:
                 results["papers"] = self.state_manager.load_checkpoint("raw_papers.json")
                 results["authors"] = self.state_manager.load_checkpoint("raw_authors.json")
@@ -177,13 +177,20 @@ class TweetGenerationPipeline:
     def _validate_inputs(self, config: Dict[str, str]) -> None:
         """Validate that required input files exist."""
         try:
-            self.config.validate_paths()
-            print(f"  ✅ SQLite file: {self.config.get_sqlite_path()}")
-            print(f"  ✅ Analytics file: {self.config.get_analytics_path()}")
+            # Check JSON file exists
+            json_path = self.config.get_json_path()
+            if not json_path.exists():
+                raise FileNotFoundError(f"JSON file not found: {json_path}")
+            print(f"  ✅ JSON file: {json_path}")
+            
+            # Check analytics file exists
+            analytics_path = self.config.get_analytics_path()
+            if not analytics_path.exists():
+                raise FileNotFoundError(f"Analytics file not found: {analytics_path}")
+            print(f"  ✅ Analytics file: {analytics_path}")
             
             # Print configuration summary
             print(f"  🔧 Configuration:")
-            print(f"    • Data directory: {self.config.data_dir}")
             print(f"    • Analytics directory: {self.config.analytics_dir}")
             print(f"    • Output directory: {self.config.output_dir}")
             print(f"    • Max concurrent requests: {self.config.max_concurrent_requests}")

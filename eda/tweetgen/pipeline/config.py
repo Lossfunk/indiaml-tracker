@@ -151,6 +151,22 @@ class PipelineConfig:
         config = self.get_conference_config()
         return self.analytics_dir / config["analytics_file"]
     
+    def get_json_path(self) -> Path:
+        """Get full path to JSON data file."""
+        # Look for JSON files matching the conference pattern
+        patterns = [
+            f"{self.conference}.json",
+            f"*{self.conference}*.json"
+        ]
+        
+        for pattern in patterns:
+            matches = list(self.analytics_dir.glob(pattern))
+            if matches:
+                # Return the first match (should be the main data file)
+                return matches[0]
+        
+        raise FileNotFoundError(f"No JSON file found for conference '{self.conference}' in {self.analytics_dir}")
+    
     def get_output_path(self) -> Path:
         """Get output directory for this conference."""
         return self.output_dir / self.conference
