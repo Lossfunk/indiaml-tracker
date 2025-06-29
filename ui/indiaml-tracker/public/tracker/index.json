@@ -4,34 +4,39 @@
     "file": "icml-2024-v1.json",
     "analytics": "icml-2024-analytics.json",
     "venue": "icml",
-    "year": "2024"
+    "year": "2024",
+    "sqlite_file": "venues-icml-2024-v2.1.db"
   },
   {
     "label": "ICLR 2024",
     "file": "iclr-2024.json",
     "analytics": "iclr-2024-analytics.json",
     "venue": "iclr",
-    "year": "2024"
+    "year": "2024",
+    "sqlite_file": "venues-iclr-2024-v3.1.db"
   },
   {
     "label": "NeurIPS 2024",
     "file": "neurips-2024.json",
     "analytics": "neurips-2024-analytics.json",
     "venue": "neurips",
-    "year": "2024"
+    "year": "2024",
+    "sqlite_file": "venues-neurips-2024-v2.1.db"
   },
   {
     "label": "ICLR 2025",
     "file": "iclr-2025.json",
     "analytics": "iclr-2025-analytics.json",
     "venue": "iclr",
-    "year": "2025"
+    "year": "2025",
+    "sqlite_file": "venues-iclr-2025-v3.db"
   },
   {
     "label": "ICML 2025",
     "file": "icml-2025.json",
     "analytics": "icml-2025-analytics.json",
     "venue": "icml",
-    "year": "2025"
+    "year": "2025",
+    "sqlite_file": "venues-icml-2025-v1.db"
   }
 ]
