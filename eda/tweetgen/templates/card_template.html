@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ paper.title }}</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 800px;
+            height: 500px;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Dot pattern background */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle, #64748b 1.5px, transparent 1.5px);
+            background-size: 20px 20px;
+            opacity: 0.12;
+            z-index: 1;
+        }
+
+        .card {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            z-index: 2;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            border-radius: 16px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 40px;
+        }
+
+        .conference-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #64748b;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .conference-name {
+            color: #64748b;
+        }
+
+        .separator {
+            color: #64748b;
+        }
+
+        .presentation-type {
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .branding {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo {
+            height: 30px;
+            width: auto;
+        }
+
+        .brand-text {
+            color: #64748b;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .title {
+            color: #1e293b;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: {{ title_font_size }}px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            word-wrap: break-word;
+            hyphens: auto;
+        }
+
+        .authors-section {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .authors-label {
+            color: #64748b;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .authors-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px 20px;
+            align-content: start;
+        }
+
+        .author {
+            color: #374151;
+            font-size: 16px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            line-height: 1.3;
+        }
+
+        .author-flag {
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .author-name {
+            word-break: break-word;
+            hyphens: auto;
+        }
+
+        .more-authors {
+            color: #64748b;
+            font-size: 16px;
+            font-weight: 500;
+            font-style: italic;
+            margin-top: 12px;
+            grid-column: 1 / -1;
+        }
+
+        /* Twitter handle styling (if available) */
+        .author.has-twitter {
+            position: relative;
+        }
+
+        .author.has-twitter::after {
+            content: '🐦';
+            position: absolute;
+            right: -20px;
+            top: 0;
+            font-size: 12px;
+            opacity: 0.6;
+        }
+
+        /* Responsive title sizing */
+        {% if paper.title|length > 80 %}
+        .title {
+            font-size: 36px;
+        }
+        {% elif paper.title|length > 60 %}
+        .title {
+            font-size: 40px;
+        }
+        {% endif %}
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="header">
+            <div class="conference-info">
+                <span class="conference-name">{{ paper.conference }}</span>
+                <span class="separator">•</span>
+                <span class="presentation-type">{{ paper.presentation_type }}</span>
+            </div>
+            <div class="branding">
+                {% if logo_base64 %}
+                <img src="{{ logo_base64 }}" alt="Lossfunk Logo" class="logo">
+                {% endif %}
+                <span class="brand-text">{{ brand_text }}</span>
+            </div>
+        </div>
+
+        <div class="title">{{ paper.title }}</div>
+
+        <div class="authors-section">
+            <div class="authors-label">AUTHORS</div>
+            <div class="authors-grid">
+                {% for author in authors_to_display %}
+                <div class="author{% if author.twitter_handle_url %} has-twitter{% endif %}">
+                    <span class="author-flag">{{ author.flag or '🌐' }}</span>
+                    <span class="author-name">{{ author.name }}</span>
+                </div>
+                {% endfor %}
+                
+                {% if remaining_authors > 0 %}
+                <div class="more-authors">+{{ remaining_authors }} more</div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
