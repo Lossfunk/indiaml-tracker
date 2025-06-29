@@ -3,20 +3,26 @@
 Integrated Research Paper Card Generator with Twitter Handle Finder
 
 Generates social media cards for research papers and optionally finds Twitter handles for authors.
-Outputs SVG, converts to various image formats using Playwright, and creates a merged PDF.
+Uses HTML + CSS templates with Jinja2, converts to various image formats using Playwright, and creates a merged PDF.
 
 Usage:
     # Generate cards only
-    python integrated_generator.py input.json --format png --output cards/
+    python tweet_generator.py input.json --format png --output cards/
     
     # Find Twitter handles first, then generate cards
-    python integrated_generator.py input.json --find-twitter --format png --output cards/
+    python tweet_generator.py input.json --find-twitter --format png --output cards/
     
     # Update existing data with Twitter handles only
-    python integrated_generator.py input.json --find-twitter-only --output updated.json
+    python tweet_generator.py input.json --find-twitter-only --output updated.json
+    
+    # Use custom template and branding
+    python tweet_generator.py input.json --template custom_template.html --brand-text "My Conference"
+    
+    # Override conference and presentation type
+    python tweet_generator.py input.json --conference "NeurIPS 2025" --presentation-type "Poster"
     
 Requirements:
-    pip install playwright pillow reportlab openai python-dotenv
+    pip install playwright pillow reportlab openai python-dotenv jinja2
     playwright install chromium
 """
 
@@ -36,6 +42,7 @@ import io
 import base64
 from openai import OpenAI
 from dotenv import load_dotenv
+from jinja2 import Environment, FileSystemLoader
 
 load_dotenv()
 
@@ -47,53 +54,6 @@ try:
     )
 except Exception:
     client = None
-
-# SVG Template (same as before)
-SVG_TEMPLATE = '''<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <!-- Single color gradient for background -->
-    <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#f1f5f9;stop-opacity:1" />
-    </linearGradient>
-    
-    <!-- Dot pattern with configurable parameters -->
-    <pattern id="dotGrid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="10" cy="10" r="1.5" fill="#64748b" opacity="0.12"/>
-    </pattern>
-    
-    <!-- Subtle shadow filter -->
-    <filter id="cardShadow" x="-50%" y="-50%" width="200%" height="200%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.08"/>
-    </filter>
-  </defs>
-  
-  <!-- Main card background -->
-  <rect width="800" height="500" fill="url(#backgroundGradient)" filter="url(#cardShadow)" rx="16"/>
-  
-  <!-- Dot grid background -->
-  <rect width="800" height="500" fill="url(#dotGrid)" rx="16"/>
-  
-  <!-- Conference info -->
-  <text x="60" y="80" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="600">{{CONFERENCE}}</text>
-  <text x="{{CONFERENCE_X_OFFSET}}" y="80" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="500">• {{PRESENTATION_TYPE}}</text>
-  
-  <!-- Lossfunk logo and India@ML branding container -->
-  <g id="branding-container">
-    <!-- Lossfunk logo -->
-    <image x="550" y="55" height="30" href="{{LOSSFUNK_LOGO_PATH}}" preserveAspectRatio="xMidYMid meet"/>
-    
-    <!-- India@ML text -->
-    <text x="620" y="80" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600">India@ML</text>
-  </g>
-  
-  {{TITLE_LINES}}
-  
-  <!-- Authors section -->
-  <text x="60" y="{{AUTHORS_LABEL_Y}}" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600">AUTHORS</text>
-  
-  {{AUTHORS}}
-</svg>'''
 
 class TwitterHandleFinder:
     def __init__(self, max_concurrent: int = 3, timeout: int = 30000):
@@ -255,67 +215,34 @@ class TwitterHandleFinder:
         """Print summary statistics."""
         print(f"\n🐦 Twitter Search Summary: {self.stats['handles_found']}/{self.stats['total_authors']} handles found")
 
-# Card generation functions (same as before, but simplified for space)
 def clean_filename(filename: str) -> str:
+    """Clean filename for safe file system usage."""
     return re.sub(r'[<>:"/\\|?*]', '_', filename)
 
-def wrap_title(title: str, max_chars_per_line: int = 30) -> List[str]:
-    words = title.split()
-    lines = []
-    current_line = []
-    current_length = 0
+def calculate_author_display(authors: List[Dict[str, Any]]) -> Dict[str, Any]:
+    """
+    Calculate which authors to display based on the new requirements:
+    - Always use 3 columns
+    - If <= 6 authors: show all
+    - If > 6 authors: show first 5 + "N more"
+    """
+    total_authors = len(authors)
     
-    for word in words:
-        if current_length + len(word) + len(current_line) <= max_chars_per_line:
-            current_line.append(word)
-            current_length += len(word)
-        else:
-            if current_line:
-                lines.append(' '.join(current_line))
-                current_line = [word]
-                current_length = len(word)
-            else:
-                lines.append(word)
-                current_line = []
-                current_length = 0
-    
-    if current_line:
-        lines.append(' '.join(current_line))
-    
-    return lines
-
-def calculate_dynamic_layout(title: str, authors: List[Dict[str, str]]) -> Dict[str, Any]:
-    lines = wrap_title(title)
-    title_base_y = 140
-    title_line_height = 55
-    title_end_y = title_base_y + (len(lines) * title_line_height)
-    buffer_space = 40
-    authors_label_y = title_end_y + buffer_space
-    authors_start_y = authors_label_y + 36
-    
-    max_authors_display = 10
-    authors_to_show = min(len(authors), max_authors_display)
-    remaining_authors = max(0, len(authors) - max_authors_display)
-    
-    if authors_to_show <= 3:
-        cols = authors_to_show
-    elif authors_to_show <= 6:
-        cols = 3
+    if total_authors <= 6:
+        authors_to_display = authors
+        remaining_authors = 0
     else:
-        cols = 4
+        authors_to_display = authors[:5]
+        remaining_authors = total_authors - 5
     
     return {
-        'title_lines': lines,
-        'title_base_y': title_base_y,
-        'title_line_height': title_line_height,
-        'authors_label_y': authors_label_y,
-        'authors_start_y': authors_start_y,
-        'authors_to_show': authors_to_show,
+        'authors_to_display': authors_to_display,
         'remaining_authors': remaining_authors,
-        'grid_cols': cols,
+        'total_authors': total_authors
     }
 
 def get_logo_base64() -> str:
+    """Get logo as base64 data URL."""
     current_dir = Path(__file__).parent
     logo_path = current_dir / "lossfunk_logo.png"
     
@@ -328,69 +255,71 @@ def get_logo_base64() -> str:
         print(f"Warning: Logo file not found at {logo_path}")
         return ""
 
-def generate_svg(paper_data: Dict[str, Any]) -> str:
-    layout = calculate_dynamic_layout(paper_data['title'], paper_data['authors'])
+def calculate_title_font_size(title: str) -> int:
+    """Calculate appropriate font size based on title length."""
+    title_length = len(title)
     
-    # Generate title
-    title_svg = ""
-    for i, line in enumerate(layout['title_lines']):
-        y_pos = layout['title_base_y'] + (i * layout['title_line_height'])
-        title_svg += f'  <text x="60" y="{y_pos}" fill="#1e293b" font-family="Georgia, \'Times New Roman\', serif" font-size="42" font-weight="700">{line}</text>\n'
-    
-    # Generate authors (simplified)
-    authors_svg = ""
-    cols = layout['grid_cols']
-    base_x, base_y = 60, layout['authors_start_y']
-    col_width, row_height = 190, 40
-    
-    authors_to_display = paper_data['authors'][:layout['authors_to_show']]
-    
-    for i, author in enumerate(authors_to_display):
-        row, col = i // cols, i % cols
-        x_pos = base_x + (col * col_width)
-        y_pos = base_y + (row * row_height)
-        
-        # Simple flag representation
-        flag = author.get("flag", "🌐")
-        authors_svg += f'  <text x="{x_pos}" y="{y_pos}" fill="#374151" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="500">{flag} {author["name"]}</text>\n'
-    
-    if layout['remaining_authors'] > 0:
-        authors_svg += f'  <text x="{base_x}" y="{base_y + ((layout["authors_to_show"] // cols + 1) * row_height)}" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="500" font-style="italic">+{layout["remaining_authors"]} more</text>\n'
-    
-    # Replace template
-    svg_content = SVG_TEMPLATE.replace('{{TITLE_LINES}}', title_svg)
-    svg_content = svg_content.replace('{{AUTHORS}}', authors_svg)
-    svg_content = svg_content.replace('{{AUTHORS_LABEL_Y}}', str(layout['authors_label_y']))
-    svg_content = svg_content.replace('{{CONFERENCE}}', paper_data['conference'])
-    svg_content = svg_content.replace('{{PRESENTATION_TYPE}}', paper_data['presentation_type'])
-    svg_content = svg_content.replace('{{CONFERENCE_X_OFFSET}}', str(80 + len(paper_data['conference']) * 10))
-    svg_content = svg_content.replace('{{LOSSFUNK_LOGO_PATH}}', get_logo_base64())
-    
-    return svg_content
+    if title_length > 80:
+        return 32
+    elif title_length > 60:
+        return 36
+    elif title_length > 40:
+        return 40
+    else:
+        return 44
 
-async def convert_svg_to_image_playwright(svg_content: str, output_path: str, format: str = 'png'):
-    html_content = f"""
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <style>
-            body {{ margin: 0; padding: 0; background: transparent; width: 800px; height: 500px; }}
-            svg {{ display: block; width: 800px; height: 500px; }}
-        </style>
-    </head>
-    <body>{svg_content}</body>
-    </html>
-    """
+def generate_html(paper_data: Dict[str, Any], template_path: str = None, brand_text: str = "India@ML") -> str:
+    """Generate HTML content using Jinja2 template from external file."""
+    current_dir = Path(__file__).parent
     
+    # Use provided template path or default
+    if template_path:
+        template_dir = Path(template_path).parent
+        template_name = Path(template_path).name
+    else:
+        template_dir = current_dir / "templates"
+        template_name = "card_template.html"
+    
+    # Set up Jinja2 environment
+    env = Environment(loader=FileSystemLoader(template_dir))
+    template = env.get_template(template_name)
+    
+    # Calculate author display
+    author_display = calculate_author_display(paper_data['authors'])
+    
+    # Get logo
+    logo_base64 = get_logo_base64()
+    
+    # Calculate title font size
+    title_font_size = calculate_title_font_size(paper_data['title'])
+    
+    # Render template
+    html_content = template.render(
+        paper=paper_data,
+        authors_to_display=author_display['authors_to_display'],
+        remaining_authors=author_display['remaining_authors'],
+        logo_base64=logo_base64,
+        title_font_size=title_font_size,
+        brand_text=brand_text
+    )
+    
+    return html_content
+
+async def convert_html_to_image_playwright(html_content: str, output_path: str, format: str = 'png'):
+    """Convert HTML to image using Playwright."""
     async with async_playwright() as p:
         browser = await p.chromium.launch()
         page = await browser.new_page()
         
+        # Set viewport to exact card dimensions
         await page.set_viewport_size({"width": 800, "height": 500})
+        
+        # Load HTML content
         await page.set_content(html_content)
         await page.wait_for_load_state("networkidle")
-        await page.wait_for_timeout(500)
+        await page.wait_for_timeout(1000)  # Allow time for fonts and rendering
         
+        # Screenshot options
         screenshot_options = {
             "path": output_path,
             "full_page": False,
@@ -409,6 +338,39 @@ async def convert_svg_to_image_playwright(svg_content: str, output_path: str, fo
         await page.screenshot(**screenshot_options)
         await browser.close()
 
+def create_merged_pdf(image_paths: List[str], output_path: str):
+    """Create a merged PDF from all card images."""
+    if not image_paths:
+        return
+    
+    c = canvas.Canvas(output_path, pagesize=letter)
+    page_width, page_height = letter
+    
+    for image_path in image_paths:
+        try:
+            # Open image and get dimensions
+            img = Image.open(image_path)
+            img_width, img_height = img.size
+            
+            # Calculate scaling to fit page while maintaining aspect ratio
+            scale = min(page_width / img_width, page_height / img_height) * 0.9
+            scaled_width = img_width * scale
+            scaled_height = img_height * scale
+            
+            # Center image on page
+            x = (page_width - scaled_width) / 2
+            y = (page_height - scaled_height) / 2
+            
+            # Add image to PDF
+            c.drawImage(ImageReader(img), x, y, scaled_width, scaled_height)
+            c.showPage()
+            
+        except Exception as e:
+            print(f"Error adding {image_path} to PDF: {e}")
+    
+    c.save()
+    print(f"📖 Created merged PDF: {output_path}")
+
 async def main():
     parser = argparse.ArgumentParser(description='Generate research paper cards with optional Twitter handle finding')
     parser.add_argument('input_json', help='Input JSON file with paper data')
@@ -424,6 +386,16 @@ async def main():
                         help='Create merged PDF with all cards')
     parser.add_argument('--max-concurrent', type=int, default=3,
                         help='Maximum concurrent Twitter searches (default: 3)')
+    
+    # Template and branding customization
+    parser.add_argument('--template', type=str,
+                        help='Path to custom HTML template file (default: templates/card_template.html)')
+    parser.add_argument('--brand-text', type=str, default='India@ML',
+                        help='Brand text to display on cards (default: India@ML)')
+    parser.add_argument('--conference', type=str,
+                        help='Override conference name for all papers')
+    parser.add_argument('--presentation-type', type=str,
+                        help='Override presentation type for all papers')
     
     args = parser.parse_args()
     
@@ -484,28 +456,54 @@ async def main():
         paper_data = {
             'title': title,
             'authors': paper.get('authors', []),
-            'conference': paper.get('conference', 'ICML 2025'),
-            'presentation_type': paper.get('presentation_type', 'Research Paper')
+            'conference': args.conference or paper.get('conference', 'ICML 2025'),
+            'presentation_type': args.presentation_type or paper.get('presentation_type', 'Research Paper')
         }
         
-        svg_content = generate_svg(paper_data)
+        # Generate HTML content
+        html_content = generate_html(
+            paper_data, 
+            template_path=args.template,
+            brand_text=args.brand_text
+        )
         
+        # Create safe filename
         safe_title = clean_filename(title[:50])
         base_filename = f"{i+1:03d}_{safe_title}"
         
-        # Save SVG
-        svg_path = output_dir / f"{base_filename}.svg"
-        with open(svg_path, 'w', encoding='utf-8') as f:
-            f.write(svg_content)
+        # Save HTML for debugging (optional)
+        html_path = output_dir / f"{base_filename}.html"
+        with open(html_path, 'w', encoding='utf-8') as f:
+            f.write(html_content)
         
         # Convert to image
         image_path = output_dir / f"{base_filename}.{args.format}"
-        await convert_svg_to_image_playwright(svg_content, str(image_path), args.format)
+        await convert_html_to_image_playwright(html_content, str(image_path), args.format)
         image_paths.append(str(image_path))
         
         print(f"  ✅ Generated: {image_path}")
     
+    # Create merged PDF if requested
+    if args.pdf:
+        pdf_path = output_dir / "merged_cards.pdf"
+        create_merged_pdf(image_paths, str(pdf_path))
+    
     print(f"\n🎉 Completed! Generated {len(papers_data)} cards in {output_dir}")
+    
+    # Show author display statistics
+    for paper in papers_data:
+        authors = paper.get('authors', [])
+        if authors:
+            display_info = calculate_author_display(authors)
+            total = display_info['total_authors']
+            displayed = len(display_info['authors_to_display'])
+            remaining = display_info['remaining_authors']
+            
+            title = paper.get('title', paper.get('paper_title', 'Untitled'))[:30]
+            if remaining > 0:
+                print(f"  📊 {title}...: {displayed}/{total} authors displayed (+{remaining} more)")
+            else:
+                print(f"  📊 {title}...: {displayed}/{total} authors displayed (all)")
 
 if __name__ == "__main__":
     asyncio.run(main())

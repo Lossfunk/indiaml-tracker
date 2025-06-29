@@ -1,173 +1,115 @@
-# Tweet Thread Generator for Research Papers
+# Decoupled Tweet Generator
 
-This tool processes research papers from JSON files, finds Twitter profiles for authors using the Exa API, generates tweet threads, and creates visual cards for each paper.
+This document describes the refactored tweet generator that separates the HTML template from the Python code and accepts configuration via CLI arguments.
 
-## Features
+## Changes Made
 
-- 🔍 **Author Twitter Discovery**: Uses Exa API to find Twitter/X profiles for paper authors
-- 🎨 **Visual Card Generation**: Creates beautiful paper cards using the existing card.py functionality
-- 🧵 **Tweet Thread Creation**: Generates engaging 3-tweet threads for each paper
-- 📄 **Markdown Output**: Compiles all tweets into a single markdown file
-- ⚡ **Batch Processing**: Handles multiple papers efficiently with rate limiting
+### 1. Template Separation
+- **Before**: HTML template was embedded as a string in `tweet_generator.py`
+- **After**: HTML template is now in `templates/card_template.html`
+- **Benefits**: 
+  - Easy to modify template without touching Python code
+  - Better separation of concerns
+  - Template can be version controlled separately
+  - Multiple templates can be used
 
-## Installation
+### 2. CLI Arguments for Customization
+The script now accepts several CLI arguments for customization:
 
-1. Install the required dependencies:
-```bash
-pip install -r requirements.txt
-```
+#### Template and Branding
+- `--template`: Path to custom HTML template file
+- `--brand-text`: Brand text to display on cards (default: "India@ML")
 
-2. Get an Exa API key from [https://exa.ai](https://exa.ai)
+#### Content Overrides
+- `--conference`: Override conference name for all papers
+- `--presentation-type`: Override presentation type for all papers
 
-## Usage
+#### Existing Arguments
+- `--format`: Output image format (png, jpg, jpeg, webp)
+- `--output`: Output directory
+- `--pdf`: Create merged PDF
+- `--find-twitter`: Find Twitter handles
+- `--find-twitter-only`: Only find Twitter handles
+- `--max-concurrent`: Max concurrent Twitter searches
+
+## Usage Examples
 
 ### Basic Usage
-
 ```bash
-python tweet_generator.py ui/indiaml-tracker/public/tracker/icml-2025.json --exa-api-key YOUR_EXA_API_KEY
+python tweet_generator.py input.json
 ```
 
-### Advanced Usage
-
+### Custom Branding
 ```bash
-python tweet_generator.py ui/indiaml-tracker/public/tracker/icml-2025.json \
-  --exa-api-key YOUR_EXA_API_KEY \
-  --output-dir ./icml_2025_tweets/ \
-  --output-file icml_2025_threads.md \
-  --limit 5
+python tweet_generator.py input.json --brand-text "NeurIPS 2025"
 ```
 
-### Command Line Arguments
-
-- `input_json`: Path to the JSON file containing paper data
-- `--exa-api-key`: Your Exa API key (required)
-- `--output-dir`: Directory for generated card images (default: `tweet_output/`)
-- `--output-file`: Output markdown file name (default: `tweets.md`)
-- `--limit`: Limit number of papers to process (useful for testing)
-
-## Input Format
-
-The script expects a JSON file with the following structure (as used in the IndiaML tracker):
-
-```json
-[
-  {
-    "paper_title": "Paper Title Here",
-    "paper_id": "unique_id",
-    "pdf_url": "https://openreview.net/pdf/...",
-    "author_list": [
-      {
-        "name": "Author Name",
-        "openreview_id": "~Author_Name1",
-        "affiliation_name": "University Name",
-        "affiliation_domain": "university.edu",
-        "affiliation_country": "US"
-      }
-    ],
-    "paper_content": "Brief description of the paper..."
-  }
-]
-```
-
-## Output
-
-The script generates:
-
-1. **Card Images**: PNG files for each paper in the output directory
-2. **Markdown File**: Contains all tweet threads with metadata
-
-### Example Tweet Thread Format
-
-```markdown
-## Paper 1: Example Paper Title
-
-**Card Image:** `paper_001_example_paper_title.png`
-
-**Twitter Profiles Found:**
-- John Doe: @johndoe
-- Jane Smith: @janesmith
-
-**Tweet Thread:**
-
-## Example Paper Title
-
-**Tweet 1/3** 🧵
-📄 New paper at #ICML2025: "Example Paper Title"
-
-This paper investigates...
-
-🧵 Thread below 👇
-
-**Tweet 2/3**
-👥 Authors: @johndoe, @janesmith
-
-🔬 This work explores...
-
-**Tweet 3/3**
-📊 Key insights from this research:
-...
-
-📖 Read the full paper: https://openreview.net/pdf/...
-🖼️ Paper card: paper_001_example_paper_title.png
-
-#MachineLearning #AI #Research #IndiaML
-```
-
-## Features in Detail
-
-### Twitter Profile Discovery
-
-- Uses Exa API's neural search to find Twitter/X profiles
-- Searches with author name + affiliation for better accuracy
-- Extracts usernames from found URLs
-- Includes rate limiting to respect API limits
-
-### Card Generation
-
-- Reuses the existing `card.py` functionality
-- Generates SVG cards and converts to PNG
-- Includes author flags based on country codes
-- Handles up to 8 authors per card
-
-### Tweet Thread Structure
-
-- **Tweet 1**: Paper title, brief description, thread indicator
-- **Tweet 2**: Author mentions, research focus
-- **Tweet 3**: Key insights, paper link, card reference, hashtags
-
-## Rate Limiting
-
-The script includes a 1-second delay between Twitter profile searches to be respectful to the Exa API. For large datasets, consider running in batches.
-
-## Error Handling
-
-- Graceful handling of API failures
-- Continues processing even if some Twitter profiles aren't found
-- Validates input file format
-- Provides detailed progress logging
-
-## Testing
-
-For testing with a subset of papers:
-
+### Override Conference Info
 ```bash
-python tweet_generator.py ui/indiaml-tracker/public/tracker/icml-2025.json \
-  --exa-api-key YOUR_EXA_API_KEY \
-  --limit 3
+python tweet_generator.py input.json --conference "ICLR 2025" --presentation-type "Poster"
 ```
 
-This will process only the first 3 papers.
+### Custom Template
+```bash
+python tweet_generator.py input.json --template /path/to/custom_template.html
+```
 
-## Dependencies
+### Complete Example
+```bash
+python tweet_generator.py papers.json \
+  --format png \
+  --output cards/ \
+  --brand-text "My Conference" \
+  --conference "ICML 2025" \
+  --presentation-type "Oral" \
+  --pdf
+```
 
-- `requests`: For Exa API calls
-- `pillow`: Image processing
-- `cairosvg`: SVG to PNG conversion
-- `reportlab`: PDF generation (inherited from card.py)
+## Template Structure
 
-## Notes
+The HTML template uses Jinja2 syntax and expects these variables:
 
-- The script handles missing author names by extracting from OpenReview IDs
-- Country codes are mapped to emoji flags for card generation
-- Tweet threads are designed to fit Twitter's character limits
-- All generated content is saved in UTF-8 encoding
+### Required Variables
+- `paper.title`: Paper title
+- `paper.conference`: Conference name
+- `paper.presentation_type`: Presentation type
+- `authors_to_display`: List of authors to show
+- `remaining_authors`: Number of additional authors
+- `logo_base64`: Base64 encoded logo
+- `title_font_size`: Calculated font size
+- `brand_text`: Brand text to display
+
+### Template Location
+- Default: `templates/card_template.html`
+- Custom: Specify with `--template` argument
+
+## Benefits of Decoupling
+
+1. **Maintainability**: Template changes don't require Python code modifications
+2. **Flexibility**: Easy to create different templates for different conferences
+3. **Customization**: CLI arguments allow runtime customization without code changes
+4. **Reusability**: Templates can be shared and reused across projects
+5. **Version Control**: Templates can be tracked separately from code
+
+## Migration from Old Version
+
+If you were using the old embedded template version:
+
+1. **No code changes needed** - the script maintains backward compatibility
+2. **Template customization** - move your template modifications to `templates/card_template.html`
+3. **Configuration** - use CLI arguments instead of hardcoded values
+
+## Template Development
+
+To create a custom template:
+
+1. Copy `templates/card_template.html` to a new file
+2. Modify the HTML/CSS as needed
+3. Ensure all required Jinja2 variables are used
+4. Test with `--template path/to/your/template.html`
+
+The template system uses Jinja2, so you can use:
+- Variables: `{{ variable_name }}`
+- Conditionals: `{% if condition %}...{% endif %}`
+- Loops: `{% for item in list %}...{% endfor %}`
+- Filters: `{{ variable|filter_name }}`
