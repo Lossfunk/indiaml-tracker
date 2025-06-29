@@ -1,0 +1,22 @@
+# Tweet Generation Pipeline Requirements
+
+# Core dependencies
+asyncio
+sqlite3
+json
+pathlib
+datetime
+typing
+re
+time
+uuid
+os
+
+# External dependencies
+playwright>=1.40.0
+openai>=1.0.0
+python-dotenv>=1.0.0
+
+# Optional dependencies for enhanced functionality
+aiofiles>=23.0.0
+rich>=13.0.0
