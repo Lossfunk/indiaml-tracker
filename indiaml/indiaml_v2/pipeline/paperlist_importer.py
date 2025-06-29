@@ -1,7 +1,6 @@
 """
-Transformation script to convert paperlists JSON data to clean normalized schema.
-This script demonstrates how to parse the complex affiliation system and create
-proper relationships in the normalized database.
+Enhanced PaperlistsTransformer with comprehensive existence checking and one-by-one processing.
+This version processes papers individually and checks for existence before every insert operation.
 """
 
 import json
@@ -13,18 +12,18 @@ from indiaml_v2.models.models import *  # Import all the SQLAlchemy models
 
 class PaperlistsTransformer:
     def __init__(self, database_url: str = "sqlite:///paperlists.db"):
-        self.engine = create_engine(database_url, echo=False)  # Disable SQL echo for cleaner output
+        self.engine = create_engine(database_url, echo=False)
         Base.metadata.create_all(self.engine)
         
         # Configure session with better settings
         Session = sessionmaker(
             bind=self.engine,
-            autoflush=False,  # Prevent automatic flushing which causes warnings
-            expire_on_commit=False  # Keep objects accessible after commit
+            autoflush=False,
+            expire_on_commit=False
         )
         self.session = Session()
         
-        # Cache for institutions and countries to avoid duplicates
+        # Clear all caches - we'll rely on database queries for existence checks
         self.country_cache = {}
         self.institution_cache = {}
         self.keyword_cache = {}
@@ -37,7 +36,6 @@ class PaperlistsTransformer:
     def _ensure_indexes(self):
         """Ensure critical indexes exist for SQLite performance"""
         try:
-            # SQLite doesn't automatically create indexes from table args in some cases
             with self.engine.connect() as conn:
                 conn.execute(text("CREATE INDEX IF NOT EXISTS idx_institution_normalized_lookup ON institutions (normalized_name)"))
                 conn.execute(text("CREATE INDEX IF NOT EXISTS idx_institution_normalized_country ON institutions (normalized_name, country_id)"))
@@ -47,79 +45,101 @@ class PaperlistsTransformer:
         except Exception as e:
             print(f"Index creation warning: {e}")
     
-    def find_institution_by_normalized_name(self, normalized_name: str, country_name: str = None) -> Optional[Institution]:
-        """Efficient lookup of institution by normalized name with optional country filter"""
-        query = self.session.query(Institution).filter(Institution.normalized_name == normalized_name)
-        
-        if country_name:
-            query = query.join(Country).filter(Country.name == country_name)
-        
-        return query.first()
-    
     def transform_paperlists_data(self, paperlists_json: List[Dict]):
-        """Main transformation function"""
+        """Main transformation function - one paper at a time with individual commits"""
         successful_count = 0
         error_count = 0
+        skipped_count = 0
         
-        for paper_data in paperlists_json:
+        total_papers = len(paperlists_json)
+        print(f"Starting to process {total_papers} papers one by one...")
+        
+        for i, paper_data in enumerate(paperlists_json):
+            paper_id = paper_data.get('id', f'unknown_{i}')
+            
             try:
                 # Check if paper already exists
-                existing_paper = self.session.query(Paper).filter_by(id=paper_data['id']).first()
-                if existing_paper:
-                    print(f"Paper {paper_data['id']} already exists, skipping...")
+                if self.paper_exists(paper_id):
+                    print(f"Paper {paper_id} already exists, skipping...")
+                    skipped_count += 1
                     continue
                 
-                self.process_paper(paper_data)
+                # Process single paper
+                print(f"Processing paper {i+1}/{total_papers}: {paper_id}")
+                self.process_single_paper_with_checks(paper_data)
+                
+                # Commit immediately after each paper
                 self.session.commit()
                 successful_count += 1
                 
-                # Print progress every 100 papers
-                if successful_count % 100 == 0:
-                    print(f"Processed {successful_count} papers successfully...")
+                if successful_count % 10 == 0:
+                    print(f"Successfully processed {successful_count} papers...")
                     
             except Exception as e:
-                print(f"Error processing paper {paper_data.get('id', 'unknown')}: {e}")
+                print(f"Error processing paper {paper_id}: {e}")
+                # Rollback this paper's changes
                 self.session.rollback()
                 error_count += 1
                 continue
         
-        print(f"Transformation completed! Successfully processed: {successful_count}, Errors: {error_count}")
+        print(f"Processing completed!")
+        print(f"Successfully processed: {successful_count}")
+        print(f"Errors: {error_count}")
+        print(f"Skipped (already existed): {skipped_count}")
     
-    def process_paper(self, data: Dict):
-        """Process a single paper and all related entities"""
-        
+    def paper_exists(self, paper_id: str) -> bool:
+        """Check if paper already exists in database"""
         try:
-            # 1. Create Paper
-            paper = self.create_paper(data)
-            
-            # Add paper to session first
-            self.session.add(paper)
-            self.session.flush()  # Ensure paper is in session with ID
-            
-            # 2. Process Authors and Affiliations
-            self.process_authors_and_affiliations(paper, data)
-            
-            # 3. Process Keywords
-            self.process_keywords(paper, data)
-            
-            # 4. Process Reviews
-            self.process_reviews(paper, data)
-            
-            # 5. Process Citations
-            self.process_citations(paper, data)
-            
-        except Exception as e:
-            print(f"Error in process_paper for {data.get('id', 'unknown')}: {e}")
-            raise  # Re-raise to trigger rollback in transform_paperlists_data
+            existing = self.session.query(Paper).filter_by(id=paper_id).first()
+            return existing is not None
+        except Exception:
+            return False
     
-    def create_paper(self, data: Dict) -> Paper:
-        """Create Paper entity with track relationship"""
+    def process_single_paper_with_checks(self, data: Dict):
+        """Process a single paper with comprehensive existence checks"""
+        
+        # 1. Create Paper (with existence check)
+        paper = self.create_paper_with_checks(data)
+        if not paper:
+            raise ValueError(f"Failed to create paper {data.get('id')}")
+        
+        # Add paper to session and flush to get ID
+        self.session.add(paper)
+        self.session.flush()
+        
+        # 2. Process Authors and Affiliations
+        self.process_authors_and_affiliations_with_checks(paper, data)
+        
+        # 3. Process Keywords
+        self.process_keywords_with_checks(paper, data)
+        
+        # 4. Process Reviews
+        self.process_reviews_with_checks(paper, data)
+        
+        # 5. Process Citations
+        self.process_citations_with_checks(paper, data)
+    
+    def create_paper_with_checks(self, data: Dict) -> Optional[Paper]:
+        """Create Paper entity with comprehensive checks"""
+        
+        paper_id = data.get('id')
+        if not paper_id:
+            print(f"Skipping paper with missing ID")
+            return None
+        
+        # Double-check existence
+        if self.paper_exists(paper_id):
+            print(f"Paper {paper_id} already exists during creation")
+            return None
         
         # Get or create track (which includes conference)
-        track = self.get_or_create_track(data)
+        track = self.get_or_create_track_with_checks(data)
+        if not track:
+            print(f"Failed to create track for paper {paper_id}")
+            return None
         
         return Paper(
-            id=data['id'],
+            id=paper_id,
             title=data.get('title', ''),
             status=data.get('status'),
             track=track,
@@ -137,126 +157,76 @@ class PaperlistsTransformer:
             pdf_size=data.get('pdf_size', 0)
         )
     
-    def get_or_create_conference(self, conference_name: str = "ICML", year: int = 2025) -> Conference:
-        """Get or create conference"""
-        cache_key = f"{conference_name}_{year}"
-        if cache_key in self.conference_cache:
-            return self.conference_cache[cache_key]
+    def get_or_create_track_with_checks(self, paper_data: Dict) -> Optional[Track]:
+        """Get or create track with comprehensive existence checks"""
         
-        conference = self.session.query(Conference).filter_by(
-            name=conference_name,
-            year=year
-        ).first()
-        
-        if not conference:
-            # Set full name based on common conferences
-            full_names = {
-                "ICML": "International Conference on Machine Learning",
-                "NeurIPS": "Conference on Neural Information Processing Systems",
-                "ICLR": "International Conference on Learning Representations",
-                "AAAI": "Association for the Advancement of Artificial Intelligence",
-                "IJCAI": "International Joint Conference on Artificial Intelligence"
-            }
-            
-            conference = Conference(
-                name=conference_name,
-                full_name=full_names.get(conference_name, conference_name),
-                year=year
-            )
-            self.session.add(conference)
-            self.session.flush()  # Get ID immediately
-        
-        self.conference_cache[cache_key] = conference
-        return conference
-    
-    def get_or_create_track(self, paper_data: Dict) -> Track:
-        """Get or create track based on paper data"""
-        
-        # Extract track information from paper data
         track_name = paper_data.get('track', 'main')
-        
-        # Determine conference (could be extracted from paper data or defaulted)
         conference_year = self.extract_conference_year(paper_data)
         conference_name = self.extract_conference_name(paper_data)
         
-        conference = self.get_or_create_conference(conference_name, conference_year)
+        # Get or create conference first
+        conference = self.get_or_create_conference_with_checks(conference_name, conference_year)
+        if not conference:
+            return None
         
-        cache_key = f"{conference.id}_{track_name}"
-        if cache_key in self.track_cache:
-            return self.track_cache[cache_key]
-        
-        track = self.session.query(Track).filter_by(
+        # Check if track already exists
+        existing_track = self.session.query(Track).filter_by(
             conference=conference,
             short_name=track_name
         ).first()
         
-        if not track:
-            # Determine track type and full name
-            track_type, full_name = self.classify_track(track_name)
-            
-            track = Track(
-                conference=conference,
-                name=full_name,
-                short_name=track_name,
-                track_type=track_type
-            )
-            self.session.add(track)
-            self.session.flush()  # Get ID immediately
+        if existing_track:
+            return existing_track
         
-        self.track_cache[cache_key] = track
+        # Create new track
+        track_type, full_name = self.classify_track(track_name)
+        
+        track = Track(
+            conference=conference,
+            name=full_name,
+            short_name=track_name,
+            track_type=track_type
+        )
+        
+        self.session.add(track)
+        self.session.flush()
         return track
     
-    def extract_conference_year(self, paper_data: Dict) -> int:
-        """Extract conference year from paper data"""
-        # Try to extract from bibtex
-        bibtex = paper_data.get('bibtex', '')
-        if 'year={2025}' in bibtex:
-            return 2025
-        elif 'year={2024}' in bibtex:
-            return 2024
+    def get_or_create_conference_with_checks(self, conference_name: str, year: int) -> Optional[Conference]:
+        """Get or create conference with existence checks"""
         
-        # Default to 2025 for ICML
-        return 2025
+        # Check if conference already exists
+        existing_conference = self.session.query(Conference).filter_by(
+            name=conference_name,
+            year=year
+        ).first()
+        
+        if existing_conference:
+            return existing_conference
+        
+        # Create new conference
+        full_names = {
+            "ICML": "International Conference on Machine Learning",
+            "NeurIPS": "Conference on Neural Information Processing Systems",
+            "ICLR": "International Conference on Learning Representations",
+            "AAAI": "Association for the Advancement of Artificial Intelligence",
+            "IJCAI": "International Joint Conference on Artificial Intelligence"
+        }
+        
+        conference = Conference(
+            name=conference_name,
+            full_name=full_names.get(conference_name, conference_name),
+            year=year
+        )
+        
+        self.session.add(conference)
+        self.session.flush()
+        return conference
     
-    def extract_conference_name(self, paper_data: Dict) -> str:
-        """Extract conference name from paper data"""
-        # Try to extract from bibtex or site URL
-        bibtex = paper_data.get('bibtex', '')
-        site = paper_data.get('site', '')
+    def process_authors_and_affiliations_with_checks(self, paper: Paper, data: Dict):
+        """Process authors and affiliations with comprehensive existence checks"""
         
-        if 'icml' in bibtex.lower() or 'icml.cc' in site:
-            return "ICML"
-        elif 'neurips' in bibtex.lower():
-            return "NeurIPS"
-        elif 'iclr' in bibtex.lower():
-            return "ICLR"
-        
-        # Default to ICML
-        return "ICML"
-    
-    def classify_track(self, track_name: str) -> Tuple[str, str]:
-        """Classify track type and generate full name"""
-        track_lower = track_name.lower()
-        
-        if track_lower == 'main':
-            return 'main', 'Main Conference'
-        elif track_lower == 'position':
-            return 'position', 'Position Papers'
-        elif 'workshop' in track_lower or 'ws' in track_lower:
-            return 'workshop', f'Workshop: {track_name}'
-        elif 'tutorial' in track_lower:
-            return 'tutorial', f'Tutorial: {track_name}'
-        elif 'demo' in track_lower:
-            return 'demo', f'Demonstration: {track_name}'
-        elif 'poster' in track_lower:
-            return 'poster_session', f'Poster Session: {track_name}'
-        else:
-            return 'other', track_name
-    
-    def process_authors_and_affiliations(self, paper: Paper, data: Dict):
-        """Process authors and their complex affiliation data"""
-        
-        # Parse author data
+        # Parse all author-related data
         authors = self.parse_semicolon_field(data.get('author', ''))
         author_sites = self.parse_semicolon_field(data.get('author_site', ''))
         author_ids = self.parse_semicolon_field(data.get('authorids', ''))
@@ -288,8 +258,8 @@ class PaperlistsTransformer:
         campus_indices = self.parse_semicolon_field(data.get('aff_campus_unique_index', ''))
         campus_names = self.parse_semicolon_field(data.get('aff_campus_unique', ''))
         
-        # Create mapping of unique indices to institutions
-        institution_map = self.create_institution_mapping(
+        # Create institution mapping with checks
+        institution_map = self.create_institution_mapping_with_checks(
             aff_unique_norms, aff_unique_deps, aff_unique_urls, aff_unique_abbrs,
             country_indices, country_names, campus_indices, campus_names
         )
@@ -299,74 +269,89 @@ class PaperlistsTransformer:
             if not author_name.strip():
                 continue
                 
-            # Create or get author
-            author = self.get_or_create_author(
-                name=author_name,
-                author_site=self.safe_get(author_sites, i),
-                author_id=self.safe_get(author_ids, i),
-                gender=self.safe_get(genders, i),
-                homepage=self.safe_get(homepages, i),
-                dblp=self.safe_get(dblp_ids, i),
-                google_scholar=self.safe_get(google_scholars, i),
-                orcid=self.safe_get(orcids, i),
-                linkedin=self.safe_get(linkedins, i),
-                or_profile=self.safe_get(or_profiles, i)
-            )
-            
-            # Create paper-author relationship
-            paper_author = PaperAuthor(
-                paper=paper,
-                author=author,
-                author_order=i + 1,
-                affiliation_at_time=self.safe_get(raw_affs, i)
-            )
-            self.session.add(paper_author)
-            
-            # Process affiliations for this author
-            aff_indices = self.safe_get(aff_unique_indices, i, '')
-            if aff_indices:
-                self.process_author_affiliations(
-                    author, aff_indices, institution_map,
-                    self.safe_get(positions, i),
-                    self.safe_get(email_domains, i)
+            try:
+                # Get or create author with checks
+                author = self.get_or_create_author_with_checks(
+                    name=author_name,
+                    author_site=self.safe_get(author_sites, i),
+                    author_id=self.safe_get(author_ids, i),
+                    gender=self.safe_get(genders, i),
+                    homepage=self.safe_get(homepages, i),
+                    dblp=self.safe_get(dblp_ids, i),
+                    google_scholar=self.safe_get(google_scholars, i),
+                    orcid=self.safe_get(orcids, i),
+                    linkedin=self.safe_get(linkedins, i),
+                    or_profile=self.safe_get(or_profiles, i)
                 )
+                
+                if not author:
+                    print(f"Failed to create author {author_name} for paper {paper.id}")
+                    continue
+                
+                # Check if paper-author relationship already exists
+                existing_paper_author = self.session.query(PaperAuthor).filter_by(
+                    paper=paper, author=author
+                ).first()
+                
+                if not existing_paper_author:
+                    # Create paper-author relationship
+                    paper_author = PaperAuthor(
+                        paper=paper,
+                        author=author,
+                        author_order=i + 1,
+                        affiliation_at_time=self.safe_get(raw_affs, i)
+                    )
+                    self.session.add(paper_author)
+                    self.session.flush()
+                
+                # Process affiliations for this author
+                aff_indices = self.safe_get(aff_unique_indices, i, '')
+                if aff_indices:
+                    self.process_author_affiliations_with_checks(
+                        author, aff_indices, institution_map,
+                        self.safe_get(positions, i),
+                        self.safe_get(email_domains, i)
+                    )
+                    
+            except Exception as e:
+                print(f"Error processing author {author_name}: {e}")
+                continue
     
-    def create_institution_mapping(self, aff_unique_norms: List[str], 
-                                 aff_unique_deps: List[str],
-                                 aff_unique_urls: List[str],
-                                 aff_unique_abbrs: List[str],
-                                 country_indices: List[str],
-                                 country_names: List[str],
-                                 campus_indices: List[str],
-                                 campus_names: List[str]) -> Dict[str, Institution]:
-        """Create mapping from unique indices to Institution objects"""
+    def create_institution_mapping_with_checks(self, aff_unique_norms: List[str], 
+                                             aff_unique_deps: List[str],
+                                             aff_unique_urls: List[str],
+                                             aff_unique_abbrs: List[str],
+                                             country_indices: List[str],
+                                             country_names: List[str],
+                                             campus_indices: List[str],
+                                             campus_names: List[str]) -> Dict[str, Institution]:
+        """Create institution mapping with comprehensive existence checks"""
+        
         institution_map = {}
         
         for i, norm_name in enumerate(aff_unique_norms):
-            if not norm_name.strip():
+            if not norm_name or not norm_name.strip():
                 continue
                 
-            # Get country
-            country_idx = self.safe_get(country_indices, i, '0')
-            country_name = self.safe_get(country_names, self.parse_int(country_idx), 'Unknown')
-            
-            # Handle empty or None country names
-            if not country_name or not country_name.strip():
-                country_name = 'Unknown'
-                
-            country = self.get_or_create_country(country_name)
-            
-            # Skip if country creation failed
-            if not country:
-                continue
-                
-            # Get campus
-            campus_idx = self.safe_get(campus_indices, i, '')
-            campus_name = self.safe_get(campus_names, self.parse_int(campus_idx), '') if campus_idx else ''
-            
-            # Create institution
             try:
-                institution = self.get_or_create_institution(
+                # Get country with checks
+                country_idx = self.safe_get(country_indices, i, '0')
+                country_name = self.safe_get(country_names, self.parse_int(country_idx), 'Unknown')
+                
+                if not country_name or not country_name.strip():
+                    country_name = 'Unknown'
+                    
+                country = self.get_or_create_country_with_checks(country_name)
+                if not country:
+                    print(f"Failed to create country {country_name}")
+                    continue
+                
+                # Get campus
+                campus_idx = self.safe_get(campus_indices, i, '')
+                campus_name = self.safe_get(campus_names, self.parse_int(campus_idx), '') if campus_idx else ''
+                
+                # Create institution with checks
+                institution = self.get_or_create_institution_with_checks(
                     name=norm_name,
                     normalized_name=norm_name,
                     abbreviation=self.safe_get(aff_unique_abbrs, i),
@@ -376,184 +361,196 @@ class PaperlistsTransformer:
                     department=self.safe_get(aff_unique_deps, i)
                 )
                 
-                if institution:  # Only add to map if institution creation succeeded
+                if institution:
                     institution_map[str(i)] = institution
-                    
+                        
             except Exception as e:
-                print(f"Error creating institution {norm_name}: {e}")
+                print(f"Error creating institution mapping for {norm_name}: {e}")
                 continue
         
         return institution_map
     
-    def process_author_affiliations(self, author: Author, aff_indices: str,
-                                   institution_map: Dict[str, Institution],
-                                   position: str, email_domain: str):
-        """Process affiliations for a single author, handling multi-affiliations"""
+    def get_or_create_country_with_checks(self, name: str) -> Optional[Country]:
+        """Get or create country with existence checks"""
         
-        # Handle multi-affiliations (format: "3+0" means both index 3 and 0)
-        if '+' in aff_indices:
-            indices = aff_indices.split('+')
-        else:
-            indices = [aff_indices]
-        
-        # Handle multiple positions (format: "Research Team Lead+Associate Professor")
-        positions = position.split('+') if position and '+' in position else [position]
-        email_domains = email_domain.split('+') if email_domain and '+' in email_domain else [email_domain]
-        
-        for idx, aff_idx in enumerate(indices):
-            if aff_idx.strip() and aff_idx in institution_map:
-                institution = institution_map[aff_idx]
-                
-                if institution:  # Only create affiliation if institution exists
-                    # Check if this affiliation already exists
-                    existing = self.session.query(Affiliation).filter_by(
-                        author=author, institution=institution
-                    ).first()
-                    
-                    if not existing:
-                        # Create affiliation
-                        affiliation = Affiliation(
-                            author=author,
-                            institution=institution,
-                            position=self.safe_get(positions, idx, ''),
-                            email_domain=self.safe_get(email_domains, idx, ''),
-                            is_primary=(idx == 0)  # First affiliation is primary
-                        )
-                        self.session.add(affiliation)
-    
-    def get_or_create_author(self, name: str, **kwargs) -> Author:
-        """Get existing author or create new one"""
-        
-        # Process ORCID - convert empty string to None
-        orcid = kwargs.get('orcid', '')
-        orcid = orcid.strip() if orcid else ''
-        orcid = None if not orcid else orcid  # Convert empty string to None
-        
-        # Try to find by ORCID first (most reliable)
-        if orcid:
-            author = self.session.query(Author).filter_by(orcid=orcid).first()
-            if author:
-                return author
-        
-        # Process OpenReview profile
-        or_profile = kwargs.get('or_profile', '')
-        or_profile = or_profile.strip() if or_profile else ''
-        or_profile = None if not or_profile else or_profile  # Convert empty string to None
-        
-        # Try to find by OpenReview profile
-        if or_profile:
-            author = self.session.query(Author).filter_by(openreview_id=or_profile).first()
-            if author:
-                return author
-        
-        # Generate author ID
-        author_id = kwargs.get('author_id', '')
-        author_id = author_id.strip() if author_id else self.generate_author_id(name)
-        
-        # Check if author ID already exists and modify if needed
-        base_id = author_id
-        counter = 1
-        while self.session.query(Author).filter_by(id=author_id).first():
-            author_id = f"{base_id}_{counter}"
-            counter += 1
-        
-        # Process other fields - convert empty strings to None for fields that should be NULL
-        def clean_field(value):
-            """Convert empty strings to None"""
-            if value is None:
-                return None
-            value = str(value).strip()
-            return None if not value else value
-        
-        author = Author(
-            id=author_id,
-            name=name,
-            name_site=clean_field(kwargs.get('author_site')),
-            openreview_id=or_profile,
-            gender=clean_field(kwargs.get('gender')),
-            homepage_url=clean_field(kwargs.get('homepage')),
-            dblp_id=clean_field(kwargs.get('dblp')),
-            google_scholar_url=clean_field(kwargs.get('google_scholar')),
-            orcid=orcid,
-            linkedin_url=clean_field(kwargs.get('linkedin'))
-        )
-        
-        self.session.add(author)
-        self.session.flush()  # Ensure the author is persisted
-        return author
-    
-    def get_or_create_country(self, name: str) -> Optional[Country]:
-        """Get existing country or create new one"""
         if not name or not name.strip():
             name = 'Unknown'
             
         name = name.strip()
         
-        if name in self.country_cache:
-            return self.country_cache[name]
+        # Check if country already exists
+        existing_country = self.session.query(Country).filter_by(name=name).first()
+        if existing_country:
+            return existing_country
         
         try:
-            country = self.session.query(Country).filter_by(name=name).first()
-            if not country:
-                country = Country(name=name)
-                self.session.add(country)
-                self.session.flush()  # Get ID immediately
-            
-            self.country_cache[name] = country
+            # Create new country
+            country = Country(name=name)
+            self.session.add(country)
+            self.session.flush()
             return country
         except Exception as e:
             print(f"Error creating country {name}: {e}")
-            return None
+            # Try to get it again in case it was created by another process
+            return self.session.query(Country).filter_by(name=name).first()
     
-    def get_or_create_institution(self, name: str, normalized_name: str,
-                                 country: Country, **kwargs) -> Optional[Institution]:
-        """Get existing institution or create new one - optimized for normalized_name lookups"""
+    def get_or_create_institution_with_checks(self, name: str, normalized_name: str,
+                                            country: Country, **kwargs) -> Optional[Institution]:
+        """Get or create institution with comprehensive existence checks"""
         
         if not country:
             return None
-            
-        cache_key = f"{normalized_name}:{country.name}:{kwargs.get('campus', '')}"
-        if cache_key in self.institution_cache:
-            return self.institution_cache[cache_key]
+        
+        campus = kwargs.get('campus', '')
+        
+        # Check if institution already exists with exact match
+        existing_institution = self.session.query(Institution).filter_by(
+            normalized_name=normalized_name,
+            country=country,
+            campus=campus
+        ).first()
+        
+        if existing_institution:
+            return existing_institution
         
         try:
-            # Use the optimized lookup method
-            institution = self.find_institution_by_normalized_name(normalized_name, country.name)
-            
-            # If found, check for exact match including campus
-            if institution and institution.campus == kwargs.get('campus', ''):
-                self.institution_cache[cache_key] = institution
-                return institution
-            
-            # If not found or campus doesn't match, check for exact match with all criteria
-            institution = self.session.query(Institution).filter_by(
+            # Create new institution
+            institution = Institution(
+                name=name,
                 normalized_name=normalized_name,
+                abbreviation=kwargs.get('abbreviation', ''),
                 country=country,
-                campus=kwargs.get('campus', '')
-            ).first()
-            
-            if not institution:
-                institution = Institution(
-                    name=name,
-                    normalized_name=normalized_name,
-                    abbreviation=kwargs.get('abbreviation', ''),
-                    country=country,
-                    campus=kwargs.get('campus', ''),
-                    website_url=kwargs.get('website_url', ''),
-                    domain=self.extract_domain(kwargs.get('website_url', ''))
-                )
-                self.session.add(institution)
-                self.session.flush()  # Get the ID immediately for caching
-            
-            self.institution_cache[cache_key] = institution
+                campus=campus,
+                website_url=kwargs.get('website_url', ''),
+                domain=self.extract_domain(kwargs.get('website_url', ''))
+            )
+            self.session.add(institution)
+            self.session.flush()
             return institution
             
         except Exception as e:
             print(f"Error creating institution {name}: {e}")
+            # Try to get it again in case it was created by another process
+            return self.session.query(Institution).filter_by(
+                normalized_name=normalized_name,
+                country=country,
+                campus=campus
+            ).first()
+    
+    def get_or_create_author_with_checks(self, name: str, **kwargs) -> Optional[Author]:
+        """Get or create author with comprehensive existence checks"""
+        
+        try:
+            # Clean ORCID
+            orcid = kwargs.get('orcid', '')
+            orcid = orcid.strip() if orcid else ''
+            orcid = None if not orcid else orcid
+            
+            # Try to find by ORCID first
+            if orcid:
+                existing_author = self.session.query(Author).filter_by(orcid=orcid).first()
+                if existing_author:
+                    return existing_author
+            
+            # Clean OpenReview profile
+            or_profile = kwargs.get('or_profile', '')
+            or_profile = or_profile.strip() if or_profile else ''
+            or_profile = None if not or_profile else or_profile
+            
+            # Try to find by OpenReview profile
+            if or_profile:
+                existing_author = self.session.query(Author).filter_by(openreview_id=or_profile).first()
+                if existing_author:
+                    return existing_author
+            
+            # Generate unique author ID
+            author_id = kwargs.get('author_id', '')
+            author_id = author_id.strip() if author_id else self.generate_author_id(name)
+            
+            # Ensure author ID is unique
+            base_id = author_id
+            counter = 1
+            while self.session.query(Author).filter_by(id=author_id).first():
+                author_id = f"{base_id}_{counter}"
+                counter += 1
+                if counter > 1000:
+                    import time
+                    author_id = f"{base_id}_{int(time.time())}"
+                    break
+            
+            # Clean other fields
+            def clean_field(value):
+                if value is None:
+                    return None
+                value = str(value).strip()
+                return None if not value else value
+            
+            # Create new author
+            author = Author(
+                id=author_id,
+                name=name,
+                name_site=clean_field(kwargs.get('author_site')),
+                openreview_id=or_profile,
+                gender=clean_field(kwargs.get('gender')),
+                homepage_url=clean_field(kwargs.get('homepage')),
+                dblp_id=clean_field(kwargs.get('dblp')),
+                google_scholar_url=clean_field(kwargs.get('google_scholar')),
+                orcid=orcid,
+                linkedin_url=clean_field(kwargs.get('linkedin'))
+            )
+            
+            self.session.add(author)
+            self.session.flush()
+            return author
+            
+        except Exception as e:
+            print(f"Error creating author {name}: {e}")
             return None
     
-    def process_keywords(self, paper: Paper, data: Dict):
-        """Process paper keywords"""
+    def process_author_affiliations_with_checks(self, author: Author, aff_indices: str,
+                                               institution_map: Dict[str, Institution],
+                                               position: str, email_domain: str):
+        """Process author affiliations with existence checks"""
+        
+        try:
+            # Handle multi-affiliations
+            if '+' in aff_indices:
+                indices = aff_indices.split('+')
+            else:
+                indices = [aff_indices]
+            
+            # Handle multiple positions and domains
+            positions = position.split('+') if position and '+' in position else [position]
+            email_domains = email_domain.split('+') if email_domain and '+' in email_domain else [email_domain]
+            
+            for idx, aff_idx in enumerate(indices):
+                if aff_idx.strip() and aff_idx in institution_map:
+                    institution = institution_map[aff_idx]
+                    
+                    if institution:
+                        # Check if affiliation already exists
+                        existing_affiliation = self.session.query(Affiliation).filter_by(
+                            author=author, institution=institution
+                        ).first()
+                        
+                        if not existing_affiliation:
+                            # Create new affiliation
+                            affiliation = Affiliation(
+                                author=author,
+                                institution=institution,
+                                position=self.safe_get(positions, idx, ''),
+                                email_domain=self.safe_get(email_domains, idx, ''),
+                                is_primary=(idx == 0)
+                            )
+                            self.session.add(affiliation)
+                            self.session.flush()
+                        
+        except Exception as e:
+            print(f"Error processing affiliations for author {author.name}: {e}")
+    
+    def process_keywords_with_checks(self, paper: Paper, data: Dict):
+        """Process keywords with existence checks"""
+        
         keywords_str = data.get('keywords', '')
         if not keywords_str:
             return
@@ -561,110 +558,149 @@ class PaperlistsTransformer:
         keywords = [k.strip() for k in keywords_str.split(';') if k.strip()]
         
         for keyword_text in keywords:
-            keyword = self.get_or_create_keyword(keyword_text)
-            if keyword:  # Only create relationship if keyword exists
-                # Check if this paper-keyword relationship already exists
-                existing = self.session.query(PaperKeyword).filter_by(
-                    paper=paper, keyword=keyword
-                ).first()
-                
-                if not existing:
-                    paper_keyword = PaperKeyword(paper=paper, keyword=keyword)
-                    self.session.add(paper_keyword)
+            try:
+                keyword = self.get_or_create_keyword_with_checks(keyword_text)
+                if keyword:
+                    # Check if paper-keyword relationship already exists
+                    existing_paper_keyword = self.session.query(PaperKeyword).filter_by(
+                        paper=paper, keyword=keyword
+                    ).first()
+                    
+                    if not existing_paper_keyword:
+                        paper_keyword = PaperKeyword(paper=paper, keyword=keyword)
+                        self.session.add(paper_keyword)
+                        self.session.flush()
+                        
+            except Exception as e:
+                print(f"Error processing keyword {keyword_text}: {e}")
+                continue
     
-    def get_or_create_keyword(self, text: str) -> Optional[Keyword]:
-        """Get existing keyword or create new one"""
+    def get_or_create_keyword_with_checks(self, text: str) -> Optional[Keyword]:
+        """Get or create keyword with existence checks"""
+        
         if not text or not text.strip():
             return None
             
         text = text.strip()
         normalized = text.lower().strip()
         
-        if normalized in self.keyword_cache:
-            return self.keyword_cache[normalized]
+        # Check if keyword already exists
+        existing_keyword = self.session.query(Keyword).filter_by(normalized_keyword=normalized).first()
+        if existing_keyword:
+            return existing_keyword
         
-        keyword = self.session.query(Keyword).filter_by(normalized_keyword=normalized).first()
-        if not keyword:
+        try:
+            # Create new keyword
             keyword = Keyword(keyword=text, normalized_keyword=normalized)
             self.session.add(keyword)
             self.session.flush()
-        
-        self.keyword_cache[normalized] = keyword
-        return keyword
+            return keyword
+        except Exception as e:
+            print(f"Error creating keyword {text}: {e}")
+            # Try to get it again in case it was created by another process
+            return self.session.query(Keyword).filter_by(normalized_keyword=normalized).first()
     
-    def process_reviews(self, paper: Paper, data: Dict):
-        """Process review data"""
+    def process_reviews_with_checks(self, paper: Paper, data: Dict):
+        """Process reviews with existence checks"""
         
-        # Individual review scores
-        ratings = self.parse_numeric_field(data.get('rating', ''))
-        confidences = self.parse_numeric_field(data.get('confidence', ''))
-        recommendations = self.parse_numeric_field(data.get('recommendation', ''))
+        try:
+            # Individual review scores
+            ratings = self.parse_numeric_field(data.get('rating', ''))
+            confidences = self.parse_numeric_field(data.get('confidence', ''))
+            recommendations = self.parse_numeric_field(data.get('recommendation', ''))
+            
+            reviewers = self.parse_semicolon_field(data.get('reviewers', ''))
+            
+            # Word counts
+            wc_summaries = self.parse_numeric_field(data.get('wc_summary', ''))
+            wc_strengths = self.parse_numeric_field(data.get('wc_strengths_and_weaknesses', ''))
+            wc_questions = self.parse_numeric_field(data.get('wc_questions', ''))
+            wc_reviews = self.parse_numeric_field(data.get('wc_review', ''))
+            
+            # Create individual review records
+            for i in range(max(len(ratings), len(confidences), len(recommendations))):
+                review = Review(
+                    paper=paper,
+                    reviewer_id=self.safe_get(reviewers, i),
+                    rating=self.safe_get(ratings, i),
+                    confidence=self.safe_get(confidences, i),
+                    recommendation=self.safe_get(recommendations, i),
+                    word_count_summary=self.safe_get(wc_summaries, i),
+                    word_count_strengths_weaknesses=self.safe_get(wc_strengths, i),
+                    word_count_questions=self.safe_get(wc_questions, i),
+                    word_count_total=self.safe_get(wc_reviews, i)
+                )
+                self.session.add(review)
+            
+            self.session.flush()
+            
+            # Create aggregated statistics
+            self.create_review_statistics_with_checks(paper, data)
+            
+        except Exception as e:
+            print(f"Error processing reviews for paper {paper.id}: {e}")
+    
+    def create_review_statistics_with_checks(self, paper: Paper, data: Dict):
+        """Create review statistics with existence checks"""
         
-        reviewers = self.parse_semicolon_field(data.get('reviewers', ''))
+        try:
+            # Check if statistics already exist
+            existing_stats = self.session.query(ReviewStatistics).filter_by(paper=paper).first()
+            if existing_stats:
+                return
+            
+            stats = ReviewStatistics(paper=paper)
+            
+            # Extract [mean, std] arrays
+            for field_name in ['rating', 'confidence', 'support', 'significance']:
+                avg_data = data.get(f'{field_name}_avg')
+                if avg_data and len(avg_data) >= 2:
+                    setattr(stats, f'{field_name}_mean', avg_data[0])
+                    setattr(stats, f'{field_name}_std', avg_data[1])
+            
+            # Word count averages
+            for wc_field in ['wc_summary', 'wc_review']:
+                avg_data = data.get(f'{wc_field}_avg')
+                if avg_data and len(avg_data) >= 2:
+                    field_base = wc_field.replace('wc_', 'word_count_')
+                    setattr(stats, f'{field_base}_mean', avg_data[0])
+                    setattr(stats, f'{field_base}_std', avg_data[1])
+            
+            # Correlation
+            stats.rating_confidence_correlation = data.get('corr_rating_confidence')
+            
+            self.session.add(stats)
+            self.session.flush()
+            
+        except Exception as e:
+            print(f"Error creating review statistics for paper {paper.id}: {e}")
+    
+    def process_citations_with_checks(self, paper: Paper, data: Dict):
+        """Process citations with existence checks"""
         
-        # Word counts
-        wc_summaries = self.parse_numeric_field(data.get('wc_summary', ''))
-        wc_strengths = self.parse_numeric_field(data.get('wc_strengths_and_weaknesses', ''))
-        wc_questions = self.parse_numeric_field(data.get('wc_questions', ''))
-        wc_reviews = self.parse_numeric_field(data.get('wc_review', ''))
-        
-        # Create individual review records
-        for i in range(max(len(ratings), len(confidences), len(recommendations))):
-            review = Review(
+        try:
+            # Check if citations already exist
+            existing_citation = self.session.query(Citation).filter_by(paper=paper).first()
+            if existing_citation:
+                return
+            
+            gs_citations = data.get('gs_citation', -1)
+            if gs_citations == -1:
+                gs_citations = 0
+            
+            citation = Citation(
                 paper=paper,
-                reviewer_id=self.safe_get(reviewers, i),
-                rating=self.safe_get(ratings, i),
-                confidence=self.safe_get(confidences, i),
-                recommendation=self.safe_get(recommendations, i),
-                word_count_summary=self.safe_get(wc_summaries, i),
-                word_count_strengths_weaknesses=self.safe_get(wc_strengths, i),
-                word_count_questions=self.safe_get(wc_questions, i),
-                word_count_total=self.safe_get(wc_reviews, i)
+                google_scholar_citations=gs_citations,
+                google_scholar_url=data.get('gs_cited_by_link', ''),
+                google_scholar_versions=data.get('gs_version_total', 0) if data.get('gs_version_total', -1) != -1 else 0
             )
-            self.session.add(review)
-        
-        # Create aggregated statistics
-        self.create_review_statistics(paper, data)
+            self.session.add(citation)
+            self.session.flush()
+            
+        except Exception as e:
+            print(f"Error processing citations for paper {paper.id}: {e}")
     
-    def create_review_statistics(self, paper: Paper, data: Dict):
-        """Create aggregated review statistics"""
-        stats = ReviewStatistics(paper=paper)
-        
-        # Extract [mean, std] arrays
-        for field_name in ['rating', 'confidence', 'support', 'significance']:
-            avg_data = data.get(f'{field_name}_avg')
-            if avg_data and len(avg_data) >= 2:
-                setattr(stats, f'{field_name}_mean', avg_data[0])
-                setattr(stats, f'{field_name}_std', avg_data[1])
-        
-        # Word count averages
-        for wc_field in ['wc_summary', 'wc_review']:
-            avg_data = data.get(f'{wc_field}_avg')
-            if avg_data and len(avg_data) >= 2:
-                field_base = wc_field.replace('wc_', 'word_count_')
-                setattr(stats, f'{field_base}_mean', avg_data[0])
-                setattr(stats, f'{field_base}_std', avg_data[1])
-        
-        # Correlation
-        stats.rating_confidence_correlation = data.get('corr_rating_confidence')
-        
-        self.session.add(stats)
-    
-    def process_citations(self, paper: Paper, data: Dict):
-        """Process citation data"""
-        gs_citations = data.get('gs_citation', -1)
-        if gs_citations == -1:
-            gs_citations = 0
-        
-        citation = Citation(
-            paper=paper,
-            google_scholar_citations=gs_citations,
-            google_scholar_url=data.get('gs_cited_by_link', ''),
-            google_scholar_versions=data.get('gs_version_total', 0) if data.get('gs_version_total', -1) != -1 else 0
-        )
-        self.session.add(citation)
-    
-    # Utility methods
+    # Utility methods (unchanged from original)
     
     def parse_semicolon_field(self, field: str) -> List[str]:
         """Parse semicolon-separated fields"""
@@ -677,9 +713,9 @@ class PaperlistsTransformer:
         items = self.parse_semicolon_field(field)
         result = []
         for item in items:
-            if item.strip():  # Only process non-empty items
+            if item.strip():
                 parsed = self.parse_int(item)
-                if parsed is not None:  # Only add successfully parsed integers
+                if parsed is not None:
                     result.append(parsed)
         return result
     
@@ -709,60 +745,66 @@ class PaperlistsTransformer:
             return ''
         try:
             from urllib.parse import urlparse
-            # If no protocol, add one for parsing
             if '://' not in url:
-                # Check if it looks like a URL with domain
                 if '.' in url:
                     url = 'http://' + url
                 else:
-                    # Not a valid URL format
                     return ''
             parsed = urlparse(url)
-            # Return netloc only if it contains a dot (valid domain)
             if parsed.netloc and '.' in parsed.netloc:
                 return parsed.netloc
             return ''
         except Exception:
             return ''
     
+    def extract_conference_year(self, paper_data: Dict) -> int:
+        """Extract conference year from paper data"""
+        bibtex = paper_data.get('bibtex', '')
+        if 'year={2025}' in bibtex:
+            return 2025
+        elif 'year={2024}' in bibtex:
+            return 2024
+        return 2025
+    
+    def extract_conference_name(self, paper_data: Dict) -> str:
+        """Extract conference name from paper data"""
+        bibtex = paper_data.get('bibtex', '')
+        site = paper_data.get('site', '')
+        
+        if 'icml' in bibtex.lower() or 'icml.cc' in site:
+            return "ICML"
+        elif 'neurips' in bibtex.lower():
+            return "NeurIPS"
+        elif 'iclr' in bibtex.lower():
+            return "ICLR"
+        return "ICML"
+    
+    def classify_track(self, track_name: str) -> Tuple[str, str]:
+        """Classify track type and generate full name"""
+        track_lower = track_name.lower()
+        
+        if track_lower == 'main':
+            return 'main', 'Main Conference'
+        elif track_lower == 'position':
+            return 'position', 'Position Papers'
+        elif 'workshop' in track_lower or 'ws' in track_lower:
+            return 'workshop', f'Workshop: {track_name}'
+        elif 'tutorial' in track_lower:
+            return 'tutorial', f'Tutorial: {track_name}'
+        elif 'demo' in track_lower:
+            return 'demo', f'Demonstration: {track_name}'
+        elif 'poster' in track_lower:
+            return 'poster_session', f'Poster Session: {track_name}'
+        else:
+            return 'other', track_name
+    
     def cleanup(self):
-        """Clean up resources and close session"""
+        """Clean up resources"""
         try:
             self.session.close()
             self.engine.dispose()
         except Exception as e:
             print(f"Warning during cleanup: {e}")
-    
-    def get_institution_stats(self):
-        """Get statistics about institutions for debugging"""
-        try:
-            total_institutions = self.session.query(Institution).count()
-            institutions_by_country = self.session.query(
-                Country.name, 
-                func.count(Institution.id)
-            ).join(Institution).group_by(Country.name).all()
-            
-            print(f"Total institutions: {total_institutions}")
-            print("Institutions by country:")
-            for country, count in institutions_by_country:
-                print(f"  {country}: {count}")
-        except Exception as e:
-            print(f"Error getting institution stats: {e}")
-
-
-# Performance optimization for SQLite
-def optimize_sqlite_connection(engine):
-    """Apply SQLite-specific optimizations"""
-    with engine.connect() as conn:
-        # Enable WAL mode for better concurrency
-        conn.execute(text("PRAGMA journal_mode=WAL"))
-        # Increase cache size (default is usually too small)
-        conn.execute(text("PRAGMA cache_size=10000"))
-        # Enable foreign key constraints
-        conn.execute(text("PRAGMA foreign_keys=ON"))
-        # Optimize for faster writes during bulk insert
-        conn.execute(text("PRAGMA synchronous=NORMAL"))
-        conn.commit()
 
 
 # Usage example
@@ -773,19 +815,13 @@ def main():
         with open('paperlists_data.json', 'r') as f:
             paperlists_data = json.load(f)
         
-        # Initialize transformer with SQLite
+        # Initialize transformer
         transformer = PaperlistsTransformer('sqlite:///paperlists.db')
         
-        # Apply SQLite optimizations
-        optimize_sqlite_connection(transformer.engine)
+        print(f"Processing {len(paperlists_data)} papers one by one...")
         
-        print(f"Processing {len(paperlists_data)} papers...")
-        
-        # Transform data
+        # Transform data (one by one processing)
         transformer.transform_paperlists_data(paperlists_data)
-        
-        # Print statistics
-        transformer.get_institution_stats()
         
         print("Database created at: paperlists.db")
         
