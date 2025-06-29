@@ -598,7 +598,7 @@ class PaperlistsTransformer:
     def parse_int(self, value: str) -> Optional[int]:
         """Safely parse integer"""
         try:
-            return int(value.strip()) if value.strip() else None
+            return int(value.strip()) if value and value.strip() else None
         except (ValueError, AttributeError):
             return None
     
@@ -650,6 +650,7 @@ class PaperlistsTransformer:
         for country, count in institutions_by_country:
             print(f"  {country}: {count}")
 
+
 # Performance optimization for SQLite
 def optimize_sqlite_connection(engine):
     """Apply SQLite-specific optimizations"""
@@ -663,6 +664,7 @@ def optimize_sqlite_connection(engine):
         # Optimize for faster writes during bulk insert
         conn.execute(text("PRAGMA synchronous=NORMAL"))
         conn.commit()
+
 
 # Usage example
 def main():
@@ -686,6 +688,7 @@ def main():
     
     print("Transformation completed!")
     print(f"Database created at: paperlists.db")
+
 
 if __name__ == "__main__":
     main()
