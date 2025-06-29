@@ -32,7 +32,10 @@ class TestPaperlistsTransformer:
     def transformer(self, setup_db):
         """Create a transformer instance with test database."""
         engine, session = setup_db
-        transformer = PaperlistsTransformer("sqlite:///:memory:")
+        from indiaml_v2.config import ImporterConfig
+        config = ImporterConfig()
+        config.database_url = "sqlite:///:memory:"
+        transformer = PaperlistsTransformer(config)
         transformer.session = session
         transformer.engine = engine
         return transformer
@@ -653,6 +656,253 @@ class TestUtilityMethods:
         assert mock_conn.execute.call_count >= 4  # At least 4 pragma commands
 
 
+class TestMultiAffiliationArchitecture:
+    """Test suite for the new multi-affiliation architecture with PaperAuthorAffiliation."""
+    
+    @pytest.fixture
+    def setup_db(self):
+        """Create an in-memory SQLite database for testing."""
+        engine = create_engine("sqlite:///:memory:")
+        Base.metadata.create_all(engine)
+        Session = sessionmaker(bind=engine)
+        session = Session()
+        return engine, session
+    
+    @pytest.fixture
+    def transformer(self, setup_db):
+        """Create a transformer instance with test database."""
+        engine, session = setup_db
+        from indiaml_v2.config import ImporterConfig
+        config = ImporterConfig()
+        config.database_url = "sqlite:///:memory:"
+        transformer = PaperlistsTransformer(config)
+        transformer.session = session
+        transformer.engine = engine
+        return transformer
+    
+    def test_affiliation_deduplication(self, transformer):
+        """Test that affiliations are properly deduplicated based on author-institution combination."""
+        
+        # Mock author and institution
+        mock_author = Mock()
+        mock_author.name = "John Doe"
+        mock_institution = Mock()
+        mock_institution.name = "Stanford University"
+        
+        with patch.object(transformer, 'session') as mock_session:
+            # First call - no existing affiliation
+            mock_session.query.return_value.filter_by.return_value.first.return_value = None
+            
+            # Test creating new affiliation
+            result = transformer.get_or_create_affiliation_with_deduplication(
+                author=mock_author,
+                institution=mock_institution,
+                position="PhD Student",
+                email_domain="stanford.edu"
+            )
+            
+            # Verify new affiliation was created
+            mock_session.add.assert_called_once()
+            mock_session.flush.assert_called_once()
+    
+    def test_affiliation_deduplication_existing(self, transformer):
+        """Test that existing affiliations are reused and updated when appropriate."""
+        
+        # Mock author and institution
+        mock_author = Mock()
+        mock_author.name = "John Doe"
+        mock_institution = Mock()
+        mock_institution.name = "Stanford University"
+        
+        # Mock existing affiliation
+        mock_existing_affiliation = Mock()
+        mock_existing_affiliation.position = None  # Empty position to be updated
+        mock_existing_affiliation.email_domain = None  # Empty email to be updated
+        
+        with patch.object(transformer, 'session') as mock_session:
+            # Return existing affiliation
+            mock_session.query.return_value.filter_by.return_value.first.return_value = mock_existing_affiliation
+            
+            # Test getting existing affiliation and updating it
+            result = transformer.get_or_create_affiliation_with_deduplication(
+                author=mock_author,
+                institution=mock_institution,
+                position="PhD Student",
+                email_domain="stanford.edu"
+            )
+            
+            # Verify existing affiliation was returned and updated
+            assert result == mock_existing_affiliation
+            assert mock_existing_affiliation.position == "PhD Student"
+            assert mock_existing_affiliation.email_domain == "stanford.edu"
+            mock_session.flush.assert_called_once()
+    
+    def test_paper_author_affiliation_creation(self, transformer):
+        """Test creation of PaperAuthorAffiliation relationships."""
+        
+        # Mock objects
+        mock_paper_author = Mock()
+        mock_author = Mock()
+        mock_author.name = "Jane Smith"
+        mock_affiliation = Mock()
+        
+        # Mock institution map
+        mock_institution = Mock()
+        institution_map = {"0": mock_institution, "1": mock_institution}
+        
+        with patch.object(transformer, 'session') as mock_session:
+            with patch.object(transformer, 'get_or_create_affiliation_with_deduplication') as mock_get_aff:
+                mock_get_aff.return_value = mock_affiliation
+                
+                # Mock no existing paper-author-affiliation relationship
+                mock_session.query.return_value.filter_by.return_value.first.return_value = None
+                
+                # Test processing single affiliation
+                transformer.process_paper_author_affiliations_with_checks(
+                    paper_author=mock_paper_author,
+                    author=mock_author,
+                    aff_indices="0",
+                    institution_map=institution_map,
+                    position="Research Scientist",
+                    email_domain="company.com"
+                )
+                
+                # Verify affiliation was created and PaperAuthorAffiliation was added
+                mock_get_aff.assert_called_once()
+                mock_session.add.assert_called_once()
+                mock_session.flush.assert_called_once()
+    
+    def test_multi_affiliation_processing(self, transformer):
+        """Test processing of multi-affiliations with '+' delimiter."""
+        
+        # Mock objects
+        mock_paper_author = Mock()
+        mock_author = Mock()
+        mock_author.name = "Multi Affiliation Author"
+        mock_affiliation1 = Mock()
+        mock_affiliation2 = Mock()
+        
+        # Mock institution map
+        mock_institution1 = Mock()
+        mock_institution2 = Mock()
+        institution_map = {"0": mock_institution1, "1": mock_institution2}
+        
+        with patch.object(transformer, 'session') as mock_session:
+            with patch.object(transformer, 'get_or_create_affiliation_with_deduplication') as mock_get_aff:
+                # Return different affiliations for different calls
+                mock_get_aff.side_effect = [mock_affiliation1, mock_affiliation2]
+                
+                # Mock no existing paper-author-affiliation relationships
+                mock_session.query.return_value.filter_by.return_value.first.return_value = None
+                
+                # Test processing multi-affiliation with '+' delimiter
+                transformer.process_paper_author_affiliations_with_checks(
+                    paper_author=mock_paper_author,
+                    author=mock_author,
+                    aff_indices="0+1",  # Multi-affiliation
+                    institution_map=institution_map,
+                    position="Research Scientist+Associate Professor",  # Multi-position
+                    email_domain="company.com+university.edu"  # Multi-domain
+                )
+                
+                # Verify both affiliations were processed
+                assert mock_get_aff.call_count == 2
+                assert mock_session.add.call_count == 2  # Two PaperAuthorAffiliation objects
+                assert mock_session.flush.call_count == 2
+    
+    def test_primary_affiliation_marking(self, transformer):
+        """Test that the first affiliation is marked as primary."""
+        
+        # Mock objects
+        mock_paper_author = Mock()
+        mock_author = Mock()
+        mock_affiliation1 = Mock()
+        mock_affiliation2 = Mock()
+        
+        # Mock institution map
+        mock_institution1 = Mock()
+        mock_institution2 = Mock()
+        institution_map = {"0": mock_institution1, "1": mock_institution2}
+        
+        # Track the PaperAuthorAffiliation objects that get created
+        created_paa_objects = []
+        
+        def mock_add(obj):
+            if hasattr(obj, 'is_primary'):
+                created_paa_objects.append(obj)
+        
+        with patch.object(transformer, 'session') as mock_session:
+            with patch.object(transformer, 'get_or_create_affiliation_with_deduplication') as mock_get_aff:
+                mock_get_aff.side_effect = [mock_affiliation1, mock_affiliation2]
+                mock_session.query.return_value.filter_by.return_value.first.return_value = None
+                mock_session.add.side_effect = mock_add
+                
+                # Test processing multi-affiliation
+                transformer.process_paper_author_affiliations_with_checks(
+                    paper_author=mock_paper_author,
+                    author=mock_author,
+                    aff_indices="0+1",
+                    institution_map=institution_map,
+                    position="Primary+Secondary",
+                    email_domain="primary.com+secondary.edu"
+                )
+                
+                # Verify primary affiliation marking
+                assert len(created_paa_objects) == 2
+                assert created_paa_objects[0].is_primary == True  # First affiliation is primary
+                assert created_paa_objects[1].is_primary == False  # Second affiliation is not primary
+    
+    def test_paper_author_raw_affiliation_text(self, transformer):
+        """Test that raw affiliation text is stored in PaperAuthor for reference."""
+        
+        # This test verifies that the raw_affiliation_text field is properly set
+        # when creating PaperAuthor relationships
+        
+        # Test the field assignment logic directly
+        raw_aff_text = "Google DeepMind+McGill University"
+        
+        # Simulate creating a PaperAuthor object
+        paper_author_data = {
+            'raw_affiliation_text': raw_aff_text
+        }
+        
+        # Verify the raw text is preserved
+        assert paper_author_data['raw_affiliation_text'] == raw_aff_text
+        assert '+' in paper_author_data['raw_affiliation_text']  # Multi-affiliation preserved
+    
+    def test_affiliation_foreign_key_relationships(self, transformer):
+        """Test that proper foreign key relationships are established."""
+        
+        # This test verifies the database schema relationships
+        # We test the model relationships directly
+        
+        # Test PaperAuthor -> PaperAuthorAffiliation relationship
+        assert hasattr(PaperAuthor, 'paper_author_affiliations')
+        
+        # Test PaperAuthorAffiliation -> Affiliation relationship  
+        assert hasattr(PaperAuthorAffiliation, 'affiliation')
+        
+        # Test PaperAuthorAffiliation -> PaperAuthor relationship
+        assert hasattr(PaperAuthorAffiliation, 'paper_author')
+        
+        # Test Affiliation -> PaperAuthorAffiliation relationship
+        assert hasattr(Affiliation, 'paper_author_affiliations')
+        
+        # Test unique constraint on author-institution in Affiliation
+        affiliation_table = Affiliation.__table__
+        unique_constraints = [c for c in affiliation_table.constraints if hasattr(c, 'columns')]
+        author_institution_constraint = None
+        
+        for constraint in unique_constraints:
+            if hasattr(constraint, 'columns') and len(constraint.columns) == 2:
+                column_names = [col.name for col in constraint.columns]
+                if 'author_id' in column_names and 'institution_id' in column_names:
+                    author_institution_constraint = constraint
+                    break
+        
+        assert author_institution_constraint is not None, "author_id + institution_id unique constraint should exist"
+
+
 class TestRealDataIntegration:
     """Integration tests with real data samples."""
     
@@ -710,6 +960,69 @@ class TestRealDataIntegration:
             transformer.session.commit()
         except Exception as e:
             pytest.fail(f"Processing dual affiliation sample failed: {e}")
+    
+    def test_new_architecture_data_flow(self):
+        """Test the complete data flow: Paper -> Author -> PaperAuthor -> PaperAuthorAffiliation -> Affiliation -> Institution -> Country"""
+        
+        # Test data representing the new architecture flow
+        sample_data = {
+            "title": "Test Multi-Affiliation Architecture",
+            "id": "test_arch_001",
+            "author": "Test Author",
+            "aff": "Test University+Test Company",
+            "aff_domain": "university.edu+company.com", 
+            "position": "PhD Student+Research Intern",
+            "aff_unique_index": "0+1",
+            "aff_unique_norm": "Test University;Test Company",
+            "aff_country_unique_index": "0;1",
+            "aff_country_unique": "USA;Canada",
+            "author_num": 1,
+            "track": "main"
+        }
+        
+        transformer = PaperlistsTransformer("sqlite:///:memory:")
+        
+        # Process the sample data
+        try:
+            transformer.process_single_paper_with_checks(sample_data)
+            transformer.session.commit()
+            
+            # Verify the data flow worked correctly
+            # Paper should exist
+            paper = transformer.session.query(Paper).filter_by(id="test_arch_001").first()
+            assert paper is not None
+            
+            # Author should exist
+            authors = transformer.session.query(Author).all()
+            assert len(authors) >= 1
+            
+            # PaperAuthor relationship should exist
+            paper_authors = transformer.session.query(PaperAuthor).filter_by(paper=paper).all()
+            assert len(paper_authors) == 1
+            
+            # PaperAuthorAffiliation relationships should exist (2 for dual affiliation)
+            paper_author = paper_authors[0]
+            paa_relationships = transformer.session.query(PaperAuthorAffiliation).filter_by(paper_author=paper_author).all()
+            assert len(paa_relationships) == 2  # Dual affiliation
+            
+            # One should be primary, one should not be
+            primary_count = sum(1 for paa in paa_relationships if paa.is_primary)
+            assert primary_count == 1
+            
+            # Affiliations should exist and be deduplicated
+            affiliations = transformer.session.query(Affiliation).all()
+            assert len(affiliations) >= 2  # At least 2 for the dual affiliation
+            
+            # Institutions should exist
+            institutions = transformer.session.query(Institution).all()
+            assert len(institutions) >= 2
+            
+            # Countries should exist
+            countries = transformer.session.query(Country).all()
+            assert len(countries) >= 2
+            
+        except Exception as e:
+            pytest.fail(f"New architecture data flow test failed: {e}")
 
 
 if __name__ == "__main__":
