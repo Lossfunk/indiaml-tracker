@@ -16,13 +16,16 @@ from indiaml_v2.logging_config import get_logger
 from indiaml_v2.config import ImporterConfig, load_config
 
 class PaperlistsTransformer:
-    def __init__(self, config: ImporterConfig = None, database_url: str = None):
+    def __init__(self, config: ImporterConfig = None, database_url: str = None, conference_year: int = None):
         # Load configuration
         self.config = config or ImporterConfig()
         
         # Override database URL if provided
         if database_url:
             self.config.database_url = database_url
+        
+        # Store externally provided conference year
+        self.conference_year = conference_year
         
         # Initialize comprehensive logging
         self.logger = get_logger("paperlist_importer", self.config.log_directory)
@@ -844,7 +847,12 @@ class PaperlistsTransformer:
             return ''
     
     def extract_conference_year(self, paper_data: Dict) -> int:
-        """Extract conference year from paper data"""
+        """Extract conference year from paper data or use externally provided year"""
+        # If year was provided externally, use that
+        if self.conference_year is not None:
+            return self.conference_year
+        
+        # Fallback to parsing from bibtex (for backward compatibility)
         bibtex = paper_data.get('bibtex', '')
         if 'year={2025}' in bibtex:
             return 2025

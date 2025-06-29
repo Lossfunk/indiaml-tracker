@@ -361,7 +361,9 @@ def verify_import_success(self, original_data: List[Dict], expected_count: int):
 
 ## CLI Interface
 
-### Command Line Arguments
+### Single File Processing
+
+#### Command Line Arguments
 ```bash
 python paperlist_importer.py data.json [options]
 
@@ -374,7 +376,7 @@ Optional:
   --log-level, -l LEVEL     Logging level (DEBUG/INFO/WARNING/ERROR)
 ```
 
-### Usage Examples
+#### Usage Examples
 ```bash
 # Basic usage
 python paperlist_importer.py icml2024.json
@@ -387,6 +389,67 @@ python paperlist_importer.py icml2024.json --log-level DEBUG
 
 # All options
 python paperlist_importer.py icml2024.json --database custom.db --log-level DEBUG
+```
+
+### Batch Processing (Multiple Files)
+
+#### Command Line Arguments
+```bash
+python batch_importer.py directory [options]
+
+Required:
+  directory                 Directory to search for JSON files (recursive)
+
+Optional:
+  --output, -o OUTPUT       Output directory for databases and logs
+  --config, -c CONFIG       Path to configuration JSON file
+  --parallel, -p            Process files in parallel
+  --max-workers, -w N       Maximum number of parallel workers (default: 2)
+  --log-level, -l LEVEL     Logging level (DEBUG/INFO/WARNING/ERROR)
+```
+
+#### Batch Processing Features
+- **Recursive Discovery**: Automatically finds all JSON files in subdirectories
+- **Shared Database**: Combines all JSON files into a single database (configurable)
+- **Isolated Logging**: Each file gets its own log directory with detailed logs
+- **Parallel Processing**: Optional parallel processing for smaller files
+- **Progress Tracking**: Real-time progress across all files
+- **Error Isolation**: Failed files don't stop processing of other files
+- **Smart Naming**: Output files named based on source JSON file paths
+
+#### Batch Usage Examples
+```bash
+# Process all JSON files in a directory
+python batch_importer.py /path/to/conference/data
+
+# Process with custom output directory
+python batch_importer.py /path/to/conference/data --output /path/to/processed
+
+# Process in parallel (for smaller files)
+python batch_importer.py /path/to/conference/data --parallel --max-workers 4
+
+# Custom configuration
+python batch_importer.py /path/to/conference/data --config custom_config.json
+
+# Debug mode for troubleshooting
+python batch_importer.py /path/to/conference/data --log-level DEBUG
+```
+
+#### Batch Output Structure
+```
+output_directory/
+├── icml2024.db                    # Database for icml2024.json
+├── neurips2024.db                 # Database for neurips2024.json
+├── logs/
+│   ├── icml2024/                  # Logs for icml2024.json processing
+│   │   ├── paperlist_importer_main.log
+│   │   ├── paperlist_importer_main_errors.log
+│   │   └── paperlist_importer_main_performance.log
+│   └── neurips2024/               # Logs for neurips2024.json processing
+│       ├── paperlist_importer_main.log
+│       ├── paperlist_importer_main_errors.log
+│       └── paperlist_importer_main_performance.log
+└── batch_importer_20241230_032000.log  # Main batch processing log
 ```
 
 ## Configuration Customization

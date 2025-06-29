@@ -191,6 +191,8 @@ The system supports 25+ major conferences including:
 - Required dependencies (see requirements.txt)
 
 ### Basic Usage
+
+#### Single File Processing
 ```bash
 # Install dependencies
 pip install -r requirements.txt
@@ -203,6 +205,24 @@ python pipeline/paperlist_importer.py data.json --database custom.db
 
 # Debug mode
 python pipeline/paperlist_importer.py data.json --log-level DEBUG
+```
+
+#### Batch Processing (Multiple Files)
+```bash
+# Process all JSON files into a shared database
+python pipeline/batch_importer.py /path/to/json/folder
+
+# Process with custom shared database file
+python pipeline/batch_importer.py /path/to/json/folder --database combined_papers.db
+
+# Process with custom output directory  
+python pipeline/batch_importer.py /path/to/json/folder --output /path/to/output
+
+# Process in parallel (for smaller files)
+python pipeline/batch_importer.py /path/to/json/folder --parallel --max-workers 4
+
+# Custom configuration for batch processing
+python pipeline/batch_importer.py /path/to/json/folder --config custom_config.json
 ```
 
 ### Configuration

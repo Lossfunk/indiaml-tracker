@@ -11,6 +11,8 @@ pip install -r requirements.txt
 ```
 
 ### Basic Usage
+
+#### Single File Processing
 ```bash
 # Import paperlist data
 python pipeline/paperlist_importer.py data.json
@@ -20,6 +22,21 @@ python pipeline/paperlist_importer.py data.json --database custom.db
 
 # Debug logging
 python pipeline/paperlist_importer.py data.json --log-level DEBUG
+```
+
+#### Batch Processing (Multiple Files)
+```bash
+# Process all JSON files into a shared database
+python pipeline/batch_importer.py /path/to/json/folder
+
+# Process with custom shared database file
+python pipeline/batch_importer.py /path/to/json/folder --database combined_papers.db
+
+# Process with custom output directory
+python pipeline/batch_importer.py /path/to/json/folder --output /path/to/output
+
+# Process in parallel (for smaller files)
+python pipeline/batch_importer.py /path/to/json/folder --parallel --max-workers 4
 ```
 
 ### CLI Options
