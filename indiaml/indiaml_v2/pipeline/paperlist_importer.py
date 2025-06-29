@@ -10,23 +10,44 @@ from typing import Dict, List, Optional, Tuple
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine, func, text
 from indiaml_v2.models.models import *  # Import all the SQLAlchemy models
+from indiaml_v2.logging_config import get_logger, log_function_calls
 
 class PaperlistsTransformer:
     def __init__(self, database_url: str = "sqlite:///paperlists.db"):
-        self.engine = create_engine(database_url)
+        # Initialize logging
+        self.logger = get_logger("paperlist_transformer")
+        self.logger.start_operation("PaperlistsTransformer initialization", database_url=database_url)
+        
+        self.engine = create_engine(database_url, echo=False)
         Base.metadata.create_all(self.engine)
-        Session = sessionmaker(bind=self.engine)
+        Session = sessionmaker(bind=self.engine, autoflush=False, autocommit=False)
         self.session = Session()
         
         # Cache for institutions and countries to avoid duplicates
-        self.country_cache = {}
-        self.institution_cache = {}
-        self.keyword_cache = {}
-        self.conference_cache = {}
-        self.track_cache = {}
+        # Store IDs instead of objects to avoid stale object issues
+        self.country_cache = {}  # name -> id
+        self.institution_cache = {}  # cache_key -> id
+        self.keyword_cache = {}  # normalized -> id
+        self.conference_cache = {}  # cache_key -> id
+        self.track_cache = {}  # cache_key -> id
+        
+        # Statistics tracking
+        self.stats = {
+            'papers_processed': 0,
+            'authors_created': 0,
+            'institutions_created': 0,
+            'countries_created': 0,
+            'keywords_created': 0,
+            'errors': 0
+        }
         
         # Create indexes explicitly for SQLite optimization
         self._ensure_indexes()
+        
+        self.logger.end_operation("PaperlistsTransformer initialization", success=True)
+        self.logger.info("Transformer initialized successfully", 
+                        database_url=database_url, 
+                        cache_sizes=f"country:{len(self.country_cache)}, institution:{len(self.institution_cache)}")
     
     def _ensure_indexes(self):
         """Ensure critical indexes exist for SQLite performance"""
@@ -52,14 +73,69 @@ class PaperlistsTransformer:
     
     def transform_paperlists_data(self, paperlists_json: List[Dict]):
         """Main transformation function"""
-        for paper_data in paperlists_json:
+        self.logger.start_operation("paperlists_data_transformation", total_papers=len(paperlists_json))
+        
+        for i, paper_data in enumerate(paperlists_json):
             try:
+                paper_id = paper_data.get('id', f'unknown_{i}')
+                paper_title = paper_data.get('title', 'Unknown Title')[:50]
+                
+                self.logger.debug(f"Processing paper {i+1}/{len(paperlists_json)}", 
+                                paper_id=paper_id, title=paper_title)
+                
                 self.process_paper(paper_data)
-                self.session.commit()
+                self.stats['papers_processed'] += 1
+                
+                # Progress logging
+                if (i + 1) % 10 == 0:
+                    progress = ((i + 1) / len(paperlists_json)) * 100
+                    self.logger.progress(f"Processed {i+1}/{len(paperlists_json)} papers ({progress:.1f}%)",
+                                       papers_processed=self.stats['papers_processed'],
+                                       authors_created=self.stats['authors_created'],
+                                       institutions_created=self.stats['institutions_created'])
+                
+                # Flush periodically to avoid memory issues
+                if i % 10 == 0:
+                    self.session.flush()
+                    
+                # Commit every 50 papers to avoid large transactions
+                if i % 50 == 0:
+                    self.session.commit()
+                    self.logger.debug(f"Committed batch at paper {i+1}")
+                    
+                    # Clear caches periodically to avoid stale objects
+                    if i % 100 == 0:
+                        self._refresh_caches()
+                        self.logger.debug("Refreshed caches", 
+                                        cache_sizes=f"country:{len(self.country_cache)}, institution:{len(self.institution_cache)}")
+                        
             except Exception as e:
-                print(f"Error processing paper {paper_data.get('id', 'unknown')}: {e}")
+                self.stats['errors'] += 1
+                paper_id = paper_data.get('id', f'unknown_{i}')
+                self.logger.log_exception(e, f"processing paper {paper_id}")
                 self.session.rollback()
                 continue
+        
+        # Final commit for any remaining papers
+        try:
+            self.session.commit()
+            self.logger.success("Final commit completed successfully")
+        except Exception as e:
+            self.logger.log_exception(e, "final commit")
+            self.session.rollback()
+        
+        # Log final statistics
+        self.logger.log_data_stats("transformation_complete", self.stats['papers_processed'], **self.stats)
+        self.logger.end_operation("paperlists_data_transformation", success=True)
+    
+    def _refresh_caches(self):
+        """Clear caches to avoid stale object references"""
+        # Only clear object caches, keep ID-based caches
+        self.country_cache.clear()
+        self.institution_cache.clear()
+        self.keyword_cache.clear()
+        self.conference_cache.clear()
+        self.track_cache.clear()
     
     def process_paper(self, data: Dict):
         """Process a single paper and all related entities"""
@@ -110,7 +186,8 @@ class PaperlistsTransformer:
         """Get or create conference"""
         cache_key = f"{conference_name}_{year}"
         if cache_key in self.conference_cache:
-            return self.conference_cache[cache_key]
+            conference_id = self.conference_cache[cache_key]
+            return self.session.query(Conference).get(conference_id)
         
         conference = self.session.query(Conference).filter_by(
             name=conference_name,
@@ -135,7 +212,7 @@ class PaperlistsTransformer:
             self.session.add(conference)
             self.session.flush()  # Get ID immediately
         
-        self.conference_cache[cache_key] = conference
+        self.conference_cache[cache_key] = conference.id
         return conference
     
     def get_or_create_track(self, paper_data: Dict) -> Track:
@@ -152,7 +229,8 @@ class PaperlistsTransformer:
         
         cache_key = f"{conference.id}_{track_name}"
         if cache_key in self.track_cache:
-            return self.track_cache[cache_key]
+            track_id = self.track_cache[cache_key]
+            return self.session.query(Track).get(track_id)
         
         track = self.session.query(Track).filter_by(
             conference=conference,
@@ -172,7 +250,7 @@ class PaperlistsTransformer:
             self.session.add(track)
             self.session.flush()  # Get ID immediately
         
-        self.track_cache[cache_key] = track
+        self.track_cache[cache_key] = track.id
         return track
     
     def extract_conference_year(self, paper_data: Dict) -> int:
@@ -380,6 +458,7 @@ class PaperlistsTransformer:
         if orcid:
             author = self.session.query(Author).filter_by(orcid=orcid).first()
             if author:
+                self.logger.debug(f"Found existing author by ORCID", name=name, orcid=orcid)
                 return author
         
         # Process OpenReview profile
@@ -391,6 +470,7 @@ class PaperlistsTransformer:
         if or_profile:
             author = self.session.query(Author).filter_by(openreview_id=or_profile).first()
             if author:
+                self.logger.debug(f"Found existing author by OpenReview ID", name=name, openreview_id=or_profile)
                 return author
         
         # Create new author
@@ -420,20 +500,31 @@ class PaperlistsTransformer:
         
         self.session.add(author)
         self.session.flush()  # Ensure the author is persisted
+        self.stats['authors_created'] += 1
+        
+        self.logger.debug(f"Created new author", 
+                         name=name, 
+                         author_id=author_id,
+                         has_orcid=bool(orcid),
+                         has_openreview=bool(or_profile))
+        
         return author
     
     def get_or_create_country(self, name: str) -> Country:
         """Get existing country or create new one"""
         if name in self.country_cache:
-            return self.country_cache[name]
+            country_id = self.country_cache[name]
+            return self.session.query(Country).get(country_id)
         
         country = self.session.query(Country).filter_by(name=name).first()
         if not country:
             country = Country(name=name)
             self.session.add(country)
             self.session.flush()  # Get ID immediately
+            self.stats['countries_created'] += 1
+            self.logger.debug(f"Created new country", name=name)
         
-        self.country_cache[name] = country
+        self.country_cache[name] = country.id
         return country
     
     def get_or_create_institution(self, name: str, normalized_name: str,
@@ -442,14 +533,15 @@ class PaperlistsTransformer:
         
         cache_key = f"{normalized_name}:{country.name}:{kwargs.get('campus', '')}"
         if cache_key in self.institution_cache:
-            return self.institution_cache[cache_key]
+            institution_id = self.institution_cache[cache_key]
+            return self.session.query(Institution).get(institution_id)
         
         # Use the optimized lookup method
         institution = self.find_institution_by_normalized_name(normalized_name, country.name)
         
         # If found, check for exact match including campus
         if institution and institution.campus == kwargs.get('campus', ''):
-            self.institution_cache[cache_key] = institution
+            self.institution_cache[cache_key] = institution.id
             return institution
         
         # If not found or campus doesn't match, check for exact match with all criteria
@@ -472,7 +564,7 @@ class PaperlistsTransformer:
             self.session.add(institution)
             self.session.flush()  # Get the ID immediately for caching
         
-        self.institution_cache[cache_key] = institution
+        self.institution_cache[cache_key] = institution.id
         return institution
     
     def process_keywords(self, paper: Paper, data: Dict):
@@ -493,7 +585,8 @@ class PaperlistsTransformer:
         normalized = text.lower().strip()
         
         if normalized in self.keyword_cache:
-            return self.keyword_cache[normalized]
+            keyword_id = self.keyword_cache[normalized]
+            return self.session.query(Keyword).get(keyword_id)
         
         keyword = self.session.query(Keyword).filter_by(normalized_keyword=normalized).first()
         if not keyword:
@@ -501,7 +594,7 @@ class PaperlistsTransformer:
             self.session.add(keyword)
             self.session.flush()
         
-        self.keyword_cache[normalized] = keyword
+        self.keyword_cache[normalized] = keyword.id
         return keyword
     
     def process_reviews(self, paper: Paper, data: Dict):
