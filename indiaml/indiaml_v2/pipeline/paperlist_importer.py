@@ -8,7 +8,7 @@ import json
 import re
 from typing import Dict, List, Optional, Tuple
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import create_engine, func
+from sqlalchemy import create_engine, func, text
 from indiaml_v2.models.models import *  # Import all the SQLAlchemy models
 
 class PaperlistsTransformer:
@@ -33,10 +33,10 @@ class PaperlistsTransformer:
         try:
             # SQLite doesn't automatically create indexes from table args in some cases
             with self.engine.connect() as conn:
-                conn.execute("CREATE INDEX IF NOT EXISTS idx_institution_normalized_lookup ON institutions (normalized_name)")
-                conn.execute("CREATE INDEX IF NOT EXISTS idx_institution_normalized_country ON institutions (normalized_name, country_id)")
-                conn.execute("CREATE INDEX IF NOT EXISTS idx_author_orcid_lookup ON authors (orcid)")
-                conn.execute("CREATE INDEX IF NOT EXISTS idx_author_openreview_lookup ON authors (openreview_id)")
+                conn.execute(text("CREATE INDEX IF NOT EXISTS idx_institution_normalized_lookup ON institutions (normalized_name)"))
+                conn.execute(text("CREATE INDEX IF NOT EXISTS idx_institution_normalized_country ON institutions (normalized_name, country_id)"))
+                conn.execute(text("CREATE INDEX IF NOT EXISTS idx_author_orcid_lookup ON authors (orcid)"))
+                conn.execute(text("CREATE INDEX IF NOT EXISTS idx_author_openreview_lookup ON authors (openreview_id)"))
                 conn.commit()
         except Exception as e:
             print(f"Index creation warning: {e}")
@@ -289,6 +289,7 @@ class PaperlistsTransformer:
                 author_order=i + 1,
                 affiliation_at_time=self.safe_get(raw_affs, i)
             )
+            self.session.add(paper_author)
             
             # Process affiliations for this author
             aff_indices = self.safe_get(aff_unique_indices, i, '')
@@ -370,37 +371,55 @@ class PaperlistsTransformer:
     def get_or_create_author(self, name: str, **kwargs) -> Author:
         """Get existing author or create new one"""
         
+        # Process ORCID - convert empty string to None
+        orcid = kwargs.get('orcid', '')
+        orcid = orcid.strip() if orcid else ''
+        orcid = None if not orcid else orcid  # Convert empty string to None
+        
         # Try to find by ORCID first (most reliable)
-        orcid = kwargs.get('orcid', '').strip()
         if orcid:
             author = self.session.query(Author).filter_by(orcid=orcid).first()
             if author:
                 return author
         
+        # Process OpenReview profile
+        or_profile = kwargs.get('or_profile', '')
+        or_profile = or_profile.strip() if or_profile else ''
+        or_profile = None if not or_profile else or_profile  # Convert empty string to None
+        
         # Try to find by OpenReview profile
-        or_profile = kwargs.get('or_profile', '').strip()
         if or_profile:
             author = self.session.query(Author).filter_by(openreview_id=or_profile).first()
             if author:
                 return author
         
         # Create new author
-        author_id = kwargs.get('author_id', '').strip() or self.generate_author_id(name)
+        author_id = kwargs.get('author_id', '')
+        author_id = author_id.strip() if author_id else self.generate_author_id(name)
+        
+        # Process other fields - convert empty strings to None for fields that should be NULL
+        def clean_field(value):
+            """Convert empty strings to None"""
+            if value is None:
+                return None
+            value = str(value).strip()
+            return None if not value else value
         
         author = Author(
             id=author_id,
             name=name,
-            name_site=kwargs.get('author_site', ''),
+            name_site=clean_field(kwargs.get('author_site')),
             openreview_id=or_profile,
-            gender=kwargs.get('gender', ''),
-            homepage_url=kwargs.get('homepage', ''),
-            dblp_id=kwargs.get('dblp', ''),
-            google_scholar_url=kwargs.get('google_scholar', ''),
+            gender=clean_field(kwargs.get('gender')),
+            homepage_url=clean_field(kwargs.get('homepage')),
+            dblp_id=clean_field(kwargs.get('dblp')),
+            google_scholar_url=clean_field(kwargs.get('google_scholar')),
             orcid=orcid,
-            linkedin_url=kwargs.get('linkedin', '')
+            linkedin_url=clean_field(kwargs.get('linkedin'))
         )
         
         self.session.add(author)
+        self.session.flush()  # Ensure the author is persisted
         return author
     
     def get_or_create_country(self, name: str) -> Country:
@@ -412,6 +431,7 @@ class PaperlistsTransformer:
         if not country:
             country = Country(name=name)
             self.session.add(country)
+            self.session.flush()  # Get ID immediately
         
         self.country_cache[name] = country
         return country
@@ -479,6 +499,7 @@ class PaperlistsTransformer:
         if not keyword:
             keyword = Keyword(keyword=text, normalized_keyword=normalized)
             self.session.add(keyword)
+            self.session.flush()
         
         self.keyword_cache[normalized] = keyword
         return keyword
@@ -566,7 +587,13 @@ class PaperlistsTransformer:
     def parse_numeric_field(self, field: str) -> List[int]:
         """Parse semicolon-separated numeric fields"""
         items = self.parse_semicolon_field(field)
-        return [self.parse_int(item) for item in items if item.strip()]
+        result = []
+        for item in items:
+            if item.strip():  # Only process non-empty items
+                parsed = self.parse_int(item)
+                if parsed is not None:  # Only add successfully parsed integers
+                    result.append(parsed)
+        return result
     
     def parse_int(self, value: str) -> Optional[int]:
         """Safely parse integer"""
@@ -578,7 +605,9 @@ class PaperlistsTransformer:
     def safe_get(self, lst: List, index: int, default=None):
         """Safely get item from list"""
         try:
-            return lst[index] if index < len(lst) else default
+            if lst is None or index < 0 or index >= len(lst):
+                return default
+            return lst[index]
         except (IndexError, TypeError):
             return default
     
@@ -592,8 +621,20 @@ class PaperlistsTransformer:
             return ''
         try:
             from urllib.parse import urlparse
-            return urlparse(url).netloc
-        except:
+            # If no protocol, add one for parsing
+            if '://' not in url:
+                # Check if it looks like a URL with domain
+                if '.' in url:
+                    url = 'http://' + url
+                else:
+                    # Not a valid URL format
+                    return ''
+            parsed = urlparse(url)
+            # Return netloc only if it contains a dot (valid domain)
+            if parsed.netloc and '.' in parsed.netloc:
+                return parsed.netloc
+            return ''
+        except Exception:
             return ''
     
     def get_institution_stats(self):
@@ -614,13 +655,13 @@ def optimize_sqlite_connection(engine):
     """Apply SQLite-specific optimizations"""
     with engine.connect() as conn:
         # Enable WAL mode for better concurrency
-        conn.execute("PRAGMA journal_mode=WAL")
+        conn.execute(text("PRAGMA journal_mode=WAL"))
         # Increase cache size (default is usually too small)
-        conn.execute("PRAGMA cache_size=10000")
+        conn.execute(text("PRAGMA cache_size=10000"))
         # Enable foreign key constraints
-        conn.execute("PRAGMA foreign_keys=ON")
+        conn.execute(text("PRAGMA foreign_keys=ON"))
         # Optimize for faster writes during bulk insert
-        conn.execute("PRAGMA synchronous=NORMAL")
+        conn.execute(text("PRAGMA synchronous=NORMAL"))
         conn.commit()
 
 # Usage example
@@ -633,7 +674,7 @@ def main():
     transformer = PaperlistsTransformer('sqlite:///paperlists.db')
     
     # Apply SQLite optimizations
-    # optimize_sqlite_connection(transformer.engine)
+    optimize_sqlite_connection(transformer.engine)
     
     print(f"Processing {len(paperlists_data)} papers...")
     

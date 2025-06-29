@@ -46,6 +46,7 @@ class Paper(Base):
     keywords = relationship("PaperKeyword", back_populates="paper", cascade="all, delete-orphan")
     reviews = relationship("Review", back_populates="paper", cascade="all, delete-orphan")
     citations = relationship("Citation", back_populates="paper", uselist=False, cascade="all, delete-orphan")
+    review_statistics = relationship("ReviewStatistics", back_populates="paper", uselist=False, cascade="all, delete-orphan")
     
     __table_args__ = (
         Index('idx_paper_status', 'status'),
@@ -332,6 +333,9 @@ class ReviewStatistics(Base):
     
     # Update tracking
     last_calculated = Column(DateTime, default=datetime.utcnow)
+    
+    # Relationships
+    paper = relationship("Paper", back_populates="review_statistics")
     
     __table_args__ = (
         Index('idx_review_stats_rating_mean', 'rating_mean'),
