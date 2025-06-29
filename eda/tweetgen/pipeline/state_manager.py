@@ -29,10 +29,13 @@ class StateManager:
         self.pipeline_steps = [
             "initialize",
             "data_extraction", 
-            "sqlite_processing",
+            "json_processing",
+            "sqlite_hydration",
             "author_enrichment",
+            "twitter_validation",
             "analytics_processing",
             "tweet_generation",
+            "card_generation",
             "markdown_generation",
             "finalize"
         ]
@@ -219,6 +222,10 @@ class StateManager:
             status["status"] = "running"
         
         return status
+    
+    def get_current_timestamp(self) -> str:
+        """Get current timestamp in ISO format."""
+        return datetime.now().isoformat()
     
     def cleanup_checkpoints(self, keep_final: bool = True) -> None:
         """Clean up checkpoint files."""

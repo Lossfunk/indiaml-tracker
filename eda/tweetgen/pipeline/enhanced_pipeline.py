@@ -1,7 +1,13 @@
 """
-Main Pipeline for Tweet Generation
+Enhanced Main Pipeline for Tweet Generation
 
-Orchestrates the complete tweet generation pipeline with checkpointing and resume capabilities.
+Orchestrates the complete enhanced tweet generation pipeline with:
+- Enhanced JSON extraction with schema detection
+- SQLite link hydration
+- Enhanced author enrichment with Twitter scraping
+- Twitter handle validation
+- Tweet generation with validated handles
+- Card generation and integration
 """
 
 import asyncio
@@ -9,13 +15,20 @@ import json
 import sys
 from pathlib import Path
 from typing import Dict, List, Any, Optional
-from .state_manager import StateManager
-from .json_extractor import JSONExtractor
-from .author_enricher import AuthorEnricher
-from .analytics_processor import AnalyticsProcessor
-from .tweet_generator import TweetGenerator
-from .markdown_generator import MarkdownGenerator
-from .config import PipelineConfig
+
+# Add the project root to the path for direct execution
+sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
+
+from eda.tweetgen.pipeline.state_manager import StateManager
+from eda.tweetgen.pipeline.enhanced_json_extractor import EnhancedJSONExtractor
+from eda.tweetgen.pipeline.sqlite_link_hydrator import SQLiteLinkHydrator
+from eda.tweetgen.pipeline.author_enricher import AuthorEnricher
+from eda.tweetgen.pipeline.twitter_validator import TwitterValidator
+from eda.tweetgen.pipeline.analytics_processor import AnalyticsProcessor
+from eda.tweetgen.pipeline.tweet_generator import TweetGenerator
+from eda.tweetgen.pipeline.card_integrator import CardIntegrator
+from eda.tweetgen.pipeline.markdown_generator import MarkdownGenerator
+from eda.tweetgen.pipeline.config import PipelineConfig
 
 
 class TweetGenerationPipeline:
@@ -33,11 +46,14 @@ class TweetGenerationPipeline:
         # Initialize state manager with config
         self.state_manager = StateManager(conference, str(self.config.output_dir))
         
-        # Initialize pipeline components with config
-        self.json_extractor = JSONExtractor(self.state_manager, self.config)
+        # Initialize enhanced pipeline components with config
+        self.json_extractor = EnhancedJSONExtractor(self.state_manager, self.config)
+        self.sqlite_hydrator = SQLiteLinkHydrator(self.state_manager, self.config)
         self.author_enricher = AuthorEnricher(self.state_manager, self.config)
+        self.twitter_validator = TwitterValidator(self.state_manager, self.config)
         self.analytics_processor = AnalyticsProcessor(self.state_manager, self.config)
         self.tweet_generator = TweetGenerator(self.state_manager, self.config)
+        self.card_integrator = CardIntegrator(self.state_manager, self.config)
         self.markdown_generator = MarkdownGenerator(self.state_manager, self.config)
     
     async def run(self, force_restart: bool = False, resume_from: Optional[str] = None) -> Dict[str, Any]:
@@ -95,19 +111,39 @@ class TweetGenerationPipeline:
                 results["papers"] = self.state_manager.load_checkpoint("raw_papers.json")
                 results["authors"] = self.state_manager.load_checkpoint("raw_authors.json")
             
-            # Step 4: Author Enrichment
+            # Step 4: SQLite Link Hydration
+            if not self.state_manager.is_step_completed("sqlite_hydration"):
+                print("\n🔗 Step 4: SQLite Link Hydration")
+                hydrated_authors = self.sqlite_hydrator.hydrate_authors(results["authors"])
+                results["hydrated_authors"] = hydrated_authors
+                self.state_manager.mark_step_complete("sqlite_hydration")
+                print("  ✅ SQLite hydration complete")
+            else:
+                results["hydrated_authors"] = self.state_manager.load_checkpoint("hydrated_authors.json")
+            
+            # Step 5: Author Enrichment (Enhanced with Twitter Scraping)
             if not self.state_manager.is_step_completed("author_enrichment"):
-                print("\n🔍 Step 4: Author Enrichment")
-                enriched_authors = await self.author_enricher.enrich_authors(results["authors"])
+                print("\n🔍 Step 5: Enhanced Author Enrichment")
+                enriched_authors = await self.author_enricher.enrich_authors(results["hydrated_authors"])
                 results["enriched_authors"] = enriched_authors
                 self.state_manager.mark_step_complete("author_enrichment")
                 print("  ✅ Author enrichment complete")
             else:
                 results["enriched_authors"] = self.state_manager.load_checkpoint("enriched_authors.json")
             
-            # Step 5: Analytics Processing
+            # Step 6: Twitter Handle Validation
+            if not self.state_manager.is_step_completed("twitter_validation"):
+                print("\n🐦 Step 6: Twitter Handle Validation")
+                validated_authors = self.twitter_validator.validate_authors(results["enriched_authors"])
+                results["validated_authors"] = validated_authors
+                self.state_manager.mark_step_complete("twitter_validation")
+                print("  ✅ Twitter validation complete")
+            else:
+                results["validated_authors"] = self.state_manager.load_checkpoint("validated_authors.json")
+            
+            # Step 7: Analytics Processing
             if not self.state_manager.is_step_completed("analytics_processing"):
-                print("\n📈 Step 5: Analytics Processing")
+                print("\n📈 Step 7: Analytics Processing")
                 analytics = self.analytics_processor.process_analytics(
                     config["analytics_file"], 
                     results["conference_info"]
@@ -118,12 +154,12 @@ class TweetGenerationPipeline:
             else:
                 results["analytics"] = self.state_manager.load_checkpoint("processed_analytics.json")
             
-            # Step 6: Tweet Generation
+            # Step 8: Enhanced Tweet Generation
             if not self.state_manager.is_step_completed("tweet_generation"):
-                print("\n🐦 Step 6: Tweet Generation")
+                print("\n🐦 Step 8: Enhanced Tweet Generation")
                 tweet_thread = self.tweet_generator.generate_tweet_thread(
                     results["papers"],
-                    results["enriched_authors"],
+                    results["validated_authors"],
                     results["analytics"]
                 )
                 results["tweet_thread"] = tweet_thread
@@ -132,11 +168,28 @@ class TweetGenerationPipeline:
             else:
                 results["tweet_thread"] = self.state_manager.load_checkpoint("tweet_thread.json")
             
-            # Step 7: Markdown Generation
+            # Step 9: Card Generation and Integration
+            if not self.state_manager.is_step_completed("card_generation"):
+                print("\n🎨 Step 9: Card Generation and Integration")
+                card_results = self.card_integrator.generate_cards_for_tweets(
+                    results["papers"],
+                    results["tweet_thread"]
+                )
+                results["card_results"] = card_results
+                results["enhanced_tweet_thread"] = card_results["enhanced_tweet_thread"]
+                self.state_manager.mark_step_complete("card_generation")
+                print("  ✅ Card generation complete")
+            else:
+                results["card_results"] = self.state_manager.load_checkpoint("generated_cards.json")
+                results["enhanced_tweet_thread"] = results["card_results"]["enhanced_tweet_thread"]
+            
+            # Step 10: Markdown Generation
             if not self.state_manager.is_step_completed("markdown_generation"):
-                print("\n📝 Step 7: Markdown Generation")
-                markdown_content = self.markdown_generator.generate_markdown(results["tweet_thread"])
-                summary_content = self.markdown_generator.generate_summary_markdown(results["tweet_thread"])
+                print("\n📝 Step 10: Markdown Generation")
+                # Use enhanced tweet thread with cards
+                final_thread = results.get("enhanced_tweet_thread", results["tweet_thread"])
+                markdown_content = self.markdown_generator.generate_markdown(final_thread)
+                summary_content = self.markdown_generator.generate_summary_markdown(final_thread)
                 results["markdown"] = markdown_content
                 results["summary"] = summary_content
                 self.state_manager.mark_step_complete("markdown_generation")
@@ -147,12 +200,12 @@ class TweetGenerationPipeline:
                 with open(self.state_manager.conference_dir / "summary.md", 'r', encoding='utf-8') as f:
                     results["summary"] = f.read()
             
-            # Step 8: Finalize
+            # Step 11: Finalize
             if not self.state_manager.is_step_completed("finalize"):
-                print("\n🎉 Step 8: Finalize")
+                print("\n🎉 Step 11: Finalize")
                 self._finalize_outputs(results)
                 self.state_manager.mark_step_complete("finalize")
-                print("  ✅ Pipeline complete!")
+                print("  ✅ Enhanced Pipeline complete!")
             
             # Print final summary
             self._print_final_summary(results)
@@ -259,8 +312,8 @@ class TweetGenerationPipeline:
 async def main():
     """Main entry point for running the pipeline."""
     if len(sys.argv) < 2:
-        print("Usage: python -m eda.tweetgen.pipeline.main_pipeline <conference> [--force-restart] [--resume-from <step>]")
-        print("Available conferences:", list(TweetGenerationPipeline("").config_map.keys()))
+        print("Usage: python pipeline/enhanced_pipeline.py <conference> [--force-restart] [--resume-from <step>]")
+        print("Example: python pipeline/enhanced_pipeline.py icml-2025")
         sys.exit(1)
     
     conference = sys.argv[1]
