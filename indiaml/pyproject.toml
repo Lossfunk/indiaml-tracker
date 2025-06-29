@@ -1,5 +1,9 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
-name = "indiaml"
+name = "indiaml_v2"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -17,7 +21,12 @@ dependencies = [
     "pycountry>=24.6.1",
     "pydantic>=2.10.6",
     "pymupdf4llm>=0.0.17",
+    "pytest>=8.4.1",
+    "pytest-cov>=6.2.1",
     "python-dotenv>=1.0.1",
     "reportlab>=4.4.2",
     "sqlalchemy>=2.0.39",
 ]
+
+[tool.hatch.build.targets.wheel]
+packages = ["indiaml_v2"]
