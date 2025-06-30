@@ -129,7 +129,7 @@ class BatchImporter:
         return valid_files
     
     def extract_year_from_filename(self, json_file: Path) -> Optional[int]:
-        """Extract year from filename using regex pattern \d{4}."""
+        """Extract year from filename using regex pattern \\d{4}."""
         filename = json_file.stem  # Get filename without extension
         
         # Look for 4-digit year pattern in filename
@@ -144,6 +144,29 @@ class BatchImporter:
                 self.logger.warning(f"Found year {year} in filename {filename}, but it's outside reasonable range (2000-2030)")
         
         self.logger.warning(f"Could not extract valid year from filename: {filename}")
+        return None
+    
+    def extract_conference_from_filename(self, json_file: Path) -> Optional[str]:
+        """Extract conference name from filename using configured mappings."""
+        filename = json_file.stem.lower()  # Get filename without extension, lowercase
+        
+        # Remove year and common separators to get clean conference name
+        filename_clean = re.sub(r'\d{4}', '', filename).strip('_-. ')
+        
+        # Check against configured filename-to-conference mapping
+        for key, conference in self.config.filename_to_conference.items():
+            if key in filename_clean:
+                self.logger.info(f"Extracted conference '{conference}' from filename: {json_file.stem}")
+                return conference
+        
+        # Try partial matches for robustness
+        for key, conference in self.config.filename_to_conference.items():
+            if key in filename or filename.startswith(key):
+                self.logger.info(f"Extracted conference '{conference}' from filename (partial match): {json_file.stem}")
+                return conference
+        
+        self.logger.warning(f"Could not extract conference name from filename: {json_file.stem}")
+        self.logger.warning(f"Available conference mappings: {list(self.config.filename_to_conference.keys())}")
         return None
     
     def generate_output_paths(self, json_file: Path, output_dir: Optional[str] = None, 
@@ -202,10 +225,16 @@ class BatchImporter:
             file_config.database_url = f"sqlite:///{db_file}"
             file_config.log_directory = log_dir
             
-            # Extract year from filename
+            # Extract year and conference from filename
             conference_year = self.extract_year_from_filename(json_file)
+            conference_name = self.extract_conference_from_filename(json_file)
+            
             if conference_year:
                 self.logger.info(f"Using extracted year {conference_year} for conference data")
+            if conference_name:
+                self.logger.info(f"Using extracted conference '{conference_name}' for conference data")
+            else:
+                self.logger.warning(f"Could not extract conference from filename {json_file.stem}, will use fallback detection")
             
             # Load JSON data
             with open(json_file, 'r', encoding='utf-8') as f:
@@ -214,8 +243,12 @@ class BatchImporter:
             if not isinstance(data, list):
                 raise ValueError("JSON file must contain a list of paper records")
             
-            # Create transformer with file-specific configuration and extracted year
-            transformer = PaperlistsTransformer(config=file_config, conference_year=conference_year)
+            # Create transformer with file-specific configuration, extracted year and conference
+            transformer = PaperlistsTransformer(
+                config=file_config, 
+                conference_year=conference_year,
+                conference_name=conference_name
+            )
             
             # Process the data
             transformer.transform_paperlists_data(data)

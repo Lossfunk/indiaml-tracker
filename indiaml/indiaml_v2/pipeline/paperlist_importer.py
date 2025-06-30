@@ -17,7 +17,7 @@ from indiaml_v2.logging_config import get_logger
 from indiaml_v2.config import ImporterConfig, load_config
 
 class PaperlistsTransformer:
-    def __init__(self, config: ImporterConfig = None, database_url: str = None, conference_year: int = None):
+    def __init__(self, config: ImporterConfig = None, database_url: str = None, conference_year: int = None, conference_name: str = None):
         # Load configuration
         self.config = config or ImporterConfig()
         
@@ -25,8 +25,9 @@ class PaperlistsTransformer:
         if database_url:
             self.config.database_url = database_url
         
-        # Store externally provided conference year
+        # Store externally provided conference year and name
         self.conference_year = conference_year
+        self.conference_name = conference_name
         
         # Initialize comprehensive logging
         self.logger = get_logger("paperlist_importer", self.config.log_directory)
@@ -957,7 +958,12 @@ class PaperlistsTransformer:
         return 2025
     
     def extract_conference_name(self, paper_data: Dict) -> str:
-        """Extract conference name from paper data"""
+        """Extract conference name from paper data - prioritize externally provided name"""
+        # If conference name was provided externally (from filename), use that
+        if self.conference_name is not None:
+            return self.conference_name
+        
+        # Fallback to existing bibtex parsing logic
         bibtex = paper_data.get('bibtex', '')
         site = paper_data.get('site', '')
         
@@ -967,7 +973,7 @@ class PaperlistsTransformer:
             return "NeurIPS"
         elif 'iclr' in bibtex.lower():
             return "ICLR"
-        return "ICML"
+        return "ICML"  # Default fallback
     
     def classify_track(self, track_name: str) -> Tuple[str, str]:
         """Classify track type and generate full name using configuration"""

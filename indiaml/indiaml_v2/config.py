@@ -100,6 +100,52 @@ class ImporterConfig(BaseModel):
         "demo": "Demonstration",
         "poster_session": "Poster Session"
     }
+    
+    # Filename to conference mapping for batch processing
+    filename_to_conference: Dict[str, str] = {
+        # AI/ML Core Conferences
+        "nips": "NeurIPS",
+        "neurips": "NeurIPS",
+        "icml": "ICML",
+        "iclr": "ICLR",
+        "aaai": "AAAI",
+        "ijcai": "IJCAI",
+        "aistats": "AISTATS",
+        "acml": "ACML",
+        "automl": "AutoML",
+        "uai": "UAI",
+        
+        # NLP Conferences
+        "acl": "ACL",
+        "emnlp": "EMNLP",
+        "naacl": "NAACL",
+        "coling": "COLING",
+        "colm": "COLM",
+        
+        # Computer Vision
+        "cvpr": "CVPR",
+        "iccv": "ICCV",
+        "eccv": "ECCV",
+        "wacv": "WACV",
+        
+        # Graphics
+        "siggraph": "SIGGRAPH",
+        "siggraphasia": "SIGGRAPHASIA",
+        
+        # Robotics
+        "icra": "ICRA",
+        "iros": "IROS",
+        "rss": "RSS",
+        "corl": "CORL",
+        
+        # Data Mining/Web
+        "kdd": "KDD",
+        "www": "WWW",
+        "acmmm": "ACMMM",
+        
+        # Theory
+        "colt": "COLT"
+    }
 
 
 def load_config(config_path: Optional[str] = None) -> ImporterConfig:
