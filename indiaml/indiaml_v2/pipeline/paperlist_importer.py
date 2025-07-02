@@ -8,6 +8,8 @@ import json
 import re
 import random
 import time
+import sys
+import os
 from typing import Dict, List, Optional, Tuple
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine, func, text
@@ -15,6 +17,10 @@ from indiaml_v2.models.models import *  # Import all the SQLAlchemy models
 from indiaml_v2.models.models import PaperAuthorAffiliation  # Explicitly import the new model
 from indiaml_v2.logging_config import get_logger
 from indiaml_v2.config import ImporterConfig, load_config
+
+# Import rating validator from the project root
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+from indiaml_v2.pipeline.rating_validator import validate_and_normalize_rating, validate_confidence
 
 class PaperlistsTransformer:
     def __init__(self, config: ImporterConfig = None, database_url: str = None, conference_year: int = None, conference_name: str = None):
@@ -237,6 +243,13 @@ class PaperlistsTransformer:
             print(f"Failed to create track for paper {paper_id}")
             return None
         
+        # Handle author_num being None - calculate from actual authors if needed
+        author_num = data.get('author_num')
+        if author_num is None:
+            # Calculate from actual author field
+            authors = self.parse_semicolon_field(data.get('author', ''))
+            author_num = len(authors)
+        
         return Paper(
             id=paper_id,
             title=data.get('title', ''),
@@ -252,7 +265,7 @@ class PaperlistsTransformer:
             pdf_url=data.get('pdf'),
             github_url=data.get('github'),
             project_url=data.get('project'),
-            author_count=data.get('author_num', 0),
+            author_count=author_num or 0,
             pdf_size=data.get('pdf_size', 0)
         )
     
@@ -787,7 +800,7 @@ class PaperlistsTransformer:
             return self.session.query(Keyword).filter_by(normalized_keyword=normalized).first()
     
     def process_reviews_with_checks(self, paper: Paper, data: Dict):
-        """Process reviews with existence checks"""
+        """Process reviews with existence checks and rating normalization"""
         
         try:
             # Individual review scores
@@ -803,14 +816,44 @@ class PaperlistsTransformer:
             wc_questions = self.parse_numeric_field(data.get('wc_questions', ''))
             wc_reviews = self.parse_numeric_field(data.get('wc_review', ''))
             
-            # Create individual review records
+            # Create individual review records with rating validation
             for i in range(max(len(ratings), len(confidences), len(recommendations))):
+                reviewer_id = self.safe_get(reviewers, i)
+                
+                # Validate and normalize ratings and confidence
+                original_rating = self.safe_get(ratings, i)
+                original_confidence = self.safe_get(confidences, i)
+                original_recommendation = self.safe_get(recommendations, i)
+                
+                # Apply validation and normalization
+                validated_rating = validate_and_normalize_rating(
+                    original_rating, 
+                    paper_id=paper.id, 
+                    reviewer_id=reviewer_id,
+                    logger=self.logger.logger
+                )
+                
+                validated_confidence = validate_confidence(
+                    original_confidence,
+                    paper_id=paper.id,
+                    reviewer_id=reviewer_id,
+                    logger=self.logger.logger
+                )
+                
+                # For recommendations, apply same normalization as ratings (assuming same scale)
+                validated_recommendation = validate_and_normalize_rating(
+                    original_recommendation,
+                    paper_id=paper.id,
+                    reviewer_id=reviewer_id,
+                    logger=self.logger.logger
+                ) if original_recommendation is not None else None
+                
                 review = Review(
                     paper=paper,
-                    reviewer_id=self.safe_get(reviewers, i),
-                    rating=self.safe_get(ratings, i),
-                    confidence=self.safe_get(confidences, i),
-                    recommendation=self.safe_get(recommendations, i),
+                    reviewer_id=reviewer_id,
+                    rating=validated_rating,
+                    confidence=validated_confidence,
+                    recommendation=validated_recommendation,
                     word_count_summary=self.safe_get(wc_summaries, i),
                     word_count_strengths_weaknesses=self.safe_get(wc_strengths, i),
                     word_count_questions=self.safe_get(wc_questions, i),
@@ -824,7 +867,8 @@ class PaperlistsTransformer:
             self.create_review_statistics_with_checks(paper, data)
             
         except Exception as e:
-            print(f"Error processing reviews for paper {paper.id}: {e}")
+            self.logger.error(f"Error processing reviews for paper {paper.id}: {e}")
+            raise  # Re-raise to trigger rollback
     
     def create_review_statistics_with_checks(self, paper: Paper, data: Dict):
         """Create review statistics with existence checks"""
@@ -1069,33 +1113,51 @@ class PaperlistsTransformer:
     def _verify_paper_data(self, original: Dict, db_paper: Paper, results: Dict) -> bool:
         """Verify individual paper data matches between original and database"""
         mismatches = []
+        paper_id = db_paper.id
+        
+        # Handle author_num being None in original data - calculate from authors if needed
+        original_author_num = original.get('author_num')
+        if original_author_num is None:
+            # Calculate from actual author field like we do during import
+            authors = self.parse_semicolon_field(original.get('author', ''))
+            original_author_num = len(authors)
         
         # Check basic paper fields
         checks = [
             ('title', original.get('title', ''), db_paper.title),
             ('status', original.get('status'), db_paper.status),
             ('primary_area', original.get('primary_area'), db_paper.primary_area),
-            ('author_count', original.get('author_num', 0), db_paper.author_count)
+            ('author_count', original_author_num or 0, db_paper.author_count)
         ]
         
         for field_name, original_value, db_value in checks:
-            if str(original_value).strip() != str(db_value or '').strip():
-                mismatches.append({
+            # Fix the comparison logic to handle None and 0 correctly
+            original_str = str(original_value if original_value is not None else '').strip()
+            db_str = str(db_value if db_value is not None else '').strip()
+            
+            if original_str != db_str:
+                mismatch = {
                     'field': field_name,
                     'original': original_value,
                     'database': db_value
-                })
+                }
+                mismatches.append(mismatch)
+                self.logger.error(f"Field mismatch in {field_name}: expected '{original_value}', got '{db_value}'", 
+                                paper_id=paper_id, field=field_name, expected=original_value, actual=db_value)
         
         # Check author count by querying relationships
         actual_author_count = self.session.query(PaperAuthor).filter_by(paper=db_paper).count()
         expected_author_count = len(self.parse_semicolon_field(original.get('author', '')))
         
         if actual_author_count != expected_author_count:
-            mismatches.append({
+            mismatch = {
                 'field': 'actual_author_count',
                 'original': expected_author_count,
                 'database': actual_author_count
-            })
+            }
+            mismatches.append(mismatch)
+            self.logger.error(f"Author count mismatch: expected {expected_author_count}, got {actual_author_count}", 
+                            paper_id=paper_id, expected_authors=expected_author_count, actual_authors=actual_author_count)
         
         # Check keywords
         original_keywords = set(k.strip().lower() for k in original.get('keywords', '').split(';') if k.strip())
@@ -1103,17 +1165,86 @@ class PaperlistsTransformer:
                          self.session.query(PaperKeyword).filter_by(paper=db_paper).all())
         
         if original_keywords != db_keywords:
-            mismatches.append({
+            missing_keywords = original_keywords - db_keywords
+            extra_keywords = db_keywords - original_keywords
+            
+            mismatch = {
                 'field': 'keywords',
                 'original': len(original_keywords),
-                'database': len(db_keywords)
-            })
+                'database': len(db_keywords),
+                'missing_keywords': list(missing_keywords),
+                'extra_keywords': list(extra_keywords)
+            }
+            mismatches.append(mismatch)
+            
+            self.logger.error(f"Keywords mismatch: expected {len(original_keywords)}, got {len(db_keywords)}", 
+                            paper_id=paper_id, 
+                            expected_count=len(original_keywords), 
+                            actual_count=len(db_keywords),
+                            missing_keywords=list(missing_keywords),
+                            extra_keywords=list(extra_keywords))
+        
+        # Check reviews existence
+        review_count = self.session.query(Review).filter_by(paper=db_paper).count()
+        original_ratings = self.parse_numeric_field(original.get('rating', ''))
+        expected_review_count = len(original_ratings)
+        
+        if review_count != expected_review_count:
+            mismatch = {
+                'field': 'review_count',
+                'original': expected_review_count,
+                'database': review_count
+            }
+            mismatches.append(mismatch)
+            self.logger.error(f"Review count mismatch: expected {expected_review_count}, got {review_count}", 
+                            paper_id=paper_id, expected_reviews=expected_review_count, actual_reviews=review_count)
+        
+        # Check citations existence
+        citation_exists = self.session.query(Citation).filter_by(paper=db_paper).first() is not None
+        original_has_citations = original.get('gs_citation', -1) != -1
+        
+        if original_has_citations and not citation_exists:
+            mismatch = {
+                'field': 'citations_missing',
+                'original': 'citations_expected',
+                'database': 'no_citations'
+            }
+            mismatches.append(mismatch)
+            self.logger.error(f"Citations missing: expected citation data but none found in database", 
+                            paper_id=paper_id, original_citations=original.get('gs_citation', -1))
+        
+        # Check track and conference
+        if db_paper.track:
+            original_track = original.get('track', 'main')
+            if db_paper.track.short_name != original_track:
+                mismatch = {
+                    'field': 'track',
+                    'original': original_track,
+                    'database': db_paper.track.short_name
+                }
+                mismatches.append(mismatch)
+                self.logger.error(f"Track mismatch: expected '{original_track}', got '{db_paper.track.short_name}'", 
+                                paper_id=paper_id, expected_track=original_track, actual_track=db_paper.track.short_name)
+        else:
+            mismatch = {
+                'field': 'track_missing',
+                'original': original.get('track', 'main'),
+                'database': 'no_track'
+            }
+            mismatches.append(mismatch)
+            self.logger.error(f"Track missing: paper has no track assigned", 
+                            paper_id=paper_id, expected_track=original.get('track', 'main'))
         
         if mismatches:
             results['data_mismatches'].append({
                 'paper_id': db_paper.id,
                 'mismatches': mismatches
             })
+            
+            # Log summary of all mismatches for this paper
+            mismatch_fields = [m['field'] for m in mismatches]
+            self.logger.error(f"Paper verification failed with {len(mismatches)} mismatches in fields: {', '.join(mismatch_fields)}", 
+                            paper_id=paper_id, mismatch_count=len(mismatches), failed_fields=mismatch_fields)
             return False
         
         return True

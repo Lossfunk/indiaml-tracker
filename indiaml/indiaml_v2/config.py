@@ -36,6 +36,15 @@ class ImporterConfig(BaseModel):
     max_author_id_attempts: int = 1000
     top_countries_limit: int = 5
     
+    # Database management settings
+    enable_db_flush_between_conferences: bool = True
+    inter_conference_delay_seconds: float = 3.0
+    force_restart_on_init: bool = False
+    
+    # Cleanup settings
+    cleanup_logs_on_restart: bool = True
+    cleanup_databases_on_restart: bool = True
+    
     # Comprehensive conference mappings
     conference_full_names: Dict[str, str] = {
         # AI/ML Core Conferences

@@ -23,11 +23,13 @@ import argparse
 import json
 import re
 import time
+import shutil
 from pathlib import Path
 from typing import List, Dict, Optional, Tuple
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import logging
 from datetime import datetime
+from sqlalchemy import create_engine, text
 
 # Add the parent directory to the path to import our modules
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -39,9 +41,10 @@ from pipeline.paperlist_importer import PaperlistsTransformer
 class BatchImporter:
     """Batch processor for multiple JSON paperlist files."""
     
-    def __init__(self, config: ImporterConfig = None, shared_database: Optional[str] = None):
+    def __init__(self, config: ImporterConfig = None, shared_database: Optional[str] = None, force_restart: bool = False):
         self.config = config or ImporterConfig()
         self.shared_database = shared_database
+        self.force_restart = force_restart
         self.setup_logging()
         self.stats = {
             'files_found': 0,
@@ -50,6 +53,10 @@ class BatchImporter:
             'total_papers': 0,
             'start_time': time.time()
         }
+        
+        # Handle force restart if requested
+        if self.force_restart:
+            self.perform_force_restart()
     
     def setup_logging(self):
         """Setup main batch processing logger."""
@@ -88,6 +95,126 @@ class BatchImporter:
         self.logger.addHandler(console_handler)
         
         self.logger.info(f"Batch importer started. Logs: {log_file}")
+    
+    def perform_force_restart(self):
+        """Perform force restart by cleaning up existing databases and logs."""
+        self.logger.info("🔄 Force restart requested - cleaning up existing data...")
+        
+        try:
+            # Clean up databases if configured
+            if self.config.cleanup_databases_on_restart:
+                self._cleanup_databases()
+            
+            # Clean up logs if configured
+            if self.config.cleanup_logs_on_restart:
+                self._cleanup_logs()
+                
+            self.logger.info("✅ Force restart cleanup completed successfully")
+            
+        except Exception as e:
+            self.logger.error(f"❌ Error during force restart cleanup: {e}")
+            raise
+    
+    def _cleanup_databases(self):
+        """Clean up existing database files."""
+        db_patterns = ["*.db", "*.sqlite", "*.sqlite3"]
+        cleaned_count = 0
+        
+        # Clean up shared database if specified
+        if self.shared_database:
+            db_path = Path(self.shared_database)
+            if db_path.exists():
+                try:
+                    db_path.unlink()
+                    self.logger.info(f"🗑️  Deleted shared database: {db_path}")
+                    cleaned_count += 1
+                except Exception as e:
+                    self.logger.warning(f"Failed to delete {db_path}: {e}")
+        
+        # Clean up databases in common locations
+        common_db_locations = [
+            Path.cwd(),
+            Path(self.config.log_directory).parent if hasattr(self.config, 'log_directory') else Path.cwd(),
+            Path("data"),
+            Path("data_v2"),
+            Path("processed")
+        ]
+        
+        for location in common_db_locations:
+            if location.exists() and location.is_dir():
+                for pattern in db_patterns:
+                    for db_file in location.glob(pattern):
+                        try:
+                            db_file.unlink()
+                            self.logger.info(f"🗑️  Deleted database: {db_file}")
+                            cleaned_count += 1
+                        except Exception as e:
+                            self.logger.warning(f"Failed to delete {db_file}: {e}")
+        
+        self.logger.info(f"🗑️  Cleaned up {cleaned_count} database files")
+    
+    def _cleanup_logs(self):
+        """Clean up existing log directories."""
+        log_locations = [
+            Path(self.config.log_directory),
+            Path("logs"),
+            Path("custom_logs"),
+            Path("processed/logs")
+        ]
+        
+        cleaned_count = 0
+        for log_dir in log_locations:
+            if log_dir.exists() and log_dir.is_dir():
+                try:
+                    shutil.rmtree(log_dir)
+                    self.logger.info(f"🗑️  Deleted log directory: {log_dir}")
+                    cleaned_count += 1
+                    # Recreate the main log directory
+                    if str(log_dir) == self.config.log_directory:
+                        log_dir.mkdir(exist_ok=True)
+                except Exception as e:
+                    self.logger.warning(f"Failed to delete log directory {log_dir}: {e}")
+        
+        self.logger.info(f"🗑️  Cleaned up {cleaned_count} log directories")
+    
+    def flush_database(self, db_file: str):
+        """Flush and optimize the database between conference processing."""
+        if not self.config.enable_db_flush_between_conferences:
+            return
+            
+        self.logger.info(f"🔄 Flushing database: {db_file}")
+        flush_start_time = time.time()
+        
+        try:
+            # Create engine for database operations
+            engine = create_engine(f"sqlite:///{db_file}", echo=False)
+            
+            with engine.connect() as conn:
+                # Execute VACUUM to optimize database
+                conn.execute(text("VACUUM"))
+                
+                # Execute ANALYZE to update statistics
+                conn.execute(text("ANALYZE"))
+                
+                # Commit changes
+                conn.commit()
+            
+            # Close engine
+            engine.dispose()
+            
+            flush_duration = time.time() - flush_start_time
+            self.logger.info(f"✅ Database flushed successfully in {flush_duration:.2f}s")
+            
+        except Exception as e:
+            flush_duration = time.time() - flush_start_time
+            self.logger.warning(f"⚠️  Database flush failed after {flush_duration:.2f}s: {e}")
+    
+    def wait_between_conferences(self):
+        """Wait between conference processing if configured."""
+        if self.config.inter_conference_delay_seconds > 0:
+            self.logger.info(f"⏳ Waiting {self.config.inter_conference_delay_seconds}s before next conference...")
+            time.sleep(self.config.inter_conference_delay_seconds)
+            self.logger.info("✅ Wait period completed")
     
     def find_json_files(self, directory: str) -> List[Path]:
         """Recursively find all JSON files in the directory."""
@@ -137,11 +264,11 @@ class BatchImporter:
         if year_match:
             year = int(year_match.group())
             # Validate that it's a reasonable conference year (e.g., 2000-2030)
-            if 2000 <= year <= 2030:
+            if 1900 <= year <= 2030:
                 self.logger.info(f"Extracted year {year} from filename: {filename}")
                 return year
             else:
-                self.logger.warning(f"Found year {year} in filename {filename}, but it's outside reasonable range (2000-2030)")
+                self.logger.warning(f"Found year {year} in filename {filename}, but it's outside reasonable range (1900-2030)")
         
         self.logger.warning(f"Could not extract valid year from filename: {filename}")
         return None
@@ -269,7 +396,7 @@ class BatchImporter:
         return result
     
     def process_files_sequential(self, json_files: List[Path], output_dir: Optional[str] = None) -> List[Dict]:
-        """Process files sequentially (safer for large files)."""
+        """Process files sequentially with database flushing and wait periods between conferences."""
         results = []
         
         for i, json_file in enumerate(json_files, 1):
@@ -282,6 +409,11 @@ class BatchImporter:
             if result['success']:
                 self.stats['files_processed'] += 1
                 self.stats['total_papers'] += result['papers_processed']
+                
+                # Flush database after successful processing
+                if result.get('database_file'):
+                    self.flush_database(result['database_file'])
+                
             else:
                 self.stats['files_failed'] += 1
             
@@ -293,6 +425,10 @@ class BatchImporter:
             self.logger.info(f"Progress: {i}/{len(json_files)} files, "
                            f"Elapsed: {elapsed:.1f}s, "
                            f"Estimated remaining: {remaining:.1f}s")
+            
+            # Wait between conferences if not the last file
+            if i < len(json_files):
+                self.wait_between_conferences()
         
         return results
     
@@ -438,8 +574,14 @@ Examples:
   # Process in parallel (for smaller files)
   python batch_importer.py /path/to/json/files --parallel --max-workers 4
   
-  # Custom configuration
-  python batch_importer.py /path/to/json/files --config custom_config.json
+  # Force restart - delete all existing data and start fresh
+  python batch_importer.py /path/to/json/files --force-restart
+  
+  # Custom inter-conference delay and disable database flushing
+  python batch_importer.py /path/to/json/files --inter-conference-delay 5.0 --disable-db-flush
+  
+  # Custom configuration with force restart
+  python batch_importer.py /path/to/json/files --config custom_config.json --force-restart
         """
     )
     
@@ -483,6 +625,25 @@ Examples:
         help="Set logging level (default: INFO)"
     )
     
+    parser.add_argument(
+        "--force-restart", "-f",
+        action="store_true",
+        help="Delete all existing databases and logs before starting (use with caution)"
+    )
+    
+    parser.add_argument(
+        "--inter-conference-delay",
+        type=float,
+        default=None,
+        help="Seconds to wait between processing conferences (default: from config, 3.0s)"
+    )
+    
+    parser.add_argument(
+        "--disable-db-flush",
+        action="store_true",
+        help="Disable database flushing between conferences"
+    )
+    
     args = parser.parse_args()
     
     # Load configuration
@@ -499,12 +660,27 @@ Examples:
             print(f"Error loading config file: {e}")
             sys.exit(1)
     
+    # Apply CLI argument overrides to config
+    if args.inter_conference_delay is not None:
+        config.inter_conference_delay_seconds = args.inter_conference_delay
+    
+    if args.disable_db_flush:
+        config.enable_db_flush_between_conferences = False
+    
     # Set log level
     logging.getLogger().setLevel(getattr(logging, args.log_level))
     
+    # Show configuration summary
+    print(f"🔧 Configuration Summary:")
+    print(f"  Database flushing: {'enabled' if config.enable_db_flush_between_conferences else 'disabled'}")
+    print(f"  Inter-conference delay: {config.inter_conference_delay_seconds}s")
+    print(f"  Force restart: {'yes' if args.force_restart else 'no'}")
+    print(f"  Shared database: {args.database or 'auto-generated'}")
+    print(f"  Log level: {args.log_level}")
+    
     # Create and run batch importer
     try:
-        batch_importer = BatchImporter(config, shared_database=args.database)
+        batch_importer = BatchImporter(config, shared_database=args.database, force_restart=args.force_restart)
         results = batch_importer.run(
             directory=args.directory,
             output_dir=args.output,
