@@ -1,4 +1,0 @@
-requests>=2.31.0
-pillow>=10.0.0
-cairosvg>=2.7.0
-reportlab>=4.0.0
