@@ -1,0 +1,670 @@
+{
+  "conference": "NeurIPS 2016",
+  "focus_country": "India",
+  "total_papers": 14,
+  "generated_at": "2025-07-06T10:39:19.870488",
+  "config": {
+    "first_author_weight": 3.0,
+    "last_author_weight": 2.0,
+    "middle_author_weight": 1.0,
+    "status_weights": {
+      "oral": 10.0,
+      "spotlight": 7.5,
+      "poster": 5.0,
+      "unknown": 1.0
+    },
+    "output_format": "json",
+    "include_review_details": true,
+    "include_citation_data": true
+  },
+  "papers": [
+    {
+      "paper_id": "7016",
+      "title": "Efficient and Robust Spiking Neural Circuit for Navigation Inspired by Echolocating Bats",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We demonstrate a spiking neural circuit for azimuth angle detection  inspired by the  echolocation circuits of the Horseshoe bat  Rhinolophus ferrumequinum and utilize it to devise a  model for  navigation and target tracking, capturing several key aspects of information transmission in biology. Our network,  using only  a simple local-information based sensor implementing the cardioid angular gain function, operates at biological  spike rate of  10 Hz.  The network  tracks large angular targets (60 degrees) within 1 sec with a 10%  RMS error. We study the navigational ability of our model for foraging and target localization tasks in  a forest of obstacles  and show that our network requires less than 200X   spike-triggered decisions, while suffering only a 1% loss in performance compared to a  proportional-integral-derivative controller, in the presence of 50% additive noise. Superior performance can be obtained at  a higher average spike rate of  100 Hz  and  1000 Hz, but even the accelerated networks requires 20X and 10X lesser decisions respectively, demonstrating the superior computational efficiency of bio-inspired information processing systems.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2016/poster/7016",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2016/file/a86c450b76fb8c371afead6410d55534-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "pulkit_tandon",
+        "name": "Pulkit Tandon",
+        "name_site": "Bipin Rajendran, Pulkit Tandon, Yash H Malviya",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 7,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "7023",
+      "title": "Learning and Forecasting Opinion Dynamics in Social Networks",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Social media and social networking sites have become a global pinboard for exposition and discussion of news, topics, and ideas, where social media users often update their opinions about a particular topic by learning from the opinions shared by their friends. In this context, can we learn a data-driven model of opinion dynamics that is able to accurately forecast users' opinions? In this paper, we introduce SLANT, a probabilistic modeling framework of opinion dynamics, which represents users' opinions over time by means of marked jump  diffusion stochastic differential equations, and allows for efficient model simulation and parameter estimation from historical fine grained event data. We then leverage our framework to derive a set of efficient predictive formulas for opinion forecasting and identify conditions under which opinions converge to a steady state. Experiments on data gathered from Twitter show that our model provides a good fit to the data and our formulas achieve more accurate forecasting than alternatives.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2016/poster/7023",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2016/file/f340f1b1f65b6df5b5e3f94d95b11daf-Paper.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "abir_de",
+        "name": "Abir De",
+        "name_site": "Abir De, Isabel Valera, Niloy Ganguly, Sourangshu Bhattacharya, Manuel Gomez Rodriguez",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Kharagpur (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 137,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "7068",
+      "title": "Optimal Learning for Multi-pass Stochastic Gradient Methods",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We analyze the learning  properties of the stochastic gradient method when multiple passes over the data and mini-batches are allowed. In particular, we consider the square loss and show that    for  a universal step-size choice, the number of passes acts as a regularization parameter, and optimal finite sample bounds  can be achieved by early-stopping. Moreover, we show that larger step-sizes are allowed when considering mini-batches. Our analysis is based on  a unifying approach, encompassing both batch and stochastic gradient methods as special cases.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2016/poster/7068",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2016/file/fe40fb944ee700392ed51bfe84dd4e3d-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "junhong_lin",
+        "name": "Junhong Lin",
+        "name_site": "Junhong Lin, Lorenzo Rosasco",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology, Madras (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 44,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "7134",
+      "title": "Mixed Linear Regression with Multiple Components",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In this paper, we study the mixed linear regression (MLR) problem, where the goal is to recover multiple underlying linear models from their unlabeled linear measurements. We propose a non-convex objective function which we show is {\\em locally strongly convex} in the neighborhood of the ground truth. We use a tensor method for initialization so that the initial models are in the local strong convexity region. We then employ general convex optimization algorithms to minimize the objective function. To the best of our knowledge, our approach provides first exact recovery guarantees for the MLR problem with $K \\geq 2$ components. Moreover,  our method has near-optimal computational complexity $\\tilde O (Nd)$ as well as near-optimal sample complexity $\\tilde O (d)$ for {\\em constant} $K$. Furthermore, we show that our non-convex formulation can be extended to solving the {\\em subspace clustering} problem as well. In particular, when initialized within a small constant distance to the true subspaces, our method converges to the global optima (and recovers true subspaces) in time {\\em linear} in the number of points. Furthermore, our empirical results indicate that even with random initialization, our approach converges to the global optima in linear time, providing speed-up of up to two orders of magnitude.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2016/poster/7134",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2016/file/8248a99e81e752cb9b41da3fc43fbe7f-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "kai_zhong_4",
+        "name": "Kai Zhong",
+        "name_site": "Kai Zhong, Prateek Jain, Inderjit Dhillon",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "University of Texas at Austin (Unknown),Microsoft (India)",
+        "countries": [
+          "Unknown",
+          "India"
+        ],
+        "country_codes": [
+          "UN",
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 80,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "7394",
+      "title": "Deep Neural Networks with Inexact Matching for Person Re-Identification",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Person Re-Identification is the task of matching images of a person across multiple camera views. Almost all prior approaches address this challenge by attempting to learn the possible transformations that relate the different views of a person from a training corpora. Then, they utilize these transformation patterns for matching a query image to those in a gallery image bank at test time. This necessitates learning good feature representations of the images and having a robust feature matching technique. Deep learning approaches, such as Convolutional Neural Networks (CNN), simultaneously do both and have shown great promise recently. In this work, we propose two CNN-based architectures for Person Re-Identification. In the first, given a pair of images, we extract feature maps from these images via multiple stages of convolution and pooling. A novel inexact matching technique then matches pixels in the first representation with those of the second. Furthermore, we search across a wider region in the second representation for matching. Our novel matching technique allows us to tackle the challenges posed by large viewpoint variations, illumination changes or partial occlusions. Our approach shows a promising performance and requires only about half the parameters as a current state-of-the-art technique. Nonetheless, it also suffers from false matches at times. In order to mitigate this issue, we propose a fused architecture that combines our inexact matching pipeline with a state-of-the-art exact matching technique. We observe substantial gains with the fused model over the current state-of-the-art on multiple challenging datasets of varying sizes, with gains of up to about 21%.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2016/poster/7394",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2016/file/e56b06c51e1049195d7b26d043c478a0-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "arulkumar_subramaniam",
+        "name": "Arulkumar Subramaniam",
+        "name_site": "Arulkumar Subramaniam, Moitreya Chatterjee, Anurag Mittal",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Madras (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 129,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "7016",
+      "title": "Efficient and Robust Spiking Neural Circuit for Navigation Inspired by Echolocating Bats",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We demonstrate a spiking neural circuit for azimuth angle detection  inspired by the  echolocation circuits of the Horseshoe bat  Rhinolophus ferrumequinum and utilize it to devise a  model for  navigation and target tracking, capturing several key aspects of information transmission in biology. Our network,  using only  a simple local-information based sensor implementing the cardioid angular gain function, operates at biological  spike rate of  10 Hz.  The network  tracks large angular targets (60 degrees) within 1 sec with a 10%  RMS error. We study the navigational ability of our model for foraging and target localization tasks in  a forest of obstacles  and show that our network requires less than 200X   spike-triggered decisions, while suffering only a 1% loss in performance compared to a  proportional-integral-derivative controller, in the presence of 50% additive noise. Superior performance can be obtained at  a higher average spike rate of  100 Hz  and  1000 Hz, but even the accelerated networks requires 20X and 10X lesser decisions respectively, demonstrating the superior computational efficiency of bio-inspired information processing systems.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2016/poster/7016",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2016/file/a86c450b76fb8c371afead6410d55534-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "bipin_rajendran",
+        "name": "Bipin Rajendran",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "New Jersey Institute of Technology (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 7,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "7068",
+      "title": "Optimal Learning for Multi-pass Stochastic Gradient Methods",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We analyze the learning  properties of the stochastic gradient method when multiple passes over the data and mini-batches are allowed. In particular, we consider the square loss and show that    for  a universal step-size choice, the number of passes acts as a regularization parameter, and optimal finite sample bounds  can be achieved by early-stopping. Moreover, we show that larger step-sizes are allowed when considering mini-batches. Our analysis is based on  a unifying approach, encompassing both batch and stochastic gradient methods as special cases.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2016/poster/7068",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2016/file/fe40fb944ee700392ed51bfe84dd4e3d-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "lorenzo_rosasco_11",
+        "name": "Lorenzo Rosasco",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "University of Genoa (Unknown),Indian Institute of Technology, Madras (India)",
+        "countries": [
+          "Unknown",
+          "India"
+        ],
+        "country_codes": [
+          "UN",
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 44,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "7390",
+      "title": "Provable Efficient Online Matrix Completion via Non-convex Stochastic Gradient Descent",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Matrix completion, where we wish to recover a low rank matrix by observing a few entries from it, is a widely studied problem in both theory and practice with wide applications. Most of the provable algorithms so far on this problem have been restricted to the offline setting where they provide an estimate of the unknown matrix using all observations simultaneously. However, in many applications, the online version, where we observe one entry at a time and dynamically update our estimate, is more appealing. While existing algorithms are efficient for the offline setting, they could be highly inefficient for the online setting.  In this paper, we propose the first provable, efficient online algorithm for matrix completion. Our algorithm starts from an initial estimate of the matrix and then performs non-convex stochastic gradient descent (SGD). After every observation, it performs a fast update involving only one row of two tall matrices, giving near linear total runtime. Our algorithm can be naturally used in the offline setting as well, where it gives competitive sample complexity and runtime to state of the art algorithms. Our proofs introduce a general framework to show that SGD updates tend to stay away from saddle surfaces and could be of broader interests to other non-convex problems.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2016/poster/7390",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2016/file/38651c4450f87348fcbe1f992746a954-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "praneeth_netrapalli_3",
+        "name": "Praneeth Netrapalli",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 122,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "7394",
+      "title": "Deep Neural Networks with Inexact Matching for Person Re-Identification",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Person Re-Identification is the task of matching images of a person across multiple camera views. Almost all prior approaches address this challenge by attempting to learn the possible transformations that relate the different views of a person from a training corpora. Then, they utilize these transformation patterns for matching a query image to those in a gallery image bank at test time. This necessitates learning good feature representations of the images and having a robust feature matching technique. Deep learning approaches, such as Convolutional Neural Networks (CNN), simultaneously do both and have shown great promise recently. In this work, we propose two CNN-based architectures for Person Re-Identification. In the first, given a pair of images, we extract feature maps from these images via multiple stages of convolution and pooling. A novel inexact matching technique then matches pixels in the first representation with those of the second. Furthermore, we search across a wider region in the second representation for matching. Our novel matching technique allows us to tackle the challenges posed by large viewpoint variations, illumination changes or partial occlusions. Our approach shows a promising performance and requires only about half the parameters as a current state-of-the-art technique. Nonetheless, it also suffers from false matches at times. In order to mitigate this issue, we propose a fused architecture that combines our inexact matching pipeline with a state-of-the-art exact matching technique. We observe substantial gains with the fused model over the current state-of-the-art on multiple challenging datasets of varying sizes, with gains of up to about 21%.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2016/poster/7394",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2016/file/e56b06c51e1049195d7b26d043c478a0-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "anurag_mittal",
+        "name": "Anurag Mittal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Madras (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 129,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "7016",
+      "title": "Efficient and Robust Spiking Neural Circuit for Navigation Inspired by Echolocating Bats",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We demonstrate a spiking neural circuit for azimuth angle detection  inspired by the  echolocation circuits of the Horseshoe bat  Rhinolophus ferrumequinum and utilize it to devise a  model for  navigation and target tracking, capturing several key aspects of information transmission in biology. Our network,  using only  a simple local-information based sensor implementing the cardioid angular gain function, operates at biological  spike rate of  10 Hz.  The network  tracks large angular targets (60 degrees) within 1 sec with a 10%  RMS error. We study the navigational ability of our model for foraging and target localization tasks in  a forest of obstacles  and show that our network requires less than 200X   spike-triggered decisions, while suffering only a 1% loss in performance compared to a  proportional-integral-derivative controller, in the presence of 50% additive noise. Superior performance can be obtained at  a higher average spike rate of  100 Hz  and  1000 Hz, but even the accelerated networks requires 20X and 10X lesser decisions respectively, demonstrating the superior computational efficiency of bio-inspired information processing systems.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2016/poster/7016",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2016/file/a86c450b76fb8c371afead6410d55534-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "yash_h_malviya",
+        "name": "Yash H Malviya",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 7,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "7023",
+      "title": "Learning and Forecasting Opinion Dynamics in Social Networks",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Social media and social networking sites have become a global pinboard for exposition and discussion of news, topics, and ideas, where social media users often update their opinions about a particular topic by learning from the opinions shared by their friends. In this context, can we learn a data-driven model of opinion dynamics that is able to accurately forecast users' opinions? In this paper, we introduce SLANT, a probabilistic modeling framework of opinion dynamics, which represents users' opinions over time by means of marked jump  diffusion stochastic differential equations, and allows for efficient model simulation and parameter estimation from historical fine grained event data. We then leverage our framework to derive a set of efficient predictive formulas for opinion forecasting and identify conditions under which opinions converge to a steady state. Experiments on data gathered from Twitter show that our model provides a good fit to the data and our formulas achieve more accurate forecasting than alternatives.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2016/poster/7023",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2016/file/f340f1b1f65b6df5b5e3f94d95b11daf-Paper.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "niloy_ganguly",
+        "name": "Niloy Ganguly",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Kharagpur (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 137,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "7134",
+      "title": "Mixed Linear Regression with Multiple Components",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In this paper, we study the mixed linear regression (MLR) problem, where the goal is to recover multiple underlying linear models from their unlabeled linear measurements. We propose a non-convex objective function which we show is {\\em locally strongly convex} in the neighborhood of the ground truth. We use a tensor method for initialization so that the initial models are in the local strong convexity region. We then employ general convex optimization algorithms to minimize the objective function. To the best of our knowledge, our approach provides first exact recovery guarantees for the MLR problem with $K \\geq 2$ components. Moreover,  our method has near-optimal computational complexity $\\tilde O (Nd)$ as well as near-optimal sample complexity $\\tilde O (d)$ for {\\em constant} $K$. Furthermore, we show that our non-convex formulation can be extended to solving the {\\em subspace clustering} problem as well. In particular, when initialized within a small constant distance to the true subspaces, our method converges to the global optima (and recovers true subspaces) in time {\\em linear} in the number of points. Furthermore, our empirical results indicate that even with random initialization, our approach converges to the global optima in linear time, providing speed-up of up to two orders of magnitude.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2016/poster/7134",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2016/file/8248a99e81e752cb9b41da3fc43fbe7f-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prateek_jain_20",
+        "name": "Prateek Jain",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 80,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "7394",
+      "title": "Deep Neural Networks with Inexact Matching for Person Re-Identification",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Person Re-Identification is the task of matching images of a person across multiple camera views. Almost all prior approaches address this challenge by attempting to learn the possible transformations that relate the different views of a person from a training corpora. Then, they utilize these transformation patterns for matching a query image to those in a gallery image bank at test time. This necessitates learning good feature representations of the images and having a robust feature matching technique. Deep learning approaches, such as Convolutional Neural Networks (CNN), simultaneously do both and have shown great promise recently. In this work, we propose two CNN-based architectures for Person Re-Identification. In the first, given a pair of images, we extract feature maps from these images via multiple stages of convolution and pooling. A novel inexact matching technique then matches pixels in the first representation with those of the second. Furthermore, we search across a wider region in the second representation for matching. Our novel matching technique allows us to tackle the challenges posed by large viewpoint variations, illumination changes or partial occlusions. Our approach shows a promising performance and requires only about half the parameters as a current state-of-the-art technique. Nonetheless, it also suffers from false matches at times. In order to mitigate this issue, we propose a fused architecture that combines our inexact matching pipeline with a state-of-the-art exact matching technique. We observe substantial gains with the fused model over the current state-of-the-art on multiple challenging datasets of varying sizes, with gains of up to about 21%.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2016/poster/7394",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2016/file/e56b06c51e1049195d7b26d043c478a0-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "moitreya_chatterjee",
+        "name": "Moitreya Chatterjee",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Madras (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 129,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "7023",
+      "title": "Learning and Forecasting Opinion Dynamics in Social Networks",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Social media and social networking sites have become a global pinboard for exposition and discussion of news, topics, and ideas, where social media users often update their opinions about a particular topic by learning from the opinions shared by their friends. In this context, can we learn a data-driven model of opinion dynamics that is able to accurately forecast users' opinions? In this paper, we introduce SLANT, a probabilistic modeling framework of opinion dynamics, which represents users' opinions over time by means of marked jump  diffusion stochastic differential equations, and allows for efficient model simulation and parameter estimation from historical fine grained event data. We then leverage our framework to derive a set of efficient predictive formulas for opinion forecasting and identify conditions under which opinions converge to a steady state. Experiments on data gathered from Twitter show that our model provides a good fit to the data and our formulas achieve more accurate forecasting than alternatives.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2016/poster/7023",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2016/file/f340f1b1f65b6df5b5e3f94d95b11daf-Paper.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sourangshu_bhattacharya_1",
+        "name": "Sourangshu Bhattacharya",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Kharagpur (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.25,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 137,
+        "semantic_scholar_citations": 0
+      }
+    }
+  ]
+}

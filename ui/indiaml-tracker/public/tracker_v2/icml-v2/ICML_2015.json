@@ -1,0 +1,1128 @@
+{
+  "conference": "ICML 2015",
+  "focus_country": "India",
+  "total_papers": 24,
+  "generated_at": "2025-07-06T10:37:29.335248",
+  "config": {
+    "first_author_weight": 3.0,
+    "last_author_weight": 2.0,
+    "middle_author_weight": 1.0,
+    "status_weights": {
+      "oral": 10.0,
+      "spotlight": 7.5,
+      "poster": 5.0,
+      "unknown": 1.0
+    },
+    "output_format": "json",
+    "include_review_details": true,
+    "include_citation_data": true
+  },
+  "papers": [
+    {
+      "paper_id": "30ac6fe512",
+      "title": "Surrogate Functions for Maximizing Precision at the Top",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The problem of maximizing precision at the top of a ranked list, often dubbed Precision@k (prec@k), finds relevance in myriad learning applications such as ranking, multi-label classification, and learning with severe label imbalance. However, despite its popularity, there exist significant gaps in our understanding of this problem and its associated performance measure. The most notable of these is the lack of a convex upper bounding surrogate for prec@k. We also lack scalable perceptron and stochastic gradient descent algorithms for optimizing this performance measure. In this paper we make key contributions in these directions. At the heart of our results is a family of truly upper bounding surrogates for prec@k. These surrogates are motivated in a principled manner and enjoy attractive properties such as consistency to prec@k under various natural margin/noise conditions. These surrogates are then used to design a class of novel perceptron algorithms for optimizing prec@k with provable mistake bounds. We also devise scalable stochastic gradient descent style methods for this problem with provable convergence bounds. Our proofs rely on novel uniform convergence bounds which require an in-depth analysis of the structural properties of prec@k and its surrogates. We conclude with experimental results comparing our algorithms with state-of-the-art cutting plane and stochastic gradient algorithms for maximizing prec@k.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v37/kar15.html",
+      "pdf_url": "http://proceedings.mlr.press/v37/kar15.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "purushottam_kar_3",
+        "name": "Purushottam Kar",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 48,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4f5a47f15f",
+      "title": "Convex Calibrated Surrogates for Hierarchical Classification",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Hierarchical classification problems are multiclass supervised learning problems with a pre-defined hierarchy over the set of class labels. In this work, we study the consistency of hierarchical classification algorithms with respect to a natural loss, namely the tree distance metric on the hierarchy tree of class labels, via the usage of calibrated surrogates. We first show that the Bayes optimal classifier for this loss classifies an instance according to the deepest node in the hierarchy such that the total conditional probability of the subtree rooted at the node is greater than \\frac12. We exploit this insight to develop new consistent algorithm for hierarchical classification, that makes use of an algorithm known to be consistent for the “multiclass classification with reject option (MCRO)” problem as a sub-routine. Our experiments on a number of benchmark datasets show that the resulting algorithm, which we term OvA-Cascade, gives improved performance over other state-of-the-art hierarchical classification algorithms.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v37/ramaswamy15.html",
+      "pdf_url": "http://proceedings.mlr.press/v37/ramaswamy15.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "harish_ramaswamy_1",
+        "name": "Harish Ramaswamy",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 23,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "7cbdecdc98",
+      "title": "Consistent Multiclass Algorithms for Complex Performance Measures",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "This paper presents new consistent algorithms for multiclass learning with complex performance measures, defined by arbitrary functions of the confusion matrix. This setting includes as a special case all loss-based performance measures, which are simply linear functions of the confusion matrix, but also includes more complex performance measures such as the multiclass G-mean and micro F_1 measures. We give a general framework for designing consistent algorithms for such performance measures by viewing the learning problem as an optimization problem over the set of feasible confusion matrices, and give two specific instantiations based on the Frank-Wolfe method for concave performance measures and on the bisection method for ratio-of-linear performance measures. The resulting algorithms are provably consistent and outperform a multiclass version of the state-of-the-art SVMperf method in experiments; for large multiclass problems, the algorithms are also orders of magnitude faster than SVMperf.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v37/narasimhanb15.html",
+      "pdf_url": "http://proceedings.mlr.press/v37/narasimhanb15.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "harikrishna_narasimhan_3",
+        "name": "Harikrishna Narasimhan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 78,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "86527ca4d1",
+      "title": "On Greedy Maximization of Entropy",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Submodular function maximization is one of the key problems that arise in many machine learning tasks. Greedy selection algorithms are the proven choice to solve such problems, where prior theoretical work guarantees (1 - 1/e) approximation ratio. However, it has been empirically observed that greedy selection provides almost optimal solutions in practice. The main goal of this paper is to explore and answer why the greedy selection does significantly better than the theoretical guarantee of (1 - 1/e). Applications include, but are not limited to, sensor selection tasks which use both entropy and mutual information as a maximization criteria. We give a theoretical justification for the nearly optimal approximation ratio via detailed analysis of the curvature of these objective functions for Gaussian RBF kernels.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v37/sharma15.html",
+      "pdf_url": "http://proceedings.mlr.press/v37/sharma15.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "dravyansh_sharma",
+        "name": "Dravyansh Sharma",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 71,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "920136a215",
+      "title": "Optimizing Non-decomposable Performance Measures: A Tale of Two Classes",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Modern classification problems frequently present mild to severe label imbalance as well as specific requirements on classification characteristics, and require optimizing performance measures that are non-decomposable over the dataset, such as F-measure. Such measures have spurred much interest and pose specific challenges to learning algorithms since their non-additive nature precludes a direct application of well-studied large scale optimization methods such as stochastic gradient descent. In this paper we reveal that for two large families of performance measures that can be expressed as functions of true positive/negative rates, it is indeed possible to implement point stochastic updates. The families we consider are concave and pseudo-linear functions of TPR, TNR which cover several popularly used performance measures such as F-measure, G-mean and H-mean. Our core contribution is an adaptive linearization scheme for these families, using which we develop optimization techniques that enable truly point-based stochastic updates. For concave performance measures we propose SPADE, a stochastic primal dual solver; for pseudo-linear measures we propose STAMP, a stochastic alternate maximization procedure. Both methods have crisp convergence guarantees, demonstrate significant speedups over existing methods - often by an order of magnitude or more, and give similar or more accurate predictions on test data.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v37/narasimhana15.html",
+      "pdf_url": "http://proceedings.mlr.press/v37/narasimhana15.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "harikrishna_narasimhan_4",
+        "name": "Harikrishna Narasimhan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 65,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "d0733f77a6",
+      "title": "Ordered Stick-Breaking Prior for Sequential MCMC Inference of Bayesian Nonparametric Models",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "This paper introduces ordered stick-breaking process (OSBP), where the atoms in a stick-breaking process (SBP) appear in order. The choice of weights on the atoms of OSBP ensure that; (1) probability of adding new atoms exponentially decrease, and (2) OSBP, though non-exchangeable, admit predictive probability functions (PPFs). In a Bayesian nonparametric (BNP) setting, OSBP serves as a natural prior over sequential mini-batches, facilitating exchange of relevant statistical information by sharing the atoms of OSBP. One of the major contributions of this paper is SUMO, an MCMC algorithm, for solving the inference problem arising from applying OSBP to BNP models. SUMO uses the PPFs of OSBP to obtain a Gibbs-sampling based truncation-free algorithm which applies generally to BNP models. For large scale inference problems existing algorithms such as particle filtering (PF) are not practical and variational procedures such as TSVI (Wang & Blei, 2012) are the only alternative. For Dirichlet process mixture model (DPMM), SUMO outperforms TSVI on perplexity by 33% on 3 datasets with million data points, which are beyond the scope of PF, using only 3GB RAM.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v37/das15.html",
+      "pdf_url": "http://proceedings.mlr.press/v37/das15.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "mrinal_das_1",
+        "name": "Mrinal Das",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 1,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "fe4876f835",
+      "title": "A Provable Generalized Tensor Spectral Method for Uniform Hypergraph Partitioning",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Matrix spectral methods play an important role in statistics and machine learning, and most often the word ‘matrix’ is dropped as, by default, one assumes that similarities or affinities are measured between two points, thereby resulting in similarity matrices. However, recent challenges in computer vision and text mining have necessitated the use of multi-way affinities in the learning methods, and this has led to a considerable interest in hypergraph partitioning methods in machine learning community. A plethora of “higher-order” algorithms have been proposed in the past decade, but their theoretical guarantees are not well-studied. In this paper, we develop a unified approach for partitioning uniform hypergraphs by means of a tensor trace optimization problem involving the affinity tensor, and a number of existing higher-order methods turn out to be special cases of the proposed formulation. We further propose an algorithm to solve the proposed trace optimization problem, and prove that it is consistent under a planted hypergraph model. We also provide experimental results to validate our theoretical findings.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v37/ghoshdastidar15.html",
+      "pdf_url": "http://proceedings.mlr.press/v37/ghoshdastidar15.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "debarghya_ghoshdastidar",
+        "name": "Debarghya Ghoshdastidar",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 65,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "ffc521d03c",
+      "title": "Ranking from Stochastic Pairwise Preferences: Recovering Condorcet Winners and Tournament Solution Sets at the Top",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We consider the problem of ranking n items from stochastically sampled pairwise preferences. It was shown recently that when the underlying pairwise preferences are acyclic, several algorithms including the Rank Centrality algorithm, the Matrix Borda algorithm, and the SVM-RankAggregation algorithm succeed in recovering a ranking that minimizes a global pairwise disagreement error (Rajkumar and Agarwal, 2014). In this paper, we consider settings where pairwise preferences can contain cycles. In such settings, one may still like to be able to recover ‘good’ items at the top of the ranking. For example, if a Condorcet winner exists that beats every other item, it is natural to ask that this be ranked at the top. More generally, several tournament solution concepts such as the top cycle, Copeland set, Markov set and others have been proposed in the social choice literature for choosing a set of winners in the presence of cycles. We show that existing algorithms can fail to perform well in terms of ranking Condorcet winners and various natural tournament solution sets at the top. We then give alternative ranking algorithms that provably rank Condorcet winners, top cycles, and other tournament solution sets of interest at the top. In all cases, we give finite sample complexity bounds for our algorithms to recover such winners. As a by-product of our analysis, we also obtain an improved sample complexity bound for the Rank Centrality algorithm to recover an optimal ranking under a Bradley-Terry-Luce (BTL) condition, which answers an open question of Rajkumar and Agarwal (2014).",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v37/rajkumar15.html",
+      "pdf_url": "http://proceedings.mlr.press/v37/rajkumar15.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "arun_rajkumar_1",
+        "name": "Arun Rajkumar",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 28,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "30ac6fe512",
+      "title": "Surrogate Functions for Maximizing Precision at the Top",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The problem of maximizing precision at the top of a ranked list, often dubbed Precision@k (prec@k), finds relevance in myriad learning applications such as ranking, multi-label classification, and learning with severe label imbalance. However, despite its popularity, there exist significant gaps in our understanding of this problem and its associated performance measure. The most notable of these is the lack of a convex upper bounding surrogate for prec@k. We also lack scalable perceptron and stochastic gradient descent algorithms for optimizing this performance measure. In this paper we make key contributions in these directions. At the heart of our results is a family of truly upper bounding surrogates for prec@k. These surrogates are motivated in a principled manner and enjoy attractive properties such as consistency to prec@k under various natural margin/noise conditions. These surrogates are then used to design a class of novel perceptron algorithms for optimizing prec@k with provable mistake bounds. We also devise scalable stochastic gradient descent style methods for this problem with provable convergence bounds. Our proofs rely on novel uniform convergence bounds which require an in-depth analysis of the structural properties of prec@k and its surrogates. We conclude with experimental results comparing our algorithms with state-of-the-art cutting plane and stochastic gradient algorithms for maximizing prec@k.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v37/kar15.html",
+      "pdf_url": "http://proceedings.mlr.press/v37/kar15.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prateek_jain_7",
+        "name": "Prateek Jain",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 48,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4f5a47f15f",
+      "title": "Convex Calibrated Surrogates for Hierarchical Classification",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Hierarchical classification problems are multiclass supervised learning problems with a pre-defined hierarchy over the set of class labels. In this work, we study the consistency of hierarchical classification algorithms with respect to a natural loss, namely the tree distance metric on the hierarchy tree of class labels, via the usage of calibrated surrogates. We first show that the Bayes optimal classifier for this loss classifies an instance according to the deepest node in the hierarchy such that the total conditional probability of the subtree rooted at the node is greater than \\frac12. We exploit this insight to develop new consistent algorithm for hierarchical classification, that makes use of an algorithm known to be consistent for the “multiclass classification with reject option (MCRO)” problem as a sub-routine. Our experiments on a number of benchmark datasets show that the resulting algorithm, which we term OvA-Cascade, gives improved performance over other state-of-the-art hierarchical classification algorithms.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v37/ramaswamy15.html",
+      "pdf_url": "http://proceedings.mlr.press/v37/ramaswamy15.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "shivani_agarwal_5",
+        "name": "Shivani Agarwal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 23,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "7cbdecdc98",
+      "title": "Consistent Multiclass Algorithms for Complex Performance Measures",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "This paper presents new consistent algorithms for multiclass learning with complex performance measures, defined by arbitrary functions of the confusion matrix. This setting includes as a special case all loss-based performance measures, which are simply linear functions of the confusion matrix, but also includes more complex performance measures such as the multiclass G-mean and micro F_1 measures. We give a general framework for designing consistent algorithms for such performance measures by viewing the learning problem as an optimization problem over the set of feasible confusion matrices, and give two specific instantiations based on the Frank-Wolfe method for concave performance measures and on the bisection method for ratio-of-linear performance measures. The resulting algorithms are provably consistent and outperform a multiclass version of the state-of-the-art SVMperf method in experiments; for large multiclass problems, the algorithms are also orders of magnitude faster than SVMperf.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v37/narasimhanb15.html",
+      "pdf_url": "http://proceedings.mlr.press/v37/narasimhanb15.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "shivani_agarwal_4",
+        "name": "Shivani Agarwal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 78,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "86527ca4d1",
+      "title": "On Greedy Maximization of Entropy",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Submodular function maximization is one of the key problems that arise in many machine learning tasks. Greedy selection algorithms are the proven choice to solve such problems, where prior theoretical work guarantees (1 - 1/e) approximation ratio. However, it has been empirically observed that greedy selection provides almost optimal solutions in practice. The main goal of this paper is to explore and answer why the greedy selection does significantly better than the theoretical guarantee of (1 - 1/e). Applications include, but are not limited to, sensor selection tasks which use both entropy and mutual information as a maximization criteria. We give a theoretical justification for the nearly optimal approximation ratio via detailed analysis of the curvature of these objective functions for Gaussian RBF kernels.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v37/sharma15.html",
+      "pdf_url": "http://proceedings.mlr.press/v37/sharma15.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "amit_deshpande",
+        "name": "Amit Deshpande",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 71,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "920136a215",
+      "title": "Optimizing Non-decomposable Performance Measures: A Tale of Two Classes",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Modern classification problems frequently present mild to severe label imbalance as well as specific requirements on classification characteristics, and require optimizing performance measures that are non-decomposable over the dataset, such as F-measure. Such measures have spurred much interest and pose specific challenges to learning algorithms since their non-additive nature precludes a direct application of well-studied large scale optimization methods such as stochastic gradient descent. In this paper we reveal that for two large families of performance measures that can be expressed as functions of true positive/negative rates, it is indeed possible to implement point stochastic updates. The families we consider are concave and pseudo-linear functions of TPR, TNR which cover several popularly used performance measures such as F-measure, G-mean and H-mean. Our core contribution is an adaptive linearization scheme for these families, using which we develop optimization techniques that enable truly point-based stochastic updates. For concave performance measures we propose SPADE, a stochastic primal dual solver; for pseudo-linear measures we propose STAMP, a stochastic alternate maximization procedure. Both methods have crisp convergence guarantees, demonstrate significant speedups over existing methods - often by an order of magnitude or more, and give similar or more accurate predictions on test data.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v37/narasimhana15.html",
+      "pdf_url": "http://proceedings.mlr.press/v37/narasimhana15.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prateek_jain_6",
+        "name": "Prateek Jain",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 65,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "d0733f77a6",
+      "title": "Ordered Stick-Breaking Prior for Sequential MCMC Inference of Bayesian Nonparametric Models",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "This paper introduces ordered stick-breaking process (OSBP), where the atoms in a stick-breaking process (SBP) appear in order. The choice of weights on the atoms of OSBP ensure that; (1) probability of adding new atoms exponentially decrease, and (2) OSBP, though non-exchangeable, admit predictive probability functions (PPFs). In a Bayesian nonparametric (BNP) setting, OSBP serves as a natural prior over sequential mini-batches, facilitating exchange of relevant statistical information by sharing the atoms of OSBP. One of the major contributions of this paper is SUMO, an MCMC algorithm, for solving the inference problem arising from applying OSBP to BNP models. SUMO uses the PPFs of OSBP to obtain a Gibbs-sampling based truncation-free algorithm which applies generally to BNP models. For large scale inference problems existing algorithms such as particle filtering (PF) are not practical and variational procedures such as TSVI (Wang & Blei, 2012) are the only alternative. For Dirichlet process mixture model (DPMM), SUMO outperforms TSVI on perplexity by 33% on 3 datasets with million data points, which are beyond the scope of PF, using only 3GB RAM.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v37/das15.html",
+      "pdf_url": "http://proceedings.mlr.press/v37/das15.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "chiranjib_bhattacharyya_2",
+        "name": "Chiranjib Bhattacharyya",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 1,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "fe4876f835",
+      "title": "A Provable Generalized Tensor Spectral Method for Uniform Hypergraph Partitioning",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Matrix spectral methods play an important role in statistics and machine learning, and most often the word ‘matrix’ is dropped as, by default, one assumes that similarities or affinities are measured between two points, thereby resulting in similarity matrices. However, recent challenges in computer vision and text mining have necessitated the use of multi-way affinities in the learning methods, and this has led to a considerable interest in hypergraph partitioning methods in machine learning community. A plethora of “higher-order” algorithms have been proposed in the past decade, but their theoretical guarantees are not well-studied. In this paper, we develop a unified approach for partitioning uniform hypergraphs by means of a tensor trace optimization problem involving the affinity tensor, and a number of existing higher-order methods turn out to be special cases of the proposed formulation. We further propose an algorithm to solve the proposed trace optimization problem, and prove that it is consistent under a planted hypergraph model. We also provide experimental results to validate our theoretical findings.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v37/ghoshdastidar15.html",
+      "pdf_url": "http://proceedings.mlr.press/v37/ghoshdastidar15.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "ambedkar_dukkipati_1",
+        "name": "Ambedkar Dukkipati",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 65,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "ffc521d03c",
+      "title": "Ranking from Stochastic Pairwise Preferences: Recovering Condorcet Winners and Tournament Solution Sets at the Top",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We consider the problem of ranking n items from stochastically sampled pairwise preferences. It was shown recently that when the underlying pairwise preferences are acyclic, several algorithms including the Rank Centrality algorithm, the Matrix Borda algorithm, and the SVM-RankAggregation algorithm succeed in recovering a ranking that minimizes a global pairwise disagreement error (Rajkumar and Agarwal, 2014). In this paper, we consider settings where pairwise preferences can contain cycles. In such settings, one may still like to be able to recover ‘good’ items at the top of the ranking. For example, if a Condorcet winner exists that beats every other item, it is natural to ask that this be ranked at the top. More generally, several tournament solution concepts such as the top cycle, Copeland set, Markov set and others have been proposed in the social choice literature for choosing a set of winners in the presence of cycles. We show that existing algorithms can fail to perform well in terms of ranking Condorcet winners and various natural tournament solution sets at the top. We then give alternative ranking algorithms that provably rank Condorcet winners, top cycles, and other tournament solution sets of interest at the top. In all cases, we give finite sample complexity bounds for our algorithms to recover such winners. As a by-product of our analysis, we also obtain an improved sample complexity bound for the Rank Centrality algorithm to recover an optimal ranking under a Bradley-Terry-Luce (BTL) condition, which answers an open question of Rajkumar and Agarwal (2014).",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v37/rajkumar15.html",
+      "pdf_url": "http://proceedings.mlr.press/v37/rajkumar15.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "shivani_agarwal_6",
+        "name": "Shivani Agarwal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 28,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "7cbdecdc98",
+      "title": "Consistent Multiclass Algorithms for Complex Performance Measures",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "This paper presents new consistent algorithms for multiclass learning with complex performance measures, defined by arbitrary functions of the confusion matrix. This setting includes as a special case all loss-based performance measures, which are simply linear functions of the confusion matrix, but also includes more complex performance measures such as the multiclass G-mean and micro F_1 measures. We give a general framework for designing consistent algorithms for such performance measures by viewing the learning problem as an optimization problem over the set of feasible confusion matrices, and give two specific instantiations based on the Frank-Wolfe method for concave performance measures and on the bisection method for ratio-of-linear performance measures. The resulting algorithms are provably consistent and outperform a multiclass version of the state-of-the-art SVMperf method in experiments; for large multiclass problems, the algorithms are also orders of magnitude faster than SVMperf.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v37/narasimhanb15.html",
+      "pdf_url": "http://proceedings.mlr.press/v37/narasimhanb15.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "harish_ramaswamy",
+        "name": "Harish Ramaswamy",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.333333333333334,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 78,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "ffc521d03c",
+      "title": "Ranking from Stochastic Pairwise Preferences: Recovering Condorcet Winners and Tournament Solution Sets at the Top",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We consider the problem of ranking n items from stochastically sampled pairwise preferences. It was shown recently that when the underlying pairwise preferences are acyclic, several algorithms including the Rank Centrality algorithm, the Matrix Borda algorithm, and the SVM-RankAggregation algorithm succeed in recovering a ranking that minimizes a global pairwise disagreement error (Rajkumar and Agarwal, 2014). In this paper, we consider settings where pairwise preferences can contain cycles. In such settings, one may still like to be able to recover ‘good’ items at the top of the ranking. For example, if a Condorcet winner exists that beats every other item, it is natural to ask that this be ranked at the top. More generally, several tournament solution concepts such as the top cycle, Copeland set, Markov set and others have been proposed in the social choice literature for choosing a set of winners in the presence of cycles. We show that existing algorithms can fail to perform well in terms of ranking Condorcet winners and various natural tournament solution sets at the top. We then give alternative ranking algorithms that provably rank Condorcet winners, top cycles, and other tournament solution sets of interest at the top. In all cases, we give finite sample complexity bounds for our algorithms to recover such winners. As a by-product of our analysis, we also obtain an improved sample complexity bound for the Rank Centrality algorithm to recover an optimal ranking under a Bradley-Terry-Luce (BTL) condition, which answers an open question of Rajkumar and Agarwal (2014).",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v37/rajkumar15.html",
+      "pdf_url": "http://proceedings.mlr.press/v37/rajkumar15.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "suprovat_ghoshal",
+        "name": "Suprovat Ghoshal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.333333333333334,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 28,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "30ac6fe512",
+      "title": "Surrogate Functions for Maximizing Precision at the Top",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The problem of maximizing precision at the top of a ranked list, often dubbed Precision@k (prec@k), finds relevance in myriad learning applications such as ranking, multi-label classification, and learning with severe label imbalance. However, despite its popularity, there exist significant gaps in our understanding of this problem and its associated performance measure. The most notable of these is the lack of a convex upper bounding surrogate for prec@k. We also lack scalable perceptron and stochastic gradient descent algorithms for optimizing this performance measure. In this paper we make key contributions in these directions. At the heart of our results is a family of truly upper bounding surrogates for prec@k. These surrogates are motivated in a principled manner and enjoy attractive properties such as consistency to prec@k under various natural margin/noise conditions. These surrogates are then used to design a class of novel perceptron algorithms for optimizing prec@k with provable mistake bounds. We also devise scalable stochastic gradient descent style methods for this problem with provable convergence bounds. Our proofs rely on novel uniform convergence bounds which require an in-depth analysis of the structural properties of prec@k and its surrogates. We conclude with experimental results comparing our algorithms with state-of-the-art cutting plane and stochastic gradient algorithms for maximizing prec@k.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v37/kar15.html",
+      "pdf_url": "http://proceedings.mlr.press/v37/kar15.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "harikrishna_narasimhan_5",
+        "name": "Harikrishna Narasimhan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (Unknown),Microsoft (India)",
+        "countries": [
+          "Unknown",
+          "India"
+        ],
+        "country_codes": [
+          "UN",
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 48,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "86527ca4d1",
+      "title": "On Greedy Maximization of Entropy",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Submodular function maximization is one of the key problems that arise in many machine learning tasks. Greedy selection algorithms are the proven choice to solve such problems, where prior theoretical work guarantees (1 - 1/e) approximation ratio. However, it has been empirically observed that greedy selection provides almost optimal solutions in practice. The main goal of this paper is to explore and answer why the greedy selection does significantly better than the theoretical guarantee of (1 - 1/e). Applications include, but are not limited to, sensor selection tasks which use both entropy and mutual information as a maximization criteria. We give a theoretical justification for the nearly optimal approximation ratio via detailed analysis of the curvature of these objective functions for Gaussian RBF kernels.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v37/sharma15.html",
+      "pdf_url": "http://proceedings.mlr.press/v37/sharma15.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "ashish_kapoor",
+        "name": "Ashish Kapoor",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 71,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "920136a215",
+      "title": "Optimizing Non-decomposable Performance Measures: A Tale of Two Classes",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Modern classification problems frequently present mild to severe label imbalance as well as specific requirements on classification characteristics, and require optimizing performance measures that are non-decomposable over the dataset, such as F-measure. Such measures have spurred much interest and pose specific challenges to learning algorithms since their non-additive nature precludes a direct application of well-studied large scale optimization methods such as stochastic gradient descent. In this paper we reveal that for two large families of performance measures that can be expressed as functions of true positive/negative rates, it is indeed possible to implement point stochastic updates. The families we consider are concave and pseudo-linear functions of TPR, TNR which cover several popularly used performance measures such as F-measure, G-mean and H-mean. Our core contribution is an adaptive linearization scheme for these families, using which we develop optimization techniques that enable truly point-based stochastic updates. For concave performance measures we propose SPADE, a stochastic primal dual solver; for pseudo-linear measures we propose STAMP, a stochastic alternate maximization procedure. Both methods have crisp convergence guarantees, demonstrate significant speedups over existing methods - often by an order of magnitude or more, and give similar or more accurate predictions on test data.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v37/narasimhana15.html",
+      "pdf_url": "http://proceedings.mlr.press/v37/narasimhana15.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "purushottam_kar_2",
+        "name": "Purushottam Kar",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 65,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "d0733f77a6",
+      "title": "Ordered Stick-Breaking Prior for Sequential MCMC Inference of Bayesian Nonparametric Models",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "This paper introduces ordered stick-breaking process (OSBP), where the atoms in a stick-breaking process (SBP) appear in order. The choice of weights on the atoms of OSBP ensure that; (1) probability of adding new atoms exponentially decrease, and (2) OSBP, though non-exchangeable, admit predictive probability functions (PPFs). In a Bayesian nonparametric (BNP) setting, OSBP serves as a natural prior over sequential mini-batches, facilitating exchange of relevant statistical information by sharing the atoms of OSBP. One of the major contributions of this paper is SUMO, an MCMC algorithm, for solving the inference problem arising from applying OSBP to BNP models. SUMO uses the PPFs of OSBP to obtain a Gibbs-sampling based truncation-free algorithm which applies generally to BNP models. For large scale inference problems existing algorithms such as particle filtering (PF) are not practical and variational procedures such as TSVI (Wang & Blei, 2012) are the only alternative. For Dirichlet process mixture model (DPMM), SUMO outperforms TSVI on perplexity by 33% on 3 datasets with million data points, which are beyond the scope of PF, using only 3GB RAM.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v37/das15.html",
+      "pdf_url": "http://proceedings.mlr.press/v37/das15.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "trapit_bansal",
+        "name": "Trapit Bansal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 1,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "7cbdecdc98",
+      "title": "Consistent Multiclass Algorithms for Complex Performance Measures",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "This paper presents new consistent algorithms for multiclass learning with complex performance measures, defined by arbitrary functions of the confusion matrix. This setting includes as a special case all loss-based performance measures, which are simply linear functions of the confusion matrix, but also includes more complex performance measures such as the multiclass G-mean and micro F_1 measures. We give a general framework for designing consistent algorithms for such performance measures by viewing the learning problem as an optimization problem over the set of feasible confusion matrices, and give two specific instantiations based on the Frank-Wolfe method for concave performance measures and on the bisection method for ratio-of-linear performance measures. The resulting algorithms are provably consistent and outperform a multiclass version of the state-of-the-art SVMperf method in experiments; for large multiclass problems, the algorithms are also orders of magnitude faster than SVMperf.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v37/narasimhanb15.html",
+      "pdf_url": "http://proceedings.mlr.press/v37/narasimhanb15.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "aadirupa_saha",
+        "name": "Aadirupa Saha",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 78,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "ffc521d03c",
+      "title": "Ranking from Stochastic Pairwise Preferences: Recovering Condorcet Winners and Tournament Solution Sets at the Top",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We consider the problem of ranking n items from stochastically sampled pairwise preferences. It was shown recently that when the underlying pairwise preferences are acyclic, several algorithms including the Rank Centrality algorithm, the Matrix Borda algorithm, and the SVM-RankAggregation algorithm succeed in recovering a ranking that minimizes a global pairwise disagreement error (Rajkumar and Agarwal, 2014). In this paper, we consider settings where pairwise preferences can contain cycles. In such settings, one may still like to be able to recover ‘good’ items at the top of the ranking. For example, if a Condorcet winner exists that beats every other item, it is natural to ask that this be ranked at the top. More generally, several tournament solution concepts such as the top cycle, Copeland set, Markov set and others have been proposed in the social choice literature for choosing a set of winners in the presence of cycles. We show that existing algorithms can fail to perform well in terms of ranking Condorcet winners and various natural tournament solution sets at the top. We then give alternative ranking algorithms that provably rank Condorcet winners, top cycles, and other tournament solution sets of interest at the top. In all cases, we give finite sample complexity bounds for our algorithms to recover such winners. As a by-product of our analysis, we also obtain an improved sample complexity bound for the Rank Centrality algorithm to recover an optimal ranking under a Bradley-Terry-Luce (BTL) condition, which answers an open question of Rajkumar and Agarwal (2014).",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v37/rajkumar15.html",
+      "pdf_url": "http://proceedings.mlr.press/v37/rajkumar15.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "lek_heng_lim",
+        "name": "Lek-Heng Lim",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "University of Chicago (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 28,
+        "semantic_scholar_citations": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,804 @@
+{
+  "conference": "ICML 2014",
+  "focus_country": "India",
+  "total_papers": 17,
+  "generated_at": "2025-07-06T10:37:29.336275",
+  "config": {
+    "first_author_weight": 3.0,
+    "last_author_weight": 2.0,
+    "middle_author_weight": 1.0,
+    "status_weights": {
+      "oral": 10.0,
+      "spotlight": 7.5,
+      "poster": 5.0,
+      "unknown": 1.0
+    },
+    "output_format": "json",
+    "include_review_details": true,
+    "include_citation_data": true
+  },
+  "papers": [
+    {
+      "paper_id": "0d128652c3",
+      "title": "Learning by Stretching Deep Networks",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In recent years, deep architectures have gained a lot of prominence for learning complex AI tasks  because of their capability to incorporate complex variations in data within the model. However, these models often need to be trained for a long time in order to obtain good results. In this paper, we propose a technique, called ‘stretching’, that allows the same models to perform considerably better with very little training.  We show that learning can be done tractably, even when the weight matrix is stretched to infinity, for some specific models. We also study tractable algorithms for implementing stretching in deep convolutional architectures in an iterative manner and derive bounds for its convergence. Our experimental results suggest that the proposed stretched deep convolutional networks are capable of achieving good performance for many object recognition tasks. More importantly, for a fixed network architecture, one can achieve much better accuracy using stretching rather than learning the weights using backpropagation.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v32/pandey14.html",
+      "pdf_url": "http://proceedings.mlr.press/v32/pandey14.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "gaurav_pandey",
+        "name": "Gaurav Pandey",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 24,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "2bc8af0538",
+      "title": "Maximum Mean Discrepancy for Class Ratio Estimation: Convergence Bounds and Kernel Selection",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In recent times, many real world applications have emerged that require estimates of class ratios in an unlabeled instance collection as opposed to labels of individual instances in the collection.  In this paper we investigate the use of maximum mean discrepancy (MMD) in a reproducing kernel Hilbert space (RKHS) for estimating such ratios. First, we theoretically analyze the MMD-based estimates. Our analysis establishes that, under some mild conditions, the estimate is statistically consistent. More importantly, it provides an upper bound on the error in the estimate in terms of intuitive geometric quantities like class separation and data spread. Next, we use the insights obtained from the theoretical analysis, to propose a novel convex formulation that automatically learns the kernel to be employed in the MMD-based estimation. We design an efficient cutting plane algorithm for solving this formulation.  Finally, we empirically compare our estimator with several existing methods, and show significantly improved performance under varying datasets, class ratios, and training sizes.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v32/iyer14.html",
+      "pdf_url": "http://proceedings.mlr.press/v32/iyer14.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "arun_iyer",
+        "name": "Arun Iyer",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Yahoo! Labs (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 99,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4a42d28760",
+      "title": "GEV-Canonical Regression for Accurate Binary Class Probability Estimation when One Class is Rare",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We consider the problem of binary class probability estimation (CPE) when one class is rare compared to the other. It is well known that standard algorithms such as logistic regression do not perform well on this task as they tend to under-estimate the probability of the rare class. Common fixes include under-sampling and weighting, together with various correction schemes. Recently, Wang & Dey (2010) suggested the use of a parametrized family of asymmetric link functions based on the generalized extreme value (GEV) distribution, which has been used for modeling rare events in statistics. The approach showed promising initial results, but combined with the logarithmic CPE loss implicitly used in their work, it results in a non-convex composite loss that is difficult to optimize. In this paper, we use tools from the theory of proper composite losses (Buja et al, 2005; Reid & Williamson, 2010) to construct a canonical underlying CPE loss corresponding to the GEV link, which yields a convex proper composite loss that we call the GEV-canonical loss; this loss is tailored for the task of CPE when one class is rare, and is easy to minimize using an IRLS-type algorithm similar to that used for logistic regression. Our experiments on both synthetic and real data demonstrate that the resulting algorithm – which we term GEV-canonical regression – outperforms common approaches such as under-sampling and weights correction for this problem.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v32/agarwalc14.html",
+      "pdf_url": "http://proceedings.mlr.press/v32/agarwalc14.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "arpit_agarwal",
+        "name": "Arpit Agarwal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 11,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "84504ca9cf",
+      "title": "On p-norm Path Following in Multiple Kernel Learning for Non-linear Feature Selection",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Our objective is to develop formulations and algorithms for efficiently computing the feature selection path – i.e. the variation in classification accuracy as the fraction of selected features is varied from null to unity. Multiple Kernel Learning subject to l_p\\geq1 regularization (l_p-MKL) has been demonstrated to be one of the most effective techniques for non-linear feature selection. However, state-of-the-art l_p-MKL algorithms are too computationally expensive to be invoked thousands of times to determine the entire path.    We propose a novel conjecture which states that, for certain l_p-MKL formulations, the number of features selected in the optimal solution monotonically decreases as p is decreased from an initial value to unity. We prove the conjecture, for a generic family of kernel target alignment based formulations, and show that the feature weights themselves decay (grow) monotonically once they are below (above) a certain threshold at optimality. This allows us to develop a path following algorithm that systematically generates optimal feature sets of decreasing size. The proposed algorithm sets certain feature weights directly to zero for potentially large intervals of p thereby reducing optimization costs while simultaneously providing approximation guarantees.    We empirically demonstrate that our formulation can lead to classification accuracies which are as much as 10% higher on benchmark data sets not only as compared to other l_p-MKL formulations and uniform kernel baselines but also leading feature selection methods. We further demonstrate that our algorithm reduces training time significantly over other path following algorithms and state-of-the-art l_p-MKL optimizers such as SMO-MKL. In particular, we generate the entire feature selection path for data sets with a hundred thousand features in approximately half an hour on standard hardware.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v32/jawanpuria14.html",
+      "pdf_url": "http://proceedings.mlr.press/v32/jawanpuria14.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "pratik_jawanpuria",
+        "name": "Pratik Jawanpuria",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 34,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "aafc94133c",
+      "title": "A Statistical Convergence Perspective of Algorithms for Rank Aggregation from Pairwise Data",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "There has been much interest recently in the problem of rank aggregation from pairwise data. A natural question that arises is: under what sorts of statistical assumptions do various rank aggregation algorithms converge to an ‘optimal’ ranking? In this paper, we consider this question in a natural setting where pairwise comparisons are drawn randomly and independently from some underlying probability distribution. We first show that, under a ‘time-reversibility’ or Bradley-Terry-Luce (BTL) condition on the distribution generating the outcomes of the pairwise comparisons, the rank centrality (PageRank) and least squares (HodgeRank) algorithms both converge to an optimal ranking. Next, we show that a matrix version of the Borda count algorithm, and more surprisingly, an algorithm which performs maximal likelihood estimation under a BTL assumption, both converge to an optimal ranking under a ‘low-noise’ condition that is strictly more general than BTL. Finally, we propose a new SVM-based algorithm for rank aggregation from pairwise data, and show that this converges to an optimal ranking under an even more general condition that we term ‘generalized low-noise’. In all cases, we provide explicit sample complexity bounds for exact recovery of an optimal ranking. Our experiments confirm our theoretical findings and help to shed light on the statistical behavior of various rank aggregation algorithms.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v32/rajkumar14.html",
+      "pdf_url": "http://proceedings.mlr.press/v32/rajkumar14.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "arun_rajkumar",
+        "name": "Arun Rajkumar",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 202,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "0d128652c3",
+      "title": "Learning by Stretching Deep Networks",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In recent years, deep architectures have gained a lot of prominence for learning complex AI tasks  because of their capability to incorporate complex variations in data within the model. However, these models often need to be trained for a long time in order to obtain good results. In this paper, we propose a technique, called ‘stretching’, that allows the same models to perform considerably better with very little training.  We show that learning can be done tractably, even when the weight matrix is stretched to infinity, for some specific models. We also study tractable algorithms for implementing stretching in deep convolutional architectures in an iterative manner and derive bounds for its convergence. Our experimental results suggest that the proposed stretched deep convolutional networks are capable of achieving good performance for many object recognition tasks. More importantly, for a fixed network architecture, one can achieve much better accuracy using stretching rather than learning the weights using backpropagation.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v32/pandey14.html",
+      "pdf_url": "http://proceedings.mlr.press/v32/pandey14.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "ambedkar_dukkipati",
+        "name": "Ambedkar Dukkipati",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 24,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "2bc8af0538",
+      "title": "Maximum Mean Discrepancy for Class Ratio Estimation: Convergence Bounds and Kernel Selection",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In recent times, many real world applications have emerged that require estimates of class ratios in an unlabeled instance collection as opposed to labels of individual instances in the collection.  In this paper we investigate the use of maximum mean discrepancy (MMD) in a reproducing kernel Hilbert space (RKHS) for estimating such ratios. First, we theoretically analyze the MMD-based estimates. Our analysis establishes that, under some mild conditions, the estimate is statistically consistent. More importantly, it provides an upper bound on the error in the estimate in terms of intuitive geometric quantities like class separation and data spread. Next, we use the insights obtained from the theoretical analysis, to propose a novel convex formulation that automatically learns the kernel to be employed in the MMD-based estimation. We design an efficient cutting plane algorithm for solving this formulation.  Finally, we empirically compare our estimator with several existing methods, and show significantly improved performance under varying datasets, class ratios, and training sizes.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v32/iyer14.html",
+      "pdf_url": "http://proceedings.mlr.press/v32/iyer14.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sunita_sarawagi",
+        "name": "Sunita Sarawagi",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 99,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4a42d28760",
+      "title": "GEV-Canonical Regression for Accurate Binary Class Probability Estimation when One Class is Rare",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We consider the problem of binary class probability estimation (CPE) when one class is rare compared to the other. It is well known that standard algorithms such as logistic regression do not perform well on this task as they tend to under-estimate the probability of the rare class. Common fixes include under-sampling and weighting, together with various correction schemes. Recently, Wang & Dey (2010) suggested the use of a parametrized family of asymmetric link functions based on the generalized extreme value (GEV) distribution, which has been used for modeling rare events in statistics. The approach showed promising initial results, but combined with the logarithmic CPE loss implicitly used in their work, it results in a non-convex composite loss that is difficult to optimize. In this paper, we use tools from the theory of proper composite losses (Buja et al, 2005; Reid & Williamson, 2010) to construct a canonical underlying CPE loss corresponding to the GEV link, which yields a convex proper composite loss that we call the GEV-canonical loss; this loss is tailored for the task of CPE when one class is rare, and is easy to minimize using an IRLS-type algorithm similar to that used for logistic regression. Our experiments on both synthetic and real data demonstrate that the resulting algorithm – which we term GEV-canonical regression – outperforms common approaches such as under-sampling and weights correction for this problem.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v32/agarwalc14.html",
+      "pdf_url": "http://proceedings.mlr.press/v32/agarwalc14.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "shivani_agarwal_3",
+        "name": "Shivani Agarwal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 11,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "84504ca9cf",
+      "title": "On p-norm Path Following in Multiple Kernel Learning for Non-linear Feature Selection",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Our objective is to develop formulations and algorithms for efficiently computing the feature selection path – i.e. the variation in classification accuracy as the fraction of selected features is varied from null to unity. Multiple Kernel Learning subject to l_p\\geq1 regularization (l_p-MKL) has been demonstrated to be one of the most effective techniques for non-linear feature selection. However, state-of-the-art l_p-MKL algorithms are too computationally expensive to be invoked thousands of times to determine the entire path.    We propose a novel conjecture which states that, for certain l_p-MKL formulations, the number of features selected in the optimal solution monotonically decreases as p is decreased from an initial value to unity. We prove the conjecture, for a generic family of kernel target alignment based formulations, and show that the feature weights themselves decay (grow) monotonically once they are below (above) a certain threshold at optimality. This allows us to develop a path following algorithm that systematically generates optimal feature sets of decreasing size. The proposed algorithm sets certain feature weights directly to zero for potentially large intervals of p thereby reducing optimization costs while simultaneously providing approximation guarantees.    We empirically demonstrate that our formulation can lead to classification accuracies which are as much as 10% higher on benchmark data sets not only as compared to other l_p-MKL formulations and uniform kernel baselines but also leading feature selection methods. We further demonstrate that our algorithm reduces training time significantly over other path following algorithms and state-of-the-art l_p-MKL optimizers such as SMO-MKL. In particular, we generate the entire feature selection path for data sets with a hundred thousand features in approximately half an hour on standard hardware.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v32/jawanpuria14.html",
+      "pdf_url": "http://proceedings.mlr.press/v32/jawanpuria14.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "saketha_nath_1",
+        "name": "Saketha Nath",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 34,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "aafc94133c",
+      "title": "A Statistical Convergence Perspective of Algorithms for Rank Aggregation from Pairwise Data",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "There has been much interest recently in the problem of rank aggregation from pairwise data. A natural question that arises is: under what sorts of statistical assumptions do various rank aggregation algorithms converge to an ‘optimal’ ranking? In this paper, we consider this question in a natural setting where pairwise comparisons are drawn randomly and independently from some underlying probability distribution. We first show that, under a ‘time-reversibility’ or Bradley-Terry-Luce (BTL) condition on the distribution generating the outcomes of the pairwise comparisons, the rank centrality (PageRank) and least squares (HodgeRank) algorithms both converge to an optimal ranking. Next, we show that a matrix version of the Borda count algorithm, and more surprisingly, an algorithm which performs maximal likelihood estimation under a BTL assumption, both converge to an optimal ranking under a ‘low-noise’ condition that is strictly more general than BTL. Finally, we propose a new SVM-based algorithm for rank aggregation from pairwise data, and show that this converges to an optimal ranking under an even more general condition that we term ‘generalized low-noise’. In all cases, we provide explicit sample complexity bounds for exact recovery of an optimal ranking. Our experiments confirm our theoretical findings and help to shed light on the statistical behavior of various rank aggregation algorithms.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v32/rajkumar14.html",
+      "pdf_url": "http://proceedings.mlr.press/v32/rajkumar14.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "shivani_agarwal_2",
+        "name": "Shivani Agarwal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 202,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "c3c0bcdd95",
+      "title": "Universal Matrix Completion",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The problem of low-rank matrix completion has recently generated a lot of interest leading to several results that offer exact solutions to the problem. However, in order to do so, these methods make assumptions that can be quite restrictive in practice. More specifically, the methods assume that: a) the observed indices are sampled uniformly at random, and b) for every new matrix, the observed indices are sampled \\emphafresh. In this work, we address these issues by providing a universal recovery guarantee for matrix completion that works for a variety of sampling schemes. In particular, we show that if the set of sampled indices come from the edges of a bipartite graph with large spectral gap (i.e. gap between the first and the second singular value), then the nuclear norm minimization based method exactly recovers all low-rank matrices that satisfy certain incoherence properties.Moreover, we also show that under certain stricter incoherence conditions, O(nr^2) uniformly sampled entries are enough to recover any rank-r n\\times n matrix, in contrast to the O(nr\\log n) sample complexity required by other matrix completion algorithms as well as existing analyses of the nuclear norm method.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v32/bhojanapalli14.html",
+      "pdf_url": "http://proceedings.mlr.press/v32/bhojanapalli14.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prateek_jain_5",
+        "name": "Prateek Jain",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 135,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4a42d28760",
+      "title": "GEV-Canonical Regression for Accurate Binary Class Probability Estimation when One Class is Rare",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We consider the problem of binary class probability estimation (CPE) when one class is rare compared to the other. It is well known that standard algorithms such as logistic regression do not perform well on this task as they tend to under-estimate the probability of the rare class. Common fixes include under-sampling and weighting, together with various correction schemes. Recently, Wang & Dey (2010) suggested the use of a parametrized family of asymmetric link functions based on the generalized extreme value (GEV) distribution, which has been used for modeling rare events in statistics. The approach showed promising initial results, but combined with the logarithmic CPE loss implicitly used in their work, it results in a non-convex composite loss that is difficult to optimize. In this paper, we use tools from the theory of proper composite losses (Buja et al, 2005; Reid & Williamson, 2010) to construct a canonical underlying CPE loss corresponding to the GEV link, which yields a convex proper composite loss that we call the GEV-canonical loss; this loss is tailored for the task of CPE when one class is rare, and is easy to minimize using an IRLS-type algorithm similar to that used for logistic regression. Our experiments on both synthetic and real data demonstrate that the resulting algorithm – which we term GEV-canonical regression – outperforms common approaches such as under-sampling and weights correction for this problem.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v32/agarwalc14.html",
+      "pdf_url": "http://proceedings.mlr.press/v32/agarwalc14.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "harikrishna_narasimhan_2",
+        "name": "Harikrishna Narasimhan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.333333333333334,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 11,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "bf957266e2",
+      "title": "Large-scale Multi-label Learning with Missing Labels",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The multi-label classification problem has generated significant interest in recent years. However, existing approaches do not adequately address two key challenges: (a) scaling up to problems with a large number (say millions) of labels, and (b) handling data with missing labels. In this paper, we directly address both these problems by studying the multi-label problem in a generic empirical risk minimization (ERM) framework. Our framework, despite being simple, is surprisingly able to encompass several recent label-compression based methods which can be derived as special cases of our method. To optimize the ERM problem, we develop techniques that exploit the structure of specific loss functions - such as the squared loss function - to obtain efficient algorithms. We further show that our learning framework admits excess risk bounds even in the presence of missing labels. Our bounds are tight and demonstrate better generalization performance for low-rank promoting trace-norm regularization when compared to (rank insensitive) Frobenius norm regularization. Finally, we present extensive empirical results on a variety of benchmark datasets and show that our methods perform significantly better than existing label compression based methods and can scale up to very large datasets such as a Wikipedia dataset that has more than 200,000 labels.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v32/yu14.html",
+      "pdf_url": "http://proceedings.mlr.press/v32/yu14.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prateek_jain_4",
+        "name": "Prateek Jain",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.333333333333334,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 593,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "2bc8af0538",
+      "title": "Maximum Mean Discrepancy for Class Ratio Estimation: Convergence Bounds and Kernel Selection",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In recent times, many real world applications have emerged that require estimates of class ratios in an unlabeled instance collection as opposed to labels of individual instances in the collection.  In this paper we investigate the use of maximum mean discrepancy (MMD) in a reproducing kernel Hilbert space (RKHS) for estimating such ratios. First, we theoretically analyze the MMD-based estimates. Our analysis establishes that, under some mild conditions, the estimate is statistically consistent. More importantly, it provides an upper bound on the error in the estimate in terms of intuitive geometric quantities like class separation and data spread. Next, we use the insights obtained from the theoretical analysis, to propose a novel convex formulation that automatically learns the kernel to be employed in the MMD-based estimation. We design an efficient cutting plane algorithm for solving this formulation.  Finally, we empirically compare our estimator with several existing methods, and show significantly improved performance under varying datasets, class ratios, and training sizes.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v32/iyer14.html",
+      "pdf_url": "http://proceedings.mlr.press/v32/iyer14.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "saketha_nath",
+        "name": "Saketha Nath",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 99,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "84504ca9cf",
+      "title": "On p-norm Path Following in Multiple Kernel Learning for Non-linear Feature Selection",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Our objective is to develop formulations and algorithms for efficiently computing the feature selection path – i.e. the variation in classification accuracy as the fraction of selected features is varied from null to unity. Multiple Kernel Learning subject to l_p\\geq1 regularization (l_p-MKL) has been demonstrated to be one of the most effective techniques for non-linear feature selection. However, state-of-the-art l_p-MKL algorithms are too computationally expensive to be invoked thousands of times to determine the entire path.    We propose a novel conjecture which states that, for certain l_p-MKL formulations, the number of features selected in the optimal solution monotonically decreases as p is decreased from an initial value to unity. We prove the conjecture, for a generic family of kernel target alignment based formulations, and show that the feature weights themselves decay (grow) monotonically once they are below (above) a certain threshold at optimality. This allows us to develop a path following algorithm that systematically generates optimal feature sets of decreasing size. The proposed algorithm sets certain feature weights directly to zero for potentially large intervals of p thereby reducing optimization costs while simultaneously providing approximation guarantees.    We empirically demonstrate that our formulation can lead to classification accuracies which are as much as 10% higher on benchmark data sets not only as compared to other l_p-MKL formulations and uniform kernel baselines but also leading feature selection methods. We further demonstrate that our algorithm reduces training time significantly over other path following algorithms and state-of-the-art l_p-MKL optimizers such as SMO-MKL. In particular, we generate the entire feature selection path for data sets with a hundred thousand features in approximately half an hour on standard hardware.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v32/jawanpuria14.html",
+      "pdf_url": "http://proceedings.mlr.press/v32/jawanpuria14.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "manik_varma_1",
+        "name": "Manik Varma",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 34,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4a42d28760",
+      "title": "GEV-Canonical Regression for Accurate Binary Class Probability Estimation when One Class is Rare",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We consider the problem of binary class probability estimation (CPE) when one class is rare compared to the other. It is well known that standard algorithms such as logistic regression do not perform well on this task as they tend to under-estimate the probability of the rare class. Common fixes include under-sampling and weighting, together with various correction schemes. Recently, Wang & Dey (2010) suggested the use of a parametrized family of asymmetric link functions based on the generalized extreme value (GEV) distribution, which has been used for modeling rare events in statistics. The approach showed promising initial results, but combined with the logarithmic CPE loss implicitly used in their work, it results in a non-convex composite loss that is difficult to optimize. In this paper, we use tools from the theory of proper composite losses (Buja et al, 2005; Reid & Williamson, 2010) to construct a canonical underlying CPE loss corresponding to the GEV link, which yields a convex proper composite loss that we call the GEV-canonical loss; this loss is tailored for the task of CPE when one class is rare, and is easy to minimize using an IRLS-type algorithm similar to that used for logistic regression. Our experiments on both synthetic and real data demonstrate that the resulting algorithm – which we term GEV-canonical regression – outperforms common approaches such as under-sampling and weights correction for this problem.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v32/agarwalc14.html",
+      "pdf_url": "http://proceedings.mlr.press/v32/agarwalc14.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "shivaram_kalyanakrishnan",
+        "name": "Shivaram Kalyanakrishnan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Yahoo Labs (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 11,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "bf957266e2",
+      "title": "Large-scale Multi-label Learning with Missing Labels",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The multi-label classification problem has generated significant interest in recent years. However, existing approaches do not adequately address two key challenges: (a) scaling up to problems with a large number (say millions) of labels, and (b) handling data with missing labels. In this paper, we directly address both these problems by studying the multi-label problem in a generic empirical risk minimization (ERM) framework. Our framework, despite being simple, is surprisingly able to encompass several recent label-compression based methods which can be derived as special cases of our method. To optimize the ERM problem, we develop techniques that exploit the structure of specific loss functions - such as the squared loss function - to obtain efficient algorithms. We further show that our learning framework admits excess risk bounds even in the presence of missing labels. Our bounds are tight and demonstrate better generalization performance for low-rank promoting trace-norm regularization when compared to (rank insensitive) Frobenius norm regularization. Finally, we present extensive empirical results on a variety of benchmark datasets and show that our methods perform significantly better than existing label compression based methods and can scale up to very large datasets such as a Wikipedia dataset that has more than 200,000 labels.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v32/yu14.html",
+      "pdf_url": "http://proceedings.mlr.press/v32/yu14.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "purushottam_kar_1",
+        "name": "Purushottam Kar",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 593,
+        "semantic_scholar_citations": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,344 @@
+{
+  "conference": "NeurIPS 2013",
+  "focus_country": "India",
+  "total_papers": 7,
+  "generated_at": "2025-07-06T10:39:19.872551",
+  "config": {
+    "first_author_weight": 3.0,
+    "last_author_weight": 2.0,
+    "middle_author_weight": 1.0,
+    "status_weights": {
+      "oral": 10.0,
+      "spotlight": 7.5,
+      "poster": 5.0,
+      "unknown": 1.0
+    },
+    "output_format": "json",
+    "include_review_details": true,
+    "include_citation_data": true
+  },
+  "papers": [
+    {
+      "paper_id": "3898",
+      "title": "Convex Calibrated Surrogates for Low-Rank Loss Matrices with Applications to Subset Ranking Losses",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "The design of convex, calibrated surrogate losses, whose minimization entails consistency with respect to a desired target loss, is an important concept to have emerged in the theory of machine learning in recent years. We give an explicit construction of a convex least-squares type surrogate loss that can be designed to be calibrated for any multiclass learning problem for which the target loss matrix has a low-rank structure; the surrogate loss operates on a surrogate target space of dimension at most the rank of the target loss. We use this result to design convex calibrated surrogates for a variety of subset ranking problems, with target losses including the precision@q, expected rank utility, mean average precision, and pairwise disagreement.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2013/poster/3898",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2013/file/a5cdd4aa0048b187f7182f1b9ce7a6a7-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "harish_g__ramaswamy_1",
+        "name": "Harish G. Ramaswamy",
+        "name_site": "Harish G Ramaswamy, Shivani Agarwal, Ambuj Tewari",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 22.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 46,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4058",
+      "title": "On the Relationship Between Binary Classification, Bipartite Ranking, and Binary Class Probability Estimation",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "We investigate the relationship between three fundamental problems in machine learning: binary classification, bipartite ranking, and binary class probability estimation (CPE). It is known that a good binary CPE model can be used to obtain a good binary classification model (by thresholding at 0.5), and also to obtain a good bipartite ranking model (by using the CPE model directly as a ranking model); it is also known that a binary classification model does not necessarily yield a CPE model. However, not much is known about other directions. Formally, these relationships involve regret transfer bounds. In this paper, we introduce the notion of weak regret transfer bounds, where the mapping needed to transform a model from one problem to another depends on the underlying probability distribution (and in practice, must be estimated from data). We then show that, in this weaker sense, a good bipartite ranking model can be used to construct a good classification model (by thresholding at a suitable point), and more surprisingly, also to construct a good binary CPE model (by calibrating the scores of the ranking model).",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2013/poster/4058",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2013/file/05311655a15b75fab86956663e1819cd-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "harikrishna_narasimhan",
+        "name": "Harikrishna Narasimhan",
+        "name_site": "Harikrishna Narasimhan, Shivani Agarwal",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 22.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 48,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "3898",
+      "title": "Convex Calibrated Surrogates for Low-Rank Loss Matrices with Applications to Subset Ranking Losses",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "The design of convex, calibrated surrogate losses, whose minimization entails consistency with respect to a desired target loss, is an important concept to have emerged in the theory of machine learning in recent years. We give an explicit construction of a convex least-squares type surrogate loss that can be designed to be calibrated for any multiclass learning problem for which the target loss matrix has a low-rank structure; the surrogate loss operates on a surrogate target space of dimension at most the rank of the target loss. We use this result to design convex calibrated surrogates for a variety of subset ranking problems, with target losses including the precision@q, expected rank utility, mean average precision, and pairwise disagreement.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2013/poster/3898",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2013/file/a5cdd4aa0048b187f7182f1b9ce7a6a7-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "ambuj_tewari_12",
+        "name": "Ambuj Tewari",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "University of Michigan (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 46,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4058",
+      "title": "On the Relationship Between Binary Classification, Bipartite Ranking, and Binary Class Probability Estimation",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "We investigate the relationship between three fundamental problems in machine learning: binary classification, bipartite ranking, and binary class probability estimation (CPE). It is known that a good binary CPE model can be used to obtain a good binary classification model (by thresholding at 0.5), and also to obtain a good bipartite ranking model (by using the CPE model directly as a ranking model); it is also known that a binary classification model does not necessarily yield a CPE model. However, not much is known about other directions. Formally, these relationships involve regret transfer bounds. In this paper, we introduce the notion of weak regret transfer bounds, where the mapping needed to transform a model from one problem to another depends on the underlying probability distribution (and in practice, must be estimated from data). We then show that, in this weaker sense, a good bipartite ranking model can be used to construct a good classification model (by thresholding at a suitable point), and more surprisingly, also to construct a good binary CPE model (by calibrating the scores of the ranking model).",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2013/poster/4058",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2013/file/05311655a15b75fab86956663e1819cd-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "shivani_agarwal_3",
+        "name": "Shivani Agarwal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 48,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "3898",
+      "title": "Convex Calibrated Surrogates for Low-Rank Loss Matrices with Applications to Subset Ranking Losses",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "The design of convex, calibrated surrogate losses, whose minimization entails consistency with respect to a desired target loss, is an important concept to have emerged in the theory of machine learning in recent years. We give an explicit construction of a convex least-squares type surrogate loss that can be designed to be calibrated for any multiclass learning problem for which the target loss matrix has a low-rank structure; the surrogate loss operates on a surrogate target space of dimension at most the rank of the target loss. We use this result to design convex calibrated surrogates for a variety of subset ranking problems, with target losses including the precision@q, expected rank utility, mean average precision, and pairwise disagreement.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2013/poster/3898",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2013/file/a5cdd4aa0048b187f7182f1b9ce7a6a7-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "shivani_agarwal_2",
+        "name": "Shivani Agarwal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.75,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 46,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4054",
+      "title": "On the Representational Efficiency of Restricted Boltzmann Machines",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "This paper examines the question: What kinds of distributions can be efficiently represented by Restricted Boltzmann Machines (RBMs)?   We characterize the RBM's unnormalized log-likelihood function as a type of neural network (called an RBM network), and through a series of simulation results relate these networks to types that are better understood.  We show the surprising result that RBM networks can efficiently compute any function that depends on the number of 1's in the input, such as parity.  We also provide the first known example of a particular type of distribution which provably cannot be efficiently represented by an RBM (or equivalently, cannot be efficiently computed by an RBM network), assuming a realistic exponential upper bound on the size of the weights.  By formally demonstrating that a relatively simple distribution cannot be represented efficiently by an RBM our results provide a new rigorous justification for the use of potentially more expressive generative models, such as deeper ones.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2013/poster/4054",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2013/file/7bb060764a818184ebb1cc0d43d382aa-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "arkadev_chattopadhya",
+        "name": "Arkadev Chattopadhya",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Tata Institute of Fundamental Research (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.333333333333334,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 92,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4045",
+      "title": "Phase Retrieval using Alternating Minimization",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Phase retrieval problems involve solving linear equations, but with missing sign (or phase, for complex numbers) information. Over the last two decades, a popular generic empirical approach to the many variants of this problem has been one of alternating minimization; i.e. alternating between estimating the missing phase information, and the candidate solution. In this paper, we show that a simple alternating minimization algorithm geometrically converges to the solution of one such problem -- finding a vector $x$ from $y,A$, where $y = |A'x|$ and $|z|$ denotes a vector of element-wise magnitudes of $z$ -- under the assumption that $A$ is Gaussian.  Empirically, our algorithm performs similar to recently proposed convex techniques for this variant (which are based on lifting\" to a convex matrix problem) in sample complexity and robustness to noise. However, our algorithm is much more efficient and can scale to large problems. Analytically, we show geometric convergence to the solution, and sample complexity that is off by log factors from obvious lower bounds. We also establish close to optimal scaling for the case when the unknown vector is sparse. Our work represents the only known proof of alternating minimization for any variant of phase retrieval problems in the non-convex setting.\"",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2013/poster/4045",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2013/file/242c100dc94f871b6d7215b868a875f8-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prateek_jain_10",
+        "name": "Prateek Jain",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 757,
+        "semantic_scholar_citations": 0
+      }
+    }
+  ]
+}

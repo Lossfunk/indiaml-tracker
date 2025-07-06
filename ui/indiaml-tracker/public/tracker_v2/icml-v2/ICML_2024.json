@@ -1,0 +1,2172 @@
+{
+  "conference": "ICML 2024",
+  "focus_country": "India",
+  "total_papers": 47,
+  "generated_at": "2025-07-06T10:37:29.317795",
+  "config": {
+    "first_author_weight": 3.0,
+    "last_author_weight": 2.0,
+    "middle_author_weight": 1.0,
+    "status_weights": {
+      "oral": 10.0,
+      "spotlight": 7.5,
+      "poster": 5.0,
+      "unknown": 1.0
+    },
+    "output_format": "json",
+    "include_review_details": true,
+    "include_citation_data": true
+  },
+  "papers": [
+    {
+      "paper_id": "TfwGtfPkhV",
+      "title": "Testing the Feasibility of Linear Programs with Bandit Feedback",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "While the recent literature has seen a surge in the study of constrained bandit problems, all existing methods for these begin by assuming the feasibility of the underlying problem. We initiate the study of testing such feasibility assumptions, and in particular address the problem in the linear bandit setting, thus characterising the costs of feasibility testing for an unknown linear program using bandit feedback. Concretely, we test if $\\exists x: Ax \\ge 0$ for an unknown $A \\in \\mathbb{R}^{m \\times d}$, by playing a sequence of actions $x_t\\in \\mathbb{R}^d$, and observing $Ax_t + \\mathrm{noise}$ in response. By identifying the hypothesis as determining the sign of the value of a minimax game, we construct a novel test based on low-regret algorithms and a nonasymptotic law of iterated logarithms. We prove that this test is reliable, and adapts to the `signal level,' $\\Gamma,$ of any instance, with mean sample costs scaling as $\\widetilde{O}(d^2/\\Gamma^2)$. We complement this by a minimax lower bound of $\\Omega(d/\\Gamma^2)$ for sample costs of reliable tests, dominating prior asymptotic lower bounds by capturing the dependence on $d$, and thus elucidating a basic insight missing in the extant literature on such problems.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/33966",
+      "pdf_url": "https://openreview.net/pdf?id=TfwGtfPkhV",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Aditya_Gangrade1",
+        "name": "Aditya Gangrade",
+        "name_site": "Aditya Gangrade, Aditya Gopalan, Venkatesh Saligrama, Clay Scott",
+        "openreview_id": "~Aditya_Gangrade1",
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 22.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 0,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "64MQCia06B",
+      "title": "Deep Stochastic Mechanics",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "This paper introduces a novel deep-learning-based approach for numerical simulation of a time-evolving Schrödinger equation inspired by stochastic mechanics and generative diffusion models. Unlike existing approaches, which exhibit computational complexity that scales exponentially in the problem dimension, our method allows us to adapt to the latent low-dimensional structure of the wave function by sampling from the Markovian diffusion. Depending on the latent dimension, our method may have far lower computational complexity in higher dimensions. Moreover, we propose novel equations for stochastic quantum mechanics, resulting in quadratic computational complexity with respect to the number of dimensions. Numerical simulations verify our theoretical findings and show a significant advantage of our method compared to other deep-learning-based approaches used for quantum mechanics.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/34944",
+      "pdf_url": "https://openreview.net/pdf?id=64MQCia06B",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Elena_Orlova1",
+        "name": "Elena Orlova",
+        "name_site": "Elena Orlova, Aleksei Ustimenko, Ruoxi Jiang, Peter Y. Lu, Rebecca Willett",
+        "openreview_id": "~Elena_Orlova1",
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "ShareChat (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 1,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "7xzhKEPfBo",
+      "title": "Risk Estimation in a Markov Cost Process: Lower and Upper Bounds",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We tackle the problem of estimating risk measures of the infinite-horizon discounted cost of a Markov cost process. The risk measures we study include variance, Value-at-Risk (VaR), and Conditional Value-at-Risk (CVaR). First, we show that estimating any of these risk measures with $\\epsilon$-accuracy, either in expected or high-probability sense, requires at least $\\Omega(1/\\epsilon^2)$ samples. Then, using a truncation scheme, we derive an upper bound for the CVaR and variance estimation. This bound matches our lower bound up to logarithmic factors. Finally, we discuss an extension of our estimation scheme that covers more general risk measures satisfying a certain continuity criterion, such as spectral risk measures and utility-based shortfall risk. To the best of our knowledge, our work is the first to provide lower and upper bounds for estimating any risk measure beyond the mean within a Markovian setting. Our lower bounds also extend to the infinite-horizon discounted costs' mean. Even in that case, our lower bound of $\\Omega(1/\\epsilon^2) $ improves upon the existing $\\Omega(1/\\epsilon)$ bound (Metelli et al. 2023.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/34863",
+      "pdf_url": "https://openreview.net/pdf?id=7xzhKEPfBo",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Gugan_Thoppe1",
+        "name": "Gugan Thoppe",
+        "name_site": "Gugan Chandrashekhar Mallika Thoppe, Prashanth L.A., Sanjay Bhat",
+        "openreview_id": "~Gugan_Thoppe1",
+        "position": 1,
+        "gender": "M",
+        "homepage_url": null,
+        "dblp_id": "117/3710",
+        "google_scholar_url": "https://scholar.google.co.in/citations?user=X5zV3s8AAAAJ",
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 0,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "8ySQaphUYH",
+      "title": "WISER: Weak Supervision and Supervised Representation Learning to Improve Drug Response Prediction in Cancer",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Cancer, a leading cause of death globally, occurs due to genomic changes and manifests heterogeneously across patients. To advance research on personalized treatment strategies, the effectiveness of various drugs on cells derived from cancers ('cell lines') is experimentally determined in laboratory settings. Nevertheless, variations in the distribution of genomic data and drug responses between cell lines and humans arise due to biological and environmental differences. Moreover, while genomic profiles of many cancer patients are readily available, the scarcity of corresponding drug response data limits the ability to train machine learning models that can predict drug response in patients effectively. Recent cancer drug response prediction methods have largely followed the paradigm of unsupervised domain-invariant representation learning followed by a downstream drug response classification step. Introducing supervision in both stages is challenging due to heterogeneous patient response to drugs and limited drug response data. This paper addresses these challenges through a novel representation learning method in the first phase and weak supervision in the second. Experimental results on real patient data demonstrate the efficacy of our method WISER (Weak supervISion and supErvised Representation learning) over state-of-the-art alternatives on predicting personalized drug response. Our implementation is available at https://github.com/kyrs/WISER",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/34824",
+      "pdf_url": "https://openreview.net/pdf?id=8ySQaphUYH",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Kumar_Shubham1",
+        "name": "Kumar Shubham",
+        "name_site": "Kumar Shubham, Aishwarya Jayagopal, Syed Danish, Prathosh AP, Vaibhav Rajan",
+        "openreview_id": "~Kumar_Shubham1",
+        "position": 1,
+        "gender": "M",
+        "homepage_url": "https://kyrs.github.io/",
+        "dblp_id": null,
+        "google_scholar_url": "JBb0tXMAAAAJ",
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 2,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "GwA4go0Mw4",
+      "title": "Representation Surgery: Theory and Practice of Affine Steering",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Language models often exhibit undesirable behavior, e.g., generating toxic or gender-biased text. In the case of neural language models, an encoding of the undesirable behavior is often present in the model's representations. Thus, one natural (and common) approach to prevent the model from exhibiting undesirable behavior is to steer the model's representations in a manner that reduces the probability of it generating undesirable text. This paper investigates the formal and empirical properties of steering functions, i.e., transformation of the neural language model's representations that alter its behavior. First, we derive two optimal, in the least-squares sense, affine steering functions under different constraints. Our theory provides justification for existing approaches and offers a novel, improved steering approach. Second, we offer a series of experiments that demonstrate the empirical effectiveness of the methods in mitigating bias and reducing toxic generation.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/34483",
+      "pdf_url": "https://openreview.net/pdf?id=GwA4go0Mw4",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Shashwat_Singh1",
+        "name": "Shashwat Singh",
+        "name_site": "Shashwat Singh, Shauli Ravfogel, Jonathan Herzig, Roee Aharoni, Ryan Cotterell, Ponnurangam Kumaraguru",
+        "openreview_id": "~Shashwat_Singh1",
+        "position": 1,
+        "gender": "M",
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": "shashwat-singh-bb6872111/",
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "International Institute of Information Technology (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 8,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "KHymcy2xxF",
+      "title": "Leverage Class-Specific Accuracy to Guide Data Generation for Improving Image Classification",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In many image classification applications, the number of labeled training images is limited, which leads to model overfitting. To mitigate the lack of training data, deep generative models have been leveraged to generate synthetic training data. However, existing methods generate data for individual classes based on how much training data they have without considering their actual data needs. To address this limitation, we propose needs-aware image generation, which automatically identifies the different data needs of individual classes based on their classification performance and divides a limited data generation budget into these classes according to their needs. We propose a multi-level optimization based framework which performs four learning stages in an end-to-end manner. Experiments on both imbalanced and balanced classification datasets demonstrate the effectiveness of our proposed method.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/34350",
+      "pdf_url": "https://openreview.net/pdf?id=KHymcy2xxF",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Jay_Gala1",
+        "name": "Jay Gala",
+        "name_site": "Jay Gala, Pengtao Xie",
+        "openreview_id": "~Jay_Gala1",
+        "position": 1,
+        "gender": "M",
+        "homepage_url": "https://jaygala24.github.io",
+        "dblp_id": "308/1490",
+        "google_scholar_url": "https://scholar.google.com/citations?hl=en",
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "AI4Bharat (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 0,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "OQ7TlOphGX",
+      "title": "Enhancing Trajectory Prediction through Self-Supervised Waypoint Distortion Prediction",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Trajectory prediction is an important task that involves modeling the indeterminate nature of agents to forecast future trajectories given the observed trajectory sequences. The task of predicting trajectories poses significant challenges, as agents not only move individually through time but also interact spatially. The learning of complex spatio-temporal representations stands as a fundamental challenge in trajectory prediction. To this end, we propose a novel approach called SSWDP (Self-Supervised Waypoint Distortion Prediction). We propose a simple yet highly effective self-supervised task of predicting distortion present in the observed trajectories to improve the representation learning of the model. Our approach can complement existing trajectory prediction methods. The experimental results highlight a significant improvement with relative percentage differences of 22.7%/38.9%, 33.8%/36.4%, and 16.60%/23.20% in ADE/FDE for the NBA, TrajNet++, and ETH-UCY datasets, respectively, compared to the baseline methods. Our approach also demonstrates a significant improvement over baseline methods with relative percentage differences of 76.8%/82.5% and 61.0%/36.1% in ADE/FDE for TrajNet++ and NBA datasets in distorted environments, respectively.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/34165",
+      "pdf_url": "https://openreview.net/pdf?id=OQ7TlOphGX",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Pranav_singh_chib1",
+        "name": "Pranav singh chib",
+        "name_site": "Pranav Singh Chib, Pravendra Singh",
+        "openreview_id": "~Pranav_singh_chib1",
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 3,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "bfQCO9Vqhk",
+      "title": "Submodular framework for structured-sparse optimal transport",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Unbalanced optimal transport (UOT) has recently gained much attention due to its flexible framework for handling un-normalized measures and its robustness properties. In this work, we explore learning (structured) sparse transport plans in the UOT setting, i.e., transport plans have an upper bound on the number of non-sparse entries in each column (structured sparse pattern) or in the whole plan (general sparse pattern). We propose novel sparsity-constrained UOT formulations building on the recently explored maximum mean discrepancy based UOT. We show that the proposed optimization problem is equivalent to the maximization of a weakly submodular function over a uniform matroid or a partition matroid. We develop efficient gradient-based discrete greedy algorithms and provide the corresponding theoretical guarantees. Empirically, we observe that our proposed greedy algorithms select a diverse support set and we illustrate the efficacy of the proposed approach in various applications.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/33628",
+      "pdf_url": "https://openreview.net/pdf?id=bfQCO9Vqhk",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Piyushi_Manupriya1",
+        "name": "Piyushi Manupriya",
+        "name_site": "Piyushi Manupriya, Pratik Kumar Jawanpuria, Karthik Gurumoorthy, Sakethanath Jagarlapudi, Bamdev Mishra",
+        "openreview_id": "~Piyushi_Manupriya1",
+        "position": 1,
+        "gender": "F",
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": "-9baEZEAAAAJ",
+        "orcid": "0009-0000-7563-193X",
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Hyderabad (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 2,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "eo88noTbb5",
+      "title": "Agnostic Learning of Mixed Linear Regressions with EM and AM Algorithms",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Mixed linear regression is a well-studied problem in parametric statistics and machine learning. Given a set of samples, tuples of covariates and labels, the task of mixed linear regression is to find a small list of linear relationships that best fit the samples. Usually it is assumed that the label is generated stochastically by randomly selecting one of two or more linear functions, applying this chosen function to the covariates, and potentially introducing noise to the result. In that situation, the objective is to estimate the ground-truth linear functions up to some parameter error. The popular expectation maximization (EM) and alternating minimization (AM) algorithms have been previously analyzed for this. In this paper, we consider the more general problem of agnostic learning of mixed linear regression from samples, without such generative models. In particular, we show that the AM and EM algorithms, under standard conditions of separability and good initialization, lead to agnostic learning in mixed linear regression by converging to the population loss minimizers, for suitably defined loss functions. In some sense, this shows the strength of AM and EM algorithms that converges to ``optimal solutions'' even in the absence of realizable generative models.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/33479",
+      "pdf_url": "https://openreview.net/pdf?id=eo88noTbb5",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Avishek_Ghosh2",
+        "name": "Avishek Ghosh",
+        "name_site": "Avishek Ghosh, Arya Mazumdar",
+        "openreview_id": "~Avishek_Ghosh2",
+        "position": 1,
+        "gender": "M",
+        "homepage_url": "https://sites.google.com/view/avishekghosh",
+        "dblp_id": "98/275",
+        "google_scholar_url": "8y0Dg5cAAAAJ",
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 0,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "iUwHnoENnl",
+      "title": "Model Alignment as Prospect Theoretic Optimization",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Kahneman & Tversky's $\\textit{prospect theory}$ tells us that humans perceive random variables in a biased but well-defined manner (1992); for example, humans are famously loss-averse. We show that objectives for aligning LLMs with human feedback implicitly incorporate many of these biases---the success of these objectives (e.g., DPO) over cross-entropy minimization can partly be ascribed to them belonging to a family of loss functions that we call $\\textit{human-aware losses}$ (HALOs). However, the utility functions these methods attribute to humans still differ from those in the prospect theory literature. Using a Kahneman-Tversky model of human utility, we propose a HALO that directly maximizes the utility of generations instead of maximizing the log-likelihood of preferences, as current methods do. We call this approach KTO, and it matches or exceeds the performance of preference-based methods at scales from 1B to 30B, despite only learning from a binary signal of whether an output is desirable. More broadly, our work suggests that there is no one HALO that is universally superior; the best loss depends on the inductive biases most appropriate for a given setting, an oft-overlooked consideration.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/33352",
+      "pdf_url": "https://openreview.net/pdf?id=iUwHnoENnl",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Douwe_Kiela1",
+        "name": "Douwe Kiela",
+        "name_site": null,
+        "openreview_id": "~Douwe_Kiela1",
+        "position": 5,
+        "gender": "M",
+        "homepage_url": "https://douwekiela.github.io",
+        "dblp_id": "136/9140",
+        "google_scholar_url": "Q0piorUAAAAJ",
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": null,
+        "countries": [],
+        "country_codes": []
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 32,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "l6Hef6FVd0",
+      "title": "PIPER: Primitive-Informed Preference-based Hierarchical Reinforcement Learning via Hindsight Relabeling",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In this work, we introduce PIPER: Primitive-Informed Preference-based Hierarchical reinforcement learning via Hindsight Relabeling, a novel approach that leverages preference-based learning to learn a reward model, and subsequently uses this reward model to relabel higher-level replay buffers. Since this reward is unaffected by lower primitive behavior, our relabeling-based approach is able to mitigate non-stationarity, which is common in existing hierarchical approaches, and demonstrates impressive performance across a range of challenging sparse-reward tasks. Since obtaining human feedback is typically impractical, we propose to replace the human-in-the-loop approach with our primitive-in-the-loop approach, which generates feedback using sparse rewards provided by the environment. Moreover, in order to prevent infeasible subgoal prediction and avoid degenerate solutions, we propose primitive-informed regularization that conditions higher-level policies to generate feasible subgoals for lower-level policies. We perform extensive experiments to show that PIPER mitigates non-stationarity in hierarchical reinforcement learning and achieves greater than 50$\\\\%$ success rates in challenging, sparse-reward robotic environments, where most other baselines fail to achieve any significant progress.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/33225",
+      "pdf_url": "https://openreview.net/pdf?id=l6Hef6FVd0",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Utsav_Singh1",
+        "name": "Utsav Singh",
+        "name_site": "Utsav Singh, Wesley A. Suttle, Brian Sadler, Vinay Namboodiri, Amrit Singh Bedi",
+        "openreview_id": "~Utsav_Singh1",
+        "position": 1,
+        "gender": "M",
+        "homepage_url": "https://www.cse.iitk.ac.in/users/utsavz/",
+        "dblp_id": "241/9336",
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Kanpur (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 5,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "merZTLSdC9",
+      "title": "On Online Experimentation without Device Identifiers",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Measuring human feedback via randomized experimentation is a cornerstone of data-driven decision-making. The methodology used to estimate user preferences from their online behaviours is critically dependent on user identifiers. However, in today's digital landscape, consumers frequently interact with content across multiple devices, which are often recorded with different identifiers for the same consumer. The inability to match different device identities across consumers poses significant challenges for accurately estimating human preferences and other causal effects. Moreover, without strong assumptions about the device-user graph, the causal effects might not be identifiable. In this paper, we propose HIFIVE, a variational method to solve the problem of estimating global average treatment effects (GATE) from a fragmented view of exposures and outcomes. Experiments show that our estimator is superior to standard estimators, with a lower bias and greater robustness to network uncertainty.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/33162",
+      "pdf_url": "https://openreview.net/pdf?id=merZTLSdC9",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Shiv_Shankar2",
+        "name": "Shiv Shankar",
+        "name_site": "Shiv Shankar, Ritwik Sinha, Madalina Fiterau",
+        "openreview_id": "~Shiv_Shankar2",
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": "203/9123",
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 1,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "o5SVr80Rgg",
+      "title": "PairNet: Training with Observed Pairs to Estimate Individual Treatment Effect",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Given a dataset of individuals each described by a covariate vector, a treatment, and an observed outcome on the treatment, the goal of the individual treatment effect (ITE) estimation task is to predict outcome changes resulting from a change in treatment. A fundamental challenge is that in the observational data, a covariate’s outcome is observed only under one treatment, whereas we need to infer the difference in outcomes under two different treatments. Several existing approaches address this issue through training with inferred pseudo-outcomes, but their success relies on the quality of these pseudo-outcomes. We propose PairNet, a novel ITE estimation training strategy that minimizes losses over pairs of examples based on their factual observed outcomes. Theoretical analysis for binary treatments reveals that PairNet is a consistent estimator of ITE risk, and achieves smaller generalization error than baseline models. Empirical comparison with thirteen existing methods across eight benchmarks, covering both discrete and continuous treatments, shows that PairNet achieves significantly lower ITE error compared to the baselines. Also, it is model-agnostic and easy to implement.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/33097",
+      "pdf_url": "https://openreview.net/pdf?id=o5SVr80Rgg",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Lokesh_Nagalapatti1",
+        "name": "Lokesh Nagalapatti",
+        "name_site": "Lokesh Nagalapatti, Pranava Singhal, Avishek Ghosh, Sunita Sarawagi",
+        "openreview_id": "~Lokesh_Nagalapatti1",
+        "position": 1,
+        "gender": null,
+        "homepage_url": "https://nlokesh.netlify.app/",
+        "dblp_id": "259/2681.html",
+        "google_scholar_url": "BkkZbo0AAAAJ",
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 0,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "s4Hy0L4mml",
+      "title": "MS-TIP: Imputation Aware Pedestrian Trajectory Prediction",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Pedestrian trajectory prediction aims to predict future trajectories based on observed trajectories. Current state-of-the-art methods often assume that the observed sequences of agents are complete, which is a strong assumption that overlooks inherent uncertainties. Understanding pedestrian behavior when dealing with missing values in the observed sequence is crucial for enhancing the performance of predictive models. In this work, we propose the MultiScale hypergraph for Trajectory Imputation and Prediction (MS-TIP), a novel approach that simultaneously addresses the imputation of missing observations and the prediction of future trajectories. Specifically, we leverage transformers with diagonal masked self-attention to impute incomplete observations. Further, our approach promotes complex interaction modeling through multi-scale hypergraphs, optimizing our trajectory prediction module to capture different types of interactions. With the inclusion of scenic attention, we learn contextual scene information, instead of sole reliance on coordinates. Additionally, our approach utilizes an intermediate control point and refinement module to infer future trajectories accurately. Extensive experiments validate the efficacy of MS-TIP in precisely predicting pedestrian future trajectories. Code is publicly available at https://github.com/Pranav-chib/MS-TIP.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/32928",
+      "pdf_url": "https://openreview.net/pdf?id=s4Hy0L4mml",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Pranav_singh_chib1",
+        "name": "Pranav singh chib",
+        "name_site": "Pranav Singh Chib, Pravendra Singh",
+        "openreview_id": "~Pranav_singh_chib1",
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 4,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "tTtSnpH4fc",
+      "title": "Finite Time Logarithmic Regret Bounds for Self-Tuning Regulation",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We establish the first finite-time logarithmic regret bounds for the self-tuning regulation problem. We introduce a modified version of the certainty equivalence algorithm, which we call PIECE, that clips inputs in addition to utilizing probing inputs for exploration. We show that it has a $C \\log T$ upper bound on the regret after $T$ time-steps for bounded noise, and $C\\log^3 T$ in the case of sub-Gaussian noise, unlike the LQ problem where logarithmic regret is shown to be not possible. The PIECE algorithm is also designed to address the critical challenge of poor initial transient performance of reinforcement learning algorithms for linear systems. Comparative simulation results illustrate the improved performance of PIECE.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/32865",
+      "pdf_url": "https://openreview.net/pdf?id=tTtSnpH4fc",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Rahul_Singh5",
+        "name": "Rahul Singh",
+        "name_site": "Rahul Singh, Akshay Mete, Avik Kar, P. R. Kumar",
+        "openreview_id": "~Rahul_Singh5",
+        "position": 1,
+        "gender": "M",
+        "homepage_url": "https://sites.google.com/view/rsingh12/home",
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 0,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "7xzhKEPfBo",
+      "title": "Risk Estimation in a Markov Cost Process: Lower and Upper Bounds",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We tackle the problem of estimating risk measures of the infinite-horizon discounted cost of a Markov cost process. The risk measures we study include variance, Value-at-Risk (VaR), and Conditional Value-at-Risk (CVaR). First, we show that estimating any of these risk measures with $\\epsilon$-accuracy, either in expected or high-probability sense, requires at least $\\Omega(1/\\epsilon^2)$ samples. Then, using a truncation scheme, we derive an upper bound for the CVaR and variance estimation. This bound matches our lower bound up to logarithmic factors. Finally, we discuss an extension of our estimation scheme that covers more general risk measures satisfying a certain continuity criterion, such as spectral risk measures and utility-based shortfall risk. To the best of our knowledge, our work is the first to provide lower and upper bounds for estimating any risk measure beyond the mean within a Markovian setting. Our lower bounds also extend to the infinite-horizon discounted costs' mean. Even in that case, our lower bound of $\\Omega(1/\\epsilon^2) $ improves upon the existing $\\Omega(1/\\epsilon)$ bound (Metelli et al. 2023.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/34863",
+      "pdf_url": "https://openreview.net/pdf?id=7xzhKEPfBo",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Sanjay_P._Bhat1",
+        "name": "Sanjay P. Bhat",
+        "name_site": null,
+        "openreview_id": "~Sanjay_P._Bhat1",
+        "position": 3,
+        "gender": "M",
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": "CL6xIH8AAAAJ",
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Tata Consultancy Services Limited (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 0,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "bfQCO9Vqhk",
+      "title": "Submodular framework for structured-sparse optimal transport",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Unbalanced optimal transport (UOT) has recently gained much attention due to its flexible framework for handling un-normalized measures and its robustness properties. In this work, we explore learning (structured) sparse transport plans in the UOT setting, i.e., transport plans have an upper bound on the number of non-sparse entries in each column (structured sparse pattern) or in the whole plan (general sparse pattern). We propose novel sparsity-constrained UOT formulations building on the recently explored maximum mean discrepancy based UOT. We show that the proposed optimization problem is equivalent to the maximization of a weakly submodular function over a uniform matroid or a partition matroid. We develop efficient gradient-based discrete greedy algorithms and provide the corresponding theoretical guarantees. Empirically, we observe that our proposed greedy algorithms select a diverse support set and we illustrate the efficacy of the proposed approach in various applications.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/33628",
+      "pdf_url": "https://openreview.net/pdf?id=bfQCO9Vqhk",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Bamdev_Mishra1_1",
+        "name": "Bamdev Mishra",
+        "name_site": null,
+        "openreview_id": "~J._Nath1",
+        "position": 5,
+        "gender": "M",
+        "homepage_url": "https://people.iith.ac.in/saketha/research.html",
+        "dblp_id": "45/3130",
+        "google_scholar_url": "https://scholar.google.com.tw/citations?user=k70LrvsAAAAJ",
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Hyderabad (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 2,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "o5SVr80Rgg",
+      "title": "PairNet: Training with Observed Pairs to Estimate Individual Treatment Effect",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Given a dataset of individuals each described by a covariate vector, a treatment, and an observed outcome on the treatment, the goal of the individual treatment effect (ITE) estimation task is to predict outcome changes resulting from a change in treatment. A fundamental challenge is that in the observational data, a covariate’s outcome is observed only under one treatment, whereas we need to infer the difference in outcomes under two different treatments. Several existing approaches address this issue through training with inferred pseudo-outcomes, but their success relies on the quality of these pseudo-outcomes. We propose PairNet, a novel ITE estimation training strategy that minimizes losses over pairs of examples based on their factual observed outcomes. Theoretical analysis for binary treatments reveals that PairNet is a consistent estimator of ITE risk, and achieves smaller generalization error than baseline models. Empirical comparison with thirteen existing methods across eight benchmarks, covering both discrete and continuous treatments, shows that PairNet achieves significantly lower ITE error compared to the baselines. Also, it is model-agnostic and easy to implement.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/33097",
+      "pdf_url": "https://openreview.net/pdf?id=o5SVr80Rgg",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Sunita_Sarawagi1",
+        "name": "Sunita Sarawagi",
+        "name_site": null,
+        "openreview_id": "~Sunita_Sarawagi1",
+        "position": 4,
+        "gender": "F",
+        "homepage_url": "https://www.cse.iitb.ac.in/~sunita/",
+        "dblp_id": "s/SunitaSarawagi",
+        "google_scholar_url": "https://scholar.google.com.tw/citations?user=Hg4HmTAAAAAJ",
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": null,
+        "countries": [],
+        "country_codes": []
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 0,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "wmljUnbjy6",
+      "title": "Unsupervised Parameter-free Simplicial Representation Learning with Scattering Transforms",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Simplicial neural network models are becoming popular for processing and analyzing higher-order graph data, but they suffer from high training complexity and dependence on task-specific labels. To address these challenges, we propose simplicial scattering networks (SSNs), a parameter-free model inspired by scattering transforms designed to extract task-agnostic features from simplicial complex data without labels in a principled manner. Specifically, we propose a simplicial scattering transform based on random walk matrices for various adjacencies underlying a simplicial complex. We then use the simplicial scattering transform to construct a deep filter bank network that captures high-frequency information at multiple scales. The proposed simplicial scattering transform possesses properties such as permutation invariance, robustness to perturbations, and expressivity. We theoretically prove that including higher-order information improves the robustness of SSNs to perturbations. Empirical evaluations demonstrate that SSNs outperform existing simplicial or graph neural models in many tasks like node classification, simplicial closure, graph classification, trajectory prediction, and simplex prediction while being computationally efficient.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/32736",
+      "pdf_url": "https://openreview.net/pdf?id=wmljUnbjy6",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Sundeep_Prabhakar_Chepuri1",
+        "name": "Sundeep Prabhakar Chepuri",
+        "name_site": null,
+        "openreview_id": "~Sundeep_Prabhakar_Chepuri1",
+        "position": 3,
+        "gender": "M",
+        "homepage_url": "https://ece.iisc.ac.in/~spchepuri/",
+        "dblp_id": "72/10237.html",
+        "google_scholar_url": "Gu8FjdwAAAAJ",
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 3,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "nxzXTLByXO",
+      "title": "BRAIn: Bayesian Reward-conditioned Amortized Inference for natural language generation from feedback",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Distribution matching methods for language model alignment such as Generation with Distributional Control (GDC) and Distributional Policy Gradient (DPG) have not received the same level of attention in reinforcement learning from human feedback (RLHF) as contrastive methods such as Sequence Likelihood Calibration (SLiC), Direct Preference Optimization (DPO) and its variants. We identify high variance of the gradient estimate as the primary reason for the lack of success of these methods and propose a self-normalized baseline to reduce the variance. We further generalize the target distribution in DPG, GDC and DPO by using Bayes' rule to define the reward-conditioned posterior. The resulting approach, referred to as BRAIn - Bayesian Reward-conditioned Amortized Inference acts as a bridge between distribution matching methods and DPO and significantly outperforms prior art in summarization and Antropic HH tasks.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/33101",
+      "pdf_url": "https://openreview.net/pdf?id=nxzXTLByXO",
+      "github_url": "",
+      "total_authors": 9,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Yatin_Nandwani1",
+        "name": "Yatin Nandwani",
+        "name_site": null,
+        "openreview_id": "~Yatin_Nandwani1",
+        "position": 2,
+        "gender": "M",
+        "homepage_url": "http://www.cse.iitd.ac.in/~yatin",
+        "dblp_id": "255/7046",
+        "google_scholar_url": "https://scholar.google.com/citations?hl=en",
+        "orcid": null,
+        "linkedin_url": "yatin-nandwani-0804ba9/",
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 4.375,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 3,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "xlr6AUDuJz",
+      "title": "The WMDP Benchmark: Measuring and Reducing Malicious Use with Unlearning",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The White House Executive Order on Artificial Intelligence highlights the risks of large language models (LLMs) empowering malicious actors in developing biological, cyber, and chemical weapons. To measure these risks, government institutions and major AI labs are developing evaluations for hazardous capabilities in LLMs. However, current evaluations are private and restricted to a narrow range of malicious use scenarios, which limits further research into reducing malicious use. To fill these gaps, we release the Weapons of Mass Destruction Proxy (WMDP) benchmark, a dataset of 3,668 multiple-choice questions that serve as a proxy measurement of hazardous knowledge in biosecurity, cybersecurity, and chemical security. To guide progress on unlearning, we develop RMU, a state-of-the-art unlearning method based on controlling model representations. RMU reduces model performance on WMDP while maintaining general capabilities in areas such as biology and computer science, suggesting that unlearning may be a concrete path towards reducing malicious use from LLMs. We release our benchmark and code publicly at https://wmdp.ai.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/32695",
+      "pdf_url": "https://openreview.net/pdf?id=xlr6AUDuJz",
+      "github_url": "",
+      "total_authors": 46,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Shashwat_Goel1",
+        "name": "Shashwat Goel",
+        "name_site": null,
+        "openreview_id": "~Shashwat_Goel1",
+        "position": 9,
+        "gender": "M",
+        "homepage_url": "https://shash42.github.io/",
+        "dblp_id": "300/8333.html",
+        "google_scholar_url": "exaNV-0AAAAJ",
+        "orcid": null,
+        "linkedin_url": "shashwatgoel42/",
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Stanford University (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 4.111111111111111,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 145,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6OSLjErBhh",
+      "title": "Total Variation Distance Meets Probabilistic Inference",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In this paper, we establish a novel connection between total variation (TV) distance estimation and probabilistic inference. In particular, we present an efficient, structure-preserving reduction from relative approximation of TV distance to probabilistic inference over directed graphical models. This reduction leads to a fully polynomial randomized approximation scheme (FPRAS) for estimating TV distances between same-structure distributions over any class of Bayes nets for which there is an efficient probabilistic inference algorithm. In particular, it leads to an FPRAS for estimating TV distances between distributions that are defined over a common Bayes net of small treewidth. Prior to this work, such approximation schemes only existed for estimating TV distances between product distributions. Our approach employs a new notion of *partial* couplings of high-dimensional distributions, which might be of independent interest.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/34925",
+      "pdf_url": "https://openreview.net/pdf?id=6OSLjErBhh",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Sutanu_Gayen1",
+        "name": "Sutanu Gayen",
+        "name_site": null,
+        "openreview_id": "~Sutanu_Gayen1",
+        "position": 2,
+        "gender": "M",
+        "homepage_url": null,
+        "dblp_id": "183/2766",
+        "google_scholar_url": "aqd7jKoAAAAJ",
+        "orcid": "0000-0003-3300-1627",
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Kanpur (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 4.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 6,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "64MQCia06B",
+      "title": "Deep Stochastic Mechanics",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "This paper introduces a novel deep-learning-based approach for numerical simulation of a time-evolving Schrödinger equation inspired by stochastic mechanics and generative diffusion models. Unlike existing approaches, which exhibit computational complexity that scales exponentially in the problem dimension, our method allows us to adapt to the latent low-dimensional structure of the wave function by sampling from the Markovian diffusion. Depending on the latent dimension, our method may have far lower computational complexity in higher dimensions. Moreover, we propose novel equations for stochastic quantum mechanics, resulting in quadratic computational complexity with respect to the number of dimensions. Numerical simulations verify our theoretical findings and show a significant advantage of our method compared to other deep-learning-based approaches used for quantum mechanics.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/34944",
+      "pdf_url": "https://openreview.net/pdf?id=64MQCia06B",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Aleksei_Ustimenko1",
+        "name": "Aleksei Ustimenko",
+        "name_site": null,
+        "openreview_id": "~Aleksei_Ustimenko1",
+        "position": 2,
+        "gender": "M",
+        "homepage_url": null,
+        "dblp_id": "242/3873",
+        "google_scholar_url": "OES5pK4AAAAJ",
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "University of Chicago (United States)",
+        "countries": [
+          "United States"
+        ],
+        "country_codes": [
+          "US"
+        ]
+      },
+      "sort_score": 3.75,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 1,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "s4Hy0L4mml",
+      "title": "MS-TIP: Imputation Aware Pedestrian Trajectory Prediction",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Pedestrian trajectory prediction aims to predict future trajectories based on observed trajectories. Current state-of-the-art methods often assume that the observed sequences of agents are complete, which is a strong assumption that overlooks inherent uncertainties. Understanding pedestrian behavior when dealing with missing values in the observed sequence is crucial for enhancing the performance of predictive models. In this work, we propose the MultiScale hypergraph for Trajectory Imputation and Prediction (MS-TIP), a novel approach that simultaneously addresses the imputation of missing observations and the prediction of future trajectories. Specifically, we leverage transformers with diagonal masked self-attention to impute incomplete observations. Further, our approach promotes complex interaction modeling through multi-scale hypergraphs, optimizing our trajectory prediction module to capture different types of interactions. With the inclusion of scenic attention, we learn contextual scene information, instead of sole reliance on coordinates. Additionally, our approach utilizes an intermediate control point and refinement module to infer future trajectories accurately. Extensive experiments validate the efficacy of MS-TIP in precisely predicting pedestrian future trajectories. Code is publicly available at https://github.com/Pranav-chib/MS-TIP.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/32928",
+      "pdf_url": "https://openreview.net/pdf?id=s4Hy0L4mml",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Achintya_Nath1",
+        "name": "Achintya Nath",
+        "name_site": null,
+        "openreview_id": "~Achintya_Nath1",
+        "position": 2,
+        "gender": "M",
+        "homepage_url": "https://channeli.in/student_profile/20114003/",
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": "achintya-nath",
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.75,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 4,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "xlr6AUDuJz",
+      "title": "The WMDP Benchmark: Measuring and Reducing Malicious Use with Unlearning",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The White House Executive Order on Artificial Intelligence highlights the risks of large language models (LLMs) empowering malicious actors in developing biological, cyber, and chemical weapons. To measure these risks, government institutions and major AI labs are developing evaluations for hazardous capabilities in LLMs. However, current evaluations are private and restricted to a narrow range of malicious use scenarios, which limits further research into reducing malicious use. To fill these gaps, we release the Weapons of Mass Destruction Proxy (WMDP) benchmark, a dataset of 3,668 multiple-choice questions that serve as a proxy measurement of hazardous knowledge in biosecurity, cybersecurity, and chemical security. To guide progress on unlearning, we develop RMU, a state-of-the-art unlearning method based on controlling model representations. RMU reduces model performance on WMDP while maintaining general capabilities in areas such as biology and computer science, suggesting that unlearning may be a concrete path towards reducing malicious use from LLMs. We release our benchmark and code publicly at https://wmdp.ai.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/32695",
+      "pdf_url": "https://openreview.net/pdf?id=xlr6AUDuJz",
+      "github_url": "",
+      "total_authors": 46,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Andrew_Bo_Liu1",
+        "name": "Andrew Bo Liu",
+        "name_site": null,
+        "openreview_id": "~Andrew_Bo_Liu1",
+        "position": 14,
+        "gender": null,
+        "homepage_url": "https://abliu.github.io/",
+        "dblp_id": null,
+        "google_scholar_url": "2f2AIg4AAAAJ",
+        "orcid": "0000-0003-2222-9423",
+        "linkedin_url": "andrew-liu-phd-8bb07929/",
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Stanford University (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.555555555555556,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 145,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "C4jkx6AgWc",
+      "title": "Learning Latent Dynamic Robust Representations for World Models",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Visual Model-Based Reinforcement Learning (MBRL) promises to encapsulate agent's knowledge about the underlying dynamics of the environment, enabling learning a world model as a useful planner. However, top MBRL agents such as Dreamer often struggle with visual pixel-based inputs in the presence of exogenous or irrelevant noise in the observation space, due to failure to capture task-specific features while filtering out irrelevant spatio-temporal details. To tackle this problem, we apply a spatio-temporal masking strategy, a bisimulation principle, combined with latent reconstruction, to capture endogenous task-specific aspects of the environment for world models, effectively eliminating non-essential information. Joint training of representations, dynamics, and policy often leads to instabilities. To further address this issue, we develop a Hybrid Recurrent State-Space Model (HRSSM) structure, enhancing state representation robustness for effective policy learning. Our empirical evaluation demonstrates significant performance improvements over existing methods in a range of visually complex control tasks such as Maniskill with exogenous distractors from the Matterport environment. Our code is avaliable at https://github.com/bit1029public/HRSSM.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/34700",
+      "pdf_url": "https://openreview.net/pdf?id=C4jkx6AgWc",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Yonathan_Efroni2_1",
+        "name": "Yonathan Efroni",
+        "name_site": null,
+        "openreview_id": "~Hongyu_Zang1",
+        "position": 2,
+        "gender": "M",
+        "homepage_url": "https://zanghyu.github.io/",
+        "dblp_id": "212/2592.html",
+        "google_scholar_url": "2kmSy50AAAAJ",
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Meituan (China)",
+        "countries": [
+          "China"
+        ],
+        "country_codes": [
+          "CN"
+        ]
+      },
+      "sort_score": 3.333333333333334,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 4,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "mNzkumTSVL",
+      "title": "Overcoming Data and Model heterogeneities in Decentralized Federated Learning via Synthetic Anchors",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Conventional Federated Learning (FL) involves collaborative training of a global model while maintaining user data privacy. One of its branches, decentralized FL, is a serverless network that allows clients to own and optimize different local models separately, which results in saving management and communication resources. Despite the promising advancements in decentralized FL, it may reduce model generalizability due to lacking a global model. In this scenario, managing data and model heterogeneity among clients becomes a crucial problem, which poses a unique challenge that must be overcome: *How can every client's local model learn generalizable representation in a decentralized manner?* To address this challenge, we propose a novel **De**centralized FL technique by introducing **S**ynthetic **A**nchors, dubbed as DeSA. Based on the theory of domain adaptation and Knowledge Distillation (KD), we theoretically and empirically show that synthesizing global anchors based on raw data distribution facilitates mutual knowledge transfer. We further design two effective regularization terms for local training: *1) REG loss* that regularizes the distribution of the client's latent embedding with the anchors and *2) KD loss* that enables clients to learn from others. Through extensive experiments on diverse client data distributions, we showcase the effectiveness of DeSA in enhancing both inter- and intra-domain accuracy of each client. The implementation of DeSA can be found at: https://github.com/ubc-tea/DESA",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/33176",
+      "pdf_url": "https://openreview.net/pdf?id=mNzkumTSVL",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Kartik_Srinivas1",
+        "name": "Kartik Srinivas",
+        "name_site": null,
+        "openreview_id": "~Kartik_Srinivas1",
+        "position": 2,
+        "gender": "M",
+        "homepage_url": "https://kartiksrinivas007.github.io/",
+        "dblp_id": null,
+        "google_scholar_url": "https://scholar.google.co.in/citations?user=TxnwVpgAAAAJ",
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Hyderabad (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.333333333333334,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 7,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "o5SVr80Rgg",
+      "title": "PairNet: Training with Observed Pairs to Estimate Individual Treatment Effect",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Given a dataset of individuals each described by a covariate vector, a treatment, and an observed outcome on the treatment, the goal of the individual treatment effect (ITE) estimation task is to predict outcome changes resulting from a change in treatment. A fundamental challenge is that in the observational data, a covariate’s outcome is observed only under one treatment, whereas we need to infer the difference in outcomes under two different treatments. Several existing approaches address this issue through training with inferred pseudo-outcomes, but their success relies on the quality of these pseudo-outcomes. We propose PairNet, a novel ITE estimation training strategy that minimizes losses over pairs of examples based on their factual observed outcomes. Theoretical analysis for binary treatments reveals that PairNet is a consistent estimator of ITE risk, and achieves smaller generalization error than baseline models. Empirical comparison with thirteen existing methods across eight benchmarks, covering both discrete and continuous treatments, shows that PairNet achieves significantly lower ITE error compared to the baselines. Also, it is model-agnostic and easy to implement.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/33097",
+      "pdf_url": "https://openreview.net/pdf?id=o5SVr80Rgg",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "200070057@iitb.ac.in",
+        "name": "Pranava Singhal",
+        "name_site": null,
+        "openreview_id": "200070057@iitb.ac.in",
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.333333333333334,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 0,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "f3TUipYU3U",
+      "title": "HarmBench: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Automated red teaming holds substantial promise for uncovering and mitigating the risks associated with the malicious use of large language models (LLMs), yet the field lacks a standardized evaluation framework to rigorously assess new methods. To address this issue, we introduce HarmBench, a standardized evaluation framework for automated red teaming. We identify several desirable properties previously unaccounted for in red teaming evaluations and systematically design HarmBench to meet these criteria. Using HarmBench, we conduct a large-scale comparison of 18 red teaming methods and 33 target LLMs and defenses, yielding novel insights. We also introduce a highly efficient adversarial training method that greatly enhances LLM robustness across a wide range of attacks, demonstrating how HarmBench enables codevelopment of attacks and defenses. We open source HarmBench at https://github.com/centerforaisafety/HarmBench.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/33475",
+      "pdf_url": "https://openreview.net/pdf?id=f3TUipYU3U",
+      "github_url": "",
+      "total_authors": 12,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Zifan_Wang1",
+        "name": "Zifan Wang",
+        "name_site": null,
+        "openreview_id": "~Zifan_Wang1",
+        "position": 5,
+        "gender": "M",
+        "homepage_url": "https://www.zifanw.net",
+        "dblp_id": null,
+        "google_scholar_url": "HJOP3wMAAAAJ",
+        "orcid": null,
+        "linkedin_url": "zifan-wang-sail/",
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Center for AI Safety (United States)",
+        "countries": [
+          "United States"
+        ],
+        "country_codes": [
+          "US"
+        ]
+      },
+      "sort_score": 3.1818181818181817,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 270,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "xlr6AUDuJz",
+      "title": "The WMDP Benchmark: Measuring and Reducing Malicious Use with Unlearning",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The White House Executive Order on Artificial Intelligence highlights the risks of large language models (LLMs) empowering malicious actors in developing biological, cyber, and chemical weapons. To measure these risks, government institutions and major AI labs are developing evaluations for hazardous capabilities in LLMs. However, current evaluations are private and restricted to a narrow range of malicious use scenarios, which limits further research into reducing malicious use. To fill these gaps, we release the Weapons of Mass Destruction Proxy (WMDP) benchmark, a dataset of 3,668 multiple-choice questions that serve as a proxy measurement of hazardous knowledge in biosecurity, cybersecurity, and chemical security. To guide progress on unlearning, we develop RMU, a state-of-the-art unlearning method based on controlling model representations. RMU reduces model performance on WMDP while maintaining general capabilities in areas such as biology and computer science, suggesting that unlearning may be a concrete path towards reducing malicious use from LLMs. We release our benchmark and code publicly at https://wmdp.ai.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/32695",
+      "pdf_url": "https://openreview.net/pdf?id=xlr6AUDuJz",
+      "github_url": "",
+      "total_authors": 46,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Rishub_Tamirisa1",
+        "name": "Rishub Tamirisa",
+        "name_site": null,
+        "openreview_id": "~Rishub_Tamirisa1",
+        "position": 19,
+        "gender": "M",
+        "homepage_url": "https://rishub-tamirisa.github.io/research/",
+        "dblp_id": null,
+        "google_scholar_url": "mwqUAxwAAAAJ",
+        "orcid": null,
+        "linkedin_url": "rishubtamirisa/",
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Stanford University (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 145,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "7xzhKEPfBo",
+      "title": "Risk Estimation in a Markov Cost Process: Lower and Upper Bounds",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We tackle the problem of estimating risk measures of the infinite-horizon discounted cost of a Markov cost process. The risk measures we study include variance, Value-at-Risk (VaR), and Conditional Value-at-Risk (CVaR). First, we show that estimating any of these risk measures with $\\epsilon$-accuracy, either in expected or high-probability sense, requires at least $\\Omega(1/\\epsilon^2)$ samples. Then, using a truncation scheme, we derive an upper bound for the CVaR and variance estimation. This bound matches our lower bound up to logarithmic factors. Finally, we discuss an extension of our estimation scheme that covers more general risk measures satisfying a certain continuity criterion, such as spectral risk measures and utility-based shortfall risk. To the best of our knowledge, our work is the first to provide lower and upper bounds for estimating any risk measure beyond the mean within a Markovian setting. Our lower bounds also extend to the infinite-horizon discounted costs' mean. Even in that case, our lower bound of $\\Omega(1/\\epsilon^2) $ improves upon the existing $\\Omega(1/\\epsilon)$ bound (Metelli et al. 2023.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/34863",
+      "pdf_url": "https://openreview.net/pdf?id=7xzhKEPfBo",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Prashanth_L_A1",
+        "name": "Prashanth L A",
+        "name_site": null,
+        "openreview_id": "~Prashanth_L_A1",
+        "position": 2,
+        "gender": "M",
+        "homepage_url": "http://www.cse.iitm.ac.in/~prashla/",
+        "dblp_id": "90/3161",
+        "google_scholar_url": "https://scholar.google.co.in/citations?user=Q1YXWpoAAAAJ",
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Madras (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 0,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "8ySQaphUYH",
+      "title": "WISER: Weak Supervision and Supervised Representation Learning to Improve Drug Response Prediction in Cancer",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Cancer, a leading cause of death globally, occurs due to genomic changes and manifests heterogeneously across patients. To advance research on personalized treatment strategies, the effectiveness of various drugs on cells derived from cancers ('cell lines') is experimentally determined in laboratory settings. Nevertheless, variations in the distribution of genomic data and drug responses between cell lines and humans arise due to biological and environmental differences. Moreover, while genomic profiles of many cancer patients are readily available, the scarcity of corresponding drug response data limits the ability to train machine learning models that can predict drug response in patients effectively. Recent cancer drug response prediction methods have largely followed the paradigm of unsupervised domain-invariant representation learning followed by a downstream drug response classification step. Introducing supervision in both stages is challenging due to heterogeneous patient response to drugs and limited drug response data. This paper addresses these challenges through a novel representation learning method in the first phase and weak supervision in the second. Experimental results on real patient data demonstrate the efficacy of our method WISER (Weak supervISion and supErvised Representation learning) over state-of-the-art alternatives on predicting personalized drug response. Our implementation is available at https://github.com/kyrs/WISER",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/34824",
+      "pdf_url": "https://openreview.net/pdf?id=8ySQaphUYH",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Syed_Mohammed_Danish1",
+        "name": "Syed Mohammed Danish",
+        "name_site": null,
+        "openreview_id": "~Syed_Mohammed_Danish1",
+        "position": 3,
+        "gender": "M",
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": "syed-danish-1769489a/",
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Patna (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 2,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "bID9PiBFpT",
+      "title": "Policy Evaluation for Variance in Average Reward Reinforcement Learning",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We consider an average reward reinforcement learning (RL) problem and work with asymptotic variance as a risk measure to model safety-critical applications. We design a temporal-difference (TD) type algorithm tailored for policy evaluation in this context. Our algorithm is based on linear stochastic approximation of an equivalent formulation of the asymptotic variance in terms of the solution of the Poisson equation. We consider both the tabular and linear function approximation settings, and establish $\\tilde {O}(1/k)$ finite time convergence rate, where $k$ is the number of steps of the algorithm. Our work paves the way for developing actor-critic style algorithms for variance-constrained RL. To the best of our knowledge, our result provides the first sequential estimator for asymptotic variance of a Markov chain with provable finite sample guarantees, which is of independent interest.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/33647",
+      "pdf_url": "https://openreview.net/pdf?id=bID9PiBFpT",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Prashanth_L_A1",
+        "name": "Prashanth L A",
+        "name_site": null,
+        "openreview_id": "~Prashanth_L_A1",
+        "position": 2,
+        "gender": "M",
+        "homepage_url": "http://www.cse.iitm.ac.in/~prashla/",
+        "dblp_id": "90/3161",
+        "google_scholar_url": "https://scholar.google.co.in/citations?user=Q1YXWpoAAAAJ",
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Madras (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 2,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "eqIGoEoI10",
+      "title": "Asymptotically Optimal and Computationally Efficient Average Treatment Effect Estimation in A/B testing",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Motivated by practical applications in clinical trials and online platforms, we study A/B testing with the aim of estimating a confidence interval (CI) for the average treatment effect (ATE) using the minimum expected sample size. This CI should have a width at most $\\epsilon$ while ensuring that the probability of the CI not containing the true ATE is at most $\\delta$. To answer this, we first establish a lower bound on the expected sample size needed for any adaptive policy which constructs a CI of ATE with desired properties. Specifically, we prove that the lower bound is based on the solution to a max-min non-convex optimization problem for small $\\delta$. Tailoring the ``plug-in'' approach for the ATE problem, we construct an adaptive policy that is asymptotically optimal, i.e., matches the lower bound on the expected sample size for small $\\delta$. Interestingly, we find that, for small $\\epsilon$ and $\\delta$, the asymptotically optimal fraction of treatment assignment for A and B is proportional to the standard deviation of the outcome distributions of treatments A and B, respectively. However, as the proposed approach can be computationally intensive, we propose an alternative adaptive policy. This new policy, informed by insights from our lower bound analysis, is computationally efficient while remaining asymptotically optimal for small values of $\\epsilon$ and $\\delta$. Numerical comparisons demonstrate that both policies perform similarly across practical values of $\\epsilon$ and $\\delta$, offering efficient solutions for A/B testing.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/33478",
+      "pdf_url": "https://openreview.net/pdf?id=eqIGoEoI10",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "a-bassamboo@kellogg.northwestern.edu",
+        "name": "Achal Bassamboo",
+        "name_site": null,
+        "openreview_id": "a-bassamboo@kellogg.northwestern.edu",
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Tata Institute of Fundamental Research (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 0,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "s4Hy0L4mml",
+      "title": "MS-TIP: Imputation Aware Pedestrian Trajectory Prediction",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Pedestrian trajectory prediction aims to predict future trajectories based on observed trajectories. Current state-of-the-art methods often assume that the observed sequences of agents are complete, which is a strong assumption that overlooks inherent uncertainties. Understanding pedestrian behavior when dealing with missing values in the observed sequence is crucial for enhancing the performance of predictive models. In this work, we propose the MultiScale hypergraph for Trajectory Imputation and Prediction (MS-TIP), a novel approach that simultaneously addresses the imputation of missing observations and the prediction of future trajectories. Specifically, we leverage transformers with diagonal masked self-attention to impute incomplete observations. Further, our approach promotes complex interaction modeling through multi-scale hypergraphs, optimizing our trajectory prediction module to capture different types of interactions. With the inclusion of scenic attention, we learn contextual scene information, instead of sole reliance on coordinates. Additionally, our approach utilizes an intermediate control point and refinement module to infer future trajectories accurately. Extensive experiments validate the efficacy of MS-TIP in precisely predicting pedestrian future trajectories. Code is publicly available at https://github.com/Pranav-chib/MS-TIP.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/32928",
+      "pdf_url": "https://openreview.net/pdf?id=s4Hy0L4mml",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Paritosh_Kabra1",
+        "name": "Paritosh Kabra",
+        "name_site": null,
+        "openreview_id": "~Paritosh_Kabra1",
+        "position": 3,
+        "gender": "M",
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": "0009-0003-8115-3569",
+        "linkedin_url": "paritosh-kabra-480b51201/",
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology, Roorkee (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 4,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "wmljUnbjy6",
+      "title": "Unsupervised Parameter-free Simplicial Representation Learning with Scattering Transforms",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Simplicial neural network models are becoming popular for processing and analyzing higher-order graph data, but they suffer from high training complexity and dependence on task-specific labels. To address these challenges, we propose simplicial scattering networks (SSNs), a parameter-free model inspired by scattering transforms designed to extract task-agnostic features from simplicial complex data without labels in a principled manner. Specifically, we propose a simplicial scattering transform based on random walk matrices for various adjacencies underlying a simplicial complex. We then use the simplicial scattering transform to construct a deep filter bank network that captures high-frequency information at multiple scales. The proposed simplicial scattering transform possesses properties such as permutation invariance, robustness to perturbations, and expressivity. We theoretically prove that including higher-order information improves the robustness of SSNs to perturbations. Empirical evaluations demonstrate that SSNs outperform existing simplicial or graph neural models in many tasks like node classification, simplicial closure, graph classification, trajectory prediction, and simplex prediction while being computationally efficient.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/32736",
+      "pdf_url": "https://openreview.net/pdf?id=wmljUnbjy6",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Sravanthi_Gurugubelli1",
+        "name": "Sravanthi Gurugubelli",
+        "name_site": null,
+        "openreview_id": "~Sravanthi_Gurugubelli1",
+        "position": 2,
+        "gender": "F",
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": "DXyvmJsAAAAJ",
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 3,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "xlr6AUDuJz",
+      "title": "The WMDP Benchmark: Measuring and Reducing Malicious Use with Unlearning",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The White House Executive Order on Artificial Intelligence highlights the risks of large language models (LLMs) empowering malicious actors in developing biological, cyber, and chemical weapons. To measure these risks, government institutions and major AI labs are developing evaluations for hazardous capabilities in LLMs. However, current evaluations are private and restricted to a narrow range of malicious use scenarios, which limits further research into reducing malicious use. To fill these gaps, we release the Weapons of Mass Destruction Proxy (WMDP) benchmark, a dataset of 3,668 multiple-choice questions that serve as a proxy measurement of hazardous knowledge in biosecurity, cybersecurity, and chemical security. To guide progress on unlearning, we develop RMU, a state-of-the-art unlearning method based on controlling model representations. RMU reduces model performance on WMDP while maintaining general capabilities in areas such as biology and computer science, suggesting that unlearning may be a concrete path towards reducing malicious use from LLMs. We release our benchmark and code publicly at https://wmdp.ai.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/32695",
+      "pdf_url": "https://openreview.net/pdf?id=xlr6AUDuJz",
+      "github_url": "",
+      "total_authors": 46,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Zifan_Wang1",
+        "name": "Zifan Wang",
+        "name_site": null,
+        "openreview_id": "~Zifan_Wang1",
+        "position": 25,
+        "gender": "M",
+        "homepage_url": "https://www.zifanw.net",
+        "dblp_id": null,
+        "google_scholar_url": "HJOP3wMAAAAJ",
+        "orcid": null,
+        "linkedin_url": "zifan-wang-sail/",
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Stanford University (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.3333333333333335,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 145,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "nBPnmk6EeO",
+      "title": "Equivariant Deep Weight Space Alignment",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Permutation symmetries of deep networks make basic operations like model merging and similarity estimation challenging. In many cases, aligning the weights of the networks, i.e., finding optimal permutations between their weights, is necessary. Unfortunately, weight alignment is an NP-hard problem. Prior research has mainly focused on solving relaxed versions of the alignment problem, leading to either time-consuming methods or sub-optimal solutions. To accelerate the alignment process and improve its quality, we propose a novel framework aimed at learning to solve the weight alignment problem, which we name Deep-Align. To that end, we first prove that weight alignment adheres to two fundamental symmetries and then, propose a deep architecture that respects these symmetries. Notably, our framework does not require any labeled data. We provide a theoretical analysis of our approach and evaluate Deep-Align on several types of network architectures and learning setups. Our experimental results indicate that a feed-forward pass with Deep-Align produces better or equivalent alignments compared to those produced by current optimization algorithms. Additionally, our alignments can be used as an effective initialization for other methods, leading to improved solutions with a significant speedup in convergence.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/33133",
+      "pdf_url": "https://openreview.net/pdf?id=nBPnmk6EeO",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Gal_Chechik1",
+        "name": "Gal Chechik",
+        "name_site": null,
+        "openreview_id": "~Gal_Chechik1",
+        "position": 4,
+        "gender": null,
+        "homepage_url": "https://chechiklab.biu.ac.il/~gal/",
+        "dblp_id": "c/GalChechik",
+        "google_scholar_url": "Wk2gAZUAAAAJ",
+        "orcid": "0000-0001-9164-5303",
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "NVIDIA (Israel)",
+        "countries": [
+          "Israel"
+        ],
+        "country_codes": [
+          "IL"
+        ]
+      },
+      "sort_score": 2.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 19,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "3o7G6tIo4X",
+      "title": "Improved Generalization of Weight Space Networks via Augmentations",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Learning in deep weight spaces (DWS), where neural networks process the weights of other neural networks, is an emerging research direction, with applications to 2D and 3D neural fields (INRs, NeRFs), as well as making inferences about other types of neural networks. Unfortunately, weight space models tend to suffer from substantial overfitting. We empirically analyze the reasons for this overfitting and find that a key reason is the lack of diversity in DWS datasets. While a given object can be represented by many different weight configurations, typical INR training sets fail to capture variability across INRs that represent the same object. To address this, we explore strategies for data augmentation in weight spaces and propose a MixUp method adapted for weight spaces. We demonstrate the effectiveness of these methods in two setups. In classification, they improve performance similarly to having up to 10 times more data. In self-supervised contrastive learning, they yield substantial 5-10% gains in downstream classification.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/35047",
+      "pdf_url": "https://openreview.net/pdf?id=3o7G6tIo4X",
+      "github_url": "",
+      "total_authors": 7,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Gal_Chechik1",
+        "name": "Gal Chechik",
+        "name_site": null,
+        "openreview_id": "~Gal_Chechik1",
+        "position": 5,
+        "gender": null,
+        "homepage_url": "https://chechiklab.biu.ac.il/~gal/",
+        "dblp_id": "c/GalChechik",
+        "google_scholar_url": "Wk2gAZUAAAAJ",
+        "orcid": "0000-0001-9164-5303",
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "NVIDIA (Canada)",
+        "countries": [
+          "Canada"
+        ],
+        "country_codes": [
+          "CA"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 16,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "E8FpcUyPuS",
+      "title": "Weakly Convex Regularisers for Inverse Problems: Convergence of Critical Points and Primal-Dual Optimisation",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Variational regularisation is the primary method for solving inverse problems, and recently there has been considerable work leveraging deeply learned regularisation for enhanced performance. However, few results exist addressing the convergence of such regularisation, particularly within the context of critical points as opposed to global minimisers. In this paper, we present a generalised formulation of convergent regularisation in terms of critical points, and show that this is achieved by a class of weakly convex regularisers. We prove convergence of the primal-dual hybrid gradient method for the associated variational problem, and, given a Kurdyka-Łojasiewicz condition, an $\\mathcal{O}(\\log{k}/k)$ ergodic convergence rate. Finally, applying this theory to learned regularisation, we prove universal approximation for input weakly convex neural networks (IWCNN), and show empirically that IWCNNs can lead to improved performance of learned adversarial regularisers for computed tomography (CT) reconstruction.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/34596",
+      "pdf_url": "https://openreview.net/pdf?id=E8FpcUyPuS",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Subhadip_Mukherjee1",
+        "name": "Subhadip Mukherjee",
+        "name_site": null,
+        "openreview_id": "~Subhadip_Mukherjee1",
+        "position": 3,
+        "gender": "M",
+        "homepage_url": "https://sites.google.com/view/subhadip-mukherjee/home",
+        "dblp_id": "120/7054",
+        "google_scholar_url": "https://scholar.google.se/citations?user=a4UlE_MAAAAJ",
+        "orcid": "0000-0002-7957-8758",
+        "linkedin_url": "subhadip-mukherjee-11b925101/",
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Kharagpur (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 10,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "o5SVr80Rgg",
+      "title": "PairNet: Training with Observed Pairs to Estimate Individual Treatment Effect",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Given a dataset of individuals each described by a covariate vector, a treatment, and an observed outcome on the treatment, the goal of the individual treatment effect (ITE) estimation task is to predict outcome changes resulting from a change in treatment. A fundamental challenge is that in the observational data, a covariate’s outcome is observed only under one treatment, whereas we need to infer the difference in outcomes under two different treatments. Several existing approaches address this issue through training with inferred pseudo-outcomes, but their success relies on the quality of these pseudo-outcomes. We propose PairNet, a novel ITE estimation training strategy that minimizes losses over pairs of examples based on their factual observed outcomes. Theoretical analysis for binary treatments reveals that PairNet is a consistent estimator of ITE risk, and achieves smaller generalization error than baseline models. Empirical comparison with thirteen existing methods across eight benchmarks, covering both discrete and continuous treatments, shows that PairNet achieves significantly lower ITE error compared to the baselines. Also, it is model-agnostic and easy to implement.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/33097",
+      "pdf_url": "https://openreview.net/pdf?id=o5SVr80Rgg",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Avishek_Ghosh2",
+        "name": "Avishek Ghosh",
+        "name_site": "Avishek Ghosh, Arya Mazumdar",
+        "openreview_id": "~Avishek_Ghosh2",
+        "position": 3,
+        "gender": "M",
+        "homepage_url": "https://sites.google.com/view/avishekghosh",
+        "dblp_id": "98/275",
+        "google_scholar_url": "8y0Dg5cAAAAJ",
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 0,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "tTtSnpH4fc",
+      "title": "Finite Time Logarithmic Regret Bounds for Self-Tuning Regulation",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We establish the first finite-time logarithmic regret bounds for the self-tuning regulation problem. We introduce a modified version of the certainty equivalence algorithm, which we call PIECE, that clips inputs in addition to utilizing probing inputs for exploration. We show that it has a $C \\log T$ upper bound on the regret after $T$ time-steps for bounded noise, and $C\\log^3 T$ in the case of sub-Gaussian noise, unlike the LQ problem where logarithmic regret is shown to be not possible. The PIECE algorithm is also designed to address the critical challenge of poor initial transient performance of reinforcement learning algorithms for linear systems. Comparative simulation results illustrate the improved performance of PIECE.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/32865",
+      "pdf_url": "https://openreview.net/pdf?id=tTtSnpH4fc",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Avik_Kar1",
+        "name": "Avik Kar",
+        "name_site": null,
+        "openreview_id": "~Avik_Kar1",
+        "position": 3,
+        "gender": "M",
+        "homepage_url": "https://avik-kar.github.io/",
+        "dblp_id": null,
+        "google_scholar_url": "https://scholar.google.co.in/citations?user=Nsj1CQ8AAAAJ",
+        "orcid": null,
+        "linkedin_url": "karavik18/",
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 0,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "8ySQaphUYH",
+      "title": "WISER: Weak Supervision and Supervised Representation Learning to Improve Drug Response Prediction in Cancer",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Cancer, a leading cause of death globally, occurs due to genomic changes and manifests heterogeneously across patients. To advance research on personalized treatment strategies, the effectiveness of various drugs on cells derived from cancers ('cell lines') is experimentally determined in laboratory settings. Nevertheless, variations in the distribution of genomic data and drug responses between cell lines and humans arise due to biological and environmental differences. Moreover, while genomic profiles of many cancer patients are readily available, the scarcity of corresponding drug response data limits the ability to train machine learning models that can predict drug response in patients effectively. Recent cancer drug response prediction methods have largely followed the paradigm of unsupervised domain-invariant representation learning followed by a downstream drug response classification step. Introducing supervision in both stages is challenging due to heterogeneous patient response to drugs and limited drug response data. This paper addresses these challenges through a novel representation learning method in the first phase and weak supervision in the second. Experimental results on real patient data demonstrate the efficacy of our method WISER (Weak supervISion and supErvised Representation learning) over state-of-the-art alternatives on predicting personalized drug response. Our implementation is available at https://github.com/kyrs/WISER",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/34824",
+      "pdf_url": "https://openreview.net/pdf?id=8ySQaphUYH",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Prathosh_AP1",
+        "name": "Prathosh AP",
+        "name_site": null,
+        "openreview_id": "~Prathosh_AP1",
+        "position": 4,
+        "gender": "M",
+        "homepage_url": "https://sites.google.com/view/prathosh",
+        "dblp_id": "218/5887",
+        "google_scholar_url": "https://scholar.google.co.in/citations?user=OEwV4bsAAAAJ",
+        "orcid": null,
+        "linkedin_url": "prathosh-ap-phd-50ab9511/",
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.25,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 2,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "GiHo83ozsF",
+      "title": "Bayesian Uncertainty for Gradient Aggregation in Multi-Task Learning",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "As machine learning becomes more prominent there is a growing demand to perform several inference tasks in parallel. Multi-task learning (MTL) addresses this challenge by learning a single model that solves several tasks simultaneously and efficiently. Often optimizing MTL models entails first computing the gradient of the loss for each task, and then aggregating all the gradients to obtain a combined update direction. However, common methods following this approach do not consider an important aspect, the sensitivity in the dimensions of the gradients. Some dimensions may be more lenient for changes while others may be more restrictive. Here, we introduce a novel gradient aggregation procedure using Bayesian inference. We place a probability distribution over the task-specific parameters, which in turn induce a *distribution* over the gradients of the tasks. This valuable information allows us to quantify the uncertainty associated with each of the gradients' dimensions which is factored in when aggregating them. We empirically demonstrate the benefits of our approach in a variety of datasets, achieving state-of-the-art performance.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/34491",
+      "pdf_url": "https://openreview.net/pdf?id=GiHo83ozsF",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Gal_Chechik1",
+        "name": "Gal Chechik",
+        "name_site": null,
+        "openreview_id": "~Gal_Chechik1",
+        "position": 4,
+        "gender": null,
+        "homepage_url": "https://chechiklab.biu.ac.il/~gal/",
+        "dblp_id": "c/GalChechik",
+        "google_scholar_url": "Wk2gAZUAAAAJ",
+        "orcid": "0000-0001-9164-5303",
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Bar-Ilan University (Israel)",
+        "countries": [
+          "Israel"
+        ],
+        "country_codes": [
+          "IL"
+        ]
+      },
+      "sort_score": 1.25,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 4,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "s4Hy0L4mml",
+      "title": "MS-TIP: Imputation Aware Pedestrian Trajectory Prediction",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Pedestrian trajectory prediction aims to predict future trajectories based on observed trajectories. Current state-of-the-art methods often assume that the observed sequences of agents are complete, which is a strong assumption that overlooks inherent uncertainties. Understanding pedestrian behavior when dealing with missing values in the observed sequence is crucial for enhancing the performance of predictive models. In this work, we propose the MultiScale hypergraph for Trajectory Imputation and Prediction (MS-TIP), a novel approach that simultaneously addresses the imputation of missing observations and the prediction of future trajectories. Specifically, we leverage transformers with diagonal masked self-attention to impute incomplete observations. Further, our approach promotes complex interaction modeling through multi-scale hypergraphs, optimizing our trajectory prediction module to capture different types of interactions. With the inclusion of scenic attention, we learn contextual scene information, instead of sole reliance on coordinates. Additionally, our approach utilizes an intermediate control point and refinement module to infer future trajectories accurately. Extensive experiments validate the efficacy of MS-TIP in precisely predicting pedestrian future trajectories. Code is publicly available at https://github.com/Pranav-chib/MS-TIP.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/32928",
+      "pdf_url": "https://openreview.net/pdf?id=s4Hy0L4mml",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Ishu_Gupta1",
+        "name": "Ishu Gupta",
+        "name_site": null,
+        "openreview_id": "~Ishu_Gupta1",
+        "position": 4,
+        "gender": "F",
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": "ishugupta71",
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.25,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 4,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "GwA4go0Mw4",
+      "title": "Representation Surgery: Theory and Practice of Affine Steering",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Language models often exhibit undesirable behavior, e.g., generating toxic or gender-biased text. In the case of neural language models, an encoding of the undesirable behavior is often present in the model's representations. Thus, one natural (and common) approach to prevent the model from exhibiting undesirable behavior is to steer the model's representations in a manner that reduces the probability of it generating undesirable text. This paper investigates the formal and empirical properties of steering functions, i.e., transformation of the neural language model's representations that alter its behavior. First, we derive two optimal, in the least-squares sense, affine steering functions under different constraints. Our theory provides justification for existing approaches and offers a novel, improved steering approach. Second, we offer a series of experiments that demonstrate the empirical effectiveness of the methods in mitigating bias and reducing toxic generation.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/34483",
+      "pdf_url": "https://openreview.net/pdf?id=GwA4go0Mw4",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Ryan_Cotterell1_2",
+        "name": "Ryan Cotterell",
+        "name_site": null,
+        "openreview_id": "~Ponnurangam_Kumaraguru3",
+        "position": 5,
+        "gender": null,
+        "homepage_url": "https://precog.iiit.ac.in/",
+        "dblp_id": "97/5147.html",
+        "google_scholar_url": "MfzQyP8AAAAJ",
+        "orcid": null,
+        "linkedin_url": "ponguru/",
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "International Institute of Information Technology (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 0.9999999999999998,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 8,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "xlr6AUDuJz",
+      "title": "The WMDP Benchmark: Measuring and Reducing Malicious Use with Unlearning",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The White House Executive Order on Artificial Intelligence highlights the risks of large language models (LLMs) empowering malicious actors in developing biological, cyber, and chemical weapons. To measure these risks, government institutions and major AI labs are developing evaluations for hazardous capabilities in LLMs. However, current evaluations are private and restricted to a narrow range of malicious use scenarios, which limits further research into reducing malicious use. To fill these gaps, we release the Weapons of Mass Destruction Proxy (WMDP) benchmark, a dataset of 3,668 multiple-choice questions that serve as a proxy measurement of hazardous knowledge in biosecurity, cybersecurity, and chemical security. To guide progress on unlearning, we develop RMU, a state-of-the-art unlearning method based on controlling model representations. RMU reduces model performance on WMDP while maintaining general capabilities in areas such as biology and computer science, suggesting that unlearning may be a concrete path towards reducing malicious use from LLMs. We release our benchmark and code publicly at https://wmdp.ai.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2024/poster/32695",
+      "pdf_url": "https://openreview.net/pdf?id=xlr6AUDuJz",
+      "github_url": "",
+      "total_authors": 46,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Ryan_Cotterell1_2",
+        "name": "Ryan Cotterell",
+        "name_site": null,
+        "openreview_id": "~Ponnurangam_Kumaraguru3",
+        "position": 38,
+        "gender": null,
+        "homepage_url": "https://precog.iiit.ac.in/",
+        "dblp_id": "97/5147.html",
+        "google_scholar_url": "MfzQyP8AAAAJ",
+        "orcid": null,
+        "linkedin_url": "ponguru/",
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": null,
+        "countries": [],
+        "country_codes": []
+      },
+      "sort_score": 0.8888888888888891,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 145,
+        "semantic_scholar_citations": 0
+      }
+    }
+  ]
+}

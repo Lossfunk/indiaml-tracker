@@ -1,0 +1,68 @@
+{
+  "conference": "NeurIPS 1999",
+  "focus_country": "India",
+  "total_papers": 1,
+  "generated_at": "2025-07-06T10:39:19.874695",
+  "config": {
+    "first_author_weight": 3.0,
+    "last_author_weight": 2.0,
+    "middle_author_weight": 1.0,
+    "status_weights": {
+      "oral": 10.0,
+      "spotlight": 7.5,
+      "poster": 5.0,
+      "unknown": 1.0
+    },
+    "output_format": "json",
+    "include_review_details": true,
+    "include_citation_data": true
+  },
+  "papers": [
+    {
+      "paper_id": "3a3357e3df",
+      "title": "Predictive App roaches for Choosing Hyperparameters in Gaussian Processes",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Gaussian  Processes  are  powerful  regression  models  specified  by  parametrized mean and covariance functions.  Standard approaches  to  estimate  these  parameters  (known  by  the  name  Hyperparam(cid:173) eters)  are  Maximum  Likelihood  (ML)  and  Maximum  APosterior  (MAP)  approaches.  In this paper, we  propose and investigate pre(cid:173) dictive  approaches,  namely,  maximization  of  Geisser's  Surrogate  Predictive Probability (GPP) and minimization of mean square er(cid:173) ror with  respect to GPP  (referred to as  Geisser's  Predictive mean  square  Error  (GPE))  to  estimate  the  hyperparameters.  We  also  derive  results  for  the  standard  Cross-Validation  (CV)  error  and  make  a  comparison.  These approaches are tested on  a  number of  problems and experimental results show that these approaches are  strongly competitive to existing approaches.",
+      "tldr": null,
+      "site_url": "https://papers.nips.cc/paper_files/paper/1999/hash/e8fd4a8a5bab2b3785d794ab51fef55c-Abstract.html",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/1999/file/e8fd4a8a5bab2b3785d794ab51fef55c-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "s__sathiya_keerthi",
+        "name": "S. Sathiya Keerthi",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 201,
+        "semantic_scholar_citations": 0
+      }
+    }
+  ]
+}

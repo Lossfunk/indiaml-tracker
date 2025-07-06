@@ -1,0 +1,160 @@
+{
+  "conference": "NeurIPS 2011",
+  "focus_country": "India",
+  "total_papers": 3,
+  "generated_at": "2025-07-06T10:39:19.873072",
+  "config": {
+    "first_author_weight": 3.0,
+    "last_author_weight": 2.0,
+    "middle_author_weight": 1.0,
+    "status_weights": {
+      "oral": 10.0,
+      "spotlight": 7.5,
+      "poster": 5.0,
+      "unknown": 1.0
+    },
+    "output_format": "json",
+    "include_review_details": true,
+    "include_citation_data": true
+  },
+  "papers": [
+    {
+      "paper_id": "4a0a9fe000",
+      "title": "Orthogonal Matching Pursuit with Replacement",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In this paper, we consider the problem of compressed sensing where the goal is to recover almost all the sparse vectors using a small number of fixed linear measurements. For this problem, we propose a novel partial hard-thresholding operator leading to a general family of iterative algorithms. While one extreme of the family yields well known hard thresholding algorithms like ITI and HTP, the other end of the spectrum leads to a novel algorithm that we call  Orthogonal Matching Pursuit with Replacement (OMPR). OMPR, like the classic greedy algorithm OMP, adds exactly one coordinate to the support at each iteration, based on the correlation with the current residual. However, unlike OMP, OMPR also removes one coordinate from the support. This simple change allows us to prove the best known guarantees for OMPR in terms of the Restricted Isometry Property (a condition on the measurement matrix). In contrast, OMP is known to have very weak performance guarantees under RIP.  We also extend OMPR using locality sensitive hashing to get OMPR-Hash, the first provably sub-linear (in dimensionality) algorithm for sparse recovery. Our  proof techniques are novel and flexible enough to also permit the tightest known analysis of popular iterative algorithms such as CoSaMP and Subspace Pursuit.  We provide experimental results on large problems providing  recovery for vectors of size up to million dimensions.  We demonstrate that for large-scale problems our proposed methods are more robust and faster than the existing  methods.",
+      "tldr": null,
+      "site_url": "https://papers.nips.cc/paper_files/paper/2011/hash/500e75a036dc2d7d2fec5da1b71d36cc-Abstract.html",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2011/file/500e75a036dc2d7d2fec5da1b71d36cc-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prateek_jain_5",
+        "name": "Prateek Jain",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 97,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "fb8a1072a4",
+      "title": "Similarity-based Learning via Data Driven Embeddings",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We consider the problem of classification using similarity/distance functions over data. Specifically, we propose a framework for defining the goodness of a (dis)similarity function with respect to a given learning task and propose algorithms that have guaranteed generalization properties when working with such good functions. Our framework unifies and generalizes the frameworks proposed by (Balcan-Blum 2006) and (Wang et al 2007). An attractive feature of our framework is its adaptability to data - we do not promote a fixed notion of goodness but rather let data dictate it. We show, by giving theoretical guarantees that the goodness criterion best suited to a problem can itself be learned which makes our approach applicable to a variety of domains and problems. We propose a landmarking-based approach to obtaining a classifier from such learned goodness criteria. We then provide a novel diversity based heuristic to perform task-driven selection of landmark points instead of random selection. We demonstrate the effectiveness of our goodness criteria learning method as well as the landmark selection heuristic on a variety of similarity-based learning datasets and benchmark UCI datasets on which our method consistently outperforms existing approaches by a significant margin.",
+      "tldr": null,
+      "site_url": "https://papers.nips.cc/paper_files/paper/2011/hash/69a5b5995110b36a9a347898d97a610e-Abstract.html",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2011/file/69a5b5995110b36a9a347898d97a610e-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "purushottam_kar_1",
+        "name": "Purushottam Kar",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Kanpur (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 49,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "fb8a1072a4",
+      "title": "Similarity-based Learning via Data Driven Embeddings",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We consider the problem of classification using similarity/distance functions over data. Specifically, we propose a framework for defining the goodness of a (dis)similarity function with respect to a given learning task and propose algorithms that have guaranteed generalization properties when working with such good functions. Our framework unifies and generalizes the frameworks proposed by (Balcan-Blum 2006) and (Wang et al 2007). An attractive feature of our framework is its adaptability to data - we do not promote a fixed notion of goodness but rather let data dictate it. We show, by giving theoretical guarantees that the goodness criterion best suited to a problem can itself be learned which makes our approach applicable to a variety of domains and problems. We propose a landmarking-based approach to obtaining a classifier from such learned goodness criteria. We then provide a novel diversity based heuristic to perform task-driven selection of landmark points instead of random selection. We demonstrate the effectiveness of our goodness criteria learning method as well as the landmark selection heuristic on a variety of similarity-based learning datasets and benchmark UCI datasets on which our method consistently outperforms existing approaches by a significant margin.",
+      "tldr": null,
+      "site_url": "https://papers.nips.cc/paper_files/paper/2011/hash/69a5b5995110b36a9a347898d97a610e-Abstract.html",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2011/file/69a5b5995110b36a9a347898d97a610e-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prateek_jain_6",
+        "name": "Prateek Jain",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 49,
+        "semantic_scholar_citations": 0
+      }
+    }
+  ]
+}

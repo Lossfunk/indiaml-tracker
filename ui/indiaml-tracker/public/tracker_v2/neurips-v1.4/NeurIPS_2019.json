@@ -1,0 +1,2142 @@
+{
+  "conference": "NeurIPS 2019",
+  "focus_country": "India",
+  "total_papers": 46,
+  "generated_at": "2025-07-06T10:39:19.867612",
+  "config": {
+    "first_author_weight": 3.0,
+    "last_author_weight": 2.0,
+    "middle_author_weight": 1.0,
+    "status_weights": {
+      "oral": 10.0,
+      "spotlight": 7.5,
+      "poster": 5.0,
+      "unknown": 1.0
+    },
+    "output_format": "json",
+    "include_review_details": true,
+    "include_citation_data": true
+  },
+  "papers": [
+    {
+      "paper_id": "14547",
+      "title": "Infra-slow brain dynamics as a marker for cognitive function and decline",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Functional magnetic resonance imaging (fMRI) enables measuring human brain activity, in vivo. Yet, the fMRI hemodynamic response unfolds over very slow timescales (<0.1-1 Hz), orders of magnitude slower than millisecond timescales of neural spiking. It is unclear, therefore, if slow dynamics as measured with fMRI are relevant for cognitive function. We investigated this question with a novel application of Gaussian Process Factor Analysis (GPFA) and machine learning to fMRI data. We analyzed slowly sampled (1.4 Hz) fMRI data from 1000 healthy human participants (Human Connectome Project database), and applied GPFA to reduce dimensionality and extract smooth latent dynamics. GPFA dimensions with slow (<1 Hz) characteristic timescales identified, with high accuracy (>95%), the specific task that each subject was performing inside the fMRI scanner. Moreover, functional connectivity between slow GPFA latents accurately predicted inter-individual differences in behavioral scores across a range of cognitive tasks. Finally, infra-slow (<0.1 Hz) latent dynamics predicted CDR (Clinical Dementia Rating) scores of individual patients, and identified patients with mild cognitive impairment (MCI) who would progress to develop Alzheimer’s dementia (AD). Slow and infra-slow brain dynamics may be relevant for understanding the neural basis of cognitive function, in health and disease.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/14547",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/7f6caf1f0ba788cd7953d817724c2b6e-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "shagun_ajmera",
+        "name": "Shagun Ajmera",
+        "name_site": "Shagun Ajmera, Shreya Rajagopal, Razi Rehman, Devarajan Sridharan",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 22.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 3,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "14620",
+      "title": "Bayesian Optimization under Heavy-tailed Payoffs",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "We consider black box optimization of an unknown function in the nonparametric Gaussian process setting when the noise in the observed function values can be heavy tailed. This is in contrast to existing literature that typically assumes sub-Gaussian noise distributions for queries. Under the assumption that the unknown function belongs to the Reproducing Kernel Hilbert Space (RKHS) induced by a kernel, we first show that an adaptation of the well-known GP-UCB algorithm with reward truncation enjoys sublinear $\\tilde{O}(T^{\\frac{2 + \\alpha}{2(1+\\alpha)}})$ regret even with only the $(1+\\alpha)$-th moments, $\\alpha \\in (0,1]$, of the reward distribution being bounded ($\\tilde{O}$ hides logarithmic factors). However, for the common squared exponential (SE) and Mat\\'{e}rn kernels, this is seen to be significantly larger than a fundamental $\\Omega(T^{\\frac{1}{1+\\alpha}})$ lower bound on regret. We resolve this gap by developing novel Bayesian optimization algorithms, based on kernel approximation techniques, with regret bounds matching the lower bound in order for the SE kernel. We numerically benchmark the algorithms on environments based on both synthetic models and real-world data sets.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/14620",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/06a50e3f66db4a334202d3adfd31c589-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sayak_ray_chowdhury",
+        "name": "Sayak Ray Chowdhury",
+        "name_site": "Sayak Ray Chowdhury, Aditya Gopalan",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 22.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 31,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "13326",
+      "title": "Combinatorial Bandits with Relative Feedback",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We consider combinatorial online learning with subset choices when only relative feedback information from subsets is available, instead of bandit or semi-bandit feedback which is absolute. Specifically, we study two regret minimisation problems over subsets of a finite ground set $[n]$, with subset-wise relative preference information feedback according to the Multinomial logit choice model. In the first setting, the learner can play subsets of size bounded by a maximum size and receives top-$m$ rank-ordered feedback, while in the second setting the learner can play subsets of a fixed size $k$ with a full subset ranking observed as feedback. For both settings, we devise instance-dependent and order-optimal regret algorithms with regret $O(\\frac{n}{m} \\ln T)$ and $O(\\frac{n}{k} \\ln T)$, respectively. We derive fundamental limits on the regret performance of online learning with subset-wise preferences, proving the tightness of our regret guarantees. Our results also show the value of eliciting more general top-$m$ rank-ordered feedback over single winner feedback ($m=1$). Our theoretical results are corroborated with empirical evaluations.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/13326",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/5e388103a391daabe3de1d76a6739ccd-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "aadirupa_saha",
+        "name": "Aadirupa Saha",
+        "name_site": "Aadirupa Saha, Aditya Gopalan",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 44,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "13367",
+      "title": "HyperGCN: A New Method For Training Graph Convolutional Networks on Hypergraphs",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In many real-world network datasets such as co-authorship, co-citation, email communication, etc., relationships are complex and go beyond pairwise. Hypergraphs provide a flexible and natural modeling tool to model such complex relationships. The obvious existence of such complex relationships in many real-world networks naturaly motivates the problem of learning with hypergraphs. A popular learning paradigm is hypergraph-based semi-supervised learning (SSL) where the goal is to assign labels to initially unlabeled vertices in a hypergraph. Motivated by the fact that a graph convolutional network (GCN) has been effective for graph-based SSL, we propose HyperGCN, a novel GCN for SSL on attributed hypergraphs. Additionally, we show how HyperGCN can be used as a learning-based approach for combinatorial optimisation on NP-hard hypergraph problems. We demonstrate HyperGCN's effectiveness through detailed experimentation on real-world hypergraphs. We have made HyperGCN's source code available to foster reproducible research.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/13367",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/1efa39bcaec6f3900149160693694536-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "naganand_yadati",
+        "name": "Naganand Yadati",
+        "name_site": "Naganand Yadati, Madhav Nimishakavi, Prateek Yadav, Vikram Nitin, Anand Louis, Partha Talukdar",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 607,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "13478",
+      "title": "Quality Aware Generative Adversarial Networks",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Generative Adversarial Networks (GANs) have become a very popular tool for im-\nplicitly learning high-dimensional probability distributions. Several improvements\nhave been made to the original GAN formulation to address some of its shortcom-\nings like mode collapse, convergence issues, entanglement, poor visual quality etc.\nWhile a significant effort has been directed towards improving the visual quality\nof images generated by GANs, it is rather surprising that objective image quality\nmetrics have neither been employed as cost functions nor as regularizers in GAN\nobjective functions. In this work, we show how a distance metric that is a variant\nof the Structural SIMilarity (SSIM) index (a popular full-reference image quality\nassessment algorithm), and a novel quality aware discriminator gradient penalty\nfunction that is inspired by the Natural Image Quality Evaluator (NIQE, a popular\nno-reference image quality assessment algorithm) can each be used as excellent\nregularizers for GAN objective functions. Specifically, we demonstrate state-of-\nthe-art performance using the Wasserstein GAN gradient penalty (WGAN-GP)\nframework over CIFAR-10, STL10 and CelebA datasets.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/13478",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/b59a51a3c0bf9c5228fde841714f523a-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "kancharla_parimala",
+        "name": "KANCHARLA PARIMALA",
+        "name_site": "Kancharla Parimala, Sumohana Channappayya",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Hyderabad (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 34,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "13687",
+      "title": "Quantum Embedding of Knowledge for Reasoning",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Statistical Relational Learning (SRL) methods are the most widely used techniques to generate distributional representations of the symbolic Knowledge Bases (KBs). These methods embed any given KB into a vector space by exploiting statistical similarities among its entities and predicates but without any guarantee of preserving the underlying logical structure of the KB. This, in turn, results in poor performance of logical reasoning tasks that are solved using such distributional representations. We present a novel approach called Embed2Reason (E2R) that embeds a symbolic KB into a vector space in a logical structure preserving manner. This approach is inspired by the theory of Quantum Logic. Such an embedding allows answering membership based complex logical reasoning queries with impressive accuracy improvements over popular SRL baselines.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/13687",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/cb12d7f933e7d102c52231bf62b8a678-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "dinesh_garg",
+        "name": "Dinesh Garg",
+        "name_site": "Dinesh Garg, Shajith Ikbal Mohamed, Santosh Kumar Srivastava, Harit Vishwakarma, Hima Karanam, L Venkata Subramaniam",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "IBM (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 66,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "13820",
+      "title": "Nonzero-sum Adversarial Hypothesis Testing Games",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We study nonzero-sum hypothesis testing games that arise in the context of adversarial classification, in both the Bayesian as well as the Neyman-Pearson frameworks. We first show that these games admit mixed strategy Nash equilibria, and then we examine some interesting concentration phenomena of these equilibria. Our main results are on the exponential rates of convergence of classification errors at equilibrium, which are analogous to the well-known Chernoff-Stein lemma and Chernoff information that describe the error exponents in the classical binary hypothesis testing problem, but with parameters derived from the adversarial model. The results are validated through numerical experiments.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/13820",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/f2e84d98d6dc0c7acd56b40509355666-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sarath_yasodharan",
+        "name": "Sarath Yasodharan",
+        "name_site": "Sarath Yasodharan, Patrick Loiseau",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 22,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "14151",
+      "title": "Concentration of risk measures: A Wasserstein distance approach",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Known finite-sample concentration bounds for the Wasserstein distance between the empirical and true distribution of a random variable are used to derive a two-sided  concentration bound for the error between the true conditional value-at-risk (CVaR) of a (possibly unbounded) random variable and a standard estimate of its CVaR computed from an i.i.d. sample. The bound applies under fairly general assumptions on the random variable, and improves upon previous bounds which were either one sided, or applied only to bounded random variables. Specializations of the bound to sub-Gaussian and sub-exponential random variables are also derived.   A similar procedure is followed to derive concentration bounds for the error between the true and estimated Cumulative Prospect Theory (CPT) value of a random variable, in cases where the random variable is bounded or sub-Gaussian. These bounds are shown to match a known bound in the bounded case, and improve upon the known bound in the sub-Gaussian case. The usefulness of the bounds is illustrated through an algorithm, and corresponding regret bound for a stochastic bandit problem, where the underlying risk measure to be optimized is CVaR.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/14151",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/091bc5440296cc0e41dd60ce22fbaf88-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sanjay_p__bhat",
+        "name": "Sanjay P. Bhat",
+        "name_site": "Sanjay P. Bhat, Prashanth L.A.",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Tata Consultancy Services Limited (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 57,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "14161",
+      "title": "Neural Attribution for Semantic Bug-Localization in Student Programs",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Providing feedback is an integral part of teaching. Most open online courses on programming make use of automated grading systems to support programming assignments and give real-time feedback. These systems usually rely on test results to quantify the programs' functional correctness. They return failing tests to the students as feedback. However, students may find it difficult to debug their programs if they receive no hints about where the bug is and how to fix it. In this work, we present NeuralBugLocator, a deep learning based technique, that can localize the bugs in a faulty program with respect to a failing test, without even running the program. At the heart of our technique is a novel tree convolutional neural network which is trained to predict whether a program passes or fails a given test. To localize the bugs, we analyze the trained network using a state-of-the-art neural prediction attribution technique and see which lines of the programs make it predict the test outcomes. Our experiments show that NeuralBugLocator is generally more accurate than two state-of-the-art program-spectrum based and one syntactic difference based bug-localization baselines.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/14161",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/f29a179746902e331572c483c45e5086-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "rahul_gupta",
+        "name": "Rahul Gupta",
+        "name_site": "Rahul Gupta, Aditya Kanade, Shirish Shevade",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 55,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "14182",
+      "title": "A Primal Dual Formulation For Deep Learning With Constraints",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "For several problems of interest, there are natural constraints which exist over the output label space. For example, for the joint task of NER and POS labeling, these constraints might specify that the NER label ‘organization’ is consistent only with the POS labels ‘noun’ and ‘preposition’. These constraints can be a great way of injecting prior knowledge into a deep learning model, thereby improving overall performance. In this paper, we present a constrained optimization formulation for training a deep network with a given set of hard constraints on output labels. Our novel approach first converts the label constraints into soft logic constraints over probability distributions outputted by the network. It then converts the constrained optimization problem into an alternating min-max optimization with Lagrangian variables defined for each constraint.  Since the constraints are independent of the target labels,  our framework easily generalizes to semi-supervised setting. We experiment on the tasks of Semantic Role Labeling (SRL), Named Entity Recognition (NER) tagging,  and fine-grained entity typing and show that our constraints not only significantly reduce the number of constraint violations, but can also result in state-of-the-art performance",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/14182",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/cf708fc1decf0337aded484f8f4519ae-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "yatin_nandwani",
+        "name": "Yatin Nandwani",
+        "name_site": "Yatin Nandwani, Abhishek Pathak, Mausam , Parag Singla",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 122,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "14202",
+      "title": "Distribution Learning of a Random Spatial Field with a Location-Unaware Mobile Sensor",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Measurement of spatial fields is of interest in environment monitoring. Recently mobile sensing has been proposed for spatial field reconstruction, which requires a smaller number of sensors when compared to the traditional paradigm of sensing with static sensors. A challenge in mobile sensing is to overcome the location uncertainty of its sensors. While GPS or other localization methods can reduce this uncertainty, we address a more fundamental question: can a location-unaware mobile sensor, recording samples on a directed non-uniform random walk, learn the statistical distribution (as a function of space) of an underlying random process (spatial field)? The answer is in the affirmative for Lipschitz continuous fields, where the accuracy of our distribution-learning method increases with the number of observed field samples (sampling rate). To validate our distribution-learning method, we have created a dataset with 43 experimental trials by measuring sound-level along a fixed path using a location-unaware mobile sound-level meter.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/14202",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/06bf16f1f0372a63d520eac6cf7c5af7-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "meera_pai",
+        "name": "Meera Pai",
+        "name_site": "Meera Pai, Animesh Kumar",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 2,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "14369",
+      "title": "Censored Semi-Bandits: A Framework for Resource Allocation with Censored Feedback",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In this paper, we study Censored Semi-Bandits, a novel variant of the semi-bandits problem. The learner is assumed to have a fixed amount of resources, which it allocates to the arms at each time step. The loss observed from an arm is random and depends on the amount of resources allocated to it. More specifically, the loss equals zero if the allocation for the arm exceeds a constant (but unknown) threshold that can be dependent on the arm. Our goal is to learn a feasible allocation that minimizes the expected loss. The problem is challenging because the loss distribution and threshold value of each arm are unknown. We study this novel setting by establishing its `equivalence' to Multiple-Play Multi-Armed Bandits (MP-MAB) and Combinatorial Semi-Bandits. Exploiting these equivalences, we derive optimal algorithms for our setting using existing algorithms for MP-MAB and Combinatorial Semi-Bandits. Experiments on synthetically generated data validate performance guarantees of the proposed algorithms.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/14369",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/3e91970f771a2c473ae36b60d1146068-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "arun_verma",
+        "name": "Arun Verma",
+        "name_site": "Arun Verma, Manjesh Kumar Hanawal, Arun Rajkumar, Raman Sankaran",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "IIT Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 21,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "14547",
+      "title": "Infra-slow brain dynamics as a marker for cognitive function and decline",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Functional magnetic resonance imaging (fMRI) enables measuring human brain activity, in vivo. Yet, the fMRI hemodynamic response unfolds over very slow timescales (<0.1-1 Hz), orders of magnitude slower than millisecond timescales of neural spiking. It is unclear, therefore, if slow dynamics as measured with fMRI are relevant for cognitive function. We investigated this question with a novel application of Gaussian Process Factor Analysis (GPFA) and machine learning to fMRI data. We analyzed slowly sampled (1.4 Hz) fMRI data from 1000 healthy human participants (Human Connectome Project database), and applied GPFA to reduce dimensionality and extract smooth latent dynamics. GPFA dimensions with slow (<1 Hz) characteristic timescales identified, with high accuracy (>95%), the specific task that each subject was performing inside the fMRI scanner. Moreover, functional connectivity between slow GPFA latents accurately predicted inter-individual differences in behavioral scores across a range of cognitive tasks. Finally, infra-slow (<0.1 Hz) latent dynamics predicted CDR (Clinical Dementia Rating) scores of individual patients, and identified patients with mild cognitive impairment (MCI) who would progress to develop Alzheimer’s dementia (AD). Slow and infra-slow brain dynamics may be relevant for understanding the neural basis of cognitive function, in health and disease.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/14547",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/7f6caf1f0ba788cd7953d817724c2b6e-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "devarajan_sridharan_2",
+        "name": "Devarajan Sridharan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 3,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "14620",
+      "title": "Bayesian Optimization under Heavy-tailed Payoffs",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "We consider black box optimization of an unknown function in the nonparametric Gaussian process setting when the noise in the observed function values can be heavy tailed. This is in contrast to existing literature that typically assumes sub-Gaussian noise distributions for queries. Under the assumption that the unknown function belongs to the Reproducing Kernel Hilbert Space (RKHS) induced by a kernel, we first show that an adaptation of the well-known GP-UCB algorithm with reward truncation enjoys sublinear $\\tilde{O}(T^{\\frac{2 + \\alpha}{2(1+\\alpha)}})$ regret even with only the $(1+\\alpha)$-th moments, $\\alpha \\in (0,1]$, of the reward distribution being bounded ($\\tilde{O}$ hides logarithmic factors). However, for the common squared exponential (SE) and Mat\\'{e}rn kernels, this is seen to be significantly larger than a fundamental $\\Omega(T^{\\frac{1}{1+\\alpha}})$ lower bound on regret. We resolve this gap by developing novel Bayesian optimization algorithms, based on kernel approximation techniques, with regret bounds matching the lower bound in order for the SE kernel. We numerically benchmark the algorithms on environments based on both synthetic models and real-world data sets.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/14620",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/06a50e3f66db4a334202d3adfd31c589-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "aditya_gopalan",
+        "name": "Aditya Gopalan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 31,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "13326",
+      "title": "Combinatorial Bandits with Relative Feedback",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We consider combinatorial online learning with subset choices when only relative feedback information from subsets is available, instead of bandit or semi-bandit feedback which is absolute. Specifically, we study two regret minimisation problems over subsets of a finite ground set $[n]$, with subset-wise relative preference information feedback according to the Multinomial logit choice model. In the first setting, the learner can play subsets of size bounded by a maximum size and receives top-$m$ rank-ordered feedback, while in the second setting the learner can play subsets of a fixed size $k$ with a full subset ranking observed as feedback. For both settings, we devise instance-dependent and order-optimal regret algorithms with regret $O(\\frac{n}{m} \\ln T)$ and $O(\\frac{n}{k} \\ln T)$, respectively. We derive fundamental limits on the regret performance of online learning with subset-wise preferences, proving the tightness of our regret guarantees. Our results also show the value of eliciting more general top-$m$ rank-ordered feedback over single winner feedback ($m=1$). Our theoretical results are corroborated with empirical evaluations.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/13326",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/5e388103a391daabe3de1d76a6739ccd-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "aditya_gopalan_1",
+        "name": "Aditya Gopalan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 44,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "13367",
+      "title": "HyperGCN: A New Method For Training Graph Convolutional Networks on Hypergraphs",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In many real-world network datasets such as co-authorship, co-citation, email communication, etc., relationships are complex and go beyond pairwise. Hypergraphs provide a flexible and natural modeling tool to model such complex relationships. The obvious existence of such complex relationships in many real-world networks naturaly motivates the problem of learning with hypergraphs. A popular learning paradigm is hypergraph-based semi-supervised learning (SSL) where the goal is to assign labels to initially unlabeled vertices in a hypergraph. Motivated by the fact that a graph convolutional network (GCN) has been effective for graph-based SSL, we propose HyperGCN, a novel GCN for SSL on attributed hypergraphs. Additionally, we show how HyperGCN can be used as a learning-based approach for combinatorial optimisation on NP-hard hypergraph problems. We demonstrate HyperGCN's effectiveness through detailed experimentation on real-world hypergraphs. We have made HyperGCN's source code available to foster reproducible research.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/13367",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/1efa39bcaec6f3900149160693694536-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "partha_talukdar",
+        "name": "Partha Talukdar",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 6,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 607,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "13478",
+      "title": "Quality Aware Generative Adversarial Networks",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Generative Adversarial Networks (GANs) have become a very popular tool for im-\nplicitly learning high-dimensional probability distributions. Several improvements\nhave been made to the original GAN formulation to address some of its shortcom-\nings like mode collapse, convergence issues, entanglement, poor visual quality etc.\nWhile a significant effort has been directed towards improving the visual quality\nof images generated by GANs, it is rather surprising that objective image quality\nmetrics have neither been employed as cost functions nor as regularizers in GAN\nobjective functions. In this work, we show how a distance metric that is a variant\nof the Structural SIMilarity (SSIM) index (a popular full-reference image quality\nassessment algorithm), and a novel quality aware discriminator gradient penalty\nfunction that is inspired by the Natural Image Quality Evaluator (NIQE, a popular\nno-reference image quality assessment algorithm) can each be used as excellent\nregularizers for GAN objective functions. Specifically, we demonstrate state-of-\nthe-art performance using the Wasserstein GAN gradient penalty (WGAN-GP)\nframework over CIFAR-10, STL10 and CelebA datasets.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/13478",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/b59a51a3c0bf9c5228fde841714f523a-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sumohana_channappayya",
+        "name": "Sumohana Channappayya",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Hyderabad (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 34,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "13687",
+      "title": "Quantum Embedding of Knowledge for Reasoning",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Statistical Relational Learning (SRL) methods are the most widely used techniques to generate distributional representations of the symbolic Knowledge Bases (KBs). These methods embed any given KB into a vector space by exploiting statistical similarities among its entities and predicates but without any guarantee of preserving the underlying logical structure of the KB. This, in turn, results in poor performance of logical reasoning tasks that are solved using such distributional representations. We present a novel approach called Embed2Reason (E2R) that embeds a symbolic KB into a vector space in a logical structure preserving manner. This approach is inspired by the theory of Quantum Logic. Such an embedding allows answering membership based complex logical reasoning queries with impressive accuracy improvements over popular SRL baselines.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/13687",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/cb12d7f933e7d102c52231bf62b8a678-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "l_venkata_subramaniam",
+        "name": "L Venkata Subramaniam",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 6,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "IBM (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 66,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "14151",
+      "title": "Concentration of risk measures: A Wasserstein distance approach",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Known finite-sample concentration bounds for the Wasserstein distance between the empirical and true distribution of a random variable are used to derive a two-sided  concentration bound for the error between the true conditional value-at-risk (CVaR) of a (possibly unbounded) random variable and a standard estimate of its CVaR computed from an i.i.d. sample. The bound applies under fairly general assumptions on the random variable, and improves upon previous bounds which were either one sided, or applied only to bounded random variables. Specializations of the bound to sub-Gaussian and sub-exponential random variables are also derived.   A similar procedure is followed to derive concentration bounds for the error between the true and estimated Cumulative Prospect Theory (CPT) value of a random variable, in cases where the random variable is bounded or sub-Gaussian. These bounds are shown to match a known bound in the bounded case, and improve upon the known bound in the sub-Gaussian case. The usefulness of the bounds is illustrated through an algorithm, and corresponding regret bound for a stochastic bandit problem, where the underlying risk measure to be optimized is CVaR.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/14151",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/091bc5440296cc0e41dd60ce22fbaf88-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prashanth_l_a__1",
+        "name": "Prashanth L.A.",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Madras (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 57,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "14161",
+      "title": "Neural Attribution for Semantic Bug-Localization in Student Programs",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Providing feedback is an integral part of teaching. Most open online courses on programming make use of automated grading systems to support programming assignments and give real-time feedback. These systems usually rely on test results to quantify the programs' functional correctness. They return failing tests to the students as feedback. However, students may find it difficult to debug their programs if they receive no hints about where the bug is and how to fix it. In this work, we present NeuralBugLocator, a deep learning based technique, that can localize the bugs in a faulty program with respect to a failing test, without even running the program. At the heart of our technique is a novel tree convolutional neural network which is trained to predict whether a program passes or fails a given test. To localize the bugs, we analyze the trained network using a state-of-the-art neural prediction attribution technique and see which lines of the programs make it predict the test outcomes. Our experiments show that NeuralBugLocator is generally more accurate than two state-of-the-art program-spectrum based and one syntactic difference based bug-localization baselines.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/14161",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/f29a179746902e331572c483c45e5086-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "shirish_shevade",
+        "name": "Shirish Shevade",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 55,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "14182",
+      "title": "A Primal Dual Formulation For Deep Learning With Constraints",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "For several problems of interest, there are natural constraints which exist over the output label space. For example, for the joint task of NER and POS labeling, these constraints might specify that the NER label ‘organization’ is consistent only with the POS labels ‘noun’ and ‘preposition’. These constraints can be a great way of injecting prior knowledge into a deep learning model, thereby improving overall performance. In this paper, we present a constrained optimization formulation for training a deep network with a given set of hard constraints on output labels. Our novel approach first converts the label constraints into soft logic constraints over probability distributions outputted by the network. It then converts the constrained optimization problem into an alternating min-max optimization with Lagrangian variables defined for each constraint.  Since the constraints are independent of the target labels,  our framework easily generalizes to semi-supervised setting. We experiment on the tasks of Semantic Role Labeling (SRL), Named Entity Recognition (NER) tagging,  and fine-grained entity typing and show that our constraints not only significantly reduce the number of constraint violations, but can also result in state-of-the-art performance",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/14182",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/cf708fc1decf0337aded484f8f4519ae-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "parag_singla_5",
+        "name": "Parag Singla",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 122,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "14202",
+      "title": "Distribution Learning of a Random Spatial Field with a Location-Unaware Mobile Sensor",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Measurement of spatial fields is of interest in environment monitoring. Recently mobile sensing has been proposed for spatial field reconstruction, which requires a smaller number of sensors when compared to the traditional paradigm of sensing with static sensors. A challenge in mobile sensing is to overcome the location uncertainty of its sensors. While GPS or other localization methods can reduce this uncertainty, we address a more fundamental question: can a location-unaware mobile sensor, recording samples on a directed non-uniform random walk, learn the statistical distribution (as a function of space) of an underlying random process (spatial field)? The answer is in the affirmative for Lipschitz continuous fields, where the accuracy of our distribution-learning method increases with the number of observed field samples (sampling rate). To validate our distribution-learning method, we have created a dataset with 43 experimental trials by measuring sound-level along a fixed path using a location-unaware mobile sound-level meter.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/14202",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/06bf16f1f0372a63d520eac6cf7c5af7-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "animesh_kumar",
+        "name": "Animesh Kumar",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 2,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "14219",
+      "title": "Efficient Algorithms for Smooth Minimax Optimization",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "This paper studies first order methods for solving smooth minimax optimization problems $\\min_x \\max_y g(x,y)$ where $g(\\cdot,\\cdot)$ is smooth and $g(x,\\cdot)$ is concave for each $x$. In terms of $g(\\cdot,y)$, we consider two settings -- strongly convex and nonconvex -- and improve upon the best known rates in both. For strongly-convex $g(\\cdot, y),\\ \\forall y$, we propose a new direct optimal algorithm combining Mirror-Prox and Nesterov's AGD, and show that it can find global optimum in $\\widetilde{O}\\left(1/k^2 \\right)$ iterations, improving over current state-of-the-art rate of $O(1/k)$. We use this result along with an inexact proximal point method to provide $\\widetilde{O}\\left(1/k^{1/3} \\right)$ rate for finding stationary points in the nonconvex setting where $g(\\cdot, y)$ can be nonconvex. This improves over current best-known rate of $O(1/k^{1/5})$. Finally, we instantiate our result for finite nonconvex minimax problems, i.e., $\\min_x \\max_{1\\leq i\\leq m} f_i(x)$, with nonconvex $f_i(\\cdot)$, to obtain convergence rate of $O(m^{1/3}\\sqrt{\\log m}/k^{1/3})$.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/14219",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/05d0abb9a864ae4981e933685b8b915c-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sewoong_oh_19",
+        "name": "Sewoong Oh",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "University of Washington (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 241,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "14369",
+      "title": "Censored Semi-Bandits: A Framework for Resource Allocation with Censored Feedback",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In this paper, we study Censored Semi-Bandits, a novel variant of the semi-bandits problem. The learner is assumed to have a fixed amount of resources, which it allocates to the arms at each time step. The loss observed from an arm is random and depends on the amount of resources allocated to it. More specifically, the loss equals zero if the allocation for the arm exceeds a constant (but unknown) threshold that can be dependent on the arm. Our goal is to learn a feasible allocation that minimizes the expected loss. The problem is challenging because the loss distribution and threshold value of each arm are unknown. We study this novel setting by establishing its `equivalence' to Multiple-Play Multi-Armed Bandits (MP-MAB) and Combinatorial Semi-Bandits. Exploiting these equivalences, we derive optimal algorithms for our setting using existing algorithms for MP-MAB and Combinatorial Semi-Bandits. Experiments on synthetically generated data validate performance guarantees of the proposed algorithms.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/14369",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/3e91970f771a2c473ae36b60d1146068-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "raman_sankaran_1",
+        "name": "Raman Sankaran",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "LinkedIn (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 21,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "14405",
+      "title": "The Step Decay Schedule: A Near Optimal, Geometrically Decaying Learning Rate Procedure For Least Squares",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Minimax optimal convergence rates for numerous classes of stochastic convex optimization problems are well characterized, where the majority of results utilize iterate averaged stochastic gradient descent (SGD) with polynomially decaying step sizes. In contrast, the behavior of SGD’s final iterate has received much less attention despite the widespread use in practice. Motivated by this observation, this work provides a detailed study of the following question: what rate is achievable using the final iterate of SGD for the streaming least squares regression problem with and without strong convexity? \n\n\nFirst, this work shows that even if the time horizon T (i.e. the number of iterations that SGD is run for) is known in advance, the behavior of SGD’s final iterate with any polynomially decaying learning rate scheme is highly sub-optimal compared to the statistical minimax rate (by a condition number factor in the strongly convex case and a factor of $\\sqrt{T}$ in the non-strongly convex case). In contrast, this paper shows that Step Decay schedules, which cut the learning rate by a constant factor every constant number of epochs (i.e., the learning rate decays geometrically) offer significant improvements over any polynomially decaying step size schedule. In particular, the behavior of the final iterate with step decay schedules is off from the statistical minimax rate by only log factors (in the condition number for the strongly convex case, and in T in the non-strongly convex case). Finally, in stark contrast to the known horizon case, this paper shows that the anytime (i.e. the limiting) behavior of SGD’s final iterate is poor (in that it queries iterates with highly sub-optimal function value infinitely often, i.e. in a limsup sense) irrespective of the step size scheme employed. These results demonstrate the subtlety in establishing optimal learning rate schedules (for the final iterate) for stochastic gradient procedures in fixed time horizon settings.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/14405",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/2f4059ce1227f021edc5d9c6f0f17dc1-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "praneeth_netrapalli_6",
+        "name": "Praneeth Netrapalli",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 200,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "14547",
+      "title": "Infra-slow brain dynamics as a marker for cognitive function and decline",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Functional magnetic resonance imaging (fMRI) enables measuring human brain activity, in vivo. Yet, the fMRI hemodynamic response unfolds over very slow timescales (<0.1-1 Hz), orders of magnitude slower than millisecond timescales of neural spiking. It is unclear, therefore, if slow dynamics as measured with fMRI are relevant for cognitive function. We investigated this question with a novel application of Gaussian Process Factor Analysis (GPFA) and machine learning to fMRI data. We analyzed slowly sampled (1.4 Hz) fMRI data from 1000 healthy human participants (Human Connectome Project database), and applied GPFA to reduce dimensionality and extract smooth latent dynamics. GPFA dimensions with slow (<1 Hz) characteristic timescales identified, with high accuracy (>95%), the specific task that each subject was performing inside the fMRI scanner. Moreover, functional connectivity between slow GPFA latents accurately predicted inter-individual differences in behavioral scores across a range of cognitive tasks. Finally, infra-slow (<0.1 Hz) latent dynamics predicted CDR (Clinical Dementia Rating) scores of individual patients, and identified patients with mild cognitive impairment (MCI) who would progress to develop Alzheimer’s dementia (AD). Slow and infra-slow brain dynamics may be relevant for understanding the neural basis of cognitive function, in health and disease.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/14547",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/7f6caf1f0ba788cd7953d817724c2b6e-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "shreya_rajagopal",
+        "name": "Shreya Rajagopal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 5.000000000000001,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 3,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "13367",
+      "title": "HyperGCN: A New Method For Training Graph Convolutional Networks on Hypergraphs",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In many real-world network datasets such as co-authorship, co-citation, email communication, etc., relationships are complex and go beyond pairwise. Hypergraphs provide a flexible and natural modeling tool to model such complex relationships. The obvious existence of such complex relationships in many real-world networks naturaly motivates the problem of learning with hypergraphs. A popular learning paradigm is hypergraph-based semi-supervised learning (SSL) where the goal is to assign labels to initially unlabeled vertices in a hypergraph. Motivated by the fact that a graph convolutional network (GCN) has been effective for graph-based SSL, we propose HyperGCN, a novel GCN for SSL on attributed hypergraphs. Additionally, we show how HyperGCN can be used as a learning-based approach for combinatorial optimisation on NP-hard hypergraph problems. We demonstrate HyperGCN's effectiveness through detailed experimentation on real-world hypergraphs. We have made HyperGCN's source code available to foster reproducible research.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/13367",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/1efa39bcaec6f3900149160693694536-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "madhav_nimishakavi_1",
+        "name": "Madhav Nimishakavi",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 4.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 607,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "13687",
+      "title": "Quantum Embedding of Knowledge for Reasoning",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Statistical Relational Learning (SRL) methods are the most widely used techniques to generate distributional representations of the symbolic Knowledge Bases (KBs). These methods embed any given KB into a vector space by exploiting statistical similarities among its entities and predicates but without any guarantee of preserving the underlying logical structure of the KB. This, in turn, results in poor performance of logical reasoning tasks that are solved using such distributional representations. We present a novel approach called Embed2Reason (E2R) that embeds a symbolic KB into a vector space in a logical structure preserving manner. This approach is inspired by the theory of Quantum Logic. Such an embedding allows answering membership based complex logical reasoning queries with impressive accuracy improvements over popular SRL baselines.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/13687",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/cb12d7f933e7d102c52231bf62b8a678-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "shajith_ikbal",
+        "name": "Shajith Ikbal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "IBM (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 4.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 66,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "13585",
+      "title": "Practical Deep Learning with Bayesian Principles",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Bayesian methods promise to fix many shortcomings of deep learning, but they are impractical and rarely match the performance of standard methods, let alone improve them. In this paper, we demonstrate practical training of deep networks with natural-gradient variational inference. By applying techniques such as batch normalisation, data augmentation, and distributed training, we achieve similar performance in about the same number of epochs as the Adam optimiser, even on large datasets such as ImageNet. Importantly, the benefits of Bayesian principles are preserved: predictive probabilities are well-calibrated, uncertainties on out-of-distribution data are improved, and continual-learning performance is boosted. This work enables practical deep learning while preserving benefits of Bayesian principles. A PyTorch implementation is available as a plug-and-play optimiser.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/13585",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/b53477c2821c1bf0da5d40e57b870d35-Paper.pdf",
+      "github_url": "https://github.com/team-approx-bayes/dl-with-bayes",
+      "total_authors": 7,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "mohammad_emtiyaz_khan_7",
+        "name": "Mohammad Emtiyaz Khan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology (ISM) (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.333333333333334,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 322,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "14182",
+      "title": "A Primal Dual Formulation For Deep Learning With Constraints",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "For several problems of interest, there are natural constraints which exist over the output label space. For example, for the joint task of NER and POS labeling, these constraints might specify that the NER label ‘organization’ is consistent only with the POS labels ‘noun’ and ‘preposition’. These constraints can be a great way of injecting prior knowledge into a deep learning model, thereby improving overall performance. In this paper, we present a constrained optimization formulation for training a deep network with a given set of hard constraints on output labels. Our novel approach first converts the label constraints into soft logic constraints over probability distributions outputted by the network. It then converts the constrained optimization problem into an alternating min-max optimization with Lagrangian variables defined for each constraint.  Since the constraints are independent of the target labels,  our framework easily generalizes to semi-supervised setting. We experiment on the tasks of Semantic Role Labeling (SRL), Named Entity Recognition (NER) tagging,  and fine-grained entity typing and show that our constraints not only significantly reduce the number of constraint violations, but can also result in state-of-the-art performance",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/14182",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/cf708fc1decf0337aded484f8f4519ae-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "abhishek_pathak",
+        "name": "Abhishek Pathak",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.333333333333334,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 122,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "14219",
+      "title": "Efficient Algorithms for Smooth Minimax Optimization",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "This paper studies first order methods for solving smooth minimax optimization problems $\\min_x \\max_y g(x,y)$ where $g(\\cdot,\\cdot)$ is smooth and $g(x,\\cdot)$ is concave for each $x$. In terms of $g(\\cdot,y)$, we consider two settings -- strongly convex and nonconvex -- and improve upon the best known rates in both. For strongly-convex $g(\\cdot, y),\\ \\forall y$, we propose a new direct optimal algorithm combining Mirror-Prox and Nesterov's AGD, and show that it can find global optimum in $\\widetilde{O}\\left(1/k^2 \\right)$ iterations, improving over current state-of-the-art rate of $O(1/k)$. We use this result along with an inexact proximal point method to provide $\\widetilde{O}\\left(1/k^{1/3} \\right)$ rate for finding stationary points in the nonconvex setting where $g(\\cdot, y)$ can be nonconvex. This improves over current best-known rate of $O(1/k^{1/5})$. Finally, we instantiate our result for finite nonconvex minimax problems, i.e., $\\min_x \\max_{1\\leq i\\leq m} f_i(x)$, with nonconvex $f_i(\\cdot)$, to obtain convergence rate of $O(m^{1/3}\\sqrt{\\log m}/k^{1/3})$.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/14219",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/05d0abb9a864ae4981e933685b8b915c-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prateek_jain_29",
+        "name": "Prateek Jain",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.333333333333334,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 241,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "14238",
+      "title": "Shallow RNN:  Accurate Time-series Classification on Resource Constrained Devices",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Recurrent Neural Networks (RNNs) capture long dependencies and context, and\n2 hence are the key component of typical sequential data based tasks. However, the\nsequential nature of RNNs dictates a large inference cost for long sequences even if\nthe hardware supports parallelization. To induce long-term dependencies, and yet\nadmit parallelization, we introduce novel shallow RNNs. In this architecture, the\nfirst layer splits the input sequence and runs several independent RNNs. The second\nlayer consumes the output of the first layer using a second RNN thus capturing\nlong dependencies. We provide theoretical justification for our architecture under\nweak assumptions that we verify on real-world benchmarks. Furthermore, we show\nthat for time-series classification, our technique leads to substantially improved\ninference time over standard RNNs without compromising accuracy. For example,\nwe can deploy audio-keyword classification on tiny Cortex M4 devices (100MHz\nprocessor, 256KB RAM, no DSP available) which was not possible using standard\nRNN models. Similarly, using SRNN in the popular Listen-Attend-Spell (LAS)\narchitecture for phoneme classification [4], we can reduce the lag inphoneme\nclassification by 10-12x while maintaining state-of-the-art accuracy.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/14238",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/76d7c0780ceb8fbf964c102ebc16d75f-Paper.pdf",
+      "github_url": "",
+      "total_authors": 7,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "vikram_mandikal",
+        "name": "Vikram Mandikal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "University of Texas at Austin (India),Microsoft (United States)",
+        "countries": [
+          "India",
+          "United States"
+        ],
+        "country_codes": [
+          "US",
+          "IN"
+        ]
+      },
+      "sort_score": 3.333333333333334,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 36,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "14369",
+      "title": "Censored Semi-Bandits: A Framework for Resource Allocation with Censored Feedback",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In this paper, we study Censored Semi-Bandits, a novel variant of the semi-bandits problem. The learner is assumed to have a fixed amount of resources, which it allocates to the arms at each time step. The loss observed from an arm is random and depends on the amount of resources allocated to it. More specifically, the loss equals zero if the allocation for the arm exceeds a constant (but unknown) threshold that can be dependent on the arm. Our goal is to learn a feasible allocation that minimizes the expected loss. The problem is challenging because the loss distribution and threshold value of each arm are unknown. We study this novel setting by establishing its `equivalence' to Multiple-Play Multi-Armed Bandits (MP-MAB) and Combinatorial Semi-Bandits. Exploiting these equivalences, we derive optimal algorithms for our setting using existing algorithms for MP-MAB and Combinatorial Semi-Bandits. Experiments on synthetically generated data validate performance guarantees of the proposed algorithms.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/14369",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/3e91970f771a2c473ae36b60d1146068-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "manjesh_hanawal",
+        "name": "Manjesh Hanawal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "IIT Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.333333333333334,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 21,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "13367",
+      "title": "HyperGCN: A New Method For Training Graph Convolutional Networks on Hypergraphs",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In many real-world network datasets such as co-authorship, co-citation, email communication, etc., relationships are complex and go beyond pairwise. Hypergraphs provide a flexible and natural modeling tool to model such complex relationships. The obvious existence of such complex relationships in many real-world networks naturaly motivates the problem of learning with hypergraphs. A popular learning paradigm is hypergraph-based semi-supervised learning (SSL) where the goal is to assign labels to initially unlabeled vertices in a hypergraph. Motivated by the fact that a graph convolutional network (GCN) has been effective for graph-based SSL, we propose HyperGCN, a novel GCN for SSL on attributed hypergraphs. Additionally, we show how HyperGCN can be used as a learning-based approach for combinatorial optimisation on NP-hard hypergraph problems. We demonstrate HyperGCN's effectiveness through detailed experimentation on real-world hypergraphs. We have made HyperGCN's source code available to foster reproducible research.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/13367",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/1efa39bcaec6f3900149160693694536-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prateek_yadav",
+        "name": "Prateek Yadav",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 607,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "13464",
+      "title": "Turbo Autoencoder: Deep learning based channel codes for point-to-point communication channels",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Designing codes that combat the noise in a communication medium has remained a significant area of research in information theory as well as wireless communications. Asymptotically optimal channel codes have been developed by mathematicians for communicating under canonical models after over 60 years of research. On the other hand, in many non-canonical channel settings, optimal codes do not exist and the codes designed for canonical models are adapted via heuristics to these channels and are thus not guaranteed to be optimal. In this work, we make significant progress on this problem by designing a fully end-to-end jointly trained neural encoder and decoder, namely, Turbo Autoencoder (TurboAE), with the following contributions: (a) under moderate block lengths, TurboAE approaches state-of-the-art performance under canonical channels; (b) moreover, TurboAE outperforms the state-of-the-art codes under non-canonical settings in terms of reliability. TurboAE shows that the development of channel coding design can be automated via deep learning, with near-optimal performance.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/13464",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/228499b55310264a8ea0e27b6e7c6ab6-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "himanshu_asnani_1",
+        "name": "Himanshu Asnani",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Tata Institute of Fundamental Research (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 182,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "13687",
+      "title": "Quantum Embedding of Knowledge for Reasoning",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Statistical Relational Learning (SRL) methods are the most widely used techniques to generate distributional representations of the symbolic Knowledge Bases (KBs). These methods embed any given KB into a vector space by exploiting statistical similarities among its entities and predicates but without any guarantee of preserving the underlying logical structure of the KB. This, in turn, results in poor performance of logical reasoning tasks that are solved using such distributional representations. We present a novel approach called Embed2Reason (E2R) that embeds a symbolic KB into a vector space in a logical structure preserving manner. This approach is inspired by the theory of Quantum Logic. Such an embedding allows answering membership based complex logical reasoning queries with impressive accuracy improvements over popular SRL baselines.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/13687",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/cb12d7f933e7d102c52231bf62b8a678-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "santosh_k__srivastava",
+        "name": "Santosh K. Srivastava",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "IBM (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 66,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "14547",
+      "title": "Infra-slow brain dynamics as a marker for cognitive function and decline",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Functional magnetic resonance imaging (fMRI) enables measuring human brain activity, in vivo. Yet, the fMRI hemodynamic response unfolds over very slow timescales (<0.1-1 Hz), orders of magnitude slower than millisecond timescales of neural spiking. It is unclear, therefore, if slow dynamics as measured with fMRI are relevant for cognitive function. We investigated this question with a novel application of Gaussian Process Factor Analysis (GPFA) and machine learning to fMRI data. We analyzed slowly sampled (1.4 Hz) fMRI data from 1000 healthy human participants (Human Connectome Project database), and applied GPFA to reduce dimensionality and extract smooth latent dynamics. GPFA dimensions with slow (<1 Hz) characteristic timescales identified, with high accuracy (>95%), the specific task that each subject was performing inside the fMRI scanner. Moreover, functional connectivity between slow GPFA latents accurately predicted inter-individual differences in behavioral scores across a range of cognitive tasks. Finally, infra-slow (<0.1 Hz) latent dynamics predicted CDR (Clinical Dementia Rating) scores of individual patients, and identified patients with mild cognitive impairment (MCI) who would progress to develop Alzheimer’s dementia (AD). Slow and infra-slow brain dynamics may be relevant for understanding the neural basis of cognitive function, in health and disease.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/14547",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/7f6caf1f0ba788cd7953d817724c2b6e-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "razi_rehman",
+        "name": "Razi Rehman",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5000000000000004,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 3,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "14161",
+      "title": "Neural Attribution for Semantic Bug-Localization in Student Programs",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Providing feedback is an integral part of teaching. Most open online courses on programming make use of automated grading systems to support programming assignments and give real-time feedback. These systems usually rely on test results to quantify the programs' functional correctness. They return failing tests to the students as feedback. However, students may find it difficult to debug their programs if they receive no hints about where the bug is and how to fix it. In this work, we present NeuralBugLocator, a deep learning based technique, that can localize the bugs in a faulty program with respect to a failing test, without even running the program. At the heart of our technique is a novel tree convolutional neural network which is trained to predict whether a program passes or fails a given test. To localize the bugs, we analyze the trained network using a state-of-the-art neural prediction attribution technique and see which lines of the programs make it predict the test outcomes. Our experiments show that NeuralBugLocator is generally more accurate than two state-of-the-art program-spectrum based and one syntactic difference based bug-localization baselines.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/14161",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/f29a179746902e331572c483c45e5086-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "aditya_kanade",
+        "name": "Aditya Kanade",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India),Google (Unknown)",
+        "countries": [
+          "India",
+          "Unknown"
+        ],
+        "country_codes": [
+          "UN",
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 55,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "14238",
+      "title": "Shallow RNN:  Accurate Time-series Classification on Resource Constrained Devices",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Recurrent Neural Networks (RNNs) capture long dependencies and context, and\n2 hence are the key component of typical sequential data based tasks. However, the\nsequential nature of RNNs dictates a large inference cost for long sequences even if\nthe hardware supports parallelization. To induce long-term dependencies, and yet\nadmit parallelization, we introduce novel shallow RNNs. In this architecture, the\nfirst layer splits the input sequence and runs several independent RNNs. The second\nlayer consumes the output of the first layer using a second RNN thus capturing\nlong dependencies. We provide theoretical justification for our architecture under\nweak assumptions that we verify on real-world benchmarks. Furthermore, we show\nthat for time-series classification, our technique leads to substantially improved\ninference time over standard RNNs without compromising accuracy. For example,\nwe can deploy audio-keyword classification on tiny Cortex M4 devices (100MHz\nprocessor, 256KB RAM, no DSP available) which was not possible using standard\nRNN models. Similarly, using SRNN in the popular Listen-Attend-Spell (LAS)\narchitecture for phoneme classification [4], we can reduce the lag inphoneme\nclassification by 10-12x while maintaining state-of-the-art accuracy.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/14238",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/76d7c0780ceb8fbf964c102ebc16d75f-Paper.pdf",
+      "github_url": "",
+      "total_authors": 7,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "vinu_sankar_sadasivan",
+        "name": "Vinu Sankar Sadasivan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Gandhinagar (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 36,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "13367",
+      "title": "HyperGCN: A New Method For Training Graph Convolutional Networks on Hypergraphs",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In many real-world network datasets such as co-authorship, co-citation, email communication, etc., relationships are complex and go beyond pairwise. Hypergraphs provide a flexible and natural modeling tool to model such complex relationships. The obvious existence of such complex relationships in many real-world networks naturaly motivates the problem of learning with hypergraphs. A popular learning paradigm is hypergraph-based semi-supervised learning (SSL) where the goal is to assign labels to initially unlabeled vertices in a hypergraph. Motivated by the fact that a graph convolutional network (GCN) has been effective for graph-based SSL, we propose HyperGCN, a novel GCN for SSL on attributed hypergraphs. Additionally, we show how HyperGCN can be used as a learning-based approach for combinatorial optimisation on NP-hard hypergraph problems. We demonstrate HyperGCN's effectiveness through detailed experimentation on real-world hypergraphs. We have made HyperGCN's source code available to foster reproducible research.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/13367",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/1efa39bcaec6f3900149160693694536-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "vikram_nitin",
+        "name": "Vikram Nitin",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Birla Institute of Technology and Science (India),Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 607,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "13687",
+      "title": "Quantum Embedding of Knowledge for Reasoning",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Statistical Relational Learning (SRL) methods are the most widely used techniques to generate distributional representations of the symbolic Knowledge Bases (KBs). These methods embed any given KB into a vector space by exploiting statistical similarities among its entities and predicates but without any guarantee of preserving the underlying logical structure of the KB. This, in turn, results in poor performance of logical reasoning tasks that are solved using such distributional representations. We present a novel approach called Embed2Reason (E2R) that embeds a symbolic KB into a vector space in a logical structure preserving manner. This approach is inspired by the theory of Quantum Logic. Such an embedding allows answering membership based complex logical reasoning queries with impressive accuracy improvements over popular SRL baselines.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/13687",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/cb12d7f933e7d102c52231bf62b8a678-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "harit_vishwakarma",
+        "name": "Harit Vishwakarma",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "University of Wisconsin-Madison (India),IBM (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 66,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "14182",
+      "title": "A Primal Dual Formulation For Deep Learning With Constraints",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "For several problems of interest, there are natural constraints which exist over the output label space. For example, for the joint task of NER and POS labeling, these constraints might specify that the NER label ‘organization’ is consistent only with the POS labels ‘noun’ and ‘preposition’. These constraints can be a great way of injecting prior knowledge into a deep learning model, thereby improving overall performance. In this paper, we present a constrained optimization formulation for training a deep network with a given set of hard constraints on output labels. Our novel approach first converts the label constraints into soft logic constraints over probability distributions outputted by the network. It then converts the constrained optimization problem into an alternating min-max optimization with Lagrangian variables defined for each constraint.  Since the constraints are independent of the target labels,  our framework easily generalizes to semi-supervised setting. We experiment on the tasks of Semantic Role Labeling (SRL), Named Entity Recognition (NER) tagging,  and fine-grained entity typing and show that our constraints not only significantly reduce the number of constraint violations, but can also result in state-of-the-art performance",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/14182",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/cf708fc1decf0337aded484f8f4519ae-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "mausam_1",
+        "name": "Mausam",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 122,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "14219",
+      "title": "Efficient Algorithms for Smooth Minimax Optimization",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "This paper studies first order methods for solving smooth minimax optimization problems $\\min_x \\max_y g(x,y)$ where $g(\\cdot,\\cdot)$ is smooth and $g(x,\\cdot)$ is concave for each $x$. In terms of $g(\\cdot,y)$, we consider two settings -- strongly convex and nonconvex -- and improve upon the best known rates in both. For strongly-convex $g(\\cdot, y),\\ \\forall y$, we propose a new direct optimal algorithm combining Mirror-Prox and Nesterov's AGD, and show that it can find global optimum in $\\widetilde{O}\\left(1/k^2 \\right)$ iterations, improving over current state-of-the-art rate of $O(1/k)$. We use this result along with an inexact proximal point method to provide $\\widetilde{O}\\left(1/k^{1/3} \\right)$ rate for finding stationary points in the nonconvex setting where $g(\\cdot, y)$ can be nonconvex. This improves over current best-known rate of $O(1/k^{1/5})$. Finally, we instantiate our result for finite nonconvex minimax problems, i.e., $\\min_x \\max_{1\\leq i\\leq m} f_i(x)$, with nonconvex $f_i(\\cdot)$, to obtain convergence rate of $O(m^{1/3}\\sqrt{\\log m}/k^{1/3})$.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/14219",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/05d0abb9a864ae4981e933685b8b915c-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "praneeth_netrapalli_5",
+        "name": "Praneeth Netrapalli",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 241,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "14369",
+      "title": "Censored Semi-Bandits: A Framework for Resource Allocation with Censored Feedback",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In this paper, we study Censored Semi-Bandits, a novel variant of the semi-bandits problem. The learner is assumed to have a fixed amount of resources, which it allocates to the arms at each time step. The loss observed from an arm is random and depends on the amount of resources allocated to it. More specifically, the loss equals zero if the allocation for the arm exceeds a constant (but unknown) threshold that can be dependent on the arm. Our goal is to learn a feasible allocation that minimizes the expected loss. The problem is challenging because the loss distribution and threshold value of each arm are unknown. We study this novel setting by establishing its `equivalence' to Multiple-Play Multi-Armed Bandits (MP-MAB) and Combinatorial Semi-Bandits. Exploiting these equivalences, we derive optimal algorithms for our setting using existing algorithms for MP-MAB and Combinatorial Semi-Bandits. Experiments on synthetically generated data validate performance guarantees of the proposed algorithms.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/14369",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/3e91970f771a2c473ae36b60d1146068-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "arun_rajkumar_2",
+        "name": "Arun Rajkumar",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Madras (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 21,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "13367",
+      "title": "HyperGCN: A New Method For Training Graph Convolutional Networks on Hypergraphs",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In many real-world network datasets such as co-authorship, co-citation, email communication, etc., relationships are complex and go beyond pairwise. Hypergraphs provide a flexible and natural modeling tool to model such complex relationships. The obvious existence of such complex relationships in many real-world networks naturaly motivates the problem of learning with hypergraphs. A popular learning paradigm is hypergraph-based semi-supervised learning (SSL) where the goal is to assign labels to initially unlabeled vertices in a hypergraph. Motivated by the fact that a graph convolutional network (GCN) has been effective for graph-based SSL, we propose HyperGCN, a novel GCN for SSL on attributed hypergraphs. Additionally, we show how HyperGCN can be used as a learning-based approach for combinatorial optimisation on NP-hard hypergraph problems. We demonstrate HyperGCN's effectiveness through detailed experimentation on real-world hypergraphs. We have made HyperGCN's source code available to foster reproducible research.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/13367",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/1efa39bcaec6f3900149160693694536-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "anand_louis",
+        "name": "Anand Louis",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 5,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 0.9999999999999998,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 607,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "13687",
+      "title": "Quantum Embedding of Knowledge for Reasoning",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Statistical Relational Learning (SRL) methods are the most widely used techniques to generate distributional representations of the symbolic Knowledge Bases (KBs). These methods embed any given KB into a vector space by exploiting statistical similarities among its entities and predicates but without any guarantee of preserving the underlying logical structure of the KB. This, in turn, results in poor performance of logical reasoning tasks that are solved using such distributional representations. We present a novel approach called Embed2Reason (E2R) that embeds a symbolic KB into a vector space in a logical structure preserving manner. This approach is inspired by the theory of Quantum Logic. Such an embedding allows answering membership based complex logical reasoning queries with impressive accuracy improvements over popular SRL baselines.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2019/poster/13687",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2019/file/cb12d7f933e7d102c52231bf62b8a678-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "hima_karanam",
+        "name": "Hima Karanam",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 5,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "IBM (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 0.9999999999999998,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 66,
+        "semantic_scholar_citations": 0
+      }
+    }
+  ]
+}

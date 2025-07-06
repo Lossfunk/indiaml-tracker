@@ -1,0 +1,440 @@
+{
+  "conference": "NeurIPS 2017",
+  "focus_country": "India",
+  "total_papers": 9,
+  "generated_at": "2025-07-06T10:39:19.870062",
+  "config": {
+    "first_author_weight": 3.0,
+    "last_author_weight": 2.0,
+    "middle_author_weight": 1.0,
+    "status_weights": {
+      "oral": 10.0,
+      "spotlight": 7.5,
+      "poster": 5.0,
+      "unknown": 1.0
+    },
+    "output_format": "json",
+    "include_review_details": true,
+    "include_citation_data": true
+  },
+  "papers": [
+    {
+      "paper_id": "8826",
+      "title": "A simple model of recognition and recall memory",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We show that several striking differences in memory performance between recognition and recall tasks are explained by an ecological bias endemic in classic memory experiments - that such experiments universally involve more stimuli than retrieval cues. We show that while it is sensible to think of recall as simply retrieving items when probed with a cue - typically the item list itself -  it is better to think of recognition as retrieving cues when probed with items. To test this theory, by manipulating the number of items and cues in a memory experiment, we show a crossover effect in memory performance within subjects such that recognition performance is superior to recall performance when the number of items is greater than the number of cues and recall performance is better than recognition when the converse holds. We build a simple computational model around this theory, using sampling to approximate an ideal Bayesian observer encoding and retrieving situational co-occurrence frequencies of stimuli and retrieval cues. This model robustly reproduces a number of dissociations in recognition and recall previously used to argue for dual-process accounts of declarative memory.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2017/poster/8826",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2017/file/57aeee35c98205091e18d1140e9f38cf-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "nisheeth_srivastava_2",
+        "name": "Nisheeth Srivastava",
+        "name_site": "Nisheeth Srivastava, Edward Vul",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Kanpur (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 18,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "8999",
+      "title": "Consistent Robust Regression",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We present the first efficient and provably consistent estimator for the robust regression problem. The area of robust learning and optimization has generated a significant amount of interest in the learning and statistics communities in recent years owing to its applicability in scenarios with corrupted data, as well as in handling model mis-specifications. In particular, special interest has been devoted to the fundamental problem of robust linear regression where estimators that can tolerate corruption in up to a constant fraction of the response variables are widely studied. Surprisingly however, to this date, we are not aware of a polynomial time estimator that offers a consistent estimate in the presence of dense, unbounded corruptions. In this work we present such an estimator, called CRR. This solves an open problem put forward in the work of (Bhatia et al, 2015). Our consistency analysis requires a novel two-stage proof technique involving a careful analysis of the stability of ordered lists which may be of independent interest. We show that CRR not only offers consistent estimates, but is empirically far superior to several other recently proposed algorithms for the robust regression problem, including extended Lasso and the TORRENT algorithm. In comparison, CRR offers comparable or better model recovery but with runtimes that are faster by an order of magnitude.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2017/poster/8999",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2017/file/e702e51da2c0f5be4dd354bb3e295d37-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "kush_bhatia_2",
+        "name": "Kush Bhatia",
+        "name_site": "Kush Bhatia, Prateek Jain, Parameswaran Kamalaruban, Purushottam Kar",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "University of California, Berkeley (Unknown),Microsoft (India)",
+        "countries": [
+          "Unknown",
+          "India"
+        ],
+        "country_codes": [
+          "UN",
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 118,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "9206",
+      "title": "Temporal Coherency based Criteria for Predicting Video Frames using Deep Multi-stage Generative Adversarial Networks",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Predicting the future from a sequence of video frames has been recently a sought after yet challenging task in the field of computer vision and machine learning. Although there have been efforts for tracking using motion trajectories and flow features, the complex problem of generating unseen frames has not been studied extensively. In this paper, we deal with this problem using convolutional models within a multi-stage Generative Adversarial Networks (GAN) framework. The proposed method uses two stages of GANs to generate a crisp and clear set of future frames. Although GANs have been used in the past for predicting the future, none of the works consider the relation between subsequent frames in the temporal dimension. Our main contribution lies in formulating two objective functions based on the Normalized Cross Correlation (NCC) and the Pairwise Contrastive Divergence (PCD) for solving this problem. This method, coupled with the traditional L1 loss, has been experimented with three real-world video datasets, viz. Sports-1M, UCF-101 and the KITTI. Performance analysis reveals superior results over the recent state-of-the-art methods.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2017/poster/9206",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2017/file/b166b57d195370cd41f80dd29ed523d9-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prateep_bhattacharjee",
+        "name": "Prateep Bhattacharjee",
+        "name_site": "Prateep Bhattacharjee, Sukhendu Das",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Madras (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 63,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "8999",
+      "title": "Consistent Robust Regression",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We present the first efficient and provably consistent estimator for the robust regression problem. The area of robust learning and optimization has generated a significant amount of interest in the learning and statistics communities in recent years owing to its applicability in scenarios with corrupted data, as well as in handling model mis-specifications. In particular, special interest has been devoted to the fundamental problem of robust linear regression where estimators that can tolerate corruption in up to a constant fraction of the response variables are widely studied. Surprisingly however, to this date, we are not aware of a polynomial time estimator that offers a consistent estimate in the presence of dense, unbounded corruptions. In this work we present such an estimator, called CRR. This solves an open problem put forward in the work of (Bhatia et al, 2015). Our consistency analysis requires a novel two-stage proof technique involving a careful analysis of the stability of ordered lists which may be of independent interest. We show that CRR not only offers consistent estimates, but is empirically far superior to several other recently proposed algorithms for the robust regression problem, including extended Lasso and the TORRENT algorithm. In comparison, CRR offers comparable or better model recovery but with runtimes that are faster by an order of magnitude.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2017/poster/8999",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2017/file/e702e51da2c0f5be4dd354bb3e295d37-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "purushottam_kar_7",
+        "name": "Purushottam Kar",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Kanpur (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 118,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "9206",
+      "title": "Temporal Coherency based Criteria for Predicting Video Frames using Deep Multi-stage Generative Adversarial Networks",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Predicting the future from a sequence of video frames has been recently a sought after yet challenging task in the field of computer vision and machine learning. Although there have been efforts for tracking using motion trajectories and flow features, the complex problem of generating unseen frames has not been studied extensively. In this paper, we deal with this problem using convolutional models within a multi-stage Generative Adversarial Networks (GAN) framework. The proposed method uses two stages of GANs to generate a crisp and clear set of future frames. Although GANs have been used in the past for predicting the future, none of the works consider the relation between subsequent frames in the temporal dimension. Our main contribution lies in formulating two objective functions based on the Normalized Cross Correlation (NCC) and the Pairwise Contrastive Divergence (PCD) for solving this problem. This method, coupled with the traditional L1 loss, has been experimented with three real-world video datasets, viz. Sports-1M, UCF-101 and the KITTI. Performance analysis reveals superior results over the recent state-of-the-art methods.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2017/poster/9206",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2017/file/b166b57d195370cd41f80dd29ed523d9-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sukhendu_das",
+        "name": "Sukhendu Das",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Madras (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 63,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "9429",
+      "title": "Learning Mixture of Gaussians with Streaming Data",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In this paper, we study the problem of learning a mixture of Gaussians with streaming data: given a stream of $N$ points in $d$ dimensions generated by an unknown mixture of $k$ spherical Gaussians, the goal is to estimate the model parameters using a single pass over the data stream. We analyze a streaming version of the popular Lloyd's heuristic and show that the algorithm estimates all the unknown centers of the component Gaussians  accurately if they are sufficiently separated. Assuming each pair of centers are $C\\sigma$ distant with $C=\\Omega((k\\log k)^{1/4}\\sigma)$ and where $\\sigma^2$ is the maximum variance of any Gaussian component, we show that asymptotically the algorithm estimates the centers optimally (up to certain constants); our center separation requirement matches the best known result for spherical Gaussians \\citep{vempalawang}. For finite samples, we show that a bias term based on the initial estimate decreases at $O(1/{\\rm poly}(N))$ rate while variance decreases at nearly optimal rate of $\\sigma^2 d/N$. Our analysis requires seeding the algorithm with a good initial estimate of the true cluster centers for which we provide an online PCA based clustering algorithm. Indeed, the asymptotic per-step time complexity of our algorithm is the optimal $d\\cdot k$ while space complexity of our algorithm is $O(dk\\log k)$.  In addition to the bias and variance terms which tend to $0$, the hard-thresholding based updates of streaming Lloyd's algorithm is agnostic to the data distribution and hence incurs an \\emph{approximation error} that cannot be avoided. However, by using a streaming version of the classical \\emph{(soft-thresholding-based)} EM method that exploits the Gaussian distribution explicitly, we show that for a mixture of two Gaussians the true means can be estimated consistently, with estimation error decreasing at nearly optimal rate, and tending to $0$ for $N\\rightarrow \\infty$.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2017/poster/9429",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2017/file/f24ad6f72d6cc4cb51464f2b29ab69d3-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "ravishankar_krishnawamy",
+        "name": "Ravishankar Krishnawamy",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 13,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "8999",
+      "title": "Consistent Robust Regression",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We present the first efficient and provably consistent estimator for the robust regression problem. The area of robust learning and optimization has generated a significant amount of interest in the learning and statistics communities in recent years owing to its applicability in scenarios with corrupted data, as well as in handling model mis-specifications. In particular, special interest has been devoted to the fundamental problem of robust linear regression where estimators that can tolerate corruption in up to a constant fraction of the response variables are widely studied. Surprisingly however, to this date, we are not aware of a polynomial time estimator that offers a consistent estimate in the presence of dense, unbounded corruptions. In this work we present such an estimator, called CRR. This solves an open problem put forward in the work of (Bhatia et al, 2015). Our consistency analysis requires a novel two-stage proof technique involving a careful analysis of the stability of ordered lists which may be of independent interest. We show that CRR not only offers consistent estimates, but is empirically far superior to several other recently proposed algorithms for the robust regression problem, including extended Lasso and the TORRENT algorithm. In comparison, CRR offers comparable or better model recovery but with runtimes that are faster by an order of magnitude.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2017/poster/8999",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2017/file/e702e51da2c0f5be4dd354bb3e295d37-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prateek_jain_24",
+        "name": "Prateek Jain",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.333333333333334,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 118,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "9429",
+      "title": "Learning Mixture of Gaussians with Streaming Data",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In this paper, we study the problem of learning a mixture of Gaussians with streaming data: given a stream of $N$ points in $d$ dimensions generated by an unknown mixture of $k$ spherical Gaussians, the goal is to estimate the model parameters using a single pass over the data stream. We analyze a streaming version of the popular Lloyd's heuristic and show that the algorithm estimates all the unknown centers of the component Gaussians  accurately if they are sufficiently separated. Assuming each pair of centers are $C\\sigma$ distant with $C=\\Omega((k\\log k)^{1/4}\\sigma)$ and where $\\sigma^2$ is the maximum variance of any Gaussian component, we show that asymptotically the algorithm estimates the centers optimally (up to certain constants); our center separation requirement matches the best known result for spherical Gaussians \\citep{vempalawang}. For finite samples, we show that a bias term based on the initial estimate decreases at $O(1/{\\rm poly}(N))$ rate while variance decreases at nearly optimal rate of $\\sigma^2 d/N$. Our analysis requires seeding the algorithm with a good initial estimate of the true cluster centers for which we provide an online PCA based clustering algorithm. Indeed, the asymptotic per-step time complexity of our algorithm is the optimal $d\\cdot k$ while space complexity of our algorithm is $O(dk\\log k)$.  In addition to the bias and variance terms which tend to $0$, the hard-thresholding based updates of streaming Lloyd's algorithm is agnostic to the data distribution and hence incurs an \\emph{approximation error} that cannot be avoided. However, by using a streaming version of the classical \\emph{(soft-thresholding-based)} EM method that exploits the Gaussian distribution explicitly, we show that for a mixture of two Gaussians the true means can be estimated consistently, with estimation error decreasing at nearly optimal rate, and tending to $0$ for $N\\rightarrow \\infty$.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2017/poster/9429",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2017/file/f24ad6f72d6cc4cb51464f2b29ab69d3-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prateek_jain_25",
+        "name": "Prateek Jain",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 13,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "8999",
+      "title": "Consistent Robust Regression",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We present the first efficient and provably consistent estimator for the robust regression problem. The area of robust learning and optimization has generated a significant amount of interest in the learning and statistics communities in recent years owing to its applicability in scenarios with corrupted data, as well as in handling model mis-specifications. In particular, special interest has been devoted to the fundamental problem of robust linear regression where estimators that can tolerate corruption in up to a constant fraction of the response variables are widely studied. Surprisingly however, to this date, we are not aware of a polynomial time estimator that offers a consistent estimate in the presence of dense, unbounded corruptions. In this work we present such an estimator, called CRR. This solves an open problem put forward in the work of (Bhatia et al, 2015). Our consistency analysis requires a novel two-stage proof technique involving a careful analysis of the stability of ordered lists which may be of independent interest. We show that CRR not only offers consistent estimates, but is empirically far superior to several other recently proposed algorithms for the robust regression problem, including extended Lasso and the TORRENT algorithm. In comparison, CRR offers comparable or better model recovery but with runtimes that are faster by an order of magnitude.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2017/poster/8999",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2017/file/e702e51da2c0f5be4dd354bb3e295d37-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "parameswaran_kamalaruban",
+        "name": "Parameswaran Kamalaruban",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "EPFL (Unknown),Microsoft (India)",
+        "countries": [
+          "Unknown",
+          "India"
+        ],
+        "country_codes": [
+          "UN",
+          "IN"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 118,
+        "semantic_scholar_citations": 0
+      }
+    }
+  ]
+}

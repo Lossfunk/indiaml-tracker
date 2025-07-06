@@ -1,0 +1,1084 @@
+{
+  "conference": "NeurIPS 2018",
+  "focus_country": "India",
+  "total_papers": 23,
+  "generated_at": "2025-07-06T10:39:19.869187",
+  "config": {
+    "first_author_weight": 3.0,
+    "last_author_weight": 2.0,
+    "middle_author_weight": 1.0,
+    "status_weights": {
+      "oral": 10.0,
+      "spotlight": 7.5,
+      "poster": 5.0,
+      "unknown": 1.0
+    },
+    "output_format": "json",
+    "include_review_details": true,
+    "include_citation_data": true
+  },
+  "papers": [
+    {
+      "paper_id": "12022",
+      "title": "Support Recovery for Orthogonal Matching Pursuit: Upper and Lower bounds",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "This paper studies the problem of sparse regression where the goal is to learn a sparse vector that best optimizes a given objective function. Under the assumption that the objective function satisfies restricted strong convexity (RSC), we analyze orthogonal matching pursuit (OMP), a greedy algorithm that is used heavily in applications, and obtain support recovery result as well as a tight generalization error bound for OMP. Furthermore, we obtain lower bounds for OMP, showing that both our results on support recovery and generalization error are tight up to logarithmic factors. To the best of our knowledge, these support recovery and generalization bounds are the first such matching upper and lower bounds (up to logarithmic factors) for {\\em any} sparse regression algorithm under the RSC assumption.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2018/poster/12022",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2018/file/84b64e537f08e81b8dea8cce972a28b2-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "raghav_somani",
+        "name": "Raghav Somani",
+        "name_site": "Raghav Somani, Chirag Gupta, Prateek Jain, Praneeth Netrapalli",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 22.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 8,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "11536",
+      "title": "A Dual Framework for Low-rank Tensor Completion",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "One of the popular approaches for low-rank tensor completion is to use the latent trace norm regularization. However, most existing works in this direction learn a sparse combination of tensors. In this work, we fill this gap by proposing a variant of the latent trace norm that helps in learning a non-sparse combination of tensors. We develop a dual framework for solving the low-rank tensor completion problem. We first show a novel characterization of the dual solution space with an interesting factorization of the optimal solution. Overall, the optimal solution is shown to lie on a Cartesian  product of Riemannian manifolds. Furthermore, we exploit the versatile Riemannian optimization framework for proposing computationally efficient trust region algorithm. The experiments illustrate the efficacy of the proposed algorithm on several real-world datasets across applications.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2018/poster/11536",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2018/file/09a5e2a11bea20817477e0b1dfe2cc21-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "madhav_nimishakavi",
+        "name": "Madhav Nimishakavi",
+        "name_site": "Madhav Nimishakavi, Pratik Kumar Jawanpuria, Bamdev Mishra",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 44,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "11860",
+      "title": "FastGRNN: A Fast, Accurate, Stable and Tiny Kilobyte Sized Gated Recurrent Neural Network",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "This paper develops the FastRNN and FastGRNN algorithms to address the twin RNN limitations of inaccurate training and inefficient prediction. Previous approaches have improved accuracy at the expense of prediction costs making them infeasible for resource-constrained and real-time applications. Unitary RNNs have increased accuracy somewhat by restricting the range of the state transition matrix's singular values but have also increased the model size as they require a larger number of hidden units to make up for the loss in expressive power. Gated RNNs have obtained state-of-the-art accuracies by adding extra parameters thereby resulting in even larger models. FastRNN addresses these limitations by adding a residual connection that does not constrain the range of the singular values explicitly and has only two extra scalar parameters. FastGRNN then extends the residual connection to a gate by reusing the RNN matrices to match state-of-the-art gated RNN accuracies but with a 2-4x smaller model. Enforcing FastGRNN's matrices to be low-rank, sparse and quantized resulted in accurate models that could be up to 35x smaller than leading gated and unitary RNNs. This allowed FastGRNN to accurately recognize the \"Hey Cortana\" wakeword with a 1 KB model and to be deployed on severely resource-constrained IoT microcontrollers too tiny to store other RNN models. FastGRNN's code is available at (https://github.com/Microsoft/EdgeML/).",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2018/poster/11860",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2018/file/ab013ca67cf2d50796b0c11d1b8bc95d-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "aditya_kusupati",
+        "name": "Aditya Kusupati",
+        "name_site": "Aditya Kusupati, Manish Singh, Kush Bhatia, Ashish Kumar, Prateek Jain, Manik Varma",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 249,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "12011",
+      "title": "Mean Field for the Stochastic Blockmodel: Optimization Landscape and Convergence Issues",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Variational approximation has been widely used in large-scale Bayesian inference recently, the simplest kind of which involves imposing a mean field assumption to approximate complicated latent structures. Despite the computational scalability of mean field, theoretical studies of its loss function surface and the convergence behavior of iterative updates for optimizing the loss are far from complete. In this paper, we focus on the problem of community detection for a simple two-class Stochastic Blockmodel (SBM). Using batch co-ordinate ascent (BCAVI) for updates, we give a complete characterization of all the critical points and show different convergence behaviors with respect to initializations. When the parameters are known, we show a significant proportion of random initializations will converge to ground truth. On the other hand, when the parameters themselves need to be estimated, a random initialization will converge to an uninformative local optimum.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2018/poster/12011",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2018/file/dbb240d23ce3d732b67bcfbae5956b18-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "soumendu_sundar_mukherjee_1",
+        "name": "Soumendu Sundar Mukherjee",
+        "name_site": "Soumendu Sundar Mukherjee, Purnamrita Sarkar, Y. X. Rachel Wang, Bowei Yan",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Statistical Institute (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 32,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "12022",
+      "title": "Support Recovery for Orthogonal Matching Pursuit: Upper and Lower bounds",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "This paper studies the problem of sparse regression where the goal is to learn a sparse vector that best optimizes a given objective function. Under the assumption that the objective function satisfies restricted strong convexity (RSC), we analyze orthogonal matching pursuit (OMP), a greedy algorithm that is used heavily in applications, and obtain support recovery result as well as a tight generalization error bound for OMP. Furthermore, we obtain lower bounds for OMP, showing that both our results on support recovery and generalization error are tight up to logarithmic factors. To the best of our knowledge, these support recovery and generalization bounds are the first such matching upper and lower bounds (up to logarithmic factors) for {\\em any} sparse regression algorithm under the RSC assumption.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2018/poster/12022",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2018/file/84b64e537f08e81b8dea8cce972a28b2-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "praneeth_netrapalli_4",
+        "name": "Praneeth Netrapalli",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 8,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "12035",
+      "title": "Multiple Instance Learning for Efficient Sequential Data Classification on Resource-constrained Devices",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We study the problem of fast and efficient classification of sequential data (such as\ntime-series) on tiny devices, which is critical for various IoT related applications\nlike audio keyword detection or gesture detection. Such tasks are cast as a standard classification task by sliding windows over the data stream to construct data points. Deploying such classification modules on tiny devices is challenging as predictions over sliding windows of data need to be invoked continuously at a high frequency. Each such predictor instance in itself is expensive as it evaluates large models over long windows of data. In this paper, we address this challenge by exploiting the following two observations about classification tasks arising in typical IoT related applications: (a) the \"signature\" of a particular class (e.g. an audio keyword) typically occupies a small fraction of the overall data, and (b) class signatures tend to be discernible early on in the data. We propose a method, EMI-RNN, that exploits these observations by using a multiple instance learning formulation along with an early prediction technique to learn a model that achieves better accuracy compared to baseline models, while simultaneously reducing computation by a large fraction. For instance, on a gesture detection benchmark [ 25 ], EMI-RNN improves standard LSTM model’s accuracy by up to 1% while requiring 72x less computation. This enables us to deploy such models for continuous real-time prediction on a small device such as Raspberry Pi0 and Arduino variants, a task that the baseline LSTM could not achieve. Finally, we also provide an analysis of our multiple instance learning algorithm in a simple setting and show that the proposed algorithm converges to the global optima at a linear rate, one of the first such result in this domain. The code for EMI-RNN is available at: https://github.com/Microsoft/EdgeML/tree/master/tf/examples/EMI-RNN",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2018/poster/12035",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2018/file/d9fbed9da256e344c1fa46bb46c34c5f-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "don_dennis",
+        "name": "Don Dennis",
+        "name_site": "Don Dennis, Chirag Pabbaraju, Harsha Vardhan Simhadri, Prateek Jain",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 67,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "12036",
+      "title": "Transfer of Deep Reactive Policies for MDP Planning",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Domain-independent probabilistic planners input an MDP description in a factored representation language such as PPDDL or RDDL, and exploit the specifics of the representation for faster planning. Traditional algorithms operate on each problem instance independently, and good methods for transferring experience from policies of other instances of a domain to a new instance do not exist.  Recently, researchers have begun exploring the use of deep reactive policies, trained via deep reinforcement learning (RL), for MDP planning domains. One advantage of deep reactive policies is that they are more amenable to transfer learning.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2018/poster/12036",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2018/file/74627b65e6e6a4c21e06809b8e02114a-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "aniket__nick__bajpai",
+        "name": "Aniket (Nick) Bajpai",
+        "name_site": "Aniket (Nick) Bajpai, Sankalp Garg, Mausam",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 37,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "11421",
+      "title": "Inexact trust-region algorithms on Riemannian manifolds",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We consider an inexact variant of the popular Riemannian trust-region algorithm for structured big-data minimization problems. The proposed algorithm approximates the gradient and the Hessian in addition to the solution of a trust-region sub-problem. Addressing large-scale finite-sum problems, we specifically propose sub-sampled algorithms with a fixed bound on sub-sampled Hessian and gradient sizes, where the gradient and Hessian are computed by a random sampling technique. Numerical evaluations demonstrate that the proposed algorithms outperform state-of-the-art Riemannian deterministic and stochastic gradient algorithms across different applications.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2018/poster/11421",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2018/file/3e9e39fed3b8369ed940f52cf300cf88-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "bamdev_mishra_1",
+        "name": "Bamdev Mishra",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 27,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "11536",
+      "title": "A Dual Framework for Low-rank Tensor Completion",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "One of the popular approaches for low-rank tensor completion is to use the latent trace norm regularization. However, most existing works in this direction learn a sparse combination of tensors. In this work, we fill this gap by proposing a variant of the latent trace norm that helps in learning a non-sparse combination of tensors. We develop a dual framework for solving the low-rank tensor completion problem. We first show a novel characterization of the dual solution space with an interesting factorization of the optimal solution. Overall, the optimal solution is shown to lie on a Cartesian  product of Riemannian manifolds. Furthermore, we exploit the versatile Riemannian optimization framework for proposing computationally efficient trust region algorithm. The experiments illustrate the efficacy of the proposed algorithm on several real-world datasets across applications.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2018/poster/11536",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2018/file/09a5e2a11bea20817477e0b1dfe2cc21-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "bamdev_mishra",
+        "name": "Bamdev Mishra",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 44,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "11860",
+      "title": "FastGRNN: A Fast, Accurate, Stable and Tiny Kilobyte Sized Gated Recurrent Neural Network",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "This paper develops the FastRNN and FastGRNN algorithms to address the twin RNN limitations of inaccurate training and inefficient prediction. Previous approaches have improved accuracy at the expense of prediction costs making them infeasible for resource-constrained and real-time applications. Unitary RNNs have increased accuracy somewhat by restricting the range of the state transition matrix's singular values but have also increased the model size as they require a larger number of hidden units to make up for the loss in expressive power. Gated RNNs have obtained state-of-the-art accuracies by adding extra parameters thereby resulting in even larger models. FastRNN addresses these limitations by adding a residual connection that does not constrain the range of the singular values explicitly and has only two extra scalar parameters. FastGRNN then extends the residual connection to a gate by reusing the RNN matrices to match state-of-the-art gated RNN accuracies but with a 2-4x smaller model. Enforcing FastGRNN's matrices to be low-rank, sparse and quantized resulted in accurate models that could be up to 35x smaller than leading gated and unitary RNNs. This allowed FastGRNN to accurately recognize the \"Hey Cortana\" wakeword with a 1 KB model and to be deployed on severely resource-constrained IoT microcontrollers too tiny to store other RNN models. FastGRNN's code is available at (https://github.com/Microsoft/EdgeML/).",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2018/poster/11860",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2018/file/ab013ca67cf2d50796b0c11d1b8bc95d-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "manik_varma_2",
+        "name": "Manik Varma",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 6,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 249,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "12035",
+      "title": "Multiple Instance Learning for Efficient Sequential Data Classification on Resource-constrained Devices",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We study the problem of fast and efficient classification of sequential data (such as\ntime-series) on tiny devices, which is critical for various IoT related applications\nlike audio keyword detection or gesture detection. Such tasks are cast as a standard classification task by sliding windows over the data stream to construct data points. Deploying such classification modules on tiny devices is challenging as predictions over sliding windows of data need to be invoked continuously at a high frequency. Each such predictor instance in itself is expensive as it evaluates large models over long windows of data. In this paper, we address this challenge by exploiting the following two observations about classification tasks arising in typical IoT related applications: (a) the \"signature\" of a particular class (e.g. an audio keyword) typically occupies a small fraction of the overall data, and (b) class signatures tend to be discernible early on in the data. We propose a method, EMI-RNN, that exploits these observations by using a multiple instance learning formulation along with an early prediction technique to learn a model that achieves better accuracy compared to baseline models, while simultaneously reducing computation by a large fraction. For instance, on a gesture detection benchmark [ 25 ], EMI-RNN improves standard LSTM model’s accuracy by up to 1% while requiring 72x less computation. This enables us to deploy such models for continuous real-time prediction on a small device such as Raspberry Pi0 and Arduino variants, a task that the baseline LSTM could not achieve. Finally, we also provide an analysis of our multiple instance learning algorithm in a simple setting and show that the proposed algorithm converges to the global optima at a linear rate, one of the first such result in this domain. The code for EMI-RNN is available at: https://github.com/Microsoft/EdgeML/tree/master/tf/examples/EMI-RNN",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2018/poster/12035",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2018/file/d9fbed9da256e344c1fa46bb46c34c5f-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prateek_jain_27",
+        "name": "Prateek Jain",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 67,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "12036",
+      "title": "Transfer of Deep Reactive Policies for MDP Planning",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Domain-independent probabilistic planners input an MDP description in a factored representation language such as PPDDL or RDDL, and exploit the specifics of the representation for faster planning. Traditional algorithms operate on each problem instance independently, and good methods for transferring experience from policies of other instances of a domain to a new instance do not exist.  Recently, researchers have begun exploring the use of deep reactive policies, trained via deep reinforcement learning (RL), for MDP planning domains. One advantage of deep reactive policies is that they are more amenable to transfer learning.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2018/poster/12036",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2018/file/74627b65e6e6a4c21e06809b8e02114a-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "mausam",
+        "name": "Mausam",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 37,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "12022",
+      "title": "Support Recovery for Orthogonal Matching Pursuit: Upper and Lower bounds",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "This paper studies the problem of sparse regression where the goal is to learn a sparse vector that best optimizes a given objective function. Under the assumption that the objective function satisfies restricted strong convexity (RSC), we analyze orthogonal matching pursuit (OMP), a greedy algorithm that is used heavily in applications, and obtain support recovery result as well as a tight generalization error bound for OMP. Furthermore, we obtain lower bounds for OMP, showing that both our results on support recovery and generalization error are tight up to logarithmic factors. To the best of our knowledge, these support recovery and generalization bounds are the first such matching upper and lower bounds (up to logarithmic factors) for {\\em any} sparse regression algorithm under the RSC assumption.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2018/poster/12022",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2018/file/84b64e537f08e81b8dea8cce972a28b2-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "chirag_gupta",
+        "name": "Chirag Gupta",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Carnegie Mellon University (Unknown),Microsoft (India)",
+        "countries": [
+          "Unknown",
+          "India"
+        ],
+        "country_codes": [
+          "UN",
+          "IN"
+        ]
+      },
+      "sort_score": 5.000000000000001,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 8,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "11860",
+      "title": "FastGRNN: A Fast, Accurate, Stable and Tiny Kilobyte Sized Gated Recurrent Neural Network",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "This paper develops the FastRNN and FastGRNN algorithms to address the twin RNN limitations of inaccurate training and inefficient prediction. Previous approaches have improved accuracy at the expense of prediction costs making them infeasible for resource-constrained and real-time applications. Unitary RNNs have increased accuracy somewhat by restricting the range of the state transition matrix's singular values but have also increased the model size as they require a larger number of hidden units to make up for the loss in expressive power. Gated RNNs have obtained state-of-the-art accuracies by adding extra parameters thereby resulting in even larger models. FastRNN addresses these limitations by adding a residual connection that does not constrain the range of the singular values explicitly and has only two extra scalar parameters. FastGRNN then extends the residual connection to a gate by reusing the RNN matrices to match state-of-the-art gated RNN accuracies but with a 2-4x smaller model. Enforcing FastGRNN's matrices to be low-rank, sparse and quantized resulted in accurate models that could be up to 35x smaller than leading gated and unitary RNNs. This allowed FastGRNN to accurately recognize the \"Hey Cortana\" wakeword with a 1 KB model and to be deployed on severely resource-constrained IoT microcontrollers too tiny to store other RNN models. FastGRNN's code is available at (https://github.com/Microsoft/EdgeML/).",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2018/poster/11860",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2018/file/ab013ca67cf2d50796b0c11d1b8bc95d-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "manish_singh_1",
+        "name": "Manish Singh",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 4.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 249,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "11433",
+      "title": "Mallows Models for Top-k Lists",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The classic Mallows model is a widely-used tool to realize distributions on per- mutations. Motivated by common practical situations, in this paper, we generalize Mallows to model distributions on top-k lists by using a suitable distance measure between top-k lists. Unlike many earlier works, our model is both analytically tractable and computationally efficient. We demonstrate this by studying two basic problems in this model, namely, sampling and reconstruction, from both algorithmic and experimental points of view.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2018/poster/11433",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2018/file/a381c2c35c9157f6b67fd07d5a200ae1-Paper.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "anirban_dasgupta_1",
+        "name": "Anirban Dasgupta",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Gandhinagar (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.75,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 17,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "12035",
+      "title": "Multiple Instance Learning for Efficient Sequential Data Classification on Resource-constrained Devices",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We study the problem of fast and efficient classification of sequential data (such as\ntime-series) on tiny devices, which is critical for various IoT related applications\nlike audio keyword detection or gesture detection. Such tasks are cast as a standard classification task by sliding windows over the data stream to construct data points. Deploying such classification modules on tiny devices is challenging as predictions over sliding windows of data need to be invoked continuously at a high frequency. Each such predictor instance in itself is expensive as it evaluates large models over long windows of data. In this paper, we address this challenge by exploiting the following two observations about classification tasks arising in typical IoT related applications: (a) the \"signature\" of a particular class (e.g. an audio keyword) typically occupies a small fraction of the overall data, and (b) class signatures tend to be discernible early on in the data. We propose a method, EMI-RNN, that exploits these observations by using a multiple instance learning formulation along with an early prediction technique to learn a model that achieves better accuracy compared to baseline models, while simultaneously reducing computation by a large fraction. For instance, on a gesture detection benchmark [ 25 ], EMI-RNN improves standard LSTM model’s accuracy by up to 1% while requiring 72x less computation. This enables us to deploy such models for continuous real-time prediction on a small device such as Raspberry Pi0 and Arduino variants, a task that the baseline LSTM could not achieve. Finally, we also provide an analysis of our multiple instance learning algorithm in a simple setting and show that the proposed algorithm converges to the global optima at a linear rate, one of the first such result in this domain. The code for EMI-RNN is available at: https://github.com/Microsoft/EdgeML/tree/master/tf/examples/EMI-RNN",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2018/poster/12035",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2018/file/d9fbed9da256e344c1fa46bb46c34c5f-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "chirag_pabbaraju",
+        "name": "Chirag Pabbaraju",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.333333333333334,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 67,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "11860",
+      "title": "FastGRNN: A Fast, Accurate, Stable and Tiny Kilobyte Sized Gated Recurrent Neural Network",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "This paper develops the FastRNN and FastGRNN algorithms to address the twin RNN limitations of inaccurate training and inefficient prediction. Previous approaches have improved accuracy at the expense of prediction costs making them infeasible for resource-constrained and real-time applications. Unitary RNNs have increased accuracy somewhat by restricting the range of the state transition matrix's singular values but have also increased the model size as they require a larger number of hidden units to make up for the loss in expressive power. Gated RNNs have obtained state-of-the-art accuracies by adding extra parameters thereby resulting in even larger models. FastRNN addresses these limitations by adding a residual connection that does not constrain the range of the singular values explicitly and has only two extra scalar parameters. FastGRNN then extends the residual connection to a gate by reusing the RNN matrices to match state-of-the-art gated RNN accuracies but with a 2-4x smaller model. Enforcing FastGRNN's matrices to be low-rank, sparse and quantized resulted in accurate models that could be up to 35x smaller than leading gated and unitary RNNs. This allowed FastGRNN to accurately recognize the \"Hey Cortana\" wakeword with a 1 KB model and to be deployed on severely resource-constrained IoT microcontrollers too tiny to store other RNN models. FastGRNN's code is available at (https://github.com/Microsoft/EdgeML/).",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2018/poster/11860",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2018/file/ab013ca67cf2d50796b0c11d1b8bc95d-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "kush_bhatia_3",
+        "name": "Kush Bhatia",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "University of California, Berkeley (Unknown),Microsoft (India)",
+        "countries": [
+          "Unknown",
+          "India"
+        ],
+        "country_codes": [
+          "UN",
+          "IN"
+        ]
+      },
+      "sort_score": 3.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 249,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "12022",
+      "title": "Support Recovery for Orthogonal Matching Pursuit: Upper and Lower bounds",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "This paper studies the problem of sparse regression where the goal is to learn a sparse vector that best optimizes a given objective function. Under the assumption that the objective function satisfies restricted strong convexity (RSC), we analyze orthogonal matching pursuit (OMP), a greedy algorithm that is used heavily in applications, and obtain support recovery result as well as a tight generalization error bound for OMP. Furthermore, we obtain lower bounds for OMP, showing that both our results on support recovery and generalization error are tight up to logarithmic factors. To the best of our knowledge, these support recovery and generalization bounds are the first such matching upper and lower bounds (up to logarithmic factors) for {\\em any} sparse regression algorithm under the RSC assumption.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2018/poster/12022",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2018/file/84b64e537f08e81b8dea8cce972a28b2-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prateek_jain_28",
+        "name": "Prateek Jain",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5000000000000004,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 8,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "11536",
+      "title": "A Dual Framework for Low-rank Tensor Completion",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "One of the popular approaches for low-rank tensor completion is to use the latent trace norm regularization. However, most existing works in this direction learn a sparse combination of tensors. In this work, we fill this gap by proposing a variant of the latent trace norm that helps in learning a non-sparse combination of tensors. We develop a dual framework for solving the low-rank tensor completion problem. We first show a novel characterization of the dual solution space with an interesting factorization of the optimal solution. Overall, the optimal solution is shown to lie on a Cartesian  product of Riemannian manifolds. Furthermore, we exploit the versatile Riemannian optimization framework for proposing computationally efficient trust region algorithm. The experiments illustrate the efficacy of the proposed algorithm on several real-world datasets across applications.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2018/poster/11536",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2018/file/09a5e2a11bea20817477e0b1dfe2cc21-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "pratik_kumar_jawanpuria_1",
+        "name": "Pratik Kumar Jawanpuria",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 44,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "12036",
+      "title": "Transfer of Deep Reactive Policies for MDP Planning",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Domain-independent probabilistic planners input an MDP description in a factored representation language such as PPDDL or RDDL, and exploit the specifics of the representation for faster planning. Traditional algorithms operate on each problem instance independently, and good methods for transferring experience from policies of other instances of a domain to a new instance do not exist.  Recently, researchers have begun exploring the use of deep reactive policies, trained via deep reinforcement learning (RL), for MDP planning domains. One advantage of deep reactive policies is that they are more amenable to transfer learning.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2018/poster/12036",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2018/file/74627b65e6e6a4c21e06809b8e02114a-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sankalp_garg",
+        "name": "Sankalp Garg",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 37,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "11899",
+      "title": "Learning and Testing Causal Models with Interventions",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We consider testing and learning problems on causal Bayesian networks as defined by Pearl (Pearl, 2009). Given a causal Bayesian network M on a graph with n discrete variables and bounded in-degree and bounded ``confounded components'', we show that O(log n) interventions on an unknown causal Bayesian network X on the same graph, and O(n/epsilon^2) samples per intervention, suffice to efficiently distinguish whether X=M or whether there exists some intervention under which X and M are farther than epsilon in total variation distance.  We also obtain sample/time/intervention efficient algorithms for: (i) testing the identity of two unknown causal Bayesian networks on the same graph; and (ii) learning a causal Bayesian network on a given graph.  Although our algorithms are non-adaptive, we show that adaptivity does not help in general: Omega(log n) interventions are necessary for testing the identity of two unknown causal Bayesian networks on the same graph, even adaptively.  Our algorithms are enabled by a new subadditivity inequality for the squared Hellinger distance between two causal Bayesian networks.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2018/poster/11899",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2018/file/78631a4bb5303be54fa1cfdcb958c00a-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "constantinos_daskalakis_3",
+        "name": "Constantinos Daskalakis",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Massachusetts Institute of Technology (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 67,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "12035",
+      "title": "Multiple Instance Learning for Efficient Sequential Data Classification on Resource-constrained Devices",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We study the problem of fast and efficient classification of sequential data (such as\ntime-series) on tiny devices, which is critical for various IoT related applications\nlike audio keyword detection or gesture detection. Such tasks are cast as a standard classification task by sliding windows over the data stream to construct data points. Deploying such classification modules on tiny devices is challenging as predictions over sliding windows of data need to be invoked continuously at a high frequency. Each such predictor instance in itself is expensive as it evaluates large models over long windows of data. In this paper, we address this challenge by exploiting the following two observations about classification tasks arising in typical IoT related applications: (a) the \"signature\" of a particular class (e.g. an audio keyword) typically occupies a small fraction of the overall data, and (b) class signatures tend to be discernible early on in the data. We propose a method, EMI-RNN, that exploits these observations by using a multiple instance learning formulation along with an early prediction technique to learn a model that achieves better accuracy compared to baseline models, while simultaneously reducing computation by a large fraction. For instance, on a gesture detection benchmark [ 25 ], EMI-RNN improves standard LSTM model’s accuracy by up to 1% while requiring 72x less computation. This enables us to deploy such models for continuous real-time prediction on a small device such as Raspberry Pi0 and Arduino variants, a task that the baseline LSTM could not achieve. Finally, we also provide an analysis of our multiple instance learning algorithm in a simple setting and show that the proposed algorithm converges to the global optima at a linear rate, one of the first such result in this domain. The code for EMI-RNN is available at: https://github.com/Microsoft/EdgeML/tree/master/tf/examples/EMI-RNN",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2018/poster/12035",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2018/file/d9fbed9da256e344c1fa46bb46c34c5f-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "harsha_vardhan_simhadri",
+        "name": "Harsha Vardhan Simhadri",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 67,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "11860",
+      "title": "FastGRNN: A Fast, Accurate, Stable and Tiny Kilobyte Sized Gated Recurrent Neural Network",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "This paper develops the FastRNN and FastGRNN algorithms to address the twin RNN limitations of inaccurate training and inefficient prediction. Previous approaches have improved accuracy at the expense of prediction costs making them infeasible for resource-constrained and real-time applications. Unitary RNNs have increased accuracy somewhat by restricting the range of the state transition matrix's singular values but have also increased the model size as they require a larger number of hidden units to make up for the loss in expressive power. Gated RNNs have obtained state-of-the-art accuracies by adding extra parameters thereby resulting in even larger models. FastRNN addresses these limitations by adding a residual connection that does not constrain the range of the singular values explicitly and has only two extra scalar parameters. FastGRNN then extends the residual connection to a gate by reusing the RNN matrices to match state-of-the-art gated RNN accuracies but with a 2-4x smaller model. Enforcing FastGRNN's matrices to be low-rank, sparse and quantized resulted in accurate models that could be up to 35x smaller than leading gated and unitary RNNs. This allowed FastGRNN to accurately recognize the \"Hey Cortana\" wakeword with a 1 KB model and to be deployed on severely resource-constrained IoT microcontrollers too tiny to store other RNN models. FastGRNN's code is available at (https://github.com/Microsoft/EdgeML/).",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2018/poster/11860",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2018/file/ab013ca67cf2d50796b0c11d1b8bc95d-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prateek_jain_26",
+        "name": "Prateek Jain",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 5,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 0.9999999999999998,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 249,
+        "semantic_scholar_citations": 0
+      }
+    }
+  ]
+}

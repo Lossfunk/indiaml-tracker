@@ -1,0 +1,344 @@
+{
+  "conference": "NeurIPS 2009",
+  "focus_country": "India",
+  "total_papers": 7,
+  "generated_at": "2025-07-06T10:39:19.873630",
+  "config": {
+    "first_author_weight": 3.0,
+    "last_author_weight": 2.0,
+    "middle_author_weight": 1.0,
+    "status_weights": {
+      "oral": 10.0,
+      "spotlight": 7.5,
+      "poster": 5.0,
+      "unknown": 1.0
+    },
+    "output_format": "json",
+    "include_review_details": true,
+    "include_citation_data": true
+  },
+  "papers": [
+    {
+      "paper_id": "381383d712",
+      "title": "On the Algorithmics and Applications of a Mixed-norm based Kernel Learning Formulation",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Motivated from real world problems, like object categorization, we study a particular mixed-norm regularization for Multiple Kernel Learning (MKL). It is assumed that the given set of kernels are grouped into distinct components where each component is crucial for the learning task at hand. The formulation hence employs $l_\\infty$ regularization for promoting combinations at the component level and $l_1$ regularization for promoting sparsity among kernels in each component. While previous attempts have formulated this as a non-convex problem, the formulation given here is an instance of non-smooth convex optimization problem which admits an efficient Mirror-Descent (MD) based procedure. The MD procedure optimizes over product of simplexes, which is not a well-studied case in literature. Results on real-world datasets show that the new MKL formulation is well-suited for object categorization tasks and that the MD based algorithm outperforms state-of-the-art MKL solvers like \\texttt{simpleMKL} in terms of computational effort.",
+      "tldr": null,
+      "site_url": "https://papers.nips.cc/paper_files/paper/2009/hash/d86ea612dec96096c5e0fcc8dd42ab6d-Abstract.html",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2009/file/d86ea612dec96096c5e0fcc8dd42ab6d-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "saketha_n__jagarlapudi",
+        "name": "Saketha N. Jagarlapudi",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 63,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "381383d712",
+      "title": "On the Algorithmics and Applications of a Mixed-norm based Kernel Learning Formulation",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Motivated from real world problems, like object categorization, we study a particular mixed-norm regularization for Multiple Kernel Learning (MKL). It is assumed that the given set of kernels are grouped into distinct components where each component is crucial for the learning task at hand. The formulation hence employs $l_\\infty$ regularization for promoting combinations at the component level and $l_1$ regularization for promoting sparsity among kernels in each component. While previous attempts have formulated this as a non-convex problem, the formulation given here is an instance of non-smooth convex optimization problem which admits an efficient Mirror-Descent (MD) based procedure. The MD procedure optimizes over product of simplexes, which is not a well-studied case in literature. Results on real-world datasets show that the new MKL formulation is well-suited for object categorization tasks and that the MD based algorithm outperforms state-of-the-art MKL solvers like \\texttt{simpleMKL} in terms of computational effort.",
+      "tldr": null,
+      "site_url": "https://papers.nips.cc/paper_files/paper/2009/hash/d86ea612dec96096c5e0fcc8dd42ab6d-Abstract.html",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2009/file/d86ea612dec96096c5e0fcc8dd42ab6d-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "ramakrishnan_k_r_",
+        "name": "Ramakrishnan K.r.",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 6,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 63,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "381383d712",
+      "title": "On the Algorithmics and Applications of a Mixed-norm based Kernel Learning Formulation",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Motivated from real world problems, like object categorization, we study a particular mixed-norm regularization for Multiple Kernel Learning (MKL). It is assumed that the given set of kernels are grouped into distinct components where each component is crucial for the learning task at hand. The formulation hence employs $l_\\infty$ regularization for promoting combinations at the component level and $l_1$ regularization for promoting sparsity among kernels in each component. While previous attempts have formulated this as a non-convex problem, the formulation given here is an instance of non-smooth convex optimization problem which admits an efficient Mirror-Descent (MD) based procedure. The MD procedure optimizes over product of simplexes, which is not a well-studied case in literature. Results on real-world datasets show that the new MKL formulation is well-suited for object categorization tasks and that the MD based algorithm outperforms state-of-the-art MKL solvers like \\texttt{simpleMKL} in terms of computational effort.",
+      "tldr": null,
+      "site_url": "https://papers.nips.cc/paper_files/paper/2009/hash/d86ea612dec96096c5e0fcc8dd42ab6d-Abstract.html",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2009/file/d86ea612dec96096c5e0fcc8dd42ab6d-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "dinesh_g",
+        "name": "Dinesh G",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 4.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 63,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "381383d712",
+      "title": "On the Algorithmics and Applications of a Mixed-norm based Kernel Learning Formulation",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Motivated from real world problems, like object categorization, we study a particular mixed-norm regularization for Multiple Kernel Learning (MKL). It is assumed that the given set of kernels are grouped into distinct components where each component is crucial for the learning task at hand. The formulation hence employs $l_\\infty$ regularization for promoting combinations at the component level and $l_1$ regularization for promoting sparsity among kernels in each component. While previous attempts have formulated this as a non-convex problem, the formulation given here is an instance of non-smooth convex optimization problem which admits an efficient Mirror-Descent (MD) based procedure. The MD procedure optimizes over product of simplexes, which is not a well-studied case in literature. Results on real-world datasets show that the new MKL formulation is well-suited for object categorization tasks and that the MD based algorithm outperforms state-of-the-art MKL solvers like \\texttt{simpleMKL} in terms of computational effort.",
+      "tldr": null,
+      "site_url": "https://papers.nips.cc/paper_files/paper/2009/hash/d86ea612dec96096c5e0fcc8dd42ab6d-Abstract.html",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2009/file/d86ea612dec96096c5e0fcc8dd42ab6d-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "raman_s",
+        "name": "Raman S",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 63,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "381383d712",
+      "title": "On the Algorithmics and Applications of a Mixed-norm based Kernel Learning Formulation",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Motivated from real world problems, like object categorization, we study a particular mixed-norm regularization for Multiple Kernel Learning (MKL). It is assumed that the given set of kernels are grouped into distinct components where each component is crucial for the learning task at hand. The formulation hence employs $l_\\infty$ regularization for promoting combinations at the component level and $l_1$ regularization for promoting sparsity among kernels in each component. While previous attempts have formulated this as a non-convex problem, the formulation given here is an instance of non-smooth convex optimization problem which admits an efficient Mirror-Descent (MD) based procedure. The MD procedure optimizes over product of simplexes, which is not a well-studied case in literature. Results on real-world datasets show that the new MKL formulation is well-suited for object categorization tasks and that the MD based algorithm outperforms state-of-the-art MKL solvers like \\texttt{simpleMKL} in terms of computational effort.",
+      "tldr": null,
+      "site_url": "https://papers.nips.cc/paper_files/paper/2009/hash/d86ea612dec96096c5e0fcc8dd42ab6d-Abstract.html",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2009/file/d86ea612dec96096c5e0fcc8dd42ab6d-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "chiranjib_bhattacharyya_3",
+        "name": "Chiranjib Bhattacharyya",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 63,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "bfe1bd07be",
+      "title": "An Online Algorithm for Large Scale Image Similarity Learning",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Learning a measure of similarity between pairs of objects is a fundamental problem in machine learning. It stands in the core of classification methods like kernel machines, and is particularly useful for applications like searching for images that are similar to a given image or finding videos that are relevant to a given video. In these tasks, users look for objects that are not only visually similar but also semantically related to a given object. Unfortunately, current approaches for learning similarity may not scale to large datasets with high dimensionality, especially when imposing metric constraints on the learned similarity. We describe OASIS, a method for learning pairwise similarity that is fast and scales linearly with the number of objects and the number of non-zero features. Scalability is achieved through online learning of a bilinear model over sparse representations using a large margin criterion and an efficient hinge loss cost. OASIS is accurate at a wide range of scales: on a standard benchmark with thousands of images, it is more precise than state-of-the-art methods, and faster by orders of magnitude. On 2 million images collected from the web, OASIS can be trained within 3 days on a single CPU. The non-metric similarities learned by OASIS can be transformed into metric similarities, achieving higher precisions than similarities that are learned as metrics in the first place. This suggests an approach for learning a metric from data that is larger by an order of magnitude than was handled before.",
+      "tldr": null,
+      "site_url": "https://papers.nips.cc/paper_files/paper/2009/hash/e97ee2054defb209c35fe4dc94599061-Abstract.html",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2009/file/e97ee2054defb209c35fe4dc94599061-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "varun_sharma",
+        "name": "Varun Sharma",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Hebrew University (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 147,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "381383d712",
+      "title": "On the Algorithmics and Applications of a Mixed-norm based Kernel Learning Formulation",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Motivated from real world problems, like object categorization, we study a particular mixed-norm regularization for Multiple Kernel Learning (MKL). It is assumed that the given set of kernels are grouped into distinct components where each component is crucial for the learning task at hand. The formulation hence employs $l_\\infty$ regularization for promoting combinations at the component level and $l_1$ regularization for promoting sparsity among kernels in each component. While previous attempts have formulated this as a non-convex problem, the formulation given here is an instance of non-smooth convex optimization problem which admits an efficient Mirror-Descent (MD) based procedure. The MD procedure optimizes over product of simplexes, which is not a well-studied case in literature. Results on real-world datasets show that the new MKL formulation is well-suited for object categorization tasks and that the MD based algorithm outperforms state-of-the-art MKL solvers like \\texttt{simpleMKL} in terms of computational effort.",
+      "tldr": null,
+      "site_url": "https://papers.nips.cc/paper_files/paper/2009/hash/d86ea612dec96096c5e0fcc8dd42ab6d-Abstract.html",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2009/file/d86ea612dec96096c5e0fcc8dd42ab6d-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "aharon_ben_tal",
+        "name": "Aharon Ben-tal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 5,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Technion - Israel Institute of Technology (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 0.9999999999999998,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 63,
+        "semantic_scholar_citations": 0
+      }
+    }
+  ]
+}

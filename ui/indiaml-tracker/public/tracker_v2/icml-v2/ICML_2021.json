@@ -1,0 +1,1782 @@
+{
+  "conference": "ICML 2021",
+  "focus_country": "India",
+  "total_papers": 38,
+  "generated_at": "2025-07-06T10:37:29.322303",
+  "config": {
+    "first_author_weight": 3.0,
+    "last_author_weight": 2.0,
+    "middle_author_weight": 1.0,
+    "status_weights": {
+      "oral": 10.0,
+      "spotlight": 7.5,
+      "poster": 5.0,
+      "unknown": 1.0
+    },
+    "output_format": "json",
+    "include_review_details": true,
+    "include_citation_data": true
+  },
+  "papers": [
+    {
+      "paper_id": "8585",
+      "title": "Domain Generalization using Causal Matching",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "In the domain generalization literature, a common objective is to learn representations independent of the domain after conditioning on the class label. We show that this objective is not sufficient: there exist counter-examples where a model fails to generalize to unseen domains even after satisfying class-conditional domain invariance. We formalize this observation through a structural causal model and show the importance of modeling within-class variations for generalization. Specifically, classes contain objects that characterize specific causal features, and domains can be interpreted as interventions on these objects that change non-causal features. We highlight an alternative condition: inputs across domains should have the same representation if they are derived from the same object. Based on this objective, we propose matching-based algorithms when base objects are observed (e.g., through data augmentation) and approximate the objective when objects are not observed (MatchDG). Our simple matching-based algorithms are competitive to prior work on out-of-domain accuracy for rotated MNIST, Fashion-MNIST, PACS, and Chest-Xray datasets. Our method MatchDG also recovers ground-truth object matches: on MNIST and Fashion-MNIST, top-10 matches from MatchDG have over 50% overlap with ground-truth matches.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/8585",
+      "pdf_url": "http://proceedings.mlr.press/v139/mahajan21b/mahajan21b.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "divyat_mahajan",
+        "name": "Divyat Mahajan",
+        "name_site": "Divyat Mahajan, Shruti Tople, Amit Sharma",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 30.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 377,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "10161",
+      "title": "RRL: Resnet as representation for Reinforcement Learning",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "The ability to autonomously learn behaviors via direct interactions in uninstrumented environments can lead to generalist robots capable of enhancing productivity or providing care in unstructured settings like homes. Such uninstrumented settings warrant operations only using the robot’s proprioceptive sensor such as onboard cameras, joint encoders, etc which can be challenging for policy learning owing to the high dimensionality and partial observability issues. We propose RRL: Resnet as representation for Reinforcement Learning {–} a straightforward yet effective approach that can learn complex behaviors directly from proprioceptive inputs. RRL fuses features extracted from pre-trained Resnet into the standard reinforcement learning pipeline and delivers results comparable to learning directly from the state. In a simulated dexterous manipulation benchmark, where the state of the art methods fails to make significant progress, RRL delivers contact rich behaviors. The appeal of RRL lies in its simplicity in bringing together progress from the fields of Representation Learning, Imitation Learning, and Reinforcement Learning. Its effectiveness in learning behaviors directly from visual inputs with performance and sample efficiency matching learning directly from the state, even in complex high dimensional domains, is far from obvious.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/10161",
+      "pdf_url": "http://proceedings.mlr.press/v139/shah21a/shah21a.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "rutav_m_shah",
+        "name": "Rutav M Shah",
+        "name_site": "Rutav Shah, Vikash Kumar",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Kharagpur (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 22.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 129,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "8559",
+      "title": "On Characterizing GAN Convergence Through Proximal Duality Gap",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Despite the accomplishments of Generative Adversarial Networks (GANs) in modeling data distributions, training them remains a challenging task. A contributing factor to this difficulty is the non-intuitive nature of the GAN loss curves, which necessitates a subjective evaluation of the generated output to infer training progress. Recently, motivated by game theory, Duality Gap has been proposed as a domain agnostic measure to monitor GAN training. However, it is restricted to the setting when the GAN converges to a Nash equilibrium. But GANs need not always converge to a Nash equilibrium to model the data distribution. In this work, we extend the notion of duality gap to proximal duality gap that is applicable to the general context of training GANs where Nash equilibria may not exist. We show theoretically that the proximal duality gap can monitor the convergence of GANs to a broader spectrum of equilibria that subsumes Nash equilibria. We also theoretically establish the relationship between the proximal duality gap and the divergence between the real and generated data distributions for different GAN formulations. Our results provide new insights into the nature of GAN convergence. Finally, we validate experimentally the usefulness of proximal duality gap for monitoring and influencing GAN training.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/8559",
+      "pdf_url": "http://proceedings.mlr.press/v139/sidheekh21a/sidheekh21a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sahil_sidheekh",
+        "name": "Sahil Sidheekh",
+        "name_site": "Sahil Sidheekh, Aroof Aimen, Narayanan Chatapuram Krishnan",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology, Ropar (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 22.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 14,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "8751",
+      "title": "Finding k in Latent $k-$ polytope",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "The recently introduced Latent $k-$ Polytope($\\LkP$) encompasses several stochastic Mixed Membership models including Topic Models. The problem of finding $k$, the number of extreme points of $\\LkP$, is a fundamental challenge and includes several important open problems such as determination of number of components in Ad-mixtures. This paper addresses this challenge by introducing Interpolative Convex Rank(\\INR) of a matrix defined as the minimum number of its columns whose convex hull is within Hausdorff distance $\\varepsilon$ of the convex hull of all columns. The first important contribution of this paper is to show that under \\emph{standard assumptions} $k$ equals the \\INR of a \\emph{subset smoothed data matrix} defined from Data generated from an $\\LkP$. The second important contribution of the paper is a polynomial time algorithm for finding $k$ under standard assumptions. An immediate corollary is the first polynomial time algorithm for finding the \\emph{inner dimension} in Non-negative matrix factorisation(NMF) with assumptions which are qualitatively different than existing ones such as \\emph{Separability}. %An immediate corollary is the first polynomial time algorithm for finding the \\emph{inner dimension} in Non-negative matrix factorisation(NMF) with assumptions considerably weaker than \\emph{Separability}.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/8751",
+      "pdf_url": "http://proceedings.mlr.press/v139/bhattacharyya21a/bhattacharyya21a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "chiranjib_bhattacharyya_6",
+        "name": "Chiranjib Bhattacharyya",
+        "name_site": "Chiranjib Bhattacharyya, Ravindran Kannan, Amit Kumar",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 22.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 1,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "8757",
+      "title": "Training Data Subset Selection for Regression with Controlled Generalization Error",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Data subset selection from a large number of training instances has been a successful approach toward efficient and cost-effective machine learning. However, models trained on a smaller subset may show poor generalization ability. In this paper, our goal is to design an algorithm for selecting a subset of the training data, so that the model can be trained quickly, without significantly sacrificing on accuracy. More specifically, we focus on data subset selection for $L_2$ regularized regression problems and provide a novel problem formulation which seeks to minimize the training loss with respect to both the trainable parameters and the subset of training data, subject to error bounds on the validation set. We tackle this problem using several technical innovations. First, we represent this problem with simplified constraints using the dual of the original training problem and show that the objective of this new representation is a monotone and $\\alpha$-submodular function, for a wide variety of modeling choices. Such properties lead us to develop SELCON, an efficient majorization-minimization algorithm for data subset selection, that admits an approximation guarantee even when the training provides an imperfect estimate of the trained model. Finally, our experiments on several datasets show that SELCON trades off accuracy and efficiency more effectively than the current state-of-the-art.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/8757",
+      "pdf_url": "http://proceedings.mlr.press/v139/s21a/s21a.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "durga_s_1",
+        "name": "Durga S",
+        "name_site": "Durga S, Rishabh Iyer, Ganesh Ramakrishnan, Abir De",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 22.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 30,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "8785",
+      "title": "On the Problem of Underranking in Group-Fair Ranking",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Bias in ranking systems, especially among the top ranks, can worsen social and economic inequalities, polarize opinions, and reinforce stereotypes. On the other hand, a bias correction for minority groups can cause more harm if perceived as favoring group-fair outcomes over meritocracy. Most group-fair ranking algorithms post-process a given ranking and output a group-fair ranking. In this paper, we formulate the problem of underranking in group-fair rankings based on how close the group-fair rank of each item is to its original rank, and prove a lower bound on the trade-off achievable for simultaneous underranking and group fairness in ranking. We give a fair ranking algorithm that takes any given ranking and outputs another ranking with simultaneous underranking and group fairness guarantees comparable to the lower bound we prove. Our experimental results confirm the theoretical trade-off between underranking and group fairness, and also show that our algorithm achieves the best of both when compared to the state-of-the-art baselines.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/8785",
+      "pdf_url": "http://proceedings.mlr.press/v139/gorantla21a/gorantla21a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sruthi_gorantla",
+        "name": "Sruthi Gorantla",
+        "name_site": "Sruthi Gorantla, Amit Jayant Deshpande, Anand Louis",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 22.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 28,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "8847",
+      "title": "SiameseXML: Siamese Networks meet Extreme Classifiers with 100M Labels",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Deep extreme multi-label learning (XML) requires training deep architectures that can tag a data point with its most relevant subset of labels from an extremely large label set. XML applications such as ad and product recommendation involve labels rarely seen during training but which nevertheless hold the key to recommendations that delight users. Effective utilization of label metadata and high quality predictions for rare labels at the scale of millions of labels are thus key challenges in contemporary XML research. To address these, this paper develops the SiameseXML framework based on a novel probabilistic model that naturally motivates a modular approach melding Siamese architectures with high-capacity extreme classifiers, and a training pipeline that effortlessly scales to tasks with 100 million labels. SiameseXML offers predictions 2–13% more accurate than leading XML methods on public benchmark datasets, as well as in live A/B tests on the Bing search engine, it offers significant gains in click-through-rates, coverage, revenue and other online metrics over state-of-the-art techniques currently in production. Code for SiameseXML is available at https://github.com/Extreme-classification/siamesexml",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/8847",
+      "pdf_url": "http://proceedings.mlr.press/v139/dahiya21a/dahiya21a.pdf",
+      "github_url": "https://github.com/Extreme-classification/siamesexml",
+      "total_authors": 9,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "kunal_dahiya",
+        "name": "Kunal Dahiya",
+        "name_site": "Kunal Dahiya, Ananye Agarwal, Deepak Saini, Gururaj K, Jian Jiao, Amit Singh, Sumeet Agarwal, Purushottam Kar, Manik Varma",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 22.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 51,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "9215",
+      "title": "Fixed-Parameter and Approximation Algorithms for PCA with Outliers",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "PCA with Outliers is the fundamental problem of identifying an underlying low-dimensional subspace in a data set corrupted with outliers. A large body of work is devoted to the information-theoretic aspects of this problem. However, from the computational perspective, its complexity is still not well-understood. We study this problem from the perspective of parameterized complexity by investigating how parameters like the dimension of the data, the subspace dimension, the number of outliers and their structure, and approximation error, influence the computational complexity of the problem. Our algorithmic methods are based on techniques of randomized linear algebra and algebraic geometry.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/9215",
+      "pdf_url": "http://proceedings.mlr.press/v139/dahiya21b/dahiya21b.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "yogesh_dahiya",
+        "name": "Yogesh Dahiya",
+        "name_site": "Yogesh Dahiya, Fedor Fomin, Fahad Panolan, Kirill Simonov",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Institute of Mathematical Sciences (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 22.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 7,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "9861",
+      "title": "GRAD-MATCH: Gradient Matching based Data Subset Selection for Efficient Deep Model Training",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "The great success of modern machine learning models on large datasets is contingent on extensive computational resources with high financial and environmental costs. One way to address this is by extracting subsets that generalize on par with the full data. In this work, we propose a general framework, GRAD-MATCH, which finds subsets that closely match the gradient of the \\emph{training or validation} set. We find such subsets effectively using an orthogonal matching pursuit algorithm. We show rigorous theoretical and convergence guarantees of the proposed algorithm and, through our extensive experiments on real-world datasets, show the effectiveness of our proposed framework. We show that GRAD-MATCH significantly and consistently outperforms several recent data-selection algorithms and achieves the best accuracy-efficiency trade-off. GRAD-MATCH is available as a part of the CORDS toolkit: \\url{https://github.com/decile-team/cords}.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/9861",
+      "pdf_url": "http://proceedings.mlr.press/v139/killamsetty21a/killamsetty21a.pdf",
+      "github_url": "https://github.com/decile-team/cords",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "krishnateja_killamsetty",
+        "name": "Krishnateja Killamsetty",
+        "name_site": "Krishnateja Killamsetty, Durga S, Ganesh Ramakrishnan, Abir De, Rishabh Iyer",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "University of Texas at Dallas (Unknown),Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "Unknown",
+          "India"
+        ],
+        "country_codes": [
+          "UN",
+          "IN"
+        ]
+      },
+      "sort_score": 22.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 267,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "9931",
+      "title": "Bayesian Structural Adaptation for Continual Learning",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Continual Learning is a learning paradigm where learning systems are trained on a sequence of tasks. The goal here is to perform well on the current task without suffering from a performance drop on the previous tasks. Two notable directions among the recent advances in continual learning with neural networks are (1) variational Bayes based regularization by learning priors from previous tasks, and, (2) learning the structure of deep networks to adapt to new tasks. So far, these two approaches have been largely orthogonal. We present a novel Bayesian framework based on continually learning the structure of deep neural networks, to unify these distinct yet complementary approaches. The proposed framework learns the deep structure for each task by learning which weights to be used, and supports inter-task transfer through the overlapping of different sparse subsets of weights learned by different tasks. An appealing aspect of our proposed continual learning framework is that it is applicable to both discriminative (supervised) and generative (unsupervised) settings. Experimental results on supervised and unsupervised benchmarks demonstrate that our approach performs comparably or better than recent advances in continual learning.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/9931",
+      "pdf_url": "http://proceedings.mlr.press/v139/kumar21a/kumar21a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "abhishek_kumar_2",
+        "name": "Abhishek Kumar",
+        "name_site": "Abhishek Kumar, Sunabha Chatterjee, Piyush Rai",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 22.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 41,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "8585",
+      "title": "Domain Generalization using Causal Matching",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "In the domain generalization literature, a common objective is to learn representations independent of the domain after conditioning on the class label. We show that this objective is not sufficient: there exist counter-examples where a model fails to generalize to unseen domains even after satisfying class-conditional domain invariance. We formalize this observation through a structural causal model and show the importance of modeling within-class variations for generalization. Specifically, classes contain objects that characterize specific causal features, and domains can be interpreted as interventions on these objects that change non-causal features. We highlight an alternative condition: inputs across domains should have the same representation if they are derived from the same object. Based on this objective, we propose matching-based algorithms when base objects are observed (e.g., through data augmentation) and approximate the objective when objects are not observed (MatchDG). Our simple matching-based algorithms are competitive to prior work on out-of-domain accuracy for rotated MNIST, Fashion-MNIST, PACS, and Chest-Xray datasets. Our method MatchDG also recovers ground-truth object matches: on MNIST and Fashion-MNIST, top-10 matches from MatchDG have over 50% overlap with ground-truth matches.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/8585",
+      "pdf_url": "http://proceedings.mlr.press/v139/mahajan21b/mahajan21b.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "amit_sharma_1",
+        "name": "Amit Sharma",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 20.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 377,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "10345",
+      "title": "Opening the Blackbox: Accelerating Neural Differential Equations by Regularizing Internal Solver Heuristics",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Democratization of machine learning requires architectures that automatically adapt to new problems. Neural Differential Equations (NDEs) have emerged as a popular modeling framework by removing the need for ML practitioners to choose the number of layers in a recurrent model. While we can control the computational cost by choosing the number of layers in standard architectures, in NDEs the number of neural network evaluations for a forward pass can depend on the number of steps of the adaptive ODE solver. But, can we force the NDE to learn the version with the least steps while not increasing the training cost? Current strategies to overcome slow prediction require high order automatic differentiation, leading to significantly higher training time. We describe a novel regularization method that uses the internal cost heuristics of adaptive differential equation solvers combined with discrete adjoint sensitivities to guide the training process towards learning NDEs that are easier to solve. This approach opens up the blackbox numerical analysis behind the differential equation solver’s algorithm and directly uses its local error estimates and stiffness heuristics as cheap and accurate cost estimates. We incorporate our method without any change in the underlying NDE framework and show that our method extends beyond Ordinary Differential Equations to accommodate Neural Stochastic Differential Equations. We demonstrate how our approach can halve the prediction time and, unlike other methods which can increase the training time by an order of magnitude, we demonstrate similar reduction in training times. Together this showcases how the knowledge embedded within state-of-the-art equation solvers can be used to enhance machine learning.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/10345",
+      "pdf_url": "http://proceedings.mlr.press/v139/pal21a/pal21a.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "christopher_v_rackauckas",
+        "name": "Christopher V Rackauckas",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Massachusetts Institute of Technology (United States),Pumas AI (Unknown),University of Maryland, Baltimore (India)",
+        "countries": [
+          "United States",
+          "Unknown",
+          "India"
+        ],
+        "country_codes": [
+          "UN",
+          "US",
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 46,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "10431",
+      "title": "Optimal regret algorithm for Pseudo-1d Bandit Convex Optimization",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "We study online learning with bandit feedback (i.e. learner has access to only zeroth-order oracle) where cost/reward functions $\\f_t$ admit a \"pseudo-1d\" structure, i.e. $\\f_t(\\w) = \\loss_t(\\pred_t(\\w))$ where the output of $\\pred_t$ is one-dimensional. At each round, the learner observes context $\\x_t$, plays prediction $\\pred_t(\\w_t; \\x_t)$ (e.g. $\\pred_t(\\cdot)=⟨\\x_t, \\cdot⟩$) for some $\\w_t \\in \\mathbb{R}^d$ and observes loss $\\loss_t(\\pred_t(\\w_t))$ where $\\loss_t$ is a convex Lipschitz-continuous function. The goal is to minimize the standard regret metric. This pseudo-1d bandit convex optimization problem (\\SBCO) arises frequently in domains such as online decision-making or parameter-tuning in large systems. For this problem, we first show a regret lower bound of $\\min(\\sqrt{dT}, T^{3/4})$ for any algorithm, where $T$ is the number of rounds. We propose a new algorithm \\sbcalg that combines randomized online gradient descent with a kernelized exponential weights method to exploit the pseudo-1d structure effectively, guaranteeing the {\\em optimal} regret bound mentioned above, up to additional logarithmic factors. In contrast, applying state-of-the-art online convex optimization methods leads to $\\tilde{O}\\left(\\min\\left(d^{9.5}\\sqrt{T},\\sqrt{d}T^{3/4}\\right)\\right)$ regret, that is significantly suboptimal in terms of $d$.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/10431",
+      "pdf_url": "http://proceedings.mlr.press/v139/saha21c/saha21c.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prateek_jain_17",
+        "name": "Prateek Jain",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (United States),Google (India)",
+        "countries": [
+          "United States",
+          "India"
+        ],
+        "country_codes": [
+          "US",
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 7,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "8559",
+      "title": "On Characterizing GAN Convergence Through Proximal Duality Gap",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Despite the accomplishments of Generative Adversarial Networks (GANs) in modeling data distributions, training them remains a challenging task. A contributing factor to this difficulty is the non-intuitive nature of the GAN loss curves, which necessitates a subjective evaluation of the generated output to infer training progress. Recently, motivated by game theory, Duality Gap has been proposed as a domain agnostic measure to monitor GAN training. However, it is restricted to the setting when the GAN converges to a Nash equilibrium. But GANs need not always converge to a Nash equilibrium to model the data distribution. In this work, we extend the notion of duality gap to proximal duality gap that is applicable to the general context of training GANs where Nash equilibria may not exist. We show theoretically that the proximal duality gap can monitor the convergence of GANs to a broader spectrum of equilibria that subsumes Nash equilibria. We also theoretically establish the relationship between the proximal duality gap and the divergence between the real and generated data distributions for different GAN formulations. Our results provide new insights into the nature of GAN convergence. Finally, we validate experimentally the usefulness of proximal duality gap for monitoring and influencing GAN training.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/8559",
+      "pdf_url": "http://proceedings.mlr.press/v139/sidheekh21a/sidheekh21a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "narayanan_c_krishnan",
+        "name": "Narayanan C Krishnan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology, Ropar (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 14,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "8751",
+      "title": "Finding k in Latent $k-$ polytope",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "The recently introduced Latent $k-$ Polytope($\\LkP$) encompasses several stochastic Mixed Membership models including Topic Models. The problem of finding $k$, the number of extreme points of $\\LkP$, is a fundamental challenge and includes several important open problems such as determination of number of components in Ad-mixtures. This paper addresses this challenge by introducing Interpolative Convex Rank(\\INR) of a matrix defined as the minimum number of its columns whose convex hull is within Hausdorff distance $\\varepsilon$ of the convex hull of all columns. The first important contribution of this paper is to show that under \\emph{standard assumptions} $k$ equals the \\INR of a \\emph{subset smoothed data matrix} defined from Data generated from an $\\LkP$. The second important contribution of the paper is a polynomial time algorithm for finding $k$ under standard assumptions. An immediate corollary is the first polynomial time algorithm for finding the \\emph{inner dimension} in Non-negative matrix factorisation(NMF) with assumptions which are qualitatively different than existing ones such as \\emph{Separability}. %An immediate corollary is the first polynomial time algorithm for finding the \\emph{inner dimension} in Non-negative matrix factorisation(NMF) with assumptions considerably weaker than \\emph{Separability}.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/8751",
+      "pdf_url": "http://proceedings.mlr.press/v139/bhattacharyya21a/bhattacharyya21a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "amit_kumar",
+        "name": "Amit Kumar",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 1,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "8757",
+      "title": "Training Data Subset Selection for Regression with Controlled Generalization Error",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Data subset selection from a large number of training instances has been a successful approach toward efficient and cost-effective machine learning. However, models trained on a smaller subset may show poor generalization ability. In this paper, our goal is to design an algorithm for selecting a subset of the training data, so that the model can be trained quickly, without significantly sacrificing on accuracy. More specifically, we focus on data subset selection for $L_2$ regularized regression problems and provide a novel problem formulation which seeks to minimize the training loss with respect to both the trainable parameters and the subset of training data, subject to error bounds on the validation set. We tackle this problem using several technical innovations. First, we represent this problem with simplified constraints using the dual of the original training problem and show that the objective of this new representation is a monotone and $\\alpha$-submodular function, for a wide variety of modeling choices. Such properties lead us to develop SELCON, an efficient majorization-minimization algorithm for data subset selection, that admits an approximation guarantee even when the training provides an imperfect estimate of the trained model. Finally, our experiments on several datasets show that SELCON trades off accuracy and efficiency more effectively than the current state-of-the-art.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/8757",
+      "pdf_url": "http://proceedings.mlr.press/v139/s21a/s21a.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "abir_de_1",
+        "name": "Abir De",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 30,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "8785",
+      "title": "On the Problem of Underranking in Group-Fair Ranking",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Bias in ranking systems, especially among the top ranks, can worsen social and economic inequalities, polarize opinions, and reinforce stereotypes. On the other hand, a bias correction for minority groups can cause more harm if perceived as favoring group-fair outcomes over meritocracy. Most group-fair ranking algorithms post-process a given ranking and output a group-fair ranking. In this paper, we formulate the problem of underranking in group-fair rankings based on how close the group-fair rank of each item is to its original rank, and prove a lower bound on the trade-off achievable for simultaneous underranking and group fairness in ranking. We give a fair ranking algorithm that takes any given ranking and outputs another ranking with simultaneous underranking and group fairness guarantees comparable to the lower bound we prove. Our experimental results confirm the theoretical trade-off between underranking and group fairness, and also show that our algorithm achieves the best of both when compared to the state-of-the-art baselines.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/8785",
+      "pdf_url": "http://proceedings.mlr.press/v139/gorantla21a/gorantla21a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "anand_louis",
+        "name": "Anand Louis",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 28,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "8847",
+      "title": "SiameseXML: Siamese Networks meet Extreme Classifiers with 100M Labels",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Deep extreme multi-label learning (XML) requires training deep architectures that can tag a data point with its most relevant subset of labels from an extremely large label set. XML applications such as ad and product recommendation involve labels rarely seen during training but which nevertheless hold the key to recommendations that delight users. Effective utilization of label metadata and high quality predictions for rare labels at the scale of millions of labels are thus key challenges in contemporary XML research. To address these, this paper develops the SiameseXML framework based on a novel probabilistic model that naturally motivates a modular approach melding Siamese architectures with high-capacity extreme classifiers, and a training pipeline that effortlessly scales to tasks with 100 million labels. SiameseXML offers predictions 2–13% more accurate than leading XML methods on public benchmark datasets, as well as in live A/B tests on the Bing search engine, it offers significant gains in click-through-rates, coverage, revenue and other online metrics over state-of-the-art techniques currently in production. Code for SiameseXML is available at https://github.com/Extreme-classification/siamesexml",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/8847",
+      "pdf_url": "http://proceedings.mlr.press/v139/dahiya21a/dahiya21a.pdf",
+      "github_url": "https://github.com/Extreme-classification/siamesexml",
+      "total_authors": 9,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "manik_varma_4",
+        "name": "Manik Varma",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 9,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India),Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 51,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "9931",
+      "title": "Bayesian Structural Adaptation for Continual Learning",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Continual Learning is a learning paradigm where learning systems are trained on a sequence of tasks. The goal here is to perform well on the current task without suffering from a performance drop on the previous tasks. Two notable directions among the recent advances in continual learning with neural networks are (1) variational Bayes based regularization by learning priors from previous tasks, and, (2) learning the structure of deep networks to adapt to new tasks. So far, these two approaches have been largely orthogonal. We present a novel Bayesian framework based on continually learning the structure of deep neural networks, to unify these distinct yet complementary approaches. The proposed framework learns the deep structure for each task by learning which weights to be used, and supports inter-task transfer through the overlapping of different sparse subsets of weights learned by different tasks. An appealing aspect of our proposed continual learning framework is that it is applicable to both discriminative (supervised) and generative (unsupervised) settings. Experimental results on supervised and unsupervised benchmarks demonstrate that our approach performs comparably or better than recent advances in continual learning.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/9931",
+      "pdf_url": "http://proceedings.mlr.press/v139/kumar21a/kumar21a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "piyush_rai_4",
+        "name": "Piyush Rai",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "IIT Kanpur (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 41,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "8847",
+      "title": "SiameseXML: Siamese Networks meet Extreme Classifiers with 100M Labels",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Deep extreme multi-label learning (XML) requires training deep architectures that can tag a data point with its most relevant subset of labels from an extremely large label set. XML applications such as ad and product recommendation involve labels rarely seen during training but which nevertheless hold the key to recommendations that delight users. Effective utilization of label metadata and high quality predictions for rare labels at the scale of millions of labels are thus key challenges in contemporary XML research. To address these, this paper develops the SiameseXML framework based on a novel probabilistic model that naturally motivates a modular approach melding Siamese architectures with high-capacity extreme classifiers, and a training pipeline that effortlessly scales to tasks with 100 million labels. SiameseXML offers predictions 2–13% more accurate than leading XML methods on public benchmark datasets, as well as in live A/B tests on the Bing search engine, it offers significant gains in click-through-rates, coverage, revenue and other online metrics over state-of-the-art techniques currently in production. Code for SiameseXML is available at https://github.com/Extreme-classification/siamesexml",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/8847",
+      "pdf_url": "http://proceedings.mlr.press/v139/dahiya21a/dahiya21a.pdf",
+      "github_url": "https://github.com/Extreme-classification/siamesexml",
+      "total_authors": 9,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "ananye_agarwal",
+        "name": "Ananye Agarwal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 6.5625,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 51,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "8847",
+      "title": "SiameseXML: Siamese Networks meet Extreme Classifiers with 100M Labels",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Deep extreme multi-label learning (XML) requires training deep architectures that can tag a data point with its most relevant subset of labels from an extremely large label set. XML applications such as ad and product recommendation involve labels rarely seen during training but which nevertheless hold the key to recommendations that delight users. Effective utilization of label metadata and high quality predictions for rare labels at the scale of millions of labels are thus key challenges in contemporary XML research. To address these, this paper develops the SiameseXML framework based on a novel probabilistic model that naturally motivates a modular approach melding Siamese architectures with high-capacity extreme classifiers, and a training pipeline that effortlessly scales to tasks with 100 million labels. SiameseXML offers predictions 2–13% more accurate than leading XML methods on public benchmark datasets, as well as in live A/B tests on the Bing search engine, it offers significant gains in click-through-rates, coverage, revenue and other online metrics over state-of-the-art techniques currently in production. Code for SiameseXML is available at https://github.com/Extreme-classification/siamesexml",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/8847",
+      "pdf_url": "http://proceedings.mlr.press/v139/dahiya21a/dahiya21a.pdf",
+      "github_url": "https://github.com/Extreme-classification/siamesexml",
+      "total_authors": 9,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "deepak_saini",
+        "name": "Deepak Saini",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 5.625,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 51,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "9861",
+      "title": "GRAD-MATCH: Gradient Matching based Data Subset Selection for Efficient Deep Model Training",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "The great success of modern machine learning models on large datasets is contingent on extensive computational resources with high financial and environmental costs. One way to address this is by extracting subsets that generalize on par with the full data. In this work, we propose a general framework, GRAD-MATCH, which finds subsets that closely match the gradient of the \\emph{training or validation} set. We find such subsets effectively using an orthogonal matching pursuit algorithm. We show rigorous theoretical and convergence guarantees of the proposed algorithm and, through our extensive experiments on real-world datasets, show the effectiveness of our proposed framework. We show that GRAD-MATCH significantly and consistently outperforms several recent data-selection algorithms and achieves the best accuracy-efficiency trade-off. GRAD-MATCH is available as a part of the CORDS toolkit: \\url{https://github.com/decile-team/cords}.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/9861",
+      "pdf_url": "http://proceedings.mlr.press/v139/killamsetty21a/killamsetty21a.pdf",
+      "github_url": "https://github.com/decile-team/cords",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "durga_s",
+        "name": "Durga S",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 5.625,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 267,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "10135",
+      "title": "Finding Relevant Information via a Discrete Fourier Expansion",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "A fundamental obstacle in learning information from data is the presence of nonlinear redundancies and dependencies in it. To address this, we propose a Fourier-based approach to extract relevant information in the supervised setting. We first develop a novel Fourier expansion for functions of correlated binary random variables. This expansion is a generalization of the standard Fourier analysis on the Boolean cube beyond product probability spaces. We further extend our Fourier analysis to stochastic mappings. As an important application of this analysis, we investigate learning with feature subset selection. We reformulate this problem in the Fourier domain and introduce a computationally efficient measure for selecting features. Bridging the Bayesian error rate with the Fourier coefficients, we demonstrate that the Fourier expansion provides a powerful tool to characterize nonlinear dependencies in the features-label relation. Via theoretical analysis, we show that our proposed measure finds provably asymptotically optimal feature subsets. Lastly, we present an algorithm based on our measure and verify our findings via numerical experiments on various datasets.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/10135",
+      "pdf_url": "http://proceedings.mlr.press/v139/heidari21a/heidari21a.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "jithin_sreedharan",
+        "name": "Jithin Sreedharan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Wadhwani AI (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 5.000000000000001,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 8,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "8585",
+      "title": "Domain Generalization using Causal Matching",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "In the domain generalization literature, a common objective is to learn representations independent of the domain after conditioning on the class label. We show that this objective is not sufficient: there exist counter-examples where a model fails to generalize to unseen domains even after satisfying class-conditional domain invariance. We formalize this observation through a structural causal model and show the importance of modeling within-class variations for generalization. Specifically, classes contain objects that characterize specific causal features, and domains can be interpreted as interventions on these objects that change non-causal features. We highlight an alternative condition: inputs across domains should have the same representation if they are derived from the same object. Based on this objective, we propose matching-based algorithms when base objects are observed (e.g., through data augmentation) and approximate the objective when objects are not observed (MatchDG). Our simple matching-based algorithms are competitive to prior work on out-of-domain accuracy for rotated MNIST, Fashion-MNIST, PACS, and Chest-Xray datasets. Our method MatchDG also recovers ground-truth object matches: on MNIST and Fashion-MNIST, top-10 matches from MatchDG have over 50% overlap with ground-truth matches.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/8585",
+      "pdf_url": "http://proceedings.mlr.press/v139/mahajan21b/mahajan21b.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "shruti_tople_1",
+        "name": "Shruti Tople",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 5.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 377,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "8847",
+      "title": "SiameseXML: Siamese Networks meet Extreme Classifiers with 100M Labels",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Deep extreme multi-label learning (XML) requires training deep architectures that can tag a data point with its most relevant subset of labels from an extremely large label set. XML applications such as ad and product recommendation involve labels rarely seen during training but which nevertheless hold the key to recommendations that delight users. Effective utilization of label metadata and high quality predictions for rare labels at the scale of millions of labels are thus key challenges in contemporary XML research. To address these, this paper develops the SiameseXML framework based on a novel probabilistic model that naturally motivates a modular approach melding Siamese architectures with high-capacity extreme classifiers, and a training pipeline that effortlessly scales to tasks with 100 million labels. SiameseXML offers predictions 2–13% more accurate than leading XML methods on public benchmark datasets, as well as in live A/B tests on the Bing search engine, it offers significant gains in click-through-rates, coverage, revenue and other online metrics over state-of-the-art techniques currently in production. Code for SiameseXML is available at https://github.com/Extreme-classification/siamesexml",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/8847",
+      "pdf_url": "http://proceedings.mlr.press/v139/dahiya21a/dahiya21a.pdf",
+      "github_url": "https://github.com/Extreme-classification/siamesexml",
+      "total_authors": 9,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "gururaj_k",
+        "name": "Gururaj K",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 4.6875,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 51,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "8559",
+      "title": "On Characterizing GAN Convergence Through Proximal Duality Gap",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Despite the accomplishments of Generative Adversarial Networks (GANs) in modeling data distributions, training them remains a challenging task. A contributing factor to this difficulty is the non-intuitive nature of the GAN loss curves, which necessitates a subjective evaluation of the generated output to infer training progress. Recently, motivated by game theory, Duality Gap has been proposed as a domain agnostic measure to monitor GAN training. However, it is restricted to the setting when the GAN converges to a Nash equilibrium. But GANs need not always converge to a Nash equilibrium to model the data distribution. In this work, we extend the notion of duality gap to proximal duality gap that is applicable to the general context of training GANs where Nash equilibria may not exist. We show theoretically that the proximal duality gap can monitor the convergence of GANs to a broader spectrum of equilibria that subsumes Nash equilibria. We also theoretically establish the relationship between the proximal duality gap and the divergence between the real and generated data distributions for different GAN formulations. Our results provide new insights into the nature of GAN convergence. Finally, we validate experimentally the usefulness of proximal duality gap for monitoring and influencing GAN training.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/8559",
+      "pdf_url": "http://proceedings.mlr.press/v139/sidheekh21a/sidheekh21a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "aroof_aimen",
+        "name": "Aroof Aimen",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology, Ropar (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.75,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 14,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "8751",
+      "title": "Finding k in Latent $k-$ polytope",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "The recently introduced Latent $k-$ Polytope($\\LkP$) encompasses several stochastic Mixed Membership models including Topic Models. The problem of finding $k$, the number of extreme points of $\\LkP$, is a fundamental challenge and includes several important open problems such as determination of number of components in Ad-mixtures. This paper addresses this challenge by introducing Interpolative Convex Rank(\\INR) of a matrix defined as the minimum number of its columns whose convex hull is within Hausdorff distance $\\varepsilon$ of the convex hull of all columns. The first important contribution of this paper is to show that under \\emph{standard assumptions} $k$ equals the \\INR of a \\emph{subset smoothed data matrix} defined from Data generated from an $\\LkP$. The second important contribution of the paper is a polynomial time algorithm for finding $k$ under standard assumptions. An immediate corollary is the first polynomial time algorithm for finding the \\emph{inner dimension} in Non-negative matrix factorisation(NMF) with assumptions which are qualitatively different than existing ones such as \\emph{Separability}. %An immediate corollary is the first polynomial time algorithm for finding the \\emph{inner dimension} in Non-negative matrix factorisation(NMF) with assumptions considerably weaker than \\emph{Separability}.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/8751",
+      "pdf_url": "http://proceedings.mlr.press/v139/bhattacharyya21a/bhattacharyya21a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "ravindran_kannan_2",
+        "name": "Ravindran Kannan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.75,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 1,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "8785",
+      "title": "On the Problem of Underranking in Group-Fair Ranking",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Bias in ranking systems, especially among the top ranks, can worsen social and economic inequalities, polarize opinions, and reinforce stereotypes. On the other hand, a bias correction for minority groups can cause more harm if perceived as favoring group-fair outcomes over meritocracy. Most group-fair ranking algorithms post-process a given ranking and output a group-fair ranking. In this paper, we formulate the problem of underranking in group-fair rankings based on how close the group-fair rank of each item is to its original rank, and prove a lower bound on the trade-off achievable for simultaneous underranking and group fairness in ranking. We give a fair ranking algorithm that takes any given ranking and outputs another ranking with simultaneous underranking and group fairness guarantees comparable to the lower bound we prove. Our experimental results confirm the theoretical trade-off between underranking and group fairness, and also show that our algorithm achieves the best of both when compared to the state-of-the-art baselines.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/8785",
+      "pdf_url": "http://proceedings.mlr.press/v139/gorantla21a/gorantla21a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "amit_deshpande_2",
+        "name": "Amit Deshpande",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.75,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 28,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "8847",
+      "title": "SiameseXML: Siamese Networks meet Extreme Classifiers with 100M Labels",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Deep extreme multi-label learning (XML) requires training deep architectures that can tag a data point with its most relevant subset of labels from an extremely large label set. XML applications such as ad and product recommendation involve labels rarely seen during training but which nevertheless hold the key to recommendations that delight users. Effective utilization of label metadata and high quality predictions for rare labels at the scale of millions of labels are thus key challenges in contemporary XML research. To address these, this paper develops the SiameseXML framework based on a novel probabilistic model that naturally motivates a modular approach melding Siamese architectures with high-capacity extreme classifiers, and a training pipeline that effortlessly scales to tasks with 100 million labels. SiameseXML offers predictions 2–13% more accurate than leading XML methods on public benchmark datasets, as well as in live A/B tests on the Bing search engine, it offers significant gains in click-through-rates, coverage, revenue and other online metrics over state-of-the-art techniques currently in production. Code for SiameseXML is available at https://github.com/Extreme-classification/siamesexml",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/8847",
+      "pdf_url": "http://proceedings.mlr.press/v139/dahiya21a/dahiya21a.pdf",
+      "github_url": "https://github.com/Extreme-classification/siamesexml",
+      "total_authors": 9,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "jian_jiao_1",
+        "name": "Jian Jiao",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 5,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.75,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 51,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "9861",
+      "title": "GRAD-MATCH: Gradient Matching based Data Subset Selection for Efficient Deep Model Training",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "The great success of modern machine learning models on large datasets is contingent on extensive computational resources with high financial and environmental costs. One way to address this is by extracting subsets that generalize on par with the full data. In this work, we propose a general framework, GRAD-MATCH, which finds subsets that closely match the gradient of the \\emph{training or validation} set. We find such subsets effectively using an orthogonal matching pursuit algorithm. We show rigorous theoretical and convergence guarantees of the proposed algorithm and, through our extensive experiments on real-world datasets, show the effectiveness of our proposed framework. We show that GRAD-MATCH significantly and consistently outperforms several recent data-selection algorithms and achieves the best accuracy-efficiency trade-off. GRAD-MATCH is available as a part of the CORDS toolkit: \\url{https://github.com/decile-team/cords}.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/9861",
+      "pdf_url": "http://proceedings.mlr.press/v139/killamsetty21a/killamsetty21a.pdf",
+      "github_url": "https://github.com/decile-team/cords",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "ganesh_ramakrishnan",
+        "name": "Ganesh Ramakrishnan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.75,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 267,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "9931",
+      "title": "Bayesian Structural Adaptation for Continual Learning",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Continual Learning is a learning paradigm where learning systems are trained on a sequence of tasks. The goal here is to perform well on the current task without suffering from a performance drop on the previous tasks. Two notable directions among the recent advances in continual learning with neural networks are (1) variational Bayes based regularization by learning priors from previous tasks, and, (2) learning the structure of deep networks to adapt to new tasks. So far, these two approaches have been largely orthogonal. We present a novel Bayesian framework based on continually learning the structure of deep neural networks, to unify these distinct yet complementary approaches. The proposed framework learns the deep structure for each task by learning which weights to be used, and supports inter-task transfer through the overlapping of different sparse subsets of weights learned by different tasks. An appealing aspect of our proposed continual learning framework is that it is applicable to both discriminative (supervised) and generative (unsupervised) settings. Experimental results on supervised and unsupervised benchmarks demonstrate that our approach performs comparably or better than recent advances in continual learning.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/9931",
+      "pdf_url": "http://proceedings.mlr.press/v139/kumar21a/kumar21a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sunabha_chatterjee",
+        "name": "Sunabha Chatterjee",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "SAP Labs (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.75,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 41,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "8847",
+      "title": "SiameseXML: Siamese Networks meet Extreme Classifiers with 100M Labels",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Deep extreme multi-label learning (XML) requires training deep architectures that can tag a data point with its most relevant subset of labels from an extremely large label set. XML applications such as ad and product recommendation involve labels rarely seen during training but which nevertheless hold the key to recommendations that delight users. Effective utilization of label metadata and high quality predictions for rare labels at the scale of millions of labels are thus key challenges in contemporary XML research. To address these, this paper develops the SiameseXML framework based on a novel probabilistic model that naturally motivates a modular approach melding Siamese architectures with high-capacity extreme classifiers, and a training pipeline that effortlessly scales to tasks with 100 million labels. SiameseXML offers predictions 2–13% more accurate than leading XML methods on public benchmark datasets, as well as in live A/B tests on the Bing search engine, it offers significant gains in click-through-rates, coverage, revenue and other online metrics over state-of-the-art techniques currently in production. Code for SiameseXML is available at https://github.com/Extreme-classification/siamesexml",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/8847",
+      "pdf_url": "http://proceedings.mlr.press/v139/dahiya21a/dahiya21a.pdf",
+      "github_url": "https://github.com/Extreme-classification/siamesexml",
+      "total_authors": 9,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "amit_singh",
+        "name": "Amit Singh",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 6,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.8125,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 51,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "10431",
+      "title": "Optimal regret algorithm for Pseudo-1d Bandit Convex Optimization",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "We study online learning with bandit feedback (i.e. learner has access to only zeroth-order oracle) where cost/reward functions $\\f_t$ admit a \"pseudo-1d\" structure, i.e. $\\f_t(\\w) = \\loss_t(\\pred_t(\\w))$ where the output of $\\pred_t$ is one-dimensional. At each round, the learner observes context $\\x_t$, plays prediction $\\pred_t(\\w_t; \\x_t)$ (e.g. $\\pred_t(\\cdot)=⟨\\x_t, \\cdot⟩$) for some $\\w_t \\in \\mathbb{R}^d$ and observes loss $\\loss_t(\\pred_t(\\w_t))$ where $\\loss_t$ is a convex Lipschitz-continuous function. The goal is to minimize the standard regret metric. This pseudo-1d bandit convex optimization problem (\\SBCO) arises frequently in domains such as online decision-making or parameter-tuning in large systems. For this problem, we first show a regret lower bound of $\\min(\\sqrt{dT}, T^{3/4})$ for any algorithm, where $T$ is the number of rounds. We propose a new algorithm \\sbcalg that combines randomized online gradient descent with a kernelized exponential weights method to exploit the pseudo-1d structure effectively, guaranteeing the {\\em optimal} regret bound mentioned above, up to additional logarithmic factors. In contrast, applying state-of-the-art online convex optimization methods leads to $\\tilde{O}\\left(\\min\\left(d^{9.5}\\sqrt{T},\\sqrt{d}T^{3/4}\\right)\\right)$ regret, that is significantly suboptimal in terms of $d$.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/10431",
+      "pdf_url": "http://proceedings.mlr.press/v139/saha21c/saha21c.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "praneeth_netrapalli_7",
+        "name": "Praneeth Netrapalli",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (United States),Google (India)",
+        "countries": [
+          "United States",
+          "India"
+        ],
+        "country_codes": [
+          "US",
+          "IN"
+        ]
+      },
+      "sort_score": 2.5000000000000004,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 7,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "8757",
+      "title": "Training Data Subset Selection for Regression with Controlled Generalization Error",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Data subset selection from a large number of training instances has been a successful approach toward efficient and cost-effective machine learning. However, models trained on a smaller subset may show poor generalization ability. In this paper, our goal is to design an algorithm for selecting a subset of the training data, so that the model can be trained quickly, without significantly sacrificing on accuracy. More specifically, we focus on data subset selection for $L_2$ regularized regression problems and provide a novel problem formulation which seeks to minimize the training loss with respect to both the trainable parameters and the subset of training data, subject to error bounds on the validation set. We tackle this problem using several technical innovations. First, we represent this problem with simplified constraints using the dual of the original training problem and show that the objective of this new representation is a monotone and $\\alpha$-submodular function, for a wide variety of modeling choices. Such properties lead us to develop SELCON, an efficient majorization-minimization algorithm for data subset selection, that admits an approximation guarantee even when the training provides an imperfect estimate of the trained model. Finally, our experiments on several datasets show that SELCON trades off accuracy and efficiency more effectively than the current state-of-the-art.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/8757",
+      "pdf_url": "http://proceedings.mlr.press/v139/s21a/s21a.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "ganesh_ramakrishnan_1",
+        "name": "Ganesh Ramakrishnan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5000000000000004,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 30,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "9215",
+      "title": "Fixed-Parameter and Approximation Algorithms for PCA with Outliers",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "PCA with Outliers is the fundamental problem of identifying an underlying low-dimensional subspace in a data set corrupted with outliers. A large body of work is devoted to the information-theoretic aspects of this problem. However, from the computational perspective, its complexity is still not well-understood. We study this problem from the perspective of parameterized complexity by investigating how parameters like the dimension of the data, the subspace dimension, the number of outliers and their structure, and approximation error, influence the computational complexity of the problem. Our algorithmic methods are based on techniques of randomized linear algebra and algebraic geometry.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/9215",
+      "pdf_url": "http://proceedings.mlr.press/v139/dahiya21b/dahiya21b.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "fahad_panolan_1",
+        "name": "Fahad Panolan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "IIT Hyderabad (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5000000000000004,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 7,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "8847",
+      "title": "SiameseXML: Siamese Networks meet Extreme Classifiers with 100M Labels",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Deep extreme multi-label learning (XML) requires training deep architectures that can tag a data point with its most relevant subset of labels from an extremely large label set. XML applications such as ad and product recommendation involve labels rarely seen during training but which nevertheless hold the key to recommendations that delight users. Effective utilization of label metadata and high quality predictions for rare labels at the scale of millions of labels are thus key challenges in contemporary XML research. To address these, this paper develops the SiameseXML framework based on a novel probabilistic model that naturally motivates a modular approach melding Siamese architectures with high-capacity extreme classifiers, and a training pipeline that effortlessly scales to tasks with 100 million labels. SiameseXML offers predictions 2–13% more accurate than leading XML methods on public benchmark datasets, as well as in live A/B tests on the Bing search engine, it offers significant gains in click-through-rates, coverage, revenue and other online metrics over state-of-the-art techniques currently in production. Code for SiameseXML is available at https://github.com/Extreme-classification/siamesexml",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/8847",
+      "pdf_url": "http://proceedings.mlr.press/v139/dahiya21a/dahiya21a.pdf",
+      "github_url": "https://github.com/Extreme-classification/siamesexml",
+      "total_authors": 9,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sumeet_agarwal",
+        "name": "Sumeet Agarwal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 7,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.875,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 51,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "9861",
+      "title": "GRAD-MATCH: Gradient Matching based Data Subset Selection for Efficient Deep Model Training",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "The great success of modern machine learning models on large datasets is contingent on extensive computational resources with high financial and environmental costs. One way to address this is by extracting subsets that generalize on par with the full data. In this work, we propose a general framework, GRAD-MATCH, which finds subsets that closely match the gradient of the \\emph{training or validation} set. We find such subsets effectively using an orthogonal matching pursuit algorithm. We show rigorous theoretical and convergence guarantees of the proposed algorithm and, through our extensive experiments on real-world datasets, show the effectiveness of our proposed framework. We show that GRAD-MATCH significantly and consistently outperforms several recent data-selection algorithms and achieves the best accuracy-efficiency trade-off. GRAD-MATCH is available as a part of the CORDS toolkit: \\url{https://github.com/decile-team/cords}.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/9861",
+      "pdf_url": "http://proceedings.mlr.press/v139/killamsetty21a/killamsetty21a.pdf",
+      "github_url": "https://github.com/decile-team/cords",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "abir_de",
+        "name": "Abir De",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.875,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 267,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "8847",
+      "title": "SiameseXML: Siamese Networks meet Extreme Classifiers with 100M Labels",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Deep extreme multi-label learning (XML) requires training deep architectures that can tag a data point with its most relevant subset of labels from an extremely large label set. XML applications such as ad and product recommendation involve labels rarely seen during training but which nevertheless hold the key to recommendations that delight users. Effective utilization of label metadata and high quality predictions for rare labels at the scale of millions of labels are thus key challenges in contemporary XML research. To address these, this paper develops the SiameseXML framework based on a novel probabilistic model that naturally motivates a modular approach melding Siamese architectures with high-capacity extreme classifiers, and a training pipeline that effortlessly scales to tasks with 100 million labels. SiameseXML offers predictions 2–13% more accurate than leading XML methods on public benchmark datasets, as well as in live A/B tests on the Bing search engine, it offers significant gains in click-through-rates, coverage, revenue and other online metrics over state-of-the-art techniques currently in production. Code for SiameseXML is available at https://github.com/Extreme-classification/siamesexml",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2021/poster/8847",
+      "pdf_url": "http://proceedings.mlr.press/v139/dahiya21a/dahiya21a.pdf",
+      "github_url": "https://github.com/Extreme-classification/siamesexml",
+      "total_authors": 9,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "purushottam_kar_5",
+        "name": "Purushottam Kar",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 8,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Kanpur (United States),Microsoft (India)",
+        "countries": [
+          "United States",
+          "India"
+        ],
+        "country_codes": [
+          "US",
+          "IN"
+        ]
+      },
+      "sort_score": 0.9375,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 51,
+        "semantic_scholar_citations": 0
+      }
+    }
+  ]
+}

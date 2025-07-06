@@ -1,0 +1,1854 @@
+{
+  "conference": "ICML 2023",
+  "focus_country": "India",
+  "total_papers": 40,
+  "generated_at": "2025-07-06T10:37:29.319788",
+  "config": {
+    "first_author_weight": 3.0,
+    "last_author_weight": 2.0,
+    "middle_author_weight": 1.0,
+    "status_weights": {
+      "oral": 10.0,
+      "spotlight": 7.5,
+      "poster": 5.0,
+      "unknown": 1.0
+    },
+    "output_format": "json",
+    "include_review_details": true,
+    "include_citation_data": true
+  },
+  "papers": [
+    {
+      "paper_id": "3MlWDiBcpr",
+      "title": "Discrete Continuous Optimization Framework for Simultaneous Clustering and Training in Mixture Models",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We study a new framework of learning mixture models via automatic clustering called PRESTO, wherein we optimize a joint objective function on the model parameters and the partitioning, with each model tailored to perform well on its specific cluster. In contrast to prior work, we do not assume any generative model for the data. We convert our training problem to a joint parameter estimation cum a subset selection problem, subject to a matroid span constraint. This allows us to reduce our problem into a constrained set function minimization problem, where the underlying objective is monotone and approximately submodular. We then propose a new joint discrete-continuous optimization algorithm that achieves a bounded approximation guarantee for our problem. We show that PRESTO outperforms several alternative methods. Finally, we study PRESTO in the context of resource-efficient deep learning, where we train smaller resource-constrained models on each partition and show that it outperforms existing data partitioning and model pruning/knowledge distillation approaches, which in contrast to PRESTO, require large initial (teacher) models.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/24026",
+      "pdf_url": "https://openreview.net/pdf?id=3MlWDiBcpr",
+      "github_url": "",
+      "total_authors": 8,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Parth_Vipul_Sangani1",
+        "name": "Parth Vipul Sangani",
+        "name_site": "Parth Sangani, Arjun Kashettiwar, Pritish Chakraborty, Bhuvan Gangula, Durga Sivasubramanian, Ganesh Ramakrishnan, Rishabh Iyer, Abir De",
+        "openreview_id": "~Parth_Vipul_Sangani1",
+        "position": 1,
+        "gender": "M",
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": "parth-sangani-b34b59165",
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 0,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6vauERTFMb",
+      "title": "StriderNet: A Graph Reinforcement Learning Approach to Optimize Atomic Structures on Rough Energy Landscapes",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Optimization of atomic structures presents a challenging problem, due to their highly rough and non-convex energy landscape, with wide applications in the fields of drug design, materials discovery, and mechanics. Here, we present a graph reinforcement learning approach, StriderNet, that learns a policy to displace the atoms towards low energy configurations. We evaluate the performance of StriderNet on three complex atomic systems, namely, binary Lennard-Jones particles, calcium silicate hydrates gel, and disordered silicon. We show that StriderNet outperforms all classical optimization algorithms and enables the discovery of a lower energy minimum. In addition, StriderNet exhibits a higher rate of reaching minima with energies, as confirmed by the average over multiple realizations. Finally, we show that StriderNet exhibits inductivity to unseen system sizes that are an order of magnitude different from the training system. All the codes and datasets are available at https://github.com/M3RG-IITD/StriderNET.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/24898",
+      "pdf_url": "https://openreview.net/pdf?id=6vauERTFMb",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Vaibhav_Bihani1",
+        "name": "Vaibhav Bihani",
+        "name_site": "Vaibhav Bihani, Sahil Manchanda, Srikanth Sastry, Sayan Ranu, N M Anoop Krishnan",
+        "openreview_id": "~Vaibhav_Bihani1",
+        "position": 1,
+        "gender": "M",
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": "2E4g5E4AAAAJ",
+        "orcid": "0000-0002-9862-1977",
+        "linkedin_url": "vaibhav-bihani-4978171b4/",
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 8,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "R7X1sTaM6J",
+      "title": "Conditional Tree Matching for Inference-Time Adaptation of Tree Prediction Models",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We present CTreeOT, a convergent, differentiable algorithm for matching two trees when each tree is conditioned on some input. Such conditional tree matching is useful for light-weight, few-shot adaptation of tree prediction models without parameter fine-tuning. CTreeOT includes an alignment algorithm that extends the popular Sinkhorn algorithm for matching tree nodes while supporting constraints on tree edges. The algorithm involves alternating between matrix rescaling and message passing updates, and can be efficiently expressed as GPU tensor operations. The second part of CTreeOT is fine-grained relevance-based reweighting of nodes that makes the match scores useful for prediction tasks. We demonstrate the usefulness of CTreeOT for cross-schema adaptation of Text-to-SQL, a popular semantic parsing task. We show that compared to state-of-the-art methods, we achieve significant increase in adaptation accuracy.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/23654",
+      "pdf_url": "https://openreview.net/pdf?id=R7X1sTaM6J",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Harshit_Varma1",
+        "name": "Harshit Varma",
+        "name_site": "Harshit Varma, Abhijeet Awasthi, Sunita Sarawagi",
+        "openreview_id": "~Harshit_Varma1",
+        "position": 1,
+        "gender": "M",
+        "homepage_url": "https://www.cse.iitb.ac.in/~harshitvarma",
+        "dblp_id": null,
+        "google_scholar_url": "https://scholar.google.com/citations?hl=en",
+        "orcid": null,
+        "linkedin_url": "harshit-varma",
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 2,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "Tw7pgl861K",
+      "title": "Off-Policy Average Reward Actor-Critic with Deterministic Policy Search",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The average reward criterion is relatively less studied as most existing works in the Reinforcement Learning literature consider the discounted reward criterion. There are few recent works that present on-policy average reward actor-critic algorithms, but average reward off-policy actor-critic is relatively less explored. In this work, we present both on-policy and off-policy deterministic policy gradient theorems for the average reward performance criterion. Using these theorems, we also present an Average Reward Off-Policy Deep Deterministic Policy Gradient (ARO-DDPG) Algorithm. We first show asymptotic convergence analysis using the ODE-based method. Subsequently, we provide a finite time analysis of the resulting stochastic approximation scheme with linear function approximator and obtain an $\\epsilon$-optimal stationary policy with a sample complexity of $\\Omega(\\epsilon^{-2.5})$. We compare the average reward performance of our proposed ARO-DDPG algorithm and observe better empirical performance compared to state-of-the-art on-policy average reward actor-critic algorithms over MuJoCo-based environments.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/23730",
+      "pdf_url": "https://openreview.net/pdf?id=Tw7pgl861K",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Naman_Saxena1",
+        "name": "Naman Saxena",
+        "name_site": "Naman Saxena, Subhojyoti Khastagir, Shishir Nadubettu Yadukumar, Shalabh Bhatnagar",
+        "openreview_id": "~Naman_Saxena1",
+        "position": 1,
+        "gender": "M",
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": "naman-saxena-718b7b175/",
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 11,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "kwb6T6LP7f",
+      "title": "SemSup-XC: Semantic Supervision for Zero and Few-shot Extreme Classification",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Extreme classification (XC) involves predicting over large numbers of classes (thousands to millions), with real-world applications like news article classification and e-commerce product tagging. The zero-shot version of this task requires generalization to novel classes without additional supervision. In this paper, we develop SemSup-XC, a model that achieves state-of-the-art zero-shot and few-shot performance on three XC datasets derived from legal, e-commerce, and Wikipedia data. To develop SemSup-XC, we use automatically collected semantic class descriptions to represent classes and facilitate generalization through a novel hybrid matching module that matches input instances to class descriptions using a combination of semantic and lexical similarity. Trained with contrastive learning, SemSup-XC significantly outperforms baselines and establishes state-of-the-art performance on all three datasets considered, gaining up to 12 precision points on zero-shot and more than 10 precision points on one-shot tests, with similar gains for recall@10. Our ablation studies highlight the relative importance of our hybrid matching module and automatically collected class descriptions.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/24217",
+      "pdf_url": "https://openreview.net/pdf?id=kwb6T6LP7f",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Pranjal_Aggarwal1",
+        "name": "Pranjal Aggarwal",
+        "name_site": "Pranjal Aggarwal, Ameet Deshpande, Karthik Narasimhan",
+        "openreview_id": "~Pranjal_Aggarwal1",
+        "position": 1,
+        "gender": "M",
+        "homepage_url": "https://github.com/Pranjal2041/",
+        "dblp_id": "163/0764",
+        "google_scholar_url": "https://scholar.google.com/citations?hl=en",
+        "orcid": "0000-0002-2962-1535",
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 13,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "oJANAXYc18",
+      "title": "Deep Regression Unlearning",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "With the introduction of data protection and privacy regulations, it has become crucial to remove the lineage of data on demand from a machine learning (ML) model. In the last few years, there have been notable developments in machine unlearning to remove the information of certain training data efficiently and effectively from ML models. In this work, we explore unlearning for the regression problem, particularly in deep learning models. Unlearning in classification and simple linear regression has been considerably investigated. However, unlearning in deep regression models largely remains an untouched problem till now. In this work, we introduce deep regression unlearning methods that generalize well and are robust to privacy attacks. We propose the Blindspot unlearning method which uses a novel weight optimization process. A randomly initialized model, partially exposed to the retain samples and a copy of the original model are used together to selectively imprint knowledge about the data that we wish to keep and scrub off the information of the data we wish to forget. We also propose a Gaussian fine tuning method for regression unlearning. The existing unlearning metrics for classification are not directly applicable to regression unlearning. Therefore, we adapt these metrics for the regression setting. We conduct regression unlearning experiments for computer vision, natural language processing and forecasting applications. Our methods show excellent performance for all these datasets across all the metrics. Source code: https://github.com/ayu987/deep-regression-unlearning",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/24434",
+      "pdf_url": "https://openreview.net/pdf?id=oJANAXYc18",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Ayush_Kumar_Tarun1",
+        "name": "Ayush Kumar Tarun",
+        "name_site": "Ayush Tarun, Vikram Chundawat, Murari Mandal, Mohan Kankanhalli",
+        "openreview_id": "~Ayush_Kumar_Tarun1",
+        "position": 1,
+        "gender": null,
+        "homepage_url": "https://ayushkumartarun.github.io/",
+        "dblp_id": "306/7616",
+        "google_scholar_url": "QYJGgtsAAAAJ",
+        "orcid": null,
+        "linkedin_url": "ayush-kumar-83228b1a2/",
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Kalinga Institute of Industrial Technology (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 50,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "oqkckmjCYp",
+      "title": "Interval Bound Interpolation for Few-shot Learning with Few Tasks",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Few-shot learning aims to transfer the knowledge acquired from training on a diverse set of tasks to unseen tasks from the same task distribution, with a limited amount of labeled data. The underlying requirement for effective few-shot generalization is to learn a good representation of the task manifold. This becomes more difficult when only a limited number of tasks are available for training. In such a few-task few-shot setting, it is beneficial to explicitly preserve the local neighborhoods from the task manifold and exploit this to generate artificial tasks for training. To this end, we introduce the notion of interval bounds from the provably robust training literature to few-shot learning. The interval bounds are used to characterize neighborhoods around the training tasks. These neighborhoods can then be preserved by minimizing the distance between a task and its respective bounds. We then use a novel strategy to artificially form new tasks for training by interpolating between the available tasks and their respective interval bounds. We apply our framework to both model-agnostic meta-learning as well as prototype-based metric-learning paradigms. The efficacy of our proposed approach is evident from the improved performance on several datasets from diverse domains in comparison to recent methods.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/25023",
+      "pdf_url": "https://openreview.net/pdf?id=oqkckmjCYp",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Shounak_Datta1",
+        "name": "Shounak Datta",
+        "name_site": "Shounak Datta, Sankha Subhra Mullick, Anish Chakrabarty, Swagatam Das",
+        "openreview_id": "~Shounak_Datta1",
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": "https://scholar.google.co.in/citations?user=qtW4ugoAAAAJ",
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Statistical Institute (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 4,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "pNi4q28UyI",
+      "title": "GRAFENNE: Learning on Graphs with Heterogeneous and Dynamic Feature Sets",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Graph neural networks (GNNs), in general, are built on the assumption of a static set of features characterizing each node in a graph. This assumption is often violated in practice. Existing methods partly address this issue through feature imputation. However, these techniques (i) assume uniformity of feature set across nodes, (ii) are transductive by nature, and (iii) fail to work when features are added or removed over time. In this work, we address these limitations through a novel GNN framework called GRAFENNE. GRAFENNE performs a novel allotropic transformation on the original graph, wherein the nodes and features are decoupled through a bipartite encoding. Through a carefully chosen message passing framework on the allotropic transformation, we make the model parameter size independent of the number of features and thereby inductive to both unseen nodes and features. We prove that GRAFENNE is at least as expressive as any of the existing message-passing GNNs in terms of Weisfeiler-Leman tests, and therefore, the additional inductivity to unseen features does not come at the cost of expressivity. In addition, as demonstrated over four real-world graphs, GRAFENNE empowers the underlying GNN with high empirical efficacy and the ability to learn in continual fashion over streaming feature sets.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/24743",
+      "pdf_url": "https://openreview.net/pdf?id=pNi4q28UyI",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Shubham_Gupta3",
+        "name": "Shubham Gupta",
+        "name_site": "Shubham Gupta, Sahil Manchanda, Sayan Ranu, Srikanta Bedathur",
+        "openreview_id": "~Shubham_Gupta3",
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 8,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "wVGreJ2338",
+      "title": "Featured Graph Coarsening with Similarity Guarantees",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Graph coarsening is a dimensionality reduction technique that aims to learn a smaller-tractable graph while preserving the properties of the original input graph. However, many real-world graphs also have features or contexts associated with each node. The existing graph coarsening methods do not consider the node features and rely solely on a graph matrix(e.g., adjacency and Laplacian) to coarsen graphs. However, some recent deep learning-based graph coarsening methods are designed for specific tasks considering both node features and graph matrix. In this paper, we introduce a novel optimization-based framework for graph coarsening that takes both the graph matrix and the node features as the input and jointly learns the coarsened graph matrix and the coarsened feature matrix while ensuring desired properties. To the best of our knowledge, this is the first work that guarantees that the learned coarsened graph is $\\epsilon\\in[0,1)$ similar to the original graph. Extensive experiments with both real and synthetic benchmark datasets elucidate the proposed framework's efficacy and applicability for numerous graph-based applications, including graph clustering, node classification, stochastic block model identification, and graph summarization.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/24276",
+      "pdf_url": "https://openreview.net/pdf?id=wVGreJ2338",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Manoj_Kumar4",
+        "name": "Manoj Kumar",
+        "name_site": "MANOJ KUMAR, Anurag Sharma, Shashwat Saxena, Sandeep Kumar",
+        "openreview_id": "~Manoj_Kumar4",
+        "position": 1,
+        "gender": "M",
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": "gdL-bokAAAAJ",
+        "orcid": null,
+        "linkedin_url": "manoj-kumar-9042b449/",
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 29,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "3MlWDiBcpr",
+      "title": "Discrete Continuous Optimization Framework for Simultaneous Clustering and Training in Mixture Models",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We study a new framework of learning mixture models via automatic clustering called PRESTO, wherein we optimize a joint objective function on the model parameters and the partitioning, with each model tailored to perform well on its specific cluster. In contrast to prior work, we do not assume any generative model for the data. We convert our training problem to a joint parameter estimation cum a subset selection problem, subject to a matroid span constraint. This allows us to reduce our problem into a constrained set function minimization problem, where the underlying objective is monotone and approximately submodular. We then propose a new joint discrete-continuous optimization algorithm that achieves a bounded approximation guarantee for our problem. We show that PRESTO outperforms several alternative methods. Finally, we study PRESTO in the context of resource-efficient deep learning, where we train smaller resource-constrained models on each partition and show that it outperforms existing data partitioning and model pruning/knowledge distillation approaches, which in contrast to PRESTO, require large initial (teacher) models.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/24026",
+      "pdf_url": "https://openreview.net/pdf?id=3MlWDiBcpr",
+      "github_url": "",
+      "total_authors": 8,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Abir_De1",
+        "name": "Abir De",
+        "name_site": null,
+        "openreview_id": "~Abir_De1",
+        "position": 8,
+        "gender": "M",
+        "homepage_url": null,
+        "dblp_id": "118/7174",
+        "google_scholar_url": "https://scholar.google.co.in/citations?user=_9ZKKbIAAAAJ",
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": null,
+        "countries": [],
+        "country_codes": []
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 0,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6vauERTFMb",
+      "title": "StriderNet: A Graph Reinforcement Learning Approach to Optimize Atomic Structures on Rough Energy Landscapes",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Optimization of atomic structures presents a challenging problem, due to their highly rough and non-convex energy landscape, with wide applications in the fields of drug design, materials discovery, and mechanics. Here, we present a graph reinforcement learning approach, StriderNet, that learns a policy to displace the atoms towards low energy configurations. We evaluate the performance of StriderNet on three complex atomic systems, namely, binary Lennard-Jones particles, calcium silicate hydrates gel, and disordered silicon. We show that StriderNet outperforms all classical optimization algorithms and enables the discovery of a lower energy minimum. In addition, StriderNet exhibits a higher rate of reaching minima with energies, as confirmed by the average over multiple realizations. Finally, we show that StriderNet exhibits inductivity to unseen system sizes that are an order of magnitude different from the training system. All the codes and datasets are available at https://github.com/M3RG-IITD/StriderNET.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/24898",
+      "pdf_url": "https://openreview.net/pdf?id=6vauERTFMb",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~N_M_Anoop_Krishnan1",
+        "name": "N M Anoop Krishnan",
+        "name_site": null,
+        "openreview_id": "~N_M_Anoop_Krishnan1",
+        "position": 5,
+        "gender": "M",
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": "https://scholar.google.co.in/citations?user=fGnjHcEAAAAJ",
+        "orcid": "0000-0003-1500-4947",
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 8,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "BJc95DyFNG",
+      "title": "Learning to Initiate and Reason in Event-Driven Cascading Processes",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Training agents to control a dynamic environment is a fundamental task in AI. In many environments, the dynamics can be summarized by a small set of events that capture the semantic behavior of the system. Typically, these events form chains or cascades. We often wish to change the system behavior using a single intervention that propagates through the cascade. For instance, one may trigger a biochemical cascade to switch the state of a cell or, in logistics, reroute a truck to meet an unexpected, urgent delivery. We introduce a new supervised learning setup called Cascade. An agent observes a system with known dynamics evolving from some initial state. The agent is given a structured semantic instruction and needs to make an intervention that triggers a cascade of events, such that the system reaches an alternative (counterfactual) behavior. We provide a test-bed for this problem, consisting of physical objects. We combine semantic tree search with an event-driven forward model and devise an algorithm that learns to efficiently search in exponentially large semantic trees. We demonstrate that our approach learns to follow instructions to intervene in new complex scenes. When provided with an observed cascade of events, it can also reason about alternative outcomes.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/24246",
+      "pdf_url": "https://openreview.net/pdf?id=BJc95DyFNG",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Gal_Chechik1",
+        "name": "Gal Chechik",
+        "name_site": null,
+        "openreview_id": "~Gal_Chechik1",
+        "position": 4,
+        "gender": null,
+        "homepage_url": "https://chechiklab.biu.ac.il/~gal/",
+        "dblp_id": "c/GalChechik",
+        "google_scholar_url": "Wk2gAZUAAAAJ",
+        "orcid": "0000-0001-9164-5303",
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": null,
+        "countries": [],
+        "country_codes": []
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 0,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "R7X1sTaM6J",
+      "title": "Conditional Tree Matching for Inference-Time Adaptation of Tree Prediction Models",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We present CTreeOT, a convergent, differentiable algorithm for matching two trees when each tree is conditioned on some input. Such conditional tree matching is useful for light-weight, few-shot adaptation of tree prediction models without parameter fine-tuning. CTreeOT includes an alignment algorithm that extends the popular Sinkhorn algorithm for matching tree nodes while supporting constraints on tree edges. The algorithm involves alternating between matrix rescaling and message passing updates, and can be efficiently expressed as GPU tensor operations. The second part of CTreeOT is fine-grained relevance-based reweighting of nodes that makes the match scores useful for prediction tasks. We demonstrate the usefulness of CTreeOT for cross-schema adaptation of Text-to-SQL, a popular semantic parsing task. We show that compared to state-of-the-art methods, we achieve significant increase in adaptation accuracy.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/23654",
+      "pdf_url": "https://openreview.net/pdf?id=R7X1sTaM6J",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Sunita_Sarawagi1",
+        "name": "Sunita Sarawagi",
+        "name_site": null,
+        "openreview_id": "~Sunita_Sarawagi1",
+        "position": 3,
+        "gender": "F",
+        "homepage_url": "https://www.cse.iitb.ac.in/~sunita/",
+        "dblp_id": "s/SunitaSarawagi",
+        "google_scholar_url": "https://scholar.google.com.tw/citations?user=Hg4HmTAAAAAJ",
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 2,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "Tw7pgl861K",
+      "title": "Off-Policy Average Reward Actor-Critic with Deterministic Policy Search",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The average reward criterion is relatively less studied as most existing works in the Reinforcement Learning literature consider the discounted reward criterion. There are few recent works that present on-policy average reward actor-critic algorithms, but average reward off-policy actor-critic is relatively less explored. In this work, we present both on-policy and off-policy deterministic policy gradient theorems for the average reward performance criterion. Using these theorems, we also present an Average Reward Off-Policy Deep Deterministic Policy Gradient (ARO-DDPG) Algorithm. We first show asymptotic convergence analysis using the ODE-based method. Subsequently, we provide a finite time analysis of the resulting stochastic approximation scheme with linear function approximator and obtain an $\\epsilon$-optimal stationary policy with a sample complexity of $\\Omega(\\epsilon^{-2.5})$. We compare the average reward performance of our proposed ARO-DDPG algorithm and observe better empirical performance compared to state-of-the-art on-policy average reward actor-critic algorithms over MuJoCo-based environments.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/23730",
+      "pdf_url": "https://openreview.net/pdf?id=Tw7pgl861K",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Shalabh_Bhatnagar1",
+        "name": "Shalabh Bhatnagar",
+        "name_site": null,
+        "openreview_id": "~Shalabh_Bhatnagar1",
+        "position": 4,
+        "gender": "M",
+        "homepage_url": "http://www.csa.iisc.ac.in/~shalabh/",
+        "dblp_id": "71/2542",
+        "google_scholar_url": "https://scholar.google.com.tw/citations?user=cj3fJJsbjAoC",
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 11,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "oqkckmjCYp",
+      "title": "Interval Bound Interpolation for Few-shot Learning with Few Tasks",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Few-shot learning aims to transfer the knowledge acquired from training on a diverse set of tasks to unseen tasks from the same task distribution, with a limited amount of labeled data. The underlying requirement for effective few-shot generalization is to learn a good representation of the task manifold. This becomes more difficult when only a limited number of tasks are available for training. In such a few-task few-shot setting, it is beneficial to explicitly preserve the local neighborhoods from the task manifold and exploit this to generate artificial tasks for training. To this end, we introduce the notion of interval bounds from the provably robust training literature to few-shot learning. The interval bounds are used to characterize neighborhoods around the training tasks. These neighborhoods can then be preserved by minimizing the distance between a task and its respective bounds. We then use a novel strategy to artificially form new tasks for training by interpolating between the available tasks and their respective interval bounds. We apply our framework to both model-agnostic meta-learning as well as prototype-based metric-learning paradigms. The efficacy of our proposed approach is evident from the improved performance on several datasets from diverse domains in comparison to recent methods.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/25023",
+      "pdf_url": "https://openreview.net/pdf?id=oqkckmjCYp",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Swagatam_Das2",
+        "name": "Swagatam Das",
+        "name_site": null,
+        "openreview_id": "~Swagatam_Das1",
+        "position": 4,
+        "gender": "M",
+        "homepage_url": "https://www.isical.ac.in/~swagatam.das/",
+        "dblp_id": "00/3298.html",
+        "google_scholar_url": "https://scholar.google.co.in/citations?user=L8XYpAwAAAAJ",
+        "orcid": "0000-0001-6843-4508",
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Statistical Institute (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 4,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "wVGreJ2338",
+      "title": "Featured Graph Coarsening with Similarity Guarantees",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Graph coarsening is a dimensionality reduction technique that aims to learn a smaller-tractable graph while preserving the properties of the original input graph. However, many real-world graphs also have features or contexts associated with each node. The existing graph coarsening methods do not consider the node features and rely solely on a graph matrix(e.g., adjacency and Laplacian) to coarsen graphs. However, some recent deep learning-based graph coarsening methods are designed for specific tasks considering both node features and graph matrix. In this paper, we introduce a novel optimization-based framework for graph coarsening that takes both the graph matrix and the node features as the input and jointly learns the coarsened graph matrix and the coarsened feature matrix while ensuring desired properties. To the best of our knowledge, this is the first work that guarantees that the learned coarsened graph is $\\epsilon\\in[0,1)$ similar to the original graph. Extensive experiments with both real and synthetic benchmark datasets elucidate the proposed framework's efficacy and applicability for numerous graph-based applications, including graph clustering, node classification, stochastic block model identification, and graph summarization.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/24276",
+      "pdf_url": "https://openreview.net/pdf?id=wVGreJ2338",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Sandeep_Kumar8",
+        "name": "Sandeep Kumar",
+        "name_site": null,
+        "openreview_id": "~Sandeep_Kumar8",
+        "position": 4,
+        "gender": "M",
+        "homepage_url": "https://sites.google.com/view/sandeepkr/home",
+        "dblp_id": null,
+        "google_scholar_url": "lycMMW8AAAAJ",
+        "orcid": null,
+        "linkedin_url": "sandeep-kumar-84463332/",
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 29,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "bpRTAnJ8LW",
+      "title": "Pythia: A Suite for Analyzing Large Language Models Across Training and Scaling",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "How do large language models (LLMs) develop and evolve over the course of training? How do these patterns change as models scale? To answer these questions, we introduce *Pythia*, a suite of 16 LLMs all trained on public data seen in the exact same order and ranging in size from 70M to 12B parameters. We provide public access to 154 checkpoints for each one of the 16 models, alongside tools to download and reconstruct their exact training dataloaders for further study. We intend *Pythia* to facilitate research in many areas, and we present several case studies including novel results in memorization, term frequency effects on few-shot performance, and reducing gender bias. We demonstrate that this highly controlled setup can be used to yield novel insights toward LLMs and their training dynamics. Trained models, analysis code, training code, and training data can be found at https://github.com/EleutherAI/pythia.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/24093",
+      "pdf_url": "https://openreview.net/pdf?id=bpRTAnJ8LW",
+      "github_url": "",
+      "total_authors": 13,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Mohammad_Aflah_Khan1",
+        "name": "Mohammad Aflah Khan",
+        "name_site": null,
+        "openreview_id": "~Mohammad_Aflah_Khan1",
+        "position": 7,
+        "gender": "M",
+        "homepage_url": "https://aflah02.github.io/",
+        "dblp_id": "322/0986",
+        "google_scholar_url": "https://scholar.google.com/citations?view_op=list_works",
+        "orcid": null,
+        "linkedin_url": "mohammad-aflah-khan/",
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indraprastha Institute of Information Technology (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 5.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 1168,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "3MlWDiBcpr",
+      "title": "Discrete Continuous Optimization Framework for Simultaneous Clustering and Training in Mixture Models",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We study a new framework of learning mixture models via automatic clustering called PRESTO, wherein we optimize a joint objective function on the model parameters and the partitioning, with each model tailored to perform well on its specific cluster. In contrast to prior work, we do not assume any generative model for the data. We convert our training problem to a joint parameter estimation cum a subset selection problem, subject to a matroid span constraint. This allows us to reduce our problem into a constrained set function minimization problem, where the underlying objective is monotone and approximately submodular. We then propose a new joint discrete-continuous optimization algorithm that achieves a bounded approximation guarantee for our problem. We show that PRESTO outperforms several alternative methods. Finally, we study PRESTO in the context of resource-efficient deep learning, where we train smaller resource-constrained models on each partition and show that it outperforms existing data partitioning and model pruning/knowledge distillation approaches, which in contrast to PRESTO, require large initial (teacher) models.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/24026",
+      "pdf_url": "https://openreview.net/pdf?id=3MlWDiBcpr",
+      "github_url": "",
+      "total_authors": 8,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Arjun_Shashank_Kashettiwar1",
+        "name": "Arjun Shashank Kashettiwar",
+        "name_site": null,
+        "openreview_id": "~Arjun_Shashank_Kashettiwar1",
+        "position": 2,
+        "gender": "M",
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": "arjun-kashettiwar-05748a173",
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 4.2857142857142865,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 0,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "bpRTAnJ8LW",
+      "title": "Pythia: A Suite for Analyzing Large Language Models Across Training and Scaling",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "How do large language models (LLMs) develop and evolve over the course of training? How do these patterns change as models scale? To answer these questions, we introduce *Pythia*, a suite of 16 LLMs all trained on public data seen in the exact same order and ranging in size from 70M to 12B parameters. We provide public access to 154 checkpoints for each one of the 16 models, alongside tools to download and reconstruct their exact training dataloaders for further study. We intend *Pythia* to facilitate research in many areas, and we present several case studies including novel results in memorization, term frequency effects on few-shot performance, and reducing gender bias. We demonstrate that this highly controlled setup can be used to yield novel insights toward LLMs and their training dynamics. Trained models, analysis code, training code, and training data can be found at https://github.com/EleutherAI/pythia.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/24093",
+      "pdf_url": "https://openreview.net/pdf?id=bpRTAnJ8LW",
+      "github_url": "",
+      "total_authors": 13,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Shivanshu_Purohit1",
+        "name": "Shivanshu Purohit",
+        "name_site": null,
+        "openreview_id": "~Shivanshu_Purohit1",
+        "position": 8,
+        "gender": "M",
+        "homepage_url": null,
+        "dblp_id": "318/2975",
+        "google_scholar_url": "PbFnD-0AAAAJ",
+        "orcid": null,
+        "linkedin_url": "https://linkedin.com/in/shivanshu-purohit",
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Matrusri Engineering College (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 4.166666666666666,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 1168,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6vauERTFMb",
+      "title": "StriderNet: A Graph Reinforcement Learning Approach to Optimize Atomic Structures on Rough Energy Landscapes",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Optimization of atomic structures presents a challenging problem, due to their highly rough and non-convex energy landscape, with wide applications in the fields of drug design, materials discovery, and mechanics. Here, we present a graph reinforcement learning approach, StriderNet, that learns a policy to displace the atoms towards low energy configurations. We evaluate the performance of StriderNet on three complex atomic systems, namely, binary Lennard-Jones particles, calcium silicate hydrates gel, and disordered silicon. We show that StriderNet outperforms all classical optimization algorithms and enables the discovery of a lower energy minimum. In addition, StriderNet exhibits a higher rate of reaching minima with energies, as confirmed by the average over multiple realizations. Finally, we show that StriderNet exhibits inductivity to unseen system sizes that are an order of magnitude different from the training system. All the codes and datasets are available at https://github.com/M3RG-IITD/StriderNET.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/24898",
+      "pdf_url": "https://openreview.net/pdf?id=6vauERTFMb",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Sahil_Manchanda1",
+        "name": "Sahil Manchanda",
+        "name_site": null,
+        "openreview_id": "~Sahil_Manchanda1",
+        "position": 2,
+        "gender": "M",
+        "homepage_url": "https://www.cse.iitd.ac.in/~sahilm",
+        "dblp_id": "200/8052",
+        "google_scholar_url": "OPyjQHwAAAAJ",
+        "orcid": "0000-0001-7437-9891",
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.75,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 8,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "3MlWDiBcpr",
+      "title": "Discrete Continuous Optimization Framework for Simultaneous Clustering and Training in Mixture Models",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We study a new framework of learning mixture models via automatic clustering called PRESTO, wherein we optimize a joint objective function on the model parameters and the partitioning, with each model tailored to perform well on its specific cluster. In contrast to prior work, we do not assume any generative model for the data. We convert our training problem to a joint parameter estimation cum a subset selection problem, subject to a matroid span constraint. This allows us to reduce our problem into a constrained set function minimization problem, where the underlying objective is monotone and approximately submodular. We then propose a new joint discrete-continuous optimization algorithm that achieves a bounded approximation guarantee for our problem. We show that PRESTO outperforms several alternative methods. Finally, we study PRESTO in the context of resource-efficient deep learning, where we train smaller resource-constrained models on each partition and show that it outperforms existing data partitioning and model pruning/knowledge distillation approaches, which in contrast to PRESTO, require large initial (teacher) models.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/24026",
+      "pdf_url": "https://openreview.net/pdf?id=3MlWDiBcpr",
+      "github_url": "",
+      "total_authors": 8,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Pritish_Chakraborty1",
+        "name": "Pritish Chakraborty",
+        "name_site": null,
+        "openreview_id": "~Pritish_Chakraborty1",
+        "position": 3,
+        "gender": "M",
+        "homepage_url": "https://pritishc.com",
+        "dblp_id": null,
+        "google_scholar_url": "rFRySV0AAAAJ",
+        "orcid": null,
+        "linkedin_url": "https://linkedin.com/in/pritishc",
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.5714285714285716,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 0,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "jTcRlAAO01",
+      "title": "Principled Offline RL in the Presence of Rich Exogenous Information",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Learning to control an agent from offline data collected in a rich pixel-based visual observation space is vital for real-world applications of reinforcement learning (RL). A major challenge in this setting is the presence of input information that is hard to model and irrelevant to controlling the agent. This problem has been approached by the theoretical RL community through the lens of *exogenous information*, i.e., any control-irrelevant information contained in observations. For example, a robot navigating in busy streets needs to ignore irrelevant information, such as other people walking in the background, textures of objects, or birds in the sky. In this paper, we focus on the setting with visually detailed exogenous information and introduce new offline RL benchmarks that offer the ability to study this problem. We find that contemporary representation learning techniques can fail on datasets where the noise is a complex and time-dependent process, which is prevalent in practical applications. To address these, we propose to use multi-step inverse models to learn Agent-Centric Representations for Offline-RL (ACRO). Despite being simple and reward-free, we show theoretically and empirically that the representation created by this objective greatly outperforms baselines.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/24023",
+      "pdf_url": "https://openreview.net/pdf?id=jTcRlAAO01",
+      "github_url": "",
+      "total_authors": 11,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Yonathan_Efroni2_1",
+        "name": "Yonathan Efroni",
+        "name_site": null,
+        "openreview_id": "~Hongyu_Zang1",
+        "position": 4,
+        "gender": "M",
+        "homepage_url": "https://zanghyu.github.io/",
+        "dblp_id": "212/2592.html",
+        "google_scholar_url": "2kmSy50AAAAJ",
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Manipal Institute of Technology (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 4,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "Aev7tepsqx",
+      "title": "Diffusion Models as Artists: Are we Closing the Gap between Humans and Machines?",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "An important milestone for AI is the development of algorithms that can produce drawings that are indistinguishable from those of humans. Here, we adapt the ''diversity vs. recognizability'' scoring framework from Boutin et al (2022) and find that one-shot diffusion models have indeed started to close the gap between humans and machines. However, using a finer-grained measure of the originality of individual samples, we show that strengthening the guidance of diffusion models helps improve the humanness of their drawings, but they still fall short of approximating the originality and recognizability of human drawings. Comparing human category diagnostic features, collected through an online psychophysics experiment, against those derived from diffusion models reveals that humans rely on fewer and more localized features. Overall, our study suggests that diffusion models have significantly helped improve the quality of machine-generated drawings; however, a gap between humans and machines remains -- in part explainable by discrepancies in visual strategies.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/24739",
+      "pdf_url": "https://openreview.net/pdf?id=Aev7tepsqx",
+      "github_url": "",
+      "total_authors": 7,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Akash_Nagaraj2",
+        "name": "Akash Nagaraj",
+        "name_site": null,
+        "openreview_id": "~Akash_Nagaraj2",
+        "position": 5,
+        "gender": "M",
+        "homepage_url": "https://www.akashnagaraj.me/",
+        "dblp_id": null,
+        "google_scholar_url": "https://scholar.google.com/citations?hl=en",
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Universidad de Alicante (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.333333333333334,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 12,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "MXfTQp8bZF",
+      "title": "Which Tricks are Important for Learning to Rank?",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Nowadays, state-of-the-art learning-to-rank methods are based on gradient-boosted decision trees (GBDT). The most well-known algorithm is LambdaMART which was proposed more than a decade ago. Recently, several other GBDT-based ranking algorithms were proposed. In this paper, we thoroughly analyze these methods in a unified setup. In particular, we address the following questions. Is direct optimization of a smoothed ranking loss preferable over optimizing a convex surrogate? How to properly construct and smooth surrogate ranking losses? To address these questions, we compare LambdaMART with YetiRank and StochasticRank methods and their modifications. We also propose a simple improvement of the YetiRank approach that allows for optimizing specific ranking loss functions. As a result, we gain insights into learning-to-rank techniques and obtain a new state-of-the-art algorithm.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/25205",
+      "pdf_url": "https://openreview.net/pdf?id=MXfTQp8bZF",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Aleksei_Ustimenko1",
+        "name": "Aleksei Ustimenko",
+        "name_site": null,
+        "openreview_id": "~Aleksei_Ustimenko1",
+        "position": 2,
+        "gender": "M",
+        "homepage_url": null,
+        "dblp_id": "242/3873",
+        "google_scholar_url": "OES5pK4AAAAJ",
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "ShareChat (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.333333333333334,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 12,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "Tw7pgl861K",
+      "title": "Off-Policy Average Reward Actor-Critic with Deterministic Policy Search",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The average reward criterion is relatively less studied as most existing works in the Reinforcement Learning literature consider the discounted reward criterion. There are few recent works that present on-policy average reward actor-critic algorithms, but average reward off-policy actor-critic is relatively less explored. In this work, we present both on-policy and off-policy deterministic policy gradient theorems for the average reward performance criterion. Using these theorems, we also present an Average Reward Off-Policy Deep Deterministic Policy Gradient (ARO-DDPG) Algorithm. We first show asymptotic convergence analysis using the ODE-based method. Subsequently, we provide a finite time analysis of the resulting stochastic approximation scheme with linear function approximator and obtain an $\\epsilon$-optimal stationary policy with a sample complexity of $\\Omega(\\epsilon^{-2.5})$. We compare the average reward performance of our proposed ARO-DDPG algorithm and observe better empirical performance compared to state-of-the-art on-policy average reward actor-critic algorithms over MuJoCo-based environments.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/23730",
+      "pdf_url": "https://openreview.net/pdf?id=Tw7pgl861K",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Subhojyoti_Khastagir1",
+        "name": "Subhojyoti Khastagir",
+        "name_site": null,
+        "openreview_id": "~Subhojyoti_Khastagir1",
+        "position": 2,
+        "gender": "M",
+        "homepage_url": null,
+        "dblp_id": "271/3391",
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": "subhojyoti-khastagir-2a4716152/",
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.333333333333334,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 11,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "pNi4q28UyI",
+      "title": "GRAFENNE: Learning on Graphs with Heterogeneous and Dynamic Feature Sets",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Graph neural networks (GNNs), in general, are built on the assumption of a static set of features characterizing each node in a graph. This assumption is often violated in practice. Existing methods partly address this issue through feature imputation. However, these techniques (i) assume uniformity of feature set across nodes, (ii) are transductive by nature, and (iii) fail to work when features are added or removed over time. In this work, we address these limitations through a novel GNN framework called GRAFENNE. GRAFENNE performs a novel allotropic transformation on the original graph, wherein the nodes and features are decoupled through a bipartite encoding. Through a carefully chosen message passing framework on the allotropic transformation, we make the model parameter size independent of the number of features and thereby inductive to both unseen nodes and features. We prove that GRAFENNE is at least as expressive as any of the existing message-passing GNNs in terms of Weisfeiler-Leman tests, and therefore, the additional inductivity to unseen features does not come at the cost of expressivity. In addition, as demonstrated over four real-world graphs, GRAFENNE empowers the underlying GNN with high empirical efficacy and the ability to learn in continual fashion over streaming feature sets.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/24743",
+      "pdf_url": "https://openreview.net/pdf?id=pNi4q28UyI",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Sahil_Manchanda1",
+        "name": "Sahil Manchanda",
+        "name_site": null,
+        "openreview_id": "~Sahil_Manchanda1",
+        "position": 2,
+        "gender": "M",
+        "homepage_url": "https://www.cse.iitd.ac.in/~sahilm",
+        "dblp_id": "200/8052",
+        "google_scholar_url": "OPyjQHwAAAAJ",
+        "orcid": "0000-0001-7437-9891",
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.333333333333334,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 8,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "wVGreJ2338",
+      "title": "Featured Graph Coarsening with Similarity Guarantees",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Graph coarsening is a dimensionality reduction technique that aims to learn a smaller-tractable graph while preserving the properties of the original input graph. However, many real-world graphs also have features or contexts associated with each node. The existing graph coarsening methods do not consider the node features and rely solely on a graph matrix(e.g., adjacency and Laplacian) to coarsen graphs. However, some recent deep learning-based graph coarsening methods are designed for specific tasks considering both node features and graph matrix. In this paper, we introduce a novel optimization-based framework for graph coarsening that takes both the graph matrix and the node features as the input and jointly learns the coarsened graph matrix and the coarsened feature matrix while ensuring desired properties. To the best of our knowledge, this is the first work that guarantees that the learned coarsened graph is $\\epsilon\\in[0,1)$ similar to the original graph. Extensive experiments with both real and synthetic benchmark datasets elucidate the proposed framework's efficacy and applicability for numerous graph-based applications, including graph clustering, node classification, stochastic block model identification, and graph summarization.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/24276",
+      "pdf_url": "https://openreview.net/pdf?id=wVGreJ2338",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Anurag_Sharma1",
+        "name": "Anurag Sharma",
+        "name_site": null,
+        "openreview_id": "~Anurag_Sharma1",
+        "position": 2,
+        "gender": "M",
+        "homepage_url": "https://www.linkedin.com/in/anurag-sharma-52b7b21aa/",
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.333333333333334,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 29,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "3MlWDiBcpr",
+      "title": "Discrete Continuous Optimization Framework for Simultaneous Clustering and Training in Mixture Models",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We study a new framework of learning mixture models via automatic clustering called PRESTO, wherein we optimize a joint objective function on the model parameters and the partitioning, with each model tailored to perform well on its specific cluster. In contrast to prior work, we do not assume any generative model for the data. We convert our training problem to a joint parameter estimation cum a subset selection problem, subject to a matroid span constraint. This allows us to reduce our problem into a constrained set function minimization problem, where the underlying objective is monotone and approximately submodular. We then propose a new joint discrete-continuous optimization algorithm that achieves a bounded approximation guarantee for our problem. We show that PRESTO outperforms several alternative methods. Finally, we study PRESTO in the context of resource-efficient deep learning, where we train smaller resource-constrained models on each partition and show that it outperforms existing data partitioning and model pruning/knowledge distillation approaches, which in contrast to PRESTO, require large initial (teacher) models.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/24026",
+      "pdf_url": "https://openreview.net/pdf?id=3MlWDiBcpr",
+      "github_url": "",
+      "total_authors": 8,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Bhuvan_Reddy_Gangula1",
+        "name": "Bhuvan Reddy Gangula",
+        "name_site": null,
+        "openreview_id": "~Bhuvan_Reddy_Gangula1",
+        "position": 4,
+        "gender": "M",
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": "gangula-bhuvan-reddy-67069323a/",
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.8571428571428568,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 0,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6vauERTFMb",
+      "title": "StriderNet: A Graph Reinforcement Learning Approach to Optimize Atomic Structures on Rough Energy Landscapes",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Optimization of atomic structures presents a challenging problem, due to their highly rough and non-convex energy landscape, with wide applications in the fields of drug design, materials discovery, and mechanics. Here, we present a graph reinforcement learning approach, StriderNet, that learns a policy to displace the atoms towards low energy configurations. We evaluate the performance of StriderNet on three complex atomic systems, namely, binary Lennard-Jones particles, calcium silicate hydrates gel, and disordered silicon. We show that StriderNet outperforms all classical optimization algorithms and enables the discovery of a lower energy minimum. In addition, StriderNet exhibits a higher rate of reaching minima with energies, as confirmed by the average over multiple realizations. Finally, we show that StriderNet exhibits inductivity to unseen system sizes that are an order of magnitude different from the training system. All the codes and datasets are available at https://github.com/M3RG-IITD/StriderNET.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/24898",
+      "pdf_url": "https://openreview.net/pdf?id=6vauERTFMb",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Srikanth_Sastry1",
+        "name": "Srikanth Sastry",
+        "name_site": null,
+        "openreview_id": "~Srikanth_Sastry1",
+        "position": 3,
+        "gender": "M",
+        "homepage_url": "https://www.jncasr.ac.in/faculty/sastry/",
+        "dblp_id": null,
+        "google_scholar_url": "9ndLacoAAAAJ",
+        "orcid": "0000-0001-7399-1835",
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Jawaharlal Nehru Centre for Advanced Scientific Research (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 8,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "R7X1sTaM6J",
+      "title": "Conditional Tree Matching for Inference-Time Adaptation of Tree Prediction Models",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We present CTreeOT, a convergent, differentiable algorithm for matching two trees when each tree is conditioned on some input. Such conditional tree matching is useful for light-weight, few-shot adaptation of tree prediction models without parameter fine-tuning. CTreeOT includes an alignment algorithm that extends the popular Sinkhorn algorithm for matching tree nodes while supporting constraints on tree edges. The algorithm involves alternating between matrix rescaling and message passing updates, and can be efficiently expressed as GPU tensor operations. The second part of CTreeOT is fine-grained relevance-based reweighting of nodes that makes the match scores useful for prediction tasks. We demonstrate the usefulness of CTreeOT for cross-schema adaptation of Text-to-SQL, a popular semantic parsing task. We show that compared to state-of-the-art methods, we achieve significant increase in adaptation accuracy.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/23654",
+      "pdf_url": "https://openreview.net/pdf?id=R7X1sTaM6J",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Abhijeet_Awasthi1",
+        "name": "Abhijeet Awasthi",
+        "name_site": null,
+        "openreview_id": "~Abhijeet_Awasthi1",
+        "position": 2,
+        "gender": "M",
+        "homepage_url": "https://www.cse.iitb.ac.in/~awasthi/",
+        "dblp_id": "233/8164",
+        "google_scholar_url": "dqHSxE8AAAAJ",
+        "orcid": null,
+        "linkedin_url": "awasthiabhijeet/",
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 2,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "fCyg20LQsL",
+      "title": "Toward Large Kernel Models",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Recent studies indicate that kernel machines can often perform similarly or better than deep neural networks (DNNs) on small datasets. The interest in kernel machines has been additionally bolstered by the discovery of their equivalence to wide neural networks in certain regimes. However, a key feature of DNNs is their ability to scale the model size and training data size independently, whereas in traditional kernel machines model size is tied to data size. Because of this coupling, scaling kernel machines to large data has been computationally challenging. In this paper, we provide a way forward for constructing large-scale general kernel models, which are a generalization of kernel machines that decouples the model and data, allowing training on large datasets. Specifically, we introduce EigenPro 3.0, an algorithm based on projected dual preconditioned SGD and show scaling to model and data sizes which have not been possible with existing kernel methods. We provide a PyTorch based implementation which can take advantage of multiple GPUs.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/24394",
+      "pdf_url": "https://openreview.net/pdf?id=fCyg20LQsL",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Mikhail_Belkin1",
+        "name": "Mikhail Belkin",
+        "name_site": null,
+        "openreview_id": "~Parthe_Pandit1",
+        "position": 2,
+        "gender": "M",
+        "homepage_url": "https://parthe.github.io",
+        "dblp_id": "166/6545",
+        "google_scholar_url": "gp_Gdr8AAAAJ",
+        "orcid": "0000-0002-2524-8817",
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "University of California, San Diego (United States)",
+        "countries": [
+          "United States"
+        ],
+        "country_codes": [
+          "US"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 22,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "3MlWDiBcpr",
+      "title": "Discrete Continuous Optimization Framework for Simultaneous Clustering and Training in Mixture Models",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We study a new framework of learning mixture models via automatic clustering called PRESTO, wherein we optimize a joint objective function on the model parameters and the partitioning, with each model tailored to perform well on its specific cluster. In contrast to prior work, we do not assume any generative model for the data. We convert our training problem to a joint parameter estimation cum a subset selection problem, subject to a matroid span constraint. This allows us to reduce our problem into a constrained set function minimization problem, where the underlying objective is monotone and approximately submodular. We then propose a new joint discrete-continuous optimization algorithm that achieves a bounded approximation guarantee for our problem. We show that PRESTO outperforms several alternative methods. Finally, we study PRESTO in the context of resource-efficient deep learning, where we train smaller resource-constrained models on each partition and show that it outperforms existing data partitioning and model pruning/knowledge distillation approaches, which in contrast to PRESTO, require large initial (teacher) models.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/24026",
+      "pdf_url": "https://openreview.net/pdf?id=3MlWDiBcpr",
+      "github_url": "",
+      "total_authors": 8,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Durga_S1",
+        "name": "Durga S",
+        "name_site": null,
+        "openreview_id": "~Durga_S1",
+        "position": 5,
+        "gender": "F",
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": "4JXFWTwAAAAJ",
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.1428571428571432,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 0,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "SCU1xlr9Y4",
+      "title": "Equivariant Architectures for Learning in Deep Weight Spaces",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "Designing machine learning architectures for processing neural networks in their raw weight matrix form is a newly introduced research direction. Unfortunately, the unique symmetry structure of deep weight spaces makes this design very challenging. If successful, such architectures would be capable of performing a wide range of intriguing tasks, from adapting a pre-trained network to a new domain to editing objects represented as functions (INRs or NeRFs). As a first step towards this goal, we present here a novel network architecture for learning in deep weight spaces. It takes as input a concatenation of weights and biases of a pre-trained MLP and processes it using a composition of layers that are equivariant to the natural permutation symmetry of the MLP's weights: Changing the order of neurons in intermediate layers of the MLP does not affect the function it represents. We provide a full characterization of all affine equivariant and invariant layers for these symmetries and show how these layers can be implemented using three basic operations: pooling, broadcasting, and fully connected layers applied to the input in an appropriate manner. We demonstrate the effectiveness of our architecture and its advantages over natural baselines in a variety of learning tasks.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/24582",
+      "pdf_url": "https://openreview.net/pdf?id=SCU1xlr9Y4",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Gal_Chechik1",
+        "name": "Gal Chechik",
+        "name_site": null,
+        "openreview_id": "~Gal_Chechik1",
+        "position": 5,
+        "gender": null,
+        "homepage_url": "https://chechiklab.biu.ac.il/~gal/",
+        "dblp_id": "c/GalChechik",
+        "google_scholar_url": "Wk2gAZUAAAAJ",
+        "orcid": "0000-0001-9164-5303",
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "NVIDIA (Israel)",
+        "countries": [
+          "Israel"
+        ],
+        "country_codes": [
+          "IL"
+        ]
+      },
+      "sort_score": 1.9999999999999996,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 74,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "Tw7pgl861K",
+      "title": "Off-Policy Average Reward Actor-Critic with Deterministic Policy Search",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The average reward criterion is relatively less studied as most existing works in the Reinforcement Learning literature consider the discounted reward criterion. There are few recent works that present on-policy average reward actor-critic algorithms, but average reward off-policy actor-critic is relatively less explored. In this work, we present both on-policy and off-policy deterministic policy gradient theorems for the average reward performance criterion. Using these theorems, we also present an Average Reward Off-Policy Deep Deterministic Policy Gradient (ARO-DDPG) Algorithm. We first show asymptotic convergence analysis using the ODE-based method. Subsequently, we provide a finite time analysis of the resulting stochastic approximation scheme with linear function approximator and obtain an $\\epsilon$-optimal stationary policy with a sample complexity of $\\Omega(\\epsilon^{-2.5})$. We compare the average reward performance of our proposed ARO-DDPG algorithm and observe better empirical performance compared to state-of-the-art on-policy average reward actor-critic algorithms over MuJoCo-based environments.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/23730",
+      "pdf_url": "https://openreview.net/pdf?id=Tw7pgl861K",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Shishir_N_Y1",
+        "name": "Shishir N Y",
+        "name_site": null,
+        "openreview_id": "~Shishir_N_Y1",
+        "position": 3,
+        "gender": "M",
+        "homepage_url": "https://www.shishirny.com",
+        "dblp_id": "144/4182",
+        "google_scholar_url": "is0x16gAAAAJ",
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 11,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "oqkckmjCYp",
+      "title": "Interval Bound Interpolation for Few-shot Learning with Few Tasks",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Few-shot learning aims to transfer the knowledge acquired from training on a diverse set of tasks to unseen tasks from the same task distribution, with a limited amount of labeled data. The underlying requirement for effective few-shot generalization is to learn a good representation of the task manifold. This becomes more difficult when only a limited number of tasks are available for training. In such a few-task few-shot setting, it is beneficial to explicitly preserve the local neighborhoods from the task manifold and exploit this to generate artificial tasks for training. To this end, we introduce the notion of interval bounds from the provably robust training literature to few-shot learning. The interval bounds are used to characterize neighborhoods around the training tasks. These neighborhoods can then be preserved by minimizing the distance between a task and its respective bounds. We then use a novel strategy to artificially form new tasks for training by interpolating between the available tasks and their respective interval bounds. We apply our framework to both model-agnostic meta-learning as well as prototype-based metric-learning paradigms. The efficacy of our proposed approach is evident from the improved performance on several datasets from diverse domains in comparison to recent methods.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/25023",
+      "pdf_url": "https://openreview.net/pdf?id=oqkckmjCYp",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Anish_Chakrabarty1",
+        "name": "Anish Chakrabarty",
+        "name_site": null,
+        "openreview_id": "~Anish_Chakrabarty1",
+        "position": 3,
+        "gender": "M",
+        "homepage_url": null,
+        "dblp_id": "304/5289",
+        "google_scholar_url": "KfCQY5oAAAAJ",
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Statistical Institute (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 4,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "pNi4q28UyI",
+      "title": "GRAFENNE: Learning on Graphs with Heterogeneous and Dynamic Feature Sets",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Graph neural networks (GNNs), in general, are built on the assumption of a static set of features characterizing each node in a graph. This assumption is often violated in practice. Existing methods partly address this issue through feature imputation. However, these techniques (i) assume uniformity of feature set across nodes, (ii) are transductive by nature, and (iii) fail to work when features are added or removed over time. In this work, we address these limitations through a novel GNN framework called GRAFENNE. GRAFENNE performs a novel allotropic transformation on the original graph, wherein the nodes and features are decoupled through a bipartite encoding. Through a carefully chosen message passing framework on the allotropic transformation, we make the model parameter size independent of the number of features and thereby inductive to both unseen nodes and features. We prove that GRAFENNE is at least as expressive as any of the existing message-passing GNNs in terms of Weisfeiler-Leman tests, and therefore, the additional inductivity to unseen features does not come at the cost of expressivity. In addition, as demonstrated over four real-world graphs, GRAFENNE empowers the underlying GNN with high empirical efficacy and the ability to learn in continual fashion over streaming feature sets.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/24743",
+      "pdf_url": "https://openreview.net/pdf?id=pNi4q28UyI",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Sayan_Ranu2",
+        "name": "Sayan Ranu",
+        "name_site": null,
+        "openreview_id": "~Sayan_Ranu2",
+        "position": 3,
+        "gender": "M",
+        "homepage_url": "https://www.cse.iitd.ac.in/~sayan/index.html",
+        "dblp_id": "38/768",
+        "google_scholar_url": "K4w5qYUAAAAJ",
+        "orcid": "0000-0003-4147-9372",
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 8,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "wVGreJ2338",
+      "title": "Featured Graph Coarsening with Similarity Guarantees",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Graph coarsening is a dimensionality reduction technique that aims to learn a smaller-tractable graph while preserving the properties of the original input graph. However, many real-world graphs also have features or contexts associated with each node. The existing graph coarsening methods do not consider the node features and rely solely on a graph matrix(e.g., adjacency and Laplacian) to coarsen graphs. However, some recent deep learning-based graph coarsening methods are designed for specific tasks considering both node features and graph matrix. In this paper, we introduce a novel optimization-based framework for graph coarsening that takes both the graph matrix and the node features as the input and jointly learns the coarsened graph matrix and the coarsened feature matrix while ensuring desired properties. To the best of our knowledge, this is the first work that guarantees that the learned coarsened graph is $\\epsilon\\in[0,1)$ similar to the original graph. Extensive experiments with both real and synthetic benchmark datasets elucidate the proposed framework's efficacy and applicability for numerous graph-based applications, including graph clustering, node classification, stochastic block model identification, and graph summarization.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/24276",
+      "pdf_url": "https://openreview.net/pdf?id=wVGreJ2338",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Shashwat_Saxena1",
+        "name": "Shashwat Saxena",
+        "name_site": null,
+        "openreview_id": "~Shashwat_Saxena1",
+        "position": 3,
+        "gender": "M",
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": "shashwat-saxena-2475841a2",
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 29,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6vauERTFMb",
+      "title": "StriderNet: A Graph Reinforcement Learning Approach to Optimize Atomic Structures on Rough Energy Landscapes",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Optimization of atomic structures presents a challenging problem, due to their highly rough and non-convex energy landscape, with wide applications in the fields of drug design, materials discovery, and mechanics. Here, we present a graph reinforcement learning approach, StriderNet, that learns a policy to displace the atoms towards low energy configurations. We evaluate the performance of StriderNet on three complex atomic systems, namely, binary Lennard-Jones particles, calcium silicate hydrates gel, and disordered silicon. We show that StriderNet outperforms all classical optimization algorithms and enables the discovery of a lower energy minimum. In addition, StriderNet exhibits a higher rate of reaching minima with energies, as confirmed by the average over multiple realizations. Finally, we show that StriderNet exhibits inductivity to unseen system sizes that are an order of magnitude different from the training system. All the codes and datasets are available at https://github.com/M3RG-IITD/StriderNET.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/24898",
+      "pdf_url": "https://openreview.net/pdf?id=6vauERTFMb",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Sayan_Ranu2",
+        "name": "Sayan Ranu",
+        "name_site": null,
+        "openreview_id": "~Sayan_Ranu2",
+        "position": 4,
+        "gender": "M",
+        "homepage_url": "https://www.cse.iitd.ac.in/~sayan/index.html",
+        "dblp_id": "38/768",
+        "google_scholar_url": "K4w5qYUAAAAJ",
+        "orcid": "0000-0003-4147-9372",
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.25,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 8,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "1Nx2n1lk5T",
+      "title": "Graph Positional Encoding via Random Feature Propagation",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Two main families of node feature augmentation schemes have been explored for enhancing GNNs: random features and spectral positional encoding. Surprisingly, however, there is still no clear understanding of the relation between these two augmentation schemes. Here we propose a novel family of positional encoding schemes which draws a link between the above two approaches and improves over both. The new approach, named Random Feature Propagation (RFP), is inspired by the power iteration method and its generalizations. It concatenates several intermediate steps of an iterative algorithm for computing the dominant eigenvectors of a propagation matrix, starting from random node features. Notably, these propagation steps are based on graph-dependent propagation operators that can be either predefined or learned. We explore the theoretical and empirical benefits of RFP. First, we provide theoretical justifications for using random features, for incorporating early propagation steps, and for using multiple random initializations. Then, we empirically demonstrate that RFP significantly outperforms both spectral PE and random features in multiple node classification and graph classification benchmarks.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/24983",
+      "pdf_url": "https://openreview.net/pdf?id=1Nx2n1lk5T",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Gal_Chechik1",
+        "name": "Gal Chechik",
+        "name_site": null,
+        "openreview_id": "~Gal_Chechik1",
+        "position": 5,
+        "gender": null,
+        "homepage_url": "https://chechiklab.biu.ac.il/~gal/",
+        "dblp_id": "c/GalChechik",
+        "google_scholar_url": "Wk2gAZUAAAAJ",
+        "orcid": "0000-0001-9164-5303",
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "NVIDIA (United States)",
+        "countries": [
+          "United States"
+        ],
+        "country_codes": [
+          "US"
+        ]
+      },
+      "sort_score": 0.9999999999999998,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 22,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "MWzQgOtaFi",
+      "title": "Auxiliary Learning as an Asymmetric Bargaining Game",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Auxiliary learning is an effective method for enhancing the generalization capabilities of trained models, particularly when dealing with small datasets. However, this approach may present several difficulties: (i) optimizing multiple objectives can be more challenging, and (ii) how to balance the auxiliary tasks to best assist the main task is unclear. In this work, we propose a novel approach, named AuxiNash, for balancing tasks in auxiliary learning by formalizing the problem as generalized bargaining game with asymmetric task bargaining power. Furthermore, we describe an efficient procedure for learning the bargaining power of tasks based on their contribution to the performance of the main task and derive theoretical guarantees for its convergence. Finally, we evaluate AuxiNash on multiple multi-task benchmarks and find that it consistently outperforms competing methods.",
+      "tldr": "",
+      "site_url": "https://icml.cc/virtual/2023/poster/23573",
+      "pdf_url": "https://openreview.net/pdf?id=MWzQgOtaFi",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "~Gal_Chechik1",
+        "name": "Gal Chechik",
+        "name_site": null,
+        "openreview_id": "~Gal_Chechik1",
+        "position": 5,
+        "gender": null,
+        "homepage_url": "https://chechiklab.biu.ac.il/~gal/",
+        "dblp_id": "c/GalChechik",
+        "google_scholar_url": "Wk2gAZUAAAAJ",
+        "orcid": "0000-0001-9164-5303",
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "NVIDIA (Singapore)",
+        "countries": [
+          "Singapore"
+        ],
+        "country_codes": [
+          "SG"
+        ]
+      },
+      "sort_score": 0.9999999999999998,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 7,
+        "semantic_scholar_citations": 0
+      }
+    }
+  ]
+}

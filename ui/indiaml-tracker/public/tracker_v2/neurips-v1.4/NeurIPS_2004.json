@@ -1,0 +1,206 @@
+{
+  "conference": "NeurIPS 2004",
+  "focus_country": "India",
+  "total_papers": 4,
+  "generated_at": "2025-07-06T10:39:19.874224",
+  "config": {
+    "first_author_weight": 3.0,
+    "last_author_weight": 2.0,
+    "middle_author_weight": 1.0,
+    "status_weights": {
+      "oral": 10.0,
+      "spotlight": 7.5,
+      "poster": 5.0,
+      "unknown": 1.0
+    },
+    "output_format": "json",
+    "include_review_details": true,
+    "include_citation_data": true
+  },
+  "papers": [
+    {
+      "paper_id": "25cc8ab13c",
+      "title": "A Second Order Cone programming Formulation for Classifying Missing Data",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We propose a convex optimization based strategy to deal with uncertainty          in the observations of a classification problem. We assume that instead          of a sample (xi, yi) a distribution over (xi, yi) is specified. In particu-          lar, we derive a robust formulation when the distribution is given by a          normal distribution. It leads to Second Order Cone Programming formu-          lation. Our method is applied to the problem of missing data, where it          outperforms direct imputation.",
+      "tldr": null,
+      "site_url": "https://papers.nips.cc/paper_files/paper/2004/hash/028ee724157b05d04e7bdcf237d12e60-Abstract.html",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2004/file/028ee724157b05d04e7bdcf237d12e60-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "chiranjib_bhattacharyya_2",
+        "name": "Chiranjib Bhattacharyya",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 94,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "c2eeae4279",
+      "title": "Semi-Markov Conditional Random Fields for Information Extraction",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We describe semi-Markov conditional random ﬁelds (semi-CRFs), a con- ditionally trained version of semi-Markov chains. Intuitively, a semi- CRF on an input sequence x outputs a “segmentation” of x, in which labels are assigned to segments (i.e., subsequences) of x rather than to individual elements xi of x. Importantly, features for semi-CRFs can measure properties of segments, and transitions within a segment can be non-Markovian. In spite of this additional power, exact learning and inference algorithms for semi-CRFs are polynomial-time—often only a small constant factor slower than conventional CRFs. In experiments on ﬁve named entity recognition problems, semi-CRFs generally outper- form conventional CRFs.",
+      "tldr": null,
+      "site_url": "https://papers.nips.cc/paper_files/paper/2004/hash/eb06b9db06012a7a4179b8f3cb5384d3-Abstract.html",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2004/file/eb06b9db06012a7a4179b8f3cb5384d3-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sunita_sarawagi",
+        "name": "Sunita Sarawagi",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 908,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "25cc8ab13c",
+      "title": "A Second Order Cone programming Formulation for Classifying Missing Data",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We propose a convex optimization based strategy to deal with uncertainty          in the observations of a classification problem. We assume that instead          of a sample (xi, yi) a distribution over (xi, yi) is specified. In particu-          lar, we derive a robust formulation when the distribution is given by a          normal distribution. It leads to Second Order Cone Programming formu-          lation. Our method is applied to the problem of missing data, where it          outperforms direct imputation.",
+      "tldr": null,
+      "site_url": "https://papers.nips.cc/paper_files/paper/2004/hash/028ee724157b05d04e7bdcf237d12e60-Abstract.html",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2004/file/028ee724157b05d04e7bdcf237d12e60-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "alex_j__smola_19",
+        "name": "Alex J. Smola",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Australian National University (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 94,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "25cc8ab13c",
+      "title": "A Second Order Cone programming Formulation for Classifying Missing Data",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We propose a convex optimization based strategy to deal with uncertainty          in the observations of a classification problem. We assume that instead          of a sample (xi, yi) a distribution over (xi, yi) is specified. In particu-          lar, we derive a robust formulation when the distribution is given by a          normal distribution. It leads to Second Order Cone Programming formu-          lation. Our method is applied to the problem of missing data, where it          outperforms direct imputation.",
+      "tldr": null,
+      "site_url": "https://papers.nips.cc/paper_files/paper/2004/hash/028ee724157b05d04e7bdcf237d12e60-Abstract.html",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2004/file/028ee724157b05d04e7bdcf237d12e60-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "pannagadatta_k__shivaswamy",
+        "name": "Pannagadatta K. Shivaswamy",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 94,
+        "semantic_scholar_citations": 0
+      }
+    }
+  ]
+}

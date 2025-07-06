@@ -1,0 +1,722 @@
+{
+  "conference": "ICML 2019",
+  "focus_country": "India",
+  "total_papers": 15,
+  "generated_at": "2025-07-06T10:37:29.325022",
+  "config": {
+    "first_author_weight": 3.0,
+    "last_author_weight": 2.0,
+    "middle_author_weight": 1.0,
+    "status_weights": {
+      "oral": 10.0,
+      "spotlight": 7.5,
+      "poster": 5.0,
+      "unknown": 1.0
+    },
+    "output_format": "json",
+    "include_review_details": true,
+    "include_citation_data": true
+  },
+  "papers": [
+    {
+      "paper_id": "3793",
+      "title": "Large-Scale Sparse Kernel Canonical Correlation Analysis",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "This paper presents gradKCCA, a large-scale sparse non-linear canonical correlation method. Like Kernel Canonical Correlation Analysis (KCCA), our method finds non-linear relations through kernel functions, but it does not rely on a kernel matrix, a known bottleneck for scaling up kernel methods. gradKCCA corresponds to solving KCCA with the additional constraint that the canonical projection directions in the kernel-induced feature space have preimages in the original data space. Firstly, this modification allows us to very efficiently maximize kernel canonical correlation through an alternating projected gradient algorithm working in the original data space. Secondly, we can control the sparsity of the projection directions by constraining the $\\ell_1$ norm of the preimages of the projection directions, facilitating the interpretation of the discovered patterns, which is not available through KCCA. Our empirical experiments demonstrate that gradKCCA outperforms state-of-the-art CCA methods in terms of speed and robustness to noise both in simulated and real-world datasets.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2019/poster/3793",
+      "pdf_url": "http://proceedings.mlr.press/v97/uurtio19a/uurtio19a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "viivi_uurtio",
+        "name": "Viivi Uurtio",
+        "name_site": "Viivi Uurtio, Sahely Bhadra, Juho Rousu",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Aalto University (Unknown),Helsinki Institute for Information Technology (India)",
+        "countries": [
+          "Unknown",
+          "India"
+        ],
+        "country_codes": [
+          "UN",
+          "IN"
+        ]
+      },
+      "sort_score": 30.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 50,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "3836",
+      "title": "Zero-Shot Knowledge Distillation in Deep Networks",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "Knowledge distillation deals with the problem of training a smaller model (",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2019/poster/3836",
+      "pdf_url": "http://proceedings.mlr.press/v97/nayak19a/nayak19a.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "gaurav_kumar_nayak",
+        "name": "Gaurav Kumar Nayak",
+        "name_site": "Gaurav Kumar Nayak, Konda Reddy Mopuri, Vaisakh Shaj, Venkatesh Babu Radhakrishnan, Anirban Chakraborty",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (Unknown),University of Edinburgh (India),University of Lincoln (United Kingdom)",
+        "countries": [
+          "Unknown",
+          "India",
+          "United Kingdom"
+        ],
+        "country_codes": [
+          "GB",
+          "UN",
+          "IN"
+        ]
+      },
+      "sort_score": 30.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 306,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "3870",
+      "title": "Correlated bandits or: How to minimize mean-squared error online",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "While the objective in traditional multi-armed bandit problems is to find the arm with the highest mean, in many settings, finding an arm that best captures information about other arms is of interest. This objective, however, requires learning the underlying correlation structure and not just the means. Sensors placement for industrial surveillance and cellular network monitoring are a few applications, where the underlying correlation structure plays an important role. Motivated by such applications, we formulate the correlated bandit problem, where the objective is to find the arm with the lowest mean-squared error (MSE) in estimating all the arms. To this end, we derive first an MSE estimator based on sample variances/covariances and show that our estimator exponentially concentrates around the true MSE. Under a best-arm identification framework, we propose a successive rejects type algorithm and provide bounds on the probability of error in identifying the best arm. Using minimax theory, we also derive fundamental performance limits for the correlated bandit problem.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2019/poster/3870",
+      "pdf_url": "http://proceedings.mlr.press/v97/boda19a/boda19a.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "vinay_praneeth_boda",
+        "name": "Vinay Praneeth Boda",
+        "name_site": "Vinay Praneeth Boda, Prashanth L.A.",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "LinkedIn Corporation (Unknown),University of Maryland (India)",
+        "countries": [
+          "Unknown",
+          "India"
+        ],
+        "country_codes": [
+          "UN",
+          "IN"
+        ]
+      },
+      "sort_score": 30.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 5,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "3895",
+      "title": "PAC Identification of Many Good Arms in Stochastic Multi-Armed Bandits",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "We consider the problem of identifying any k out of the best m arms in an n-armed stochastic multi-armed bandit; framed in the PAC setting, this particular problem generalises both the problem of “best subset selection” (Kalyanakrishnan & Stone, 2010) and that of selecting “one out of the best m” arms (Roy Chaudhuri & Kalyanakrishnan, 2017). We present a lower bound on the worst-case sample complexity for general k, and a fully sequential PAC algorithm, LUCB-k-m, which is more sample-efficient on easy instances. Also, extending our analysis to infinite-armed bandits, we present a PAC algorithm that is independent of n, which identifies an arm from the best $\\rho$ fraction of arms using at most an additive poly-log number of samples than compared to the lower bound, thereby improving over Roy Chaudhuri & Kalyanakrishnan (2017) and Aziz et al. (2018). The problem of identifying k > 1 distinct arms from the best $\\rho$ fraction is not always well-defined; for a special class of this problem, we present lower and upper bounds. Finally, through a reduction, we establish a relation between upper bounds for the “one out of the best $\\rho$” problem for infinite instances and the “one out of the best m” problem for finite instances. We conjecture that it is more efficient to solve “small” finite instances using the latter formulation, rather than going through the former.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2019/poster/3895",
+      "pdf_url": "http://proceedings.mlr.press/v97/chaudhuri19a/chaudhuri19a.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "arghya_roy_chaudhuri",
+        "name": "Arghya Roy Chaudhuri",
+        "name_site": "Arghya Roy Chaudhuri, Shivaram Kalyanakrishnan",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 30.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 30,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "3569",
+      "title": "Communication-Constrained Inference and the Role of Shared Randomness",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "A central server needs to perform statistical inference based on samples that are distributed over multiple users who can each send a message of limited length to the center. We study problems of distribution learning and identity testing in this distributed inference setting and examine the role of shared randomness as a resource. We propose a general purpose",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2019/poster/3569",
+      "pdf_url": "http://proceedings.mlr.press/v97/acharya19a/acharya19a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "himanshu_tyagi",
+        "name": "Himanshu Tyagi",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 20.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 7,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "3793",
+      "title": "Large-Scale Sparse Kernel Canonical Correlation Analysis",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "This paper presents gradKCCA, a large-scale sparse non-linear canonical correlation method. Like Kernel Canonical Correlation Analysis (KCCA), our method finds non-linear relations through kernel functions, but it does not rely on a kernel matrix, a known bottleneck for scaling up kernel methods. gradKCCA corresponds to solving KCCA with the additional constraint that the canonical projection directions in the kernel-induced feature space have preimages in the original data space. Firstly, this modification allows us to very efficiently maximize kernel canonical correlation through an alternating projected gradient algorithm working in the original data space. Secondly, we can control the sparsity of the projection directions by constraining the $\\ell_1$ norm of the preimages of the projection directions, facilitating the interpretation of the discovered patterns, which is not available through KCCA. Our empirical experiments demonstrate that gradKCCA outperforms state-of-the-art CCA methods in terms of speed and robustness to noise both in simulated and real-world datasets.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2019/poster/3793",
+      "pdf_url": "http://proceedings.mlr.press/v97/uurtio19a/uurtio19a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "juho_rousu_1",
+        "name": "Juho Rousu",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Aalto University (Unknown),Helsinki Institute for Information Technology (India)",
+        "countries": [
+          "Unknown",
+          "India"
+        ],
+        "country_codes": [
+          "UN",
+          "IN"
+        ]
+      },
+      "sort_score": 20.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 50,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "3814",
+      "title": "SGD without Replacement: Sharper Rates for General Smooth Convex Functions",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "We study stochastic gradient descent",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2019/poster/3814",
+      "pdf_url": "http://proceedings.mlr.press/v97/nagaraj19a/nagaraj19a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "praneeth_netrapalli_4",
+        "name": "Praneeth Netrapalli",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 20.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 91,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "3895",
+      "title": "PAC Identification of Many Good Arms in Stochastic Multi-Armed Bandits",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "We consider the problem of identifying any k out of the best m arms in an n-armed stochastic multi-armed bandit; framed in the PAC setting, this particular problem generalises both the problem of “best subset selection” (Kalyanakrishnan & Stone, 2010) and that of selecting “one out of the best m” arms (Roy Chaudhuri & Kalyanakrishnan, 2017). We present a lower bound on the worst-case sample complexity for general k, and a fully sequential PAC algorithm, LUCB-k-m, which is more sample-efficient on easy instances. Also, extending our analysis to infinite-armed bandits, we present a PAC algorithm that is independent of n, which identifies an arm from the best $\\rho$ fraction of arms using at most an additive poly-log number of samples than compared to the lower bound, thereby improving over Roy Chaudhuri & Kalyanakrishnan (2017) and Aziz et al. (2018). The problem of identifying k > 1 distinct arms from the best $\\rho$ fraction is not always well-defined; for a special class of this problem, we present lower and upper bounds. Finally, through a reduction, we establish a relation between upper bounds for the “one out of the best $\\rho$” problem for infinite instances and the “one out of the best m” problem for finite instances. We conjecture that it is more efficient to solve “small” finite instances using the latter formulation, rather than going through the former.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2019/poster/3895",
+      "pdf_url": "http://proceedings.mlr.press/v97/chaudhuri19a/chaudhuri19a.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "shivaram_kalyanakrishnan_1",
+        "name": "Shivaram Kalyanakrishnan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 20.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 30,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "3989",
+      "title": "Riemannian adaptive stochastic gradient algorithms on matrix manifolds",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "Adaptive stochastic gradient algorithms in the Euclidean space have attracted much attention lately. Such explorations on Riemannian manifolds, on the other hand, are relatively new, limited, and challenging. This is because of the intrinsic non-linear structure of the underlying manifold and the absence of a canonical coordinate system. In machine learning applications, however, most manifolds of interest are represented as matrices with notions of row and column subspaces. In addition, the implicit manifold-related constraints may also lie on such subspaces. For example, the Grassmann manifold is the set of column subspaces. To this end, such a rich structure should not be lost by transforming matrices to just a stack of vectors while developing optimization algorithms on manifolds. We propose novel stochastic gradient algorithms for problems on Riemannian matrix manifolds by adapting the row and column subspaces of gradients. Our algorithms are provably convergent and they achieve the convergence rate of order $O(log(T)/sqrt(T))$, where $T$ is the number of iterations. Our experiments illustrate that the proposed algorithms outperform existing Riemannian adaptive stochastic algorithms.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2019/poster/3989",
+      "pdf_url": "http://proceedings.mlr.press/v97/kasai19a/kasai19a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "bamdev_mishra_3",
+        "name": "Bamdev Mishra",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 20.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 70,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4003",
+      "title": "Neural Network Attributions: A Causal Perspective",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "We propose a new attribution method for neural networks developed using ﬁrst principles of causality (to the best of our knowledge, the ﬁrst such). The neural network architecture is viewed as a Structural Causal Model, and a methodology to compute the causal effect of each feature on the output is presented. With reasonable assumptions on the causal structure of the input data, we propose algorithms to efﬁciently compute the causal effects, as well as scale the approach to data with large dimensionality. We also show how this method can be used for recurrent neural networks. We report experimental results on both simulated and real datasets showcasing the promise and usefulness of the proposed algorithm.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2019/poster/4003",
+      "pdf_url": "http://proceedings.mlr.press/v97/chattopadhyay19a/chattopadhyay19a.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "vineeth_n_balasubramanian",
+        "name": "Vineeth N Balasubramanian",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Hyderabad (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 20.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 181,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4003",
+      "title": "Neural Network Attributions: A Causal Perspective",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "We propose a new attribution method for neural networks developed using ﬁrst principles of causality (to the best of our knowledge, the ﬁrst such). The neural network architecture is viewed as a Structural Causal Model, and a methodology to compute the causal effect of each feature on the output is presented. With reasonable assumptions on the causal structure of the input data, we propose algorithms to efﬁciently compute the causal effects, as well as scale the approach to data with large dimensionality. We also show how this method can be used for recurrent neural networks. We report experimental results on both simulated and real datasets showcasing the promise and usefulness of the proposed algorithm.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2019/poster/4003",
+      "pdf_url": "http://proceedings.mlr.press/v97/chattopadhyay19a/chattopadhyay19a.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "piyushi_manupriya",
+        "name": "Piyushi Manupriya",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Hyderabad (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 6.666666666666668,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 181,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "3814",
+      "title": "SGD without Replacement: Sharper Rates for General Smooth Convex Functions",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "We study stochastic gradient descent",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2019/poster/3814",
+      "pdf_url": "http://proceedings.mlr.press/v97/nagaraj19a/nagaraj19a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prateek_jain_13",
+        "name": "Prateek Jain",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 5.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 91,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "3989",
+      "title": "Riemannian adaptive stochastic gradient algorithms on matrix manifolds",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "Adaptive stochastic gradient algorithms in the Euclidean space have attracted much attention lately. Such explorations on Riemannian manifolds, on the other hand, are relatively new, limited, and challenging. This is because of the intrinsic non-linear structure of the underlying manifold and the absence of a canonical coordinate system. In machine learning applications, however, most manifolds of interest are represented as matrices with notions of row and column subspaces. In addition, the implicit manifold-related constraints may also lie on such subspaces. For example, the Grassmann manifold is the set of column subspaces. To this end, such a rich structure should not be lost by transforming matrices to just a stack of vectors while developing optimization algorithms on manifolds. We propose novel stochastic gradient algorithms for problems on Riemannian matrix manifolds by adapting the row and column subspaces of gradients. Our algorithms are provably convergent and they achieve the convergence rate of order $O(log(T)/sqrt(T))$, where $T$ is the number of iterations. Our experiments illustrate that the proposed algorithms outperform existing Riemannian adaptive stochastic algorithms.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2019/poster/3989",
+      "pdf_url": "http://proceedings.mlr.press/v97/kasai19a/kasai19a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "pratik_jawanpuria_2",
+        "name": "Pratik Jawanpuria",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 5.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 70,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4311",
+      "title": "Toward Controlling Discrimination in Online Ad Auctions",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "Online advertising platforms are thriving due to the customizable audiences they offer advertisers. However, recent studies show that advertisements can be discriminatory with respect to the gender or race of the audience that sees the ad, and may inadvertently cross ethical and/or legal boundaries. To prevent this, we propose a constrained ad auction framework that maximizes the platform’s revenue conditioned on ensuring that the audience seeing an advertiser’s ad is distributed appropriately across sensitive types such as gender or race. Building upon Myerson’s classic work, we first present an optimal auction mechanism for a large class of fairness constraints. Finding the parameters of this optimal auction, however, turns out to be a non-convex problem. We show that this non-convex problem can be reformulated as a more structured non-convex problem with no saddle points or local-maxima; this allows us to develop a gradient-descent-based algorithm to solve it. Our empirical results on the A1 Yahoo! dataset demonstrate that our algorithm can obtain uniform coverage across different user types for each advertiser at a minor loss to the revenue of the platform, and a small change to the size of the audience each advertiser reaches.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2019/poster/4311",
+      "pdf_url": "http://proceedings.mlr.press/v97/mehrotra19a/mehrotra19a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "anay_mehrotra",
+        "name": "Anay Mehrotra",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Kanpur (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 5.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 61,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4003",
+      "title": "Neural Network Attributions: A Causal Perspective",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "We propose a new attribution method for neural networks developed using ﬁrst principles of causality (to the best of our knowledge, the ﬁrst such). The neural network architecture is viewed as a Structural Causal Model, and a methodology to compute the causal effect of each feature on the output is presented. With reasonable assumptions on the causal structure of the input data, we propose algorithms to efﬁciently compute the causal effects, as well as scale the approach to data with large dimensionality. We also show how this method can be used for recurrent neural networks. We report experimental results on both simulated and real datasets showcasing the promise and usefulness of the proposed algorithm.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2019/poster/4003",
+      "pdf_url": "http://proceedings.mlr.press/v97/chattopadhyay19a/chattopadhyay19a.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "anirban_sarkar",
+        "name": "Anirban Sarkar",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Hyderabad (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.333333333333334,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 181,
+        "semantic_scholar_citations": 0
+      }
+    }
+  ]
+}

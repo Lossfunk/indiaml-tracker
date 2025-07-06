@@ -1,0 +1,2694 @@
+{
+  "conference": "NeurIPS 2020",
+  "focus_country": "India",
+  "total_papers": 58,
+  "generated_at": "2025-07-06T10:39:19.865592",
+  "config": {
+    "first_author_weight": 3.0,
+    "last_author_weight": 2.0,
+    "middle_author_weight": 1.0,
+    "status_weights": {
+      "oral": 10.0,
+      "spotlight": 7.5,
+      "poster": 5.0,
+      "unknown": 1.0
+    },
+    "output_format": "json",
+    "include_review_details": true,
+    "include_citation_data": true
+  },
+  "papers": [
+    {
+      "paper_id": "18465",
+      "title": "Learning with Operator-valued Kernels in Reproducing Kernel Krein Spaces",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "Operator-valued kernels have shown promise in supervised learning problems with functional inputs and functional outputs. The crucial (and possibly restrictive) assumption of positive definiteness of operator-valued kernels has been instrumental in developing efficient algorithms. In this work, we consider operator-valued kernels which might not be necessarily positive definite. To tackle the indefiniteness of operator-valued kernels, we harness the machinery of Reproducing Kernel Krein Spaces (RKKS) of function-valued functions. A representer theorem is illustrated which yields a suitable loss stabilization problem for supervised learning with function-valued inputs and outputs. Analysis of generalization properties of the proposed framework is given. An iterative Operator based Minimum Residual (OpMINRES) algorithm is proposed for solving the loss stabilization problem. Experiments with indefinite operator-valued kernels on synthetic and real data sets demonstrate the utility of the proposed approach.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18465",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/9f319422ca17b1082ea49820353f14ab-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "akash_saha",
+        "name": "Akash Saha",
+        "name_site": "Akash Saha, Balamurugan Palaniappan",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 30.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 11,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "16876",
+      "title": "RNNPool: Efficient Non-linear Pooling for RAM Constrained Inference",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Standard Convolutional Neural Networks (CNNs) designed for computer vision tasks tend to have large intermediate activation maps. These require large working memory and are thus unsuitable for deployment on resource-constrained devices typically used for inference on the edge. Aggressively downsampling the images via pooling or strided convolutions can address the problem but leads to a significant decrease in accuracy due to gross aggregation of the feature map by standard pooling operators. In this paper, we introduce RNNPool, a novel pooling operator based on Recurrent Neural Networks (RNNs), that efficiently aggregates features over large patches of an image and rapidly downsamples activation maps.  Empirical evaluation indicates that an RNNPool layer can effectively replace multiple blocks in a variety of architectures such as MobileNets, DenseNet when applied to standard vision tasks like image classification and face detection. That is, RNNPool can significantly decrease computational complexity and peak memory usage for inference while retaining comparable accuracy. We use RNNPool with the standard S3FD architecture to construct a face detection method that achieves state-of-the-art MAP for tiny ARM Cortex-M4 class microcontrollers with under 256 KB of RAM. Code is released at https://github.com/Microsoft/EdgeML.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/16876",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/ebd9629fc3ae5e9f6611e2ee05a31cef-Paper.pdf",
+      "github_url": "https://github.com/Microsoft/EdgeML",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "oindrila_saha",
+        "name": "Oindrila Saha",
+        "name_site": "Oindrila Saha, Aditya Kusupati, Harsha Vardhan Simhadri, Manik Varma, Prateek Jain",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 22.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 63,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18876",
+      "title": "Guided Adversarial Attack for Evaluating and Enhancing Adversarial Defenses",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Advances in the development of adversarial attacks have been fundamental to the progress of adversarial defense research. Efficient and effective attacks are crucial for reliable evaluation of defenses, and also for developing robust models. Adversarial attacks are often generated by maximizing standard losses such as the cross-entropy loss or maximum-margin loss within a constraint set using Projected Gradient Descent (PGD). In this work, we introduce a relaxation term to the standard loss, that finds more suitable gradient-directions, increases attack efficacy and leads to more efficient adversarial training. We propose Guided Adversarial Margin Attack (GAMA), which utilizes function mapping of the clean image to guide the generation of adversaries, thereby resulting in stronger attacks. We evaluate our attack against multiple defenses and show improved performance when compared to existing attacks. Further, we propose Guided Adversarial Training (GAT), which achieves state-of-the-art performance amongst single-step defenses by utilizing the proposed relaxation term for both attack generation and training.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18876",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/ea3ed20b6b101a09085ef09c97da1597-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "gaurang_sriramanan",
+        "name": "Gaurang Sriramanan",
+        "name_site": "Gaurang Sriramanan, Sravanti Addepalli, Arya Baburaj, Venkatesh Babu R",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 22.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 123,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18465",
+      "title": "Learning with Operator-valued Kernels in Reproducing Kernel Krein Spaces",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "Operator-valued kernels have shown promise in supervised learning problems with functional inputs and functional outputs. The crucial (and possibly restrictive) assumption of positive definiteness of operator-valued kernels has been instrumental in developing efficient algorithms. In this work, we consider operator-valued kernels which might not be necessarily positive definite. To tackle the indefiniteness of operator-valued kernels, we harness the machinery of Reproducing Kernel Krein Spaces (RKKS) of function-valued functions. A representer theorem is illustrated which yields a suitable loss stabilization problem for supervised learning with function-valued inputs and outputs. Analysis of generalization properties of the proposed framework is given. An iterative Operator based Minimum Residual (OpMINRES) algorithm is proposed for solving the loss stabilization problem. Experiments with indefinite operator-valued kernels on synthetic and real data sets demonstrate the utility of the proposed approach.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18465",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/9f319422ca17b1082ea49820353f14ab-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "balamurugan_palaniappan_1",
+        "name": "Balamurugan Palaniappan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 20.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 11,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "16876",
+      "title": "RNNPool: Efficient Non-linear Pooling for RAM Constrained Inference",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Standard Convolutional Neural Networks (CNNs) designed for computer vision tasks tend to have large intermediate activation maps. These require large working memory and are thus unsuitable for deployment on resource-constrained devices typically used for inference on the edge. Aggressively downsampling the images via pooling or strided convolutions can address the problem but leads to a significant decrease in accuracy due to gross aggregation of the feature map by standard pooling operators. In this paper, we introduce RNNPool, a novel pooling operator based on Recurrent Neural Networks (RNNs), that efficiently aggregates features over large patches of an image and rapidly downsamples activation maps.  Empirical evaluation indicates that an RNNPool layer can effectively replace multiple blocks in a variety of architectures such as MobileNets, DenseNet when applied to standard vision tasks like image classification and face detection. That is, RNNPool can significantly decrease computational complexity and peak memory usage for inference while retaining comparable accuracy. We use RNNPool with the standard S3FD architecture to construct a face detection method that achieves state-of-the-art MAP for tiny ARM Cortex-M4 class microcontrollers with under 256 KB of RAM. Code is released at https://github.com/Microsoft/EdgeML.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/16876",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/ebd9629fc3ae5e9f6611e2ee05a31cef-Paper.pdf",
+      "github_url": "https://github.com/Microsoft/EdgeML",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prateek_jain_34",
+        "name": "Prateek Jain",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 5,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 63,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "16908",
+      "title": "Neural Message Passing for Multi-Relational Ordered and Recursive Hypergraphs",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Message passing neural network (MPNN) has recently emerged as a successful framework by achieving state-of-the-art performances on many graph-based learning tasks.\nMPNN has also recently been extended to multi-relational graphs (each edge is labelled), and hypergraphs (each edge can connect any number of vertices).\nHowever, in real-world datasets involving text and knowledge, relationships are much more complex in which hyperedges can be multi-relational, recursive, and ordered.\nSuch structures present several unique challenges because it is not clear how to adapt MPNN to variable-sized hyperedges in them.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/16908",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/217eedd1ba8c592db97d0dbe54c7adfc-Paper.pdf",
+      "github_url": "https://github.com/naganandy/G-MPNN-R",
+      "total_authors": 1,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "naganand_yadati_1",
+        "name": "Naganand Yadati",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 55,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "16935",
+      "title": "Projection Efficient Subgradient Method and Optimal Nonsmooth Frank-Wolfe Method",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "We consider the classical setting of optimizing a nonsmooth Lipschitz continuous convex function over a convex constraint set, when having access to a (stochastic) first-order oracle (FO) for the function and a projection oracle (PO) for the constraint set. It is well known that to achieve $\\epsilon$-suboptimality in high-dimensions, $\\Theta(\\epsilon^{-2})$ FO calls are necessary. This is achieved by the projected subgradient method (PGD). However, PGD also entails $O(\\epsilon^{-2})$ PO calls, which may be computationally costlier than FO calls (e.g. nuclear norm constraints). Improving this PO calls complexity of PGD is largely unexplored, despite the fundamental nature of this problem and extensive literature. We present first such improvement. This only requires a mild assumption that the objective function, when extended to a slightly larger neighborhood of the constraint set, still remains Lipschitz and accessible via FO. In particular, we introduce MOPES method, which carefully combines Moreau-Yosida smoothing and accelerated first-order schemes. This is guaranteed to find a feasible $\\epsilon$-suboptimal solution using only $O(\\epsilon^{-1})$ PO calls and optimal $O(\\epsilon^{-2})$ FO calls. Further, instead of a PO if we only have a linear minimization oracle (LMO, a la Frank-Wolfe) to access the constraint set, an extension of our method, MOLES, finds a feasible $\\epsilon$-suboptimal solution using $O(\\epsilon^{-2})$ LMO calls and FO calls---both match known lower bounds, resolving a question left open since White (1993). Our experiments confirm that these methods achieve significant speedups over the state-of-the-art, for a problem with costly PO and LMO calls.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/16935",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/8f468c873a32bb0619eaeb2050ba45d1-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sewoong_oh_22",
+        "name": "Sewoong Oh",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "University of Washington (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 29,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "17072",
+      "title": "Calibrating CNNs for Lifelong Learning",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We present an approach for lifelong/continual learning of convolutional neural networks (CNN) that does not suffer from the problem of catastrophic forgetting when moving from one task to the other. We show that the activation maps generated by the CNN trained on the old task can be calibrated using very few calibration parameters, to become relevant to the new task. Based on this, we calibrate the activation maps produced by each network layer using spatial and channel-wise calibration modules and train only these calibration parameters for each new task in order to perform lifelong learning. Our calibration modules introduce significantly less computation and parameters as compared to the approaches that dynamically expand the network. Our approach is immune to catastrophic forgetting since we store the task-adaptive calibration parameters, which contain all the task-specific knowledge and is exclusive to each task. Further, our approach does not require storing data samples from the old tasks, which is done by many replay based methods. We perform extensive experiments on multiple benchmark datasets (SVHN, CIFAR, ImageNet, and MS-Celeb), all of which show substantial improvements over state-of-the-art methods (e.g., a 29% absolute increase in accuracy on CIFAR-100 with 10 classes at a time). On large-scale datasets, our approach yields 23.8% and 9.7% absolute increase in accuracy on ImageNet-100 and MS-Celeb-10K datasets, respectively, by employing very few (0.51% and 0.35% of model parameters) task-adaptive calibration parameters.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/17072",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/b3b43aeeacb258365cc69cdaf42a68af-Paper.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "pravendra_singh",
+        "name": "Pravendra Singh",
+        "name_site": "Pravendra Singh, Vinay Kumar Verma, Pratik Mazumder, Lawrence Carin, Piyush Rai",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Kanpur (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 97,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "17620",
+      "title": "Meta-Consolidation for Continual Learning",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The ability to continuously learn and adapt itself to new tasks, without losing grasp of already acquired knowledge is a hallmark of biological learning systems, which current deep learning systems fall short of. In this work, we present a novel methodology for continual learning called MERLIN: Meta-Consolidation for Continual Learning.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/17620",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/a5585a4d4b12277fee5cad0880611bc6-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "joseph_k_j",
+        "name": "Joseph K J",
+        "name_site": "Joseph K J, Vineeth N Balasubramanian",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Hyderabad (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 60,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "17770",
+      "title": "Learning of Discrete Graphical Models with Neural Networks",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Graphical models are widely used in science to represent joint probability distributions with an underlying conditional dependence structure. The inverse problem of learning a discrete graphical model given i.i.d samples from its joint distribution can be solved with near-optimal sample complexity using a convex optimization method known as Generalized Regularized Interaction Screening Estimator (GRISE). But the computational cost of GRISE becomes prohibitive when the energy function of the true graphical model has higher order terms. We introduce NeurISE, a neural net based algorithm for graphical model learning, to tackle this limitation of GRISE. We use neural nets as function approximators in an Interaction Screening objective function. The optimization of this objective then produces a neural-net representation for the conditionals of the graphical model.  NeurISE algorithm is seen to be a better alternative to GRISE when the energy function of the true model has a high order with a high degree of symmetry. In these cases NeurISE is able to find the correct parsimonious representation for the conditionals without being fed any prior information about the true model. NeurISE can also be used to learn the underlying structure of the true model with some simple modifications to its training procedure. In addition, we also show a variant of  NeurISE that can be used to learn a neural net representation for the full energy function of the true model.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/17770",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/3cc697419ea18cc98d525999665cb94a-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "abhijith_jayakumar",
+        "name": "Abhijith Jayakumar",
+        "name_site": "Abhijith Jayakumar, Andrey Lokhov, Sidhant Misra, Marc Vuffray",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 8,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "17875",
+      "title": "Self-Supervised Few-Shot Learning on Point Clouds",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The increased availability of massive point clouds coupled with their utility in a wide variety of applications such as robotics, shape synthesis, and self-driving cars has attracted increased attention from both industry and academia. Recently, deep neural networks operating on labeled point clouds have shown promising results on supervised learning tasks like classification and segmentation. However, supervised learning leads to the cumbersome task of annotating the point clouds. To combat this problem, we propose two novel self-supervised pre-training tasks that encode a hierarchical partitioning of the point clouds using a cover-tree, where point cloud subsets lie within balls of varying radii at each level of the cover-tree. Furthermore, our self-supervised learning network is restricted to pre-train on the support set (comprising of scarce training examples) used to train the downstream network in a few-shot learning (FSL) setting. Finally, the fully-trained self-supervised network's point embeddings are input to the downstream task's network. We present a comprehensive empirical evaluation of our method on both downstream classification and segmentation tasks and show that supervised methods pre-trained with our self-supervised learning method significantly improve the accuracy of state-of-the-art methods. Additionally, our method also outperforms previous unsupervised methods in downstream classification tasks.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/17875",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/50c1f44e426560f3f2cdcb3e19e39903-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "charu_sharma",
+        "name": "Charu Sharma",
+        "name_site": "Charu Sharma, Manohar Kaul",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Hyderabad (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 119,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18165",
+      "title": "MultiON: Benchmarking Semantic Map Memory using Multi-Object Navigation",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Navigation tasks in photorealistic 3D environments are challenging because they require perception and effective planning under partial observability. Recent work shows that map-like memory is useful for long-horizon navigation tasks. However, a focused investigation of the impact of maps on navigation tasks of varying complexity has not yet been performed.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18165",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/6e01383fd96a17ae51cc3e15447e7533-Paper.pdf",
+      "github_url": "https://github.com/shivanshpatel35/multi-ON",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "saim_wani",
+        "name": "Saim Wani",
+        "name_site": "Saim Wani, Shivansh Patel, Unnat Jain, Angel Chang, Manolis Savva",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Kanpur (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 120,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18356",
+      "title": "Statistical Optimal Transport posed as Learning Kernel Embedding",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The objective in statistical Optimal Transport (OT) is to consistently estimate the optimal transport plan/map solely using samples from the given source and target marginal distributions. This work takes the novel approach of posing statistical OT as that of learning the transport plan's kernel mean embedding from sample based estimates of marginal embeddings. The proposed estimator controls overfitting by employing maximum mean discrepancy based regularization, which is complementary to $\\phi$-divergence (entropy) based regularization popularly employed in existing estimators. A key result is that, under very mild conditions, $\\epsilon$-optimal recovery of the transport plan as well as the Barycentric-projection based transport map is possible with a sample complexity that is completely dimension-free. Moreover, the implicit smoothing in the kernel mean embeddings enables out-of-sample estimation. An appropriate representer theorem is proved leading to a kernelized convex formulation for the estimator, which can then be potentially used to perform OT even in non-standard domains. Empirical results illustrate the efficacy of the proposed approach.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18356",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/c8ecfaea0b7e3aa83b017a786d53b9e8-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "saketha_nath_jagarlapudi",
+        "name": "Saketha Nath Jagarlapudi",
+        "name_site": "Saketha Nath Jagarlapudi, Pratik Kumar Jawanpuria",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Hyderabad (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 21,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18371",
+      "title": "GCOMB: Learning Budget-constrained Combinatorial Algorithms over Billion-sized Graphs",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "There has been an increased interest in discovering heuristics for combinatorial problems on graphs through machine learning. While existing techniques have primarily focused on obtaining high-quality solutions, scalability to billion-sized graphs has not been adequately addressed. In addition, the impact of a budget-constraint, which is necessary for many practical scenarios, remains to be studied. In this paper, we propose a framework called GCOMB to bridge these gaps. GCOMB trains a Graph Convolutional Network (GCN) using a novel probabilistic greedy mechanism to predict the quality of a node. To further facilitate the combinatorial nature of the problem, GCOMB utilizes a Q-learning framework, which is made efficient through importance sampling. We perform extensive experiments on real graphs to benchmark the efficiency and efficacy of GCOMB. Our results establish that GCOMB is 100 times faster and marginally better in quality than state-of-the-art algorithms for learning combinatorial algorithms. Additionally, a case-study on the practical combinatorial problem of Influence Maximization (IM) shows GCOMB is 150 times faster than the specialized IM algorithm IMM with similar quality.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18371",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/e7532dbeff7ef901f2e70daacb3f452d-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sahil_manchanda",
+        "name": "Sahil Manchanda",
+        "name_site": "Sahil Manchanda, AKASH MITTAL, Anuj Dhawan, Sourav Medya, Sayan Ranu, Ambuj K Singh",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 95,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18453",
+      "title": "Inductive Quantum Embedding",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Quantum logic inspired embedding (aka Quantum Embedding (QE)) of a Knowledge-Base (KB) was proposed recently by Garg:2019. It is claimed that the QE preserves the logical structure of the input KB given in the form of unary and binary predicates hierarchy. Such structure preservation allows one to perform Boolean logic style deductive reasoning directly over these embedding vectors. The original QE idea, however, is limited to the transductive (not inductive) setting. Moreover, the original QE scheme runs quite slow on real applications involving millions of entities. This paper alleviates both of these key limitations. We start by reformulating the original QE problem to allow for the induction. On the way, we also underscore some interesting analytic and geometric properties of the solution and leverage them to design a faster training scheme. As an application, we show that one can achieve state-of-the-art performance on the well-known NLP task of fine-grained entity type classification by using the inductive QE approach. Our training runs 9-times faster than the original QE scheme on this task.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18453",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/b87039703fe79778e9f140b78621d7fb-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "santosh_kumar_srivastava",
+        "name": "Santosh Kumar Srivastava",
+        "name_site": "Santosh Kumar Srivastava, Dinesh Khandelwal, Dhiraj Madan, Dinesh Garg, Hima Karanam, L Venkata Subramaniam",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "IBM (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 7,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18562",
+      "title": "Neural Path Features and Neural Path Kernel : Understanding the role of gates in deep learning",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Rectified linear unit (ReLU) activations can also be thought of as 'gates', which, either pass or stop their pre-activation input when they are 'on' (when the pre-activation input is positive) or 'off' (when the pre-activation input is negative) respectively. A deep neural network (DNN) with ReLU activations has many gates, and the on/off status of each gate changes across input examples as well as network weights. For a given input example, only a subset of gates are 'active', i.e., on, and the sub-network of weights connected to these active gates is responsible for producing the output. At randomised initialisation, the active sub-network corresponding to a given input example is random. During training, as the weights are learnt, the active sub-networks are also learnt, and could hold valuable information.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18562",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/37f76c6fe3ab45e0cd7ecb176b5a046d-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "chandrashekar_lakshminarayanan",
+        "name": "Chandrashekar Lakshminarayanan",
+        "name_site": "Chandrashekar Lakshminarayanan, Amit Vikram Singh",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Palakkad (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 13,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18593",
+      "title": "Teaching a GAN What Not to Learn",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Generative adversarial networks (GANs) were originally envisioned as unsupervised generative models that learn to follow a target distribution. Variants such as conditional GANs, auxiliary-classifier GANs (ACGANs) project GANs on to supervised and semi-supervised learning frameworks by providing labelled data and using multi-class discriminators. In this paper, we approach the supervised GAN problem from a different perspective, one that is motivated by the philosophy of the famous Persian poet Rumi who said, \"The art of knowing is knowing what to ignore.\" In the GAN framework, we not only provide the GAN positive data that it must learn to model, but also present it with so-called negative samples that it must learn to avoid — we call this \"The Rumi Framework.\" This formulation allows the discriminator to represent the underlying target distribution better by learning to penalize generated samples that are undesirable — we show that this capability accelerates the learning process of the generator. We present a reformulation of the standard GAN (SGAN) and least-squares GAN (LSGAN) within the Rumi setting. The advantage of the reformulation is demonstrated by means of experiments conducted on MNIST, Fashion MNIST, CelebA, and CIFAR-10 datasets. Finally, we consider an application of the proposed formulation to address the important problem of learning an under-represented class in an unbalanced dataset. The Rumi approach results in substantially lower FID scores than the standard GAN frameworks while possessing better generalization capability.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18593",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/29405e2a4c22866a205f557559c7fa4b-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "siddarth_asokan",
+        "name": "Siddarth Asokan",
+        "name_site": "Siddarth Asokan, Chandra Seelamantula",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 23,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18742",
+      "title": "Your Classifier can Secretly Suffice Multi-Source Domain Adaptation",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Multi-Source Domain Adaptation (MSDA) deals with the transfer of task knowledge from multiple labeled source domains to an unlabeled target domain, under a domain-shift. Existing methods aim to minimize this domain-shift using auxiliary distribution alignment objectives. In this work, we present a different perspective to MSDA wherein deep models are observed to implicitly align the domains under label supervision. Thus, we aim to utilize implicit alignment without additional training objectives to perform adaptation. To this end, we use pseudo-labeled target samples and enforce a classifier agreement on the pseudo-labels, a process called Self-supervised Implicit Alignment (SImpAl). We find that SImpAl readily works even under category-shift among the source domains. Further, we propose classifier agreement as a cue to determine the training convergence, resulting in a simple training algorithm. We provide a thorough evaluation of our approach on five benchmarks, along with detailed insights into each component of our approach.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18742",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/3181d59d19e76e902666df5c7821259a-Paper.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "naveen_venkat",
+        "name": "Naveen Venkat",
+        "name_site": "Naveen Venkat, Jogendra Nath Kundu, Durgesh Singh, Ambareesh Revanur, Venkatesh Babu R",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 97,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18814",
+      "title": "EcoLight: Intersection Control in Developing Regions Under Extreme Budget and Network Constraints",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Effective intersection control can play an important role in reducing traffic congestion and associated vehicular emissions. This is vitally needed in developing countries, where air pollution is reaching life threatening levels. This paper presents EcoLight intersection control for developing regions, where budget is constrained and network connectivity is very poor. EcoLight learns effective control offline using state-of-the-art Deep Reinforcement Learning methods, but deploys highly efficient runtime control algorithms on low cost embedded devices that work stand-alone on road without server connectivity. EcoLight optimizes both average case and worst case values of throughput, travel time and other metrics, as evaluated on open-source datasets from New York and on a custom developing region dataset.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18814",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/97e49161287e7a4f9b745366e4f9431b-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sachin_chauhan",
+        "name": "Sachin Chauhan",
+        "name_site": "Sachin Chauhan, Kashish Bansal, Rijurekha Sen",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 9,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18816",
+      "title": "Consistent Plug-in Classifiers for Complex Objectives and Constraints",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We present a statistically consistent algorithm for constrained classification problems where the objective (e.g. F-measure, G-mean) and the constraints (e.g. demographic parity, coverage) are defined by general functions of the confusion matrix. The key idea is to reduce the problem into a sequence of plug-in classifier learning problems, which is done by formulating an optimization problem over the intersection of the set of achievable confusion matrices and the set of feasible matrices. For objective and constraints that are convex functions of the confusion matrix, our algorithm requires $O(1/\\epsilon^2)$ calls to the plug-in routine, which improves on the $O(1/\\epsilon^3)$ rate achieved by Narasimhan (2018). We demonstrate empirically that our algorithm performs at least as well as the state-of-the-art methods for these problems.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18816",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/eab1bceaa6c5823d7ed86cfc7a8bd824-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "shiv_kumar_tavker",
+        "name": "Shiv Kumar Tavker",
+        "name_site": "Shiv Kumar Tavker, Harish Guruprasad Ramaswamy, Harikrishna Narasimhan",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Madras (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 12,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18823",
+      "title": "Online Algorithm for Unsupervised Sequential Selection with Contextual Information",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In this paper, we study Contextual Unsupervised Sequential Selection (USS), a new variant of the stochastic contextual bandits problem where the loss of an arm cannot be inferred from the observed feedback. In our setup, arms are associated with fixed costs and are ordered, forming a cascade. In each round, a context is presented, and the learner selects the arms sequentially till some depth. The total cost incurred by stopping at an arm is the sum of fixed costs of arms selected and the stochastic loss associated with the arm. The learner's goal is to learn a decision rule that maps contexts to arms with the goal of minimizing the total expected loss. The problem is challenging as we are faced with an unsupervised setting as the total loss cannot be estimated. Clearly, learning is feasible only if the optimal arm can be inferred (explicitly or implicitly) from the problem structure. We observe that learning is still possible when the problem instance satisfies the so-called 'Contextual Weak Dominance' (CWD) property. Under CWD, we propose an algorithm for the contextual USS problem and demonstrate that it has sub-linear regret. Experiments on synthetic and real datasets validate our algorithm.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18823",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/08e5d8066881eab185d0de9db3b36c7f-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "arun_verma_1",
+        "name": "Arun Verma",
+        "name_site": "Arun Verma, Manjesh Kumar Hanawal, Csaba Szepesvari, Venkatesh Saligrama",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 5,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18876",
+      "title": "Guided Adversarial Attack for Evaluating and Enhancing Adversarial Defenses",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Advances in the development of adversarial attacks have been fundamental to the progress of adversarial defense research. Efficient and effective attacks are crucial for reliable evaluation of defenses, and also for developing robust models. Adversarial attacks are often generated by maximizing standard losses such as the cross-entropy loss or maximum-margin loss within a constraint set using Projected Gradient Descent (PGD). In this work, we introduce a relaxation term to the standard loss, that finds more suitable gradient-directions, increases attack efficacy and leads to more efficient adversarial training. We propose Guided Adversarial Margin Attack (GAMA), which utilizes function mapping of the clean image to guide the generation of adversaries, thereby resulting in stronger attacks. We evaluate our attack against multiple defenses and show improved performance when compared to existing attacks. Further, we propose Guided Adversarial Training (GAT), which achieves state-of-the-art performance amongst single-step defenses by utilizing the proposed relaxation term for both attack generation and training.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18876",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/ea3ed20b6b101a09085ef09c97da1597-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "venkatesh_babu_r",
+        "name": "Venkatesh Babu R",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 123,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "17072",
+      "title": "Calibrating CNNs for Lifelong Learning",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We present an approach for lifelong/continual learning of convolutional neural networks (CNN) that does not suffer from the problem of catastrophic forgetting when moving from one task to the other. We show that the activation maps generated by the CNN trained on the old task can be calibrated using very few calibration parameters, to become relevant to the new task. Based on this, we calibrate the activation maps produced by each network layer using spatial and channel-wise calibration modules and train only these calibration parameters for each new task in order to perform lifelong learning. Our calibration modules introduce significantly less computation and parameters as compared to the approaches that dynamically expand the network. Our approach is immune to catastrophic forgetting since we store the task-adaptive calibration parameters, which contain all the task-specific knowledge and is exclusive to each task. Further, our approach does not require storing data samples from the old tasks, which is done by many replay based methods. We perform extensive experiments on multiple benchmark datasets (SVHN, CIFAR, ImageNet, and MS-Celeb), all of which show substantial improvements over state-of-the-art methods (e.g., a 29% absolute increase in accuracy on CIFAR-100 with 10 classes at a time). On large-scale datasets, our approach yields 23.8% and 9.7% absolute increase in accuracy on ImageNet-100 and MS-Celeb-10K datasets, respectively, by employing very few (0.51% and 0.35% of model parameters) task-adaptive calibration parameters.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/17072",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/b3b43aeeacb258365cc69cdaf42a68af-Paper.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "piyush_rai_6",
+        "name": "Piyush Rai",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 5,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Kanpur (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 97,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "17458",
+      "title": "Follow the Perturbed Leader: Optimism and Fast Parallel Algorithms for Smooth Minimax Games",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We consider the problem of online learning and its application to solving minimax games. For the online learning problem, Follow the Perturbed Leader (FTPL) is a widely studied algorithm which enjoys the optimal $O(T^{1/2})$ \\emph{worst case} regret guarantee for both convex and nonconvex losses. In this work, we show that when the sequence of loss functions is \\emph{predictable}, a simple modification of FTPL which incorporates optimism can achieve better regret guarantees, while retaining the optimal worst-case regret guarantee for unpredictable sequences. A key challenge in obtaining these tighter regret bounds is the stochasticity and optimism in the algorithm, which requires different analysis techniques than those commonly used in the analysis of FTPL. The key ingredient we utilize in our analysis is the dual view of perturbation as regularization.\nWhile our algorithm has several applications, we consider the specific application of minimax games. For solving smooth convex-concave games, our algorithm only requires access to a linear optimization oracle. For Lipschitz and smooth nonconvex-nonconcave games, our algorithm requires access to an optimization oracle which computes the perturbed best response. In both these settings, our algorithm solves the game up to an accuracy of $O(T^{-1/2})$ using $T$ calls to the optimization oracle. An important feature of our algorithm is that it is highly parallelizable and requires only $O(T^{1/2})$ iterations, with each iteration making $O(T^{1/2})$ parallel calls to the optimization oracle.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/17458",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/fd5ac6ce504b74460b93610f39e481f7-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "praneeth_netrapalli_7",
+        "name": "Praneeth Netrapalli",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 17,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "17620",
+      "title": "Meta-Consolidation for Continual Learning",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The ability to continuously learn and adapt itself to new tasks, without losing grasp of already acquired knowledge is a hallmark of biological learning systems, which current deep learning systems fall short of. In this work, we present a novel methodology for continual learning called MERLIN: Meta-Consolidation for Continual Learning.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/17620",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/a5585a4d4b12277fee5cad0880611bc6-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "vineeth_n_balasubramanian",
+        "name": "Vineeth N Balasubramanian",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Hyderabad (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 60,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "17875",
+      "title": "Self-Supervised Few-Shot Learning on Point Clouds",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The increased availability of massive point clouds coupled with their utility in a wide variety of applications such as robotics, shape synthesis, and self-driving cars has attracted increased attention from both industry and academia. Recently, deep neural networks operating on labeled point clouds have shown promising results on supervised learning tasks like classification and segmentation. However, supervised learning leads to the cumbersome task of annotating the point clouds. To combat this problem, we propose two novel self-supervised pre-training tasks that encode a hierarchical partitioning of the point clouds using a cover-tree, where point cloud subsets lie within balls of varying radii at each level of the cover-tree. Furthermore, our self-supervised learning network is restricted to pre-train on the support set (comprising of scarce training examples) used to train the downstream network in a few-shot learning (FSL) setting. Finally, the fully-trained self-supervised network's point embeddings are input to the downstream task's network. We present a comprehensive empirical evaluation of our method on both downstream classification and segmentation tasks and show that supervised methods pre-trained with our self-supervised learning method significantly improve the accuracy of state-of-the-art methods. Additionally, our method also outperforms previous unsupervised methods in downstream classification tasks.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/17875",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/50c1f44e426560f3f2cdcb3e19e39903-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "manohar_kaul",
+        "name": "Manohar Kaul",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Hyderabad (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 119,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18356",
+      "title": "Statistical Optimal Transport posed as Learning Kernel Embedding",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The objective in statistical Optimal Transport (OT) is to consistently estimate the optimal transport plan/map solely using samples from the given source and target marginal distributions. This work takes the novel approach of posing statistical OT as that of learning the transport plan's kernel mean embedding from sample based estimates of marginal embeddings. The proposed estimator controls overfitting by employing maximum mean discrepancy based regularization, which is complementary to $\\phi$-divergence (entropy) based regularization popularly employed in existing estimators. A key result is that, under very mild conditions, $\\epsilon$-optimal recovery of the transport plan as well as the Barycentric-projection based transport map is possible with a sample complexity that is completely dimension-free. Moreover, the implicit smoothing in the kernel mean embeddings enables out-of-sample estimation. An appropriate representer theorem is proved leading to a kernelized convex formulation for the estimator, which can then be potentially used to perform OT even in non-standard domains. Empirical results illustrate the efficacy of the proposed approach.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18356",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/c8ecfaea0b7e3aa83b017a786d53b9e8-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "pratik_kumar_jawanpuria_2",
+        "name": "Pratik Kumar Jawanpuria",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 21,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18371",
+      "title": "GCOMB: Learning Budget-constrained Combinatorial Algorithms over Billion-sized Graphs",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "There has been an increased interest in discovering heuristics for combinatorial problems on graphs through machine learning. While existing techniques have primarily focused on obtaining high-quality solutions, scalability to billion-sized graphs has not been adequately addressed. In addition, the impact of a budget-constraint, which is necessary for many practical scenarios, remains to be studied. In this paper, we propose a framework called GCOMB to bridge these gaps. GCOMB trains a Graph Convolutional Network (GCN) using a novel probabilistic greedy mechanism to predict the quality of a node. To further facilitate the combinatorial nature of the problem, GCOMB utilizes a Q-learning framework, which is made efficient through importance sampling. We perform extensive experiments on real graphs to benchmark the efficiency and efficacy of GCOMB. Our results establish that GCOMB is 100 times faster and marginally better in quality than state-of-the-art algorithms for learning combinatorial algorithms. Additionally, a case-study on the practical combinatorial problem of Influence Maximization (IM) shows GCOMB is 150 times faster than the specialized IM algorithm IMM with similar quality.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18371",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/e7532dbeff7ef901f2e70daacb3f452d-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "ambuj_singh",
+        "name": "Ambuj Singh",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 6,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "University of California, Santa Barbara (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 95,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18453",
+      "title": "Inductive Quantum Embedding",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Quantum logic inspired embedding (aka Quantum Embedding (QE)) of a Knowledge-Base (KB) was proposed recently by Garg:2019. It is claimed that the QE preserves the logical structure of the input KB given in the form of unary and binary predicates hierarchy. Such structure preservation allows one to perform Boolean logic style deductive reasoning directly over these embedding vectors. The original QE idea, however, is limited to the transductive (not inductive) setting. Moreover, the original QE scheme runs quite slow on real applications involving millions of entities. This paper alleviates both of these key limitations. We start by reformulating the original QE problem to allow for the induction. On the way, we also underscore some interesting analytic and geometric properties of the solution and leverage them to design a faster training scheme. As an application, we show that one can achieve state-of-the-art performance on the well-known NLP task of fine-grained entity type classification by using the inductive QE approach. Our training runs 9-times faster than the original QE scheme on this task.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18453",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/b87039703fe79778e9f140b78621d7fb-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "l_venkata_subramaniam_1",
+        "name": "L Venkata Subramaniam",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 6,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "IBM (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 7,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18562",
+      "title": "Neural Path Features and Neural Path Kernel : Understanding the role of gates in deep learning",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Rectified linear unit (ReLU) activations can also be thought of as 'gates', which, either pass or stop their pre-activation input when they are 'on' (when the pre-activation input is positive) or 'off' (when the pre-activation input is negative) respectively. A deep neural network (DNN) with ReLU activations has many gates, and the on/off status of each gate changes across input examples as well as network weights. For a given input example, only a subset of gates are 'active', i.e., on, and the sub-network of weights connected to these active gates is responsible for producing the output. At randomised initialisation, the active sub-network corresponding to a given input example is random. During training, as the weights are learnt, the active sub-networks are also learnt, and could hold valuable information.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18562",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/37f76c6fe3ab45e0cd7ecb176b5a046d-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "amit_vikram_singh",
+        "name": "Amit Vikram Singh",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Palakkad (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 13,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18593",
+      "title": "Teaching a GAN What Not to Learn",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Generative adversarial networks (GANs) were originally envisioned as unsupervised generative models that learn to follow a target distribution. Variants such as conditional GANs, auxiliary-classifier GANs (ACGANs) project GANs on to supervised and semi-supervised learning frameworks by providing labelled data and using multi-class discriminators. In this paper, we approach the supervised GAN problem from a different perspective, one that is motivated by the philosophy of the famous Persian poet Rumi who said, \"The art of knowing is knowing what to ignore.\" In the GAN framework, we not only provide the GAN positive data that it must learn to model, but also present it with so-called negative samples that it must learn to avoid — we call this \"The Rumi Framework.\" This formulation allows the discriminator to represent the underlying target distribution better by learning to penalize generated samples that are undesirable — we show that this capability accelerates the learning process of the generator. We present a reformulation of the standard GAN (SGAN) and least-squares GAN (LSGAN) within the Rumi setting. The advantage of the reformulation is demonstrated by means of experiments conducted on MNIST, Fashion MNIST, CelebA, and CIFAR-10 datasets. Finally, we consider an application of the proposed formulation to address the important problem of learning an under-represented class in an unbalanced dataset. The Rumi approach results in substantially lower FID scores than the standard GAN frameworks while possessing better generalization capability.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18593",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/29405e2a4c22866a205f557559c7fa4b-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "chandra_seelamantula",
+        "name": "Chandra Seelamantula",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 23,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18742",
+      "title": "Your Classifier can Secretly Suffice Multi-Source Domain Adaptation",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Multi-Source Domain Adaptation (MSDA) deals with the transfer of task knowledge from multiple labeled source domains to an unlabeled target domain, under a domain-shift. Existing methods aim to minimize this domain-shift using auxiliary distribution alignment objectives. In this work, we present a different perspective to MSDA wherein deep models are observed to implicitly align the domains under label supervision. Thus, we aim to utilize implicit alignment without additional training objectives to perform adaptation. To this end, we use pseudo-labeled target samples and enforce a classifier agreement on the pseudo-labels, a process called Self-supervised Implicit Alignment (SImpAl). We find that SImpAl readily works even under category-shift among the source domains. Further, we propose classifier agreement as a cue to determine the training convergence, resulting in a simple training algorithm. We provide a thorough evaluation of our approach on five benchmarks, along with detailed insights into each component of our approach.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18742",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/3181d59d19e76e902666df5c7821259a-Paper.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "venkatesh_babu_r_1",
+        "name": "Venkatesh Babu R",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 5,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 97,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18814",
+      "title": "EcoLight: Intersection Control in Developing Regions Under Extreme Budget and Network Constraints",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Effective intersection control can play an important role in reducing traffic congestion and associated vehicular emissions. This is vitally needed in developing countries, where air pollution is reaching life threatening levels. This paper presents EcoLight intersection control for developing regions, where budget is constrained and network connectivity is very poor. EcoLight learns effective control offline using state-of-the-art Deep Reinforcement Learning methods, but deploys highly efficient runtime control algorithms on low cost embedded devices that work stand-alone on road without server connectivity. EcoLight optimizes both average case and worst case values of throughput, travel time and other metrics, as evaluated on open-source datasets from New York and on a custom developing region dataset.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18814",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/97e49161287e7a4f9b745366e4f9431b-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "rijurekha_sen",
+        "name": "Rijurekha Sen",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 9,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18816",
+      "title": "Consistent Plug-in Classifiers for Complex Objectives and Constraints",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We present a statistically consistent algorithm for constrained classification problems where the objective (e.g. F-measure, G-mean) and the constraints (e.g. demographic parity, coverage) are defined by general functions of the confusion matrix. The key idea is to reduce the problem into a sequence of plug-in classifier learning problems, which is done by formulating an optimization problem over the intersection of the set of achievable confusion matrices and the set of feasible matrices. For objective and constraints that are convex functions of the confusion matrix, our algorithm requires $O(1/\\epsilon^2)$ calls to the plug-in routine, which improves on the $O(1/\\epsilon^3)$ rate achieved by Narasimhan (2018). We demonstrate empirically that our algorithm performs at least as well as the state-of-the-art methods for these problems.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18816",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/eab1bceaa6c5823d7ed86cfc7a8bd824-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "harikrishna_narasimhan_7",
+        "name": "Harikrishna Narasimhan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Google (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 12,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "16876",
+      "title": "RNNPool: Efficient Non-linear Pooling for RAM Constrained Inference",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Standard Convolutional Neural Networks (CNNs) designed for computer vision tasks tend to have large intermediate activation maps. These require large working memory and are thus unsuitable for deployment on resource-constrained devices typically used for inference on the edge. Aggressively downsampling the images via pooling or strided convolutions can address the problem but leads to a significant decrease in accuracy due to gross aggregation of the feature map by standard pooling operators. In this paper, we introduce RNNPool, a novel pooling operator based on Recurrent Neural Networks (RNNs), that efficiently aggregates features over large patches of an image and rapidly downsamples activation maps.  Empirical evaluation indicates that an RNNPool layer can effectively replace multiple blocks in a variety of architectures such as MobileNets, DenseNet when applied to standard vision tasks like image classification and face detection. That is, RNNPool can significantly decrease computational complexity and peak memory usage for inference while retaining comparable accuracy. We use RNNPool with the standard S3FD architecture to construct a face detection method that achieves state-of-the-art MAP for tiny ARM Cortex-M4 class microcontrollers with under 256 KB of RAM. Code is released at https://github.com/Microsoft/EdgeML.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/16876",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/ebd9629fc3ae5e9f6611e2ee05a31cef-Paper.pdf",
+      "github_url": "https://github.com/Microsoft/EdgeML",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "aditya_kusupati_1",
+        "name": "Aditya Kusupati",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "University of Washington (Unknown),Microsoft (India)",
+        "countries": [
+          "Unknown",
+          "India"
+        ],
+        "country_codes": [
+          "UN",
+          "IN"
+        ]
+      },
+      "sort_score": 5.625,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 63,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "16935",
+      "title": "Projection Efficient Subgradient Method and Optimal Nonsmooth Frank-Wolfe Method",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "We consider the classical setting of optimizing a nonsmooth Lipschitz continuous convex function over a convex constraint set, when having access to a (stochastic) first-order oracle (FO) for the function and a projection oracle (PO) for the constraint set. It is well known that to achieve $\\epsilon$-suboptimality in high-dimensions, $\\Theta(\\epsilon^{-2})$ FO calls are necessary. This is achieved by the projected subgradient method (PGD). However, PGD also entails $O(\\epsilon^{-2})$ PO calls, which may be computationally costlier than FO calls (e.g. nuclear norm constraints). Improving this PO calls complexity of PGD is largely unexplored, despite the fundamental nature of this problem and extensive literature. We present first such improvement. This only requires a mild assumption that the objective function, when extended to a slightly larger neighborhood of the constraint set, still remains Lipschitz and accessible via FO. In particular, we introduce MOPES method, which carefully combines Moreau-Yosida smoothing and accelerated first-order schemes. This is guaranteed to find a feasible $\\epsilon$-suboptimal solution using only $O(\\epsilon^{-1})$ PO calls and optimal $O(\\epsilon^{-2})$ FO calls. Further, instead of a PO if we only have a linear minimization oracle (LMO, a la Frank-Wolfe) to access the constraint set, an extension of our method, MOLES, finds a feasible $\\epsilon$-suboptimal solution using $O(\\epsilon^{-2})$ LMO calls and FO calls---both match known lower bounds, resolving a question left open since White (1993). Our experiments confirm that these methods achieve significant speedups over the state-of-the-art, for a problem with costly PO and LMO calls.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/16935",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/8f468c873a32bb0619eaeb2050ba45d1-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prateek_jain_33",
+        "name": "Prateek Jain",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 5.000000000000001,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 29,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18876",
+      "title": "Guided Adversarial Attack for Evaluating and Enhancing Adversarial Defenses",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Advances in the development of adversarial attacks have been fundamental to the progress of adversarial defense research. Efficient and effective attacks are crucial for reliable evaluation of defenses, and also for developing robust models. Adversarial attacks are often generated by maximizing standard losses such as the cross-entropy loss or maximum-margin loss within a constraint set using Projected Gradient Descent (PGD). In this work, we introduce a relaxation term to the standard loss, that finds more suitable gradient-directions, increases attack efficacy and leads to more efficient adversarial training. We propose Guided Adversarial Margin Attack (GAMA), which utilizes function mapping of the clean image to guide the generation of adversaries, thereby resulting in stronger attacks. We evaluate our attack against multiple defenses and show improved performance when compared to existing attacks. Further, we propose Guided Adversarial Training (GAT), which achieves state-of-the-art performance amongst single-step defenses by utilizing the proposed relaxation term for both attack generation and training.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18876",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/ea3ed20b6b101a09085ef09c97da1597-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sravanti_addepalli",
+        "name": "Sravanti Addepalli",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 5.000000000000001,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 123,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18371",
+      "title": "GCOMB: Learning Budget-constrained Combinatorial Algorithms over Billion-sized Graphs",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "There has been an increased interest in discovering heuristics for combinatorial problems on graphs through machine learning. While existing techniques have primarily focused on obtaining high-quality solutions, scalability to billion-sized graphs has not been adequately addressed. In addition, the impact of a budget-constraint, which is necessary for many practical scenarios, remains to be studied. In this paper, we propose a framework called GCOMB to bridge these gaps. GCOMB trains a Graph Convolutional Network (GCN) using a novel probabilistic greedy mechanism to predict the quality of a node. To further facilitate the combinatorial nature of the problem, GCOMB utilizes a Q-learning framework, which is made efficient through importance sampling. We perform extensive experiments on real graphs to benchmark the efficiency and efficacy of GCOMB. Our results establish that GCOMB is 100 times faster and marginally better in quality than state-of-the-art algorithms for learning combinatorial algorithms. Additionally, a case-study on the practical combinatorial problem of Influence Maximization (IM) shows GCOMB is 150 times faster than the specialized IM algorithm IMM with similar quality.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18371",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/e7532dbeff7ef901f2e70daacb3f452d-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "akash_mittal",
+        "name": "AKASH MITTAL",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 4.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 95,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18453",
+      "title": "Inductive Quantum Embedding",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Quantum logic inspired embedding (aka Quantum Embedding (QE)) of a Knowledge-Base (KB) was proposed recently by Garg:2019. It is claimed that the QE preserves the logical structure of the input KB given in the form of unary and binary predicates hierarchy. Such structure preservation allows one to perform Boolean logic style deductive reasoning directly over these embedding vectors. The original QE idea, however, is limited to the transductive (not inductive) setting. Moreover, the original QE scheme runs quite slow on real applications involving millions of entities. This paper alleviates both of these key limitations. We start by reformulating the original QE problem to allow for the induction. On the way, we also underscore some interesting analytic and geometric properties of the solution and leverage them to design a faster training scheme. As an application, we show that one can achieve state-of-the-art performance on the well-known NLP task of fine-grained entity type classification by using the inductive QE approach. Our training runs 9-times faster than the original QE scheme on this task.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18453",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/b87039703fe79778e9f140b78621d7fb-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "dinesh_khandelwal",
+        "name": "Dinesh Khandelwal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "IBM (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 4.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 7,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "16876",
+      "title": "RNNPool: Efficient Non-linear Pooling for RAM Constrained Inference",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Standard Convolutional Neural Networks (CNNs) designed for computer vision tasks tend to have large intermediate activation maps. These require large working memory and are thus unsuitable for deployment on resource-constrained devices typically used for inference on the edge. Aggressively downsampling the images via pooling or strided convolutions can address the problem but leads to a significant decrease in accuracy due to gross aggregation of the feature map by standard pooling operators. In this paper, we introduce RNNPool, a novel pooling operator based on Recurrent Neural Networks (RNNs), that efficiently aggregates features over large patches of an image and rapidly downsamples activation maps.  Empirical evaluation indicates that an RNNPool layer can effectively replace multiple blocks in a variety of architectures such as MobileNets, DenseNet when applied to standard vision tasks like image classification and face detection. That is, RNNPool can significantly decrease computational complexity and peak memory usage for inference while retaining comparable accuracy. We use RNNPool with the standard S3FD architecture to construct a face detection method that achieves state-of-the-art MAP for tiny ARM Cortex-M4 class microcontrollers with under 256 KB of RAM. Code is released at https://github.com/Microsoft/EdgeML.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/16876",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/ebd9629fc3ae5e9f6611e2ee05a31cef-Paper.pdf",
+      "github_url": "https://github.com/Microsoft/EdgeML",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "harsha_vardhan_simhadri_3",
+        "name": "Harsha Vardhan Simhadri",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.75,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 63,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18742",
+      "title": "Your Classifier can Secretly Suffice Multi-Source Domain Adaptation",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Multi-Source Domain Adaptation (MSDA) deals with the transfer of task knowledge from multiple labeled source domains to an unlabeled target domain, under a domain-shift. Existing methods aim to minimize this domain-shift using auxiliary distribution alignment objectives. In this work, we present a different perspective to MSDA wherein deep models are observed to implicitly align the domains under label supervision. Thus, we aim to utilize implicit alignment without additional training objectives to perform adaptation. To this end, we use pseudo-labeled target samples and enforce a classifier agreement on the pseudo-labels, a process called Self-supervised Implicit Alignment (SImpAl). We find that SImpAl readily works even under category-shift among the source domains. Further, we propose classifier agreement as a cue to determine the training convergence, resulting in a simple training algorithm. We provide a thorough evaluation of our approach on five benchmarks, along with detailed insights into each component of our approach.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18742",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/3181d59d19e76e902666df5c7821259a-Paper.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "jogendra_nath_kundu",
+        "name": "Jogendra Nath Kundu",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.75,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 97,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "17499",
+      "title": "MOReL: Model-Based Offline Reinforcement Learning",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In offline reinforcement learning (RL), the goal is to learn a highly rewarding policy based solely on a dataset of historical interactions with the environment. This serves as an extreme test for an agent's ability to effectively use historical data which is known to be critical for efficient RL. Prior work in offline RL has been confined almost exclusively to model-free RL approaches. In this work, we present MOReL, an algorithmic framework for model-based offline RL. This framework consists of two steps: (a) learning a pessimistic MDP using the offline dataset; (b) learning a near-optimal policy in this pessimistic MDP. The design of the pessimistic MDP is such that for any policy, the performance in the real environment is approximately lower-bounded by the performance in the pessimistic MDP. This enables the pessimistic MDP to serve as a good surrogate for purposes of policy evaluation and learning. Theoretically, we show that MOReL is minimax optimal (up to log factors) for offline RL. Empirically, MOReL matches or exceeds state-of-the-art results on widely used offline RL benchmarks. Overall, the modular design of MOReL enables translating advances in its components (for e.g., in model learning, planning etc.) to improvements in offline RL.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/17499",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/f7efa4f864ae9b88d43527f4b14f750f-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "aravind_rajeswaran_2",
+        "name": "Aravind Rajeswaran",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "University of Washington (Unknown),Google (India)",
+        "countries": [
+          "Unknown",
+          "India"
+        ],
+        "country_codes": [
+          "UN",
+          "IN"
+        ]
+      },
+      "sort_score": 3.333333333333334,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 855,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18823",
+      "title": "Online Algorithm for Unsupervised Sequential Selection with Contextual Information",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In this paper, we study Contextual Unsupervised Sequential Selection (USS), a new variant of the stochastic contextual bandits problem where the loss of an arm cannot be inferred from the observed feedback. In our setup, arms are associated with fixed costs and are ordered, forming a cascade. In each round, a context is presented, and the learner selects the arms sequentially till some depth. The total cost incurred by stopping at an arm is the sum of fixed costs of arms selected and the stochastic loss associated with the arm. The learner's goal is to learn a decision rule that maps contexts to arms with the goal of minimizing the total expected loss. The problem is challenging as we are faced with an unsupervised setting as the total loss cannot be estimated. Clearly, learning is feasible only if the optimal arm can be inferred (explicitly or implicitly) from the problem structure. We observe that learning is still possible when the problem instance satisfies the so-called 'Contextual Weak Dominance' (CWD) property. Under CWD, we propose an algorithm for the contextual USS problem and demonstrate that it has sub-linear regret. Experiments on synthetic and real datasets validate our algorithm.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18823",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/08e5d8066881eab185d0de9db3b36c7f-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "manjesh_kumar_hanawal",
+        "name": "Manjesh Kumar Hanawal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.333333333333334,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 5,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18371",
+      "title": "GCOMB: Learning Budget-constrained Combinatorial Algorithms over Billion-sized Graphs",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "There has been an increased interest in discovering heuristics for combinatorial problems on graphs through machine learning. While existing techniques have primarily focused on obtaining high-quality solutions, scalability to billion-sized graphs has not been adequately addressed. In addition, the impact of a budget-constraint, which is necessary for many practical scenarios, remains to be studied. In this paper, we propose a framework called GCOMB to bridge these gaps. GCOMB trains a Graph Convolutional Network (GCN) using a novel probabilistic greedy mechanism to predict the quality of a node. To further facilitate the combinatorial nature of the problem, GCOMB utilizes a Q-learning framework, which is made efficient through importance sampling. We perform extensive experiments on real graphs to benchmark the efficiency and efficacy of GCOMB. Our results establish that GCOMB is 100 times faster and marginally better in quality than state-of-the-art algorithms for learning combinatorial algorithms. Additionally, a case-study on the practical combinatorial problem of Influence Maximization (IM) shows GCOMB is 150 times faster than the specialized IM algorithm IMM with similar quality.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18371",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/e7532dbeff7ef901f2e70daacb3f452d-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "anuj_dhawan",
+        "name": "Anuj Dhawan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 95,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18453",
+      "title": "Inductive Quantum Embedding",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Quantum logic inspired embedding (aka Quantum Embedding (QE)) of a Knowledge-Base (KB) was proposed recently by Garg:2019. It is claimed that the QE preserves the logical structure of the input KB given in the form of unary and binary predicates hierarchy. Such structure preservation allows one to perform Boolean logic style deductive reasoning directly over these embedding vectors. The original QE idea, however, is limited to the transductive (not inductive) setting. Moreover, the original QE scheme runs quite slow on real applications involving millions of entities. This paper alleviates both of these key limitations. We start by reformulating the original QE problem to allow for the induction. On the way, we also underscore some interesting analytic and geometric properties of the solution and leverage them to design a faster training scheme. As an application, we show that one can achieve state-of-the-art performance on the well-known NLP task of fine-grained entity type classification by using the inductive QE approach. Our training runs 9-times faster than the original QE scheme on this task.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18453",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/b87039703fe79778e9f140b78621d7fb-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "dhiraj_madan",
+        "name": "Dhiraj Madan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "IBM (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 7,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "16935",
+      "title": "Projection Efficient Subgradient Method and Optimal Nonsmooth Frank-Wolfe Method",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "We consider the classical setting of optimizing a nonsmooth Lipschitz continuous convex function over a convex constraint set, when having access to a (stochastic) first-order oracle (FO) for the function and a projection oracle (PO) for the constraint set. It is well known that to achieve $\\epsilon$-suboptimality in high-dimensions, $\\Theta(\\epsilon^{-2})$ FO calls are necessary. This is achieved by the projected subgradient method (PGD). However, PGD also entails $O(\\epsilon^{-2})$ PO calls, which may be computationally costlier than FO calls (e.g. nuclear norm constraints). Improving this PO calls complexity of PGD is largely unexplored, despite the fundamental nature of this problem and extensive literature. We present first such improvement. This only requires a mild assumption that the objective function, when extended to a slightly larger neighborhood of the constraint set, still remains Lipschitz and accessible via FO. In particular, we introduce MOPES method, which carefully combines Moreau-Yosida smoothing and accelerated first-order schemes. This is guaranteed to find a feasible $\\epsilon$-suboptimal solution using only $O(\\epsilon^{-1})$ PO calls and optimal $O(\\epsilon^{-2})$ FO calls. Further, instead of a PO if we only have a linear minimization oracle (LMO, a la Frank-Wolfe) to access the constraint set, an extension of our method, MOLES, finds a feasible $\\epsilon$-suboptimal solution using $O(\\epsilon^{-2})$ LMO calls and FO calls---both match known lower bounds, resolving a question left open since White (1993). Our experiments confirm that these methods achieve significant speedups over the state-of-the-art, for a problem with costly PO and LMO calls.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/16935",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/8f468c873a32bb0619eaeb2050ba45d1-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "praneeth_netrapalli_10",
+        "name": "Praneeth Netrapalli",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5000000000000004,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 29,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18876",
+      "title": "Guided Adversarial Attack for Evaluating and Enhancing Adversarial Defenses",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Advances in the development of adversarial attacks have been fundamental to the progress of adversarial defense research. Efficient and effective attacks are crucial for reliable evaluation of defenses, and also for developing robust models. Adversarial attacks are often generated by maximizing standard losses such as the cross-entropy loss or maximum-margin loss within a constraint set using Projected Gradient Descent (PGD). In this work, we introduce a relaxation term to the standard loss, that finds more suitable gradient-directions, increases attack efficacy and leads to more efficient adversarial training. We propose Guided Adversarial Margin Attack (GAMA), which utilizes function mapping of the clean image to guide the generation of adversaries, thereby resulting in stronger attacks. We evaluate our attack against multiple defenses and show improved performance when compared to existing attacks. Further, we propose Guided Adversarial Training (GAT), which achieves state-of-the-art performance amongst single-step defenses by utilizing the proposed relaxation term for both attack generation and training.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18876",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/ea3ed20b6b101a09085ef09c97da1597-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "arya_baburaj",
+        "name": "Arya Baburaj",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5000000000000004,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 123,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "17072",
+      "title": "Calibrating CNNs for Lifelong Learning",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We present an approach for lifelong/continual learning of convolutional neural networks (CNN) that does not suffer from the problem of catastrophic forgetting when moving from one task to the other. We show that the activation maps generated by the CNN trained on the old task can be calibrated using very few calibration parameters, to become relevant to the new task. Based on this, we calibrate the activation maps produced by each network layer using spatial and channel-wise calibration modules and train only these calibration parameters for each new task in order to perform lifelong learning. Our calibration modules introduce significantly less computation and parameters as compared to the approaches that dynamically expand the network. Our approach is immune to catastrophic forgetting since we store the task-adaptive calibration parameters, which contain all the task-specific knowledge and is exclusive to each task. Further, our approach does not require storing data samples from the old tasks, which is done by many replay based methods. We perform extensive experiments on multiple benchmark datasets (SVHN, CIFAR, ImageNet, and MS-Celeb), all of which show substantial improvements over state-of-the-art methods (e.g., a 29% absolute increase in accuracy on CIFAR-100 with 10 classes at a time). On large-scale datasets, our approach yields 23.8% and 9.7% absolute increase in accuracy on ImageNet-100 and MS-Celeb-10K datasets, respectively, by employing very few (0.51% and 0.35% of model parameters) task-adaptive calibration parameters.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/17072",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/b3b43aeeacb258365cc69cdaf42a68af-Paper.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "pratik_mazumder",
+        "name": "Pratik Mazumder",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Kanpur (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 97,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18742",
+      "title": "Your Classifier can Secretly Suffice Multi-Source Domain Adaptation",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Multi-Source Domain Adaptation (MSDA) deals with the transfer of task knowledge from multiple labeled source domains to an unlabeled target domain, under a domain-shift. Existing methods aim to minimize this domain-shift using auxiliary distribution alignment objectives. In this work, we present a different perspective to MSDA wherein deep models are observed to implicitly align the domains under label supervision. Thus, we aim to utilize implicit alignment without additional training objectives to perform adaptation. To this end, we use pseudo-labeled target samples and enforce a classifier agreement on the pseudo-labels, a process called Self-supervised Implicit Alignment (SImpAl). We find that SImpAl readily works even under category-shift among the source domains. Further, we propose classifier agreement as a cue to determine the training convergence, resulting in a simple training algorithm. We provide a thorough evaluation of our approach on five benchmarks, along with detailed insights into each component of our approach.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18742",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/3181d59d19e76e902666df5c7821259a-Paper.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "durgesh_singh",
+        "name": "Durgesh Singh",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 97,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18814",
+      "title": "EcoLight: Intersection Control in Developing Regions Under Extreme Budget and Network Constraints",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Effective intersection control can play an important role in reducing traffic congestion and associated vehicular emissions. This is vitally needed in developing countries, where air pollution is reaching life threatening levels. This paper presents EcoLight intersection control for developing regions, where budget is constrained and network connectivity is very poor. EcoLight learns effective control offline using state-of-the-art Deep Reinforcement Learning methods, but deploys highly efficient runtime control algorithms on low cost embedded devices that work stand-alone on road without server connectivity. EcoLight optimizes both average case and worst case values of throughput, travel time and other metrics, as evaluated on open-source datasets from New York and on a custom developing region dataset.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18814",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/97e49161287e7a4f9b745366e4f9431b-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "kashish_bansal",
+        "name": "Kashish Bansal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 9,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18816",
+      "title": "Consistent Plug-in Classifiers for Complex Objectives and Constraints",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We present a statistically consistent algorithm for constrained classification problems where the objective (e.g. F-measure, G-mean) and the constraints (e.g. demographic parity, coverage) are defined by general functions of the confusion matrix. The key idea is to reduce the problem into a sequence of plug-in classifier learning problems, which is done by formulating an optimization problem over the intersection of the set of achievable confusion matrices and the set of feasible matrices. For objective and constraints that are convex functions of the confusion matrix, our algorithm requires $O(1/\\epsilon^2)$ calls to the plug-in routine, which improves on the $O(1/\\epsilon^3)$ rate achieved by Narasimhan (2018). We demonstrate empirically that our algorithm performs at least as well as the state-of-the-art methods for these problems.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18816",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/eab1bceaa6c5823d7ed86cfc7a8bd824-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "harish_guruprasad_ramaswamy",
+        "name": "Harish Guruprasad Ramaswamy",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Madras (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 12,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18371",
+      "title": "GCOMB: Learning Budget-constrained Combinatorial Algorithms over Billion-sized Graphs",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "There has been an increased interest in discovering heuristics for combinatorial problems on graphs through machine learning. While existing techniques have primarily focused on obtaining high-quality solutions, scalability to billion-sized graphs has not been adequately addressed. In addition, the impact of a budget-constraint, which is necessary for many practical scenarios, remains to be studied. In this paper, we propose a framework called GCOMB to bridge these gaps. GCOMB trains a Graph Convolutional Network (GCN) using a novel probabilistic greedy mechanism to predict the quality of a node. To further facilitate the combinatorial nature of the problem, GCOMB utilizes a Q-learning framework, which is made efficient through importance sampling. We perform extensive experiments on real graphs to benchmark the efficiency and efficacy of GCOMB. Our results establish that GCOMB is 100 times faster and marginally better in quality than state-of-the-art algorithms for learning combinatorial algorithms. Additionally, a case-study on the practical combinatorial problem of Influence Maximization (IM) shows GCOMB is 150 times faster than the specialized IM algorithm IMM with similar quality.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18371",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/e7532dbeff7ef901f2e70daacb3f452d-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sourav_medya",
+        "name": "Sourav Medya",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Northwestern University (India),Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 95,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18453",
+      "title": "Inductive Quantum Embedding",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Quantum logic inspired embedding (aka Quantum Embedding (QE)) of a Knowledge-Base (KB) was proposed recently by Garg:2019. It is claimed that the QE preserves the logical structure of the input KB given in the form of unary and binary predicates hierarchy. Such structure preservation allows one to perform Boolean logic style deductive reasoning directly over these embedding vectors. The original QE idea, however, is limited to the transductive (not inductive) setting. Moreover, the original QE scheme runs quite slow on real applications involving millions of entities. This paper alleviates both of these key limitations. We start by reformulating the original QE problem to allow for the induction. On the way, we also underscore some interesting analytic and geometric properties of the solution and leverage them to design a faster training scheme. As an application, we show that one can achieve state-of-the-art performance on the well-known NLP task of fine-grained entity type classification by using the inductive QE approach. Our training runs 9-times faster than the original QE scheme on this task.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18453",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/b87039703fe79778e9f140b78621d7fb-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "dinesh_garg_1",
+        "name": "Dinesh Garg",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "IBM (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 7,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "16876",
+      "title": "RNNPool: Efficient Non-linear Pooling for RAM Constrained Inference",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Standard Convolutional Neural Networks (CNNs) designed for computer vision tasks tend to have large intermediate activation maps. These require large working memory and are thus unsuitable for deployment on resource-constrained devices typically used for inference on the edge. Aggressively downsampling the images via pooling or strided convolutions can address the problem but leads to a significant decrease in accuracy due to gross aggregation of the feature map by standard pooling operators. In this paper, we introduce RNNPool, a novel pooling operator based on Recurrent Neural Networks (RNNs), that efficiently aggregates features over large patches of an image and rapidly downsamples activation maps.  Empirical evaluation indicates that an RNNPool layer can effectively replace multiple blocks in a variety of architectures such as MobileNets, DenseNet when applied to standard vision tasks like image classification and face detection. That is, RNNPool can significantly decrease computational complexity and peak memory usage for inference while retaining comparable accuracy. We use RNNPool with the standard S3FD architecture to construct a face detection method that achieves state-of-the-art MAP for tiny ARM Cortex-M4 class microcontrollers with under 256 KB of RAM. Code is released at https://github.com/Microsoft/EdgeML.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/16876",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/ebd9629fc3ae5e9f6611e2ee05a31cef-Paper.pdf",
+      "github_url": "https://github.com/Microsoft/EdgeML",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "manik_varma_3",
+        "name": "Manik Varma",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.875,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 63,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18823",
+      "title": "Online Algorithm for Unsupervised Sequential Selection with Contextual Information",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In this paper, we study Contextual Unsupervised Sequential Selection (USS), a new variant of the stochastic contextual bandits problem where the loss of an arm cannot be inferred from the observed feedback. In our setup, arms are associated with fixed costs and are ordered, forming a cascade. In each round, a context is presented, and the learner selects the arms sequentially till some depth. The total cost incurred by stopping at an arm is the sum of fixed costs of arms selected and the stochastic loss associated with the arm. The learner's goal is to learn a decision rule that maps contexts to arms with the goal of minimizing the total expected loss. The problem is challenging as we are faced with an unsupervised setting as the total loss cannot be estimated. Clearly, learning is feasible only if the optimal arm can be inferred (explicitly or implicitly) from the problem structure. We observe that learning is still possible when the problem instance satisfies the so-called 'Contextual Weak Dominance' (CWD) property. Under CWD, we propose an algorithm for the contextual USS problem and demonstrate that it has sub-linear regret. Experiments on synthetic and real datasets validate our algorithm.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18823",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/08e5d8066881eab185d0de9db3b36c7f-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "csaba_szepesvari_19",
+        "name": "Csaba Szepesvari",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "University of Alberta (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 5,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18742",
+      "title": "Your Classifier can Secretly Suffice Multi-Source Domain Adaptation",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Multi-Source Domain Adaptation (MSDA) deals with the transfer of task knowledge from multiple labeled source domains to an unlabeled target domain, under a domain-shift. Existing methods aim to minimize this domain-shift using auxiliary distribution alignment objectives. In this work, we present a different perspective to MSDA wherein deep models are observed to implicitly align the domains under label supervision. Thus, we aim to utilize implicit alignment without additional training objectives to perform adaptation. To this end, we use pseudo-labeled target samples and enforce a classifier agreement on the pseudo-labels, a process called Self-supervised Implicit Alignment (SImpAl). We find that SImpAl readily works even under category-shift among the source domains. Further, we propose classifier agreement as a cue to determine the training convergence, resulting in a simple training algorithm. We provide a thorough evaluation of our approach on five benchmarks, along with detailed insights into each component of our approach.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18742",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/3181d59d19e76e902666df5c7821259a-Paper.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "ambareesh_revanur",
+        "name": "Ambareesh Revanur",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.25,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 97,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18371",
+      "title": "GCOMB: Learning Budget-constrained Combinatorial Algorithms over Billion-sized Graphs",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "There has been an increased interest in discovering heuristics for combinatorial problems on graphs through machine learning. While existing techniques have primarily focused on obtaining high-quality solutions, scalability to billion-sized graphs has not been adequately addressed. In addition, the impact of a budget-constraint, which is necessary for many practical scenarios, remains to be studied. In this paper, we propose a framework called GCOMB to bridge these gaps. GCOMB trains a Graph Convolutional Network (GCN) using a novel probabilistic greedy mechanism to predict the quality of a node. To further facilitate the combinatorial nature of the problem, GCOMB utilizes a Q-learning framework, which is made efficient through importance sampling. We perform extensive experiments on real graphs to benchmark the efficiency and efficacy of GCOMB. Our results establish that GCOMB is 100 times faster and marginally better in quality than state-of-the-art algorithms for learning combinatorial algorithms. Additionally, a case-study on the practical combinatorial problem of Influence Maximization (IM) shows GCOMB is 150 times faster than the specialized IM algorithm IMM with similar quality.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18371",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/e7532dbeff7ef901f2e70daacb3f452d-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sayan_ranu",
+        "name": "Sayan Ranu",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 5,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 0.9999999999999998,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 95,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18453",
+      "title": "Inductive Quantum Embedding",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Quantum logic inspired embedding (aka Quantum Embedding (QE)) of a Knowledge-Base (KB) was proposed recently by Garg:2019. It is claimed that the QE preserves the logical structure of the input KB given in the form of unary and binary predicates hierarchy. Such structure preservation allows one to perform Boolean logic style deductive reasoning directly over these embedding vectors. The original QE idea, however, is limited to the transductive (not inductive) setting. Moreover, the original QE scheme runs quite slow on real applications involving millions of entities. This paper alleviates both of these key limitations. We start by reformulating the original QE problem to allow for the induction. On the way, we also underscore some interesting analytic and geometric properties of the solution and leverage them to design a faster training scheme. As an application, we show that one can achieve state-of-the-art performance on the well-known NLP task of fine-grained entity type classification by using the inductive QE approach. Our training runs 9-times faster than the original QE scheme on this task.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2020/poster/18453",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2020/file/b87039703fe79778e9f140b78621d7fb-Paper.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "hima_karanam_1",
+        "name": "Hima Karanam",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 5,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "IBM (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 0.9999999999999998,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 7,
+        "semantic_scholar_citations": 0
+      }
+    }
+  ]
+}

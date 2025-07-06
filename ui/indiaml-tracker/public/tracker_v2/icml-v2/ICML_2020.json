@@ -1,0 +1,1682 @@
+{
+  "conference": "ICML 2020",
+  "focus_country": "India",
+  "total_papers": 36,
+  "generated_at": "2025-07-06T10:37:29.323716",
+  "config": {
+    "first_author_weight": 3.0,
+    "last_author_weight": 2.0,
+    "middle_author_weight": 1.0,
+    "status_weights": {
+      "oral": 10.0,
+      "spotlight": 7.5,
+      "poster": 5.0,
+      "unknown": 1.0
+    },
+    "output_format": "json",
+    "include_review_details": true,
+    "include_citation_data": true
+  },
+  "papers": [
+    {
+      "paper_id": "5784",
+      "title": "Symbolic Network: Generalized Neural Policies for Relational MDPs",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "A Relational Markov Decision Process (RMDP) is a first-order representation to express all instances of a single probabilistic planning domain with possibly unbounded number of objects. Early work in RMDPs outputs generalized (instance-independent) first-order policies or value functions as a means to solve all instances of a domain at once. Unfortunately, this line of work met with limited success due to inherent limitations of the representation space used in such policies or value functions. Can neural models provide the missing link by easily representing more complex generalized policies, thus making them effective on all instances of a given domain? We present SymNet, the first neural approach for solving RMDPs that are expressed in the probabilistic planning language of RDDL. SymNet trains a set of shared parameters for an RDDL domain using training instances from that domain. For each instance, SymNet first converts it to an instance graph and then uses relational neural models to compute node embeddings. It then scores each ground action as a function over the first-order action symbols and node embeddings related to the action. Given a new test instance from the same domain, SymNet architecture with pre-trained parameters scores each ground action and chooses the best action. This can be accomplished in a single forward pass without any retraining on the test instance, thus implicitly representing a neural generalized policy for the whole domain. Our experiments on nine RDDL domains from IPPC demonstrate that SymNet policies are significantly better than random and sometimes even more effective than training a state-of-the-art deep reactive policy from scratch.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/5784",
+      "pdf_url": "http://proceedings.mlr.press/v119/garg20a/garg20a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sankalp_garg",
+        "name": "Sankalp Garg",
+        "name_site": "Sankalp Garg, Aniket Bajpai, Mausam",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 53,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "5830",
+      "title": "Improved Sleeping Bandits with Stochastic Action Sets and Adversarial Rewards",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In this paper, we consider the problem of sleeping bandits with stochastic action sets and adversarial rewards. In this setting, in contrast to most work in bandits, the actions may not be available at all times. For instance, some products might be out of stock in item recommendation. The best existing efficient (i.e., polynomial-time) algorithms for this problem only guarantee an $O(T^{2/3})$ upper-bound on the regret. Yet, inefficient algorithms based on EXP4 can achieve $O(\\sqrt{T})$. In this paper, we provide a new computationally efficient algorithm inspired by EXP3 satisfying a regret of order $O(\\sqrt{T})$ when the availabilities of each action $i \\in \\cA$ are independent. We then study the most general version of the problem where at each round available sets are generated from some unknown arbitrary distribution (i.e., without the independence assumption) and propose an efficient algorithm with $O(\\sqrt {2^K T})$ regret guarantee. Our theoretical results are corroborated with experimental evaluations.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/5830",
+      "pdf_url": "http://proceedings.mlr.press/v119/saha20a/saha20a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "aadirupa_saha_2",
+        "name": "Aadirupa Saha",
+        "name_site": "Aadirupa Saha, Pierre Gaillard, Michal Valko",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 27,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "5831",
+      "title": "From PAC to Instance-Optimal Sample Complexity in the Plackett-Luce Model",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We consider PAC learning a good item from $k$-subsetwise feedback sampled from a Plackett-Luce probability model, with instance-dependent sample complexity performance. In the setting where subsets of a fixed size can be tested and top-ranked feedback is made available to the learner, we give an optimal instance-dependent algorithm with a sample complexity bound for PAC best arm identification algorithm of $O\\bigg(\\frac{\\Theta_{[k]}}{k}\\sum_{i = 2}^n\\max\\Big(1,\\frac{1}{\\Delta_i^2}\\Big) \\ln\\frac{k}{\\delta}\\Big(\\ln \\frac{1}{\\Delta_i}\\Big)\\bigg)$, $\\Delta_i$ being the Plackett-Luce parameter gap between the best and the $i^{th}$ best item, and $\\Theta_{[k]}$ is the sum of the Plackett-Luce parameters for top-$k$ items. The algorithm is based on a wrapper around a PAC winner-finding algorithm with weaker performance guarantees to adapt to the hardness of the input instance. The sample complexity is also shown to be multiplicatively better depending on the length of rank-ordered feedback available in each subset-wise play. We show optimality of our algorithms with matching sample complexity lower bounds. We next address the winner-finding problem in Plackett-Luce models in the fixed-budget setting with instance dependent upper and lower bounds on the misidentification probability, of $\\Omega\\left(\\exp(-2 \\tilde \\Delta Q) \\right)$ for a given budget $Q$, where $\\tilde \\Delta$ is an explicit instance-dependent problem complexity parameter. Numerical performance results are also reported for the algorithms.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/5831",
+      "pdf_url": "http://proceedings.mlr.press/v119/saha20b/saha20b.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "aadirupa_saha_1",
+        "name": "Aadirupa Saha",
+        "name_site": "Aadirupa Saha, Aditya Gopalan",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 22,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6104",
+      "title": "Concentration bounds for CVaR estimation: The cases of light-tailed and heavy-tailed distributions",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Conditional Value-at-Risk (CVaR) is a widely used risk metric in applications such as finance. We derive concentration bounds for CVaR estimates, considering separately the cases of sub-Gaussian, light-tailed and heavy-tailed distributions. For the sub-Gaussian and light-tailed cases, we use a classical CVaR estimator based on the empirical distribution constructed from the samples. For heavy-tailed random variables, we assume a mild ‘bounded moment’ condition, and derive a concentration bound for a truncation-based estimator. Our concentration bounds exhibit exponential decay in the sample size, and are tighter than those available in the literature for the above distribution classes. To demonstrate the applicability of our concentration results, we consider the CVaR optimization problem in a multi-armed bandit setting. Specifically, we address the best CVaR-arm identification problem under a fixed budget. Using our CVaR concentration results, we derive an upper-bound on the probability of incorrect arm identification.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/6104",
+      "pdf_url": "http://proceedings.mlr.press/v119/l-a-20a/l-a-20a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prashanth_l_a__2",
+        "name": "Prashanth L.A.",
+        "name_site": "Prashanth L.A., Krishna Jagannathan, Ravi Kolla",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Madras (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 70,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6366",
+      "title": "Streaming Coresets for Symmetric Tensor Factorization",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Factorizing tensors has recently become an important optimization module in a number of machine learning pipelines, especially in latent variable models. We show how to do this efficiently in the streaming setting. Given a set of $n$ vectors, each in $\\mathbb{R}^d$, we present algorithms to select a sublinear number of these vectors as coreset, while guaranteeing that the CP decomposition of the $p$-moment tensor of the coreset approximates the corresponding decomposition of the $p$-moment tensor computed from the full data. We introduce two novel algorithmic techniques: online filtering and kernelization. Using these two, we present four algorithms that achieve different tradeoffs of coreset size, update time and working space, beating or matching various state of the art algorithms. In the case of matrices (2-ordered tensor), our online row sampling algorithm guarantees $(1 \\pm \\epsilon)$ relative error spectral approximation. We show applications of our algorithms in learning single topic modeling.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/6366",
+      "pdf_url": "http://proceedings.mlr.press/v119/chhaya20a/chhaya20a.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "rachit_chhaya_1",
+        "name": "Rachit Chhaya",
+        "name_site": "Supratim Shit, Rachit Chhaya, Jayesh Choudhari, Anirban Dasgupta",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Gandhinagar (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 14,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6377",
+      "title": "On Coresets for Regularized Regression",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We study the effect of norm based regularization on the size of coresets for regression problems. Specifically, given a matrix $ \\mathbf{A} \\in {\\mathbb{R}}^{n \\times d}$ with $n\\gg d$ and a vector $\\mathbf{b} \\in \\mathbb{R} ^ n $ and $\\lambda > 0$, we analyze the size of coresets for regularized versions of regression of the form $\\|\\mathbf{Ax}-\\mathbf{b}\\|_p^r + \\lambda\\|{\\mathbf{x}}\\|_q^s$. Prior work has shown that for ridge regression (where $p,q,r,s=2$) we can obtain a coreset that is smaller than the coreset for the unregularized counterpart i.e. least squares regression \\cite{avron2017sharper}. We show that when $r \\neq s$, no coreset for regularized regression can have size smaller than the optimal coreset of the unregularized version. The well known lasso problem falls under this category and hence does not allow a coreset smaller than the one for least squares regression. We propose a modified version of the lasso problem and obtain for it a coreset of size smaller than the least square regression. We empirically show that the modified version of lasso also induces sparsity in solution, similar to the original lasso. We also obtain smaller coresets for $\\ell_p$ regression with $\\ell_p$ regularization. We extend our methods to multi response regularized regression. Finally, we empirically demonstrate the coreset performance for the modified lasso and the $\\ell_1$ regression with $\\ell_1$ regularization.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/6377",
+      "pdf_url": "http://proceedings.mlr.press/v119/chhaya20b/chhaya20b.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "rachit_chhaya",
+        "name": "Rachit Chhaya",
+        "name_site": "Rachit Chhaya, Supratim Shit, Anirban Dasgupta",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Gandhinagar (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 16,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6406",
+      "title": "How to Solve Fair k-Center in Massive Data Models",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Fueled by massive data, important decision making is being automated with the help of algorithms, therefore, fairness in algorithms has become an especially important research topic. In this work, we design new streaming and distributed algorithms for the fair k-center problem that models fair data summarization. The streaming and distributed models of computation have an attractive feature of being able to handle massive data sets that do not fit into main memory. Our main contributions are: (a) the first distributed algorithm; which has provably constant approximation ratio and is extremely parallelizable, and (b) a two-pass streaming algorithm with a provable approximation guarantee matching the best known algorithm (which is not a streaming algorithm). Our algorithms have the advantages of being easy to implement in practice, being fast with linear running times, having very small working memory and communication, and outperforming existing algorithms on several real and synthetic data sets. To complement our distributed algorithm, we also give a hardness result for natural distributed algorithms, which holds for even the special case of k-center.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/6406",
+      "pdf_url": "http://proceedings.mlr.press/v119/chiplunkar20a/chiplunkar20a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "ashish_chiplunkar",
+        "name": "Ashish Chiplunkar",
+        "name_site": "Ashish Chiplunkar, Sagar Kale, Sivaramakrishnan Natarajan Ramamoorthy",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 51,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6411",
+      "title": "Adversarial Robustness Against the Union of Multiple Perturbation Models",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Owing to the susceptibility of deep learning systems to adversarial attacks, there has been a great deal of work in developing (both empirically and certifiably) robust classifiers. While most work has defended against a single type of attack, recent work has looked at defending against multiple perturbation models using simple aggregations of multiple attacks. However, these methods can be difficult to tune, and can easily result in imbalanced degrees of robustness to individual perturbation models, resulting in a sub-optimal worst-case loss over the union. In this work, we develop a natural generalization of the standard PGD-based procedure to incorporate multiple perturbation models into a single attack, by taking the worst-case over all steepest descent directions. This approach has the advantage of directly converging upon a trade-off between different perturbation models which minimizes the worst-case performance over the union. With this approach, we are able to train standard architectures which are simultaneously robust against $\\ell_\\infty$, $\\ell_2$, and $\\ell_1$ attacks, outperforming past approaches on the MNIST and CIFAR10 datasets and achieving adversarial accuracy of 47.0% against the union of ($\\ell_\\infty$, $\\ell_2$, $\\ell_1$) perturbations with radius = (0.03, 0.5, 12) on the latter, improving upon previous approaches which achieve 40.6% accuracy.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/6411",
+      "pdf_url": "http://proceedings.mlr.press/v119/maini20a/maini20a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "pratyush_maini",
+        "name": "Pratyush Maini",
+        "name_site": "Pratyush Maini, Eric Wong, Zico Kolter",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 196,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6528",
+      "title": "Efficient Domain Generalization via Common-Specific Low-Rank Decomposition",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Domain generalization refers to the task of training a model which generalizes to new domains that are not seen during training. We present CSD (Common Specific Decomposition), for this setting, which jointly learns a common component (which generalizes to new domains) and a domain specific component (which overfits on training domains). The domain specific components are discarded after training and only the common component is retained. The algorithm is extremely simple and involves only modifying the final linear classification layer of any given neural network architecture. We present a principled analysis to understand existing approaches, provide identifiability results of CSD, and study the effect of low-rank on domain generalization. We show that CSD either matches or beats state of the art approaches for domain generalization based on domain erasure, domain perturbed data augmentation, and meta-learning. Further diagnostics on rotated MNIST, where domains are interpretable, confirm the hypothesis that CSD successfully disentangles common and domain specific components and hence leads to better domain generalization; moreover, our code and dataset are publicly available at the following URL: \\url{https://github.com/vihari/csd}.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/6528",
+      "pdf_url": "http://proceedings.mlr.press/v119/piratla20a/piratla20a.pdf",
+      "github_url": "https://github.com/vihari/csd",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "vihari_piratla",
+        "name": "Vihari Piratla",
+        "name_site": "Vihari Piratla, Praneeth Netrapalli, Sunita Sarawagi",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology (Unknown),Microsoft (India)",
+        "countries": [
+          "Unknown",
+          "India"
+        ],
+        "country_codes": [
+          "UN",
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 247,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6791",
+      "title": "Near-optimal sample complexity bounds for learning Latent $k-$polytopes and applications to Ad-Mixtures",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Deriving Optimal bounds on Sample Complexity of Latent Variable models is an active area of research. Recently such bounds were obtained for Mixture of Gaussians \\cite{HSNCAY18}, no such results are known for Ad-mixtures, a generalization of Mixture distributions. In this paper we show that $O^*(dk/m)$ samples are sufficient to learn each of $k-$ topic vectors of LDA, a popular Ad-mixture model, with vocabulary size $d$ and $m\\in \\Omega(1)$ words per document, to any constant error in $L_1$ norm. The result is a corollary of the major contribution of this paper: the first sample complexity upper bound for the problem (introduced in \\cite{BK20}) of learning the vertices of a Latent $k-$ Polytope in $\\RR^d$, given perturbed points from it. The bound, $O^*(dk/\\beta)$, is optimal and linear in number of parameters. It applies to many stochastic models including a broad class Ad-mixtures. To demonstrate the generality of the approach we specialize the setting to Mixed Membership Stochastic Block Models(MMSB) and show for the first time that if an MMSB has $k$ blocks, the sample complexity is $O^*(k^2)$ under usual assumptions.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/6791",
+      "pdf_url": "http://proceedings.mlr.press/v119/bhattacharyya20b/bhattacharyya20b.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "chiranjib_bhattacharyya_5",
+        "name": "Chiranjib Bhattacharyya",
+        "name_site": "Chiranjib Bhattacharyya, Ravindran Kannan",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (Unknown),Microsoft (India)",
+        "countries": [
+          "Unknown",
+          "India"
+        ],
+        "country_codes": [
+          "UN",
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 3,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6819",
+      "title": "DROCC: Deep Robust One-Class Classification",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Classical approaches for one-class problems such as one-class SVM and isolation forest require careful feature engineering when applied to structured domains like images. State-of-the-art methods aim to leverage deep learning to learn appropriate features via two main approaches. The first approach based on predicting transformations (Golan & El-Yaniv, 2018; Hendrycks et al., 2019a) while successful in some domains, crucially depends on an appropriate domain-specific set of transformations that are hard to obtain in general. The second approach of minimizing a classical one-class loss on the learned final layer representations, e.g., DeepSVDD (Ruff et al., 2018) suffers from the fundamental drawback of representation collapse. In this work, we propose Deep Robust One Class Classification (DROCC) that is both applicable to most standard domains without requiring any side-information and robust to representation collapse. DROCC is based on the assumption that the points from the class of interest lie on a well-sampled, locally linear low dimensional manifold. Empirical evaluation demonstrates that DROCC is highly effective in two different one-class problem settings and on a range of real-world datasets across different domains: tabular data, images (CIFAR and ImageNet), audio, and time-series, offering up to 20% increase in accuracy over the state-of-the-art in anomaly detection. Code is available at https://github.com/microsoft/EdgeML",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/6819",
+      "pdf_url": "http://proceedings.mlr.press/v119/goyal20c/goyal20c.pdf",
+      "github_url": "https://github.com/microsoft/EdgeML",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sachin_goyal",
+        "name": "Sachin Goyal",
+        "name_site": "Sachin Goyal, Aditi Raghunathan, Moksh Jain, Harsha Vardhan Simhadri, Prateek Jain",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 222,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6835",
+      "title": "PoWER-BERT: Accelerating BERT Inference via Progressive Word-vector Elimination",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We develop a novel method, called PoWER-BERT, for improving the inference time of the popular BERT model, while maintaining the accuracy. It works by: a) exploiting redundancy pertaining to word-vectors (intermediate transformer block outputs) and eliminating the redundant vectors. b) determining which word-vectors to eliminate by developing a strategy for measuring their significance, based on the self-attention mechanism. c) learning how many word-vectors to eliminate by augmenting the BERT model and the loss function. Experiments on the standard GLUE benchmark shows that PoWER-BERT achieves up to 4.5x reduction in inference time over BERT with < 1% loss in accuracy. We show that PoWER-BERT offers significantly better trade-off between accuracy and inference time compared to prior methods. We demonstrate that our method attains up to 6.8x reduction in inference time with < 1% loss in accuracy when applied over ALBERT, a highly compressed version of BERT. The code for PoWER-BERT is publicly available at https://github.com/IBM/PoWER-BERT.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/6835",
+      "pdf_url": "http://proceedings.mlr.press/v119/goyal20a/goyal20a.pdf",
+      "github_url": "https://github.com/IBM/PoWER-BERT",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "saurabh_goyal_2",
+        "name": "Saurabh Goyal",
+        "name_site": "Saurabh Goyal, Anamitra Roy Choudhury, Saurabh Raje, Venkatesan Chakaravarthy, Yogish Sabharwal, Ashish Verma",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "IBM (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 122,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "5784",
+      "title": "Symbolic Network: Generalized Neural Policies for Relational MDPs",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "A Relational Markov Decision Process (RMDP) is a first-order representation to express all instances of a single probabilistic planning domain with possibly unbounded number of objects. Early work in RMDPs outputs generalized (instance-independent) first-order policies or value functions as a means to solve all instances of a domain at once. Unfortunately, this line of work met with limited success due to inherent limitations of the representation space used in such policies or value functions. Can neural models provide the missing link by easily representing more complex generalized policies, thus making them effective on all instances of a given domain? We present SymNet, the first neural approach for solving RMDPs that are expressed in the probabilistic planning language of RDDL. SymNet trains a set of shared parameters for an RDDL domain using training instances from that domain. For each instance, SymNet first converts it to an instance graph and then uses relational neural models to compute node embeddings. It then scores each ground action as a function over the first-order action symbols and node embeddings related to the action. Given a new test instance from the same domain, SymNet architecture with pre-trained parameters scores each ground action and chooses the best action. This can be accomplished in a single forward pass without any retraining on the test instance, thus implicitly representing a neural generalized policy for the whole domain. Our experiments on nine RDDL domains from IPPC demonstrate that SymNet policies are significantly better than random and sometimes even more effective than training a state-of-the-art deep reactive policy from scratch.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/5784",
+      "pdf_url": "http://proceedings.mlr.press/v119/garg20a/garg20a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "mausam",
+        "name": "Mausam",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 53,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "5831",
+      "title": "From PAC to Instance-Optimal Sample Complexity in the Plackett-Luce Model",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We consider PAC learning a good item from $k$-subsetwise feedback sampled from a Plackett-Luce probability model, with instance-dependent sample complexity performance. In the setting where subsets of a fixed size can be tested and top-ranked feedback is made available to the learner, we give an optimal instance-dependent algorithm with a sample complexity bound for PAC best arm identification algorithm of $O\\bigg(\\frac{\\Theta_{[k]}}{k}\\sum_{i = 2}^n\\max\\Big(1,\\frac{1}{\\Delta_i^2}\\Big) \\ln\\frac{k}{\\delta}\\Big(\\ln \\frac{1}{\\Delta_i}\\Big)\\bigg)$, $\\Delta_i$ being the Plackett-Luce parameter gap between the best and the $i^{th}$ best item, and $\\Theta_{[k]}$ is the sum of the Plackett-Luce parameters for top-$k$ items. The algorithm is based on a wrapper around a PAC winner-finding algorithm with weaker performance guarantees to adapt to the hardness of the input instance. The sample complexity is also shown to be multiplicatively better depending on the length of rank-ordered feedback available in each subset-wise play. We show optimality of our algorithms with matching sample complexity lower bounds. We next address the winner-finding problem in Plackett-Luce models in the fixed-budget setting with instance dependent upper and lower bounds on the misidentification probability, of $\\Omega\\left(\\exp(-2 \\tilde \\Delta Q) \\right)$ for a given budget $Q$, where $\\tilde \\Delta$ is an explicit instance-dependent problem complexity parameter. Numerical performance results are also reported for the algorithms.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/5831",
+      "pdf_url": "http://proceedings.mlr.press/v119/saha20b/saha20b.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "aditya_gopalan_2",
+        "name": "Aditya Gopalan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 22,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6104",
+      "title": "Concentration bounds for CVaR estimation: The cases of light-tailed and heavy-tailed distributions",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Conditional Value-at-Risk (CVaR) is a widely used risk metric in applications such as finance. We derive concentration bounds for CVaR estimates, considering separately the cases of sub-Gaussian, light-tailed and heavy-tailed distributions. For the sub-Gaussian and light-tailed cases, we use a classical CVaR estimator based on the empirical distribution constructed from the samples. For heavy-tailed random variables, we assume a mild ‘bounded moment’ condition, and derive a concentration bound for a truncation-based estimator. Our concentration bounds exhibit exponential decay in the sample size, and are tighter than those available in the literature for the above distribution classes. To demonstrate the applicability of our concentration results, we consider the CVaR optimization problem in a multi-armed bandit setting. Specifically, we address the best CVaR-arm identification problem under a fixed budget. Using our CVaR concentration results, we derive an upper-bound on the probability of incorrect arm identification.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/6104",
+      "pdf_url": "http://proceedings.mlr.press/v119/l-a-20a/l-a-20a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "ravi_kolla",
+        "name": "Ravi Kolla",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Anheuser-Busch InBev (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 70,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6366",
+      "title": "Streaming Coresets for Symmetric Tensor Factorization",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Factorizing tensors has recently become an important optimization module in a number of machine learning pipelines, especially in latent variable models. We show how to do this efficiently in the streaming setting. Given a set of $n$ vectors, each in $\\mathbb{R}^d$, we present algorithms to select a sublinear number of these vectors as coreset, while guaranteeing that the CP decomposition of the $p$-moment tensor of the coreset approximates the corresponding decomposition of the $p$-moment tensor computed from the full data. We introduce two novel algorithmic techniques: online filtering and kernelization. Using these two, we present four algorithms that achieve different tradeoffs of coreset size, update time and working space, beating or matching various state of the art algorithms. In the case of matrices (2-ordered tensor), our online row sampling algorithm guarantees $(1 \\pm \\epsilon)$ relative error spectral approximation. We show applications of our algorithms in learning single topic modeling.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/6366",
+      "pdf_url": "http://proceedings.mlr.press/v119/chhaya20a/chhaya20a.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "supratim_shit_1",
+        "name": "Supratim Shit",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Gandhinagar (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 14,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6377",
+      "title": "On Coresets for Regularized Regression",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We study the effect of norm based regularization on the size of coresets for regression problems. Specifically, given a matrix $ \\mathbf{A} \\in {\\mathbb{R}}^{n \\times d}$ with $n\\gg d$ and a vector $\\mathbf{b} \\in \\mathbb{R} ^ n $ and $\\lambda > 0$, we analyze the size of coresets for regularized versions of regression of the form $\\|\\mathbf{Ax}-\\mathbf{b}\\|_p^r + \\lambda\\|{\\mathbf{x}}\\|_q^s$. Prior work has shown that for ridge regression (where $p,q,r,s=2$) we can obtain a coreset that is smaller than the coreset for the unregularized counterpart i.e. least squares regression \\cite{avron2017sharper}. We show that when $r \\neq s$, no coreset for regularized regression can have size smaller than the optimal coreset of the unregularized version. The well known lasso problem falls under this category and hence does not allow a coreset smaller than the one for least squares regression. We propose a modified version of the lasso problem and obtain for it a coreset of size smaller than the least square regression. We empirically show that the modified version of lasso also induces sparsity in solution, similar to the original lasso. We also obtain smaller coresets for $\\ell_p$ regression with $\\ell_p$ regularization. We extend our methods to multi response regularized regression. Finally, we empirically demonstrate the coreset performance for the modified lasso and the $\\ell_1$ regression with $\\ell_1$ regularization.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/6377",
+      "pdf_url": "http://proceedings.mlr.press/v119/chhaya20b/chhaya20b.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "supratim_shit",
+        "name": "Supratim Shit",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Gandhinagar (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 16,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6406",
+      "title": "How to Solve Fair k-Center in Massive Data Models",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Fueled by massive data, important decision making is being automated with the help of algorithms, therefore, fairness in algorithms has become an especially important research topic. In this work, we design new streaming and distributed algorithms for the fair k-center problem that models fair data summarization. The streaming and distributed models of computation have an attractive feature of being able to handle massive data sets that do not fit into main memory. Our main contributions are: (a) the first distributed algorithm; which has provably constant approximation ratio and is extremely parallelizable, and (b) a two-pass streaming algorithm with a provable approximation guarantee matching the best known algorithm (which is not a streaming algorithm). Our algorithms have the advantages of being easy to implement in practice, being fast with linear running times, having very small working memory and communication, and outperforming existing algorithms on several real and synthetic data sets. To complement our distributed algorithm, we also give a hardness result for natural distributed algorithms, which holds for even the special case of k-center.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/6406",
+      "pdf_url": "http://proceedings.mlr.press/v119/chiplunkar20a/chiplunkar20a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sivaramakrishnan_natarajan_ramamoorthy",
+        "name": "Sivaramakrishnan Natarajan Ramamoorthy",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Theorem LP (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 51,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6791",
+      "title": "Near-optimal sample complexity bounds for learning Latent $k-$polytopes and applications to Ad-Mixtures",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Deriving Optimal bounds on Sample Complexity of Latent Variable models is an active area of research. Recently such bounds were obtained for Mixture of Gaussians \\cite{HSNCAY18}, no such results are known for Ad-mixtures, a generalization of Mixture distributions. In this paper we show that $O^*(dk/m)$ samples are sufficient to learn each of $k-$ topic vectors of LDA, a popular Ad-mixture model, with vocabulary size $d$ and $m\\in \\Omega(1)$ words per document, to any constant error in $L_1$ norm. The result is a corollary of the major contribution of this paper: the first sample complexity upper bound for the problem (introduced in \\cite{BK20}) of learning the vertices of a Latent $k-$ Polytope in $\\RR^d$, given perturbed points from it. The bound, $O^*(dk/\\beta)$, is optimal and linear in number of parameters. It applies to many stochastic models including a broad class Ad-mixtures. To demonstrate the generality of the approach we specialize the setting to Mixed Membership Stochastic Block Models(MMSB) and show for the first time that if an MMSB has $k$ blocks, the sample complexity is $O^*(k^2)$ under usual assumptions.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/6791",
+      "pdf_url": "http://proceedings.mlr.press/v119/bhattacharyya20b/bhattacharyya20b.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "ravindran_kannan_1",
+        "name": "Ravindran Kannan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 3,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6819",
+      "title": "DROCC: Deep Robust One-Class Classification",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Classical approaches for one-class problems such as one-class SVM and isolation forest require careful feature engineering when applied to structured domains like images. State-of-the-art methods aim to leverage deep learning to learn appropriate features via two main approaches. The first approach based on predicting transformations (Golan & El-Yaniv, 2018; Hendrycks et al., 2019a) while successful in some domains, crucially depends on an appropriate domain-specific set of transformations that are hard to obtain in general. The second approach of minimizing a classical one-class loss on the learned final layer representations, e.g., DeepSVDD (Ruff et al., 2018) suffers from the fundamental drawback of representation collapse. In this work, we propose Deep Robust One Class Classification (DROCC) that is both applicable to most standard domains without requiring any side-information and robust to representation collapse. DROCC is based on the assumption that the points from the class of interest lie on a well-sampled, locally linear low dimensional manifold. Empirical evaluation demonstrates that DROCC is highly effective in two different one-class problem settings and on a range of real-world datasets across different domains: tabular data, images (CIFAR and ImageNet), audio, and time-series, offering up to 20% increase in accuracy over the state-of-the-art in anomaly detection. Code is available at https://github.com/microsoft/EdgeML",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/6819",
+      "pdf_url": "http://proceedings.mlr.press/v119/goyal20c/goyal20c.pdf",
+      "github_url": "https://github.com/microsoft/EdgeML",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prateek_jain_14",
+        "name": "Prateek Jain",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 5,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 222,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6835",
+      "title": "PoWER-BERT: Accelerating BERT Inference via Progressive Word-vector Elimination",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We develop a novel method, called PoWER-BERT, for improving the inference time of the popular BERT model, while maintaining the accuracy. It works by: a) exploiting redundancy pertaining to word-vectors (intermediate transformer block outputs) and eliminating the redundant vectors. b) determining which word-vectors to eliminate by developing a strategy for measuring their significance, based on the self-attention mechanism. c) learning how many word-vectors to eliminate by augmenting the BERT model and the loss function. Experiments on the standard GLUE benchmark shows that PoWER-BERT achieves up to 4.5x reduction in inference time over BERT with < 1% loss in accuracy. We show that PoWER-BERT offers significantly better trade-off between accuracy and inference time compared to prior methods. We demonstrate that our method attains up to 6.8x reduction in inference time with < 1% loss in accuracy when applied over ALBERT, a highly compressed version of BERT. The code for PoWER-BERT is publicly available at https://github.com/IBM/PoWER-BERT.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/6835",
+      "pdf_url": "http://proceedings.mlr.press/v119/goyal20a/goyal20a.pdf",
+      "github_url": "https://github.com/IBM/PoWER-BERT",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "ashish_verma",
+        "name": "Ashish Verma",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 6,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "IBM (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 122,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6835",
+      "title": "PoWER-BERT: Accelerating BERT Inference via Progressive Word-vector Elimination",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We develop a novel method, called PoWER-BERT, for improving the inference time of the popular BERT model, while maintaining the accuracy. It works by: a) exploiting redundancy pertaining to word-vectors (intermediate transformer block outputs) and eliminating the redundant vectors. b) determining which word-vectors to eliminate by developing a strategy for measuring their significance, based on the self-attention mechanism. c) learning how many word-vectors to eliminate by augmenting the BERT model and the loss function. Experiments on the standard GLUE benchmark shows that PoWER-BERT achieves up to 4.5x reduction in inference time over BERT with < 1% loss in accuracy. We show that PoWER-BERT offers significantly better trade-off between accuracy and inference time compared to prior methods. We demonstrate that our method attains up to 6.8x reduction in inference time with < 1% loss in accuracy when applied over ALBERT, a highly compressed version of BERT. The code for PoWER-BERT is publicly available at https://github.com/IBM/PoWER-BERT.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/6835",
+      "pdf_url": "http://proceedings.mlr.press/v119/goyal20a/goyal20a.pdf",
+      "github_url": "https://github.com/IBM/PoWER-BERT",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "anamitra_roy_choudhury",
+        "name": "Anamitra Roy Choudhury",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "IBM (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 4.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 122,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6366",
+      "title": "Streaming Coresets for Symmetric Tensor Factorization",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Factorizing tensors has recently become an important optimization module in a number of machine learning pipelines, especially in latent variable models. We show how to do this efficiently in the streaming setting. Given a set of $n$ vectors, each in $\\mathbb{R}^d$, we present algorithms to select a sublinear number of these vectors as coreset, while guaranteeing that the CP decomposition of the $p$-moment tensor of the coreset approximates the corresponding decomposition of the $p$-moment tensor computed from the full data. We introduce two novel algorithmic techniques: online filtering and kernelization. Using these two, we present four algorithms that achieve different tradeoffs of coreset size, update time and working space, beating or matching various state of the art algorithms. In the case of matrices (2-ordered tensor), our online row sampling algorithm guarantees $(1 \\pm \\epsilon)$ relative error spectral approximation. We show applications of our algorithms in learning single topic modeling.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/6366",
+      "pdf_url": "http://proceedings.mlr.press/v119/chhaya20a/chhaya20a.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "jayesh_choudhari",
+        "name": "Jayesh Choudhari",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Gandhinagar (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.333333333333334,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 14,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6161",
+      "title": "Error-Bounded Correction of Noisy Labels",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "To collect large scale annotated data, it is inevitable to introduce label noise, i.e., incorrect class labels. To be robust against label noise, many successful methods rely on the noisy classifiers (i.e., models trained on the noisy training data) to determine whether a label is trustworthy. However, it remains unknown why this heuristic works well in practice. In this paper, we provide the first theoretical explanation for these methods. We prove that the prediction of a noisy classifier can indeed be a good indicator of whether the label of a training data is clean. Based on the theoretical result, we propose a novel algorithm that corrects the labels based on the noisy classifier prediction. The corrected labels are consistent with the true Bayesian optimal classifier with high probability. We incorporate our label correction algorithm into the training of deep neural networks and train models that achieve superior testing performance on multiple public datasets.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/6161",
+      "pdf_url": "http://proceedings.mlr.press/v119/zheng20c/zheng20c.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "aman_goswami",
+        "name": "Aman Goswami",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Bain & Company (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 171,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6835",
+      "title": "PoWER-BERT: Accelerating BERT Inference via Progressive Word-vector Elimination",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We develop a novel method, called PoWER-BERT, for improving the inference time of the popular BERT model, while maintaining the accuracy. It works by: a) exploiting redundancy pertaining to word-vectors (intermediate transformer block outputs) and eliminating the redundant vectors. b) determining which word-vectors to eliminate by developing a strategy for measuring their significance, based on the self-attention mechanism. c) learning how many word-vectors to eliminate by augmenting the BERT model and the loss function. Experiments on the standard GLUE benchmark shows that PoWER-BERT achieves up to 4.5x reduction in inference time over BERT with < 1% loss in accuracy. We show that PoWER-BERT offers significantly better trade-off between accuracy and inference time compared to prior methods. We demonstrate that our method attains up to 6.8x reduction in inference time with < 1% loss in accuracy when applied over ALBERT, a highly compressed version of BERT. The code for PoWER-BERT is publicly available at https://github.com/IBM/PoWER-BERT.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/6835",
+      "pdf_url": "http://proceedings.mlr.press/v119/goyal20a/goyal20a.pdf",
+      "github_url": "https://github.com/IBM/PoWER-BERT",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "saurabh_raje",
+        "name": "Saurabh Raje",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "IBM (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 122,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "5784",
+      "title": "Symbolic Network: Generalized Neural Policies for Relational MDPs",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "A Relational Markov Decision Process (RMDP) is a first-order representation to express all instances of a single probabilistic planning domain with possibly unbounded number of objects. Early work in RMDPs outputs generalized (instance-independent) first-order policies or value functions as a means to solve all instances of a domain at once. Unfortunately, this line of work met with limited success due to inherent limitations of the representation space used in such policies or value functions. Can neural models provide the missing link by easily representing more complex generalized policies, thus making them effective on all instances of a given domain? We present SymNet, the first neural approach for solving RMDPs that are expressed in the probabilistic planning language of RDDL. SymNet trains a set of shared parameters for an RDDL domain using training instances from that domain. For each instance, SymNet first converts it to an instance graph and then uses relational neural models to compute node embeddings. It then scores each ground action as a function over the first-order action symbols and node embeddings related to the action. Given a new test instance from the same domain, SymNet architecture with pre-trained parameters scores each ground action and chooses the best action. This can be accomplished in a single forward pass without any retraining on the test instance, thus implicitly representing a neural generalized policy for the whole domain. Our experiments on nine RDDL domains from IPPC demonstrate that SymNet policies are significantly better than random and sometimes even more effective than training a state-of-the-art deep reactive policy from scratch.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/5784",
+      "pdf_url": "http://proceedings.mlr.press/v119/garg20a/garg20a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "aniket_bajpai",
+        "name": "Aniket Bajpai",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 53,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6104",
+      "title": "Concentration bounds for CVaR estimation: The cases of light-tailed and heavy-tailed distributions",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Conditional Value-at-Risk (CVaR) is a widely used risk metric in applications such as finance. We derive concentration bounds for CVaR estimates, considering separately the cases of sub-Gaussian, light-tailed and heavy-tailed distributions. For the sub-Gaussian and light-tailed cases, we use a classical CVaR estimator based on the empirical distribution constructed from the samples. For heavy-tailed random variables, we assume a mild ‘bounded moment’ condition, and derive a concentration bound for a truncation-based estimator. Our concentration bounds exhibit exponential decay in the sample size, and are tighter than those available in the literature for the above distribution classes. To demonstrate the applicability of our concentration results, we consider the CVaR optimization problem in a multi-armed bandit setting. Specifically, we address the best CVaR-arm identification problem under a fixed budget. Using our CVaR concentration results, we derive an upper-bound on the probability of incorrect arm identification.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/6104",
+      "pdf_url": "http://proceedings.mlr.press/v119/l-a-20a/l-a-20a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "krishna_jagannathan",
+        "name": "Krishna Jagannathan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Madras (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 70,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6237",
+      "title": "Convex Calibrated Surrogates for the Multi-Label F-Measure",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The F-measure is a widely used performance measure for multi-label classification, where multiple labels can be active in an instance simultaneously (e.g. in image tagging, multiple tags can be active in any image). In particular, the F-measure explicitly balances recall (fraction of active labels predicted to be active) and precision (fraction of labels predicted to be active that are actually so), both of which are important in evaluating the overall performance of a multi-label classifier. As with most discrete prediction problems, however, directly optimizing the F-measure is computationally hard. In this paper, we explore the question of designing convex surrogate losses that are calibrated for the F-measure – specifically, that have the property that minimizing the surrogate loss yields (in the limit of sufficient data) a Bayes optimal multi-label classifier for the F-measure. We show that the F-measure for an $s$-label problem, when viewed as a $2^s \\times 2^s$ loss matrix, has rank at most $s^2+1$, and apply a result of Ramaswamy et al. (2014) to design a family of convex calibrated surrogates for the F-measure. The resulting surrogate risk minimization algorithms can be viewed as decomposing the multi-label F-measure learning problem into $s^2+1$ binary class probability estimation problems. We also provide a quantitative regret transfer bound for our surrogates, which allows any regret guarantees for the binary problems to be transferred to regret guarantees for the overall F-measure problem, and discuss a connection with the algorithm of Dembczynski et al. (2013). Our experiments confirm our theoretical findings.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/6237",
+      "pdf_url": "http://proceedings.mlr.press/v119/zhang20w/zhang20w.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "harish_guruprasad_ramaswamy",
+        "name": "Harish Guruprasad Ramaswamy",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Madras (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 26,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6298",
+      "title": "What is Local Optimality in Nonconvex-Nonconcave Minimax Optimization?",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Minimax optimization has found extensive applications in modern machine learning, in settings such as generative adversarial networks (GANs), adversarial training and multi-agent reinforcement learning. As most of these applications involve continuous nonconvex-nonconcave formulations, a very basic question arises—“what is a proper definition of local optima?” Most previous work answers this question using classical notions of equilibria from simultaneous games, where the min-player and the max-player act simultaneously. In contrast, most applications in machine learning, including GANs and adversarial training, correspond to sequential games, where the order of which player acts first is crucial (since minimax is in general not equal to maximin due to the nonconvex-nonconcave nature of the problems). The main contribution of this paper is to propose a proper mathematical definition of local optimality for this sequential setting—local minimax, as well as to present its properties and existence results. Finally, we establish a strong connection to a basic local search algorithm—gradient descent ascent (GDA): under mild conditions, all stable limit points of GDA are exactly local minimax points up to some degenerate points.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/6298",
+      "pdf_url": "http://proceedings.mlr.press/v119/jin20e/jin20e.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "praneeth_netrapalli_6",
+        "name": "Praneeth Netrapalli",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 414,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6377",
+      "title": "On Coresets for Regularized Regression",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We study the effect of norm based regularization on the size of coresets for regression problems. Specifically, given a matrix $ \\mathbf{A} \\in {\\mathbb{R}}^{n \\times d}$ with $n\\gg d$ and a vector $\\mathbf{b} \\in \\mathbb{R} ^ n $ and $\\lambda > 0$, we analyze the size of coresets for regularized versions of regression of the form $\\|\\mathbf{Ax}-\\mathbf{b}\\|_p^r + \\lambda\\|{\\mathbf{x}}\\|_q^s$. Prior work has shown that for ridge regression (where $p,q,r,s=2$) we can obtain a coreset that is smaller than the coreset for the unregularized counterpart i.e. least squares regression \\cite{avron2017sharper}. We show that when $r \\neq s$, no coreset for regularized regression can have size smaller than the optimal coreset of the unregularized version. The well known lasso problem falls under this category and hence does not allow a coreset smaller than the one for least squares regression. We propose a modified version of the lasso problem and obtain for it a coreset of size smaller than the least square regression. We empirically show that the modified version of lasso also induces sparsity in solution, similar to the original lasso. We also obtain smaller coresets for $\\ell_p$ regression with $\\ell_p$ regularization. We extend our methods to multi response regularized regression. Finally, we empirically demonstrate the coreset performance for the modified lasso and the $\\ell_1$ regression with $\\ell_1$ regularization.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/6377",
+      "pdf_url": "http://proceedings.mlr.press/v119/chhaya20b/chhaya20b.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "anirban_dasgupta",
+        "name": "Anirban Dasgupta",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Gandhinagar (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 16,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6528",
+      "title": "Efficient Domain Generalization via Common-Specific Low-Rank Decomposition",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Domain generalization refers to the task of training a model which generalizes to new domains that are not seen during training. We present CSD (Common Specific Decomposition), for this setting, which jointly learns a common component (which generalizes to new domains) and a domain specific component (which overfits on training domains). The domain specific components are discarded after training and only the common component is retained. The algorithm is extremely simple and involves only modifying the final linear classification layer of any given neural network architecture. We present a principled analysis to understand existing approaches, provide identifiability results of CSD, and study the effect of low-rank on domain generalization. We show that CSD either matches or beats state of the art approaches for domain generalization based on domain erasure, domain perturbed data augmentation, and meta-learning. Further diagnostics on rotated MNIST, where domains are interpretable, confirm the hypothesis that CSD successfully disentangles common and domain specific components and hence leads to better domain generalization; moreover, our code and dataset are publicly available at the following URL: \\url{https://github.com/vihari/csd}.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/6528",
+      "pdf_url": "http://proceedings.mlr.press/v119/piratla20a/piratla20a.pdf",
+      "github_url": "https://github.com/vihari/csd",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "praneeth_netrapalli_5",
+        "name": "Praneeth Netrapalli",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 247,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6819",
+      "title": "DROCC: Deep Robust One-Class Classification",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Classical approaches for one-class problems such as one-class SVM and isolation forest require careful feature engineering when applied to structured domains like images. State-of-the-art methods aim to leverage deep learning to learn appropriate features via two main approaches. The first approach based on predicting transformations (Golan & El-Yaniv, 2018; Hendrycks et al., 2019a) while successful in some domains, crucially depends on an appropriate domain-specific set of transformations that are hard to obtain in general. The second approach of minimizing a classical one-class loss on the learned final layer representations, e.g., DeepSVDD (Ruff et al., 2018) suffers from the fundamental drawback of representation collapse. In this work, we propose Deep Robust One Class Classification (DROCC) that is both applicable to most standard domains without requiring any side-information and robust to representation collapse. DROCC is based on the assumption that the points from the class of interest lie on a well-sampled, locally linear low dimensional manifold. Empirical evaluation demonstrates that DROCC is highly effective in two different one-class problem settings and on a range of real-world datasets across different domains: tabular data, images (CIFAR and ImageNet), audio, and time-series, offering up to 20% increase in accuracy over the state-of-the-art in anomaly detection. Code is available at https://github.com/microsoft/EdgeML",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/6819",
+      "pdf_url": "http://proceedings.mlr.press/v119/goyal20c/goyal20c.pdf",
+      "github_url": "https://github.com/microsoft/EdgeML",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "moksh_jain",
+        "name": "Moksh Jain",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "National Institute of Technology, Karnataka (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 222,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6835",
+      "title": "PoWER-BERT: Accelerating BERT Inference via Progressive Word-vector Elimination",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We develop a novel method, called PoWER-BERT, for improving the inference time of the popular BERT model, while maintaining the accuracy. It works by: a) exploiting redundancy pertaining to word-vectors (intermediate transformer block outputs) and eliminating the redundant vectors. b) determining which word-vectors to eliminate by developing a strategy for measuring their significance, based on the self-attention mechanism. c) learning how many word-vectors to eliminate by augmenting the BERT model and the loss function. Experiments on the standard GLUE benchmark shows that PoWER-BERT achieves up to 4.5x reduction in inference time over BERT with < 1% loss in accuracy. We show that PoWER-BERT offers significantly better trade-off between accuracy and inference time compared to prior methods. We demonstrate that our method attains up to 6.8x reduction in inference time with < 1% loss in accuracy when applied over ALBERT, a highly compressed version of BERT. The code for PoWER-BERT is publicly available at https://github.com/IBM/PoWER-BERT.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/6835",
+      "pdf_url": "http://proceedings.mlr.press/v119/goyal20a/goyal20a.pdf",
+      "github_url": "https://github.com/IBM/PoWER-BERT",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "venkatesan_chakaravarthy",
+        "name": "Venkatesan Chakaravarthy",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "IBM (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 122,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6366",
+      "title": "Streaming Coresets for Symmetric Tensor Factorization",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Factorizing tensors has recently become an important optimization module in a number of machine learning pipelines, especially in latent variable models. We show how to do this efficiently in the streaming setting. Given a set of $n$ vectors, each in $\\mathbb{R}^d$, we present algorithms to select a sublinear number of these vectors as coreset, while guaranteeing that the CP decomposition of the $p$-moment tensor of the coreset approximates the corresponding decomposition of the $p$-moment tensor computed from the full data. We introduce two novel algorithmic techniques: online filtering and kernelization. Using these two, we present four algorithms that achieve different tradeoffs of coreset size, update time and working space, beating or matching various state of the art algorithms. In the case of matrices (2-ordered tensor), our online row sampling algorithm guarantees $(1 \\pm \\epsilon)$ relative error spectral approximation. We show applications of our algorithms in learning single topic modeling.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/6366",
+      "pdf_url": "http://proceedings.mlr.press/v119/chhaya20a/chhaya20a.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "anirban_dasgupta_1",
+        "name": "Anirban Dasgupta",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Gandhinagar (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 14,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6819",
+      "title": "DROCC: Deep Robust One-Class Classification",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Classical approaches for one-class problems such as one-class SVM and isolation forest require careful feature engineering when applied to structured domains like images. State-of-the-art methods aim to leverage deep learning to learn appropriate features via two main approaches. The first approach based on predicting transformations (Golan & El-Yaniv, 2018; Hendrycks et al., 2019a) while successful in some domains, crucially depends on an appropriate domain-specific set of transformations that are hard to obtain in general. The second approach of minimizing a classical one-class loss on the learned final layer representations, e.g., DeepSVDD (Ruff et al., 2018) suffers from the fundamental drawback of representation collapse. In this work, we propose Deep Robust One Class Classification (DROCC) that is both applicable to most standard domains without requiring any side-information and robust to representation collapse. DROCC is based on the assumption that the points from the class of interest lie on a well-sampled, locally linear low dimensional manifold. Empirical evaluation demonstrates that DROCC is highly effective in two different one-class problem settings and on a range of real-world datasets across different domains: tabular data, images (CIFAR and ImageNet), audio, and time-series, offering up to 20% increase in accuracy over the state-of-the-art in anomaly detection. Code is available at https://github.com/microsoft/EdgeML",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/6819",
+      "pdf_url": "http://proceedings.mlr.press/v119/goyal20c/goyal20c.pdf",
+      "github_url": "https://github.com/microsoft/EdgeML",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "harsha_vardhan_simhadri_1",
+        "name": "Harsha Vardhan Simhadri",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.25,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 222,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "6835",
+      "title": "PoWER-BERT: Accelerating BERT Inference via Progressive Word-vector Elimination",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We develop a novel method, called PoWER-BERT, for improving the inference time of the popular BERT model, while maintaining the accuracy. It works by: a) exploiting redundancy pertaining to word-vectors (intermediate transformer block outputs) and eliminating the redundant vectors. b) determining which word-vectors to eliminate by developing a strategy for measuring their significance, based on the self-attention mechanism. c) learning how many word-vectors to eliminate by augmenting the BERT model and the loss function. Experiments on the standard GLUE benchmark shows that PoWER-BERT achieves up to 4.5x reduction in inference time over BERT with < 1% loss in accuracy. We show that PoWER-BERT offers significantly better trade-off between accuracy and inference time compared to prior methods. We demonstrate that our method attains up to 6.8x reduction in inference time with < 1% loss in accuracy when applied over ALBERT, a highly compressed version of BERT. The code for PoWER-BERT is publicly available at https://github.com/IBM/PoWER-BERT.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2020/poster/6835",
+      "pdf_url": "http://proceedings.mlr.press/v119/goyal20a/goyal20a.pdf",
+      "github_url": "https://github.com/IBM/PoWER-BERT",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "yogish_sabharwal",
+        "name": "Yogish Sabharwal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 5,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "IBM (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 0.9999999999999998,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 122,
+        "semantic_scholar_citations": 0
+      }
+    }
+  ]
+}

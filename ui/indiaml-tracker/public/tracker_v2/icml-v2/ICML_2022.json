@@ -1,0 +1,1362 @@
+{
+  "conference": "ICML 2022",
+  "focus_country": "India",
+  "total_papers": 29,
+  "generated_at": "2025-07-06T10:37:29.321216",
+  "config": {
+    "first_author_weight": 3.0,
+    "last_author_weight": 2.0,
+    "middle_author_weight": 1.0,
+    "status_weights": {
+      "oral": 10.0,
+      "spotlight": 7.5,
+      "poster": 5.0,
+      "unknown": 1.0
+    },
+    "output_format": "json",
+    "include_review_details": true,
+    "include_citation_data": true
+  },
+  "papers": [
+    {
+      "paper_id": "16785",
+      "title": "A Study on the Ramanujan Graph Property of Winning Lottery Tickets",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Winning lottery tickets refer to sparse subgraphs of deep neural networks which have classification accuracy close to the original dense networks. Resilient connectivity properties of such sparse networks play an important role in their performance. The attempt is to identify a sparse and yet well-connected network to guarantee unhindered information flow. Connectivity in a graph is best characterized by its spectral expansion property. Ramanujan graphs are robust expanders which lead to sparse but highly-connected networks, and thus aid in studying the winning tickets. A feedforward neural network consists of a sequence of bipartite graphs representing its layers. We analyze the Ramanujan graph property of such bipartite layers in terms of their spectral characteristics using the Cheeger’s inequality for irregular graphs. It is empirically observed that the winning ticket networks preserve the Ramanujan graph property and achieve a high accuracy even when the layers are sparse. Accuracy and robustness to noise start declining as many of the layers lose the property. Next we find a robust winning lottery ticket by pruning individual layers while retaining their respective Ramanujan graph property. This strategy is observed to improve the performance of existing network pruning algorithms.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2022/poster/16785",
+      "pdf_url": "https://proceedings.mlr.press/v162/pal22a/pal22a.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "bithika_pal",
+        "name": "Bithika Pal",
+        "name_site": "Bithika Pal, Arindam Biswas, Sudeshna Kolay, Pabitra Mitra, Biswajit Basu",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Kharagpur (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 22.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 16,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "16891",
+      "title": "VarScene: A Deep Generative Model for Realistic Scene Graph Synthesis",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Scene graphs are powerful abstractions that capture relationships between objects in images by modeling objects as nodes and relationships as edges. Generation of realistic synthetic scene graphs has applications like scene synthesis and data augmentation for supervised learning. Existing graph generative models are predominantly targeted toward molecular graphs, leveraging the limited vocabulary of atoms and bonds and also the well-defined semantics of chemical compounds. In contrast, scene graphs have much larger object and relation vocabularies, and their semantics are latent. To address this challenge, we propose a variational autoencoder for scene graphs, which is optimized for the maximum mean discrepancy (MMD) between the ground truth scene graph distribution and distribution of the generated scene graphs. Our method views a scene graph as a collection of star graphs and encodes it into a latent representation of the underlying stars. The decoder generates scene graphs by learning to sample the component stars and edges between them. Our experiments show that our method is able to mimic the underlying scene graph generative process more accurately than several state-of-the-art baselines.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2022/poster/16891",
+      "pdf_url": "https://proceedings.mlr.press/v162/verma22b/verma22b.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "tathagat_verma",
+        "name": "Tathagat Verma",
+        "name_site": "Tathagat Verma, Abir De, Yateesh Agrawal, Vishwa Vinay, Soumen Chakrabarti",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 22.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 11,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "17601",
+      "title": "Actor-Critic based Improper Reinforcement Learning",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "We consider an improper reinforcement learning setting where a learner is given $M$ base controllers for an unknown Markov decision process, and wishes to combine them optimally to produce a potentially new controller that can outperform each of the base ones. This can be useful in tuning across controllers, learnt possibly in mismatched or simulated environments, to obtain a good controller for a given target environment with relatively few trials. Towards this, we propose two algorithms: (1) a Policy Gradient-based approach; and (2) an algorithm that can switch between a simple Actor-Critic (AC) based scheme and a Natural Actor-Critic (NAC) scheme depending on the available information. Both algorithms operate over a class of improper mixtures of the given controllers. For the first case, we derive convergence rate guarantees assuming access to a gradient oracle. For the AC-based approach we provide convergence rate guarantees to a stationary point in the basic AC case and to a global optimum in the NAC case. Numerical results on (i) the standard control theoretic benchmark of stabilizing an inverted pendulum; and (ii) a constrained queueing task show that our improper policy optimization algorithm can stabilize the system even when the base policies at its disposal are unstable.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2022/poster/17601",
+      "pdf_url": "https://proceedings.mlr.press/v162/zaki22a/zaki22a.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "mohammadi_zaki",
+        "name": "Mohammadi Zaki",
+        "name_site": "Mohammadi Zaki, Avi Mohan, Aditya Gopalan, Shie Mannor",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 22.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 1,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "17769",
+      "title": "A Closer Look at Smoothness in Domain Adversarial Training",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Domain adversarial training has been ubiquitous for achieving invariant representations and is used widely for various domain adaptation tasks. In recent times, methods converging to smooth optima have shown improved generalization for supervised learning tasks like classification. In this work, we analyze the effect of smoothness enhancing formulations on domain adversarial training, the objective of which is a combination of task loss (eg. classification, regression etc.) and adversarial terms. We find that converging to a smooth minima with respect to (w.r.t.) task loss stabilizes the adversarial training leading to better performance on target domain. In contrast to task loss, our analysis shows that converging to smooth minima w.r.t. adversarial loss leads to sub-optimal generalization on the target domain. Based on the analysis, we introduce the Smooth Domain Adversarial Training (SDAT) procedure, which effectively enhances the performance of existing domain adversarial methods for both classification and object detection tasks. Our analysis also provides insight into the extensive usage of SGD over Adam in the community for domain adversarial training.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2022/poster/17769",
+      "pdf_url": "https://proceedings.mlr.press/v162/rangwani22a/rangwani22a.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "harsh_rangwani",
+        "name": "Harsh Rangwani",
+        "name_site": "Harsh Rangwani, Sumukh K Aithal, Mayank Mishra, Arihant Jain, Venkatesh Babu Radhakrishnan",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (Unknown),PES University (India)",
+        "countries": [
+          "Unknown",
+          "India"
+        ],
+        "country_codes": [
+          "UN",
+          "IN"
+        ]
+      },
+      "sort_score": 22.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 157,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "17779",
+      "title": "Balancing Discriminability and Transferability for Source-Free Domain Adaptation",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Conventional domain adaptation (DA) techniques aim to improve domain transferability by learning domain-invariant representations; while concurrently preserving the task-discriminability knowledge gathered from the labeled source data. However, the requirement of simultaneous access to labeled source and unlabeled target renders them unsuitable for the challenging source-free DA setting. The trivial solution of realizing an effective original to generic domain mapping improves transferability but degrades task discriminability. Upon analyzing the hurdles from both theoretical and empirical standpoints, we derive novel insights to show that a mixup between original and corresponding translated generic samples enhances the discriminability-transferability trade-off while duly respecting the privacy-oriented source-free setting. A simple but effective realization of the proposed insights on top of the existing source-free DA approaches yields state-of-the-art performance with faster convergence. Beyond single-source, we also outperform multi-source prior-arts across both classification and semantic segmentation benchmarks.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2022/poster/17779",
+      "pdf_url": "https://proceedings.mlr.press/v162/kundu22a/kundu22a.pdf",
+      "github_url": "",
+      "total_authors": 7,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "jogendra_nath_kundu",
+        "name": "Jogendra Nath Kundu",
+        "name_site": "Jogendra Nath Kundu, Akshay Kulkarni, Suvaansh Bhambri, Deepesh Mehta, Shreyas Kulkarni, Varun Jampani, Venkatesh Babu Radhakrishnan",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 22.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 107,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18299",
+      "title": "Matching Learned Causal Effects of Neural Networks with Domain Priors",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "A trained neural network can be interpreted as a structural causal model (SCM) that provides the effect of changing input variables on the model’s output. However, if training data contains both causal and correlational relationships, a model that optimizes prediction accuracy may not necessarily learn the true causal relationships between input and output variables. On the other hand, expert users often have prior knowledge of the causal relationship between certain input variables and output from domain knowledge. Therefore, we propose a regularization method that aligns the learned causal effects of a neural network with domain priors, including both direct and total causal effects. We show that this approach can generalize to different kinds of domain priors, including monotonicity of causal effect of an input variable on output or zero causal effect of a variable on output for purposes of fairness. Our experiments on twelve benchmark datasets show its utility in regularizing a neural network model to maintain desired causal effects, without compromising on accuracy. Importantly, we also show that a model thus trained is robust and gets improved accuracy on noisy inputs.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2022/poster/18299",
+      "pdf_url": "https://proceedings.mlr.press/v162/kancheti22a/kancheti22a.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sai_srinivas_kancheti",
+        "name": "Sai Srinivas Kancheti",
+        "name_site": "Sai Srinivas Kancheti, Gowtham Reddy Abbavaram, Vineeth N Balasubramanian, Amit Sharma",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Hyderabad (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 22.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 15,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "16785",
+      "title": "A Study on the Ramanujan Graph Property of Winning Lottery Tickets",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Winning lottery tickets refer to sparse subgraphs of deep neural networks which have classification accuracy close to the original dense networks. Resilient connectivity properties of such sparse networks play an important role in their performance. The attempt is to identify a sparse and yet well-connected network to guarantee unhindered information flow. Connectivity in a graph is best characterized by its spectral expansion property. Ramanujan graphs are robust expanders which lead to sparse but highly-connected networks, and thus aid in studying the winning tickets. A feedforward neural network consists of a sequence of bipartite graphs representing its layers. We analyze the Ramanujan graph property of such bipartite layers in terms of their spectral characteristics using the Cheeger’s inequality for irregular graphs. It is empirically observed that the winning ticket networks preserve the Ramanujan graph property and achieve a high accuracy even when the layers are sparse. Accuracy and robustness to noise start declining as many of the layers lose the property. Next we find a robust winning lottery ticket by pruning individual layers while retaining their respective Ramanujan graph property. This strategy is observed to improve the performance of existing network pruning algorithms.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2022/poster/16785",
+      "pdf_url": "https://proceedings.mlr.press/v162/pal22a/pal22a.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "biswajit_basu",
+        "name": "Biswajit Basu",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 5,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Trinity College Dublin (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 16,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "16853",
+      "title": "FedNew: A Communication-Efficient and Privacy-Preserving Newton-Type Method for Federated Learning",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Newton-type methods are popular in federated learning due to their fast convergence. Still, they suffer from two main issues, namely: low communication efficiency and low privacy due to the requirement of sending Hessian information from clients to parameter server (PS). In this work, we introduced a novel framework called FedNew in which there is no need to transmit Hessian information from clients to PS, hence resolving the bottleneck to improve communication efficiency. In addition, FedNew hides the gradient information and results in a privacy-preserving approach compared to the existing state-of-the-art. The core novel idea in FedNew is to introduce a two level framework, and alternate between updating the inverse Hessian-gradient product using only one alternating direction method of multipliers (ADMM) step and then performing the global model update using Newton’s method. Though only one ADMM pass is used to approximate the inverse Hessian-gradient product at each iteration, we develop a novel theoretical approach to show the converging behavior of FedNew for convex problems. Additionally, a significant reduction in communication overhead is achieved by utilizing stochastic quantization. Numerical results using real datasets show the superiority of FedNew compared to existing methods in terms of communication costs.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2022/poster/16853",
+      "pdf_url": "https://proceedings.mlr.press/v162/elgabli22a/elgabli22a.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "vaneet_aggarwal",
+        "name": "Vaneet Aggarwal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 6,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Purdue University (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 48,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "16891",
+      "title": "VarScene: A Deep Generative Model for Realistic Scene Graph Synthesis",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Scene graphs are powerful abstractions that capture relationships between objects in images by modeling objects as nodes and relationships as edges. Generation of realistic synthetic scene graphs has applications like scene synthesis and data augmentation for supervised learning. Existing graph generative models are predominantly targeted toward molecular graphs, leveraging the limited vocabulary of atoms and bonds and also the well-defined semantics of chemical compounds. In contrast, scene graphs have much larger object and relation vocabularies, and their semantics are latent. To address this challenge, we propose a variational autoencoder for scene graphs, which is optimized for the maximum mean discrepancy (MMD) between the ground truth scene graph distribution and distribution of the generated scene graphs. Our method views a scene graph as a collection of star graphs and encodes it into a latent representation of the underlying stars. The decoder generates scene graphs by learning to sample the component stars and edges between them. Our experiments show that our method is able to mimic the underlying scene graph generative process more accurately than several state-of-the-art baselines.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2022/poster/16891",
+      "pdf_url": "https://proceedings.mlr.press/v162/verma22b/verma22b.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "soumen_chakrabarti",
+        "name": "Soumen Chakrabarti",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 5,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 11,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "17601",
+      "title": "Actor-Critic based Improper Reinforcement Learning",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "We consider an improper reinforcement learning setting where a learner is given $M$ base controllers for an unknown Markov decision process, and wishes to combine them optimally to produce a potentially new controller that can outperform each of the base ones. This can be useful in tuning across controllers, learnt possibly in mismatched or simulated environments, to obtain a good controller for a given target environment with relatively few trials. Towards this, we propose two algorithms: (1) a Policy Gradient-based approach; and (2) an algorithm that can switch between a simple Actor-Critic (AC) based scheme and a Natural Actor-Critic (NAC) scheme depending on the available information. Both algorithms operate over a class of improper mixtures of the given controllers. For the first case, we derive convergence rate guarantees assuming access to a gradient oracle. For the AC-based approach we provide convergence rate guarantees to a stationary point in the basic AC case and to a global optimum in the NAC case. Numerical results on (i) the standard control theoretic benchmark of stabilizing an inverted pendulum; and (ii) a constrained queueing task show that our improper policy optimization algorithm can stabilize the system even when the base policies at its disposal are unstable.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2022/poster/17601",
+      "pdf_url": "https://proceedings.mlr.press/v162/zaki22a/zaki22a.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "shie_mannor_28",
+        "name": "Shie Mannor",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Technion (India),NVIDIA (Unknown)",
+        "countries": [
+          "India",
+          "Unknown"
+        ],
+        "country_codes": [
+          "UN",
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 1,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "17779",
+      "title": "Balancing Discriminability and Transferability for Source-Free Domain Adaptation",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Conventional domain adaptation (DA) techniques aim to improve domain transferability by learning domain-invariant representations; while concurrently preserving the task-discriminability knowledge gathered from the labeled source data. However, the requirement of simultaneous access to labeled source and unlabeled target renders them unsuitable for the challenging source-free DA setting. The trivial solution of realizing an effective original to generic domain mapping improves transferability but degrades task discriminability. Upon analyzing the hurdles from both theoretical and empirical standpoints, we derive novel insights to show that a mixup between original and corresponding translated generic samples enhances the discriminability-transferability trade-off while duly respecting the privacy-oriented source-free setting. A simple but effective realization of the proposed insights on top of the existing source-free DA approaches yields state-of-the-art performance with faster convergence. Beyond single-source, we also outperform multi-source prior-arts across both classification and semantic segmentation benchmarks.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2022/poster/17779",
+      "pdf_url": "https://proceedings.mlr.press/v162/kundu22a/kundu22a.pdf",
+      "github_url": "",
+      "total_authors": 7,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "venkatesh_babu_radhakrishnan_2",
+        "name": "Venkatesh Babu Radhakrishnan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 7,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 107,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18299",
+      "title": "Matching Learned Causal Effects of Neural Networks with Domain Priors",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "A trained neural network can be interpreted as a structural causal model (SCM) that provides the effect of changing input variables on the model’s output. However, if training data contains both causal and correlational relationships, a model that optimizes prediction accuracy may not necessarily learn the true causal relationships between input and output variables. On the other hand, expert users often have prior knowledge of the causal relationship between certain input variables and output from domain knowledge. Therefore, we propose a regularization method that aligns the learned causal effects of a neural network with domain priors, including both direct and total causal effects. We show that this approach can generalize to different kinds of domain priors, including monotonicity of causal effect of an input variable on output or zero causal effect of a variable on output for purposes of fairness. Our experiments on twelve benchmark datasets show its utility in regularizing a neural network model to maintain desired causal effects, without compromising on accuracy. Importantly, we also show that a model thus trained is robust and gets improved accuracy on noisy inputs.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2022/poster/18299",
+      "pdf_url": "https://proceedings.mlr.press/v162/kancheti22a/kancheti22a.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "amit_sharma_2",
+        "name": "Amit Sharma",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 15,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "17779",
+      "title": "Balancing Discriminability and Transferability for Source-Free Domain Adaptation",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Conventional domain adaptation (DA) techniques aim to improve domain transferability by learning domain-invariant representations; while concurrently preserving the task-discriminability knowledge gathered from the labeled source data. However, the requirement of simultaneous access to labeled source and unlabeled target renders them unsuitable for the challenging source-free DA setting. The trivial solution of realizing an effective original to generic domain mapping improves transferability but degrades task discriminability. Upon analyzing the hurdles from both theoretical and empirical standpoints, we derive novel insights to show that a mixup between original and corresponding translated generic samples enhances the discriminability-transferability trade-off while duly respecting the privacy-oriented source-free setting. A simple but effective realization of the proposed insights on top of the existing source-free DA approaches yields state-of-the-art performance with faster convergence. Beyond single-source, we also outperform multi-source prior-arts across both classification and semantic segmentation benchmarks.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2022/poster/17779",
+      "pdf_url": "https://proceedings.mlr.press/v162/kundu22a/kundu22a.pdf",
+      "github_url": "",
+      "total_authors": 7,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "akshay_r_kulkarni",
+        "name": "Akshay R Kulkarni",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 6.25,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 107,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "16891",
+      "title": "VarScene: A Deep Generative Model for Realistic Scene Graph Synthesis",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Scene graphs are powerful abstractions that capture relationships between objects in images by modeling objects as nodes and relationships as edges. Generation of realistic synthetic scene graphs has applications like scene synthesis and data augmentation for supervised learning. Existing graph generative models are predominantly targeted toward molecular graphs, leveraging the limited vocabulary of atoms and bonds and also the well-defined semantics of chemical compounds. In contrast, scene graphs have much larger object and relation vocabularies, and their semantics are latent. To address this challenge, we propose a variational autoencoder for scene graphs, which is optimized for the maximum mean discrepancy (MMD) between the ground truth scene graph distribution and distribution of the generated scene graphs. Our method views a scene graph as a collection of star graphs and encodes it into a latent representation of the underlying stars. The decoder generates scene graphs by learning to sample the component stars and edges between them. Our experiments show that our method is able to mimic the underlying scene graph generative process more accurately than several state-of-the-art baselines.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2022/poster/16891",
+      "pdf_url": "https://proceedings.mlr.press/v162/verma22b/verma22b.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "abir_de_2",
+        "name": "Abir De",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 5.625,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 11,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "17611",
+      "title": "Strategic Representation",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Humans have come to rely on machines for reducing excessive information to manageable representations. But this reliance can be abused – strategic machines might craft representations that manipulate their users. How can a user make good choices based on strategic representations? We formalize this as a learning problem, and pursue algorithms for decision-making that are robust to manipulation. In our main setting of interest, the system represents attributes of an item to the user, who then decides whether or not to consume. We model this interaction through the lens of strategic classification (Hardt et al. 2016), reversed: the user, who learns, plays first; and the system, which responds, plays second. The system must respond with representations that reveal ‘nothing but the truth’ but need not reveal the entire truth. Thus, the user faces the problem of learning set functions under strategic subset selection, which presents distinct algorithmic and statistical challenges. Our main result is a learning algorithm that minimizes error despite strategic representations, and our theoretical analysis sheds light on the trade-off between learning effort and susceptibility to manipulation.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2022/poster/17611",
+      "pdf_url": "https://proceedings.mlr.press/v162/nair22a/nair22a.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "ganesh_ghalme_1",
+        "name": "Ganesh Ghalme",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Hyderabad (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 5.000000000000001,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 6,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "17779",
+      "title": "Balancing Discriminability and Transferability for Source-Free Domain Adaptation",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Conventional domain adaptation (DA) techniques aim to improve domain transferability by learning domain-invariant representations; while concurrently preserving the task-discriminability knowledge gathered from the labeled source data. However, the requirement of simultaneous access to labeled source and unlabeled target renders them unsuitable for the challenging source-free DA setting. The trivial solution of realizing an effective original to generic domain mapping improves transferability but degrades task discriminability. Upon analyzing the hurdles from both theoretical and empirical standpoints, we derive novel insights to show that a mixup between original and corresponding translated generic samples enhances the discriminability-transferability trade-off while duly respecting the privacy-oriented source-free setting. A simple but effective realization of the proposed insights on top of the existing source-free DA approaches yields state-of-the-art performance with faster convergence. Beyond single-source, we also outperform multi-source prior-arts across both classification and semantic segmentation benchmarks.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2022/poster/17779",
+      "pdf_url": "https://proceedings.mlr.press/v162/kundu22a/kundu22a.pdf",
+      "github_url": "",
+      "total_authors": 7,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "suvaansh_bhambri",
+        "name": "Suvaansh Bhambri",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 5.000000000000001,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 107,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18299",
+      "title": "Matching Learned Causal Effects of Neural Networks with Domain Priors",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "A trained neural network can be interpreted as a structural causal model (SCM) that provides the effect of changing input variables on the model’s output. However, if training data contains both causal and correlational relationships, a model that optimizes prediction accuracy may not necessarily learn the true causal relationships between input and output variables. On the other hand, expert users often have prior knowledge of the causal relationship between certain input variables and output from domain knowledge. Therefore, we propose a regularization method that aligns the learned causal effects of a neural network with domain priors, including both direct and total causal effects. We show that this approach can generalize to different kinds of domain priors, including monotonicity of causal effect of an input variable on output or zero causal effect of a variable on output for purposes of fairness. Our experiments on twelve benchmark datasets show its utility in regularizing a neural network model to maintain desired causal effects, without compromising on accuracy. Importantly, we also show that a model thus trained is robust and gets improved accuracy on noisy inputs.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2022/poster/18299",
+      "pdf_url": "https://proceedings.mlr.press/v162/kancheti22a/kancheti22a.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "abbavaram_gowtham_reddy",
+        "name": "Abbavaram Gowtham Reddy",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Hyderabad (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 5.000000000000001,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 15,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "16503",
+      "title": "On the Hidden Biases of Policy Mirror Ascent in Continuous Action Spaces",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "We focus on parameterized policy search for reinforcement learning over continuous action spaces. Typically, one assumes the score function associated with a policy is bounded, which {fails to hold even for Gaussian policies. } To properly address this issue, one must introduce an exploration tolerance parameter to quantify the region in which it is bounded. Doing so incurs a persistent bias that appears in the attenuation rate of the expected policy gradient norm, which is inversely proportional to the radius of the action space. To mitigate this hidden bias, heavy-tailed policy parameterizations may be used, which exhibit a bounded score function, but doing so can cause instability in algorithmic updates. To address these issues, in this work, we study the convergence of policy gradient algorithms under heavy-tailed parameterizations, which we propose to stabilize with a combination of mirror ascent-type updates and gradient tracking. Our main theoretical contribution is the establishment that this scheme converges with constant batch sizes, whereas prior works require these parameters to respectively shrink to null or grow to infinity. Experimentally, this scheme under a heavy-tailed policy parameterization yields improved reward accumulation across a variety of settings as compared with standard benchmarks.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2022/poster/16503",
+      "pdf_url": "https://proceedings.mlr.press/v162/bedi22a/bedi22a.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "anjaly_parayil",
+        "name": "Anjaly Parayil",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 4.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 20,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "16785",
+      "title": "A Study on the Ramanujan Graph Property of Winning Lottery Tickets",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Winning lottery tickets refer to sparse subgraphs of deep neural networks which have classification accuracy close to the original dense networks. Resilient connectivity properties of such sparse networks play an important role in their performance. The attempt is to identify a sparse and yet well-connected network to guarantee unhindered information flow. Connectivity in a graph is best characterized by its spectral expansion property. Ramanujan graphs are robust expanders which lead to sparse but highly-connected networks, and thus aid in studying the winning tickets. A feedforward neural network consists of a sequence of bipartite graphs representing its layers. We analyze the Ramanujan graph property of such bipartite layers in terms of their spectral characteristics using the Cheeger’s inequality for irregular graphs. It is empirically observed that the winning ticket networks preserve the Ramanujan graph property and achieve a high accuracy even when the layers are sparse. Accuracy and robustness to noise start declining as many of the layers lose the property. Next we find a robust winning lottery ticket by pruning individual layers while retaining their respective Ramanujan graph property. This strategy is observed to improve the performance of existing network pruning algorithms.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2022/poster/16785",
+      "pdf_url": "https://proceedings.mlr.press/v162/pal22a/pal22a.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sudeshna_kolay",
+        "name": "Sudeshna Kolay",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Kharagpur (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.75,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 16,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "16891",
+      "title": "VarScene: A Deep Generative Model for Realistic Scene Graph Synthesis",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Scene graphs are powerful abstractions that capture relationships between objects in images by modeling objects as nodes and relationships as edges. Generation of realistic synthetic scene graphs has applications like scene synthesis and data augmentation for supervised learning. Existing graph generative models are predominantly targeted toward molecular graphs, leveraging the limited vocabulary of atoms and bonds and also the well-defined semantics of chemical compounds. In contrast, scene graphs have much larger object and relation vocabularies, and their semantics are latent. To address this challenge, we propose a variational autoencoder for scene graphs, which is optimized for the maximum mean discrepancy (MMD) between the ground truth scene graph distribution and distribution of the generated scene graphs. Our method views a scene graph as a collection of star graphs and encodes it into a latent representation of the underlying stars. The decoder generates scene graphs by learning to sample the component stars and edges between them. Our experiments show that our method is able to mimic the underlying scene graph generative process more accurately than several state-of-the-art baselines.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2022/poster/16891",
+      "pdf_url": "https://proceedings.mlr.press/v162/verma22b/verma22b.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "yateesh_agrawal",
+        "name": "Yateesh Agrawal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.75,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 11,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "17779",
+      "title": "Balancing Discriminability and Transferability for Source-Free Domain Adaptation",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Conventional domain adaptation (DA) techniques aim to improve domain transferability by learning domain-invariant representations; while concurrently preserving the task-discriminability knowledge gathered from the labeled source data. However, the requirement of simultaneous access to labeled source and unlabeled target renders them unsuitable for the challenging source-free DA setting. The trivial solution of realizing an effective original to generic domain mapping improves transferability but degrades task discriminability. Upon analyzing the hurdles from both theoretical and empirical standpoints, we derive novel insights to show that a mixup between original and corresponding translated generic samples enhances the discriminability-transferability trade-off while duly respecting the privacy-oriented source-free setting. A simple but effective realization of the proposed insights on top of the existing source-free DA approaches yields state-of-the-art performance with faster convergence. Beyond single-source, we also outperform multi-source prior-arts across both classification and semantic segmentation benchmarks.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2022/poster/17779",
+      "pdf_url": "https://proceedings.mlr.press/v162/kundu22a/kundu22a.pdf",
+      "github_url": "",
+      "total_authors": 7,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "deepesh_mehta",
+        "name": "Deepesh Mehta",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.75,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 107,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "16723",
+      "title": "Sharpened Quasi-Newton Methods: Faster Superlinear Rate and Larger Local Convergence Neighborhood",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Non-asymptotic analysis of quasi-Newton methods have received a lot of attention recently. In particular, several works have established a non-asymptotic superlinear rate of $$\\mathcal{O}((1/\\sqrt{t})^t)$$ for the (classic) BFGS method by exploiting the fact that its error of Newton direction approximation approaches zero. Moreover, a greedy variant of the BFGS method was recently proposed which accelerates the convergence of BFGS by directly approximating the Hessian matrix, instead of Newton direction, and achieves a fast local quadratic convergence rate. Alas, the local quadratic convergence of Greedy-BFGS requires way more updates compared to the number of iterations that BFGS requires for a local superlinear rate. This is due to the fact that in Greedy-BFGS the Hessian is directly approximated and the Newton direction approximation may not be as accurate as the one for BFGS. In this paper, we close this gap and present a novel BFGS method that has the best of two worlds. More precisely, it leverages the approximation ideas of both BFGS and Greedy-BFGS to properly approximate both the Newton direction and the Hessian matrix. Our theoretical results show that our method out-performs both BFGS and Greedy-BFGS in terms of convergence rate, while it reaches its quadratic convergence rate with fewer steps compared to Greedy-BFGS. Numerical experiments on various datasets also confirm our theoretical findings.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2022/poster/16723",
+      "pdf_url": "https://proceedings.mlr.press/v162/jin22b/jin22b.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "ketan_rajawat_1",
+        "name": "Ketan Rajawat",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Kanpur (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5000000000000004,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 15,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "17601",
+      "title": "Actor-Critic based Improper Reinforcement Learning",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "We consider an improper reinforcement learning setting where a learner is given $M$ base controllers for an unknown Markov decision process, and wishes to combine them optimally to produce a potentially new controller that can outperform each of the base ones. This can be useful in tuning across controllers, learnt possibly in mismatched or simulated environments, to obtain a good controller for a given target environment with relatively few trials. Towards this, we propose two algorithms: (1) a Policy Gradient-based approach; and (2) an algorithm that can switch between a simple Actor-Critic (AC) based scheme and a Natural Actor-Critic (NAC) scheme depending on the available information. Both algorithms operate over a class of improper mixtures of the given controllers. For the first case, we derive convergence rate guarantees assuming access to a gradient oracle. For the AC-based approach we provide convergence rate guarantees to a stationary point in the basic AC case and to a global optimum in the NAC case. Numerical results on (i) the standard control theoretic benchmark of stabilizing an inverted pendulum; and (ii) a constrained queueing task show that our improper policy optimization algorithm can stabilize the system even when the base policies at its disposal are unstable.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2022/poster/17601",
+      "pdf_url": "https://proceedings.mlr.press/v162/zaki22a/zaki22a.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "aditya_gopalan_3",
+        "name": "Aditya Gopalan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5000000000000004,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 1,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "17779",
+      "title": "Balancing Discriminability and Transferability for Source-Free Domain Adaptation",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Conventional domain adaptation (DA) techniques aim to improve domain transferability by learning domain-invariant representations; while concurrently preserving the task-discriminability knowledge gathered from the labeled source data. However, the requirement of simultaneous access to labeled source and unlabeled target renders them unsuitable for the challenging source-free DA setting. The trivial solution of realizing an effective original to generic domain mapping improves transferability but degrades task discriminability. Upon analyzing the hurdles from both theoretical and empirical standpoints, we derive novel insights to show that a mixup between original and corresponding translated generic samples enhances the discriminability-transferability trade-off while duly respecting the privacy-oriented source-free setting. A simple but effective realization of the proposed insights on top of the existing source-free DA approaches yields state-of-the-art performance with faster convergence. Beyond single-source, we also outperform multi-source prior-arts across both classification and semantic segmentation benchmarks.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2022/poster/17779",
+      "pdf_url": "https://proceedings.mlr.press/v162/kundu22a/kundu22a.pdf",
+      "github_url": "",
+      "total_authors": 7,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "shreyas_anand_kulkarni",
+        "name": "Shreyas Anand Kulkarni",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 5,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5000000000000004,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 107,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "18299",
+      "title": "Matching Learned Causal Effects of Neural Networks with Domain Priors",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "A trained neural network can be interpreted as a structural causal model (SCM) that provides the effect of changing input variables on the model’s output. However, if training data contains both causal and correlational relationships, a model that optimizes prediction accuracy may not necessarily learn the true causal relationships between input and output variables. On the other hand, expert users often have prior knowledge of the causal relationship between certain input variables and output from domain knowledge. Therefore, we propose a regularization method that aligns the learned causal effects of a neural network with domain priors, including both direct and total causal effects. We show that this approach can generalize to different kinds of domain priors, including monotonicity of causal effect of an input variable on output or zero causal effect of a variable on output for purposes of fairness. Our experiments on twelve benchmark datasets show its utility in regularizing a neural network model to maintain desired causal effects, without compromising on accuracy. Importantly, we also show that a model thus trained is robust and gets improved accuracy on noisy inputs.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2022/poster/18299",
+      "pdf_url": "https://proceedings.mlr.press/v162/kancheti22a/kancheti22a.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "vineeth_n_balasubramanian_1",
+        "name": "Vineeth N Balasubramanian",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Hyderabad (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5000000000000004,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 15,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "16785",
+      "title": "A Study on the Ramanujan Graph Property of Winning Lottery Tickets",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Winning lottery tickets refer to sparse subgraphs of deep neural networks which have classification accuracy close to the original dense networks. Resilient connectivity properties of such sparse networks play an important role in their performance. The attempt is to identify a sparse and yet well-connected network to guarantee unhindered information flow. Connectivity in a graph is best characterized by its spectral expansion property. Ramanujan graphs are robust expanders which lead to sparse but highly-connected networks, and thus aid in studying the winning tickets. A feedforward neural network consists of a sequence of bipartite graphs representing its layers. We analyze the Ramanujan graph property of such bipartite layers in terms of their spectral characteristics using the Cheeger’s inequality for irregular graphs. It is empirically observed that the winning ticket networks preserve the Ramanujan graph property and achieve a high accuracy even when the layers are sparse. Accuracy and robustness to noise start declining as many of the layers lose the property. Next we find a robust winning lottery ticket by pruning individual layers while retaining their respective Ramanujan graph property. This strategy is observed to improve the performance of existing network pruning algorithms.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2022/poster/16785",
+      "pdf_url": "https://proceedings.mlr.press/v162/pal22a/pal22a.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "pabitra_mitra",
+        "name": "Pabitra Mitra",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Kharagpur (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.875,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 16,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "16891",
+      "title": "VarScene: A Deep Generative Model for Realistic Scene Graph Synthesis",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Scene graphs are powerful abstractions that capture relationships between objects in images by modeling objects as nodes and relationships as edges. Generation of realistic synthetic scene graphs has applications like scene synthesis and data augmentation for supervised learning. Existing graph generative models are predominantly targeted toward molecular graphs, leveraging the limited vocabulary of atoms and bonds and also the well-defined semantics of chemical compounds. In contrast, scene graphs have much larger object and relation vocabularies, and their semantics are latent. To address this challenge, we propose a variational autoencoder for scene graphs, which is optimized for the maximum mean discrepancy (MMD) between the ground truth scene graph distribution and distribution of the generated scene graphs. Our method views a scene graph as a collection of star graphs and encodes it into a latent representation of the underlying stars. The decoder generates scene graphs by learning to sample the component stars and edges between them. Our experiments show that our method is able to mimic the underlying scene graph generative process more accurately than several state-of-the-art baselines.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2022/poster/16891",
+      "pdf_url": "https://proceedings.mlr.press/v162/verma22b/verma22b.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "vishwa_vinay",
+        "name": "Vishwa Vinay",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Adobe (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.875,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 11,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "17769",
+      "title": "A Closer Look at Smoothness in Domain Adversarial Training",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Domain adversarial training has been ubiquitous for achieving invariant representations and is used widely for various domain adaptation tasks. In recent times, methods converging to smooth optima have shown improved generalization for supervised learning tasks like classification. In this work, we analyze the effect of smoothness enhancing formulations on domain adversarial training, the objective of which is a combination of task loss (eg. classification, regression etc.) and adversarial terms. We find that converging to a smooth minima with respect to (w.r.t.) task loss stabilizes the adversarial training leading to better performance on target domain. In contrast to task loss, our analysis shows that converging to smooth minima w.r.t. adversarial loss leads to sub-optimal generalization on the target domain. Based on the analysis, we introduce the Smooth Domain Adversarial Training (SDAT) procedure, which effectively enhances the performance of existing domain adversarial methods for both classification and object detection tasks. Our analysis also provides insight into the extensive usage of SGD over Adam in the community for domain adversarial training.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2022/poster/17769",
+      "pdf_url": "https://proceedings.mlr.press/v162/rangwani22a/rangwani22a.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "arihant_jain",
+        "name": "Arihant Jain",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (Unknown),Amazon (India)",
+        "countries": [
+          "Unknown",
+          "India"
+        ],
+        "country_codes": [
+          "UN",
+          "IN"
+        ]
+      },
+      "sort_score": 1.875,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 157,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "17779",
+      "title": "Balancing Discriminability and Transferability for Source-Free Domain Adaptation",
+      "status": "Spotlight",
+      "normalized_status": "spotlight",
+      "abstract": "Conventional domain adaptation (DA) techniques aim to improve domain transferability by learning domain-invariant representations; while concurrently preserving the task-discriminability knowledge gathered from the labeled source data. However, the requirement of simultaneous access to labeled source and unlabeled target renders them unsuitable for the challenging source-free DA setting. The trivial solution of realizing an effective original to generic domain mapping improves transferability but degrades task discriminability. Upon analyzing the hurdles from both theoretical and empirical standpoints, we derive novel insights to show that a mixup between original and corresponding translated generic samples enhances the discriminability-transferability trade-off while duly respecting the privacy-oriented source-free setting. A simple but effective realization of the proposed insights on top of the existing source-free DA approaches yields state-of-the-art performance with faster convergence. Beyond single-source, we also outperform multi-source prior-arts across both classification and semantic segmentation benchmarks.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2022/poster/17779",
+      "pdf_url": "https://proceedings.mlr.press/v162/kundu22a/kundu22a.pdf",
+      "github_url": "",
+      "total_authors": 7,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "varun_jampani_1",
+        "name": "Varun Jampani",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 6,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Google (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.2499999999999998,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 107,
+        "semantic_scholar_citations": 0
+      }
+    }
+  ]
+}

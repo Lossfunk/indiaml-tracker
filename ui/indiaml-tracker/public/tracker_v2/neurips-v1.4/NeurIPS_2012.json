@@ -1,0 +1,206 @@
+{
+  "conference": "NeurIPS 2012",
+  "focus_country": "India",
+  "total_papers": 4,
+  "generated_at": "2025-07-06T10:39:19.872861",
+  "config": {
+    "first_author_weight": 3.0,
+    "last_author_weight": 2.0,
+    "middle_author_weight": 1.0,
+    "status_weights": {
+      "oral": 10.0,
+      "spotlight": 7.5,
+      "poster": 5.0,
+      "unknown": 1.0
+    },
+    "output_format": "json",
+    "include_review_details": true,
+    "include_citation_data": true
+  },
+  "papers": [
+    {
+      "paper_id": "c5952c230c",
+      "title": "Classification Calibration Dimension for General Multiclass Losses",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We study consistency properties of surrogate loss functions for general multiclass classification problems, defined by a general loss matrix. We extend the notion of classification calibration, which has been studied for binary and multiclass 0-1 classification problems (and for certain other specific learning problems), to the general multiclass setting, and derive necessary and sufficient conditions for a surrogate loss to be classification calibrated with respect to a loss matrix in this setting. We then introduce the notion of \\emph{classification calibration dimension} of a multiclass loss matrix, which measures the smallest",
+      "tldr": null,
+      "site_url": "https://papers.nips.cc/paper_files/paper/2012/hash/24146db4eb48c718b84cae0a0799dcfc-Abstract.html",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2012/file/24146db4eb48c718b84cae0a0799dcfc-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "harish_g__ramaswamy",
+        "name": "Harish G. Ramaswamy",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 41,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "e8af2904c4",
+      "title": "On the connections between saliency and tracking",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "A model connecting visual tracking and saliency has recently been proposed. This model is based on the saliency hypothesis for tracking which postulates that tracking is achieved by the top-down tuning, based on target features, of discriminant center-surround saliency mechanisms over time. In this work, we identify three main predictions that must hold if the hypothesis were true: 1) tracking reliability should be larger for salient than for non-salient targets, 2) tracking reliability should have a dependence on the defining variables of saliency, namely feature contrast and distractor heterogeneity, and must replicate the dependence of saliency on these variables, and 3) saliency and tracking can be implemented with common low level neural mechanisms. We confirm that the first two predictions hold by reporting results from a set of human behavior studies on the connection between saliency and tracking. We also show that the third prediction holds by constructing a common neurophysiologically plausible architecture that can computationally solve both saliency and tracking. This architecture is fully compliant with the standard physiological models of V1 and MT, and with what is known about attentional control in area LIP, while explaining the results of the human behavior experiments.",
+      "tldr": null,
+      "site_url": "https://papers.nips.cc/paper_files/paper/2012/hash/2dace78f80bc92e6d7493423d729448e-Abstract.html",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2012/file/2dace78f80bc92e6d7493423d729448e-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "vijay_mahadevan_2",
+        "name": "Vijay Mahadevan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Yahoo! (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 29,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "f5316d0cd6",
+      "title": "Supervised Learning with Similarity Functions",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We address the problem of general supervised learning when data can only be accessed through an (indefinite) similarity function between data points. Existing work on learning with indefinite kernels has concentrated solely on binary/multiclass classification problems. We propose a model that is generic enough to handle any supervised learning task and also subsumes the model previously proposed for classification. We give a ''goodness'' criterion for similarity functions w.r.t. a given supervised learning task and then adapt a well-known landmarking technique to provide efficient algorithms for supervised learning using ''good'' similarity functions. We demonstrate the effectiveness of our model on three important supervised learning problems: a) real-valued regression, b) ordinal regression and c) ranking where we show that our method guarantees bounded generalization error. Furthermore, for the case of real-valued regression, we give a natural goodness definition that, when used in conjunction with a recent result in sparse vector recovery, guarantees a sparse predictor with bounded generalization error. Finally, we report results of our learning algorithms on regression and ordinal regression tasks using non-PSD similarity functions and demonstrate the effectiveness of our algorithms, especially that of the sparse landmark selection algorithm that achieves significantly higher accuracies than the baseline methods while offering reduced computational costs.",
+      "tldr": null,
+      "site_url": "https://papers.nips.cc/paper_files/paper/2012/hash/202cb962ac59075b964b07152d234b70-Abstract.html",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2012/file/202cb962ac59075b964b07152d234b70-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "purushottam_kar_2",
+        "name": "Purushottam Kar",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 27,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "c5952c230c",
+      "title": "Classification Calibration Dimension for General Multiclass Losses",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We study consistency properties of surrogate loss functions for general multiclass classification problems, defined by a general loss matrix. We extend the notion of classification calibration, which has been studied for binary and multiclass 0-1 classification problems (and for certain other specific learning problems), to the general multiclass setting, and derive necessary and sufficient conditions for a surrogate loss to be classification calibrated with respect to a loss matrix in this setting. We then introduce the notion of \\emph{classification calibration dimension} of a multiclass loss matrix, which measures the smallest",
+      "tldr": null,
+      "site_url": "https://papers.nips.cc/paper_files/paper/2012/hash/24146db4eb48c718b84cae0a0799dcfc-Abstract.html",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2012/file/24146db4eb48c718b84cae0a0799dcfc-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "shivani_agarwal_1",
+        "name": "Shivani Agarwal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 41,
+        "semantic_scholar_citations": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,436 @@
+{
+  "conference": "ICML 2016",
+  "focus_country": "India",
+  "total_papers": 9,
+  "generated_at": "2025-07-06T10:37:29.327446",
+  "config": {
+    "first_author_weight": 3.0,
+    "last_author_weight": 2.0,
+    "middle_author_weight": 1.0,
+    "status_weights": {
+      "oral": 10.0,
+      "spotlight": 7.5,
+      "poster": 5.0,
+      "unknown": 1.0
+    },
+    "output_format": "json",
+    "include_review_details": true,
+    "include_citation_data": true
+  },
+  "papers": [
+    {
+      "paper_id": "1c8ea92951",
+      "title": "Non-negative Matrix Factorization under Heavy Noise",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The Noisy Non-negative Matrix factorization (NMF) is: given a data matrix A (d x n), find non-negative matrices B;C (d x k, k x n respy.) so that A = BC +N, where N is a noise matrix. Existing polynomial time algorithms with proven error guarantees require EACH column N_⋅j to have l1 norm much smaller than ||(BC)_⋅j ||_1, which could be very restrictive. In important applications of NMF such as Topic Modeling as well as theoretical noise models (e.g. Gaussian with high sigma), almost EVERY column of N_.j violates this condition. We introduce the heavy noise model which only requires the average noise over large subsets of columns to be small. We initiate a study of Noisy NMF under the heavy noise model. We show that our noise model subsumes noise models of theoretical and practical interest (for e.g. Gaussian noise of maximum possible sigma). We then devise an algorithm TSVDNMF which under certain assumptions on B,C, solves the problem under heavy noise. Our error guarantees match those of previous algorithms. Our running time of O(k.(d+n)^2) is substantially better than the O(d.n^3) for the previous best. Our assumption on B is weaker than the “Separability” assumption made by all previous results. We provide empirical justification for our assumptions on C. We also provide the first proof of identifiability (uniqueness of B) for noisy NMF which is not based on separability and does not use hard to check geometric conditions. Our algorithm outperforms earlier polynomial time algorithms both in time and error, particularly in the presence of high noise.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v48/bhattacharya16.html",
+      "pdf_url": "http://proceedings.mlr.press/v48/bhattacharya16.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "chiranjib_bhattacharya",
+        "name": "Chiranjib Bhattacharya",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 15,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "98d42b4fef",
+      "title": "Optimal Classification with Multivariate Losses",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Multivariate loss functions are extensively employed in several prediction tasks arising in Information Retrieval. Often, the goal in the tasks is to minimize expected loss when retrieving relevant items from a presented set of items, where the expectation is with respect to the joint distribution over item sets. Our key result is that for most multivariate losses, the expected loss is provably optimized by sorting the items by the conditional probability of label being positive and then selecting top k items. Such a result was previously known only for the F-measure. Leveraging on the optimality characterization, we give an algorithm for estimating optimal predictions in practice with runtime quadratic in size of item sets for many losses. We provide empirical results on benchmark datasets, comparing the proposed algorithm to state-of-the-art methods for optimizing multivariate losses.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v48/natarajan16.html",
+      "pdf_url": "http://proceedings.mlr.press/v48/natarajan16.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "nagarajan_natarajan_1",
+        "name": "Nagarajan Natarajan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 16,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "a90b6f9ba2",
+      "title": "On collapsed representation of hierarchical Completely Random Measures",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The aim of the paper is to provide an exact approach for generating a Poisson process sampled from a hierarchical CRM, without having to instantiate the infinitely many atoms of the random measures. We use completely random measures (CRM) and hierarchical CRM to define a prior for Poisson processes. We derive the marginal distribution of the resultant point process, when the underlying CRM is marginalized out. Using well known properties unique to Poisson processes, we were able to derive an exact approach for instantiating a Poisson process with a hierarchical CRM prior. Furthermore, we derive Gibbs sampling strategies for hierarchical CRM models based on Chinese restaurant franchise sampling scheme. As an example, we present the sum of generalized gamma process (SGGP), and show its application in topic-modelling. We show that one can determine the power-law behaviour of the topics and words in a Bayesian fashion, by defining a prior on the parameters of SGGP.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v48/pandey16.html",
+      "pdf_url": "http://proceedings.mlr.press/v48/pandey16.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "gaurav_pandey_1",
+        "name": "Gaurav Pandey",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 1,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "1c8ea92951",
+      "title": "Non-negative Matrix Factorization under Heavy Noise",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The Noisy Non-negative Matrix factorization (NMF) is: given a data matrix A (d x n), find non-negative matrices B;C (d x k, k x n respy.) so that A = BC +N, where N is a noise matrix. Existing polynomial time algorithms with proven error guarantees require EACH column N_⋅j to have l1 norm much smaller than ||(BC)_⋅j ||_1, which could be very restrictive. In important applications of NMF such as Topic Modeling as well as theoretical noise models (e.g. Gaussian with high sigma), almost EVERY column of N_.j violates this condition. We introduce the heavy noise model which only requires the average noise over large subsets of columns to be small. We initiate a study of Noisy NMF under the heavy noise model. We show that our noise model subsumes noise models of theoretical and practical interest (for e.g. Gaussian noise of maximum possible sigma). We then devise an algorithm TSVDNMF which under certain assumptions on B,C, solves the problem under heavy noise. Our error guarantees match those of previous algorithms. Our running time of O(k.(d+n)^2) is substantially better than the O(d.n^3) for the previous best. Our assumption on B is weaker than the “Separability” assumption made by all previous results. We provide empirical justification for our assumptions on C. We also provide the first proof of identifiability (uniqueness of B) for noisy NMF which is not based on separability and does not use hard to check geometric conditions. Our algorithm outperforms earlier polynomial time algorithms both in time and error, particularly in the presence of high noise.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v48/bhattacharya16.html",
+      "pdf_url": "http://proceedings.mlr.press/v48/bhattacharya16.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "jagdeep_pani",
+        "name": "Jagdeep Pani",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 15,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "38fdde6038",
+      "title": "Low-rank tensor completion: a Riemannian manifold preconditioning approach",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We propose a novel Riemannian manifold preconditioning approach for the tensor completion problem with rank constraint. A novel Riemannian metric or inner product is proposed that exploits the least-squares structure of the cost function and takes into account the structured symmetry that exists in Tucker decomposition. The specific metric allows to use the versatile framework of Riemannian optimization on quotient manifolds to develop preconditioned nonlinear conjugate gradient and stochastic gradient descent algorithms in batch and online setups, respectively. Concrete matrix representations of various optimization-related ingredients are listed. Numerical comparisons suggest that our proposed algorithms robustly outperform state-of-the-art algorithms across different synthetic and real-world datasets.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v48/kasai16.html",
+      "pdf_url": "http://proceedings.mlr.press/v48/kasai16.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "bamdev_mishra",
+        "name": "Bamdev Mishra",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Amazon (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 153,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "8a5a7e9123",
+      "title": "Robust Random Cut Forest Based Anomaly Detection on Streams",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In this paper we focus on the anomaly detection problem for dynamic data streams through the lens of random cut forests. We investigate a robust random cut data structure that can be used as a sketch or synopsis of the input stream. We provide a plausible definition of non-parametric anomalies based on the influence of an unseen point on the remainder of the data, i.e., the externality imposed by that point. We show how the sketch can be efficiently updated in a dynamic data stream. We demonstrate the viability of the algorithm on publicly available real data.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v48/guha16.html",
+      "pdf_url": "http://proceedings.mlr.press/v48/guha16.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "okke_schrijvers",
+        "name": "Okke Schrijvers",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Stanford University (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 458,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "a90b6f9ba2",
+      "title": "On collapsed representation of hierarchical Completely Random Measures",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The aim of the paper is to provide an exact approach for generating a Poisson process sampled from a hierarchical CRM, without having to instantiate the infinitely many atoms of the random measures. We use completely random measures (CRM) and hierarchical CRM to define a prior for Poisson processes. We derive the marginal distribution of the resultant point process, when the underlying CRM is marginalized out. Using well known properties unique to Poisson processes, we were able to derive an exact approach for instantiating a Poisson process with a hierarchical CRM prior. Furthermore, we derive Gibbs sampling strategies for hierarchical CRM models based on Chinese restaurant franchise sampling scheme. As an example, we present the sum of generalized gamma process (SGGP), and show its application in topic-modelling. We show that one can determine the power-law behaviour of the topics and words in a Bayesian fashion, by defining a prior on the parameters of SGGP.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v48/pandey16.html",
+      "pdf_url": "http://proceedings.mlr.press/v48/pandey16.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "ambedkar_dukkipati_2",
+        "name": "Ambedkar Dukkipati",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 1,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "1c8ea92951",
+      "title": "Non-negative Matrix Factorization under Heavy Noise",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The Noisy Non-negative Matrix factorization (NMF) is: given a data matrix A (d x n), find non-negative matrices B;C (d x k, k x n respy.) so that A = BC +N, where N is a noise matrix. Existing polynomial time algorithms with proven error guarantees require EACH column N_⋅j to have l1 norm much smaller than ||(BC)_⋅j ||_1, which could be very restrictive. In important applications of NMF such as Topic Modeling as well as theoretical noise models (e.g. Gaussian with high sigma), almost EVERY column of N_.j violates this condition. We introduce the heavy noise model which only requires the average noise over large subsets of columns to be small. We initiate a study of Noisy NMF under the heavy noise model. We show that our noise model subsumes noise models of theoretical and practical interest (for e.g. Gaussian noise of maximum possible sigma). We then devise an algorithm TSVDNMF which under certain assumptions on B,C, solves the problem under heavy noise. Our error guarantees match those of previous algorithms. Our running time of O(k.(d+n)^2) is substantially better than the O(d.n^3) for the previous best. Our assumption on B is weaker than the “Separability” assumption made by all previous results. We provide empirical justification for our assumptions on C. We also provide the first proof of identifiability (uniqueness of B) for noisy NMF which is not based on separability and does not use hard to check geometric conditions. Our algorithm outperforms earlier polynomial time algorithms both in time and error, particularly in the presence of high noise.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v48/bhattacharya16.html",
+      "pdf_url": "http://proceedings.mlr.press/v48/bhattacharya16.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "navin_goyal_1",
+        "name": "Navin Goyal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.333333333333334,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 15,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "1c8ea92951",
+      "title": "Non-negative Matrix Factorization under Heavy Noise",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The Noisy Non-negative Matrix factorization (NMF) is: given a data matrix A (d x n), find non-negative matrices B;C (d x k, k x n respy.) so that A = BC +N, where N is a noise matrix. Existing polynomial time algorithms with proven error guarantees require EACH column N_⋅j to have l1 norm much smaller than ||(BC)_⋅j ||_1, which could be very restrictive. In important applications of NMF such as Topic Modeling as well as theoretical noise models (e.g. Gaussian with high sigma), almost EVERY column of N_.j violates this condition. We introduce the heavy noise model which only requires the average noise over large subsets of columns to be small. We initiate a study of Noisy NMF under the heavy noise model. We show that our noise model subsumes noise models of theoretical and practical interest (for e.g. Gaussian noise of maximum possible sigma). We then devise an algorithm TSVDNMF which under certain assumptions on B,C, solves the problem under heavy noise. Our error guarantees match those of previous algorithms. Our running time of O(k.(d+n)^2) is substantially better than the O(d.n^3) for the previous best. Our assumption on B is weaker than the “Separability” assumption made by all previous results. We provide empirical justification for our assumptions on C. We also provide the first proof of identifiability (uniqueness of B) for noisy NMF which is not based on separability and does not use hard to check geometric conditions. Our algorithm outperforms earlier polynomial time algorithms both in time and error, particularly in the presence of high noise.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v48/bhattacharya16.html",
+      "pdf_url": "http://proceedings.mlr.press/v48/bhattacharya16.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "ravindran_kannan",
+        "name": "Ravindran Kannan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 15,
+        "semantic_scholar_citations": 0
+      }
+    }
+  ]
+}

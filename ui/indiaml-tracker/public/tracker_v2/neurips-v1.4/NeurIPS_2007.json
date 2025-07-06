@@ -1,0 +1,344 @@
+{
+  "conference": "NeurIPS 2007",
+  "focus_country": "India",
+  "total_papers": 7,
+  "generated_at": "2025-07-06T10:39:19.873940",
+  "config": {
+    "first_author_weight": 3.0,
+    "last_author_weight": 2.0,
+    "middle_author_weight": 1.0,
+    "status_weights": {
+      "oral": 10.0,
+      "spotlight": 7.5,
+      "poster": 5.0,
+      "unknown": 1.0
+    },
+    "output_format": "json",
+    "include_review_details": true,
+    "include_citation_data": true
+  },
+  "papers": [
+    {
+      "paper_id": "157cc0311e",
+      "title": "A Randomized Algorithm for Large Scale Support Vector Learning",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We propose a randomized algorithm for large scale SVM learning which solves the problem by iterating over random subsets of the data. Crucial to the algorithm for scalability is the size of the subsets chosen. In the context of text classification we show that, by using ideas from random projections, a sample size of O(log n) can be used to obtain a solution which is close to the optimal with a high probability. Experiments done on synthetic and real life data sets demonstrate that the algorithm scales up SVM learners, without loss in accuracy.",
+      "tldr": null,
+      "site_url": "https://papers.nips.cc/paper_files/paper/2007/hash/ba2fd310dcaa8781a9a652a31baf3c68-Abstract.html",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2007/file/ba2fd310dcaa8781a9a652a31baf3c68-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "krishnan_kumar",
+        "name": "Krishnan Kumar",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 35,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "7db0be24d4",
+      "title": "Kernels on Attributed Pointsets with Applications",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "This paper introduces kernels on attributed pointsets, which are sets of vectors embedded in an euclidean space. The embedding gives the notion of neighborhood, which is used to define positive semidefinite kernels on pointsets. Two novel kernels on neighborhoods are proposed, one evaluating the attribute similarity and the other evaluating shape similarity. Shape similarity function is motivated from spectral graph matching techniques. The kernels are tested on three real life applications: face recognition, photo album tagging, and shot annotation in video sequences, with encouraging results.",
+      "tldr": null,
+      "site_url": "https://papers.nips.cc/paper_files/paper/2007/hash/4c56ff4ce4aaf9573aa5dff913df997a-Abstract.html",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2007/file/4c56ff4ce4aaf9573aa5dff913df997a-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "mehul_parsana",
+        "name": "Mehul Parsana",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "University of Bangalore (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 23,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "157cc0311e",
+      "title": "A Randomized Algorithm for Large Scale Support Vector Learning",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We propose a randomized algorithm for large scale SVM learning which solves the problem by iterating over random subsets of the data. Crucial to the algorithm for scalability is the size of the subsets chosen. In the context of text classification we show that, by using ideas from random projections, a sample size of O(log n) can be used to obtain a solution which is close to the optimal with a high probability. Experiments done on synthetic and real life data sets demonstrate that the algorithm scales up SVM learners, without loss in accuracy.",
+      "tldr": null,
+      "site_url": "https://papers.nips.cc/paper_files/paper/2007/hash/ba2fd310dcaa8781a9a652a31baf3c68-Abstract.html",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2007/file/ba2fd310dcaa8781a9a652a31baf3c68-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "ramesh_hariharan",
+        "name": "Ramesh Hariharan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Strand Genomics (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 35,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "7db0be24d4",
+      "title": "Kernels on Attributed Pointsets with Applications",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "This paper introduces kernels on attributed pointsets, which are sets of vectors embedded in an euclidean space. The embedding gives the notion of neighborhood, which is used to define positive semidefinite kernels on pointsets. Two novel kernels on neighborhoods are proposed, one evaluating the attribute similarity and the other evaluating shape similarity. Shape similarity function is motivated from spectral graph matching techniques. The kernels are tested on three real life applications: face recognition, photo album tagging, and shot annotation in video sequences, with encouraging results.",
+      "tldr": null,
+      "site_url": "https://papers.nips.cc/paper_files/paper/2007/hash/4c56ff4ce4aaf9573aa5dff913df997a-Abstract.html",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2007/file/4c56ff4ce4aaf9573aa5dff913df997a-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "k__ramakrishnan",
+        "name": "K. Ramakrishnan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "University Affiliation Not Specified (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 23,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "7db0be24d4",
+      "title": "Kernels on Attributed Pointsets with Applications",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "This paper introduces kernels on attributed pointsets, which are sets of vectors embedded in an euclidean space. The embedding gives the notion of neighborhood, which is used to define positive semidefinite kernels on pointsets. Two novel kernels on neighborhoods are proposed, one evaluating the attribute similarity and the other evaluating shape similarity. Shape similarity function is motivated from spectral graph matching techniques. The kernels are tested on three real life applications: face recognition, photo album tagging, and shot annotation in video sequences, with encouraging results.",
+      "tldr": null,
+      "site_url": "https://papers.nips.cc/paper_files/paper/2007/hash/4c56ff4ce4aaf9573aa5dff913df997a-Abstract.html",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2007/file/4c56ff4ce4aaf9573aa5dff913df997a-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sourangshu_bhattacharya",
+        "name": "Sourangshu Bhattacharya",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "University of Bangalore (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.333333333333334,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 23,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "157cc0311e",
+      "title": "A Randomized Algorithm for Large Scale Support Vector Learning",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We propose a randomized algorithm for large scale SVM learning which solves the problem by iterating over random subsets of the data. Crucial to the algorithm for scalability is the size of the subsets chosen. In the context of text classification we show that, by using ideas from random projections, a sample size of O(log n) can be used to obtain a solution which is close to the optimal with a high probability. Experiments done on synthetic and real life data sets demonstrate that the algorithm scales up SVM learners, without loss in accuracy.",
+      "tldr": null,
+      "site_url": "https://papers.nips.cc/paper_files/paper/2007/hash/ba2fd310dcaa8781a9a652a31baf3c68-Abstract.html",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2007/file/ba2fd310dcaa8781a9a652a31baf3c68-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "chiru_bhattacharya",
+        "name": "Chiru Bhattacharya",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 35,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "7db0be24d4",
+      "title": "Kernels on Attributed Pointsets with Applications",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "This paper introduces kernels on attributed pointsets, which are sets of vectors embedded in an euclidean space. The embedding gives the notion of neighborhood, which is used to define positive semidefinite kernels on pointsets. Two novel kernels on neighborhoods are proposed, one evaluating the attribute similarity and the other evaluating shape similarity. Shape similarity function is motivated from spectral graph matching techniques. The kernels are tested on three real life applications: face recognition, photo album tagging, and shot annotation in video sequences, with encouraging results.",
+      "tldr": null,
+      "site_url": "https://papers.nips.cc/paper_files/paper/2007/hash/4c56ff4ce4aaf9573aa5dff913df997a-Abstract.html",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2007/file/4c56ff4ce4aaf9573aa5dff913df997a-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "chiru_bhattacharya_1",
+        "name": "Chiru Bhattacharya",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "University of Bangalore (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 23,
+        "semantic_scholar_citations": 0
+      }
+    }
+  ]
+}

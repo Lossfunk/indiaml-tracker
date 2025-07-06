@@ -1,0 +1,1266 @@
+{
+  "conference": "NeurIPS 2014",
+  "focus_country": "India",
+  "total_papers": 27,
+  "generated_at": "2025-07-06T10:39:19.871565",
+  "config": {
+    "first_author_weight": 3.0,
+    "last_author_weight": 2.0,
+    "middle_author_weight": 1.0,
+    "status_weights": {
+      "oral": 10.0,
+      "spotlight": 7.5,
+      "poster": 5.0,
+      "unknown": 1.0
+    },
+    "output_format": "json",
+    "include_review_details": true,
+    "include_citation_data": true
+  },
+  "papers": [
+    {
+      "paper_id": "4493",
+      "title": "A provable SVD-based algorithm for learning topics in dominant admixture corpus",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Topic models, such as Latent Dirichlet Allocation (LDA), posit that documents are drawn from admixtures of distributions over words, known as topics. The inference problem of recovering topics from such a collection of documents drawn from admixtures, is NP-hard. Making a strong assumption called separability, [4] gave the first provable algorithm for inference. For the widely used LDA model, [6] gave a provable algorithm using clever tensor-methods. But [4, 6] do not learn topic vectors with bounded $l_1$ error (a natural measure for probability vectors). Our aim is to develop a model which makes intuitive and empirically supported assumptions and to design an algorithm with natural, simple components such as SVD, which provably solves the inference problem for the model with bounded $l_1$ error. A topic in LDA and other models is essentially characterized by a group of co-occurring words. Motivated by this, we introduce topic specific Catchwords, a group of words which occur with strictly greater frequency in a topic than any other topic individually and are required to have high frequency together rather than individually. A major contribution of the paper is to show that under this more realistic assumption, which is empirically verified on real corpora, a singular value decomposition (SVD) based algorithm with a crucial pre-processing step of thresholding, can provably recover the topics from a collection of documents drawn from Dominant admixtures. Dominant admixtures are convex combination of distributions in which one distribution has a significantly higher contribution than the others. Apart from the simplicity of the algorithm, the sample complexity has near optimal dependence on $w_0$, the lowest probability that a topic is dominant, and is better than [4]. Empirical evidence shows that on several real world corpora, both Catchwords and Dominant admixture assumptions hold and the proposed algorithm substantially outperforms the state of the art [5].",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2014/poster/4493",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2014/file/456f7c0f2aa088d6ddcba4af487b63ca-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "trapit_bansal",
+        "name": "Trapit Bansal",
+        "name_site": "Trapit Bansal, Chiranjib Bhattacharyya, Ravindran Kannan",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 57,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4502",
+      "title": "An Autoencoder Approach to Learning Bilingual Word Representations",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Cross-language learning allows us to use training data from one language to build models for a different language. Many approaches to bilingual learning require that we have word-level alignment of sentences from parallel corpora. In this work we explore the use of autoencoder-based methods for cross-language learning of vectorial word representations that are aligned between two languages, while not relying on word-level alignments. We show that by simply learning to reconstruct the bag-of-words representations of aligned sentences, within and between languages, we can in fact learn high-quality representations and do without word alignments. We empirically investigate the success of our approach on the problem of cross-language text classification, where a classifier trained on a given language (e.g., English) must learn to generalize to a different language (e.g., German). In experiments on 3 language pairs, we show that our approach achieves state-of-the-art performance, outperforming a method exploiting word alignments and a strong machine translation baseline.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2014/poster/4502",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2014/file/2e2f5540941a46e2f642b33f3276928d-Paper.pdf",
+      "github_url": "",
+      "total_authors": 7,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sarath_chandar_a_p",
+        "name": "Sarath Chandar A P",
+        "name_site": "Sarath Chandar, Stanislas Lauly, Hugo Larochelle, Mitesh Khapra, Balaraman Ravindran, Vikas C Raykar, Amrita Saha",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Madras (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 401,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4535",
+      "title": "Consistency of Spectral Partitioning of Uniform Hypergraphs under Planted Partition Model",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Spectral graph partitioning methods have received significant attention from both practitioners and theorists in computer science. Some notable studies have been carried out regarding the behavior of these methods for infinitely large sample size (von Luxburg et al., 2008; Rohe et al., 2011), which provide sufficient confidence to practitioners about the effectiveness of these methods. On the other hand, recent developments in computer vision have led to a plethora of applications, where the model deals with multi-way affinity relations and can be posed as uniform hyper-graphs. In this paper, we view these models as random m-uniform hypergraphs and establish the consistency of spectral algorithm in this general setting. We develop a planted partition model or stochastic blockmodel for such problems using higher order tensors, present a spectral technique suited for the purpose and study its large sample behavior. The analysis reveals that the algorithm is consistent for m-uniform hypergraphs for larger values of m, and also the rate of convergence improves for increasing m. Our result provides the first theoretical evidence that establishes the importance of m-way affinities.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2014/poster/4535",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2014/file/ca5fcddad0d403f10ee1c6dc9557ff8e-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "debarghya_ghoshdastidar",
+        "name": "Debarghya Ghoshdastidar",
+        "name_site": "Debarghya Ghoshdastidar, Ambedkar Dukkipati",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 112,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4581",
+      "title": "Efficient Optimization for Average Precision SVM",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The accuracy of information retrieval systems is often measured using average precision (AP). Given a set of positive (relevant) and negative (non-relevant) samples, the parameters of a retrieval system can be estimated using the AP-SVM framework, which minimizes a regularized convex upper bound on the empirical AP loss. However, the high computational complexity of loss-augmented inference, which is required for learning an AP-SVM, prohibits its use with large training datasets. To alleviate this deficiency, we propose three complementary approaches. The first approach guarantees an asymptotic decrease in the computational complexity of loss-augmented inference by exploiting the problem structure. The second approach takes advantage of the fact that we do not require a full ranking during loss-augmented inference. This helps us to avoid the expensive step of sorting the negative samples according to their individual scores. The third approach approximates the AP loss over all samples by the AP loss over difficult samples (for example, those that are incorrectly classified by a binary SVM), while ensuring the correct classification of the remaining samples. Using the PASCAL VOC action classification and object detection datasets, we show that our approaches provide significant speed-ups during training without degrading the test accuracy of AP-SVM.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2014/poster/4581",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2014/file/efd467cb94fec6988490a8833ef68ff8-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "pritish_mohapatra",
+        "name": "Pritish Mohapatra",
+        "name_site": "Pritish Mohapatra, C.V. Jawahar, M. Pawan Kumar",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "International Institute of Information Technology, Hyderabad (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 45,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4651",
+      "title": "Learning on graphs using Orthonormal Representation is Statistically Consistent",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Existing research \\cite{reg} suggests that embedding graphs on a unit sphere can be beneficial in learning labels on the vertices of a graph. However the choice of optimal embedding remains an open issue. \\emph{Orthonormal representation} of graphs, a class of embeddings over the unit sphere, was introduced by Lov\\'asz \\cite{lovasz_shannon}. In this paper, we show that there exists orthonormal representations which are statistically consistent over a large class of graphs, including power law and random graphs. This result is achieved by extending the notion of consistency designed in the inductive setting to graph transduction. As part of the analysis, we explicitly derive relationships between the Rademacher complexity measure and structural properties of graphs, such as the chromatic number. We further show the fraction of vertices of a graph $G$, on $n$ nodes, that need to be labelled for the learning algorithm to be consistent, also known as labelled sample complexity, is $ \\Omega\\left(\\frac{\\vartheta(G)}{n}\\right)^{\\frac{1}{4}}$ where $\\vartheta(G)$ is the famous Lov\\'asz~$\\vartheta$ function of the graph. This, for the first time, relates labelled sample complexity to graph connectivity properties, such as the density of graphs. In the multiview setting, whenever individual views are expressed by a graph, it is a well known heuristic that a convex combination of Laplacians \\cite{lap_mv1} tend to improve accuracy. The analysis presented here easily extends to Multiple graph transduction, and helps develop a sound statistical understanding of the heuristic, previously unavailable.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2014/poster/4651",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2014/file/7a04f491d92f638d7e46766715885bdb-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "rakesh_s",
+        "name": "Rakesh S",
+        "name_site": "Rakesh Shivanna, Chiranjib Bhattacharyya",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 5,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4688",
+      "title": "New Rules for Domain Independent Lifted MAP Inference",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Lifted inference algorithms for probabilistic first-order logic frameworks such as Markov logic networks (MLNs) have received significant attention in recent years. These algorithms use so called lifting rules to identify symmetries in the first-order representation and reduce the inference problem over a large probabilistic model to an inference problem over a much smaller model. In this paper, we present two new lifting rules, which enable fast MAP inference in a large class of MLNs. Our first rule uses the concept of single occurrence equivalence class of logical variables, which we define in the paper. The rule states that the MAP assignment over an MLN can be recovered from a much smaller MLN, in which each logical variable in each single occurrence equivalence class is replaced by a constant (i.e., an object in the domain of the variable). Our second rule states that we can safely remove a subset of formulas from the MLN if all equivalence classes of variables in the remaining MLN are single occurrence and all formulas in the subset are tautology (i.e., evaluate to true) at extremes (i.e., assignments with identical truth value for groundings of a predicate). We prove that our two new rules are sound and demonstrate via a detailed experimental evaluation that our approach is superior in terms of scalability and MAP solution quality to the state of the art approaches.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2014/poster/4688",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2014/file/482db07a506c28ee0f8de0b47b450b25-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "happy_mittal",
+        "name": "Happy Mittal",
+        "name_site": "Happy Mittal, Prasoon Goyal, Vibhav Gogate, Parag Singla",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 21,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4693",
+      "title": "On Iterative Hard Thresholding Methods for High-dimensional M-Estimation",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The use of M-estimators in generalized linear regression models in high dimensional settings requires risk minimization with hard L_0 constraints. Of the known methods, the class of projected gradient descent (also known as iterative hard thresholding (IHT)) methods is known to offer the fastest and most scalable solutions. However, the current state-of-the-art is only able to analyze these methods in extremely restrictive settings which do not hold in high dimensional statistical models. In this work we bridge this gap by providing the first analysis for IHT-style methods in the high dimensional statistical setting. Our bounds are tight and match known minimax lower bounds. Our results rely on a general analysis framework that enables us to analyze several popular hard thresholding style algorithms (such as HTP, CoSaMP, SP) in the high dimensional regression setting. Finally, we extend our analysis to the problem of low-rank matrix recovery.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2014/poster/4693",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2014/file/e460882d11d622bd04a5af4b66d1ffd3-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prateek_jain_12",
+        "name": "Prateek Jain",
+        "name_site": "Prateek Jain, Ambuj Tewari, Purushottam Kar",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 280,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4700",
+      "title": "On the Statistical Consistency of Plug-in Classifiers for Non-decomposable Performance Measures",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We study consistency properties of algorithms for non-decomposable performance measures that cannot be expressed as a sum of losses on individual data points, such as the F-measure used in text retrieval and several other performance measures used in class imbalanced settings. While there has been much work on designing algorithms for such performance measures, there is limited understanding of the theoretical properties of these algorithms. Recently, Ye et al. (2012) showed consistency results for two algorithms that optimize the F-measure, but their results apply only to an idealized setting, where precise knowledge of the underlying probability distribution (in the form of the",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2014/poster/4700",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2014/file/3644e33a5161ec5f3997a6acb98d4447-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "harikrishna_narasimhan_1",
+        "name": "Harikrishna Narasimhan",
+        "name_site": "Harikrishna Narasimhan, Rohit Vaish, Shivani Agarwal",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 100,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4702",
+      "title": "Online Decision-Making in General Combinatorial Spaces",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We study online combinatorial decision problems, where one must make sequential decisions in some combinatorial space without knowing in advance the cost of decisions on each trial; the goal is to minimize the total regret over some sequence of trials relative to the best fixed decision in hindsight. Such problems have been studied mostly in settings where decisions are represented by Boolean vectors and costs are linear in this representation. Here we study a general setting where costs may be linear in any suitable low-dimensional vector representation of elements of the decision space. We give a general algorithm for such problems that we call low-dimensional online mirror descent (LDOMD); the algorithm generalizes both the Component Hedge algorithm of Koolen et al. (2010), and a recent algorithm of Suehiro et al. (2012). Our study offers a unification and generalization of previous work, and emphasizes the role of the convex polytope arising from the vector representation of the decision space; while Boolean representations lead to 0-1 polytopes, more general vector representations lead to more general polytopes. We study several examples of both types of polytopes. Finally, we demonstrate the benefit of having a general framework for such problems via an application to an online transportation problem; the associated transportation polytopes generalize the Birkhoff polytope of doubly stochastic matrices, and the resulting algorithm generalizes the PermELearn algorithm of Helmbold and Warmuth (2009).",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2014/poster/4702",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2014/file/d58255c6c264137b64a22eb6a65e691b-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "arun_rajkumar",
+        "name": "Arun Rajkumar",
+        "name_site": "Arun Rajkumar, Shivani Agarwal",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 17,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4705",
+      "title": "Online and Stochastic Gradient Methods for Non-decomposable Loss Functions",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Modern applications in sensitive domains such as biometrics and medicine frequently require the use of non-decomposable loss functions such as precision@k, F-measure etc. Compared to point loss functions such as hinge-loss, these offer much more fine grained control over prediction, but at the same time present novel challenges in terms of algorithm design and analysis. In this work we initiate a study of online learning techniques for such non-decomposable loss functions with an aim to enable incremental learning as well as design scalable solvers for batch problems. To this end, we propose an online learning framework for such loss functions. Our model enjoys several nice properties, chief amongst them being the existence of efficient online learning algorithms with sublinear regret and online to batch conversion bounds. Our model is a provable extension of existing online learning models for point loss functions. We instantiate two popular losses, Prec @k and pAUC, in our model and prove sublinear regret bounds for both of them. Our proofs require a novel structural lemma over ranked lists which may be of independent interest. We then develop scalable stochastic gradient descent solvers for non-decomposable loss functions. We show that for a large family of loss functions satisfying a certain uniform convergence property (that includes Prec @k, pAUC, and F-measure), our methods provably converge to the empirical risk minimizer. Such uniform convergence results were not known for these losses and we establish these using novel proof techniques. We then use extensive experimentation on real life and benchmark datasets to establish that our method can be orders of magnitude faster than a recently proposed cutting plane method.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2014/poster/4705",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2014/file/9638ddfc7e3d56a611292c1578b19ff8-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "purushottam_kar_4",
+        "name": "Purushottam Kar",
+        "name_site": "Purushottam Kar, Harikrishna Narasimhan, Prateek Jain",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 83,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4731",
+      "title": "Provable Tensor Factorization with Missing Data",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We study the problem of low-rank tensor factorization in the presence of missing data. We ask the following question: how many sampled entries do we need, to efficiently and exactly reconstruct a tensor with a low-rank orthogonal decomposition? We propose a novel alternating minimization based method which iteratively refines estimates of the singular vectors. We show that under certain standard assumptions, our method can recover a three-mode $n\\times n\\times n$ dimensional rank-$r$ tensor exactly from $O(n^{3/2} r^5 \\log^4 n)$ randomly sampled entries. In the process of proving this result, we solve two challenging sub-problems for tensors with missing data. First, in analyzing the initialization step, we prove a generalization of a celebrated result by Szemer\\'edie et al. on the spectrum of random graphs. Next, we prove global convergence of alternating minimization with a good initialization. Simulations suggest that the dependence of the sample size on dimensionality $n$ is indeed tight.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2014/poster/4731",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2014/file/d04d4a1518efb7b7b80c8352d567ecd5-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prateek_jain_15",
+        "name": "Prateek Jain",
+        "name_site": "Prateek Jain, Sewoong Oh",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 248,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4493",
+      "title": "A provable SVD-based algorithm for learning topics in dominant admixture corpus",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Topic models, such as Latent Dirichlet Allocation (LDA), posit that documents are drawn from admixtures of distributions over words, known as topics. The inference problem of recovering topics from such a collection of documents drawn from admixtures, is NP-hard. Making a strong assumption called separability, [4] gave the first provable algorithm for inference. For the widely used LDA model, [6] gave a provable algorithm using clever tensor-methods. But [4, 6] do not learn topic vectors with bounded $l_1$ error (a natural measure for probability vectors). Our aim is to develop a model which makes intuitive and empirically supported assumptions and to design an algorithm with natural, simple components such as SVD, which provably solves the inference problem for the model with bounded $l_1$ error. A topic in LDA and other models is essentially characterized by a group of co-occurring words. Motivated by this, we introduce topic specific Catchwords, a group of words which occur with strictly greater frequency in a topic than any other topic individually and are required to have high frequency together rather than individually. A major contribution of the paper is to show that under this more realistic assumption, which is empirically verified on real corpora, a singular value decomposition (SVD) based algorithm with a crucial pre-processing step of thresholding, can provably recover the topics from a collection of documents drawn from Dominant admixtures. Dominant admixtures are convex combination of distributions in which one distribution has a significantly higher contribution than the others. Apart from the simplicity of the algorithm, the sample complexity has near optimal dependence on $w_0$, the lowest probability that a topic is dominant, and is better than [4]. Empirical evidence shows that on several real world corpora, both Catchwords and Dominant admixture assumptions hold and the proposed algorithm substantially outperforms the state of the art [5].",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2014/poster/4493",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2014/file/456f7c0f2aa088d6ddcba4af487b63ca-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "ravindran_kannan",
+        "name": "Ravindran Kannan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 57,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4535",
+      "title": "Consistency of Spectral Partitioning of Uniform Hypergraphs under Planted Partition Model",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Spectral graph partitioning methods have received significant attention from both practitioners and theorists in computer science. Some notable studies have been carried out regarding the behavior of these methods for infinitely large sample size (von Luxburg et al., 2008; Rohe et al., 2011), which provide sufficient confidence to practitioners about the effectiveness of these methods. On the other hand, recent developments in computer vision have led to a plethora of applications, where the model deals with multi-way affinity relations and can be posed as uniform hyper-graphs. In this paper, we view these models as random m-uniform hypergraphs and establish the consistency of spectral algorithm in this general setting. We develop a planted partition model or stochastic blockmodel for such problems using higher order tensors, present a spectral technique suited for the purpose and study its large sample behavior. The analysis reveals that the algorithm is consistent for m-uniform hypergraphs for larger values of m, and also the rate of convergence improves for increasing m. Our result provides the first theoretical evidence that establishes the importance of m-way affinities.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2014/poster/4535",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2014/file/ca5fcddad0d403f10ee1c6dc9557ff8e-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "ambedkar_dukkipati",
+        "name": "Ambedkar Dukkipati",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 112,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4581",
+      "title": "Efficient Optimization for Average Precision SVM",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The accuracy of information retrieval systems is often measured using average precision (AP). Given a set of positive (relevant) and negative (non-relevant) samples, the parameters of a retrieval system can be estimated using the AP-SVM framework, which minimizes a regularized convex upper bound on the empirical AP loss. However, the high computational complexity of loss-augmented inference, which is required for learning an AP-SVM, prohibits its use with large training datasets. To alleviate this deficiency, we propose three complementary approaches. The first approach guarantees an asymptotic decrease in the computational complexity of loss-augmented inference by exploiting the problem structure. The second approach takes advantage of the fact that we do not require a full ranking during loss-augmented inference. This helps us to avoid the expensive step of sorting the negative samples according to their individual scores. The third approach approximates the AP loss over all samples by the AP loss over difficult samples (for example, those that are incorrectly classified by a binary SVM), while ensuring the correct classification of the remaining samples. Using the PASCAL VOC action classification and object detection datasets, we show that our approaches provide significant speed-ups during training without degrading the test accuracy of AP-SVM.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2014/poster/4581",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2014/file/efd467cb94fec6988490a8833ef68ff8-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "m__pawan_kumar",
+        "name": "M. Pawan Kumar",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Ecole Centrale Paris (India),INRIA (Unknown)",
+        "countries": [
+          "India",
+          "Unknown"
+        ],
+        "country_codes": [
+          "UN",
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 45,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4651",
+      "title": "Learning on graphs using Orthonormal Representation is Statistically Consistent",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Existing research \\cite{reg} suggests that embedding graphs on a unit sphere can be beneficial in learning labels on the vertices of a graph. However the choice of optimal embedding remains an open issue. \\emph{Orthonormal representation} of graphs, a class of embeddings over the unit sphere, was introduced by Lov\\'asz \\cite{lovasz_shannon}. In this paper, we show that there exists orthonormal representations which are statistically consistent over a large class of graphs, including power law and random graphs. This result is achieved by extending the notion of consistency designed in the inductive setting to graph transduction. As part of the analysis, we explicitly derive relationships between the Rademacher complexity measure and structural properties of graphs, such as the chromatic number. We further show the fraction of vertices of a graph $G$, on $n$ nodes, that need to be labelled for the learning algorithm to be consistent, also known as labelled sample complexity, is $ \\Omega\\left(\\frac{\\vartheta(G)}{n}\\right)^{\\frac{1}{4}}$ where $\\vartheta(G)$ is the famous Lov\\'asz~$\\vartheta$ function of the graph. This, for the first time, relates labelled sample complexity to graph connectivity properties, such as the density of graphs. In the multiview setting, whenever individual views are expressed by a graph, it is a well known heuristic that a convex combination of Laplacians \\cite{lap_mv1} tend to improve accuracy. The analysis presented here easily extends to Multiple graph transduction, and helps develop a sound statistical understanding of the heuristic, previously unavailable.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2014/poster/4651",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2014/file/7a04f491d92f638d7e46766715885bdb-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "chiranjib_bhattacharyya_6",
+        "name": "Chiranjib Bhattacharyya",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 5,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4688",
+      "title": "New Rules for Domain Independent Lifted MAP Inference",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Lifted inference algorithms for probabilistic first-order logic frameworks such as Markov logic networks (MLNs) have received significant attention in recent years. These algorithms use so called lifting rules to identify symmetries in the first-order representation and reduce the inference problem over a large probabilistic model to an inference problem over a much smaller model. In this paper, we present two new lifting rules, which enable fast MAP inference in a large class of MLNs. Our first rule uses the concept of single occurrence equivalence class of logical variables, which we define in the paper. The rule states that the MAP assignment over an MLN can be recovered from a much smaller MLN, in which each logical variable in each single occurrence equivalence class is replaced by a constant (i.e., an object in the domain of the variable). Our second rule states that we can safely remove a subset of formulas from the MLN if all equivalence classes of variables in the remaining MLN are single occurrence and all formulas in the subset are tautology (i.e., evaluate to true) at extremes (i.e., assignments with identical truth value for groundings of a predicate). We prove that our two new rules are sound and demonstrate via a detailed experimental evaluation that our approach is superior in terms of scalability and MAP solution quality to the state of the art approaches.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2014/poster/4688",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2014/file/482db07a506c28ee0f8de0b47b450b25-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "parag_singla_1",
+        "name": "Parag Singla",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 21,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4693",
+      "title": "On Iterative Hard Thresholding Methods for High-dimensional M-Estimation",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The use of M-estimators in generalized linear regression models in high dimensional settings requires risk minimization with hard L_0 constraints. Of the known methods, the class of projected gradient descent (also known as iterative hard thresholding (IHT)) methods is known to offer the fastest and most scalable solutions. However, the current state-of-the-art is only able to analyze these methods in extremely restrictive settings which do not hold in high dimensional statistical models. In this work we bridge this gap by providing the first analysis for IHT-style methods in the high dimensional statistical setting. Our bounds are tight and match known minimax lower bounds. Our results rely on a general analysis framework that enables us to analyze several popular hard thresholding style algorithms (such as HTP, CoSaMP, SP) in the high dimensional regression setting. Finally, we extend our analysis to the problem of low-rank matrix recovery.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2014/poster/4693",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2014/file/e460882d11d622bd04a5af4b66d1ffd3-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "purushottam_kar_3",
+        "name": "Purushottam Kar",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 280,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4700",
+      "title": "On the Statistical Consistency of Plug-in Classifiers for Non-decomposable Performance Measures",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We study consistency properties of algorithms for non-decomposable performance measures that cannot be expressed as a sum of losses on individual data points, such as the F-measure used in text retrieval and several other performance measures used in class imbalanced settings. While there has been much work on designing algorithms for such performance measures, there is limited understanding of the theoretical properties of these algorithms. Recently, Ye et al. (2012) showed consistency results for two algorithms that optimize the F-measure, but their results apply only to an idealized setting, where precise knowledge of the underlying probability distribution (in the form of the",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2014/poster/4700",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2014/file/3644e33a5161ec5f3997a6acb98d4447-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "shivani_agarwal_4",
+        "name": "Shivani Agarwal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 100,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4702",
+      "title": "Online Decision-Making in General Combinatorial Spaces",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We study online combinatorial decision problems, where one must make sequential decisions in some combinatorial space without knowing in advance the cost of decisions on each trial; the goal is to minimize the total regret over some sequence of trials relative to the best fixed decision in hindsight. Such problems have been studied mostly in settings where decisions are represented by Boolean vectors and costs are linear in this representation. Here we study a general setting where costs may be linear in any suitable low-dimensional vector representation of elements of the decision space. We give a general algorithm for such problems that we call low-dimensional online mirror descent (LDOMD); the algorithm generalizes both the Component Hedge algorithm of Koolen et al. (2010), and a recent algorithm of Suehiro et al. (2012). Our study offers a unification and generalization of previous work, and emphasizes the role of the convex polytope arising from the vector representation of the decision space; while Boolean representations lead to 0-1 polytopes, more general vector representations lead to more general polytopes. We study several examples of both types of polytopes. Finally, we demonstrate the benefit of having a general framework for such problems via an application to an online transportation problem; the associated transportation polytopes generalize the Birkhoff polytope of doubly stochastic matrices, and the resulting algorithm generalizes the PermELearn algorithm of Helmbold and Warmuth (2009).",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2014/poster/4702",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2014/file/d58255c6c264137b64a22eb6a65e691b-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "shivani_agarwal_5",
+        "name": "Shivani Agarwal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 17,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4705",
+      "title": "Online and Stochastic Gradient Methods for Non-decomposable Loss Functions",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Modern applications in sensitive domains such as biometrics and medicine frequently require the use of non-decomposable loss functions such as precision@k, F-measure etc. Compared to point loss functions such as hinge-loss, these offer much more fine grained control over prediction, but at the same time present novel challenges in terms of algorithm design and analysis. In this work we initiate a study of online learning techniques for such non-decomposable loss functions with an aim to enable incremental learning as well as design scalable solvers for batch problems. To this end, we propose an online learning framework for such loss functions. Our model enjoys several nice properties, chief amongst them being the existence of efficient online learning algorithms with sublinear regret and online to batch conversion bounds. Our model is a provable extension of existing online learning models for point loss functions. We instantiate two popular losses, Prec @k and pAUC, in our model and prove sublinear regret bounds for both of them. Our proofs require a novel structural lemma over ranked lists which may be of independent interest. We then develop scalable stochastic gradient descent solvers for non-decomposable loss functions. We show that for a large family of loss functions satisfying a certain uniform convergence property (that includes Prec @k, pAUC, and F-measure), our methods provably converge to the empirical risk minimizer. Such uniform convergence results were not known for these losses and we establish these using novel proof techniques. We then use extensive experimentation on real life and benchmark datasets to establish that our method can be orders of magnitude faster than a recently proposed cutting plane method.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2014/poster/4705",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2014/file/9638ddfc7e3d56a611292c1578b19ff8-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prateek_jain_13",
+        "name": "Prateek Jain",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 83,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4688",
+      "title": "New Rules for Domain Independent Lifted MAP Inference",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Lifted inference algorithms for probabilistic first-order logic frameworks such as Markov logic networks (MLNs) have received significant attention in recent years. These algorithms use so called lifting rules to identify symmetries in the first-order representation and reduce the inference problem over a large probabilistic model to an inference problem over a much smaller model. In this paper, we present two new lifting rules, which enable fast MAP inference in a large class of MLNs. Our first rule uses the concept of single occurrence equivalence class of logical variables, which we define in the paper. The rule states that the MAP assignment over an MLN can be recovered from a much smaller MLN, in which each logical variable in each single occurrence equivalence class is replaced by a constant (i.e., an object in the domain of the variable). Our second rule states that we can safely remove a subset of formulas from the MLN if all equivalence classes of variables in the remaining MLN are single occurrence and all formulas in the subset are tautology (i.e., evaluate to true) at extremes (i.e., assignments with identical truth value for groundings of a predicate). We prove that our two new rules are sound and demonstrate via a detailed experimental evaluation that our approach is superior in terms of scalability and MAP solution quality to the state of the art approaches.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2014/poster/4688",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2014/file/482db07a506c28ee0f8de0b47b450b25-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prasoon_goyal",
+        "name": "Prasoon Goyal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.333333333333334,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 21,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4493",
+      "title": "A provable SVD-based algorithm for learning topics in dominant admixture corpus",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Topic models, such as Latent Dirichlet Allocation (LDA), posit that documents are drawn from admixtures of distributions over words, known as topics. The inference problem of recovering topics from such a collection of documents drawn from admixtures, is NP-hard. Making a strong assumption called separability, [4] gave the first provable algorithm for inference. For the widely used LDA model, [6] gave a provable algorithm using clever tensor-methods. But [4, 6] do not learn topic vectors with bounded $l_1$ error (a natural measure for probability vectors). Our aim is to develop a model which makes intuitive and empirically supported assumptions and to design an algorithm with natural, simple components such as SVD, which provably solves the inference problem for the model with bounded $l_1$ error. A topic in LDA and other models is essentially characterized by a group of co-occurring words. Motivated by this, we introduce topic specific Catchwords, a group of words which occur with strictly greater frequency in a topic than any other topic individually and are required to have high frequency together rather than individually. A major contribution of the paper is to show that under this more realistic assumption, which is empirically verified on real corpora, a singular value decomposition (SVD) based algorithm with a crucial pre-processing step of thresholding, can provably recover the topics from a collection of documents drawn from Dominant admixtures. Dominant admixtures are convex combination of distributions in which one distribution has a significantly higher contribution than the others. Apart from the simplicity of the algorithm, the sample complexity has near optimal dependence on $w_0$, the lowest probability that a topic is dominant, and is better than [4]. Empirical evidence shows that on several real world corpora, both Catchwords and Dominant admixture assumptions hold and the proposed algorithm substantially outperforms the state of the art [5].",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2014/poster/4493",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2014/file/456f7c0f2aa088d6ddcba4af487b63ca-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "c__bhattacharyya",
+        "name": "C. Bhattacharyya",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 57,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4581",
+      "title": "Efficient Optimization for Average Precision SVM",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The accuracy of information retrieval systems is often measured using average precision (AP). Given a set of positive (relevant) and negative (non-relevant) samples, the parameters of a retrieval system can be estimated using the AP-SVM framework, which minimizes a regularized convex upper bound on the empirical AP loss. However, the high computational complexity of loss-augmented inference, which is required for learning an AP-SVM, prohibits its use with large training datasets. To alleviate this deficiency, we propose three complementary approaches. The first approach guarantees an asymptotic decrease in the computational complexity of loss-augmented inference by exploiting the problem structure. The second approach takes advantage of the fact that we do not require a full ranking during loss-augmented inference. This helps us to avoid the expensive step of sorting the negative samples according to their individual scores. The third approach approximates the AP loss over all samples by the AP loss over difficult samples (for example, those that are incorrectly classified by a binary SVM), while ensuring the correct classification of the remaining samples. Using the PASCAL VOC action classification and object detection datasets, we show that our approaches provide significant speed-ups during training without degrading the test accuracy of AP-SVM.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2014/poster/4581",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2014/file/efd467cb94fec6988490a8833ef68ff8-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "c_v__jawahar",
+        "name": "C.V. Jawahar",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "International Institute of Information Technology, Hyderabad (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 45,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4700",
+      "title": "On the Statistical Consistency of Plug-in Classifiers for Non-decomposable Performance Measures",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We study consistency properties of algorithms for non-decomposable performance measures that cannot be expressed as a sum of losses on individual data points, such as the F-measure used in text retrieval and several other performance measures used in class imbalanced settings. While there has been much work on designing algorithms for such performance measures, there is limited understanding of the theoretical properties of these algorithms. Recently, Ye et al. (2012) showed consistency results for two algorithms that optimize the F-measure, but their results apply only to an idealized setting, where precise knowledge of the underlying probability distribution (in the form of the",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2014/poster/4700",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2014/file/3644e33a5161ec5f3997a6acb98d4447-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "rohit_vaish",
+        "name": "Rohit Vaish",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 100,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4705",
+      "title": "Online and Stochastic Gradient Methods for Non-decomposable Loss Functions",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Modern applications in sensitive domains such as biometrics and medicine frequently require the use of non-decomposable loss functions such as precision@k, F-measure etc. Compared to point loss functions such as hinge-loss, these offer much more fine grained control over prediction, but at the same time present novel challenges in terms of algorithm design and analysis. In this work we initiate a study of online learning techniques for such non-decomposable loss functions with an aim to enable incremental learning as well as design scalable solvers for batch problems. To this end, we propose an online learning framework for such loss functions. Our model enjoys several nice properties, chief amongst them being the existence of efficient online learning algorithms with sublinear regret and online to batch conversion bounds. Our model is a provable extension of existing online learning models for point loss functions. We instantiate two popular losses, Prec @k and pAUC, in our model and prove sublinear regret bounds for both of them. Our proofs require a novel structural lemma over ranked lists which may be of independent interest. We then develop scalable stochastic gradient descent solvers for non-decomposable loss functions. We show that for a large family of loss functions satisfying a certain uniform convergence property (that includes Prec @k, pAUC, and F-measure), our methods provably converge to the empirical risk minimizer. Such uniform convergence results were not known for these losses and we establish these using novel proof techniques. We then use extensive experimentation on real life and benchmark datasets to establish that our method can be orders of magnitude faster than a recently proposed cutting plane method.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2014/poster/4705",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2014/file/9638ddfc7e3d56a611292c1578b19ff8-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "harikrishna_narasimhan_2",
+        "name": "Harikrishna Narasimhan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 83,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4502",
+      "title": "An Autoencoder Approach to Learning Bilingual Word Representations",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Cross-language learning allows us to use training data from one language to build models for a different language. Many approaches to bilingual learning require that we have word-level alignment of sentences from parallel corpora. In this work we explore the use of autoencoder-based methods for cross-language learning of vectorial word representations that are aligned between two languages, while not relying on word-level alignments. We show that by simply learning to reconstruct the bag-of-words representations of aligned sentences, within and between languages, we can in fact learn high-quality representations and do without word alignments. We empirically investigate the success of our approach on the problem of cross-language text classification, where a classifier trained on a given language (e.g., English) must learn to generalize to a different language (e.g., German). In experiments on 3 language pairs, we show that our approach achieves state-of-the-art performance, outperforming a method exploiting word alignments and a strong machine translation baseline.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2014/poster/4502",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2014/file/2e2f5540941a46e2f642b33f3276928d-Paper.pdf",
+      "github_url": "",
+      "total_authors": 7,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "balaraman_ravindran_1",
+        "name": "Balaraman Ravindran",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 5,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Madras (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 401,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "4688",
+      "title": "New Rules for Domain Independent Lifted MAP Inference",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Lifted inference algorithms for probabilistic first-order logic frameworks such as Markov logic networks (MLNs) have received significant attention in recent years. These algorithms use so called lifting rules to identify symmetries in the first-order representation and reduce the inference problem over a large probabilistic model to an inference problem over a much smaller model. In this paper, we present two new lifting rules, which enable fast MAP inference in a large class of MLNs. Our first rule uses the concept of single occurrence equivalence class of logical variables, which we define in the paper. The rule states that the MAP assignment over an MLN can be recovered from a much smaller MLN, in which each logical variable in each single occurrence equivalence class is replaced by a constant (i.e., an object in the domain of the variable). Our second rule states that we can safely remove a subset of formulas from the MLN if all equivalence classes of variables in the remaining MLN are single occurrence and all formulas in the subset are tautology (i.e., evaluate to true) at extremes (i.e., assignments with identical truth value for groundings of a predicate). We prove that our two new rules are sound and demonstrate via a detailed experimental evaluation that our approach is superior in terms of scalability and MAP solution quality to the state of the art approaches.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2014/poster/4688",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2014/file/482db07a506c28ee0f8de0b47b450b25-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "vibhav_gogate_4",
+        "name": "Vibhav Gogate",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "University of Texas at Dallas (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 21,
+        "semantic_scholar_citations": 0
+      }
+    }
+  ]
+}

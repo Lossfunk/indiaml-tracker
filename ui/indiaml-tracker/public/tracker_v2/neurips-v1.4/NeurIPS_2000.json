@@ -1,0 +1,68 @@
+{
+  "conference": "NeurIPS 2000",
+  "focus_country": "India",
+  "total_papers": 1,
+  "generated_at": "2025-07-06T10:39:19.874536",
+  "config": {
+    "first_author_weight": 3.0,
+    "last_author_weight": 2.0,
+    "middle_author_weight": 1.0,
+    "status_weights": {
+      "oral": 10.0,
+      "spotlight": 7.5,
+      "poster": 5.0,
+      "unknown": 1.0
+    },
+    "output_format": "json",
+    "include_review_details": true,
+    "include_citation_data": true
+  },
+  "papers": [
+    {
+      "paper_id": "321e9eba01",
+      "title": "A Variational Mean-Field Theory for Sigmoidal Belief Networks",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "A variational derivation of Plefka's mean-field theory is  presented.  This  theory  is  then  applied  to  sigmoidal  belief networks  with  the  aid of further approximations.  Empirical evaluation on small scale  networks  show  that  the  proposed  approximations  are  quite  com(cid:173) petitive.",
+      "tldr": null,
+      "site_url": "https://papers.nips.cc/paper_files/paper/2000/hash/e74c0d42b4433905293aab661fcf8ddb-Abstract.html",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2000/file/e74c0d42b4433905293aab661fcf8ddb-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "chiranjib_bhattacharyya",
+        "name": "Chiranjib Bhattacharyya",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 1,
+        "semantic_scholar_citations": 0
+      }
+    }
+  ]
+}

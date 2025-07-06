@@ -1,0 +1,1082 @@
+{
+  "conference": "ICML 2013",
+  "focus_country": "India",
+  "total_papers": 23,
+  "generated_at": "2025-07-06T10:37:29.337006",
+  "config": {
+    "first_author_weight": 3.0,
+    "last_author_weight": 2.0,
+    "middle_author_weight": 1.0,
+    "status_weights": {
+      "oral": 10.0,
+      "spotlight": 7.5,
+      "poster": 5.0,
+      "unknown": 1.0
+    },
+    "output_format": "json",
+    "include_review_details": true,
+    "include_citation_data": true
+  },
+  "papers": [
+    {
+      "paper_id": "3185306da9",
+      "title": "One-Bit Compressed Sensing: Provable Support and Vector Recovery",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In this paper, we study the problem of one-bit compressed sensing (1-bit CS), where the goal is to design a measurement matrix A and a recovery algorithm s.t. a k-sparse vector \\x^* can be efficiently recovered back from signed linear measurements, i.e., b=\\sign(A\\x^*). This is an important problem in the signal acquisition area and has several learning applications as well, e.g., multi-label classification \\citeHsuKLZ10. We study this problem in two settings: a) support recovery: recover \\supp(\\x^*), b) approximate vector recovery: recover a unit vector \\hx s.t. || \\hatx-\\x^*/||\\x^*|| ||_2≤ε. For support recovery, we propose two novel and efficient solutions based on two combinatorial structures: union free family of sets and expanders. In contrast to  existing methods for  support recovery, our methods are universal i.e. a single measurement matrix A can recover almost all the signals. For approximate recovery, we propose the first  method to recover sparse vector using a near optimal number of measurements.  We also empirically demonstrate  effectiveness of our algorithms; we show that our algorithms are able to recover signals with smaller number of measurements than several existing methods.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v28/gopi13.html",
+      "pdf_url": "http://proceedings.mlr.press/v28/gopi13.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sivakant_gopi",
+        "name": "Sivakant Gopi",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 102,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "55a2bbf153",
+      "title": "Differentially Private Learning with Kernels",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In this paper, we consider the problem of differentially private learning where access to the training features is through a kernel function only. Existing work on this problem is restricted to translation invariant kernels only, where (approximate) training features are available explicitly.  In fact, for general class of kernel functions and in general setting of releasing different private predictor (\\w^*), the problem is impossible to solve \\citeCMS11. In this work, we relax the problem setting into three different easier but practical settings. In our first problem setting, we consider an interactive model where the user sends its test set to a trusted learner who sends back differentially private predictions over the test points. This setting is prevalent in modern online systems like search engines, ad engines etc. In the second model, the learner sends back a differentially private version of the optimal parameter vector \\w^* but requires access to a small subset of unlabeled test set beforehand. This also is a practical setting that involves two parties interacting through trusted third party. Our third model is similar to the traditional model, where learner is oblivious to the test set and needs to send a differentially private version of \\w^*, but the kernels are restricted to efficiently computable functions over low-dimensional vector spaces. For each of the models, we derive differentially private learning algorithms with provable “utlity” or error bounds. Moreover, we  show that our methods can also be applied to the traditional setting of \\cite Rubinstein09, CMS11. Here, our sample complexity bounds have only O(d^1/3) dependence on the dimensionality d while existing methods require O(d^1/2) samples to achieve same generalization error.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v28/jain13.html",
+      "pdf_url": "http://proceedings.mlr.press/v28/jain13.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prateek_jain",
+        "name": "Prateek Jain",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 127,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "62333039dd",
+      "title": "Thompson Sampling for Contextual Bandits with Linear Payoffs",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Thompson Sampling is one of the oldest heuristics for multi-armed bandit problems. It is a randomized algorithm based on Bayesian ideas, and has recently generated significant interest after several studies demonstrated it to have better empirical performance compared to the state of the art methods. However, many questions regarding its theoretical performance remained open. In this paper, we design and analyze Thompson Sampling algorithm for the stochastic contextual multi-armed bandit problem with linear payoff functions, when the contexts are provided by an adaptive adversary. This is among the most important and widely studied version of the contextual bandits problem. We prove a high probability regret bound of \\tildeO(\\fracd\\sqrtε\\sqrtT^1+ε) in time T for any ε∈(0,1), where d is the dimension of each context vector and εis a parameter used by the algorithm. Our results provide the first theoretical guarantees for the contextual version of Thompson Sampling, and are close to the lower bound of Ω(\\sqrtdT) for this problem. This essentially solves the COLT open problem of Chapelle and Li [COLT 2012] regarding regret bounds for Thompson Sampling for contextual bandits problem with linear payoff functions.     Our version of Thompson sampling uses Gaussian prior and Gaussian likelihood function. Our novel martingale-based analysis techniques also allow easy extensions to the use of other distributions, satisfying certain general conditions.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v28/agrawal13.html",
+      "pdf_url": "http://proceedings.mlr.press/v28/agrawal13.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "shipra_agrawal",
+        "name": "Shipra Agrawal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 1339,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "b9e1138055",
+      "title": "A Structural SVM Based Approach for Optimizing Partial AUC",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The area under the ROC curve (AUC) is a widely used performance measure in machine learning. Increasingly, however, in several applications, ranging from ranking and biometric screening to medical diagnosis, performance is measured not in terms of the full area under the ROC curve, but instead, in terms of the partial area under the ROC curve between two specified false positive rates. In this paper, we develop a structural SVM framework for directly optimizing the partial AUC between any two false positive rates. Our approach makes use of a cutting plane solver along the lines of the structural SVM based approach for optimizing the full AUC developed by Joachims (2005). Unlike the full AUC, where the combinatorial optimization problem needed to find the most violated constraint in the cutting plane solver can be decomposed easily to yield an efficient algorithm, the corresponding optimization problem in the case of partial AUC is harder to decompose. One of our key technical contributions is an efficient algorithm for solving this combinatorial optimization problem that has the same computational complexity as Joachims’ algorithm for optimizing the usual AUC. This allows us to efficiently optimize the partial AUC in any desired false positive range. We demonstrate the approach on a variety of real-world tasks.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v28/narasimhan13.html",
+      "pdf_url": "http://proceedings.mlr.press/v28/narasimhan13.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "harikrishna_narasimhan",
+        "name": "Harikrishna Narasimhan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 0,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "c4a7587357",
+      "title": "On the Generalization Ability of Online Learning Algorithms for Pairwise Loss Functions",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In this paper, we study the generalization properties of online learning based stochastic methods for supervised learning problems where the loss function is dependent on more than one training sample (e.g., metric learning, ranking). We present a generic decoupling technique that enables us to provide Rademacher complexity-based generalization error bounds. Our bounds are in general tighter than those obtained by Wang et al. (COLT 2012) for the same problem. Using our decoupling technique, we are further able to obtain fast convergence rates for strongly con-vex pairwise loss functions. We are also able to analyze a class of memory efficient on-line learning algorithms for pairwise learning problems that use only a bounded subset of past training samples to update the hypothesis at each step. Finally, in order to complement our generalization bounds, we propose a novel memory efficient online learning algorithm for higher order learning problems with bounded regret guarantees.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v28/kar13.html",
+      "pdf_url": "http://proceedings.mlr.press/v28/kar13.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "purushottam_kar",
+        "name": "Purushottam Kar",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Kanpur (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 91,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "e737b9466c",
+      "title": "Subtle Topic Models and Discovering Subtly Manifested Software Concerns Automatically",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In a recent pioneering approach LDA was used to discover cross cutting concerns(CCC) automatically from software codebases. LDA though successful in detecting prominent concerns, fails to detect many useful CCCs including ones that may be heavily executed but elude discovery because they do not have a strong prevalence in source-code. We pose this problem as that of discovering topics that rarely occur in individual documents, which we will refer to as subtle topics. Recently an interesting approach, namely focused topic models(FTM) was proposed for detecting rare topics. FTM, though successful in detecting topics which occur prominently in very few documents, is unable to detect subtle topics. Discovering subtle topics thus remains an important open problem. To address this issue we propose subtle topic models(STM). STM uses a generalized stick breaking process(GSBP) as a prior for defining multiple distributions over topics. This hierarchical structure on topics allows STM to discover rare topics beyond the capabilities of FTM. The associated inference is non-standard and is solved by exploiting the relationship between GSBP and generalized Dirichlet distribution. Empirical results show that STM is able to discover subtle CCC in two benchmark code-bases, a feat which is beyond the scope of existing topic models, thus demonstrating the potential of the model in automated concern discovery, a known difficult problem in Software Engineering. Furthermore it is observed that even in general text corpora STM outperforms the state of art in discovering subtle topics.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v28/das13.html",
+      "pdf_url": "http://proceedings.mlr.press/v28/das13.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "mrinal_das",
+        "name": "Mrinal Das",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 9,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "f7d896bc89",
+      "title": "Local Deep Kernel Learning for Efficient Non-linear SVM Prediction",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Our objective is to speed up non-linear SVM prediction while maintaining classification accuracy above an acceptable limit. We generalize Localized Multiple Kernel Learning so as to learn a primal feature space embedding which is high dimensional, sparse and computationally deep. Primal based classification decouples prediction costs from the number of support vectors and our tree-structured features efficiently encode non-linearities while speeding up prediction exponentially over the state-of-the-art. We develop routines for optimizing over the space of tree-structured features and efficiently scale to problems with over half a million training points. Experiments on benchmark data sets reveal that our formulation can reduce prediction costs by more than three orders of magnitude in some cases with a moderate sacrifice in classification accuracy as compared to RBF-SVMs. Furthermore, our formulation leads to much better classification accuracies over leading methods.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v28/jose13.html",
+      "pdf_url": "http://proceedings.mlr.press/v28/jose13.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "cijo_jose",
+        "name": "Cijo Jose",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 148,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "3185306da9",
+      "title": "One-Bit Compressed Sensing: Provable Support and Vector Recovery",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In this paper, we study the problem of one-bit compressed sensing (1-bit CS), where the goal is to design a measurement matrix A and a recovery algorithm s.t. a k-sparse vector \\x^* can be efficiently recovered back from signed linear measurements, i.e., b=\\sign(A\\x^*). This is an important problem in the signal acquisition area and has several learning applications as well, e.g., multi-label classification \\citeHsuKLZ10. We study this problem in two settings: a) support recovery: recover \\supp(\\x^*), b) approximate vector recovery: recover a unit vector \\hx s.t. || \\hatx-\\x^*/||\\x^*|| ||_2≤ε. For support recovery, we propose two novel and efficient solutions based on two combinatorial structures: union free family of sets and expanders. In contrast to  existing methods for  support recovery, our methods are universal i.e. a single measurement matrix A can recover almost all the signals. For approximate recovery, we propose the first  method to recover sparse vector using a near optimal number of measurements.  We also empirically demonstrate  effectiveness of our algorithms; we show that our algorithms are able to recover signals with smaller number of measurements than several existing methods.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v28/gopi13.html",
+      "pdf_url": "http://proceedings.mlr.press/v28/gopi13.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "aditya_nori",
+        "name": "Aditya Nori",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 102,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "62333039dd",
+      "title": "Thompson Sampling for Contextual Bandits with Linear Payoffs",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Thompson Sampling is one of the oldest heuristics for multi-armed bandit problems. It is a randomized algorithm based on Bayesian ideas, and has recently generated significant interest after several studies demonstrated it to have better empirical performance compared to the state of the art methods. However, many questions regarding its theoretical performance remained open. In this paper, we design and analyze Thompson Sampling algorithm for the stochastic contextual multi-armed bandit problem with linear payoff functions, when the contexts are provided by an adaptive adversary. This is among the most important and widely studied version of the contextual bandits problem. We prove a high probability regret bound of \\tildeO(\\fracd\\sqrtε\\sqrtT^1+ε) in time T for any ε∈(0,1), where d is the dimension of each context vector and εis a parameter used by the algorithm. Our results provide the first theoretical guarantees for the contextual version of Thompson Sampling, and are close to the lower bound of Ω(\\sqrtdT) for this problem. This essentially solves the COLT open problem of Chapelle and Li [COLT 2012] regarding regret bounds for Thompson Sampling for contextual bandits problem with linear payoff functions.     Our version of Thompson sampling uses Gaussian prior and Gaussian likelihood function. Our novel martingale-based analysis techniques also allow easy extensions to the use of other distributions, satisfying certain general conditions.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v28/agrawal13.html",
+      "pdf_url": "http://proceedings.mlr.press/v28/agrawal13.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "navin_goyal",
+        "name": "Navin Goyal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 1339,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "65ac7fb1de",
+      "title": "On the Statistical Consistency of Algorithms for Binary Classification under Class Imbalance",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Class imbalance situations, where one class is rare compared to the other, arise frequently in machine learning applications. It is well known that the usual misclassification error is ill-suited for measuring performance in such settings. A wide range of performance measures have been proposed for this problem, in machine learning as well as in data mining, artificial intelligence, and various applied fields. However, despite the large number of studies on this problem, little is understood about the statistical consistency of the algorithms proposed with respect to the performance measures of interest. In this paper, we study consistency with respect to one such performance measure, namely the arithmetic mean of the true positive and true negative rates (AM), and establish that some simple methods that have been used in practice, such as applying an empirically determined threshold to a suitable class probability estimate or performing an empirically balanced form of risk minimization, are in fact consistent with respect to the AM (under mild conditions on the underlying distribution). Our results employ balanced losses that have been used recently in analyses of ranking problems (Kotlowski et al., 2011) and build on recent results on consistent surrogates for cost-sensitive losses (Scott, 2012). Experimental results confirm our consistency theorems.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v28/menon13a.html",
+      "pdf_url": "http://proceedings.mlr.press/v28/menon13a.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sanjay_chawla",
+        "name": "Sanjay Chawla",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "University of Sydney (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 159,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "b9e1138055",
+      "title": "A Structural SVM Based Approach for Optimizing Partial AUC",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "The area under the ROC curve (AUC) is a widely used performance measure in machine learning. Increasingly, however, in several applications, ranging from ranking and biometric screening to medical diagnosis, performance is measured not in terms of the full area under the ROC curve, but instead, in terms of the partial area under the ROC curve between two specified false positive rates. In this paper, we develop a structural SVM framework for directly optimizing the partial AUC between any two false positive rates. Our approach makes use of a cutting plane solver along the lines of the structural SVM based approach for optimizing the full AUC developed by Joachims (2005). Unlike the full AUC, where the combinatorial optimization problem needed to find the most violated constraint in the cutting plane solver can be decomposed easily to yield an efficient algorithm, the corresponding optimization problem in the case of partial AUC is harder to decompose. One of our key technical contributions is an efficient algorithm for solving this combinatorial optimization problem that has the same computational complexity as Joachims’ algorithm for optimizing the usual AUC. This allows us to efficiently optimize the partial AUC in any desired false positive range. We demonstrate the approach on a variety of real-world tasks.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v28/narasimhan13.html",
+      "pdf_url": "http://proceedings.mlr.press/v28/narasimhan13.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "shivani_agarwal",
+        "name": "Shivani Agarwal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 0,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "c4a7587357",
+      "title": "On the Generalization Ability of Online Learning Algorithms for Pairwise Loss Functions",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In this paper, we study the generalization properties of online learning based stochastic methods for supervised learning problems where the loss function is dependent on more than one training sample (e.g., metric learning, ranking). We present a generic decoupling technique that enables us to provide Rademacher complexity-based generalization error bounds. Our bounds are in general tighter than those obtained by Wang et al. (COLT 2012) for the same problem. Using our decoupling technique, we are further able to obtain fast convergence rates for strongly con-vex pairwise loss functions. We are also able to analyze a class of memory efficient on-line learning algorithms for pairwise learning problems that use only a bounded subset of past training samples to update the hypothesis at each step. Finally, in order to complement our generalization bounds, we propose a novel memory efficient online learning algorithm for higher order learning problems with bounded regret guarantees.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v28/kar13.html",
+      "pdf_url": "http://proceedings.mlr.press/v28/kar13.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "harish_karnick",
+        "name": "Harish Karnick",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Kanpur (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 91,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "e737b9466c",
+      "title": "Subtle Topic Models and Discovering Subtly Manifested Software Concerns Automatically",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In a recent pioneering approach LDA was used to discover cross cutting concerns(CCC) automatically from software codebases. LDA though successful in detecting prominent concerns, fails to detect many useful CCCs including ones that may be heavily executed but elude discovery because they do not have a strong prevalence in source-code. We pose this problem as that of discovering topics that rarely occur in individual documents, which we will refer to as subtle topics. Recently an interesting approach, namely focused topic models(FTM) was proposed for detecting rare topics. FTM, though successful in detecting topics which occur prominently in very few documents, is unable to detect subtle topics. Discovering subtle topics thus remains an important open problem. To address this issue we propose subtle topic models(STM). STM uses a generalized stick breaking process(GSBP) as a prior for defining multiple distributions over topics. This hierarchical structure on topics allows STM to discover rare topics beyond the capabilities of FTM. The associated inference is non-standard and is solved by exploiting the relationship between GSBP and generalized Dirichlet distribution. Empirical results show that STM is able to discover subtle CCC in two benchmark code-bases, a feat which is beyond the scope of existing topic models, thus demonstrating the potential of the model in automated concern discovery, a known difficult problem in Software Engineering. Furthermore it is observed that even in general text corpora STM outperforms the state of art in discovering subtle topics.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v28/das13.html",
+      "pdf_url": "http://proceedings.mlr.press/v28/das13.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "gopinath_kanchi",
+        "name": "Gopinath Kanchi",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 9,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "f7d896bc89",
+      "title": "Local Deep Kernel Learning for Efficient Non-linear SVM Prediction",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Our objective is to speed up non-linear SVM prediction while maintaining classification accuracy above an acceptable limit. We generalize Localized Multiple Kernel Learning so as to learn a primal feature space embedding which is high dimensional, sparse and computationally deep. Primal based classification decouples prediction costs from the number of support vectors and our tree-structured features efficiently encode non-linearities while speeding up prediction exponentially over the state-of-the-art. We develop routines for optimizing over the space of tree-structured features and efficiently scale to problems with over half a million training points. Experiments on benchmark data sets reveal that our formulation can reduce prediction costs by more than three orders of magnitude in some cases with a moderate sacrifice in classification accuracy as compared to RBF-SVMs. Furthermore, our formulation leads to much better classification accuracies over leading methods.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v28/jose13.html",
+      "pdf_url": "http://proceedings.mlr.press/v28/jose13.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "manik_varma",
+        "name": "Manik Varma",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 148,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "fa7cb8bc56",
+      "title": "Approximate Inference in Collective Graphical Models",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We study the problem of approximate inference in collective graphical models (CGMs), which were recently introduced to model the problem of learning and inference with noisy aggregate observations. We first analyze the complexity of inference in CGMs: unlike inference in conventional graphical models, exact inference in CGMs is NP-hard even for tree-structured models. We then develop a tractable convex approximation to the NP-hard MAP inference problem in CGMs, and show how to use MAP inference for approximate marginal inference within the EM framework. We demonstrate empirically that these approximation techniques can reduce the computational cost of inference by two orders of magnitude and the cost of learning by at least an order of magnitude while providing solutions of equal or better quality.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v28/sheldon13.html",
+      "pdf_url": "http://proceedings.mlr.press/v28/sheldon13.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "tom_dietterich",
+        "name": "Tom Dietterich",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Oregon State University (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 67,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "65ac7fb1de",
+      "title": "On the Statistical Consistency of Algorithms for Binary Classification under Class Imbalance",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Class imbalance situations, where one class is rare compared to the other, arise frequently in machine learning applications. It is well known that the usual misclassification error is ill-suited for measuring performance in such settings. A wide range of performance measures have been proposed for this problem, in machine learning as well as in data mining, artificial intelligence, and various applied fields. However, despite the large number of studies on this problem, little is understood about the statistical consistency of the algorithms proposed with respect to the performance measures of interest. In this paper, we study consistency with respect to one such performance measure, namely the arithmetic mean of the true positive and true negative rates (AM), and establish that some simple methods that have been used in practice, such as applying an empirically determined threshold to a suitable class probability estimate or performing an empirically balanced form of risk minimization, are in fact consistent with respect to the AM (under mild conditions on the underlying distribution). Our results employ balanced losses that have been used recently in analyses of ranking problems (Kotlowski et al., 2011) and build on recent results on consistent surrogates for cost-sensitive losses (Scott, 2012). Experimental results confirm our consistency theorems.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v28/menon13a.html",
+      "pdf_url": "http://proceedings.mlr.press/v28/menon13a.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "harikrishna_narasimhan_1",
+        "name": "Harikrishna Narasimhan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.333333333333334,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 159,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "e737b9466c",
+      "title": "Subtle Topic Models and Discovering Subtly Manifested Software Concerns Automatically",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In a recent pioneering approach LDA was used to discover cross cutting concerns(CCC) automatically from software codebases. LDA though successful in detecting prominent concerns, fails to detect many useful CCCs including ones that may be heavily executed but elude discovery because they do not have a strong prevalence in source-code. We pose this problem as that of discovering topics that rarely occur in individual documents, which we will refer to as subtle topics. Recently an interesting approach, namely focused topic models(FTM) was proposed for detecting rare topics. FTM, though successful in detecting topics which occur prominently in very few documents, is unable to detect subtle topics. Discovering subtle topics thus remains an important open problem. To address this issue we propose subtle topic models(STM). STM uses a generalized stick breaking process(GSBP) as a prior for defining multiple distributions over topics. This hierarchical structure on topics allows STM to discover rare topics beyond the capabilities of FTM. The associated inference is non-standard and is solved by exploiting the relationship between GSBP and generalized Dirichlet distribution. Empirical results show that STM is able to discover subtle CCC in two benchmark code-bases, a feat which is beyond the scope of existing topic models, thus demonstrating the potential of the model in automated concern discovery, a known difficult problem in Software Engineering. Furthermore it is observed that even in general text corpora STM outperforms the state of art in discovering subtle topics.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v28/das13.html",
+      "pdf_url": "http://proceedings.mlr.press/v28/das13.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "suparna_bhattacharya",
+        "name": "Suparna Bhattacharya",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "IBM (Unknown),Indian Institute of Science (India)",
+        "countries": [
+          "Unknown",
+          "India"
+        ],
+        "country_codes": [
+          "UN",
+          "IN"
+        ]
+      },
+      "sort_score": 3.333333333333334,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 9,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "f7d896bc89",
+      "title": "Local Deep Kernel Learning for Efficient Non-linear SVM Prediction",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Our objective is to speed up non-linear SVM prediction while maintaining classification accuracy above an acceptable limit. We generalize Localized Multiple Kernel Learning so as to learn a primal feature space embedding which is high dimensional, sparse and computationally deep. Primal based classification decouples prediction costs from the number of support vectors and our tree-structured features efficiently encode non-linearities while speeding up prediction exponentially over the state-of-the-art. We develop routines for optimizing over the space of tree-structured features and efficiently scale to problems with over half a million training points. Experiments on benchmark data sets reveal that our formulation can reduce prediction costs by more than three orders of magnitude in some cases with a moderate sacrifice in classification accuracy as compared to RBF-SVMs. Furthermore, our formulation leads to much better classification accuracies over leading methods.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v28/jose13.html",
+      "pdf_url": "http://proceedings.mlr.press/v28/jose13.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prasoon_goyal",
+        "name": "Prasoon Goyal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.333333333333334,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 148,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "3185306da9",
+      "title": "One-Bit Compressed Sensing: Provable Support and Vector Recovery",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In this paper, we study the problem of one-bit compressed sensing (1-bit CS), where the goal is to design a measurement matrix A and a recovery algorithm s.t. a k-sparse vector \\x^* can be efficiently recovered back from signed linear measurements, i.e., b=\\sign(A\\x^*). This is an important problem in the signal acquisition area and has several learning applications as well, e.g., multi-label classification \\citeHsuKLZ10. We study this problem in two settings: a) support recovery: recover \\supp(\\x^*), b) approximate vector recovery: recover a unit vector \\hx s.t. || \\hatx-\\x^*/||\\x^*|| ||_2≤ε. For support recovery, we propose two novel and efficient solutions based on two combinatorial structures: union free family of sets and expanders. In contrast to  existing methods for  support recovery, our methods are universal i.e. a single measurement matrix A can recover almost all the signals. For approximate recovery, we propose the first  method to recover sparse vector using a near optimal number of measurements.  We also empirically demonstrate  effectiveness of our algorithms; we show that our algorithms are able to recover signals with smaller number of measurements than several existing methods.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v28/gopi13.html",
+      "pdf_url": "http://proceedings.mlr.press/v28/gopi13.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prateek_jain_2",
+        "name": "Prateek Jain",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 102,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "65ac7fb1de",
+      "title": "On the Statistical Consistency of Algorithms for Binary Classification under Class Imbalance",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Class imbalance situations, where one class is rare compared to the other, arise frequently in machine learning applications. It is well known that the usual misclassification error is ill-suited for measuring performance in such settings. A wide range of performance measures have been proposed for this problem, in machine learning as well as in data mining, artificial intelligence, and various applied fields. However, despite the large number of studies on this problem, little is understood about the statistical consistency of the algorithms proposed with respect to the performance measures of interest. In this paper, we study consistency with respect to one such performance measure, namely the arithmetic mean of the true positive and true negative rates (AM), and establish that some simple methods that have been used in practice, such as applying an empirically determined threshold to a suitable class probability estimate or performing an empirically balanced form of risk minimization, are in fact consistent with respect to the AM (under mild conditions on the underlying distribution). Our results employ balanced losses that have been used recently in analyses of ranking problems (Kotlowski et al., 2011) and build on recent results on consistent surrogates for cost-sensitive losses (Scott, 2012). Experimental results confirm our consistency theorems.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v28/menon13a.html",
+      "pdf_url": "http://proceedings.mlr.press/v28/menon13a.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "shivani_agarwal_1",
+        "name": "Shivani Agarwal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 159,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "c4a7587357",
+      "title": "On the Generalization Ability of Online Learning Algorithms for Pairwise Loss Functions",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In this paper, we study the generalization properties of online learning based stochastic methods for supervised learning problems where the loss function is dependent on more than one training sample (e.g., metric learning, ranking). We present a generic decoupling technique that enables us to provide Rademacher complexity-based generalization error bounds. Our bounds are in general tighter than those obtained by Wang et al. (COLT 2012) for the same problem. Using our decoupling technique, we are further able to obtain fast convergence rates for strongly con-vex pairwise loss functions. We are also able to analyze a class of memory efficient on-line learning algorithms for pairwise learning problems that use only a bounded subset of past training samples to update the hypothesis at each step. Finally, in order to complement our generalization bounds, we propose a novel memory efficient online learning algorithm for higher order learning problems with bounded regret guarantees.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v28/kar13.html",
+      "pdf_url": "http://proceedings.mlr.press/v28/kar13.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prateek_jain_1",
+        "name": "Prateek Jain",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 91,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "e737b9466c",
+      "title": "Subtle Topic Models and Discovering Subtly Manifested Software Concerns Automatically",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In a recent pioneering approach LDA was used to discover cross cutting concerns(CCC) automatically from software codebases. LDA though successful in detecting prominent concerns, fails to detect many useful CCCs including ones that may be heavily executed but elude discovery because they do not have a strong prevalence in source-code. We pose this problem as that of discovering topics that rarely occur in individual documents, which we will refer to as subtle topics. Recently an interesting approach, namely focused topic models(FTM) was proposed for detecting rare topics. FTM, though successful in detecting topics which occur prominently in very few documents, is unable to detect subtle topics. Discovering subtle topics thus remains an important open problem. To address this issue we propose subtle topic models(STM). STM uses a generalized stick breaking process(GSBP) as a prior for defining multiple distributions over topics. This hierarchical structure on topics allows STM to discover rare topics beyond the capabilities of FTM. The associated inference is non-standard and is solved by exploiting the relationship between GSBP and generalized Dirichlet distribution. Empirical results show that STM is able to discover subtle CCC in two benchmark code-bases, a feat which is beyond the scope of existing topic models, thus demonstrating the potential of the model in automated concern discovery, a known difficult problem in Software Engineering. Furthermore it is observed that even in general text corpora STM outperforms the state of art in discovering subtle topics.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v28/das13.html",
+      "pdf_url": "http://proceedings.mlr.press/v28/das13.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "chiranjib_bhattacharyya",
+        "name": "Chiranjib Bhattacharyya",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 9,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "f7d896bc89",
+      "title": "Local Deep Kernel Learning for Efficient Non-linear SVM Prediction",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Our objective is to speed up non-linear SVM prediction while maintaining classification accuracy above an acceptable limit. We generalize Localized Multiple Kernel Learning so as to learn a primal feature space embedding which is high dimensional, sparse and computationally deep. Primal based classification decouples prediction costs from the number of support vectors and our tree-structured features efficiently encode non-linearities while speeding up prediction exponentially over the state-of-the-art. We develop routines for optimizing over the space of tree-structured features and efficiently scale to problems with over half a million training points. Experiments on benchmark data sets reveal that our formulation can reduce prediction costs by more than three orders of magnitude in some cases with a moderate sacrifice in classification accuracy as compared to RBF-SVMs. Furthermore, our formulation leads to much better classification accuracies over leading methods.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v28/jose13.html",
+      "pdf_url": "http://proceedings.mlr.press/v28/jose13.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "parv_aggrwal",
+        "name": "Parv Aggrwal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 148,
+        "semantic_scholar_citations": 0
+      }
+    }
+  ]
+}

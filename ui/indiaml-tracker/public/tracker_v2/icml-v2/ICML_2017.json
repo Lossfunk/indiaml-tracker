@@ -1,0 +1,1456 @@
+{
+  "conference": "ICML 2017",
+  "focus_country": "India",
+  "total_papers": 31,
+  "generated_at": "2025-07-06T10:37:29.326361",
+  "config": {
+    "first_author_weight": 3.0,
+    "last_author_weight": 2.0,
+    "middle_author_weight": 1.0,
+    "status_weights": {
+      "oral": 10.0,
+      "spotlight": 7.5,
+      "poster": 5.0,
+      "unknown": 1.0
+    },
+    "output_format": "json",
+    "include_review_details": true,
+    "include_citation_data": true
+  },
+  "papers": [
+    {
+      "paper_id": "683",
+      "title": "ProtoNN: Compressed and Accurate kNN for Resource-scarce Devices",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Several real-world applications require real-time prediction on resource-scarce devices such as an Internet of Things (IoT) sensor. Such applications demand prediction models with small storage and computational complexity that do not compromise significantly on accuracy. In this work, we propose ProtoNN, a novel algorithm that addresses the problem of real-time and accurate prediction on resource-scarce devices. ProtoNN is inspired by k-Nearest Neighbor (KNN) but has several orders lower storage and prediction complexity. ProtoNN models can be deployed even on devices with puny storage and computational power (e.g. an Arduino UNO with 2kB RAM) to get excellent prediction accuracy. ProtoNN derives its strength from three key ideas: a) learning a small number of prototypes to represent the entire training set, b) sparse low dimensional projection of data, c) joint discriminative learning of the projection and prototypes with explicit model size constraint. We conduct systematic empirical evaluation of ProtoNN on a variety of supervised learning tasks (binary, multi-class, multi-label classification) and show that it gives nearly state-of-the-art prediction accuracy on resource-scarce devices while consuming several orders lower storage, and using minimal working memory.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2017/poster/683",
+      "pdf_url": "http://proceedings.mlr.press/v70/gupta17a/gupta17a.pdf",
+      "github_url": "",
+      "total_authors": 10,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "chirag_gupta",
+        "name": "Chirag Gupta",
+        "name_site": "Chirag Gupta, ARUN SUGGALA, Ankit Goyal, Saurabh Goyal, Ashish Kumar, Bhargavi Paranjape, Harsha Vardhan Simhadri, Raghavendra Udupa, Manik Varma, Prateek Jain",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 227,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "696",
+      "title": "Resource-efficient Machine Learning in 2 KB RAM for the Internet of Things",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "This paper develops a novel tree-based algorithm, called Bonsai, for efficient prediction on IoT devices – such as those based on the Arduino Uno board having an 8 bit ATmega328P microcontroller operating at 16 MHz with no native floating point support, 2 KB RAM and 32 KB read-only flash. Bonsai maintains prediction accuracy while minimizing model size and prediction costs by: (a) developing a tree model which learns a single, shallow, sparse tree with powerful nodes; (b) sparsely projecting all data into a low-dimensional space in which the tree is learnt; and (c) jointly learning all tree and projection parameters. Experimental results on multiple benchmark datasets demonstrate that Bonsai can make predictions in milliseconds even on slow microcontrollers, can fit in KB of memory, has lower battery consumption than all other algorithms while achieving prediction accuracies that can be as much as 30\\% higher than state-of-the-art methods for resource-efficient machine learning. Bonsai is also shown to generalize to other resource constrained settings beyond IoT by generating significantly better search results as compared to Bing’s L3 ranker when the model size is restricted to 300 bytes. Bonsai’s code can be downloaded from (http://www.manikvarma.org/code/Bonsai/download.html).",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2017/poster/696",
+      "pdf_url": "http://proceedings.mlr.press/v70/kumar17a/kumar17a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "ashish_kumar_1",
+        "name": "Ashish Kumar",
+        "name_site": "Ashish Kumar, Saurabh Goyal, Manik Varma",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 317,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "708",
+      "title": "Scalable Generative Models for Multi-label Learning with Missing Labels",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We present a scalable, generative framework for multi-label learning with missing labels. Our framework consists of a latent factor model for the binary label matrix, which is coupled with an exposure model to account for label missingness (i.e., whether a zero in the label matrix is indeed a zero or denotes a missing observation). The underlying latent factor model also assumes that the low-dimensional embeddings of each label vector are directly conditioned on the respective feature vector of that example. Our generative framework admits a simple inference procedure, such that the parameter estimation reduces to a sequence of simple weighted least-square regression problems, each of which can be solved easily, efficiently, and in parallel. Moreover, inference can also be performed in an online fashion using mini-batches of training examples, which makes our framework scalable for large data sets, even when using moderate computational resources. We report both quantitative and qualitative results for our framework on several benchmark data sets, comparing it with a number of state-of-the-art methods.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2017/poster/708",
+      "pdf_url": "http://proceedings.mlr.press/v70/jain17a/jain17a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "vikas_jain",
+        "name": "Vikas Jain",
+        "name_site": "Vikas Jain, Nirbhay Modhe, Piyush Rai",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "IIT Kanpur (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 41,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "712",
+      "title": "Deep Generative Models for Relational Data with Side Information",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We present a probabilistic framework for overlapping community discovery and link prediction for relational data, given as a graph. The proposed framework has: (1) a deep architecture which enables us to infer multiple layers of latent features/communities for each node, providing superior link prediction performance on more complex networks and better interpretability of the latent features; and (2) a regression model which allows directly conditioning the node latent features on the side information available in form of node attributes. Our framework handles both (1) and (2) via a clean, unified model, which enjoys full local conjugacy via data augmentation, and facilitates efficient inference via closed form Gibbs sampling. Moreover, inference cost scales in the number of edges which is attractive for massive but sparse networks. Our framework is also easily extendable to model weighted networks with count-valued edges. We compare with various state-of-the-art methods and report results, both quantitative and qualitative, on several benchmark data sets.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2017/poster/712",
+      "pdf_url": "http://proceedings.mlr.press/v70/hu17d/hu17d.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "changwei_hu",
+        "name": "Changwei Hu",
+        "name_site": "Changwei Hu, Piyush Rai, Lawrence Carin",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Yahoo! Research (Unknown),Duke University (India)",
+        "countries": [
+          "Unknown",
+          "India"
+        ],
+        "country_codes": [
+          "UN",
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 22,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "730",
+      "title": "Attentive Recurrent Comparators",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Rapid learning requires flexible representations to quickly adopt to new evidence. We develop a novel class of models called Attentive Recurrent Comparators (ARCs) that form representations of objects by cycling through them and making observations. Using the representations extracted by ARCs, we develop a way of approximating a",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2017/poster/730",
+      "pdf_url": "http://proceedings.mlr.press/v70/shyam17a/shyam17a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "pranav_shyam",
+        "name": "Pranav Shyam",
+        "name_site": "Pranav Shyam, Shubham Gupta, Ambedkar Dukkipati",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Rashtreeya Vidyalaya College of Engineering (Unknown),Indian Institute of Science (India)",
+        "countries": [
+          "Unknown",
+          "India"
+        ],
+        "country_codes": [
+          "UN",
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 161,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "772",
+      "title": "Nearly Optimal Robust Matrix Completion",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In this paper, we consider the problem of Robust Matrix Completion (RMC) where the goal is to recover a low-rank matrix by observing a small number of its entries out of which a few can be arbitrarily corrupted. We propose a simple projected gradient descent-based method to estimate the low-rank matrix that alternately performs a projected gradient descent step and cleans up a few of the corrupted entries using hard-thresholding. Our algorithm solves RMC using nearly optimal number of observations while tolerating a nearly optimal number of corruptions. Our result also implies significant improvement over the existing time complexity bounds for the low-rank matrix completion problem. Finally, an application of our result to the robust PCA problem (low-rank+sparse matrix separation) leads to nearly linear time (in matrix dimensions) algorithm for the same; existing state-of-the-art methods require quadratic time. Our empirical results corroborate our theoretical results and show that even for moderate sized problems, our method for robust PCA is an order of magnitude faster than the existing methods.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2017/poster/772",
+      "pdf_url": "http://proceedings.mlr.press/v70/cherapanamjeri17a/cherapanamjeri17a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "yeshwanth_cherapanamjeri",
+        "name": "Yeshwanth Cherapanamjeri",
+        "name_site": "Yeshwanth Cherapanamjeri, Prateek Jain, Kartik Gupta",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 124,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "779",
+      "title": "On Kernelized Multi-armed Bandits",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We consider the stochastic bandit problem with a continuous set of arms, with the expected reward function over the arms assumed to be fixed but unknown. We provide two new Gaussian process-based algorithms for continuous bandit optimization – Improved GP-UCB (IGP-UCB) and GP-Thomson sampling (GP-TS), and derive corresponding regret bounds. Specifically, the bounds hold when the expected reward function belongs to the reproducing kernel Hilbert space (RKHS) that naturally corresponds to a Gaussian process kernel used as input by the algorithms. Along the way, we derive a new self-normalized concentration inequality for vector-valued martingales of arbitrary, possibly infinite, dimension. Finally, experimental evaluation and comparisons to existing algorithms on synthetic and real-world environments are carried out that highlight the favourable gains of the proposed strategies in many cases.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2017/poster/779",
+      "pdf_url": "http://proceedings.mlr.press/v70/chowdhury17a/chowdhury17a.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sayak_ray_chowdhury",
+        "name": "Sayak Ray Chowdhury",
+        "name_site": "Sayak Ray Chowdhury, Aditya Gopalan",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 558,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "683",
+      "title": "ProtoNN: Compressed and Accurate kNN for Resource-scarce Devices",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Several real-world applications require real-time prediction on resource-scarce devices such as an Internet of Things (IoT) sensor. Such applications demand prediction models with small storage and computational complexity that do not compromise significantly on accuracy. In this work, we propose ProtoNN, a novel algorithm that addresses the problem of real-time and accurate prediction on resource-scarce devices. ProtoNN is inspired by k-Nearest Neighbor (KNN) but has several orders lower storage and prediction complexity. ProtoNN models can be deployed even on devices with puny storage and computational power (e.g. an Arduino UNO with 2kB RAM) to get excellent prediction accuracy. ProtoNN derives its strength from three key ideas: a) learning a small number of prototypes to represent the entire training set, b) sparse low dimensional projection of data, c) joint discriminative learning of the projection and prototypes with explicit model size constraint. We conduct systematic empirical evaluation of ProtoNN on a variety of supervised learning tasks (binary, multi-class, multi-label classification) and show that it gives nearly state-of-the-art prediction accuracy on resource-scarce devices while consuming several orders lower storage, and using minimal working memory.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2017/poster/683",
+      "pdf_url": "http://proceedings.mlr.press/v70/gupta17a/gupta17a.pdf",
+      "github_url": "",
+      "total_authors": 10,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prateek_jain_10",
+        "name": "Prateek Jain",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 10,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 227,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "696",
+      "title": "Resource-efficient Machine Learning in 2 KB RAM for the Internet of Things",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "This paper develops a novel tree-based algorithm, called Bonsai, for efficient prediction on IoT devices – such as those based on the Arduino Uno board having an 8 bit ATmega328P microcontroller operating at 16 MHz with no native floating point support, 2 KB RAM and 32 KB read-only flash. Bonsai maintains prediction accuracy while minimizing model size and prediction costs by: (a) developing a tree model which learns a single, shallow, sparse tree with powerful nodes; (b) sparsely projecting all data into a low-dimensional space in which the tree is learnt; and (c) jointly learning all tree and projection parameters. Experimental results on multiple benchmark datasets demonstrate that Bonsai can make predictions in milliseconds even on slow microcontrollers, can fit in KB of memory, has lower battery consumption than all other algorithms while achieving prediction accuracies that can be as much as 30\\% higher than state-of-the-art methods for resource-efficient machine learning. Bonsai is also shown to generalize to other resource constrained settings beyond IoT by generating significantly better search results as compared to Bing’s L3 ranker when the model size is restricted to 300 bytes. Bonsai’s code can be downloaded from (http://www.manikvarma.org/code/Bonsai/download.html).",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2017/poster/696",
+      "pdf_url": "http://proceedings.mlr.press/v70/kumar17a/kumar17a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "manik_varma_3",
+        "name": "Manik Varma",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 317,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "699",
+      "title": "Clustering by Sum of Norms: Stochastic Incremental Algorithm, Convergence and Cluster Recovery",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Standard clustering methods such as K-means, Gaussian mixture models, and hierarchical clustering are beset by local minima, which are sometimes drastically suboptimal. Moreover the number of clusters K must be known in advance. The recently introduced the sum-of-norms (SON) or Clusterpath convex relaxation of k-means and hierarchical clustering shrinks cluster centroids toward one another and ensure a unique global minimizer. We give a scalable stochastic incremental algorithm based on proximal iterations to solve the SON problem with convergence guarantees. We also show that the algorithm recovers clusters under quite general conditions which have a similar form to the unifying proximity condition introduced in the approximation algorithms community (that covers paradigm cases such as Gaussian mixtures and planted partition models). We give experimental results to confirm that our algorithm scales much better than previous methods while producing clusters of comparable quality.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2017/poster/699",
+      "pdf_url": "http://proceedings.mlr.press/v70/panahi17a/panahi17a.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "chiranjib_bhattacharyya_3",
+        "name": "Chiranjib Bhattacharyya",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 58,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "708",
+      "title": "Scalable Generative Models for Multi-label Learning with Missing Labels",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We present a scalable, generative framework for multi-label learning with missing labels. Our framework consists of a latent factor model for the binary label matrix, which is coupled with an exposure model to account for label missingness (i.e., whether a zero in the label matrix is indeed a zero or denotes a missing observation). The underlying latent factor model also assumes that the low-dimensional embeddings of each label vector are directly conditioned on the respective feature vector of that example. Our generative framework admits a simple inference procedure, such that the parameter estimation reduces to a sequence of simple weighted least-square regression problems, each of which can be solved easily, efficiently, and in parallel. Moreover, inference can also be performed in an online fashion using mini-batches of training examples, which makes our framework scalable for large data sets, even when using moderate computational resources. We report both quantitative and qualitative results for our framework on several benchmark data sets, comparing it with a number of state-of-the-art methods.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2017/poster/708",
+      "pdf_url": "http://proceedings.mlr.press/v70/jain17a/jain17a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "piyush_rai_2",
+        "name": "Piyush Rai",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "IIT Kanpur (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 41,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "712",
+      "title": "Deep Generative Models for Relational Data with Side Information",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We present a probabilistic framework for overlapping community discovery and link prediction for relational data, given as a graph. The proposed framework has: (1) a deep architecture which enables us to infer multiple layers of latent features/communities for each node, providing superior link prediction performance on more complex networks and better interpretability of the latent features; and (2) a regression model which allows directly conditioning the node latent features on the side information available in form of node attributes. Our framework handles both (1) and (2) via a clean, unified model, which enjoys full local conjugacy via data augmentation, and facilitates efficient inference via closed form Gibbs sampling. Moreover, inference cost scales in the number of edges which is attractive for massive but sparse networks. Our framework is also easily extendable to model weighted networks with count-valued edges. We compare with various state-of-the-art methods and report results, both quantitative and qualitative, on several benchmark data sets.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2017/poster/712",
+      "pdf_url": "http://proceedings.mlr.press/v70/hu17d/hu17d.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "lawrence_carin_10",
+        "name": "Lawrence Carin",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Duke University (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 22,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "730",
+      "title": "Attentive Recurrent Comparators",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Rapid learning requires flexible representations to quickly adopt to new evidence. We develop a novel class of models called Attentive Recurrent Comparators (ARCs) that form representations of objects by cycling through them and making observations. Using the representations extracted by ARCs, we develop a way of approximating a",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2017/poster/730",
+      "pdf_url": "http://proceedings.mlr.press/v70/shyam17a/shyam17a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "ambedkar_dukkipati_3",
+        "name": "Ambedkar Dukkipati",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 161,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "772",
+      "title": "Nearly Optimal Robust Matrix Completion",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In this paper, we consider the problem of Robust Matrix Completion (RMC) where the goal is to recover a low-rank matrix by observing a small number of its entries out of which a few can be arbitrarily corrupted. We propose a simple projected gradient descent-based method to estimate the low-rank matrix that alternately performs a projected gradient descent step and cleans up a few of the corrupted entries using hard-thresholding. Our algorithm solves RMC using nearly optimal number of observations while tolerating a nearly optimal number of corruptions. Our result also implies significant improvement over the existing time complexity bounds for the low-rank matrix completion problem. Finally, an application of our result to the robust PCA problem (low-rank+sparse matrix separation) leads to nearly linear time (in matrix dimensions) algorithm for the same; existing state-of-the-art methods require quadratic time. Our empirical results corroborate our theoretical results and show that even for moderate sized problems, our method for robust PCA is an order of magnitude faster than the existing methods.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2017/poster/772",
+      "pdf_url": "http://proceedings.mlr.press/v70/cherapanamjeri17a/cherapanamjeri17a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prateek_jain_9",
+        "name": "Prateek Jain",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 124,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "779",
+      "title": "On Kernelized Multi-armed Bandits",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We consider the stochastic bandit problem with a continuous set of arms, with the expected reward function over the arms assumed to be fixed but unknown. We provide two new Gaussian process-based algorithms for continuous bandit optimization – Improved GP-UCB (IGP-UCB) and GP-Thomson sampling (GP-TS), and derive corresponding regret bounds. Specifically, the bounds hold when the expected reward function belongs to the reproducing kernel Hilbert space (RKHS) that naturally corresponds to a Gaussian process kernel used as input by the algorithms. Along the way, we derive a new self-normalized concentration inequality for vector-valued martingales of arbitrary, possibly infinite, dimension. Finally, experimental evaluation and comparisons to existing algorithms on synthetic and real-world environments are carried out that highlight the favourable gains of the proposed strategies in many cases.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2017/poster/779",
+      "pdf_url": "http://proceedings.mlr.press/v70/chowdhury17a/chowdhury17a.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "aditya_gopalan_1",
+        "name": "Aditya Gopalan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 558,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "785",
+      "title": "Active Heteroscedastic Regression",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "An active learner is given a model class $\\Theta$, a large sample of unlabeled data drawn from an underlying distribution and access to a labeling oracle that can provide a label for any of the unlabeled instances. The goal of the learner is to find a model $\\theta \\in \\Theta$ that fits the data to a given accuracy while making as few label queries to the oracle as possible. In this work, we consider a theoretical analysis of the label requirement of active learning for regression under a heteroscedastic noise model, where the noise depends on the instance. We provide bounds on the convergence rates of active and passive learning for heteroscedastic regression. Our results illustrate that just like in binary classification, some partial knowledge of the nature of the noise can lead to significant gains in the label requirement of active learning.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2017/poster/785",
+      "pdf_url": "http://proceedings.mlr.press/v70/chaudhuri17a/chaudhuri17a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "nagarajan_natarajan_2",
+        "name": "Nagarajan Natarajan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 27,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "683",
+      "title": "ProtoNN: Compressed and Accurate kNN for Resource-scarce Devices",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Several real-world applications require real-time prediction on resource-scarce devices such as an Internet of Things (IoT) sensor. Such applications demand prediction models with small storage and computational complexity that do not compromise significantly on accuracy. In this work, we propose ProtoNN, a novel algorithm that addresses the problem of real-time and accurate prediction on resource-scarce devices. ProtoNN is inspired by k-Nearest Neighbor (KNN) but has several orders lower storage and prediction complexity. ProtoNN models can be deployed even on devices with puny storage and computational power (e.g. an Arduino UNO with 2kB RAM) to get excellent prediction accuracy. ProtoNN derives its strength from three key ideas: a) learning a small number of prototypes to represent the entire training set, b) sparse low dimensional projection of data, c) joint discriminative learning of the projection and prototypes with explicit model size constraint. We conduct systematic empirical evaluation of ProtoNN on a variety of supervised learning tasks (binary, multi-class, multi-label classification) and show that it gives nearly state-of-the-art prediction accuracy on resource-scarce devices while consuming several orders lower storage, and using minimal working memory.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2017/poster/683",
+      "pdf_url": "http://proceedings.mlr.press/v70/gupta17a/gupta17a.pdf",
+      "github_url": "",
+      "total_authors": 10,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "arun_sai_suggala_3",
+        "name": "Arun Sai Suggala",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India),Carnegie Mellon University (Unknown)",
+        "countries": [
+          "India",
+          "Unknown"
+        ],
+        "country_codes": [
+          "UN",
+          "IN"
+        ]
+      },
+      "sort_score": 4.444444444444445,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 227,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "683",
+      "title": "ProtoNN: Compressed and Accurate kNN for Resource-scarce Devices",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Several real-world applications require real-time prediction on resource-scarce devices such as an Internet of Things (IoT) sensor. Such applications demand prediction models with small storage and computational complexity that do not compromise significantly on accuracy. In this work, we propose ProtoNN, a novel algorithm that addresses the problem of real-time and accurate prediction on resource-scarce devices. ProtoNN is inspired by k-Nearest Neighbor (KNN) but has several orders lower storage and prediction complexity. ProtoNN models can be deployed even on devices with puny storage and computational power (e.g. an Arduino UNO with 2kB RAM) to get excellent prediction accuracy. ProtoNN derives its strength from three key ideas: a) learning a small number of prototypes to represent the entire training set, b) sparse low dimensional projection of data, c) joint discriminative learning of the projection and prototypes with explicit model size constraint. We conduct systematic empirical evaluation of ProtoNN on a variety of supervised learning tasks (binary, multi-class, multi-label classification) and show that it gives nearly state-of-the-art prediction accuracy on resource-scarce devices while consuming several orders lower storage, and using minimal working memory.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2017/poster/683",
+      "pdf_url": "http://proceedings.mlr.press/v70/gupta17a/gupta17a.pdf",
+      "github_url": "",
+      "total_authors": 10,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "ankit_goyal",
+        "name": "Ankit Goyal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India),University of Michigan (Unknown)",
+        "countries": [
+          "India",
+          "Unknown"
+        ],
+        "country_codes": [
+          "UN",
+          "IN"
+        ]
+      },
+      "sort_score": 3.888888888888889,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 227,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "683",
+      "title": "ProtoNN: Compressed and Accurate kNN for Resource-scarce Devices",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Several real-world applications require real-time prediction on resource-scarce devices such as an Internet of Things (IoT) sensor. Such applications demand prediction models with small storage and computational complexity that do not compromise significantly on accuracy. In this work, we propose ProtoNN, a novel algorithm that addresses the problem of real-time and accurate prediction on resource-scarce devices. ProtoNN is inspired by k-Nearest Neighbor (KNN) but has several orders lower storage and prediction complexity. ProtoNN models can be deployed even on devices with puny storage and computational power (e.g. an Arduino UNO with 2kB RAM) to get excellent prediction accuracy. ProtoNN derives its strength from three key ideas: a) learning a small number of prototypes to represent the entire training set, b) sparse low dimensional projection of data, c) joint discriminative learning of the projection and prototypes with explicit model size constraint. We conduct systematic empirical evaluation of ProtoNN on a variety of supervised learning tasks (binary, multi-class, multi-label classification) and show that it gives nearly state-of-the-art prediction accuracy on resource-scarce devices while consuming several orders lower storage, and using minimal working memory.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2017/poster/683",
+      "pdf_url": "http://proceedings.mlr.press/v70/gupta17a/gupta17a.pdf",
+      "github_url": "",
+      "total_authors": 10,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "harsha_vardhan_simhadri",
+        "name": "Harsha Vardhan Simhadri",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.333333333333334,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 227,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "583",
+      "title": "On Context-Dependent Clustering of Bandits",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We investigate a novel cluster-of-bandit algorithm CAB for collaborative recommendation tasks that implements the underlying feedback sharing mechanism by estimating user neighborhoods in a context-dependent manner. CAB makes sharp departures from the state of the art by incorporating collaborative effects into inference, as well as learning processes in a manner that seamlessly interleaves explore-exploit tradeoffs and collaborative steps. We prove regret bounds for CAB under various data-dependent assumptions which exhibit a crisp dependence on the expected number of clusters over the users, a natural measure of the statistical difficulty of the learning task. Experiments on production and real-world datasets show that CAB offers significantly increased prediction performance against a representative pool of state-of-the-art methods.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2017/poster/583",
+      "pdf_url": "http://proceedings.mlr.press/v70/gentile17a/gentile17a.pdf",
+      "github_url": "",
+      "total_authors": 6,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "purushottam_kar_4",
+        "name": "Purushottam Kar",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Kanpur (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 168,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "683",
+      "title": "ProtoNN: Compressed and Accurate kNN for Resource-scarce Devices",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Several real-world applications require real-time prediction on resource-scarce devices such as an Internet of Things (IoT) sensor. Such applications demand prediction models with small storage and computational complexity that do not compromise significantly on accuracy. In this work, we propose ProtoNN, a novel algorithm that addresses the problem of real-time and accurate prediction on resource-scarce devices. ProtoNN is inspired by k-Nearest Neighbor (KNN) but has several orders lower storage and prediction complexity. ProtoNN models can be deployed even on devices with puny storage and computational power (e.g. an Arduino UNO with 2kB RAM) to get excellent prediction accuracy. ProtoNN derives its strength from three key ideas: a) learning a small number of prototypes to represent the entire training set, b) sparse low dimensional projection of data, c) joint discriminative learning of the projection and prototypes with explicit model size constraint. We conduct systematic empirical evaluation of ProtoNN on a variety of supervised learning tasks (binary, multi-class, multi-label classification) and show that it gives nearly state-of-the-art prediction accuracy on resource-scarce devices while consuming several orders lower storage, and using minimal working memory.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2017/poster/683",
+      "pdf_url": "http://proceedings.mlr.press/v70/gupta17a/gupta17a.pdf",
+      "github_url": "",
+      "total_authors": 10,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "bhargavi_paranjape",
+        "name": "Bhargavi Paranjape",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 5,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.7777777777777777,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 227,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "696",
+      "title": "Resource-efficient Machine Learning in 2 KB RAM for the Internet of Things",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "This paper develops a novel tree-based algorithm, called Bonsai, for efficient prediction on IoT devices – such as those based on the Arduino Uno board having an 8 bit ATmega328P microcontroller operating at 16 MHz with no native floating point support, 2 KB RAM and 32 KB read-only flash. Bonsai maintains prediction accuracy while minimizing model size and prediction costs by: (a) developing a tree model which learns a single, shallow, sparse tree with powerful nodes; (b) sparsely projecting all data into a low-dimensional space in which the tree is learnt; and (c) jointly learning all tree and projection parameters. Experimental results on multiple benchmark datasets demonstrate that Bonsai can make predictions in milliseconds even on slow microcontrollers, can fit in KB of memory, has lower battery consumption than all other algorithms while achieving prediction accuracies that can be as much as 30\\% higher than state-of-the-art methods for resource-efficient machine learning. Bonsai is also shown to generalize to other resource constrained settings beyond IoT by generating significantly better search results as compared to Bing’s L3 ranker when the model size is restricted to 300 bytes. Bonsai’s code can be downloaded from (http://www.manikvarma.org/code/Bonsai/download.html).",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2017/poster/696",
+      "pdf_url": "http://proceedings.mlr.press/v70/kumar17a/kumar17a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "saurabh_goyal_1",
+        "name": "Saurabh Goyal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 317,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "708",
+      "title": "Scalable Generative Models for Multi-label Learning with Missing Labels",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We present a scalable, generative framework for multi-label learning with missing labels. Our framework consists of a latent factor model for the binary label matrix, which is coupled with an exposure model to account for label missingness (i.e., whether a zero in the label matrix is indeed a zero or denotes a missing observation). The underlying latent factor model also assumes that the low-dimensional embeddings of each label vector are directly conditioned on the respective feature vector of that example. Our generative framework admits a simple inference procedure, such that the parameter estimation reduces to a sequence of simple weighted least-square regression problems, each of which can be solved easily, efficiently, and in parallel. Moreover, inference can also be performed in an online fashion using mini-batches of training examples, which makes our framework scalable for large data sets, even when using moderate computational resources. We report both quantitative and qualitative results for our framework on several benchmark data sets, comparing it with a number of state-of-the-art methods.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2017/poster/708",
+      "pdf_url": "http://proceedings.mlr.press/v70/jain17a/jain17a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "nirbhay_modhe",
+        "name": "Nirbhay Modhe",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "IIT Kanpur (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 41,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "730",
+      "title": "Attentive Recurrent Comparators",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Rapid learning requires flexible representations to quickly adopt to new evidence. We develop a novel class of models called Attentive Recurrent Comparators (ARCs) that form representations of objects by cycling through them and making observations. Using the representations extracted by ARCs, we develop a way of approximating a",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2017/poster/730",
+      "pdf_url": "http://proceedings.mlr.press/v70/shyam17a/shyam17a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "shubham_gupta",
+        "name": "Shubham Gupta",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 161,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "772",
+      "title": "Nearly Optimal Robust Matrix Completion",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In this paper, we consider the problem of Robust Matrix Completion (RMC) where the goal is to recover a low-rank matrix by observing a small number of its entries out of which a few can be arbitrarily corrupted. We propose a simple projected gradient descent-based method to estimate the low-rank matrix that alternately performs a projected gradient descent step and cleans up a few of the corrupted entries using hard-thresholding. Our algorithm solves RMC using nearly optimal number of observations while tolerating a nearly optimal number of corruptions. Our result also implies significant improvement over the existing time complexity bounds for the low-rank matrix completion problem. Finally, an application of our result to the robust PCA problem (low-rank+sparse matrix separation) leads to nearly linear time (in matrix dimensions) algorithm for the same; existing state-of-the-art methods require quadratic time. Our empirical results corroborate our theoretical results and show that even for moderate sized problems, our method for robust PCA is an order of magnitude faster than the existing methods.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2017/poster/772",
+      "pdf_url": "http://proceedings.mlr.press/v70/cherapanamjeri17a/cherapanamjeri17a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "kartik_gupta",
+        "name": "Kartik Gupta",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 124,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "785",
+      "title": "Active Heteroscedastic Regression",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "An active learner is given a model class $\\Theta$, a large sample of unlabeled data drawn from an underlying distribution and access to a labeling oracle that can provide a label for any of the unlabeled instances. The goal of the learner is to find a model $\\theta \\in \\Theta$ that fits the data to a given accuracy while making as few label queries to the oracle as possible. In this work, we consider a theoretical analysis of the label requirement of active learning for regression under a heteroscedastic noise model, where the noise depends on the instance. We provide bounds on the convergence rates of active and passive learning for heteroscedastic regression. Our results illustrate that just like in binary classification, some partial knowledge of the nature of the noise can lead to significant gains in the label requirement of active learning.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2017/poster/785",
+      "pdf_url": "http://proceedings.mlr.press/v70/chaudhuri17a/chaudhuri17a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prateek_jain_8",
+        "name": "Prateek Jain",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 27,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "683",
+      "title": "ProtoNN: Compressed and Accurate kNN for Resource-scarce Devices",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Several real-world applications require real-time prediction on resource-scarce devices such as an Internet of Things (IoT) sensor. Such applications demand prediction models with small storage and computational complexity that do not compromise significantly on accuracy. In this work, we propose ProtoNN, a novel algorithm that addresses the problem of real-time and accurate prediction on resource-scarce devices. ProtoNN is inspired by k-Nearest Neighbor (KNN) but has several orders lower storage and prediction complexity. ProtoNN models can be deployed even on devices with puny storage and computational power (e.g. an Arduino UNO with 2kB RAM) to get excellent prediction accuracy. ProtoNN derives its strength from three key ideas: a) learning a small number of prototypes to represent the entire training set, b) sparse low dimensional projection of data, c) joint discriminative learning of the projection and prototypes with explicit model size constraint. We conduct systematic empirical evaluation of ProtoNN on a variety of supervised learning tasks (binary, multi-class, multi-label classification) and show that it gives nearly state-of-the-art prediction accuracy on resource-scarce devices while consuming several orders lower storage, and using minimal working memory.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2017/poster/683",
+      "pdf_url": "http://proceedings.mlr.press/v70/gupta17a/gupta17a.pdf",
+      "github_url": "",
+      "total_authors": 10,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "ashish_kumar",
+        "name": "Ashish Kumar",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 6,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.2222222222222223,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 227,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "683",
+      "title": "ProtoNN: Compressed and Accurate kNN for Resource-scarce Devices",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Several real-world applications require real-time prediction on resource-scarce devices such as an Internet of Things (IoT) sensor. Such applications demand prediction models with small storage and computational complexity that do not compromise significantly on accuracy. In this work, we propose ProtoNN, a novel algorithm that addresses the problem of real-time and accurate prediction on resource-scarce devices. ProtoNN is inspired by k-Nearest Neighbor (KNN) but has several orders lower storage and prediction complexity. ProtoNN models can be deployed even on devices with puny storage and computational power (e.g. an Arduino UNO with 2kB RAM) to get excellent prediction accuracy. ProtoNN derives its strength from three key ideas: a) learning a small number of prototypes to represent the entire training set, b) sparse low dimensional projection of data, c) joint discriminative learning of the projection and prototypes with explicit model size constraint. We conduct systematic empirical evaluation of ProtoNN on a variety of supervised learning tasks (binary, multi-class, multi-label classification) and show that it gives nearly state-of-the-art prediction accuracy on resource-scarce devices while consuming several orders lower storage, and using minimal working memory.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2017/poster/683",
+      "pdf_url": "http://proceedings.mlr.press/v70/gupta17a/gupta17a.pdf",
+      "github_url": "",
+      "total_authors": 10,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "saurabh_goyal",
+        "name": "Saurabh Goyal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 7,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 227,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "752",
+      "title": "Recovery Guarantees for One-hidden-layer Neural Networks",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In this paper, we consider regression problems with one-hidden-layer neural networks (1NNs). We distill some properties of activation functions that lead to",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2017/poster/752",
+      "pdf_url": "http://proceedings.mlr.press/v70/zhong17a/zhong17a.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "peter_l__bartlett",
+        "name": "Peter L. Bartlett",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "University of California, Berkeley (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.25,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 374,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "683",
+      "title": "ProtoNN: Compressed and Accurate kNN for Resource-scarce Devices",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Several real-world applications require real-time prediction on resource-scarce devices such as an Internet of Things (IoT) sensor. Such applications demand prediction models with small storage and computational complexity that do not compromise significantly on accuracy. In this work, we propose ProtoNN, a novel algorithm that addresses the problem of real-time and accurate prediction on resource-scarce devices. ProtoNN is inspired by k-Nearest Neighbor (KNN) but has several orders lower storage and prediction complexity. ProtoNN models can be deployed even on devices with puny storage and computational power (e.g. an Arduino UNO with 2kB RAM) to get excellent prediction accuracy. ProtoNN derives its strength from three key ideas: a) learning a small number of prototypes to represent the entire training set, b) sparse low dimensional projection of data, c) joint discriminative learning of the projection and prototypes with explicit model size constraint. We conduct systematic empirical evaluation of ProtoNN on a variety of supervised learning tasks (binary, multi-class, multi-label classification) and show that it gives nearly state-of-the-art prediction accuracy on resource-scarce devices while consuming several orders lower storage, and using minimal working memory.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2017/poster/683",
+      "pdf_url": "http://proceedings.mlr.press/v70/gupta17a/gupta17a.pdf",
+      "github_url": "",
+      "total_authors": 10,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "raghavendra_udupa",
+        "name": "Raghavendra Udupa",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 8,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.1111111111111112,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 227,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "683",
+      "title": "ProtoNN: Compressed and Accurate kNN for Resource-scarce Devices",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Several real-world applications require real-time prediction on resource-scarce devices such as an Internet of Things (IoT) sensor. Such applications demand prediction models with small storage and computational complexity that do not compromise significantly on accuracy. In this work, we propose ProtoNN, a novel algorithm that addresses the problem of real-time and accurate prediction on resource-scarce devices. ProtoNN is inspired by k-Nearest Neighbor (KNN) but has several orders lower storage and prediction complexity. ProtoNN models can be deployed even on devices with puny storage and computational power (e.g. an Arduino UNO with 2kB RAM) to get excellent prediction accuracy. ProtoNN derives its strength from three key ideas: a) learning a small number of prototypes to represent the entire training set, b) sparse low dimensional projection of data, c) joint discriminative learning of the projection and prototypes with explicit model size constraint. We conduct systematic empirical evaluation of ProtoNN on a variety of supervised learning tasks (binary, multi-class, multi-label classification) and show that it gives nearly state-of-the-art prediction accuracy on resource-scarce devices while consuming several orders lower storage, and using minimal working memory.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2017/poster/683",
+      "pdf_url": "http://proceedings.mlr.press/v70/gupta17a/gupta17a.pdf",
+      "github_url": "",
+      "total_authors": 10,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "manik_varma_2",
+        "name": "Manik Varma",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 9,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 0.5555555555555558,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 227,
+        "semantic_scholar_citations": 0
+      }
+    }
+  ]
+}

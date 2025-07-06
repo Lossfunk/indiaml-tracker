@@ -1,0 +1,666 @@
+{
+  "conference": "NeurIPS 2015",
+  "focus_country": "India",
+  "total_papers": 14,
+  "generated_at": "2025-07-06T10:39:19.871035",
+  "config": {
+    "first_author_weight": 3.0,
+    "last_author_weight": 2.0,
+    "middle_author_weight": 1.0,
+    "status_weights": {
+      "oral": 10.0,
+      "spotlight": 7.5,
+      "poster": 5.0,
+      "unknown": 1.0
+    },
+    "output_format": "json",
+    "include_review_details": true,
+    "include_citation_data": true
+  },
+  "papers": [
+    {
+      "paper_id": "5519",
+      "title": "Robust Regression via Hard Thresholding",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We study the problem of Robust Least Squares Regression (RLSR) where several response variables can be adversarially corrupted. More specifically, for a data matrix X \\in \\R^{p x n} and an underlying model w",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2015/poster/5519",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2015/file/1be3bc32e6564055d5ca3e5a354acbef-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "kush_bhatia",
+        "name": "Kush Bhatia",
+        "name_site": "Kush Bhatia, Prateek Jain, Purushottam Kar",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 202,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "5546",
+      "title": "Predtron: A Family of Online Algorithms for General Prediction Problems",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Modern prediction problems arising in multilabel learning and learning to rank pose unique challenges to the classical theory of supervised learning. These problems have large prediction and label spaces of a combinatorial nature and involve sophisticated loss functions. We offer a general framework to derive mistake driven online algorithms and associated loss bounds.  The key ingredients in our framework are a general loss function, a general vector space representation of predictions, and a notion of margin with respect to a general norm. Our general algorithm, Predtron, yields the perceptron algorithm and its variants when instantiated on classic problems such as binary classification, multiclass classification, ordinal regression, and multilabel classification.  For multilabel ranking and subset ranking, we derive novel algorithms, notions of margins, and loss bounds. A simulation study confirms the behavior predicted by our bounds and demonstrates the flexibility of the design choices in our framework.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2015/poster/5546",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2015/file/6a10bbd480e4c5573d8f3af73ae0454b-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prateek_jain_17",
+        "name": "Prateek Jain",
+        "name_site": "Prateek Jain, Nagarajan Natarajan, Ambuj Tewari",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 3,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "5766",
+      "title": "Lifted Inference Rules With Constraints",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Lifted inference rules exploit symmetries for fast reasoning in statistical rela-tional models. Computational complexity of these rules is highly dependent onthe choice of the constraint language they operate on and therefore coming upwith the right kind of representation is critical to the success of lifted inference.In this paper, we propose a new constraint language, called setineq, which allowssubset, equality and inequality constraints, to represent substitutions over the vari-ables in the theory. Our constraint formulation is strictly more expressive thanexisting representations, yet easy to operate on. We reformulate the three mainlifting rules: decomposer, generalized binomial and the recently proposed singleoccurrence for MAP inference, to work with our constraint representation. Exper-iments on benchmark MLNs for exact and sampling based inference demonstratethe effectiveness of our approach over several other existing techniques.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2015/poster/5766",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2015/file/2d00f43f07911355d4151f13925ff292-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "happy_mittal_1",
+        "name": "Happy Mittal",
+        "name_site": "Happy Mittal, Anuj Mahajan, Vibhav Gogate, Parag Singla",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 6,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "5519",
+      "title": "Robust Regression via Hard Thresholding",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We study the problem of Robust Least Squares Regression (RLSR) where several response variables can be adversarially corrupted. More specifically, for a data matrix X \\in \\R^{p x n} and an underlying model w",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2015/poster/5519",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2015/file/1be3bc32e6564055d5ca3e5a354acbef-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "purushottam_kar_5",
+        "name": "Purushottam Kar",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Kanpur (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 202,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "5652",
+      "title": "Spectral Norm Regularization of Orthonormal Representations for Graph Transduction",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Recent literature~\\cite{ando} suggests that embedding a graph on an unit sphere leads to better generalization for graph transduction. However, the choice of optimal embedding and an efficient algorithm to compute the same remains open. In this paper, we show that orthonormal representations, a class of unit-sphere graph embeddings are PAC learnable. Existing PAC-based analysis do not  apply as the VC dimension of the function class is infinite. We propose an alternative PAC-based bound, which do not depend on the VC dimension of the underlying function class, but is related to the famous Lov\\'{a}sz~$\\vartheta$ function. The main contribution of the paper is SPORE, a SPectral regularized ORthonormal Embedding for graph transduction, derived from the PAC bound. SPORE is posed as a non-smooth convex function over an \\emph{elliptope}. These problems are usually solved as semi-definite programs (SDPs) with time complexity $O(n^6)$.  We present,  Infeasible Inexact proximal~(IIP): an Inexact proximal method which performs subgradient procedure on an approximate projection, not necessarily feasible. IIP is more scalable than SDP, has an $O(\\frac{1}{\\sqrt{T}})$ convergence, and is generally applicable whenever a suitable approximate projection is available. We use IIP to compute SPORE where the approximate projection step is computed by FISTA, an accelerated gradient descent procedure. We show that the method has a convergence rate of $O(\\frac{1}{\\sqrt{T}})$. The proposed algorithm easily scales to 1000's of vertices, while the standard SDP computation does not scale beyond few hundred vertices. Furthermore, the analysis presented here easily extends to the multiple graph setting.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2015/poster/5652",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2015/file/1ee3dfcd8a0645a25a35977997223d22-Paper.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "francis_bach_6",
+        "name": "Francis Bach",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 5,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "INRIA (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 8,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "5766",
+      "title": "Lifted Inference Rules With Constraints",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Lifted inference rules exploit symmetries for fast reasoning in statistical rela-tional models. Computational complexity of these rules is highly dependent onthe choice of the constraint language they operate on and therefore coming upwith the right kind of representation is critical to the success of lifted inference.In this paper, we propose a new constraint language, called setineq, which allowssubset, equality and inequality constraints, to represent substitutions over the vari-ables in the theory. Our constraint formulation is strictly more expressive thanexisting representations, yet easy to operate on. We reformulate the three mainlifting rules: decomposer, generalized binomial and the recently proposed singleoccurrence for MAP inference, to work with our constraint representation. Exper-iments on benchmark MLNs for exact and sampling based inference demonstratethe effectiveness of our approach over several other existing techniques.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2015/poster/5766",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2015/file/2d00f43f07911355d4151f13925ff292-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "parag_singla_3",
+        "name": "Parag Singla",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 10.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 6,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "5652",
+      "title": "Spectral Norm Regularization of Orthonormal Representations for Graph Transduction",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Recent literature~\\cite{ando} suggests that embedding a graph on an unit sphere leads to better generalization for graph transduction. However, the choice of optimal embedding and an efficient algorithm to compute the same remains open. In this paper, we show that orthonormal representations, a class of unit-sphere graph embeddings are PAC learnable. Existing PAC-based analysis do not  apply as the VC dimension of the function class is infinite. We propose an alternative PAC-based bound, which do not depend on the VC dimension of the underlying function class, but is related to the famous Lov\\'{a}sz~$\\vartheta$ function. The main contribution of the paper is SPORE, a SPectral regularized ORthonormal Embedding for graph transduction, derived from the PAC bound. SPORE is posed as a non-smooth convex function over an \\emph{elliptope}. These problems are usually solved as semi-definite programs (SDPs) with time complexity $O(n^6)$.  We present,  Infeasible Inexact proximal~(IIP): an Inexact proximal method which performs subgradient procedure on an approximate projection, not necessarily feasible. IIP is more scalable than SDP, has an $O(\\frac{1}{\\sqrt{T}})$ convergence, and is generally applicable whenever a suitable approximate projection is available. We use IIP to compute SPORE where the approximate projection step is computed by FISTA, an accelerated gradient descent procedure. We show that the method has a convergence rate of $O(\\frac{1}{\\sqrt{T}})$. The proposed algorithm easily scales to 1000's of vertices, while the standard SDP computation does not scale beyond few hundred vertices. Furthermore, the analysis presented here easily extends to the multiple graph setting.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2015/poster/5652",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2015/file/1ee3dfcd8a0645a25a35977997223d22-Paper.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "bibaswan_k_chatterjee",
+        "name": "Bibaswan K Chatterjee",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.75,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 8,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "5766",
+      "title": "Lifted Inference Rules With Constraints",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Lifted inference rules exploit symmetries for fast reasoning in statistical rela-tional models. Computational complexity of these rules is highly dependent onthe choice of the constraint language they operate on and therefore coming upwith the right kind of representation is critical to the success of lifted inference.In this paper, we propose a new constraint language, called setineq, which allowssubset, equality and inequality constraints, to represent substitutions over the vari-ables in the theory. Our constraint formulation is strictly more expressive thanexisting representations, yet easy to operate on. We reformulate the three mainlifting rules: decomposer, generalized binomial and the recently proposed singleoccurrence for MAP inference, to work with our constraint representation. Exper-iments on benchmark MLNs for exact and sampling based inference demonstratethe effectiveness of our approach over several other existing techniques.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2015/poster/5766",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2015/file/2d00f43f07911355d4151f13925ff292-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "anuj_mahajan",
+        "name": "Anuj Mahajan",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 3.333333333333334,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 6,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "5519",
+      "title": "Robust Regression via Hard Thresholding",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We study the problem of Robust Least Squares Regression (RLSR) where several response variables can be adversarially corrupted. More specifically, for a data matrix X \\in \\R^{p x n} and an underlying model w",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2015/poster/5519",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2015/file/1be3bc32e6564055d5ca3e5a354acbef-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "prateek_jain_18",
+        "name": "Prateek Jain",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 202,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "5572",
+      "title": "Lifted Symmetry Detection and Breaking for MAP Inference",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Symmetry breaking is a technique for speeding up propositional satisfiability testing by adding constraints to the theory that restrict the search space while preserving satisfiability. In this work, we extend symmetry breaking to the problem of model finding in weighted and unweighted relational theories, a class of problems that includes MAP inference in Markov Logic and similar statistical-relational languages. We introduce term symmetries, which are induced by an evidence set and extend to symmetries over a relational theory. We provide the important special case of term equivalent symmetries, showing that such symmetries can be found in low-degree polynomial time. We show how to break an exponential number of these symmetries with added constraints whose number is linear in the size of the domain. We demonstrate the effectiveness of these techniques through experiments in two relational domains. We also discuss the connections between relational symmetry breaking and work on lifted inference in statistical-relational reasoning.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2015/poster/5572",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2015/file/71ad16ad2c4d81f348082ff6c4b20768-Paper.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "parag_singla_4",
+        "name": "Parag Singla",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Delhi (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 16,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "5652",
+      "title": "Spectral Norm Regularization of Orthonormal Representations for Graph Transduction",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Recent literature~\\cite{ando} suggests that embedding a graph on an unit sphere leads to better generalization for graph transduction. However, the choice of optimal embedding and an efficient algorithm to compute the same remains open. In this paper, we show that orthonormal representations, a class of unit-sphere graph embeddings are PAC learnable. Existing PAC-based analysis do not  apply as the VC dimension of the function class is infinite. We propose an alternative PAC-based bound, which do not depend on the VC dimension of the underlying function class, but is related to the famous Lov\\'{a}sz~$\\vartheta$ function. The main contribution of the paper is SPORE, a SPectral regularized ORthonormal Embedding for graph transduction, derived from the PAC bound. SPORE is posed as a non-smooth convex function over an \\emph{elliptope}. These problems are usually solved as semi-definite programs (SDPs) with time complexity $O(n^6)$.  We present,  Infeasible Inexact proximal~(IIP): an Inexact proximal method which performs subgradient procedure on an approximate projection, not necessarily feasible. IIP is more scalable than SDP, has an $O(\\frac{1}{\\sqrt{T}})$ convergence, and is generally applicable whenever a suitable approximate projection is available. We use IIP to compute SPORE where the approximate projection step is computed by FISTA, an accelerated gradient descent procedure. We show that the method has a convergence rate of $O(\\frac{1}{\\sqrt{T}})$. The proposed algorithm easily scales to 1000's of vertices, while the standard SDP computation does not scale beyond few hundred vertices. Furthermore, the analysis presented here easily extends to the multiple graph setting.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2015/poster/5652",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2015/file/1ee3dfcd8a0645a25a35977997223d22-Paper.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "raman_sankaran",
+        "name": "Raman Sankaran",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 8,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "5547",
+      "title": "Weighted Theta Functions and Embeddings with Applications to Max-Cut, Clustering and Summarization",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "We introduce a unifying generalization of the Lovász theta function, and the associated geometric embedding, for graphs with weights on both nodes and edges. We show how it can be computed exactly by semidefinite programming, and how to approximate it using SVM computations. We show how the theta function can be interpreted as a measure of diversity in graphs and use this idea, and the graph embedding in algorithms for Max-Cut, correlation clustering and document summarization, all of which are well represented as problems on weighted graphs.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2015/poster/5547",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2015/file/4c27cea8526af8cfee3be5e183ac9605-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "chiranjib_bhattacharyya_8",
+        "name": "Chiranjib Bhattacharyya",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 9,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "5766",
+      "title": "Lifted Inference Rules With Constraints",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Lifted inference rules exploit symmetries for fast reasoning in statistical rela-tional models. Computational complexity of these rules is highly dependent onthe choice of the constraint language they operate on and therefore coming upwith the right kind of representation is critical to the success of lifted inference.In this paper, we propose a new constraint language, called setineq, which allowssubset, equality and inequality constraints, to represent substitutions over the vari-ables in the theory. Our constraint formulation is strictly more expressive thanexisting representations, yet easy to operate on. We reformulate the three mainlifting rules: decomposer, generalized binomial and the recently proposed singleoccurrence for MAP inference, to work with our constraint representation. Exper-iments on benchmark MLNs for exact and sampling based inference demonstratethe effectiveness of our approach over several other existing techniques.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2015/poster/5766",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2015/file/2d00f43f07911355d4151f13925ff292-Paper.pdf",
+      "github_url": "",
+      "total_authors": 4,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "vibhav_g_gogate_2",
+        "name": "Vibhav G Gogate",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "University of Texas at Dallas (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.666666666666667,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 6,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "5652",
+      "title": "Spectral Norm Regularization of Orthonormal Representations for Graph Transduction",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "Recent literature~\\cite{ando} suggests that embedding a graph on an unit sphere leads to better generalization for graph transduction. However, the choice of optimal embedding and an efficient algorithm to compute the same remains open. In this paper, we show that orthonormal representations, a class of unit-sphere graph embeddings are PAC learnable. Existing PAC-based analysis do not  apply as the VC dimension of the function class is infinite. We propose an alternative PAC-based bound, which do not depend on the VC dimension of the underlying function class, but is related to the famous Lov\\'{a}sz~$\\vartheta$ function. The main contribution of the paper is SPORE, a SPectral regularized ORthonormal Embedding for graph transduction, derived from the PAC bound. SPORE is posed as a non-smooth convex function over an \\emph{elliptope}. These problems are usually solved as semi-definite programs (SDPs) with time complexity $O(n^6)$.  We present,  Infeasible Inexact proximal~(IIP): an Inexact proximal method which performs subgradient procedure on an approximate projection, not necessarily feasible. IIP is more scalable than SDP, has an $O(\\frac{1}{\\sqrt{T}})$ convergence, and is generally applicable whenever a suitable approximate projection is available. We use IIP to compute SPORE where the approximate projection step is computed by FISTA, an accelerated gradient descent procedure. We show that the method has a convergence rate of $O(\\frac{1}{\\sqrt{T}})$. The proposed algorithm easily scales to 1000's of vertices, while the standard SDP computation does not scale beyond few hundred vertices. Furthermore, the analysis presented here easily extends to the multiple graph setting.",
+      "tldr": null,
+      "site_url": "https://nips.cc/virtual/2015/poster/5652",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2015/file/1ee3dfcd8a0645a25a35977997223d22-Paper.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "chiranjib_bhattacharyya_7",
+        "name": "Chiranjib Bhattacharyya",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 1.25,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 8,
+        "semantic_scholar_citations": 0
+      }
+    }
+  ]
+}

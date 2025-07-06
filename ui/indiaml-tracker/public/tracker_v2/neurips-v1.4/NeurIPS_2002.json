@@ -1,0 +1,68 @@
+{
+  "conference": "NeurIPS 2002",
+  "focus_country": "India",
+  "total_papers": 1,
+  "generated_at": "2025-07-06T10:39:19.874428",
+  "config": {
+    "first_author_weight": 3.0,
+    "last_author_weight": 2.0,
+    "middle_author_weight": 1.0,
+    "status_weights": {
+      "oral": 10.0,
+      "spotlight": 7.5,
+      "poster": 5.0,
+      "unknown": 1.0
+    },
+    "output_format": "json",
+    "include_review_details": true,
+    "include_citation_data": true
+  },
+  "papers": [
+    {
+      "paper_id": "a61ad18a26",
+      "title": "Fast Kernels for String and Tree Matching",
+      "status": "Poster",
+      "normalized_status": "poster",
+      "abstract": "In this paper we present a new algorithm suitable for matching discrete  objects such as strings and trees in linear time, thus obviating dynarrtic  programming with quadratic time complexity. Furthermore, prediction  cost in many cases can be reduced to linear cost in the length of the se(cid:173) quence to be classified, regardless of the number of support vectors. This  improvement on the currently available algorithms makes string kernels  a viable alternative for the practitioner.",
+      "tldr": null,
+      "site_url": "https://papers.nips.cc/paper_files/paper/2002/hash/743394beff4b1282ba735e5e3723ed74-Abstract.html",
+      "pdf_url": "https://papers.nips.cc/paper_files/paper/2002/file/743394beff4b1282ba735e5e3723ed74-Paper.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "alex_j__smola_16",
+        "name": "Alex J. Smola",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 15.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 479,
+        "semantic_scholar_citations": 0
+      }
+    }
+  ]
+}

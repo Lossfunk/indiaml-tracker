@@ -1,0 +1,946 @@
+{
+  "conference": "ICML 2018",
+  "focus_country": "India",
+  "total_papers": 20,
+  "generated_at": "2025-07-06T10:37:29.325607",
+  "config": {
+    "first_author_weight": 3.0,
+    "last_author_weight": 2.0,
+    "middle_author_weight": 1.0,
+    "status_weights": {
+      "oral": 10.0,
+      "spotlight": 7.5,
+      "poster": 5.0,
+      "unknown": 1.0
+    },
+    "output_format": "json",
+    "include_review_details": true,
+    "include_citation_data": true
+  },
+  "papers": [
+    {
+      "paper_id": "1930",
+      "title": "A Unified Framework for Structured Low-rank Matrix Learning",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "We consider the problem of learning a low-rank matrix, constrained to lie in a linear subspace, and introduce a novel factorization for modeling such matrices. A salient feature of the proposed factorization scheme is it decouples the low-rank and the structural constraints onto separate factors. We formulate the optimization problem on the Riemannian spectrahedron manifold, where the Riemannian framework allows to develop computationally efficient conjugate gradient and trust-region algorithms. Experiments on problems such as standard/robust/non-negative matrix completion, Hankel matrix learning and multi-task learning demonstrate the efficacy of our approach.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2018/poster/1930",
+      "pdf_url": "http://proceedings.mlr.press/v80/jawanpuria18a/jawanpuria18a.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "pratik_jawanpuria_1",
+        "name": "Pratik Jawanpuria",
+        "name_site": "Pratik Kumar Jawanpuria, Bamdev Mishra",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 30.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 31,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "2059",
+      "title": "A Progressive Batching L-BFGS Method for Machine Learning",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "The standard L-BFGS method relies on gradient approximations that are not dominated by noise, so that search directions are descent directions, the line search is reliable, and quasi-Newton updating yields useful quadratic models of the objective function. All of this appears to call for a full batch approach, but since small batch sizes give rise to faster algorithms with better generalization properties, L-BFGS is currently not considered an algorithm of choice for large-scale machine learning applications. One need not, however, choose between the two extremes represented by the full batch or highly stochastic regimes, and may instead follow a progressive batching approach in which the sample size increases during the course of the optimization. In this paper, we present a new version of the L-BFGS algorithm that combines three basic components - progressive batching, a stochastic line search, and stable quasi-Newton updating - and that performs well on training logistic regression and deep neural networks. We provide supporting convergence theory for the method.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2018/poster/2059",
+      "pdf_url": "http://proceedings.mlr.press/v80/bollapragada18a/bollapragada18a.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "raghu_bollapragada",
+        "name": "Raghu Bollapragada",
+        "name_site": "Vijaya Raghavendra Bollapragada, Jorge Nocedal, Dheevatsa Mudigere, Hao-Jun M Shi, Peter Tang",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Northwestern University (Unknown),Intel (India)",
+        "countries": [
+          "Unknown",
+          "India"
+        ],
+        "country_codes": [
+          "UN",
+          "IN"
+        ]
+      },
+      "sort_score": 30.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 214,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "2164",
+      "title": "Testing Sparsity over Known and Unknown Bases",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "Sparsity is a basic property of real vectors that is exploited in a wide variety of machine learning applications. In this work, we describe property testing algorithms for sparsity that observe a low-dimensional projec- tion of the input. We consider two settings. In the first setting, we test sparsity with respect to an unknown basis: given input vectors $y_1 ,...,y_p \\in R^d$ whose concatenation as columns forms $Y \\in R^{d \\times p}$ , does $Y = AX$ for matrices $A \\in R^{d\\times m}$ and $X \\in R^{m \\times p}$ such that each column of $X$ is $k$-sparse, or is $Y$ “far” from having such a decomposition? In the second setting, we test sparsity with respect to a known basis: for a fixed design ma- trix $A \\in R^{d \\times m}$ , given input vector $y \\in R^d$ , is $y = Ax$ for some $k$-sparse vector $x$ or is $y$ “far” from having such a decomposition? We analyze our algorithms using tools from high-dimensional geometry and probability.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2018/poster/2164",
+      "pdf_url": "http://proceedings.mlr.press/v80/barman18a/barman18a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "siddharth_barman",
+        "name": "Siddharth Barman",
+        "name_site": "Siddharth Barman, Arnab Bhattacharyya, Suprovat Ghoshal",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 30.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 8,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "2170",
+      "title": "Solving Partial Assignment Problems using Random Clique Complexes",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "We present an alternate formulation of the partial assignment problem as matching random clique complexes, that are higher-order analogues of random graphs, designed to provide a set of invariants that better detect higher-order structure. The proposed method creates random clique adjacency matrices for each k-skeleton of the random clique complexes and matches them, taking into account each point as the affine combination of its geometric neighborhood. We justify our solution theoretically, by analyzing the runtime and storage complexity of our algorithm along with the asymptotic behavior of the quadratic assignment problem (QAP) that is associated with the underlying random clique adjacency matrices. Experiments on both synthetic and real-world datasets, containing severe occlusions and distortions, provide insight into the accuracy, efficiency, and robustness of our approach. We outperform diverse matching algorithms by a significant margin.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2018/poster/2170",
+      "pdf_url": "http://proceedings.mlr.press/v80/sharma18a/sharma18a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "charu_sharma",
+        "name": "Charu Sharma",
+        "name_site": "Charu Sharma, Deepak Nathani, Manu Kaul",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Hyderabad (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 30.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 0,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "2315",
+      "title": "Signal and Noise Statistics Oblivious Orthogonal Matching Pursuit",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "Orthogonal matching pursuit (OMP) is a widely used algorithm for recovering sparse high dimensional vectors in linear regression models. The optimal performance of OMP requires a priori knowledge of either the sparsity of regression vector or noise statistics. Both these statistics are rarely known a priori and are very difficult to estimate. In this paper, we present a novel technique called residual ratio thresholding (RRT) to operate OMP without any a priori knowledge of sparsity and noise statistics and establish finite sample and large sample support recovery guarantees for the same. Both analytical results and numerical simulations in real and synthetic data sets indicate that RRT has a performance comparable to OMP with a priori knowledge of sparsity and noise statistics.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2018/poster/2315",
+      "pdf_url": "http://proceedings.mlr.press/v80/kallummil18a/kallummil18a.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sreejith_kallummil",
+        "name": "Sreejith Kallummil",
+        "name_site": "Sreejith Kallummil, Sheetal Kalyani",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "IIT Madras (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 30.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 16,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "2326",
+      "title": "Trainable Calibration Measures for Neural Networks from Kernel Mean Embeddings",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "Modern neural networks have recently been found to be poorly calibrated, primarily in the direction of over-confidence. Methods like entropy penalty and temperature smoothing improve calibration by clamping confidence, but in doing so compromise the many legitimately confident predictions. We propose a more principled fix that minimizes an explicit calibration error during training. We present MMCE, a RKHS kernel based measure of calibration that is efficiently trainable alongside the negative likelihood loss without careful hyper-parameter tuning. Theoretically too, MMCE is a sound measure of calibration that is minimized at perfect calibration, and whose finite sample estimates are consistent and enjoy fast convergence rates. Extensive experiments on several network architectures demonstrate that MMCE is a fast, stable, and accurate method to minimize calibration error while maximally preserving the number of high confidence predictions.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2018/poster/2326",
+      "pdf_url": "http://proceedings.mlr.press/v80/kumar18a/kumar18a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "aviral_kumar",
+        "name": "Aviral Kumar",
+        "name_site": "Aviral Kumar, Sunita Sarawagi, Ujjwal Jain",
+        "openreview_id": null,
+        "position": 1,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "IIT Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 30.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 351,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "1930",
+      "title": "A Unified Framework for Structured Low-rank Matrix Learning",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "We consider the problem of learning a low-rank matrix, constrained to lie in a linear subspace, and introduce a novel factorization for modeling such matrices. A salient feature of the proposed factorization scheme is it decouples the low-rank and the structural constraints onto separate factors. We formulate the optimization problem on the Riemannian spectrahedron manifold, where the Riemannian framework allows to develop computationally efficient conjugate gradient and trust-region algorithms. Experiments on problems such as standard/robust/non-negative matrix completion, Hankel matrix learning and multi-task learning demonstrate the efficacy of our approach.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2018/poster/1930",
+      "pdf_url": "http://proceedings.mlr.press/v80/jawanpuria18a/jawanpuria18a.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "bamdev_mishra_1",
+        "name": "Bamdev Mishra",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 20.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 31,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "2059",
+      "title": "A Progressive Batching L-BFGS Method for Machine Learning",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "The standard L-BFGS method relies on gradient approximations that are not dominated by noise, so that search directions are descent directions, the line search is reliable, and quasi-Newton updating yields useful quadratic models of the objective function. All of this appears to call for a full batch approach, but since small batch sizes give rise to faster algorithms with better generalization properties, L-BFGS is currently not considered an algorithm of choice for large-scale machine learning applications. One need not, however, choose between the two extremes represented by the full batch or highly stochastic regimes, and may instead follow a progressive batching approach in which the sample size increases during the course of the optimization. In this paper, we present a new version of the L-BFGS algorithm that combines three basic components - progressive batching, a stochastic line search, and stable quasi-Newton updating - and that performs well on training logistic regression and deep neural networks. We provide supporting convergence theory for the method.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2018/poster/2059",
+      "pdf_url": "http://proceedings.mlr.press/v80/bollapragada18a/bollapragada18a.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "ping_tak_peter_tang",
+        "name": "Ping Tak Peter Tang",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 5,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Intel (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 20.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 214,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "2164",
+      "title": "Testing Sparsity over Known and Unknown Bases",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "Sparsity is a basic property of real vectors that is exploited in a wide variety of machine learning applications. In this work, we describe property testing algorithms for sparsity that observe a low-dimensional projec- tion of the input. We consider two settings. In the first setting, we test sparsity with respect to an unknown basis: given input vectors $y_1 ,...,y_p \\in R^d$ whose concatenation as columns forms $Y \\in R^{d \\times p}$ , does $Y = AX$ for matrices $A \\in R^{d\\times m}$ and $X \\in R^{m \\times p}$ such that each column of $X$ is $k$-sparse, or is $Y$ “far” from having such a decomposition? In the second setting, we test sparsity with respect to a known basis: for a fixed design ma- trix $A \\in R^{d \\times m}$ , given input vector $y \\in R^d$ , is $y = Ax$ for some $k$-sparse vector $x$ or is $y$ “far” from having such a decomposition? We analyze our algorithms using tools from high-dimensional geometry and probability.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2018/poster/2164",
+      "pdf_url": "http://proceedings.mlr.press/v80/barman18a/barman18a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "suprovat_ghoshal_1",
+        "name": "Suprovat Ghoshal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 20.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 8,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "2170",
+      "title": "Solving Partial Assignment Problems using Random Clique Complexes",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "We present an alternate formulation of the partial assignment problem as matching random clique complexes, that are higher-order analogues of random graphs, designed to provide a set of invariants that better detect higher-order structure. The proposed method creates random clique adjacency matrices for each k-skeleton of the random clique complexes and matches them, taking into account each point as the affine combination of its geometric neighborhood. We justify our solution theoretically, by analyzing the runtime and storage complexity of our algorithm along with the asymptotic behavior of the quadratic assignment problem (QAP) that is associated with the underlying random clique adjacency matrices. Experiments on both synthetic and real-world datasets, containing severe occlusions and distortions, provide insight into the accuracy, efficiency, and robustness of our approach. We outperform diverse matching algorithms by a significant margin.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2018/poster/2170",
+      "pdf_url": "http://proceedings.mlr.press/v80/sharma18a/sharma18a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "manohar_kaul",
+        "name": "Manohar Kaul",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Hyderabad (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 20.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 0,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "2315",
+      "title": "Signal and Noise Statistics Oblivious Orthogonal Matching Pursuit",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "Orthogonal matching pursuit (OMP) is a widely used algorithm for recovering sparse high dimensional vectors in linear regression models. The optimal performance of OMP requires a priori knowledge of either the sparsity of regression vector or noise statistics. Both these statistics are rarely known a priori and are very difficult to estimate. In this paper, we present a novel technique called residual ratio thresholding (RRT) to operate OMP without any a priori knowledge of sparsity and noise statistics and establish finite sample and large sample support recovery guarantees for the same. Both analytical results and numerical simulations in real and synthetic data sets indicate that RRT has a performance comparable to OMP with a priori knowledge of sparsity and noise statistics.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2018/poster/2315",
+      "pdf_url": "http://proceedings.mlr.press/v80/kallummil18a/kallummil18a.pdf",
+      "github_url": "",
+      "total_authors": 2,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sheetal_kalyani",
+        "name": "Sheetal Kalyani",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "IIT Madras (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 20.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 16,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "2326",
+      "title": "Trainable Calibration Measures for Neural Networks from Kernel Mean Embeddings",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "Modern neural networks have recently been found to be poorly calibrated, primarily in the direction of over-confidence. Methods like entropy penalty and temperature smoothing improve calibration by clamping confidence, but in doing so compromise the many legitimately confident predictions. We propose a more principled fix that minimizes an explicit calibration error during training. We present MMCE, a RKHS kernel based measure of calibration that is efficiently trainable alongside the negative likelihood loss without careful hyper-parameter tuning. Theoretically too, MMCE is a sound measure of calibration that is minimized at perfect calibration, and whose finite sample estimates are consistent and enjoy fast convergence rates. Extensive experiments on several network architectures demonstrate that MMCE is a fast, stable, and accurate method to minimize calibration error while maximally preserving the number of high confidence predictions.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2018/poster/2326",
+      "pdf_url": "http://proceedings.mlr.press/v80/kumar18a/kumar18a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "ujjwal_jain",
+        "name": "Ujjwal Jain",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "IIT Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 20.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 351,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "2376",
+      "title": "Using Inherent Structures to design Lean 2-layer RBMs",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "Understanding the representational power of Restricted Boltzmann Machines (RBMs) with multiple layers is an ill-understood problem and is an area of active research. Motivated from the approach of",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2018/poster/2376",
+      "pdf_url": "http://proceedings.mlr.press/v80/bansal18a/bansal18a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "chiranjib_bhattacharyya_4",
+        "name": "Chiranjib Bhattacharyya",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 20.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 1,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "2059",
+      "title": "A Progressive Batching L-BFGS Method for Machine Learning",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "The standard L-BFGS method relies on gradient approximations that are not dominated by noise, so that search directions are descent directions, the line search is reliable, and quasi-Newton updating yields useful quadratic models of the objective function. All of this appears to call for a full batch approach, but since small batch sizes give rise to faster algorithms with better generalization properties, L-BFGS is currently not considered an algorithm of choice for large-scale machine learning applications. One need not, however, choose between the two extremes represented by the full batch or highly stochastic regimes, and may instead follow a progressive batching approach in which the sample size increases during the course of the optimization. In this paper, we present a new version of the L-BFGS algorithm that combines three basic components - progressive batching, a stochastic line search, and stable quasi-Newton updating - and that performs well on training logistic regression and deep neural networks. We provide supporting convergence theory for the method.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2018/poster/2059",
+      "pdf_url": "http://proceedings.mlr.press/v80/bollapragada18a/bollapragada18a.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "jorge_nocedal",
+        "name": "Jorge Nocedal",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Intel (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 7.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 214,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "2164",
+      "title": "Testing Sparsity over Known and Unknown Bases",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "Sparsity is a basic property of real vectors that is exploited in a wide variety of machine learning applications. In this work, we describe property testing algorithms for sparsity that observe a low-dimensional projec- tion of the input. We consider two settings. In the first setting, we test sparsity with respect to an unknown basis: given input vectors $y_1 ,...,y_p \\in R^d$ whose concatenation as columns forms $Y \\in R^{d \\times p}$ , does $Y = AX$ for matrices $A \\in R^{d\\times m}$ and $X \\in R^{m \\times p}$ such that each column of $X$ is $k$-sparse, or is $Y$ “far” from having such a decomposition? In the second setting, we test sparsity with respect to a known basis: for a fixed design ma- trix $A \\in R^{d \\times m}$ , given input vector $y \\in R^d$ , is $y = Ax$ for some $k$-sparse vector $x$ or is $y$ “far” from having such a decomposition? We analyze our algorithms using tools from high-dimensional geometry and probability.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2018/poster/2164",
+      "pdf_url": "http://proceedings.mlr.press/v80/barman18a/barman18a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "arnab_bhattacharyya",
+        "name": "Arnab Bhattacharyya",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 5.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 8,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "2170",
+      "title": "Solving Partial Assignment Problems using Random Clique Complexes",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "We present an alternate formulation of the partial assignment problem as matching random clique complexes, that are higher-order analogues of random graphs, designed to provide a set of invariants that better detect higher-order structure. The proposed method creates random clique adjacency matrices for each k-skeleton of the random clique complexes and matches them, taking into account each point as the affine combination of its geometric neighborhood. We justify our solution theoretically, by analyzing the runtime and storage complexity of our algorithm along with the asymptotic behavior of the quadratic assignment problem (QAP) that is associated with the underlying random clique adjacency matrices. Experiments on both synthetic and real-world datasets, containing severe occlusions and distortions, provide insight into the accuracy, efficiency, and robustness of our approach. We outperform diverse matching algorithms by a significant margin.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2018/poster/2170",
+      "pdf_url": "http://proceedings.mlr.press/v80/sharma18a/sharma18a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "deepak_nathani",
+        "name": "Deepak Nathani",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Technology Hyderabad (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 5.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 0,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "2326",
+      "title": "Trainable Calibration Measures for Neural Networks from Kernel Mean Embeddings",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "Modern neural networks have recently been found to be poorly calibrated, primarily in the direction of over-confidence. Methods like entropy penalty and temperature smoothing improve calibration by clamping confidence, but in doing so compromise the many legitimately confident predictions. We propose a more principled fix that minimizes an explicit calibration error during training. We present MMCE, a RKHS kernel based measure of calibration that is efficiently trainable alongside the negative likelihood loss without careful hyper-parameter tuning. Theoretically too, MMCE is a sound measure of calibration that is minimized at perfect calibration, and whose finite sample estimates are consistent and enjoy fast convergence rates. Extensive experiments on several network architectures demonstrate that MMCE is a fast, stable, and accurate method to minimize calibration error while maximally preserving the number of high confidence predictions.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2018/poster/2326",
+      "pdf_url": "http://proceedings.mlr.press/v80/kumar18a/kumar18a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "sunita_sarawagi_1",
+        "name": "Sunita Sarawagi",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "IIT Bombay (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 5.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 351,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "2376",
+      "title": "Using Inherent Structures to design Lean 2-layer RBMs",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "Understanding the representational power of Restricted Boltzmann Machines (RBMs) with multiple layers is an ill-understood problem and is an area of active research. Motivated from the approach of",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2018/poster/2376",
+      "pdf_url": "http://proceedings.mlr.press/v80/bansal18a/bansal18a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "abhinav_anand",
+        "name": "Abhinav Anand",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 2,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Indian Institute of Science (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 5.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 1,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "2059",
+      "title": "A Progressive Batching L-BFGS Method for Machine Learning",
+      "status": "Oral",
+      "normalized_status": "oral",
+      "abstract": "The standard L-BFGS method relies on gradient approximations that are not dominated by noise, so that search directions are descent directions, the line search is reliable, and quasi-Newton updating yields useful quadratic models of the objective function. All of this appears to call for a full batch approach, but since small batch sizes give rise to faster algorithms with better generalization properties, L-BFGS is currently not considered an algorithm of choice for large-scale machine learning applications. One need not, however, choose between the two extremes represented by the full batch or highly stochastic regimes, and may instead follow a progressive batching approach in which the sample size increases during the course of the optimization. In this paper, we present a new version of the L-BFGS algorithm that combines three basic components - progressive batching, a stochastic line search, and stable quasi-Newton updating - and that performs well on training logistic regression and deep neural networks. We provide supporting convergence theory for the method.",
+      "tldr": null,
+      "site_url": "https://icml.cc/virtual/2018/poster/2059",
+      "pdf_url": "http://proceedings.mlr.press/v80/bollapragada18a/bollapragada18a.pdf",
+      "github_url": "",
+      "total_authors": 5,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "hao_jun_shi",
+        "name": "Hao-Jun Shi",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 4,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Northwestern University (Unknown),Intel (India)",
+        "countries": [
+          "Unknown",
+          "India"
+        ],
+        "country_codes": [
+          "UN",
+          "IN"
+        ]
+      },
+      "sort_score": 2.5,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 214,
+        "semantic_scholar_citations": 0
+      }
+    },
+    {
+      "paper_id": "0aedaf87c7",
+      "title": "Riemannian Stochastic Recursive Gradient Algorithm",
+      "status": null,
+      "normalized_status": "unknown",
+      "abstract": "Stochastic variance reduction algorithms have recently become popular for minimizing the average of a large, but finite number of loss functions on a Riemannian manifold. The present paper proposes a Riemannian stochastic recursive gradient algorithm (R-SRG), which does not require the inverse of retraction between two distant iterates on the manifold. Convergence analyses of R-SRG are performed on both retraction-convex and non-convex functions under computationally efficient retraction and vector transport operations. The key challenge is analysis of the influence of vector transport along the retraction curve. Numerical evaluations reveal that R-SRG competes well with state-of-the-art Riemannian batch and stochastic gradient algorithms.",
+      "tldr": null,
+      "site_url": "https://proceedings.mlr.press/v80/kasai18a.html",
+      "pdf_url": "http://proceedings.mlr.press/v80/kasai18a/kasai18a.pdf",
+      "github_url": "",
+      "total_authors": 3,
+      "track_name": "Main Conference",
+      "author": {
+        "id": "bamdev_mishra_2",
+        "name": "Bamdev Mishra",
+        "name_site": null,
+        "openreview_id": null,
+        "position": 3,
+        "gender": null,
+        "homepage_url": null,
+        "dblp_id": null,
+        "google_scholar_url": null,
+        "orcid": null,
+        "linkedin_url": null,
+        "twitter_url": null,
+        "primary_email": null,
+        "affiliations": "Microsoft (India)",
+        "countries": [
+          "India"
+        ],
+        "country_codes": [
+          "IN"
+        ]
+      },
+      "sort_score": 2.0,
+      "reviews": {
+        "rating_mean": null,
+        "rating_std": null,
+        "confidence_mean": null,
+        "confidence_std": null,
+        "total_reviews": null,
+        "total_reviewers": null,
+        "google_scholar_citations": 60,
+        "semantic_scholar_citations": 0
+      }
+    }
+  ]
+}
