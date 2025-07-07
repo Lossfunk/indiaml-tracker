@@ -1,0 +1,885 @@
+{
+  "conference": "ICML",
+  "year": 2022,
+  "track": "Conference",
+  "focus_country": "India",
+  "focus_country_code": "IN",
+  "generated_at": "2025-07-07T15:54:10.888197",
+  "globalStats": {
+    "totalPapers": 1639,
+    "totalAuthors": 5366,
+    "totalCountries": 35,
+    "countries": [
+      {
+        "affiliation_country": "US",
+        "paper_count": 571,
+        "author_count": 1985,
+        "spotlights": 503,
+        "orals": 68
+      },
+      {
+        "affiliation_country": "UNK",
+        "paper_count": 370,
+        "author_count": 1100,
+        "spotlights": 340,
+        "orals": 30
+      },
+      {
+        "affiliation_country": "CN",
+        "paper_count": 201,
+        "author_count": 703,
+        "spotlights": 195,
+        "orals": 6
+      },
+      {
+        "affiliation_country": "GB",
+        "paper_count": 99,
+        "author_count": 327,
+        "spotlights": 91,
+        "orals": 8
+      },
+      {
+        "affiliation_country": "DE",
+        "paper_count": 55,
+        "author_count": 154,
+        "spotlights": 48,
+        "orals": 7
+      },
+      {
+        "affiliation_country": "FR",
+        "paper_count": 49,
+        "author_count": 108,
+        "spotlights": 43,
+        "orals": 6
+      },
+      {
+        "affiliation_country": "CH",
+        "paper_count": 36,
+        "author_count": 99,
+        "spotlights": 31,
+        "orals": 5
+      },
+      {
+        "affiliation_country": "CA",
+        "paper_count": 36,
+        "author_count": 90,
+        "spotlights": 31,
+        "orals": 5
+      },
+      {
+        "affiliation_country": "KR",
+        "paper_count": 34,
+        "author_count": 148,
+        "spotlights": 32,
+        "orals": 2
+      },
+      {
+        "affiliation_country": "IL",
+        "paper_count": 33,
+        "author_count": 80,
+        "spotlights": 28,
+        "orals": 5
+      },
+      {
+        "affiliation_country": "SG",
+        "paper_count": 23,
+        "author_count": 51,
+        "spotlights": 21,
+        "orals": 2
+      },
+      {
+        "affiliation_country": "JP",
+        "paper_count": 20,
+        "author_count": 61,
+        "spotlights": 18,
+        "orals": 2
+      },
+      {
+        "affiliation_country": "IT",
+        "paper_count": 15,
+        "author_count": 47,
+        "spotlights": 14,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "AT",
+        "paper_count": 14,
+        "author_count": 27,
+        "spotlights": 13,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "AU",
+        "paper_count": 13,
+        "author_count": 35,
+        "spotlights": 13,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "NL",
+        "paper_count": 11,
+        "author_count": 29,
+        "spotlights": 10,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "SE",
+        "paper_count": 10,
+        "author_count": 26,
+        "spotlights": 10,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "IN",
+        "paper_count": 10,
+        "author_count": 29,
+        "spotlights": 10,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "DK",
+        "paper_count": 6,
+        "author_count": 14,
+        "spotlights": 6,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "SA",
+        "paper_count": 5,
+        "author_count": 12,
+        "spotlights": 5,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "FI",
+        "paper_count": 5,
+        "author_count": 12,
+        "spotlights": 4,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "VN",
+        "paper_count": 3,
+        "author_count": 11,
+        "spotlights": 3,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "RU",
+        "paper_count": 3,
+        "author_count": 7,
+        "spotlights": 2,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "BE",
+        "paper_count": 3,
+        "author_count": 7,
+        "spotlights": 3,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "ES",
+        "paper_count": 2,
+        "author_count": 5,
+        "spotlights": 1,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "GR",
+        "paper_count": 2,
+        "author_count": 5,
+        "spotlights": 1,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "BR",
+        "paper_count": 2,
+        "author_count": 4,
+        "spotlights": 1,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "RS",
+        "paper_count": 1,
+        "author_count": 2,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "PT",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "PL",
+        "paper_count": 1,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "NO",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "UNK",
+        "paper_count": 1,
+        "author_count": 3,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "CY",
+        "paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "CO",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "CL",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0
+      }
+    ]
+  },
+  "focusCountrySummary": {
+    "country": "India",
+    "country_code": "IN",
+    "rank": 18,
+    "paper_count": 10,
+    "author_count": 29,
+    "percentage": 0.61,
+    "spotlights": 10,
+    "orals": 0,
+    "institution_count": 16,
+    "academic_institutions": 11,
+    "corporate_institutions": 5
+  },
+  "focusCountry": {
+    "authorship": {
+      "at_least_one": {
+        "count": 10,
+        "papers": [
+          {
+            "id": "17769",
+            "title": "A Closer Look at Smoothness in Domain Adversarial Training",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "16785",
+            "title": "A Study on the Ramanujan Graph Property of Winning Lottery Tickets",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "17601",
+            "title": "Actor-Critic based Improper Reinforcement Learning",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "17779",
+            "title": "Balancing Discriminability and Transferability for Source-Free Domain Adaptation",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "16853",
+            "title": "FedNew: A Communication-Efficient and Privacy-Preserving Newton-Type Method for Federated Learning",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "18299",
+            "title": "Matching Learned Causal Effects of Neural Networks with Domain Priors",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "16503",
+            "title": "On the Hidden Biases of Policy Mirror Ascent in Continuous Action Spaces",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "16723",
+            "title": "Sharpened Quasi-Newton Methods: Faster Superlinear Rate and Larger Local Convergence Neighborhood",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "17611",
+            "title": "Strategic Representation",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "16891",
+            "title": "VarScene: A Deep Generative Model for Realistic Scene Graph Synthesis",
+            "isSpotlight": true,
+            "isOral": false
+          }
+        ]
+      },
+      "majority": {
+        "count": 5,
+        "papers": [
+          {
+            "id": "16785",
+            "title": "A Study on the Ramanujan Graph Property of Winning Lottery Tickets",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "17601",
+            "title": "Actor-Critic based Improper Reinforcement Learning",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "17779",
+            "title": "Balancing Discriminability and Transferability for Source-Free Domain Adaptation",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "18299",
+            "title": "Matching Learned Causal Effects of Neural Networks with Domain Priors",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "16891",
+            "title": "VarScene: A Deep Generative Model for Realistic Scene Graph Synthesis",
+            "isSpotlight": true,
+            "isOral": false
+          }
+        ]
+      },
+      "first_author": {
+        "count": 6,
+        "papers": [
+          {
+            "id": "17769",
+            "title": "A Closer Look at Smoothness in Domain Adversarial Training",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "16785",
+            "title": "A Study on the Ramanujan Graph Property of Winning Lottery Tickets",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "17601",
+            "title": "Actor-Critic based Improper Reinforcement Learning",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "17779",
+            "title": "Balancing Discriminability and Transferability for Source-Free Domain Adaptation",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "18299",
+            "title": "Matching Learned Causal Effects of Neural Networks with Domain Priors",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "16891",
+            "title": "VarScene: A Deep Generative Model for Realistic Scene Graph Synthesis",
+            "isSpotlight": true,
+            "isOral": false
+          }
+        ]
+      }
+    },
+    "institutions": [
+      {
+        "institute": "PES University",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "17769",
+            "title": "A Closer Look at Smoothness in Domain Adversarial Training",
+            "isSpotlight": true,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Harsh Rangwani"
+        ]
+      },
+      {
+        "institute": "Amazon",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "corporate",
+        "papers": [
+          {
+            "id": "17769",
+            "title": "A Closer Look at Smoothness in Domain Adversarial Training",
+            "isSpotlight": true,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Arihant Jain"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Kharagpur",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 3,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "16785",
+            "title": "A Study on the Ramanujan Graph Property of Winning Lottery Tickets",
+            "isSpotlight": true,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Bithika Pal",
+          "Sudeshna Kolay",
+          "Pabitra Mitra"
+        ]
+      },
+      {
+        "institute": "Trinity College Dublin",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "16785",
+            "title": "A Study on the Ramanujan Graph Property of Winning Lottery Tickets",
+            "isSpotlight": true,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Biswajit Basu"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Science",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "17601",
+            "title": "Actor-Critic based Improper Reinforcement Learning",
+            "isSpotlight": true,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Mohammadi Zaki",
+          "Aditya Gopalan"
+        ]
+      },
+      {
+        "institute": "Technion",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "17601",
+            "title": "Actor-Critic based Improper Reinforcement Learning",
+            "isSpotlight": true,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Shie Mannor"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Science",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 6,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "17779",
+            "title": "Balancing Discriminability and Transferability for Source-Free Domain Adaptation",
+            "isSpotlight": true,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Jogendra Nath Kundu",
+          "Akshay R Kulkarni",
+          "Suvaansh Bhambri",
+          "Deepesh Mehta",
+          "Shreyas Anand Kulkarni",
+          "Venkatesh Babu Radhakrishnan"
+        ]
+      },
+      {
+        "institute": "Google",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "corporate",
+        "papers": [
+          {
+            "id": "17779",
+            "title": "Balancing Discriminability and Transferability for Source-Free Domain Adaptation",
+            "isSpotlight": true,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Varun Jampani"
+        ]
+      },
+      {
+        "institute": "Purdue University",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "16853",
+            "title": "FedNew: A Communication-Efficient and Privacy-Preserving Newton-Type Method for Federated Learning",
+            "isSpotlight": true,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Vaneet Aggarwal"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Hyderabad",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 3,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "18299",
+            "title": "Matching Learned Causal Effects of Neural Networks with Domain Priors",
+            "isSpotlight": true,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Sai Srinivas Kancheti",
+          "Abbavaram Gowtham Reddy",
+          "Vineeth N Balasubramanian"
+        ]
+      },
+      {
+        "institute": "Microsoft",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "corporate",
+        "papers": [
+          {
+            "id": "18299",
+            "title": "Matching Learned Causal Effects of Neural Networks with Domain Priors",
+            "isSpotlight": true,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Amit Sharma"
+        ]
+      },
+      {
+        "institute": "Microsoft",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "corporate",
+        "papers": [
+          {
+            "id": "16503",
+            "title": "On the Hidden Biases of Policy Mirror Ascent in Continuous Action Spaces",
+            "isSpotlight": true,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Anjaly Parayil"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Kanpur",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "16723",
+            "title": "Sharpened Quasi-Newton Methods: Faster Superlinear Rate and Larger Local Convergence Neighborhood",
+            "isSpotlight": true,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Ketan Rajawat"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Hyderabad",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "17611",
+            "title": "Strategic Representation",
+            "isSpotlight": true,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Ganesh Ghalme"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Bombay",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 4,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "16891",
+            "title": "VarScene: A Deep Generative Model for Realistic Scene Graph Synthesis",
+            "isSpotlight": true,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Tathagat Verma",
+          "Abir De",
+          "Yateesh Agrawal",
+          "Soumen Chakrabarti"
+        ]
+      },
+      {
+        "institute": "Adobe",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "corporate",
+        "papers": [
+          {
+            "id": "16891",
+            "title": "VarScene: A Deep Generative Model for Realistic Scene Graph Synthesis",
+            "isSpotlight": true,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Vishwa Vinay"
+        ]
+      }
+    ]
+  },
+  "institutions": {
+    "summary": {
+      "total_institutions": 0,
+      "academic_institutions": 0,
+      "corporate_institutions": 0,
+      "total_papers": 0,
+      "total_authors": 0,
+      "avg_papers_per_institution": 0,
+      "avg_authors_per_institution": 0
+    },
+    "top_institutions": [],
+    "total_institutions": 0
+  },
+  "config": {
+    "focus_country_code": "IN",
+    "focus_country_name": "India",
+    "colors": {
+      "us": "hsl(221, 83%, 53%)",
+      "cn": "hsl(0, 84%, 60%)",
+      "focusCountry": "hsl(36, 96%, 50%)",
+      "primary": "hsl(var(--primary))",
+      "secondary": "hsl(var(--secondary-foreground))",
+      "academic": "hsl(221, 83%, 53%)",
+      "corporate": "hsl(330, 80%, 60%)",
+      "rest": "hsl(330, 60%, 30%)",
+      "spotlight": "hsl(48, 96%, 50%)",
+      "oral": "hsl(142, 71%, 45%)",
+      "papers": "hsl(200, 65%, 50%)",
+      "authors": "hsl(280, 55%, 55%)",
+      "US": "hsl(221, 83%, 53%)",
+      "CN": "hsl(0, 84%, 60%)",
+      "GB": "hsl(120, 70%, 45%)",
+      "HK": "hsl(300, 75%, 50%)",
+      "SG": "hsl(180, 80%, 50%)",
+      "CA": "hsl(15, 85%, 55%)",
+      "DE": "hsl(45, 90%, 50%)",
+      "KR": "hsl(270, 75%, 50%)",
+      "FR": "hsl(240, 80%, 55%)",
+      "CH": "hsl(135, 70%, 45%)",
+      "UK": "hsl(90, 65%, 50%)",
+      "AU": "hsl(315, 80%, 55%)",
+      "JP": "hsl(195, 85%, 50%)",
+      "UNK": "hsl(0, 0%, 60%)",
+      "IL": "hsl(210, 75%, 50%)",
+      "IT": "hsl(105, 70%, 50%)",
+      "NL": "hsl(255, 80%, 55%)",
+      "AE": "hsl(30, 85%, 55%)",
+      "TW": "hsl(165, 75%, 50%)",
+      "AI": "hsl(285, 80%, 55%)",
+      "IN": "hsl(36, 96%, 50%)",
+      "AT": "hsl(60, 85%, 50%)",
+      "RU": "hsl(330, 75%, 50%)",
+      "DK": "hsl(225, 80%, 55%)",
+      "SE": "hsl(75, 70%, 50%)",
+      "SA": "hsl(345, 85%, 55%)",
+      "BE": "hsl(150, 75%, 50%)",
+      "ES": "hsl(300, 70%, 50%)",
+      "FI": "hsl(120, 80%, 45%)",
+      "MO": "hsl(270, 85%, 55%)",
+      "GR": "hsl(195, 75%, 50%)",
+      "VN": "hsl(45, 80%, 55%)",
+      "BR": "hsl(105, 85%, 50%)",
+      "PL": "hsl(315, 75%, 50%)",
+      "CZ": "hsl(165, 80%, 50%)",
+      "NO": "hsl(240, 75%, 55%)",
+      "CL": "hsl(285, 70%, 50%)",
+      "TR": "hsl(15, 80%, 55%)",
+      "PT": "hsl(135, 75%, 50%)",
+      "EU": "hsl(210, 85%, 50%)",
+      "BG": "hsl(75, 80%, 50%)",
+      "LU": "hsl(330, 80%, 55%)",
+      "IR": "hsl(180, 75%, 50%)",
+      "NZ": "hsl(255, 85%, 55%)",
+      "PH": "hsl(60, 75%, 50%)",
+      "ZW": "hsl(120, 70%, 50%)",
+      "IE": "hsl(345, 80%, 55%)",
+      "CX": "hsl(195, 80%, 50%)",
+      "MY": "hsl(270, 75%, 55%)",
+      "CO": "hsl(30, 80%, 55%)",
+      "KP": "hsl(150, 80%, 50%)",
+      "SI": "hsl(285, 75%, 50%)",
+      "AC": "hsl(45, 85%, 55%)",
+      "TH": "hsl(105, 80%, 50%)",
+      "RE": "hsl(315, 85%, 55%)",
+      "UY": "hsl(165, 75%, 50%)",
+      "AM": "hsl(240, 80%, 55%)",
+      "IO": "hsl(75, 85%, 50%)",
+      "CY": "hsl(330, 75%, 50%)",
+      "TD": "hsl(195, 75%, 55%)",
+      "NA": "hsl(255, 80%, 50%)",
+      "HR": "hsl(60, 80%, 55%)",
+      "EG": "hsl(120, 85%, 45%)"
+    }
+  },
+  "dashboard": {
+    "summary": {
+      "title": "Research Impact Overview",
+      "content": [
+        "India contributed 10 research papers to ICML 2022, representing 0.6% of the conference's total accepted works and ranking 18 globally among contributing nations.",
+        "India researchers demonstrated strong research leadership with 60.0% of papers featuring India first authors, indicating significant intellectual contribution to the global machine learning discourse.",
+        "The research quality is evidenced by a 100.0% spotlight acceptance rate, with 10 paper(s) receiving this prestigious recognition among the conference's most impactful contributions.",
+        "India's machine learning ecosystem comprises 29 unique researchers across 16 institutions, with a balanced representation of 11 academic institutions and 5 corporate research entities."
+      ]
+    },
+    "context": {
+      "title": "Global Research Landscape",
+      "content": [
+        "The global research landscape is led by the United States (34.8% of papers) and China (12.3%), followed by the United Kingdom (6.0%) and Germany (3.4%), with India contributing 0.6% of total research output.",
+        "India ranks 18 globally in research volume, positioning it as an emerging contributor in the international machine learning research ecosystem with substantial growth potential.",
+        "Within the Asia-Pacific region, India trails China, South Korea, Singapore, and Hong Kong in absolute research contributions, highlighting opportunities for enhanced regional collaboration and capacity building."
+      ],
+      "subtitle": "India's position within the international machine learning research community and comparative analysis with leading nations."
+    },
+    "focusCountry": {
+      "title": "India Research Ecosystem Analysis",
+      "content": [
+        "India researchers exhibit strong research independence with 50.0% of papers having majority India authorship, indicating substantial domestic research capacity and reduced dependence on international collaboration.",
+        "The 60.0% first authorship rate demonstrates India researchers' leadership in conceptualizing and driving research projects, reflecting growing confidence and expertise in the field.",
+        "With 29 unique authors contributing across 10 papers, India maintains an efficient author-to-paper ratio of 0.34, suggesting productive individual contributions and effective research mentorship."
+      ],
+      "subtitle": "Detailed examination of authorship patterns, collaboration dynamics, and research leadership within India's machine learning community."
+    },
+    "institutions": {
+      "title": "Institutional Research Excellence",
+      "content": [
+        "The Unknown emerges as the national leader with 0 papers and 0 authors, including the country's 10 spotlight papers, demonstrating exceptional research quality and productivity.",
+        "Academic institutions dominate India's research landscape with 68.8% representation (11 of 16 institutions), while corporate research centers contribute 31.2%, indicating strong university-led research culture.",
+        "The institutional diversity spans premier engineering institutes (IITs), specialized research universities (IISc), and corporate R&D centers, creating a robust ecosystem for sustained machine learning research growth."
+      ],
+      "subtitle": "Comprehensive evaluation of India's academic and corporate institutions contributing to machine learning research excellence."
+    }
+  }
+}

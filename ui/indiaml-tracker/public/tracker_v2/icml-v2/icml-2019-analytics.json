@@ -1,0 +1,706 @@
+{
+  "conference": "ICML",
+  "year": 2019,
+  "track": "Conference",
+  "focus_country": "India",
+  "focus_country_code": "IN",
+  "generated_at": "2025-07-07T15:54:09.754249",
+  "globalStats": {
+    "totalPapers": 1022,
+    "totalAuthors": 2894,
+    "totalCountries": 33,
+    "countries": [
+      {
+        "affiliation_country": "US",
+        "paper_count": 398,
+        "author_count": 1278,
+        "spotlights": 0,
+        "orals": 397
+      },
+      {
+        "affiliation_country": "UNK",
+        "paper_count": 234,
+        "author_count": 616,
+        "spotlights": 0,
+        "orals": 234
+      },
+      {
+        "affiliation_country": "GB",
+        "paper_count": 79,
+        "author_count": 230,
+        "spotlights": 0,
+        "orals": 79
+      },
+      {
+        "affiliation_country": "CN",
+        "paper_count": 58,
+        "author_count": 159,
+        "spotlights": 0,
+        "orals": 58
+      },
+      {
+        "affiliation_country": "FR",
+        "paper_count": 39,
+        "author_count": 99,
+        "spotlights": 0,
+        "orals": 39
+      },
+      {
+        "affiliation_country": "CH",
+        "paper_count": 33,
+        "author_count": 96,
+        "spotlights": 0,
+        "orals": 33
+      },
+      {
+        "affiliation_country": "DE",
+        "paper_count": 28,
+        "author_count": 55,
+        "spotlights": 0,
+        "orals": 28
+      },
+      {
+        "affiliation_country": "CA",
+        "paper_count": 26,
+        "author_count": 73,
+        "spotlights": 0,
+        "orals": 26
+      },
+      {
+        "affiliation_country": "KR",
+        "paper_count": 22,
+        "author_count": 62,
+        "spotlights": 0,
+        "orals": 22
+      },
+      {
+        "affiliation_country": "IL",
+        "paper_count": 19,
+        "author_count": 43,
+        "spotlights": 0,
+        "orals": 19
+      },
+      {
+        "affiliation_country": "JP",
+        "paper_count": 17,
+        "author_count": 39,
+        "spotlights": 0,
+        "orals": 17
+      },
+      {
+        "affiliation_country": "AU",
+        "paper_count": 10,
+        "author_count": 22,
+        "spotlights": 0,
+        "orals": 10
+      },
+      {
+        "affiliation_country": "IN",
+        "paper_count": 9,
+        "author_count": 15,
+        "spotlights": 0,
+        "orals": 9
+      },
+      {
+        "affiliation_country": "SG",
+        "paper_count": 6,
+        "author_count": 17,
+        "spotlights": 0,
+        "orals": 6
+      },
+      {
+        "affiliation_country": "NL",
+        "paper_count": 6,
+        "author_count": 18,
+        "spotlights": 0,
+        "orals": 6
+      },
+      {
+        "affiliation_country": "IT",
+        "paper_count": 5,
+        "author_count": 12,
+        "spotlights": 0,
+        "orals": 5
+      },
+      {
+        "affiliation_country": "AT",
+        "paper_count": 5,
+        "author_count": 12,
+        "spotlights": 0,
+        "orals": 5
+      },
+      {
+        "affiliation_country": "SE",
+        "paper_count": 4,
+        "author_count": 8,
+        "spotlights": 0,
+        "orals": 4
+      },
+      {
+        "affiliation_country": "DK",
+        "paper_count": 4,
+        "author_count": 8,
+        "spotlights": 0,
+        "orals": 4
+      },
+      {
+        "affiliation_country": "UNK",
+        "paper_count": 2,
+        "author_count": 5,
+        "spotlights": 0,
+        "orals": 2
+      },
+      {
+        "affiliation_country": "ES",
+        "paper_count": 2,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 2
+      },
+      {
+        "affiliation_country": "SA",
+        "paper_count": 2,
+        "author_count": 6,
+        "spotlights": 0,
+        "orals": 2
+      },
+      {
+        "affiliation_country": "RU",
+        "paper_count": 2,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 2
+      },
+      {
+        "affiliation_country": "PL",
+        "paper_count": 2,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 2
+      },
+      {
+        "affiliation_country": "NO",
+        "paper_count": 2,
+        "author_count": 6,
+        "spotlights": 0,
+        "orals": 2
+      },
+      {
+        "affiliation_country": "RO",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "UNK",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "IE",
+        "paper_count": 1,
+        "author_count": 5,
+        "spotlights": 0,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "IR",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "FI",
+        "paper_count": 1,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "EE",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "CZ",
+        "paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "BR",
+        "paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 1
+      }
+    ]
+  },
+  "focusCountrySummary": {
+    "country": "India",
+    "country_code": "IN",
+    "rank": 13,
+    "paper_count": 9,
+    "author_count": 15,
+    "percentage": 0.88,
+    "spotlights": 0,
+    "orals": 9,
+    "institution_count": 9,
+    "academic_institutions": 7,
+    "corporate_institutions": 2
+  },
+  "focusCountry": {
+    "authorship": {
+      "at_least_one": {
+        "count": 9,
+        "papers": [
+          {
+            "id": "3569",
+            "title": "Communication-Constrained Inference and the Role of Shared Randomness",
+            "isSpotlight": false,
+            "isOral": true
+          },
+          {
+            "id": "3870",
+            "title": "Correlated bandits or: How to minimize mean-squared error online",
+            "isSpotlight": false,
+            "isOral": true
+          },
+          {
+            "id": "3793",
+            "title": "Large-Scale Sparse Kernel Canonical Correlation Analysis",
+            "isSpotlight": false,
+            "isOral": true
+          },
+          {
+            "id": "4003",
+            "title": "Neural Network Attributions: A Causal Perspective",
+            "isSpotlight": false,
+            "isOral": true
+          },
+          {
+            "id": "3895",
+            "title": "PAC Identification of Many Good Arms in Stochastic Multi-Armed Bandits",
+            "isSpotlight": false,
+            "isOral": true
+          },
+          {
+            "id": "3989",
+            "title": "Riemannian adaptive stochastic gradient algorithms on matrix manifolds",
+            "isSpotlight": false,
+            "isOral": true
+          },
+          {
+            "id": "3814",
+            "title": "SGD without Replacement: Sharper Rates for General Smooth Convex Functions",
+            "isSpotlight": false,
+            "isOral": true
+          },
+          {
+            "id": "4311",
+            "title": "Toward Controlling Discrimination in Online Ad Auctions",
+            "isSpotlight": false,
+            "isOral": true
+          },
+          {
+            "id": "3836",
+            "title": "Zero-Shot Knowledge Distillation in Deep Networks",
+            "isSpotlight": false,
+            "isOral": true
+          }
+        ]
+      },
+      "majority": {
+        "count": 5,
+        "papers": [
+          {
+            "id": "3793",
+            "title": "Large-Scale Sparse Kernel Canonical Correlation Analysis",
+            "isSpotlight": false,
+            "isOral": true
+          },
+          {
+            "id": "4003",
+            "title": "Neural Network Attributions: A Causal Perspective",
+            "isSpotlight": false,
+            "isOral": true
+          },
+          {
+            "id": "3895",
+            "title": "PAC Identification of Many Good Arms in Stochastic Multi-Armed Bandits",
+            "isSpotlight": false,
+            "isOral": true
+          },
+          {
+            "id": "3989",
+            "title": "Riemannian adaptive stochastic gradient algorithms on matrix manifolds",
+            "isSpotlight": false,
+            "isOral": true
+          },
+          {
+            "id": "3814",
+            "title": "SGD without Replacement: Sharper Rates for General Smooth Convex Functions",
+            "isSpotlight": false,
+            "isOral": true
+          }
+        ]
+      },
+      "first_author": {
+        "count": 4,
+        "papers": [
+          {
+            "id": "3870",
+            "title": "Correlated bandits or: How to minimize mean-squared error online",
+            "isSpotlight": false,
+            "isOral": true
+          },
+          {
+            "id": "3793",
+            "title": "Large-Scale Sparse Kernel Canonical Correlation Analysis",
+            "isSpotlight": false,
+            "isOral": true
+          },
+          {
+            "id": "3895",
+            "title": "PAC Identification of Many Good Arms in Stochastic Multi-Armed Bandits",
+            "isSpotlight": false,
+            "isOral": true
+          },
+          {
+            "id": "3836",
+            "title": "Zero-Shot Knowledge Distillation in Deep Networks",
+            "isSpotlight": false,
+            "isOral": true
+          }
+        ]
+      }
+    },
+    "institutions": [
+      {
+        "institute": "Indian Institute of Science",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 1,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "3569",
+            "title": "Communication-Constrained Inference and the Role of Shared Randomness",
+            "isSpotlight": false,
+            "isOral": true
+          }
+        ],
+        "authors": [
+          "Himanshu Tyagi"
+        ]
+      },
+      {
+        "institute": "University of Maryland",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 1,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "3870",
+            "title": "Correlated bandits or: How to minimize mean-squared error online",
+            "isSpotlight": false,
+            "isOral": true
+          }
+        ],
+        "authors": [
+          "Vinay Praneeth Boda"
+        ]
+      },
+      {
+        "institute": "Helsinki Institute for Information Technology",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 1,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "3793",
+            "title": "Large-Scale Sparse Kernel Canonical Correlation Analysis",
+            "isSpotlight": false,
+            "isOral": true
+          }
+        ],
+        "authors": [
+          "Viivi Uurtio",
+          "Juho Rousu"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Hyderabad",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 1,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "4003",
+            "title": "Neural Network Attributions: A Causal Perspective",
+            "isSpotlight": false,
+            "isOral": true
+          }
+        ],
+        "authors": [
+          "Piyushi Manupriya",
+          "Anirban Sarkar",
+          "Vineeth N Balasubramanian"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Bombay",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 1,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "3895",
+            "title": "PAC Identification of Many Good Arms in Stochastic Multi-Armed Bandits",
+            "isSpotlight": false,
+            "isOral": true
+          }
+        ],
+        "authors": [
+          "Arghya Roy Chaudhuri",
+          "Shivaram Kalyanakrishnan"
+        ]
+      },
+      {
+        "institute": "Microsoft",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 1,
+        "type": "corporate",
+        "papers": [
+          {
+            "id": "3989",
+            "title": "Riemannian adaptive stochastic gradient algorithms on matrix manifolds",
+            "isSpotlight": false,
+            "isOral": true
+          }
+        ],
+        "authors": [
+          "Pratik Jawanpuria",
+          "Bamdev Mishra"
+        ]
+      },
+      {
+        "institute": "Microsoft",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 1,
+        "type": "corporate",
+        "papers": [
+          {
+            "id": "3814",
+            "title": "SGD without Replacement: Sharper Rates for General Smooth Convex Functions",
+            "isSpotlight": false,
+            "isOral": true
+          }
+        ],
+        "authors": [
+          "Prateek Jain",
+          "Praneeth Netrapalli"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Kanpur",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 1,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "4311",
+            "title": "Toward Controlling Discrimination in Online Ad Auctions",
+            "isSpotlight": false,
+            "isOral": true
+          }
+        ],
+        "authors": [
+          "Anay Mehrotra"
+        ]
+      },
+      {
+        "institute": "University of Edinburgh",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 1,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "3836",
+            "title": "Zero-Shot Knowledge Distillation in Deep Networks",
+            "isSpotlight": false,
+            "isOral": true
+          }
+        ],
+        "authors": [
+          "Gaurav Kumar Nayak"
+        ]
+      }
+    ]
+  },
+  "institutions": {
+    "summary": {
+      "total_institutions": 0,
+      "academic_institutions": 0,
+      "corporate_institutions": 0,
+      "total_papers": 0,
+      "total_authors": 0,
+      "avg_papers_per_institution": 0,
+      "avg_authors_per_institution": 0
+    },
+    "top_institutions": [],
+    "total_institutions": 0
+  },
+  "config": {
+    "focus_country_code": "IN",
+    "focus_country_name": "India",
+    "colors": {
+      "us": "hsl(221, 83%, 53%)",
+      "cn": "hsl(0, 84%, 60%)",
+      "focusCountry": "hsl(36, 96%, 50%)",
+      "primary": "hsl(var(--primary))",
+      "secondary": "hsl(var(--secondary-foreground))",
+      "academic": "hsl(221, 83%, 53%)",
+      "corporate": "hsl(330, 80%, 60%)",
+      "rest": "hsl(330, 60%, 30%)",
+      "spotlight": "hsl(48, 96%, 50%)",
+      "oral": "hsl(142, 71%, 45%)",
+      "papers": "hsl(200, 65%, 50%)",
+      "authors": "hsl(280, 55%, 55%)",
+      "US": "hsl(221, 83%, 53%)",
+      "CN": "hsl(0, 84%, 60%)",
+      "GB": "hsl(120, 70%, 45%)",
+      "HK": "hsl(300, 75%, 50%)",
+      "SG": "hsl(180, 80%, 50%)",
+      "CA": "hsl(15, 85%, 55%)",
+      "DE": "hsl(45, 90%, 50%)",
+      "KR": "hsl(270, 75%, 50%)",
+      "FR": "hsl(240, 80%, 55%)",
+      "CH": "hsl(135, 70%, 45%)",
+      "UK": "hsl(90, 65%, 50%)",
+      "AU": "hsl(315, 80%, 55%)",
+      "JP": "hsl(195, 85%, 50%)",
+      "UNK": "hsl(0, 0%, 60%)",
+      "IL": "hsl(210, 75%, 50%)",
+      "IT": "hsl(105, 70%, 50%)",
+      "NL": "hsl(255, 80%, 55%)",
+      "AE": "hsl(30, 85%, 55%)",
+      "TW": "hsl(165, 75%, 50%)",
+      "AI": "hsl(285, 80%, 55%)",
+      "IN": "hsl(36, 96%, 50%)",
+      "AT": "hsl(60, 85%, 50%)",
+      "RU": "hsl(330, 75%, 50%)",
+      "DK": "hsl(225, 80%, 55%)",
+      "SE": "hsl(75, 70%, 50%)",
+      "SA": "hsl(345, 85%, 55%)",
+      "BE": "hsl(150, 75%, 50%)",
+      "ES": "hsl(300, 70%, 50%)",
+      "FI": "hsl(120, 80%, 45%)",
+      "MO": "hsl(270, 85%, 55%)",
+      "GR": "hsl(195, 75%, 50%)",
+      "VN": "hsl(45, 80%, 55%)",
+      "BR": "hsl(105, 85%, 50%)",
+      "PL": "hsl(315, 75%, 50%)",
+      "CZ": "hsl(165, 80%, 50%)",
+      "NO": "hsl(240, 75%, 55%)",
+      "CL": "hsl(285, 70%, 50%)",
+      "TR": "hsl(15, 80%, 55%)",
+      "PT": "hsl(135, 75%, 50%)",
+      "EU": "hsl(210, 85%, 50%)",
+      "BG": "hsl(75, 80%, 50%)",
+      "LU": "hsl(330, 80%, 55%)",
+      "IR": "hsl(180, 75%, 50%)",
+      "NZ": "hsl(255, 85%, 55%)",
+      "PH": "hsl(60, 75%, 50%)",
+      "ZW": "hsl(120, 70%, 50%)",
+      "IE": "hsl(345, 80%, 55%)",
+      "CX": "hsl(195, 80%, 50%)",
+      "MY": "hsl(270, 75%, 55%)",
+      "CO": "hsl(30, 80%, 55%)",
+      "KP": "hsl(150, 80%, 50%)",
+      "SI": "hsl(285, 75%, 50%)",
+      "AC": "hsl(45, 85%, 55%)",
+      "TH": "hsl(105, 80%, 50%)",
+      "RE": "hsl(315, 85%, 55%)",
+      "UY": "hsl(165, 75%, 50%)",
+      "AM": "hsl(240, 80%, 55%)",
+      "IO": "hsl(75, 85%, 50%)",
+      "CY": "hsl(330, 75%, 50%)",
+      "TD": "hsl(195, 75%, 55%)",
+      "NA": "hsl(255, 80%, 50%)",
+      "HR": "hsl(60, 80%, 55%)",
+      "EG": "hsl(120, 85%, 45%)"
+    }
+  },
+  "dashboard": {
+    "summary": {
+      "title": "Research Impact Overview",
+      "content": [
+        "India contributed 9 research papers to ICML 2019, representing 0.9% of the conference's total accepted works and ranking 13 globally among contributing nations.",
+        "India researchers demonstrated strong research leadership with 44.4% of papers featuring India first authors, indicating significant intellectual contribution to the global machine learning discourse.",
+        "The research quality is evidenced by a 0.0% spotlight acceptance rate, with 0 paper(s) receiving this prestigious recognition among the conference's most impactful contributions.",
+        "India's machine learning ecosystem comprises 15 unique researchers across 9 institutions, with a balanced representation of 7 academic institutions and 2 corporate research entities."
+      ]
+    },
+    "context": {
+      "title": "Global Research Landscape",
+      "content": [
+        "The global research landscape is led by the United States (38.9% of papers) and China (5.7%), followed by the United Kingdom (7.7%) and Germany (2.7%), with India contributing 0.9% of total research output.",
+        "India ranks 13 globally in research volume, positioning it as an emerging contributor in the international machine learning research ecosystem with substantial growth potential.",
+        "Within the Asia-Pacific region, India trails China, South Korea, Singapore, and Hong Kong in absolute research contributions, highlighting opportunities for enhanced regional collaboration and capacity building."
+      ],
+      "subtitle": "India's position within the international machine learning research community and comparative analysis with leading nations."
+    },
+    "focusCountry": {
+      "title": "India Research Ecosystem Analysis",
+      "content": [
+        "India researchers exhibit strong research independence with 55.6% of papers having majority India authorship, indicating substantial domestic research capacity and reduced dependence on international collaboration.",
+        "The 44.4% first authorship rate demonstrates India researchers' leadership in conceptualizing and driving research projects, reflecting growing confidence and expertise in the field.",
+        "With 15 unique authors contributing across 9 papers, India maintains an efficient author-to-paper ratio of 0.6, suggesting productive individual contributions and effective research mentorship."
+      ],
+      "subtitle": "Detailed examination of authorship patterns, collaboration dynamics, and research leadership within India's machine learning community."
+    },
+    "institutions": {
+      "title": "Institutional Research Excellence",
+      "content": [
+        "The Unknown emerges as the national leader with 0 papers and 0 authors, including the country's 0 spotlight papers, demonstrating exceptional research quality and productivity.",
+        "Academic institutions dominate India's research landscape with 77.8% representation (7 of 9 institutions), while corporate research centers contribute 22.2%, indicating strong university-led research culture.",
+        "The institutional diversity spans premier engineering institutes (IITs), specialized research universities (IISc), and corporate R&D centers, creating a robust ecosystem for sustained machine learning research growth."
+      ],
+      "subtitle": "Comprehensive evaluation of India's academic and corporate institutions contributing to machine learning research excellence."
+    }
+  }
+}

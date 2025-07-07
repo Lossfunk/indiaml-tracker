@@ -1,0 +1,1926 @@
+{
+  "conference": "ICLR",
+  "year": 2022,
+  "track": "Conference",
+  "focus_country": "India",
+  "focus_country_code": "IN",
+  "generated_at": "2025-07-07T15:54:14.843948",
+  "globalStats": {
+    "totalPapers": 4486,
+    "totalAuthors": 10736,
+    "totalCountries": 52,
+    "countries": [
+      {
+        "affiliation_country": "US",
+        "paper_count": 1816,
+        "author_count": 4091,
+        "spotlights": 111,
+        "orals": 39
+      },
+      {
+        "affiliation_country": "CN",
+        "paper_count": 792,
+        "author_count": 1945,
+        "spotlights": 24,
+        "orals": 9
+      },
+      {
+        "affiliation_country": "GB",
+        "paper_count": 309,
+        "author_count": 612,
+        "spotlights": 26,
+        "orals": 5
+      },
+      {
+        "affiliation_country": "CA",
+        "paper_count": 223,
+        "author_count": 408,
+        "spotlights": 14,
+        "orals": 6
+      },
+      {
+        "affiliation_country": "DE",
+        "paper_count": 187,
+        "author_count": 367,
+        "spotlights": 17,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "KR",
+        "paper_count": 185,
+        "author_count": 434,
+        "spotlights": 8,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "SG",
+        "paper_count": 114,
+        "author_count": 215,
+        "spotlights": 4,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "CH",
+        "paper_count": 110,
+        "author_count": 186,
+        "spotlights": 10,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "AU",
+        "paper_count": 98,
+        "author_count": 160,
+        "spotlights": 3,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "FR",
+        "paper_count": 93,
+        "author_count": 176,
+        "spotlights": 6,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "JP",
+        "paper_count": 89,
+        "author_count": 135,
+        "spotlights": 6,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "NL",
+        "paper_count": 60,
+        "author_count": 88,
+        "spotlights": 2,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "IL",
+        "paper_count": 54,
+        "author_count": 99,
+        "spotlights": 2,
+        "orals": 2
+      },
+      {
+        "affiliation_country": "IN",
+        "paper_count": 42,
+        "author_count": 68,
+        "spotlights": 1,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "UNK",
+        "paper_count": 36,
+        "author_count": 51,
+        "spotlights": 1,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "IT",
+        "paper_count": 35,
+        "author_count": 65,
+        "spotlights": 2,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "SE",
+        "paper_count": 28,
+        "author_count": 39,
+        "spotlights": 3,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "AE",
+        "paper_count": 18,
+        "author_count": 13,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "AT",
+        "paper_count": 18,
+        "author_count": 37,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "RU",
+        "paper_count": 17,
+        "author_count": 38,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "DK",
+        "paper_count": 17,
+        "author_count": 36,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "SA",
+        "paper_count": 16,
+        "author_count": 28,
+        "spotlights": 2,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "VN",
+        "paper_count": 15,
+        "author_count": 23,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "ES",
+        "paper_count": 15,
+        "author_count": 20,
+        "spotlights": 2,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "BE",
+        "paper_count": 15,
+        "author_count": 24,
+        "spotlights": 1,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "PL",
+        "paper_count": 11,
+        "author_count": 29,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "FI",
+        "paper_count": 9,
+        "author_count": 17,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "IR",
+        "paper_count": 8,
+        "author_count": 12,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "ZA",
+        "paper_count": 7,
+        "author_count": 13,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "GR",
+        "paper_count": 7,
+        "author_count": 13,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "BR",
+        "paper_count": 7,
+        "author_count": 13,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "UNK",
+        "paper_count": 6,
+        "author_count": 11,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "NO",
+        "paper_count": 4,
+        "author_count": 5,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "LK",
+        "paper_count": 2,
+        "author_count": 6,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "QA",
+        "paper_count": 2,
+        "author_count": 5,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "PT",
+        "paper_count": 2,
+        "author_count": 5,
+        "spotlights": 0,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "EE",
+        "paper_count": 2,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "HR",
+        "paper_count": 2,
+        "author_count": 6,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "CL",
+        "paper_count": 2,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "SI",
+        "paper_count": 1,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "NZ",
+        "paper_count": 1,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "MX",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "MY",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "LU",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "KE",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "KZ",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "IE",
+        "paper_count": 1,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "HU",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "EG",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "CZ",
+        "paper_count": 1,
+        "author_count": 2,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "CY",
+        "paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "BD",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      }
+    ]
+  },
+  "focusCountrySummary": {
+    "country": "India",
+    "country_code": "IN",
+    "rank": 14,
+    "paper_count": 42,
+    "author_count": 68,
+    "percentage": 0.94,
+    "spotlights": 1,
+    "orals": 1,
+    "institution_count": 40,
+    "academic_institutions": 37,
+    "corporate_institutions": 3
+  },
+  "focusCountry": {
+    "authorship": {
+      "at_least_one": {
+        "count": 42,
+        "papers": [
+          {
+            "id": "-GU1sfGnM5K",
+            "title": "A Reinforcement Learning Environment for Mathematical Reasoning via Program Synthesis",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "5JdLZg346Lw",
+            "title": "Generative Modeling with Optimal Transport Maps",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "5kq11Tl1z4",
+            "title": "IGLU: Efficient GCN Training via Lazy Updates",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "6w2zSI9RAnf",
+            "title": "Reasoning With Hierarchical Symbols: Reclaiming Symbolic Policies For Visual Reinforcement Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "9Vrb9D0WI4",
+            "title": "Multitask Prompted Training Enables Zero-Shot Task Generalization",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "ChKNCDB0oYj",
+            "title": "Mistake-driven Image Classification with FastGAN and SpinalNet",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "F5Em8ASCosV",
+            "title": "Causal Contextual Bandits with Targeted Interventions",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Fj1Tpym9KxH",
+            "title": "A Closer Look at Smoothness in Domain Adversarial Training",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "HmFBdvBkUUY",
+            "title": "SpecTRA: Spectral Transformer for Graph Representation Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "KVhvw16pvi",
+            "title": "TAG: Task-based Accumulated Gradients for Lifelong learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "LtI14EpWKH",
+            "title": "Tessellated 2D Convolution Networks: A Robust Defence against Adversarial Attacks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Lv-G9XqLRRy",
+            "title": "Restricted Category Removal from Model Representations using Limited Data",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "OD_dnx57ksK",
+            "title": "Momentum Conserving Lagrangian Neural Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "OVShHe8Ce0",
+            "title": "SAU: Smooth activation function using convolution with approximate identities",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "OdTx-22f6H",
+            "title": "Utilizing Attention, Linked Blocks, And Pyramid Pooling To Propel Brain Tumor Segmentation In 3D",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "PKdNRKjwL4",
+            "title": "DAIR: Data Augmented Invariant Regularization",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "R7APxKhg8dt",
+            "title": "CoSe-Co: Text Conditioned Generative CommonSense Contextualizer",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "SN2bkl9f69",
+            "title": "Multi-Tailed, Multi-Headed, Spatial Dynamic Memory refined Text-to-Image Synthesis",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "TEKnz3B1jGF",
+            "title": "Visio-Linguistic Brain Encoding",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Ti2i204vZON",
+            "title": "Learning Representations for Pixel-based Control: What Matters and Why?",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "UxBH9j8IE_H",
+            "title": "Revisiting the Lottery Ticket Hypothesis: A Ramanujan Graph Perspective",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "WGhT5zCamoC",
+            "title": "Seq2Tok: Deep Sequence Tokenizer for Retrieval",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "XzTtHjgPDsT",
+            "title": "Coordination Among Neural Modules Through a Shared Global Workspace",
+            "isSpotlight": false,
+            "isOral": true
+          },
+          {
+            "id": "Yc64t25hseP",
+            "title": "GUIDED MCMC FOR SPARSE BAYESIAN MODELS TO DETECT RARE EVENTS IN IMAGES SANS LABELED DATA",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "_7YnfGdDVML",
+            "title": "DCoM: A Deep Column Mapper for Semantic Data Type Detection",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "_PlNmPOsUS9",
+            "title": "PARL: Enhancing Diversity of Ensemble Networks to Resist Adversarial Attacks via Pairwise Adversarially Robust Loss Function",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "b30Yre8MzuN",
+            "title": "NeuroSED: Learning Subgraph Similarity via Graph Neural Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "cAuJrUm8lG",
+            "title": "Implicit Equivariance in Convolutional Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "eFP90pzlIz",
+            "title": "Towards Achieving Adversarial Robustness Beyond Perceptual Limits",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "g9hjVsv3lOC",
+            "title": "Deep Neural Networks on EEG signals to predict Attention Score using Gramian Angular Difference Field",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ibrUkC-pbis",
+            "title": "Neural Models for Output-Space Invariance in Combinatorial Problems",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "irARV_2VFs4",
+            "title": "Focus on the Common Good: Group Distributional Robustness Follows",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "kO-wQWwqnO",
+            "title": "L2BGAN: An image enhancement model for image quality improvement and image analysis tasks without paired supervision",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "liIJKb1gudP",
+            "title": "Center Loss Regularization for Continual Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "onwTC5W0XJ",
+            "title": "Causally Focused Convolutional Networks Through Minimal Human Guidance",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "reFFte7mA0F",
+            "title": "Conditional Expectation based Value Decomposition for Scalable On-Demand Ride Pooling",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "rwEv1SklKFt",
+            "title": "Poisoned classifiers are not only backdoored, they are fundamentally broken",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "s-b95PMK4E6",
+            "title": "Hierarchical Modular Framework for Long Horizon Instruction Following",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "sTECq7ZjtKX",
+            "title": "OSSuM: A Gradient-Free Approach For Pruning Neural Networks At Initialization",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "tBoSm4hUWV",
+            "title": "WaveMix: Multi-Resolution Token Mixing for Images",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "tlkHrUlNTiL",
+            "title": "Disentangling deep neural networks with rectified linear units using duality",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "zzk231Ms1Ih",
+            "title": "A Theory of Tournament Representations",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ]
+      },
+      "majority": {
+        "count": 11,
+        "papers": [
+          {
+            "id": "Lv-G9XqLRRy",
+            "title": "Restricted Category Removal from Model Representations using Limited Data",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "OD_dnx57ksK",
+            "title": "Momentum Conserving Lagrangian Neural Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "OVShHe8Ce0",
+            "title": "SAU: Smooth activation function using convolution with approximate identities",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "OdTx-22f6H",
+            "title": "Utilizing Attention, Linked Blocks, And Pyramid Pooling To Propel Brain Tumor Segmentation In 3D",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "UxBH9j8IE_H",
+            "title": "Revisiting the Lottery Ticket Hypothesis: A Ramanujan Graph Perspective",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "_7YnfGdDVML",
+            "title": "DCoM: A Deep Column Mapper for Semantic Data Type Detection",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "_PlNmPOsUS9",
+            "title": "PARL: Enhancing Diversity of Ensemble Networks to Resist Adversarial Attacks via Pairwise Adversarially Robust Loss Function",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "b30Yre8MzuN",
+            "title": "NeuroSED: Learning Subgraph Similarity via Graph Neural Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ibrUkC-pbis",
+            "title": "Neural Models for Output-Space Invariance in Combinatorial Problems",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "irARV_2VFs4",
+            "title": "Focus on the Common Good: Group Distributional Robustness Follows",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "sTECq7ZjtKX",
+            "title": "OSSuM: A Gradient-Free Approach For Pruning Neural Networks At Initialization",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ]
+      },
+      "first_author": {
+        "count": 26,
+        "papers": [
+          {
+            "id": "5JdLZg346Lw",
+            "title": "Generative Modeling with Optimal Transport Maps",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Fj1Tpym9KxH",
+            "title": "A Closer Look at Smoothness in Domain Adversarial Training",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "HmFBdvBkUUY",
+            "title": "SpecTRA: Spectral Transformer for Graph Representation Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "LtI14EpWKH",
+            "title": "Tessellated 2D Convolution Networks: A Robust Defence against Adversarial Attacks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Lv-G9XqLRRy",
+            "title": "Restricted Category Removal from Model Representations using Limited Data",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "OD_dnx57ksK",
+            "title": "Momentum Conserving Lagrangian Neural Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "OVShHe8Ce0",
+            "title": "SAU: Smooth activation function using convolution with approximate identities",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "OdTx-22f6H",
+            "title": "Utilizing Attention, Linked Blocks, And Pyramid Pooling To Propel Brain Tumor Segmentation In 3D",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "R7APxKhg8dt",
+            "title": "CoSe-Co: Text Conditioned Generative CommonSense Contextualizer",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "SN2bkl9f69",
+            "title": "Multi-Tailed, Multi-Headed, Spatial Dynamic Memory refined Text-to-Image Synthesis",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "UxBH9j8IE_H",
+            "title": "Revisiting the Lottery Ticket Hypothesis: A Ramanujan Graph Perspective",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "WGhT5zCamoC",
+            "title": "Seq2Tok: Deep Sequence Tokenizer for Retrieval",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Yc64t25hseP",
+            "title": "GUIDED MCMC FOR SPARSE BAYESIAN MODELS TO DETECT RARE EVENTS IN IMAGES SANS LABELED DATA",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "_7YnfGdDVML",
+            "title": "DCoM: A Deep Column Mapper for Semantic Data Type Detection",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "_PlNmPOsUS9",
+            "title": "PARL: Enhancing Diversity of Ensemble Networks to Resist Adversarial Attacks via Pairwise Adversarially Robust Loss Function",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "b30Yre8MzuN",
+            "title": "NeuroSED: Learning Subgraph Similarity via Graph Neural Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "g9hjVsv3lOC",
+            "title": "Deep Neural Networks on EEG signals to predict Attention Score using Gramian Angular Difference Field",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ibrUkC-pbis",
+            "title": "Neural Models for Output-Space Invariance in Combinatorial Problems",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "irARV_2VFs4",
+            "title": "Focus on the Common Good: Group Distributional Robustness Follows",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "kO-wQWwqnO",
+            "title": "L2BGAN: An image enhancement model for image quality improvement and image analysis tasks without paired supervision",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "liIJKb1gudP",
+            "title": "Center Loss Regularization for Continual Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "onwTC5W0XJ",
+            "title": "Causally Focused Convolutional Networks Through Minimal Human Guidance",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "reFFte7mA0F",
+            "title": "Conditional Expectation based Value Decomposition for Scalable On-Demand Ride Pooling",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "tBoSm4hUWV",
+            "title": "WaveMix: Multi-Resolution Token Mixing for Images",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "tlkHrUlNTiL",
+            "title": "Disentangling deep neural networks with rectified linear units using duality",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "zzk231Ms1Ih",
+            "title": "A Theory of Tournament Representations",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ]
+      }
+    },
+    "institutions": [
+      {
+        "institute": "Indian Institute of Technology Madras",
+        "total_paper_count": 4,
+        "unique_paper_count": 4,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "KVhvw16pvi",
+            "title": "TAG: Task-based Accumulated Gradients for Lifelong learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "SN2bkl9f69",
+            "title": "Multi-Tailed, Multi-Headed, Spatial Dynamic Memory refined Text-to-Image Synthesis",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "tlkHrUlNTiL",
+            "title": "Disentangling deep neural networks with rectified linear units using duality",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "zzk231Ms1Ih",
+            "title": "A Theory of Tournament Representations",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Balaraman Ravindran",
+          "Amrit Diggavi Seshadri",
+          "Chandra Shekar Lakshminarayanan",
+          "Arun Rajkumar"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Science",
+        "total_paper_count": 3,
+        "unique_paper_count": 3,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "Fj1Tpym9KxH",
+            "title": "A Closer Look at Smoothness in Domain Adversarial Training",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "eFP90pzlIz",
+            "title": "Towards Achieving Adversarial Robustness Beyond Perceptual Limits",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "s-b95PMK4E6",
+            "title": "Hierarchical Modular Framework for Long Horizon Instruction Following",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Harsh Rangwani",
+          "Sumukh K Aithal",
+          "Venkatesh Babu Radhakrishnan",
+          "Jonghyun Choi"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Kharagpur",
+        "total_paper_count": 3,
+        "unique_paper_count": 3,
+        "author_count": 7,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "LtI14EpWKH",
+            "title": "Tessellated 2D Convolution Networks: A Robust Defence against Adversarial Attacks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "UxBH9j8IE_H",
+            "title": "Revisiting the Lottery Ticket Hypothesis: A Ramanujan Graph Perspective",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "_PlNmPOsUS9",
+            "title": "PARL: Enhancing Diversity of Ensemble Networks to Resist Adversarial Attacks via Pairwise Adversarially Robust Loss Function",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Swarnava Das",
+          "BITHIKA PAL",
+          "Arindam Biswas",
+          "Manaar Alam",
+          "Shubhajit Datta",
+          "Debdeep Mukhopadhyay",
+          "Partha Pratim Chakrabarti"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Delhi",
+        "total_paper_count": 3,
+        "unique_paper_count": 3,
+        "author_count": 8,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "ibrUkC-pbis",
+            "title": "Neural Models for Output-Space Invariance in Combinatorial Problems",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "OD_dnx57ksK",
+            "title": "Momentum Conserving Lagrangian Neural Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "b30Yre8MzuN",
+            "title": "NeuroSED: Learning Subgraph Similarity via Graph Neural Networks",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Yatin Nandwani",
+          "Ravinder Bhattoo",
+          "Sayan Ranu",
+          "Rishabh Ranjan",
+          "Siddharth Grover",
+          "Venkatesan Chakaravarthy",
+          "Parag Singla",
+          "Parag Singla"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Kanpur",
+        "total_paper_count": 3,
+        "unique_paper_count": 3,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "WGhT5zCamoC",
+            "title": "Seq2Tok: Deep Sequence Tokenizer for Retrieval",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "_7YnfGdDVML",
+            "title": "DCoM: A Deep Column Mapper for Semantic Data Type Detection",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "reFFte7mA0F",
+            "title": "Conditional Expectation based Value Decomposition for Scalable On-Demand Ride Pooling",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Adhiraj Banerjee",
+          "Subhadip Maji",
+          "Avinandan Bose"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Palakkad",
+        "total_paper_count": 2,
+        "unique_paper_count": 2,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "Yc64t25hseP",
+            "title": "GUIDED MCMC FOR SPARSE BAYESIAN MODELS TO DETECT RARE EVENTS IN IMAGES SANS LABELED DATA",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "onwTC5W0XJ",
+            "title": "Causally Focused Convolutional Networks Through Minimal Human Guidance",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Gaurav Jain",
+          "Rimmon Saloman Bhosale"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Bombay",
+        "total_paper_count": 2,
+        "unique_paper_count": 2,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "irARV_2VFs4",
+            "title": "Focus on the Common Good: Group Distributional Robustness Follows",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "tBoSm4hUWV",
+            "title": "WaveMix: Multi-Resolution Token Mixing for Images",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Vihari Piratla",
+          "Sunita Sarawagi",
+          "Pranav Jeevan P"
+        ]
+      },
+      {
+        "institute": "National Institute of Technology Silchar",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "-GU1sfGnM5K",
+            "title": "A Reinforcement Learning Environment for Mathematical Reasoning via Program Synthesis",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Johnny Ye"
+        ]
+      },
+      {
+        "institute": "Indian Space Research Organisation",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "corporate",
+        "papers": [
+          {
+            "id": "5JdLZg346Lw",
+            "title": "Generative Modeling with Optimal Transport Maps",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Litu Rout"
+        ]
+      },
+      {
+        "institute": "Google",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "corporate",
+        "papers": [
+          {
+            "id": "5kq11Tl1z4",
+            "title": "IGLU: Efficient GCN Training via Lazy Updates",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Aditya Sinha"
+        ]
+      },
+      {
+        "institute": "National Institute of Technology Tiruchirappalli",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "6w2zSI9RAnf",
+            "title": "Reasoning With Hierarchical Symbols: Reclaiming Symbolic Policies For Visual Reinforcement Learning",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "S P Sharan"
+        ]
+      },
+      {
+        "institute": "Sapienza University of Rome",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "9Vrb9D0WI4",
+            "title": "Multitask Prompted Training Enables Zero-Shot Task Generalization",
+            "isSpotlight": true,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Matteo Manica"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Science Education and Research",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "ChKNCDB0oYj",
+            "title": "Mistake-driven Image Classification with FastGAN and SpinalNet",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Sahil Sahil"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Madras",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "F5Em8ASCosV",
+            "title": "Causal Contextual Bandits with Targeted Interventions",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Balaraman Ravindran"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Hyderabad",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "HmFBdvBkUUY",
+            "title": "SpecTRA: Spectral Transformer for Graph Representation Learning",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Anson Bastos"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "Lv-G9XqLRRy",
+            "title": "Restricted Category Removal from Model Representations using Limited Data",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Pratik Mazumder"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Kanpur",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "Lv-G9XqLRRy",
+            "title": "Restricted Category Removal from Model Representations using Limited Data",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Mohammed Asad Karim"
+        ]
+      },
+      {
+        "institute": "University of Delhi",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "OVShHe8Ce0",
+            "title": "SAU: Smooth activation function using convolution with approximate identities",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Koushik Biswas"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "OVShHe8Ce0",
+            "title": "SAU: Smooth activation function using convolution with approximate identities",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Sandeep Kumar"
+        ]
+      },
+      {
+        "institute": "Indraprastha Institute of Information Technology",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "OVShHe8Ce0",
+            "title": "SAU: Smooth activation function using convolution with approximate identities",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Shilpak Banerjee",
+          "Ashish Kumar Pandey"
+        ]
+      },
+      {
+        "institute": "SRM Institute of Science and Technology",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "OdTx-22f6H",
+            "title": "Utilizing Attention, Linked Blocks, And Pyramid Pooling To Propel Brain Tumor Segmentation In 3D",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Pooja Ravi",
+          "Srijarko Roy",
+          "Indira Dutta"
+        ]
+      },
+      {
+        "institute": "College of Engineering, Pune",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "PKdNRKjwL4",
+            "title": "DAIR: Data Augmented Invariant Regularization",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Shaunak Ashish Halbe"
+        ]
+      },
+      {
+        "institute": "Delhi Technological University",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "R7APxKhg8dt",
+            "title": "CoSe-Co: Text Conditioned Generative CommonSense Contextualizer",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Rachit Bansal"
+        ]
+      },
+      {
+        "institute": "International Institute of Information Technology Hyderabad",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "TEKnz3B1jGF",
+            "title": "Visio-Linguistic Brain Encoding",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Jashn Arora"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Science",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "Ti2i204vZON",
+            "title": "Learning Representations for Pixel-based Control: What Matters and Why?",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Utkarsh Aashu Mishra"
+        ]
+      },
+      {
+        "institute": "Trinity College Dublin",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "UxBH9j8IE_H",
+            "title": "Revisiting the Lottery Ticket Hypothesis: A Ramanujan Graph Perspective",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Pabitra Mitra"
+        ]
+      },
+      {
+        "institute": "Manipal Institute of Technology",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 1,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "XzTtHjgPDsT",
+            "title": "Coordination Among Neural Modules Through a Shared Global Workspace",
+            "isSpotlight": false,
+            "isOral": true
+          }
+        ],
+        "authors": [
+          "Aniket Rajiv Didolkar"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Delhi",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 1,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "XzTtHjgPDsT",
+            "title": "Coordination Among Neural Modules Through a Shared Global Workspace",
+            "isSpotlight": false,
+            "isOral": true
+          }
+        ],
+        "authors": [
+          "Alex Lamb"
+        ]
+      },
+      {
+        "institute": "International Institute of Information Technology",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "_7YnfGdDVML",
+            "title": "DCoM: A Deep Column Mapper for Semantic Data Type Detection",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Swapna sourav Rout"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Patna",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "_PlNmPOsUS9",
+            "title": "PARL: Enhancing Diversity of Ensemble Networks to Resist Adversarial Attacks via Pairwise Adversarially Robust Loss Function",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Arijit Mondal"
+        ]
+      },
+      {
+        "institute": "Northwestern University",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "b30Yre8MzuN",
+            "title": "NeuroSED: Learning Subgraph Similarity via Graph Neural Networks",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Sourav Medya"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Dhanbad",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "cAuJrUm8lG",
+            "title": "Implicit Equivariance in Convolutional Networks",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Suraj Sharan"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "eFP90pzlIz",
+            "title": "Towards Achieving Adversarial Robustness Beyond Perceptual Limits",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Samyak Jain"
+        ]
+      },
+      {
+        "institute": "Birla Institute of Technology and Science, Pilani",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "g9hjVsv3lOC",
+            "title": "Deep Neural Networks on EEG signals to predict Attention Score using Gramian Angular Difference Field",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Mahak Kothari",
+          "Shreyansh Joshi"
+        ]
+      },
+      {
+        "institute": "Microsoft",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "corporate",
+        "papers": [
+          {
+            "id": "ibrUkC-pbis",
+            "title": "Neural Models for Output-Space Invariance in Combinatorial Problems",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Vidit Jain"
+        ]
+      },
+      {
+        "institute": "Thapar Institute of Engineering and Technology",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "kO-wQWwqnO",
+            "title": "L2BGAN: An image enhancement model for image quality improvement and image analysis tasks without paired supervision",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Jhilik Bhattacharya"
+        ]
+      },
+      {
+        "institute": "Thapar Institute of Engineering & Technology",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "kO-wQWwqnO",
+            "title": "L2BGAN: An image enhancement model for image quality improvement and image analysis tasks without paired supervision",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Gianni Ramponi"
+        ]
+      },
+      {
+        "institute": "International Institute of Information Technology, Hyderabad",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "liIJKb1gudP",
+            "title": "Center Loss Regularization for Continual Learning",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Kaustubh Olpadkar"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Kharagpur",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "rwEv1SklKFt",
+            "title": "Poisoned classifiers are not only backdoored, they are fundamentally broken",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Siddhant Agarwal"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Gandhinagar",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "sTECq7ZjtKX",
+            "title": "OSSuM: A Gradient-Free Approach For Pruning Neural Networks At Initialization",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Anirban Dasgupta",
+          "Jayesh Malaviya"
+        ]
+      }
+    ]
+  },
+  "institutions": {
+    "summary": {
+      "total_institutions": 0,
+      "academic_institutions": 0,
+      "corporate_institutions": 0,
+      "total_papers": 0,
+      "total_authors": 0,
+      "avg_papers_per_institution": 0,
+      "avg_authors_per_institution": 0
+    },
+    "top_institutions": [],
+    "total_institutions": 0
+  },
+  "config": {
+    "focus_country_code": "IN",
+    "focus_country_name": "India",
+    "colors": {
+      "us": "hsl(221, 83%, 53%)",
+      "cn": "hsl(0, 84%, 60%)",
+      "focusCountry": "hsl(36, 96%, 50%)",
+      "primary": "hsl(var(--primary))",
+      "secondary": "hsl(var(--secondary-foreground))",
+      "academic": "hsl(221, 83%, 53%)",
+      "corporate": "hsl(330, 80%, 60%)",
+      "rest": "hsl(330, 60%, 30%)",
+      "spotlight": "hsl(48, 96%, 50%)",
+      "oral": "hsl(142, 71%, 45%)",
+      "papers": "hsl(200, 65%, 50%)",
+      "authors": "hsl(280, 55%, 55%)",
+      "US": "hsl(221, 83%, 53%)",
+      "CN": "hsl(0, 84%, 60%)",
+      "GB": "hsl(120, 70%, 45%)",
+      "HK": "hsl(300, 75%, 50%)",
+      "SG": "hsl(180, 80%, 50%)",
+      "CA": "hsl(15, 85%, 55%)",
+      "DE": "hsl(45, 90%, 50%)",
+      "KR": "hsl(270, 75%, 50%)",
+      "FR": "hsl(240, 80%, 55%)",
+      "CH": "hsl(135, 70%, 45%)",
+      "UK": "hsl(90, 65%, 50%)",
+      "AU": "hsl(315, 80%, 55%)",
+      "JP": "hsl(195, 85%, 50%)",
+      "UNK": "hsl(0, 0%, 60%)",
+      "IL": "hsl(210, 75%, 50%)",
+      "IT": "hsl(105, 70%, 50%)",
+      "NL": "hsl(255, 80%, 55%)",
+      "AE": "hsl(30, 85%, 55%)",
+      "TW": "hsl(165, 75%, 50%)",
+      "AI": "hsl(285, 80%, 55%)",
+      "IN": "hsl(36, 96%, 50%)",
+      "AT": "hsl(60, 85%, 50%)",
+      "RU": "hsl(330, 75%, 50%)",
+      "DK": "hsl(225, 80%, 55%)",
+      "SE": "hsl(75, 70%, 50%)",
+      "SA": "hsl(345, 85%, 55%)",
+      "BE": "hsl(150, 75%, 50%)",
+      "ES": "hsl(300, 70%, 50%)",
+      "FI": "hsl(120, 80%, 45%)",
+      "MO": "hsl(270, 85%, 55%)",
+      "GR": "hsl(195, 75%, 50%)",
+      "VN": "hsl(45, 80%, 55%)",
+      "BR": "hsl(105, 85%, 50%)",
+      "PL": "hsl(315, 75%, 50%)",
+      "CZ": "hsl(165, 80%, 50%)",
+      "NO": "hsl(240, 75%, 55%)",
+      "CL": "hsl(285, 70%, 50%)",
+      "TR": "hsl(15, 80%, 55%)",
+      "PT": "hsl(135, 75%, 50%)",
+      "EU": "hsl(210, 85%, 50%)",
+      "BG": "hsl(75, 80%, 50%)",
+      "LU": "hsl(330, 80%, 55%)",
+      "IR": "hsl(180, 75%, 50%)",
+      "NZ": "hsl(255, 85%, 55%)",
+      "PH": "hsl(60, 75%, 50%)",
+      "ZW": "hsl(120, 70%, 50%)",
+      "IE": "hsl(345, 80%, 55%)",
+      "CX": "hsl(195, 80%, 50%)",
+      "MY": "hsl(270, 75%, 55%)",
+      "CO": "hsl(30, 80%, 55%)",
+      "KP": "hsl(150, 80%, 50%)",
+      "SI": "hsl(285, 75%, 50%)",
+      "AC": "hsl(45, 85%, 55%)",
+      "TH": "hsl(105, 80%, 50%)",
+      "RE": "hsl(315, 85%, 55%)",
+      "UY": "hsl(165, 75%, 50%)",
+      "AM": "hsl(240, 80%, 55%)",
+      "IO": "hsl(75, 85%, 50%)",
+      "CY": "hsl(330, 75%, 50%)",
+      "TD": "hsl(195, 75%, 55%)",
+      "NA": "hsl(255, 80%, 50%)",
+      "HR": "hsl(60, 80%, 55%)",
+      "EG": "hsl(120, 85%, 45%)"
+    }
+  },
+  "dashboard": {
+    "summary": {
+      "title": "Research Impact Overview",
+      "content": [
+        "India contributed 42 research papers to ICLR 2022, representing 0.9% of the conference's total accepted works and ranking 14 globally among contributing nations.",
+        "India researchers demonstrated strong research leadership with 61.9% of papers featuring India first authors, indicating significant intellectual contribution to the global machine learning discourse.",
+        "The research quality is evidenced by a 2.4% spotlight acceptance rate, with 1 paper(s) receiving this prestigious recognition among the conference's most impactful contributions.",
+        "India's machine learning ecosystem comprises 68 unique researchers across 40 institutions, with a balanced representation of 37 academic institutions and 3 corporate research entities."
+      ]
+    },
+    "context": {
+      "title": "Global Research Landscape",
+      "content": [
+        "The global research landscape is led by the United States (40.5% of papers) and China (17.7%), followed by the United Kingdom (6.9%) and Germany (4.2%), with India contributing 0.9% of total research output.",
+        "India ranks 14 globally in research volume, positioning it as an emerging contributor in the international machine learning research ecosystem with substantial growth potential.",
+        "Within the Asia-Pacific region, India trails China, South Korea, Singapore, and Hong Kong in absolute research contributions, highlighting opportunities for enhanced regional collaboration and capacity building."
+      ],
+      "subtitle": "India's position within the international machine learning research community and comparative analysis with leading nations."
+    },
+    "focusCountry": {
+      "title": "India Research Ecosystem Analysis",
+      "content": [
+        "India researchers exhibit strong research independence with 26.2% of papers having majority India authorship, indicating substantial domestic research capacity and reduced dependence on international collaboration.",
+        "The 61.9% first authorship rate demonstrates India researchers' leadership in conceptualizing and driving research projects, reflecting growing confidence and expertise in the field.",
+        "With 68 unique authors contributing across 42 papers, India maintains an efficient author-to-paper ratio of 0.62, suggesting productive individual contributions and effective research mentorship."
+      ],
+      "subtitle": "Detailed examination of authorship patterns, collaboration dynamics, and research leadership within India's machine learning community."
+    },
+    "institutions": {
+      "title": "Institutional Research Excellence",
+      "content": [
+        "The Unknown emerges as the national leader with 0 papers and 0 authors, including the country's spotlight paper, demonstrating exceptional research quality and productivity.",
+        "Academic institutions dominate India's research landscape with 92.5% representation (37 of 40 institutions), while corporate research centers contribute 7.5%, indicating strong university-led research culture.",
+        "The institutional diversity spans premier engineering institutes (IITs), specialized research universities (IISc), and corporate R&D centers, creating a robust ecosystem for sustained machine learning research growth."
+      ],
+      "subtitle": "Comprehensive evaluation of India's academic and corporate institutions contributing to machine learning research excellence."
+    }
+  }
+}

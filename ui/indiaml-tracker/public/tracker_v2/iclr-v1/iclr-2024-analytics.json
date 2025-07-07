@@ -1,0 +1,3518 @@
+{
+  "conference": "ICLR",
+  "year": 2024,
+  "track": "Conference",
+  "focus_country": "India",
+  "focus_country_code": "IN",
+  "generated_at": "2025-07-07T15:54:17.083826",
+  "globalStats": {
+    "totalPapers": 9999,
+    "totalAuthors": 23564,
+    "totalCountries": 63,
+    "countries": [
+      {
+        "affiliation_country": "US",
+        "paper_count": 3538,
+        "author_count": 8129,
+        "spotlights": 217,
+        "orals": 50
+      },
+      {
+        "affiliation_country": "CN",
+        "paper_count": 2511,
+        "author_count": 6718,
+        "spotlights": 130,
+        "orals": 19
+      },
+      {
+        "affiliation_country": "GB",
+        "paper_count": 622,
+        "author_count": 1110,
+        "spotlights": 37,
+        "orals": 12
+      },
+      {
+        "affiliation_country": "KR",
+        "paper_count": 418,
+        "author_count": 980,
+        "spotlights": 19,
+        "orals": 5
+      },
+      {
+        "affiliation_country": "DE",
+        "paper_count": 396,
+        "author_count": 800,
+        "spotlights": 17,
+        "orals": 7
+      },
+      {
+        "affiliation_country": "CA",
+        "paper_count": 366,
+        "author_count": 660,
+        "spotlights": 17,
+        "orals": 7
+      },
+      {
+        "affiliation_country": "SG",
+        "paper_count": 304,
+        "author_count": 549,
+        "spotlights": 21,
+        "orals": 6
+      },
+      {
+        "affiliation_country": "CH",
+        "paper_count": 214,
+        "author_count": 365,
+        "spotlights": 15,
+        "orals": 3
+      },
+      {
+        "affiliation_country": "AU",
+        "paper_count": 209,
+        "author_count": 384,
+        "spotlights": 13,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "JP",
+        "paper_count": 179,
+        "author_count": 313,
+        "spotlights": 8,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "FR",
+        "paper_count": 159,
+        "author_count": 315,
+        "spotlights": 10,
+        "orals": 2
+      },
+      {
+        "affiliation_country": "IL",
+        "paper_count": 117,
+        "author_count": 208,
+        "spotlights": 4,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "UNK",
+        "paper_count": 105,
+        "author_count": 131,
+        "spotlights": 5,
+        "orals": 2
+      },
+      {
+        "affiliation_country": "AE",
+        "paper_count": 100,
+        "author_count": 101,
+        "spotlights": 6,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "NL",
+        "paper_count": 93,
+        "author_count": 171,
+        "spotlights": 3,
+        "orals": 3
+      },
+      {
+        "affiliation_country": "IN",
+        "paper_count": 87,
+        "author_count": 183,
+        "spotlights": 6,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "IT",
+        "paper_count": 68,
+        "author_count": 176,
+        "spotlights": 1,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "SA",
+        "paper_count": 54,
+        "author_count": 75,
+        "spotlights": 1,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "RU",
+        "paper_count": 46,
+        "author_count": 102,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "SE",
+        "paper_count": 42,
+        "author_count": 85,
+        "spotlights": 2,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "AT",
+        "paper_count": 34,
+        "author_count": 56,
+        "spotlights": 3,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "DK",
+        "paper_count": 33,
+        "author_count": 64,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "BE",
+        "paper_count": 33,
+        "author_count": 64,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "ES",
+        "paper_count": 28,
+        "author_count": 62,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "FI",
+        "paper_count": 28,
+        "author_count": 47,
+        "spotlights": 2,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "PL",
+        "paper_count": 26,
+        "author_count": 56,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "NO",
+        "paper_count": 22,
+        "author_count": 42,
+        "spotlights": 2,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "VN",
+        "paper_count": 20,
+        "author_count": 42,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "BR",
+        "paper_count": 16,
+        "author_count": 25,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "NZ",
+        "paper_count": 15,
+        "author_count": 29,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "PT",
+        "paper_count": 14,
+        "author_count": 30,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "IR",
+        "paper_count": 10,
+        "author_count": 29,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "CZ",
+        "paper_count": 9,
+        "author_count": 18,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "UNK",
+        "paper_count": 6,
+        "author_count": 17,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "ZA",
+        "paper_count": 6,
+        "author_count": 12,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "RO",
+        "paper_count": 6,
+        "author_count": 12,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "QA",
+        "paper_count": 6,
+        "author_count": 12,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "LU",
+        "paper_count": 6,
+        "author_count": 9,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "HU",
+        "paper_count": 6,
+        "author_count": 17,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "GR",
+        "paper_count": 5,
+        "author_count": 13,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "BD",
+        "paper_count": 5,
+        "author_count": 9,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "MY",
+        "paper_count": 4,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "CL",
+        "paper_count": 4,
+        "author_count": 6,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "PK",
+        "paper_count": 3,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "IE",
+        "paper_count": 3,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "KE",
+        "paper_count": 2,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "ID",
+        "paper_count": 2,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "CY",
+        "paper_count": 2,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "HR",
+        "paper_count": 2,
+        "author_count": 7,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "AM",
+        "paper_count": 2,
+        "author_count": 6,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "UA",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "TH",
+        "paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "RS",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "NG",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "NP",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "MA",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "LI",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "LB",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "JO",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "ET",
+        "paper_count": 1,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "EG",
+        "paper_count": 1,
+        "author_count": 5,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "BG",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "AR",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      }
+    ]
+  },
+  "focusCountrySummary": {
+    "country": "India",
+    "country_code": "IN",
+    "rank": 16,
+    "paper_count": 87,
+    "author_count": 183,
+    "percentage": 0.87,
+    "spotlights": 6,
+    "orals": 0,
+    "institution_count": 63,
+    "academic_institutions": 55,
+    "corporate_institutions": 8
+  },
+  "focusCountry": {
+    "authorship": {
+      "at_least_one": {
+        "count": 87,
+        "papers": [
+          {
+            "id": "0Y26tFG3WF",
+            "title": "Inducing Precision in Lagrangian Neural Networks : Proof of concept application on Chaotic systems",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "1M8yDTa0Pp",
+            "title": "Cross-Model Semi-Supervised Prompt Learning for Vision-Language Models",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "1WSd408I9M",
+            "title": "Generative AI in healthcare: A trustworthy approach",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "1yll8U12GT",
+            "title": "Enhancing Decision Tree Learning with Deep Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "1zhM0XkQh0",
+            "title": "ProFeAT: Projected Feature Adversarial Training for Self-Supervised Learning of Robust Representations",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "2iGiSHmeAN",
+            "title": "BroGNet: Momentum-Conserving Graph Neural Stochastic Differential Equation for Learning Brownian Dynamics",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "3NMYMLL92j",
+            "title": "Brain encoding models based on binding multiple modalities across audio, language, and vision",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "4Zz5UELkIt",
+            "title": "Adaptive Instrument Design for Indirect Experiments",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "5rrYpa2vts",
+            "title": "EA2N: Evidence-based AMR Attention Network for Fake News Detection",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "5vJe8XKFv0",
+            "title": "CoNO: Complex Neural Operator for Continuous Dynamical Systems",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "6yJuDK1DsK",
+            "title": "FEATHER: Lifelong Test-Time Adaptation with Lightweight Adapters",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "78iGZdqxYY",
+            "title": "Mirage: Model-agnostic Graph Distillation for Graph Classification",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "7HdtLgsvys",
+            "title": "Tube Loss: A Novel Approach for High Quality Prediction Interval Estimation",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "7m5jhNXklB",
+            "title": "VTruST : Controllable value function based subset selection for Data-Centric Trustworthy AI",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ABIcBDLBVG",
+            "title": "Fill in the Blank: Exploring and Enhancing LLM Capabilities for Backward Reasoning in Math Word Problems",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "AOSsLRKQrX",
+            "title": "DisFormer: Disentangled Object Representations for Learning Visual Dynamics Via Transformers",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "B5CgCJY2po",
+            "title": "Flood and Echo: Algorithmic Alignment of GNNs with Distributed Computing",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "BkRD6GsswM",
+            "title": "CLA-RA: COLLABORATIVE ACTIVE LEARNING AMIDST RELABELING AMBIGUITY",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "DluJpvRF69",
+            "title": "StyleCL : Latent Dictionary Learning for StyleGAN Without Forgetting",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "E4flIscNE6",
+            "title": "Meta-Collaboration in Distillation: Pooled Learning from Multiple Students",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "EAT7gmyIH2",
+            "title": "DAME: A Distillation Based Approach For Model-agnostic Local Explainability",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ESq3U7z6FD",
+            "title": "EHI: End-to-end learning of Hierarchical Index for Efficient Dense Retrieval",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "F5ERvanO6m",
+            "title": "Deep Stochastic Mechanics",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "H8tpFITvpo",
+            "title": "FedHC: Proximal Correction with Hessian and Cosine Correlation for Federated Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "IPayPEGwdE",
+            "title": "Learning Good Interventions in Causal Contextual Bandits with Adaptive Context",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Iv60x1iAvp",
+            "title": "GNN-based Reinforcement Learning Agent for Session-based Recommendation",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Ixi4j6LtdX",
+            "title": "A Good Learner can Teach Better: Teacher-Student Collaborative Knowledge Distillation",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "K1VLZ5rNuZ",
+            "title": "$MC^2$: Multimodal Concept-based Continual learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "LRpfp86Z38",
+            "title": "Logarithmic Linear Units (LogLUs): A Novel Activation Function for Training Deep Neural Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "N581Nje6fH",
+            "title": "Long Horizon Episodic Decision Making for Cognitively Inspired Robots",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "NLRo4qhg6t",
+            "title": "HIWE: Scene Importance Weighted Encoding For Fast Neural Radiance Field Training",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "NV6rn7j5p5",
+            "title": "GEO: Generative Engine Optimization",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "NqpdT8DwGc",
+            "title": "Stealing the Invisible: Unveiling Pre-Trained CNN Models through Adversarial Examples and Timing Side-Channels",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "NvJxTjTQtq",
+            "title": "EGraFFBench: Evaluation of Equivariant Graph Neural Network Force Fields for Atomistic Simulations",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "OZ3syNYe7D",
+            "title": "PEAR: Primitive enabled Adaptive Relabeling for boosting Hierarchical Reinforcement Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Ow3u6br0ub",
+            "title": "Progressive Fusion for Multimodal Integration",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "PcBJ4pA6bF",
+            "title": "Overcoming Data and Model heterogeneities in Decentralized Federated Learning via Synthetic Anchors",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Q3aKBKCqG8",
+            "title": "UBERT: Unsupervised adaptive early exits in BERT",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Q8ibi56aM6",
+            "title": "SINGLE-IMAGE COHERENT RECONSTRUCTION OF OBJECTS AND HUMANS",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "QV6uB196cR",
+            "title": "A/B testing under Identity Fragmentation",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "RKw6AzP2BY",
+            "title": "Decoding LLM's: The Interplay of Transformation Matrices and Input Complexity",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "RmRA7Q0lwQ",
+            "title": "Stay on Topic with Classifier-Free Guidance",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "RvmrhrPy7j",
+            "title": "Causal Inference Using LLM-Guided Discovery",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "S7ZQgHfW3w",
+            "title": "CoDBench: A Critical Evaluation of Data-driven Models for Continuous Dynamical Systems",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "SQrHpTllXa",
+            "title": "CABINET: Content Relevance-based Noise Reduction for Table Question Answering",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "TrKq4Wlwcz",
+            "title": "Large Content And Behavior Models To Understand, Simulate, And Optimize Content And Behavior",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "VJvbOSXRUq",
+            "title": "GNNX-BENCH: Unravelling the Utility of Perturbation-based GNN Explainers through In-depth Benchmarking",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "VL2txtmPYA",
+            "title": "Freenets: Learning Layerfree Neural Network Topologies",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Xsrsj3cne4",
+            "title": "An Optimization-Based Framework for Adversarial Defence of Graph Neural Networks Via Adaptive Lipschitz Regularization",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ZzeXjCQ5CK",
+            "title": "FedORION: Aggregation-Assisted Proxyless Distillation for Heterogeneous Federated Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "a9xZqOqzEW",
+            "title": "A Logical Framework for Verification of AI Fairness",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "anG8cNYQAs",
+            "title": "INCYDE: A large scale cyclone detection and intensity estimation dataset using satellite infrared imagery",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "bEAVTKUEpJ",
+            "title": "SARI: SIMPLISTIC AVERAGE AND ROBUST IDENTIFICATION BASED NOISY PARTIAL LABEL LEARNING",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "cDInj7WMQm",
+            "title": "UGC: UNIVERSAL GRAPH COARSENING",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "cHy00K3Och",
+            "title": "GRADSIMCORE: GRADIENT SIMILARITY BASED REPRESENTATIVE INSTANCES AS CORESET",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "eUgS9Ig8JG",
+            "title": "SaNN: Simple Yet Powerful Simplicial-aware Neural Networks",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "er7VhmqZEA",
+            "title": "NOISY MULTI-VIEW CONTRASTIVE LEARNING FRAMEWORK FOR ENHANCING TOP-K RECOMMENDATION",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "f1xnBr4WD6",
+            "title": "Cycle Consistency Driven Object Discovery",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "fjpfCOV4ru",
+            "title": "Ito Diffusion Approximation of Universal Ito Chains for Sampling, Optimization and Boosting",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "fweSF6QplV",
+            "title": "Structured Graph Reduction for Efficient GNN",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "gSlLbfSOq1",
+            "title": "Temporally Equivariant Contrastive Learning for Disease Progression",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "gaAvQ4ogUX",
+            "title": "A Convergent Federated Clustering Algorithm without Initial Condition",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "grQ97sPU5T",
+            "title": "Spectral Highways: Injecting Homophily into Heterophilic Graphs",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "iQHL76NqJT",
+            "title": "Node-CwR: Node Classification with Reject Option",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "j7S7o6ROn9",
+            "title": "Distributional Structured Pruning by Lower bounding the Total Variation Distance using Witness functions",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "jFiFmHrIfD",
+            "title": "Explorative Latent Self-Supervised Active Search Algorithm (ELSA)",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "jJvXNpvOdM",
+            "title": "Task Planning for Visual Room Rearrangement under Partial Observability",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "kxLMnvnZv0",
+            "title": "CoMNet: Where Biology Meets ConvNets",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "lgA84TbHxm",
+            "title": "DySTreSS: Dynamically Scaled Temperature in Self-Supervised Contrastive Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "lxlMFlzZO9",
+            "title": "DS-Prover: A Dynamic Sampling Based Approach for Neural Theorem Proving",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "mw1PWNSWZP",
+            "title": "OctoPack: Instruction Tuning Code Large Language Models",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "p5jBLcVmhe",
+            "title": "SoftTreeMax: Exponential Variance Reduction in Policy Gradient via Tree Expansion",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "rDhsRC0ldq",
+            "title": "Do LLMs understand Pragmatics? An Extensive Benchmark for Evaluating Pragmatic Understanding of LLMs",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "rO62BY3dYc",
+            "title": "Pruning via Ranking (PvR): A unified structured pruning approach",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "rjLgCkJH79",
+            "title": "A SIMILARITY-AGNOSTIC REINFORCEMENT LEARNING APPROACH FOR LEAD OPTIMIZATION",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ruQkcBfzpm",
+            "title": "mBLIP: Efficient Bootstrapping of Multilingual Vision-LLMs",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "rxVBKhyfSo",
+            "title": "Selective Mixup Fine-Tuning for Optimizing Non-Decomposable Objectives",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "s90VIdza2K",
+            "title": "f-FERM: A Scalable Framework for Robust Fair Empirical Risk Minimization",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "sY5N0zY5Od",
+            "title": "DSPy: Compiling Declarative Language Model Calls into State-of-the-Art Pipelines",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "tuuEvgfxr5",
+            "title": "Bayesian Pseudo-Coresets via Contrastive Divergence",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ukmh3mWFf0",
+            "title": "Attributed Graph Clustering via Coarsening with Modularity",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "unxTEvHOW7",
+            "title": "EXPLEME: A Study in Meme Interpretability, Diving Beyond Input Attribution",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "uz7d2N2zul",
+            "title": "Bayesian Coreset Optimization for Personalized Federated Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "vrjDNgAfp4",
+            "title": "SEMANTIC RHEOLOGY: THE FLOW OF IDEAS IN LANGUAGE MODELS",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "x6gnuUXpxM",
+            "title": "Constructing Sparse Neural Architecture with Deterministic Ramanujan Graphs",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "yIEKq72cTE",
+            "title": "Byzantine-Robust Dynamic Weighted Aggregation Framework for Optimal Attack Mitigation in Federated Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "zEkvV65Wi1",
+            "title": "Understanding Calibration Transfer in Knowledge Distillation",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ]
+      },
+      "majority": {
+        "count": 43,
+        "papers": [
+          {
+            "id": "1yll8U12GT",
+            "title": "Enhancing Decision Tree Learning with Deep Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "1zhM0XkQh0",
+            "title": "ProFeAT: Projected Feature Adversarial Training for Self-Supervised Learning of Robust Representations",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "2iGiSHmeAN",
+            "title": "BroGNet: Momentum-Conserving Graph Neural Stochastic Differential Equation for Learning Brownian Dynamics",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "5rrYpa2vts",
+            "title": "EA2N: Evidence-based AMR Attention Network for Fake News Detection",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "5vJe8XKFv0",
+            "title": "CoNO: Complex Neural Operator for Continuous Dynamical Systems",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "6yJuDK1DsK",
+            "title": "FEATHER: Lifelong Test-Time Adaptation with Lightweight Adapters",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "78iGZdqxYY",
+            "title": "Mirage: Model-agnostic Graph Distillation for Graph Classification",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ABIcBDLBVG",
+            "title": "Fill in the Blank: Exploring and Enhancing LLM Capabilities for Backward Reasoning in Math Word Problems",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "AOSsLRKQrX",
+            "title": "DisFormer: Disentangled Object Representations for Learning Visual Dynamics Via Transformers",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "E4flIscNE6",
+            "title": "Meta-Collaboration in Distillation: Pooled Learning from Multiple Students",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "EAT7gmyIH2",
+            "title": "DAME: A Distillation Based Approach For Model-agnostic Local Explainability",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "H8tpFITvpo",
+            "title": "FedHC: Proximal Correction with Hessian and Cosine Correlation for Federated Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Iv60x1iAvp",
+            "title": "GNN-based Reinforcement Learning Agent for Session-based Recommendation",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Ixi4j6LtdX",
+            "title": "A Good Learner can Teach Better: Teacher-Student Collaborative Knowledge Distillation",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "K1VLZ5rNuZ",
+            "title": "$MC^2$: Multimodal Concept-based Continual learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "LRpfp86Z38",
+            "title": "Logarithmic Linear Units (LogLUs): A Novel Activation Function for Training Deep Neural Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Q3aKBKCqG8",
+            "title": "UBERT: Unsupervised adaptive early exits in BERT",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "S7ZQgHfW3w",
+            "title": "CoDBench: A Critical Evaluation of Data-driven Models for Continuous Dynamical Systems",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "TrKq4Wlwcz",
+            "title": "Large Content And Behavior Models To Understand, Simulate, And Optimize Content And Behavior",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "VJvbOSXRUq",
+            "title": "GNNX-BENCH: Unravelling the Utility of Perturbation-based GNN Explainers through In-depth Benchmarking",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Xsrsj3cne4",
+            "title": "An Optimization-Based Framework for Adversarial Defence of Graph Neural Networks Via Adaptive Lipschitz Regularization",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "a9xZqOqzEW",
+            "title": "A Logical Framework for Verification of AI Fairness",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "bEAVTKUEpJ",
+            "title": "SARI: SIMPLISTIC AVERAGE AND ROBUST IDENTIFICATION BASED NOISY PARTIAL LABEL LEARNING",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "cDInj7WMQm",
+            "title": "UGC: UNIVERSAL GRAPH COARSENING",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "cHy00K3Och",
+            "title": "GRADSIMCORE: GRADIENT SIMILARITY BASED REPRESENTATIVE INSTANCES AS CORESET",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "eUgS9Ig8JG",
+            "title": "SaNN: Simple Yet Powerful Simplicial-aware Neural Networks",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "er7VhmqZEA",
+            "title": "NOISY MULTI-VIEW CONTRASTIVE LEARNING FRAMEWORK FOR ENHANCING TOP-K RECOMMENDATION",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "fweSF6QplV",
+            "title": "Structured Graph Reduction for Efficient GNN",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "grQ97sPU5T",
+            "title": "Spectral Highways: Injecting Homophily into Heterophilic Graphs",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "iQHL76NqJT",
+            "title": "Node-CwR: Node Classification with Reject Option",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "jFiFmHrIfD",
+            "title": "Explorative Latent Self-Supervised Active Search Algorithm (ELSA)",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "jJvXNpvOdM",
+            "title": "Task Planning for Visual Room Rearrangement under Partial Observability",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "lgA84TbHxm",
+            "title": "DySTreSS: Dynamically Scaled Temperature in Self-Supervised Contrastive Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "lxlMFlzZO9",
+            "title": "DS-Prover: A Dynamic Sampling Based Approach for Neural Theorem Proving",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "rDhsRC0ldq",
+            "title": "Do LLMs understand Pragmatics? An Extensive Benchmark for Evaluating Pragmatic Understanding of LLMs",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "rO62BY3dYc",
+            "title": "Pruning via Ranking (PvR): A unified structured pruning approach",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "tuuEvgfxr5",
+            "title": "Bayesian Pseudo-Coresets via Contrastive Divergence",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ukmh3mWFf0",
+            "title": "Attributed Graph Clustering via Coarsening with Modularity",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "unxTEvHOW7",
+            "title": "EXPLEME: A Study in Meme Interpretability, Diving Beyond Input Attribution",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "uz7d2N2zul",
+            "title": "Bayesian Coreset Optimization for Personalized Federated Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "vrjDNgAfp4",
+            "title": "SEMANTIC RHEOLOGY: THE FLOW OF IDEAS IN LANGUAGE MODELS",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "x6gnuUXpxM",
+            "title": "Constructing Sparse Neural Architecture with Deterministic Ramanujan Graphs",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "yIEKq72cTE",
+            "title": "Byzantine-Robust Dynamic Weighted Aggregation Framework for Optimal Attack Mitigation in Federated Learning",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ]
+      },
+      "first_author": {
+        "count": 65,
+        "papers": [
+          {
+            "id": "0Y26tFG3WF",
+            "title": "Inducing Precision in Lagrangian Neural Networks : Proof of concept application on Chaotic systems",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "1M8yDTa0Pp",
+            "title": "Cross-Model Semi-Supervised Prompt Learning for Vision-Language Models",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "1WSd408I9M",
+            "title": "Generative AI in healthcare: A trustworthy approach",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "1yll8U12GT",
+            "title": "Enhancing Decision Tree Learning with Deep Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "1zhM0XkQh0",
+            "title": "ProFeAT: Projected Feature Adversarial Training for Self-Supervised Learning of Robust Representations",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "2iGiSHmeAN",
+            "title": "BroGNet: Momentum-Conserving Graph Neural Stochastic Differential Equation for Learning Brownian Dynamics",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "5rrYpa2vts",
+            "title": "EA2N: Evidence-based AMR Attention Network for Fake News Detection",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "5vJe8XKFv0",
+            "title": "CoNO: Complex Neural Operator for Continuous Dynamical Systems",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "6yJuDK1DsK",
+            "title": "FEATHER: Lifelong Test-Time Adaptation with Lightweight Adapters",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "78iGZdqxYY",
+            "title": "Mirage: Model-agnostic Graph Distillation for Graph Classification",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "7HdtLgsvys",
+            "title": "Tube Loss: A Novel Approach for High Quality Prediction Interval Estimation",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ABIcBDLBVG",
+            "title": "Fill in the Blank: Exploring and Enhancing LLM Capabilities for Backward Reasoning in Math Word Problems",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "AOSsLRKQrX",
+            "title": "DisFormer: Disentangled Object Representations for Learning Visual Dynamics Via Transformers",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "DluJpvRF69",
+            "title": "StyleCL : Latent Dictionary Learning for StyleGAN Without Forgetting",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "E4flIscNE6",
+            "title": "Meta-Collaboration in Distillation: Pooled Learning from Multiple Students",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "EAT7gmyIH2",
+            "title": "DAME: A Distillation Based Approach For Model-agnostic Local Explainability",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "F5ERvanO6m",
+            "title": "Deep Stochastic Mechanics",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "H8tpFITvpo",
+            "title": "FedHC: Proximal Correction with Hessian and Cosine Correlation for Federated Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "IPayPEGwdE",
+            "title": "Learning Good Interventions in Causal Contextual Bandits with Adaptive Context",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Iv60x1iAvp",
+            "title": "GNN-based Reinforcement Learning Agent for Session-based Recommendation",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Ixi4j6LtdX",
+            "title": "A Good Learner can Teach Better: Teacher-Student Collaborative Knowledge Distillation",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "K1VLZ5rNuZ",
+            "title": "$MC^2$: Multimodal Concept-based Continual learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "LRpfp86Z38",
+            "title": "Logarithmic Linear Units (LogLUs): A Novel Activation Function for Training Deep Neural Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "N581Nje6fH",
+            "title": "Long Horizon Episodic Decision Making for Cognitively Inspired Robots",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "NV6rn7j5p5",
+            "title": "GEO: Generative Engine Optimization",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "NqpdT8DwGc",
+            "title": "Stealing the Invisible: Unveiling Pre-Trained CNN Models through Adversarial Examples and Timing Side-Channels",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "OZ3syNYe7D",
+            "title": "PEAR: Primitive enabled Adaptive Relabeling for boosting Hierarchical Reinforcement Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Ow3u6br0ub",
+            "title": "Progressive Fusion for Multimodal Integration",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Q3aKBKCqG8",
+            "title": "UBERT: Unsupervised adaptive early exits in BERT",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "QV6uB196cR",
+            "title": "A/B testing under Identity Fragmentation",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "RKw6AzP2BY",
+            "title": "Decoding LLM's: The Interplay of Transformation Matrices and Input Complexity",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "S7ZQgHfW3w",
+            "title": "CoDBench: A Critical Evaluation of Data-driven Models for Continuous Dynamical Systems",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "SQrHpTllXa",
+            "title": "CABINET: Content Relevance-based Noise Reduction for Table Question Answering",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "TrKq4Wlwcz",
+            "title": "Large Content And Behavior Models To Understand, Simulate, And Optimize Content And Behavior",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "Xsrsj3cne4",
+            "title": "An Optimization-Based Framework for Adversarial Defence of Graph Neural Networks Via Adaptive Lipschitz Regularization",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ZzeXjCQ5CK",
+            "title": "FedORION: Aggregation-Assisted Proxyless Distillation for Heterogeneous Federated Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "a9xZqOqzEW",
+            "title": "A Logical Framework for Verification of AI Fairness",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "anG8cNYQAs",
+            "title": "INCYDE: A large scale cyclone detection and intensity estimation dataset using satellite infrared imagery",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "bEAVTKUEpJ",
+            "title": "SARI: SIMPLISTIC AVERAGE AND ROBUST IDENTIFICATION BASED NOISY PARTIAL LABEL LEARNING",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "cDInj7WMQm",
+            "title": "UGC: UNIVERSAL GRAPH COARSENING",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "cHy00K3Och",
+            "title": "GRADSIMCORE: GRADIENT SIMILARITY BASED REPRESENTATIVE INSTANCES AS CORESET",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "eUgS9Ig8JG",
+            "title": "SaNN: Simple Yet Powerful Simplicial-aware Neural Networks",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "er7VhmqZEA",
+            "title": "NOISY MULTI-VIEW CONTRASTIVE LEARNING FRAMEWORK FOR ENHANCING TOP-K RECOMMENDATION",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "f1xnBr4WD6",
+            "title": "Cycle Consistency Driven Object Discovery",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "fjpfCOV4ru",
+            "title": "Ito Diffusion Approximation of Universal Ito Chains for Sampling, Optimization and Boosting",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "fweSF6QplV",
+            "title": "Structured Graph Reduction for Efficient GNN",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "gSlLbfSOq1",
+            "title": "Temporally Equivariant Contrastive Learning for Disease Progression",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "gaAvQ4ogUX",
+            "title": "A Convergent Federated Clustering Algorithm without Initial Condition",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "grQ97sPU5T",
+            "title": "Spectral Highways: Injecting Homophily into Heterophilic Graphs",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "iQHL76NqJT",
+            "title": "Node-CwR: Node Classification with Reject Option",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "j7S7o6ROn9",
+            "title": "Distributional Structured Pruning by Lower bounding the Total Variation Distance using Witness functions",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "jFiFmHrIfD",
+            "title": "Explorative Latent Self-Supervised Active Search Algorithm (ELSA)",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "jJvXNpvOdM",
+            "title": "Task Planning for Visual Room Rearrangement under Partial Observability",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "lgA84TbHxm",
+            "title": "DySTreSS: Dynamically Scaled Temperature in Self-Supervised Contrastive Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "lxlMFlzZO9",
+            "title": "DS-Prover: A Dynamic Sampling Based Approach for Neural Theorem Proving",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "rDhsRC0ldq",
+            "title": "Do LLMs understand Pragmatics? An Extensive Benchmark for Evaluating Pragmatic Understanding of LLMs",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "rO62BY3dYc",
+            "title": "Pruning via Ranking (PvR): A unified structured pruning approach",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "tuuEvgfxr5",
+            "title": "Bayesian Pseudo-Coresets via Contrastive Divergence",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ukmh3mWFf0",
+            "title": "Attributed Graph Clustering via Coarsening with Modularity",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "unxTEvHOW7",
+            "title": "EXPLEME: A Study in Meme Interpretability, Diving Beyond Input Attribution",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "uz7d2N2zul",
+            "title": "Bayesian Coreset Optimization for Personalized Federated Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "vrjDNgAfp4",
+            "title": "SEMANTIC RHEOLOGY: THE FLOW OF IDEAS IN LANGUAGE MODELS",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "x6gnuUXpxM",
+            "title": "Constructing Sparse Neural Architecture with Deterministic Ramanujan Graphs",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "yIEKq72cTE",
+            "title": "Byzantine-Robust Dynamic Weighted Aggregation Framework for Optimal Attack Mitigation in Federated Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "zEkvV65Wi1",
+            "title": "Understanding Calibration Transfer in Knowledge Distillation",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ]
+      }
+    },
+    "institutions": [
+      {
+        "institute": "Indian Institute of Technology Delhi",
+        "total_paper_count": 14,
+        "unique_paper_count": 14,
+        "author_count": 31,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "2iGiSHmeAN",
+            "title": "BroGNet: Momentum-Conserving Graph Neural Stochastic Differential Equation for Learning Brownian Dynamics",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "78iGZdqxYY",
+            "title": "Mirage: Model-agnostic Graph Distillation for Graph Classification",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "NV6rn7j5p5",
+            "title": "GEO: Generative Engine Optimization",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "cDInj7WMQm",
+            "title": "UGC: UNIVERSAL GRAPH COARSENING",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "5vJe8XKFv0",
+            "title": "CoNO: Complex Neural Operator for Continuous Dynamical Systems",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Ixi4j6LtdX",
+            "title": "A Good Learner can Teach Better: Teacher-Student Collaborative Knowledge Distillation",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ABIcBDLBVG",
+            "title": "Fill in the Blank: Exploring and Enhancing LLM Capabilities for Backward Reasoning in Math Word Problems",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "AOSsLRKQrX",
+            "title": "DisFormer: Disentangled Object Representations for Learning Visual Dynamics Via Transformers",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ESq3U7z6FD",
+            "title": "EHI: End-to-end learning of Hierarchical Index for Efficient Dense Retrieval",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "NvJxTjTQtq",
+            "title": "EGraFFBench: Evaluation of Equivariant Graph Neural Network Force Fields for Atomistic Simulations",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "VJvbOSXRUq",
+            "title": "GNNX-BENCH: Unravelling the Utility of Perturbation-based GNN Explainers through In-depth Benchmarking",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Xsrsj3cne4",
+            "title": "An Optimization-Based Framework for Adversarial Defence of Graph Neural Networks Via Adaptive Lipschitz Regularization",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "fweSF6QplV",
+            "title": "Structured Graph Reduction for Efficient GNN",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ukmh3mWFf0",
+            "title": "Attributed Graph Clustering via Coarsening with Modularity",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Sayan Ranu",
+          "Pranjal Aggarwal",
+          "Suresh Bishnoi",
+          "Jayadeva Jayadeva",
+          "N M Anoop Krishnan",
+          "Ayan Sengupta",
+          "Mridul Gupta",
+          "Sahil Manchanda",
+          "HARIPRASAD KODAMANA",
+          "Aniruddha Deb",
+          "Neeva Hareshbhai Oza",
+          "Dinesh Khandelwal",
+          "Sanket Sanjaykumar Gandhi",
+          "Vishal Sharma",
+          "Samanyu Mahajan",
+          "Anshul Mittal",
+          "Md Shad Akhtar",
+          "Utkarsh Pratiush",
+          "Santiago Miret",
+          "Matthieu Micoulaut",
+          "Samidha Verma",
+          "Burouj Armgaan",
+          "Sourav Medya",
+          "Vipul Kumar Singh",
+          "SARATH MOHAN",
+          "Sandeep Kumar",
+          "Mohit Kataria",
+          "Manoj Kumar",
+          "Subhanu Halder",
+          "Abhishek Gupta",
+          "Yukti Makhija"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Science",
+        "total_paper_count": 10,
+        "unique_paper_count": 10,
+        "author_count": 16,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "tuuEvgfxr5",
+            "title": "Bayesian Pseudo-Coresets via Contrastive Divergence",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "5vJe8XKFv0",
+            "title": "CoNO: Complex Neural Operator for Continuous Dynamical Systems",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "S7ZQgHfW3w",
+            "title": "CoDBench: A Critical Evaluation of Data-driven Models for Continuous Dynamical Systems",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "1zhM0XkQh0",
+            "title": "ProFeAT: Projected Feature Adversarial Training for Self-Supervised Learning of Robust Representations",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "EAT7gmyIH2",
+            "title": "DAME: A Distillation Based Approach For Model-agnostic Local Explainability",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "IPayPEGwdE",
+            "title": "Learning Good Interventions in Causal Contextual Bandits with Adaptive Context",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "eUgS9Ig8JG",
+            "title": "SaNN: Simple Yet Powerful Simplicial-aware Neural Networks",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "j7S7o6ROn9",
+            "title": "Distributional Structured Pruning by Lower bounding the Total Variation Distance using Witness functions",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ukmh3mWFf0",
+            "title": "Attributed Graph Clustering via Coarsening with Modularity",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "vrjDNgAfp4",
+            "title": "SEMANTIC RHEOLOGY: THE FLOW OF IDEAS IN LANGUAGE MODELS",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Piyush Tiwary",
+          "Prathosh AP",
+          "Sravanti Addepalli",
+          "Priyam Dey",
+          "Venkatesh Babu Radhakrishnan",
+          "Karn Tiwari",
+          "Debarpan Bhattacharya",
+          "Rahul Madhavan",
+          "Siddharth Barman",
+          "Priyanshu Burark",
+          "Sravanthi Gurugubelli",
+          "Sundeep Prabhakar Chepuri",
+          "Chaitanya Murti",
+          "Kumar Shubham",
+          "Samarth Bhatia",
+          "Debayan Dasgupta"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Kharagpur",
+        "total_paper_count": 8,
+        "unique_paper_count": 8,
+        "author_count": 13,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "x6gnuUXpxM",
+            "title": "Constructing Sparse Neural Architecture with Deterministic Ramanujan Graphs",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "NqpdT8DwGc",
+            "title": "Stealing the Invisible: Unveiling Pre-Trained CNN Models through Adversarial Examples and Timing Side-Channels",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "1M8yDTa0Pp",
+            "title": "Cross-Model Semi-Supervised Prompt Learning for Vision-Language Models",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "SQrHpTllXa",
+            "title": "CABINET: Content Relevance-based Noise Reduction for Table Question Answering",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "er7VhmqZEA",
+            "title": "NOISY MULTI-VIEW CONTRASTIVE LEARNING FRAMEWORK FOR ENHANCING TOP-K RECOMMENDATION",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "gSlLbfSOq1",
+            "title": "Temporally Equivariant Contrastive Learning for Disease Progression",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "lgA84TbHxm",
+            "title": "DySTreSS: Dynamically Scaled Temperature in Self-Supervised Contrastive Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "rO62BY3dYc",
+            "title": "Pruning via Ranking (PvR): A unified structured pruning approach",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Arindam Biswas",
+          "Pabitra Mitra",
+          "Omprakash Chakraborty",
+          "Abir Das",
+          "Shubhi Shukla",
+          "Sohan Patnaik",
+          "Manav Nitin Kapadnis",
+          "Taha Emre",
+          "Saumik Bhattacharya",
+          "Atif Hassan",
+          "Swanand Khare",
+          "Jiaul H. Paik",
+          "Suryam Arnav Kalra"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Bombay",
+        "total_paper_count": 6,
+        "unique_paper_count": 6,
+        "author_count": 11,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "E4flIscNE6",
+            "title": "Meta-Collaboration in Distillation: Pooled Learning from Multiple Students",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "uz7d2N2zul",
+            "title": "Bayesian Coreset Optimization for Personalized Federated Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Q3aKBKCqG8",
+            "title": "UBERT: Unsupervised adaptive early exits in BERT",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "gaAvQ4ogUX",
+            "title": "A Convergent Federated Clustering Algorithm without Initial Condition",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "rDhsRC0ldq",
+            "title": "Do LLMs understand Pragmatics? An Extensive Benchmark for Evaluating Pragmatic Understanding of LLMs",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "s90VIdza2K",
+            "title": "f-FERM: A Scalable Framework for Robust Fair Empirical Risk Minimization",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Ganesh Ramakrishnan",
+          "Durga S",
+          "Atharva Abhijit Tambat",
+          "Manjesh Kumar Hanawal",
+          "Harsh Vardhan",
+          "Settaluri Lakshmi Sravanthi",
+          "Meet Doshi",
+          "Pavan Kalyan Tankala",
+          "Shivam Patel",
+          "Prateek Chanda",
+          "Shrey Modi"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Science",
+        "total_paper_count": 4,
+        "unique_paper_count": 4,
+        "author_count": 6,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "rxVBKhyfSo",
+            "title": "Selective Mixup Fine-Tuning for Optimizing Non-Decomposable Objectives",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "p5jBLcVmhe",
+            "title": "SoftTreeMax: Exponential Variance Reduction in Policy Gradient via Tree Expansion",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "DluJpvRF69",
+            "title": "StyleCL : Latent Dictionary Learning for StyleGAN Without Forgetting",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "VL2txtmPYA",
+            "title": "Freenets: Learning Layerfree Neural Network Topologies",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Harsh Rangwani",
+          "Venkatesh Babu Radhakrishnan",
+          "Gugan Thoppe",
+          "ANMOL GARG",
+          "Rahul Madhavan",
+          "Kunal Samanta"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology, Bombay",
+        "total_paper_count": 4,
+        "unique_paper_count": 4,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "E4flIscNE6",
+            "title": "Meta-Collaboration in Distillation: Pooled Learning from Multiple Students",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Q3aKBKCqG8",
+            "title": "UBERT: Unsupervised adaptive early exits in BERT",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "rDhsRC0ldq",
+            "title": "Do LLMs understand Pragmatics? An Extensive Benchmark for Evaluating Pragmatic Understanding of LLMs",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "tuuEvgfxr5",
+            "title": "Bayesian Pseudo-Coresets via Contrastive Divergence",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Shashank Kate",
+          "Divya Jyoti Bajpai",
+          "Pushpak Bhattacharyya",
+          "Vivek V Kashyap"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Madras",
+        "total_paper_count": 3,
+        "unique_paper_count": 3,
+        "author_count": 7,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "1yll8U12GT",
+            "title": "Enhancing Decision Tree Learning with Deep Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "rjLgCkJH79",
+            "title": "A SIMILARITY-AGNOSTIC REINFORCEMENT LEARNING APPROACH FOR LEAD OPTIMIZATION",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "0Y26tFG3WF",
+            "title": "Inducing Precision in Lagrangian Neural Networks : Proof of concept application on Chaotic systems",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Harish Guruprasad Ramaswamy",
+          "Balaraman Ravindran",
+          "Hrithwik Shalu",
+          "Prithaj Banerjee",
+          "Mahesh Lorik Yadav",
+          "Sean Current",
+          "srinivasan parthasarathy"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Bombay",
+        "total_paper_count": 3,
+        "unique_paper_count": 3,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "4Zz5UELkIt",
+            "title": "Adaptive Instrument Design for Indirect Experiments",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Ow3u6br0ub",
+            "title": "Progressive Fusion for Multimodal Integration",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "QV6uB196cR",
+            "title": "A/B testing under Identity Fragmentation",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Shiv Shankar"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Kanpur",
+        "total_paper_count": 3,
+        "unique_paper_count": 3,
+        "author_count": 6,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "6yJuDK1DsK",
+            "title": "FEATHER: Lifelong Test-Time Adaptation with Lightweight Adapters",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "OZ3syNYe7D",
+            "title": "PEAR: Primitive enabled Adaptive Relabeling for boosting Hierarchical Reinforcement Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "NLRo4qhg6t",
+            "title": "HIWE: Scene Importance Weighted Encoding For Fast Neural Radiance Field Training",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Piyush Rai",
+          "Utsav Singh",
+          "Dhanajit Brahma",
+          "Abhinav Joshi",
+          "Ashutosh Modi",
+          "Shorya Kumar"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Kharagpur",
+        "total_paper_count": 3,
+        "unique_paper_count": 3,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "7m5jhNXklB",
+            "title": "VTruST : Controllable value function based subset selection for Data-Centric Trustworthy AI",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "BkRD6GsswM",
+            "title": "CLA-RA: COLLABORATIVE ACTIVE LEARNING AMIDST RELABELING AMBIGUITY",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Q8ibi56aM6",
+            "title": "SINGLE-IMAGE COHERENT RECONSTRUCTION OF OBJECTS AND HUMANS",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Suparna Bhattacharya",
+          "Kaizer Rahaman",
+          "Partha Pratim Chakrabarti"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Hyderabad",
+        "total_paper_count": 3,
+        "unique_paper_count": 3,
+        "author_count": 7,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "K1VLZ5rNuZ",
+            "title": "$MC^2$: Multimodal Concept-based Continual learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "cHy00K3Och",
+            "title": "GRADSIMCORE: GRADIENT SIMILARITY BASED REPRESENTATIVE INSTANCES AS CORESET",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "yIEKq72cTE",
+            "title": "Byzantine-Robust Dynamic Weighted Aggregation Framework for Optimal Attack Mitigation in Federated Learning",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Balaji Krishnamurthy",
+          "Susmit Agrawal",
+          "Deepika Vemuri",
+          "Saumyaranjan Mohanty",
+          "Konda Reddy Mopuri",
+          "K Naveen Kumar",
+          "Ajeet Kumar Singh"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Jodhpur",
+        "total_paper_count": 2,
+        "unique_paper_count": 2,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "5rrYpa2vts",
+            "title": "EA2N: Evidence-based AMR Attention Network for Fake News Detection",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ZzeXjCQ5CK",
+            "title": "FedORION: Aggregation-Assisted Proxyless Distillation for Heterogeneous Federated Learning",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Abhishek Rajora",
+          "Suman Kundu",
+          "Nirbhay sharma"
+        ]
+      },
+      {
+        "institute": "ShareChat",
+        "total_paper_count": 2,
+        "unique_paper_count": 2,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "fjpfCOV4ru",
+            "title": "Ito Diffusion Approximation of Universal Ito Chains for Sampling, Optimization and Boosting",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "F5ERvanO6m",
+            "title": "Deep Stochastic Mechanics",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Aleksei Ustimenko",
+          "Elena Orlova"
+        ]
+      },
+      {
+        "institute": "Indraprastha Institute of Information Technology",
+        "total_paper_count": 2,
+        "unique_paper_count": 2,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "Ixi4j6LtdX",
+            "title": "A Good Learner can Teach Better: Teacher-Student Collaborative Knowledge Distillation",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "grQ97sPU5T",
+            "title": "Spectral Highways: Injecting Homophily into Heterophilic Graphs",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Shantanu Dixit",
+          "Karan Goyal",
+          "Mukesh Mohania",
+          "Vikram Goyal"
+        ]
+      },
+      {
+        "institute": "International Institute of Information Technology",
+        "total_paper_count": 2,
+        "unique_paper_count": 2,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "iQHL76NqJT",
+            "title": "Node-CwR: Node Classification with Reject Option",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "bEAVTKUEpJ",
+            "title": "SARI: SIMPLISTIC AVERAGE AND ROBUST IDENTIFICATION BASED NOISY PARTIAL LABEL LEARNING",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Charu Sharma",
+          "Darshana Saravanan",
+          "Vineet Gandhi"
+        ]
+      },
+      {
+        "institute": "International Institute of Information Technology Hyderabad",
+        "total_paper_count": 2,
+        "unique_paper_count": 2,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "bEAVTKUEpJ",
+            "title": "SARI: SIMPLISTIC AVERAGE AND ROBUST IDENTIFICATION BASED NOISY PARTIAL LABEL LEARNING",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "iQHL76NqJT",
+            "title": "Node-CwR: Node Classification with Reject Option",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Vineet Gandhi",
+          "Uday Bhaskar Kuchipudi"
+        ]
+      },
+      {
+        "institute": "National Institute of Science Education and Research",
+        "total_paper_count": 2,
+        "unique_paper_count": 2,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "jFiFmHrIfD",
+            "title": "Explorative Latent Self-Supervised Active Search Algorithm (ELSA)",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "lxlMFlzZO9",
+            "title": "DS-Prover: A Dynamic Sampling Based Approach for Neural Theorem Proving",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Aniket Nath",
+          "Diptarko Choudhury",
+          "Subhankar Mishra",
+          "Rahul Vishwakarma"
+        ]
+      },
+      {
+        "institute": "Tata Consultancy Services Limited",
+        "total_paper_count": 2,
+        "unique_paper_count": 2,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "jJvXNpvOdM",
+            "title": "Task Planning for Visual Room Rearrangement under Partial Observability",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "zEkvV65Wi1",
+            "title": "Understanding Calibration Transfer in Knowledge Distillation",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Karan Mirakhor",
+          "Sourav Ghosh",
+          "Mayank Baranwal"
+        ]
+      },
+      {
+        "institute": "Wipro",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "corporate",
+        "papers": [
+          {
+            "id": "1WSd408I9M",
+            "title": "Generative AI in healthcare: A trustworthy approach",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "parul berry"
+        ]
+      },
+      {
+        "institute": "International Institute of Information Technology, Hyderabad",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "3NMYMLL92j",
+            "title": "Brain encoding models based on binding multiple modalities across audio, language, and vision",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Advaith Malladi"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "5rrYpa2vts",
+            "title": "EA2N: Evidence-based AMR Attention Network for Fake News Detection",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Shubham Gupta"
+        ]
+      },
+      {
+        "institute": "Dhirubhai Ambani Institute of Information and Communication Technology",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "7HdtLgsvys",
+            "title": "Tube Loss: A Novel Approach for High Quality Prediction Interval Estimation",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Pritam Anand",
+          "Tathagata Bandyopadhyay"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "7m5jhNXklB",
+            "title": "VTruST : Controllable value function based subset selection for Data-Centric Trustworthy AI",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Shubhadip Nag"
+        ]
+      },
+      {
+        "institute": "International Business Machines Corporation",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "ABIcBDLBVG",
+            "title": "Fill in the Blank: Exploring and Enhancing LLM Capabilities for Backward Reasoning in Math Word Problems",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Sarthak Singla"
+        ]
+      },
+      {
+        "institute": "Université de Montréal",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "AOSsLRKQrX",
+            "title": "DisFormer: Disentangled Object Representations for Learning Visual Dynamics Via Transformers",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Rushil Gupta"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology, Madras",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "B5CgCJY2po",
+            "title": "Flood and Echo: Algorithmic Alignment of GNNs with Distributed Computing",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Florian Grötschla"
+        ]
+      },
+      {
+        "institute": "Tata Consultancy Services",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "DluJpvRF69",
+            "title": "StyleCL : Latent Dictionary Learning for StyleGAN Without Forgetting",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Adarsh Kappiyath"
+        ]
+      },
+      {
+        "institute": "Google",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "corporate",
+        "papers": [
+          {
+            "id": "E4flIscNE6",
+            "title": "Meta-Collaboration in Distillation: Pooled Learning from Multiple Students",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Pradeep Shenoy"
+        ]
+      },
+      {
+        "institute": "FaunaPhotonics",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "EAT7gmyIH2",
+            "title": "DAME: A Distillation Based Approach For Model-agnostic Local Explainability",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Amir Hossein Poorjam"
+        ]
+      },
+      {
+        "institute": "Google",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "corporate",
+        "papers": [
+          {
+            "id": "EAT7gmyIH2",
+            "title": "DAME: A Distillation Based Approach For Model-agnostic Local Explainability",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Sriram Ganapathy"
+        ]
+      },
+      {
+        "institute": "Malaviya National Institute of Technology",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "H8tpFITvpo",
+            "title": "FedHC: Proximal Correction with Hessian and Cosine Correlation for Federated Learning",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Kushall Pal Singh",
+          "G Sankara Raju Kosuru"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Ropar",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "H8tpFITvpo",
+            "title": "FedHC: Proximal Correction with Hessian and Cosine Correlation for Federated Learning",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Monu Verma",
+          "Subrahmanyam Murala"
+        ]
+      },
+      {
+        "institute": "University of Miami",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "H8tpFITvpo",
+            "title": "FedHC: Proximal Correction with Hessian and Cosine Correlation for Federated Learning",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Dinesh Kumar Tyagi"
+        ]
+      },
+      {
+        "institute": "Sony Research India",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "corporate",
+        "papers": [
+          {
+            "id": "Iv60x1iAvp",
+            "title": "GNN-based Reinforcement Learning Agent for Session-based Recommendation",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Mohammadi Zaki",
+          "Brijraj Singh"
+        ]
+      },
+      {
+        "institute": "SRM University",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "LRpfp86Z38",
+            "title": "Logarithmic Linear Units (LogLUs): A Novel Activation Function for Training Deep Neural Networks",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Rishi Chaitanya Sri Prasad Nalluri"
+        ]
+      },
+      {
+        "institute": "International Institute of Information Technology, Hyderabad",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "N581Nje6fH",
+            "title": "Long Horizon Episodic Decision Making for Cognitively Inspired Robots",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Shweta Singh"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Hyderabad",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "PcBJ4pA6bF",
+            "title": "Overcoming Data and Model heterogeneities in Decentralized Federated Learning via Synthetic Anchors",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Kartik Srinivas"
+        ]
+      },
+      {
+        "institute": "Delhi Skill and Entrepreneurship University",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "RKw6AzP2BY",
+            "title": "Decoding LLM's: The Interplay of Transformation Matrices and Input Complexity",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Rudransh Agnihotri"
+        ]
+      },
+      {
+        "institute": "International Institute of Information Technology",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "RmRA7Q0lwQ",
+            "title": "Stay on Topic with Classifier-Free Guidance",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Honglu Fan"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Hyderabad",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "RvmrhrPy7j",
+            "title": "Causal Inference Using LLM-Guided Discovery",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Abbavaram Gowtham Reddy",
+          "Balaji Krishnamurthy"
+        ]
+      },
+      {
+        "institute": "Johns Hopkins University",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "S7ZQgHfW3w",
+            "title": "CoDBench: A Critical Evaluation of Data-driven Models for Continuous Dynamical Systems",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Meer Mehran Rashid"
+        ]
+      },
+      {
+        "institute": "Birla Institute of Technology and Science",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "TrKq4Wlwcz",
+            "title": "Large Content And Behavior Models To Understand, Simulate, And Optimize Content And Behavior",
+            "isSpotlight": true,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Ashmit Khandelwal",
+          "Aditya Agrawal"
+        ]
+      },
+      {
+        "institute": "Adobe",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 5,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "corporate",
+        "papers": [
+          {
+            "id": "TrKq4Wlwcz",
+            "title": "Large Content And Behavior Models To Understand, Simulate, And Optimize Content And Behavior",
+            "isSpotlight": true,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Aanisha Bhattacharyya",
+          "Yaman Kumar",
+          "Somesh Singh",
+          "Uttaran Bhattacharya",
+          "Rajiv Ratn Shah"
+        ]
+      },
+      {
+        "institute": "Rice University",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "VJvbOSXRUq",
+            "title": "GNNX-BENCH: Unravelling the Utility of Perturbation-based GNN Explainers through In-depth Benchmarking",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Khushbu Pahwa"
+        ]
+      },
+      {
+        "institute": "New Horizon College of Engineering",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "a9xZqOqzEW",
+            "title": "A Logical Framework for Verification of AI Fairness",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Priya T V"
+        ]
+      },
+      {
+        "institute": "International Institute of Information Technology, Bangalore",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "a9xZqOqzEW",
+            "title": "A Logical Framework for Verification of AI Fairness",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Shrisha Rao"
+        ]
+      },
+      {
+        "institute": "Amity University",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "anG8cNYQAs",
+            "title": "INCYDE: A large scale cyclone detection and intensity estimation dataset using satellite infrared imagery",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Arindam Ghosh"
+        ]
+      },
+      {
+        "institute": "Sony Research India",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "corporate",
+        "papers": [
+          {
+            "id": "er7VhmqZEA",
+            "title": "NOISY MULTI-VIEW CONTRASTIVE LEARNING FRAMEWORK FOR ENHANCING TOP-K RECOMMENDATION",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Prosenjit Biswas"
+        ]
+      },
+      {
+        "institute": "Sony Research India Pvt. Ltd.",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "corporate",
+        "papers": [
+          {
+            "id": "er7VhmqZEA",
+            "title": "NOISY MULTI-VIEW CONTRASTIVE LEARNING FRAMEWORK FOR ENHANCING TOP-K RECOMMENDATION",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Naoyuki Onoe"
+        ]
+      },
+      {
+        "institute": "Manipal Institute of Technology",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "f1xnBr4WD6",
+            "title": "Cycle Consistency Driven Object Discovery",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Aniket Rajiv Didolkar"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Engineering Science and Technology",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "grQ97sPU5T",
+            "title": "Spectral Highways: Injecting Homophily into Heterophilic Graphs",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Saankhya Samanta"
+        ]
+      },
+      {
+        "institute": "Tata Consultancy Services",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "jJvXNpvOdM",
+            "title": "Task Planning for Visual Room Rearrangement under Partial Observability",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Dipanjan Das",
+          "Brojeshwar Bhowmick"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Kanpur",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "kxLMnvnZv0",
+            "title": "CoMNet: Where Biology Meets ConvNets",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Laxmidhar Behera"
+        ]
+      },
+      {
+        "institute": "Indian Statistical Institute",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "lgA84TbHxm",
+            "title": "DySTreSS: Dynamically Scaled Temperature in Self-Supervised Contrastive Learning",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Siladittya Manna",
+          "Rakesh Dey",
+          "Umapada Pal"
+        ]
+      },
+      {
+        "institute": "University of Allahabad",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "mw1PWNSWZP",
+            "title": "OctoPack: Instruction Tuning Code Large Language Models",
+            "isSpotlight": true,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Binyuan Hui"
+        ]
+      },
+      {
+        "institute": "IBM",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "corporate",
+        "papers": [
+          {
+            "id": "rDhsRC0ldq",
+            "title": "Do LLMs understand Pragmatics? An Extensive Benchmark for Evaluating Pragmatic Understanding of LLMs",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Rudra Murthy"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology (BHU)",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "ruQkcBfzpm",
+            "title": "mBLIP: Efficient Bootstrapping of Multilingual Vision-LLMs",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Abhay Jain"
+        ]
+      },
+      {
+        "institute": "Databricks",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "sY5N0zY5Od",
+            "title": "DSPy: Compiling Declarative Language Model Calls into State-of-the-Art Pipelines",
+            "isSpotlight": true,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Ashutosh Sharma"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Patna",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "unxTEvHOW7",
+            "title": "EXPLEME: A Study in Meme Interpretability, Diving Beyond Input Attribution",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Dibyanayan Bandyopadhyay",
+          "ASMIT GANGULY",
+          "Baban Gain",
+          "Asif Ekbal"
+        ]
+      },
+      {
+        "institute": "Trinity College Dublin",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "x6gnuUXpxM",
+            "title": "Constructing Sparse Neural Architecture with Deterministic Ramanujan Graphs",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Pabitra Mitra"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "yIEKq72cTE",
+            "title": "Byzantine-Robust Dynamic Weighted Aggregation Framework for Optimal Attack Mitigation in Federated Learning",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Vishnu Chalavadi"
+        ]
+      },
+      {
+        "institute": "Tata Consultancy Services Limited",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "yIEKq72cTE",
+            "title": "Byzantine-Robust Dynamic Weighted Aggregation Framework for Optimal Attack Mitigation in Federated Learning",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Srinivasa Rao Chalamala"
+        ]
+      },
+      {
+        "institute": "Tata Consultancy Services",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "zEkvV65Wi1",
+            "title": "Understanding Calibration Transfer in Knowledge Distillation",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Ramya Hebbalaguppe"
+        ]
+      }
+    ]
+  },
+  "institutions": {
+    "summary": {
+      "total_institutions": 0,
+      "academic_institutions": 0,
+      "corporate_institutions": 0,
+      "total_papers": 0,
+      "total_authors": 0,
+      "avg_papers_per_institution": 0,
+      "avg_authors_per_institution": 0
+    },
+    "top_institutions": [],
+    "total_institutions": 0
+  },
+  "config": {
+    "focus_country_code": "IN",
+    "focus_country_name": "India",
+    "colors": {
+      "us": "hsl(221, 83%, 53%)",
+      "cn": "hsl(0, 84%, 60%)",
+      "focusCountry": "hsl(36, 96%, 50%)",
+      "primary": "hsl(var(--primary))",
+      "secondary": "hsl(var(--secondary-foreground))",
+      "academic": "hsl(221, 83%, 53%)",
+      "corporate": "hsl(330, 80%, 60%)",
+      "rest": "hsl(330, 60%, 30%)",
+      "spotlight": "hsl(48, 96%, 50%)",
+      "oral": "hsl(142, 71%, 45%)",
+      "papers": "hsl(200, 65%, 50%)",
+      "authors": "hsl(280, 55%, 55%)",
+      "US": "hsl(221, 83%, 53%)",
+      "CN": "hsl(0, 84%, 60%)",
+      "GB": "hsl(120, 70%, 45%)",
+      "HK": "hsl(300, 75%, 50%)",
+      "SG": "hsl(180, 80%, 50%)",
+      "CA": "hsl(15, 85%, 55%)",
+      "DE": "hsl(45, 90%, 50%)",
+      "KR": "hsl(270, 75%, 50%)",
+      "FR": "hsl(240, 80%, 55%)",
+      "CH": "hsl(135, 70%, 45%)",
+      "UK": "hsl(90, 65%, 50%)",
+      "AU": "hsl(315, 80%, 55%)",
+      "JP": "hsl(195, 85%, 50%)",
+      "UNK": "hsl(0, 0%, 60%)",
+      "IL": "hsl(210, 75%, 50%)",
+      "IT": "hsl(105, 70%, 50%)",
+      "NL": "hsl(255, 80%, 55%)",
+      "AE": "hsl(30, 85%, 55%)",
+      "TW": "hsl(165, 75%, 50%)",
+      "AI": "hsl(285, 80%, 55%)",
+      "IN": "hsl(36, 96%, 50%)",
+      "AT": "hsl(60, 85%, 50%)",
+      "RU": "hsl(330, 75%, 50%)",
+      "DK": "hsl(225, 80%, 55%)",
+      "SE": "hsl(75, 70%, 50%)",
+      "SA": "hsl(345, 85%, 55%)",
+      "BE": "hsl(150, 75%, 50%)",
+      "ES": "hsl(300, 70%, 50%)",
+      "FI": "hsl(120, 80%, 45%)",
+      "MO": "hsl(270, 85%, 55%)",
+      "GR": "hsl(195, 75%, 50%)",
+      "VN": "hsl(45, 80%, 55%)",
+      "BR": "hsl(105, 85%, 50%)",
+      "PL": "hsl(315, 75%, 50%)",
+      "CZ": "hsl(165, 80%, 50%)",
+      "NO": "hsl(240, 75%, 55%)",
+      "CL": "hsl(285, 70%, 50%)",
+      "TR": "hsl(15, 80%, 55%)",
+      "PT": "hsl(135, 75%, 50%)",
+      "EU": "hsl(210, 85%, 50%)",
+      "BG": "hsl(75, 80%, 50%)",
+      "LU": "hsl(330, 80%, 55%)",
+      "IR": "hsl(180, 75%, 50%)",
+      "NZ": "hsl(255, 85%, 55%)",
+      "PH": "hsl(60, 75%, 50%)",
+      "ZW": "hsl(120, 70%, 50%)",
+      "IE": "hsl(345, 80%, 55%)",
+      "CX": "hsl(195, 80%, 50%)",
+      "MY": "hsl(270, 75%, 55%)",
+      "CO": "hsl(30, 80%, 55%)",
+      "KP": "hsl(150, 80%, 50%)",
+      "SI": "hsl(285, 75%, 50%)",
+      "AC": "hsl(45, 85%, 55%)",
+      "TH": "hsl(105, 80%, 50%)",
+      "RE": "hsl(315, 85%, 55%)",
+      "UY": "hsl(165, 75%, 50%)",
+      "AM": "hsl(240, 80%, 55%)",
+      "IO": "hsl(75, 85%, 50%)",
+      "CY": "hsl(330, 75%, 50%)",
+      "TD": "hsl(195, 75%, 55%)",
+      "NA": "hsl(255, 80%, 50%)",
+      "HR": "hsl(60, 80%, 55%)",
+      "EG": "hsl(120, 85%, 45%)"
+    }
+  },
+  "dashboard": {
+    "summary": {
+      "title": "Research Impact Overview",
+      "content": [
+        "India contributed 87 research papers to ICLR 2024, representing 0.9% of the conference's total accepted works and ranking 16 globally among contributing nations.",
+        "India researchers demonstrated strong research leadership with 74.7% of papers featuring India first authors, indicating significant intellectual contribution to the global machine learning discourse.",
+        "The research quality is evidenced by a 6.9% spotlight acceptance rate, with 6 paper(s) receiving this prestigious recognition among the conference's most impactful contributions.",
+        "India's machine learning ecosystem comprises 183 unique researchers across 63 institutions, with a balanced representation of 55 academic institutions and 8 corporate research entities."
+      ]
+    },
+    "context": {
+      "title": "Global Research Landscape",
+      "content": [
+        "The global research landscape is led by the United States (35.4% of papers) and China (25.1%), followed by the United Kingdom (6.2%) and Germany (4.0%), with India contributing 0.9% of total research output.",
+        "India ranks 16 globally in research volume, positioning it as an emerging contributor in the international machine learning research ecosystem with substantial growth potential.",
+        "Within the Asia-Pacific region, India trails China, South Korea, Singapore, and Hong Kong in absolute research contributions, highlighting opportunities for enhanced regional collaboration and capacity building."
+      ],
+      "subtitle": "India's position within the international machine learning research community and comparative analysis with leading nations."
+    },
+    "focusCountry": {
+      "title": "India Research Ecosystem Analysis",
+      "content": [
+        "India researchers exhibit strong research independence with 49.4% of papers having majority India authorship, indicating substantial domestic research capacity and reduced dependence on international collaboration.",
+        "The 74.7% first authorship rate demonstrates India researchers' leadership in conceptualizing and driving research projects, reflecting growing confidence and expertise in the field.",
+        "With 183 unique authors contributing across 87 papers, India maintains an efficient author-to-paper ratio of 0.48, suggesting productive individual contributions and effective research mentorship."
+      ],
+      "subtitle": "Detailed examination of authorship patterns, collaboration dynamics, and research leadership within India's machine learning community."
+    },
+    "institutions": {
+      "title": "Institutional Research Excellence",
+      "content": [
+        "The Unknown emerges as the national leader with 0 papers and 0 authors, including the country's 6 spotlight papers, demonstrating exceptional research quality and productivity.",
+        "Academic institutions dominate India's research landscape with 87.3% representation (55 of 63 institutions), while corporate research centers contribute 12.7%, indicating strong university-led research culture.",
+        "The institutional diversity spans premier engineering institutes (IITs), specialized research universities (IISc), and corporate R&D centers, creating a robust ecosystem for sustained machine learning research growth."
+      ],
+      "subtitle": "Comprehensive evaluation of India's academic and corporate institutions contributing to machine learning research excellence."
+    }
+  }
+}

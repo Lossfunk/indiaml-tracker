@@ -1,0 +1,2370 @@
+{
+  "conference": "ICLR",
+  "year": 2023,
+  "track": "Conference",
+  "focus_country": "India",
+  "focus_country_code": "IN",
+  "generated_at": "2025-07-07T15:54:15.888499",
+  "globalStats": {
+    "totalPapers": 6498,
+    "totalAuthors": 15576,
+    "totalCountries": 56,
+    "countries": [
+      {
+        "affiliation_country": "US",
+        "paper_count": 2475,
+        "author_count": 5636,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "CN",
+        "paper_count": 1504,
+        "author_count": 3729,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "GB",
+        "paper_count": 417,
+        "author_count": 788,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "KR",
+        "paper_count": 265,
+        "author_count": 588,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "CA",
+        "paper_count": 258,
+        "author_count": 445,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "DE",
+        "paper_count": 246,
+        "author_count": 480,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "SG",
+        "paper_count": 171,
+        "author_count": 342,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "AU",
+        "paper_count": 157,
+        "author_count": 283,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "CH",
+        "paper_count": 149,
+        "author_count": 244,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "JP",
+        "paper_count": 135,
+        "author_count": 216,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "FR",
+        "paper_count": 110,
+        "author_count": 214,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "NL",
+        "paper_count": 71,
+        "author_count": 118,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "UNK",
+        "paper_count": 61,
+        "author_count": 86,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "IL",
+        "paper_count": 61,
+        "author_count": 134,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "IN",
+        "paper_count": 60,
+        "author_count": 106,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "IT",
+        "paper_count": 40,
+        "author_count": 85,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "AE",
+        "paper_count": 33,
+        "author_count": 41,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "SA",
+        "paper_count": 28,
+        "author_count": 42,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "SE",
+        "paper_count": 27,
+        "author_count": 44,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "RU",
+        "paper_count": 26,
+        "author_count": 57,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "DK",
+        "paper_count": 26,
+        "author_count": 53,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "FI",
+        "paper_count": 22,
+        "author_count": 37,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "AT",
+        "paper_count": 20,
+        "author_count": 42,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "BE",
+        "paper_count": 18,
+        "author_count": 36,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "ES",
+        "paper_count": 15,
+        "author_count": 30,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "VN",
+        "paper_count": 14,
+        "author_count": 28,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "NO",
+        "paper_count": 12,
+        "author_count": 21,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "PL",
+        "paper_count": 11,
+        "author_count": 32,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "PT",
+        "paper_count": 7,
+        "author_count": 17,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "IR",
+        "paper_count": 7,
+        "author_count": 14,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "ZA",
+        "paper_count": 5,
+        "author_count": 9,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "GR",
+        "paper_count": 5,
+        "author_count": 7,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "CZ",
+        "paper_count": 5,
+        "author_count": 10,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "NZ",
+        "paper_count": 4,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "UNK",
+        "paper_count": 3,
+        "author_count": 6,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "BR",
+        "paper_count": 3,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "TH",
+        "paper_count": 2,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "MA",
+        "paper_count": 2,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "LU",
+        "paper_count": 2,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "HU",
+        "paper_count": 2,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "CL",
+        "paper_count": 2,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "AZ",
+        "paper_count": 2,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "AR",
+        "paper_count": 2,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "TN",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "LK",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "SI",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "RS",
+        "paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "RO",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "PE",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "PK",
+        "paper_count": 1,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "NP",
+        "paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "MY",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "KE",
+        "paper_count": 1,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "ID",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "EG",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "AM",
+        "paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0
+      }
+    ]
+  },
+  "focusCountrySummary": {
+    "country": "India",
+    "country_code": "IN",
+    "rank": 15,
+    "paper_count": 60,
+    "author_count": 106,
+    "percentage": 0.92,
+    "spotlights": 0,
+    "orals": 0,
+    "institution_count": 41,
+    "academic_institutions": 39,
+    "corporate_institutions": 2
+  },
+  "focusCountry": {
+    "authorship": {
+      "at_least_one": {
+        "count": 60,
+        "papers": [
+          {
+            "id": "-lGvSmht7a",
+            "title": "Sequential Gradient Coding For Straggler Mitigation",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "-p5ZEVGtojQ",
+            "title": "Continuous Depth Recurrent Neural Differential Equations",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "05ff9BRSMzE",
+            "title": "Gandalf : Data Augmentation is all you need for Extreme Classification",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "0OlEBibFa_g",
+            "title": "Detecting Out-of-Distribution Data with Semi-supervised Graph “Feature\" Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "1zaoVA_z8Q",
+            "title": "SemSup-XC: Semantic Supervision for Extreme Classification",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "36g8Ept_CCj",
+            "title": "Learning Mixture Models with Simultaneous Data Partitioning and Parameter Estimation",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "3GDft6lexE",
+            "title": "Cooperate or Compete: A New Perspective on Training of Generative Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "3VKiaagxw1S",
+            "title": "Gradient Boosting Performs Gaussian Process Inference",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "3nM5uhPlfv6",
+            "title": "Stochastic Differentially Private and Fair Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "3v2DIO9oVl",
+            "title": "Generalization error bounds for Neural Networks with ReLU activation",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "8zsK9lbna9L",
+            "title": "RephraseTTS: Dynamic Length Text based Speech Insertion with Speaker Style Transfer",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ATLEl_izD87",
+            "title": "Enhancing the Inductive Biases of Graph Neural ODE for Modeling Physical Systems",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "BdcfKgE9dhF",
+            "title": "Robust Training through Adversarially Selected Data Subsets",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Crw1sKsLDvl",
+            "title": "COMNET : CORTICAL MODULES ARE POWERFUL",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "FHZUqgxIBYn",
+            "title": "Opportunistic Actor-Critic (OPAC) with Clipped Triple Q-learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "GKpwIa9wgwR",
+            "title": "Efficient Data Subset Selection to Generalize Training Across Models: Transductive and Inductive Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "GVWySHBD3Cl",
+            "title": "Estimating Treatment Effects using Neurosymbolic Program Synthesis",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "IqN5SgOmxp",
+            "title": "Reinforcement Learning using a Molecular Fragment Based Approach for Reaction Discovery",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "J0IhgZ8ziv-",
+            "title": "ENHANCING THE PRIVACY OF FEDERATED LEARNING THROUGH DATA SYNTHESIS",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "JKFSUPa70W6M",
+            "title": "Don’t Bet on Sparsity: Designing Brain-inspired Distance-preserving Encoder",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "JyD-NobfNL_",
+            "title": "Distinguishing Feature Model for Ranking From Pairwise Comparisons",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Lq2rsxfNt8",
+            "title": "Fusion of Deep Transfer Learning with Mixed convolution network",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Ms1Zs8s7rg",
+            "title": "Demystifying Approximate RL with $\\epsilon$-greedy Exploration: A Differential Inclusion View",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "O7x_ldrlaO7",
+            "title": "Structural Privacy in Graphs",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "PxohstFQm9q",
+            "title": "Simplicity bias in $1$-hidden layer neural networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "QrdSiDAv5ek",
+            "title": "FACS: FAST ADAPTIVE CHANNEL SQUEEZING",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "RqJZTlQMph",
+            "title": "Weakly Supervised Neuro-Symbolic Image Manipulation via Multi-Hop Complex Instructions",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "T2Ncx_PN2K",
+            "title": "In-Situ Text-Only Adaptation of Speech Models with Low-Overhead Speech Imputations",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "TDUMUFa5zz",
+            "title": "Divide-and-Cluster: Spatial Decomposition Based Hierarchical Clustering",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "U3_J25hAoRQ",
+            "title": "Momentum Boosted Episodic Memory for Improving Learning in Long-Tailed RL Environments",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Vf2DK1Ol0ed",
+            "title": "A Benchmark Dataset for Learning from Label Proportions",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Xj1orI5p6Sv",
+            "title": "Corruption Depth: Analysis of DNN depth for Misclassification",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ZLv-8v0Sp_H",
+            "title": "Communication Efficient Fair Federated Recommender System",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "_3Lk3cUWSI",
+            "title": "Off Policy Average Reward Actor Critic with Deterministic Policy Search",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "_BoPed4tYww",
+            "title": "Timing is Everything: Learning to Act Selectively with Costly Actions and Budgetary Constraints",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "_NlE9YiyXKb",
+            "title": "Tessellated Neural Networks: A Robust Defence against Adversarial Attacks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ar_09k_Gsos",
+            "title": "Learning 3D Point Cloud Embeddings using Optimal Transport",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "diOVflNRZnG",
+            "title": "Curvature Informed Furthest Point Sampling",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "g4JB0ksCrKe",
+            "title": "Contrastive Prompt Tuning Improves Generalization in Vision-Language Models",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "gwTP_sA-aj-",
+            "title": "Interval Bound Interpolation for Few-shot Learning with Few Tasks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "hRfJzvTYvD-",
+            "title": "Towards Estimating Transferability using Hard Subsets",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "jAD0chIdt_",
+            "title": "Impulse Control Arbitration for A Dual System of Exploitation and Exploration",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "jK02XX9ZpJkt",
+            "title": "CAMA: A New Framework for Safe Multi-Agent Reinforcement Learning Using Constraint Augmentation",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "k5e6oQP2zHx",
+            "title": "QUANTILE-LSTM: A ROBUST LSTM FOR ANOMALY DETECTION",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "mcJvCys7DX7",
+            "title": "Counterfactual Generation Under Confounding",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "mhnHqRqcjYU",
+            "title": "DFPC: Data flow driven pruning of coupled channels without data.",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ndYXTEL6cZz",
+            "title": "Extremely Simple Activation Shaping for Out-of-Distribution Detection",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "pKu077C57fH",
+            "title": "Towards a Mathematics Formalisation Assistant using Large Language Models",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "pRUW8BuTEFI",
+            "title": "MixBin: Towards Budgeted Binarization",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "sCYXJr3QJM8",
+            "title": "Few-shot Cross-domain Image Generation via Inference-time Latent-code Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "sZI1Oj9KBKy",
+            "title": "TVSPrune - Pruning Non-discriminative filters via Total Variation separability of intermediate representations without fine tuning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "v8Mi8KU6056",
+            "title": "wav2tok: Deep Sequence Tokenizer for Audio Retrieval",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "wNnaozRwl5O",
+            "title": "Speech denoising by listening to noise",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "wSysC6I_S0z",
+            "title": "A Hybrid Framework for Generating A Country-scale Synthetic Population",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "wYZeJ3BsXl6",
+            "title": "PMI-guided Masking Strategy to Enable Few-shot Learning for Genomic Applications",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "xE-LtsE-xx",
+            "title": "Is Attention All That NeRF Needs?",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "xdVNc95sY1l",
+            "title": "SYNC: Efficient Neural Code Search Through Structurally Guided Hard Negative Curricula",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "y_icnxeeUcl",
+            "title": "WaveMix-Lite: A Resource-efficient Neural Network for Image Analysis",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ydv0gtW4WLU",
+            "title": "CRISP: Curriculum inducing Primitive Informed Subgoal Prediction for Hierarchical Reinforcement Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "yyLvxYBJV1B",
+            "title": "AnyDA: Anytime Domain Adaptation",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ]
+      },
+      "majority": {
+        "count": 25,
+        "papers": [
+          {
+            "id": "36g8Ept_CCj",
+            "title": "Learning Mixture Models with Simultaneous Data Partitioning and Parameter Estimation",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "3GDft6lexE",
+            "title": "Cooperate or Compete: A New Perspective on Training of Generative Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "3v2DIO9oVl",
+            "title": "Generalization error bounds for Neural Networks with ReLU activation",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ATLEl_izD87",
+            "title": "Enhancing the Inductive Biases of Graph Neural ODE for Modeling Physical Systems",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "BdcfKgE9dhF",
+            "title": "Robust Training through Adversarially Selected Data Subsets",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Crw1sKsLDvl",
+            "title": "COMNET : CORTICAL MODULES ARE POWERFUL",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "GKpwIa9wgwR",
+            "title": "Efficient Data Subset Selection to Generalize Training Across Models: Transductive and Inductive Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "GVWySHBD3Cl",
+            "title": "Estimating Treatment Effects using Neurosymbolic Program Synthesis",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "IqN5SgOmxp",
+            "title": "Reinforcement Learning using a Molecular Fragment Based Approach for Reaction Discovery",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "J0IhgZ8ziv-",
+            "title": "ENHANCING THE PRIVACY OF FEDERATED LEARNING THROUGH DATA SYNTHESIS",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "JKFSUPa70W6M",
+            "title": "Don’t Bet on Sparsity: Designing Brain-inspired Distance-preserving Encoder",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Lq2rsxfNt8",
+            "title": "Fusion of Deep Transfer Learning with Mixed convolution network",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Ms1Zs8s7rg",
+            "title": "Demystifying Approximate RL with $\\epsilon$-greedy Exploration: A Differential Inclusion View",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "O7x_ldrlaO7",
+            "title": "Structural Privacy in Graphs",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "QrdSiDAv5ek",
+            "title": "FACS: FAST ADAPTIVE CHANNEL SQUEEZING",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "T2Ncx_PN2K",
+            "title": "In-Situ Text-Only Adaptation of Speech Models with Low-Overhead Speech Imputations",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Xj1orI5p6Sv",
+            "title": "Corruption Depth: Analysis of DNN depth for Misclassification",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ZLv-8v0Sp_H",
+            "title": "Communication Efficient Fair Federated Recommender System",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "_3Lk3cUWSI",
+            "title": "Off Policy Average Reward Actor Critic with Deterministic Policy Search",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "_NlE9YiyXKb",
+            "title": "Tessellated Neural Networks: A Robust Defence against Adversarial Attacks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ar_09k_Gsos",
+            "title": "Learning 3D Point Cloud Embeddings using Optimal Transport",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "gwTP_sA-aj-",
+            "title": "Interval Bound Interpolation for Few-shot Learning with Few Tasks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "sCYXJr3QJM8",
+            "title": "Few-shot Cross-domain Image Generation via Inference-time Latent-code Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "v8Mi8KU6056",
+            "title": "wav2tok: Deep Sequence Tokenizer for Audio Retrieval",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "wSysC6I_S0z",
+            "title": "A Hybrid Framework for Generating A Country-scale Synthetic Population",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ]
+      },
+      "first_author": {
+        "count": 38,
+        "papers": [
+          {
+            "id": "-lGvSmht7a",
+            "title": "Sequential Gradient Coding For Straggler Mitigation",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "1zaoVA_z8Q",
+            "title": "SemSup-XC: Semantic Supervision for Extreme Classification",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "36g8Ept_CCj",
+            "title": "Learning Mixture Models with Simultaneous Data Partitioning and Parameter Estimation",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "3GDft6lexE",
+            "title": "Cooperate or Compete: A New Perspective on Training of Generative Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "3VKiaagxw1S",
+            "title": "Gradient Boosting Performs Gaussian Process Inference",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "3v2DIO9oVl",
+            "title": "Generalization error bounds for Neural Networks with ReLU activation",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "8zsK9lbna9L",
+            "title": "RephraseTTS: Dynamic Length Text based Speech Insertion with Speaker Style Transfer",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ATLEl_izD87",
+            "title": "Enhancing the Inductive Biases of Graph Neural ODE for Modeling Physical Systems",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "BdcfKgE9dhF",
+            "title": "Robust Training through Adversarially Selected Data Subsets",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Crw1sKsLDvl",
+            "title": "COMNET : CORTICAL MODULES ARE POWERFUL",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "FHZUqgxIBYn",
+            "title": "Opportunistic Actor-Critic (OPAC) with Clipped Triple Q-learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "GKpwIa9wgwR",
+            "title": "Efficient Data Subset Selection to Generalize Training Across Models: Transductive and Inductive Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "GVWySHBD3Cl",
+            "title": "Estimating Treatment Effects using Neurosymbolic Program Synthesis",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "IqN5SgOmxp",
+            "title": "Reinforcement Learning using a Molecular Fragment Based Approach for Reaction Discovery",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "J0IhgZ8ziv-",
+            "title": "ENHANCING THE PRIVACY OF FEDERATED LEARNING THROUGH DATA SYNTHESIS",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "JKFSUPa70W6M",
+            "title": "Don’t Bet on Sparsity: Designing Brain-inspired Distance-preserving Encoder",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "JyD-NobfNL_",
+            "title": "Distinguishing Feature Model for Ranking From Pairwise Comparisons",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Lq2rsxfNt8",
+            "title": "Fusion of Deep Transfer Learning with Mixed convolution network",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Ms1Zs8s7rg",
+            "title": "Demystifying Approximate RL with $\\epsilon$-greedy Exploration: A Differential Inclusion View",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "O7x_ldrlaO7",
+            "title": "Structural Privacy in Graphs",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "QrdSiDAv5ek",
+            "title": "FACS: FAST ADAPTIVE CHANNEL SQUEEZING",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "U3_J25hAoRQ",
+            "title": "Momentum Boosted Episodic Memory for Improving Learning in Long-Tailed RL Environments",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Xj1orI5p6Sv",
+            "title": "Corruption Depth: Analysis of DNN depth for Misclassification",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "_3Lk3cUWSI",
+            "title": "Off Policy Average Reward Actor Critic with Deterministic Policy Search",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "_NlE9YiyXKb",
+            "title": "Tessellated Neural Networks: A Robust Defence against Adversarial Attacks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ar_09k_Gsos",
+            "title": "Learning 3D Point Cloud Embeddings using Optimal Transport",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "diOVflNRZnG",
+            "title": "Curvature Informed Furthest Point Sampling",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "gwTP_sA-aj-",
+            "title": "Interval Bound Interpolation for Few-shot Learning with Few Tasks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "hRfJzvTYvD-",
+            "title": "Towards Estimating Transferability using Hard Subsets",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "k5e6oQP2zHx",
+            "title": "QUANTILE-LSTM: A ROBUST LSTM FOR ANOMALY DETECTION",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "mcJvCys7DX7",
+            "title": "Counterfactual Generation Under Confounding",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "v8Mi8KU6056",
+            "title": "wav2tok: Deep Sequence Tokenizer for Audio Retrieval",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "wNnaozRwl5O",
+            "title": "Speech denoising by listening to noise",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "wSysC6I_S0z",
+            "title": "A Hybrid Framework for Generating A Country-scale Synthetic Population",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "wYZeJ3BsXl6",
+            "title": "PMI-guided Masking Strategy to Enable Few-shot Learning for Genomic Applications",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "xE-LtsE-xx",
+            "title": "Is Attention All That NeRF Needs?",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ydv0gtW4WLU",
+            "title": "CRISP: Curriculum inducing Primitive Informed Subgoal Prediction for Hierarchical Reinforcement Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "yyLvxYBJV1B",
+            "title": "AnyDA: Anytime Domain Adaptation",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ]
+      }
+    },
+    "institutions": [
+      {
+        "institute": "Indian Institute of Technology Kanpur",
+        "total_paper_count": 7,
+        "unique_paper_count": 7,
+        "author_count": 8,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "8zsK9lbna9L",
+            "title": "RephraseTTS: Dynamic Length Text based Speech Insertion with Speaker Style Transfer",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Crw1sKsLDvl",
+            "title": "COMNET : CORTICAL MODULES ARE POWERFUL",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "QrdSiDAv5ek",
+            "title": "FACS: FAST ADAPTIVE CHANNEL SQUEEZING",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "TDUMUFa5zz",
+            "title": "Divide-and-Cluster: Spatial Decomposition Based Hierarchical Clustering",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "v8Mi8KU6056",
+            "title": "wav2tok: Deep Sequence Tokenizer for Audio Retrieval",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "wNnaozRwl5O",
+            "title": "Speech denoising by listening to noise",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ydv0gtW4WLU",
+            "title": "CRISP: Curriculum inducing Primitive Informed Subgoal Prediction for Hierarchical Reinforcement Learning",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Neeraj Matiyali",
+          "Ashish Kumar",
+          "Laxmidhar Behera",
+          "Akshat Sharma",
+          "Adhiraj Banerjee",
+          "Vipul Arora",
+          "Kranti Kumar Parida",
+          "Utsav Singh"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Delhi",
+        "total_paper_count": 5,
+        "unique_paper_count": 5,
+        "author_count": 12,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "ATLEl_izD87",
+            "title": "Enhancing the Inductive Biases of Graph Neural ODE for Modeling Physical Systems",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "1zaoVA_z8Q",
+            "title": "SemSup-XC: Semantic Supervision for Extreme Classification",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "3v2DIO9oVl",
+            "title": "Generalization error bounds for Neural Networks with ReLU activation",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "JKFSUPa70W6M",
+            "title": "Don’t Bet on Sparsity: Designing Brain-inspired Distance-preserving Encoder",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "RqJZTlQMph",
+            "title": "Weakly Supervised Neuro-Symbolic Image Manipulation via Multi-Hop Complex Instructions",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Sayan Ranu",
+          "Pranjal Aggarwal",
+          "Harsh Pandey",
+          "Amitabha Bagchi",
+          "Srikanta J. Bedathur",
+          "Suresh Bishnoi",
+          "Jayadeva Jayadeva",
+          "N M Anoop Krishnan",
+          "Ayan Sengupta",
+          "Tanmoy Chakraborty",
+          "Poorva Garg",
+          "Arnab Kumar Mondal"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Bombay",
+        "total_paper_count": 5,
+        "unique_paper_count": 5,
+        "author_count": 15,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "T2Ncx_PN2K",
+            "title": "In-Situ Text-Only Adaptation of Speech Models with Low-Overhead Speech Imputations",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "36g8Ept_CCj",
+            "title": "Learning Mixture Models with Simultaneous Data Partitioning and Parameter Estimation",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "BdcfKgE9dhF",
+            "title": "Robust Training through Adversarially Selected Data Subsets",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "GKpwIa9wgwR",
+            "title": "Efficient Data Subset Selection to Generalize Training Across Models: Transductive and Inductive Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "IqN5SgOmxp",
+            "title": "Reinforcement Learning using a Molecular Fragment Based Approach for Reaction Discovery",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Sunita Sarawagi",
+          "Parth Vipul Sangani",
+          "Arjun Shashank Kashettiwar",
+          "Ganesh Ramakrishnan",
+          "Hitvarth Diwanji",
+          "Rishi Agarwal",
+          "Swaprava Nath",
+          "Eeshaan Jain",
+          "Tushar Nandy",
+          "Abir De",
+          "Ajnabiul Hoque",
+          "Mihir Jitendra Surve",
+          "Shivaram Kalyanakrishnan",
+          "Raghavan B Sunoj",
+          "Preethi Jyothi"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Hyderabad",
+        "total_paper_count": 4,
+        "unique_paper_count": 4,
+        "author_count": 6,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "3GDft6lexE",
+            "title": "Cooperate or Compete: A New Perspective on Training of Generative Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "GVWySHBD3Cl",
+            "title": "Estimating Treatment Effects using Neurosymbolic Program Synthesis",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "mcJvCys7DX7",
+            "title": "Counterfactual Generation Under Confounding",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "hRfJzvTYvD-",
+            "title": "Towards Estimating Transferability using Hard Subsets",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Sobhan Babu",
+          "Abbavaram Gowtham Reddy",
+          "Balaji Krishnamurthy",
+          "Tarun Ram Menta",
+          "Akash Patil",
+          "Vimal K B"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Science",
+        "total_paper_count": 4,
+        "unique_paper_count": 4,
+        "author_count": 5,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "Ms1Zs8s7rg",
+            "title": "Demystifying Approximate RL with $\\epsilon$-greedy Exploration: A Differential Inclusion View",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "mhnHqRqcjYU",
+            "title": "DFPC: Data flow driven pruning of coupled channels without data.",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "pKu077C57fH",
+            "title": "Towards a Mathematics Formalisation Assistant using Large Language Models",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "sZI1Oj9KBKy",
+            "title": "TVSPrune - Pruning Non-discriminative filters via Total Variation separability of intermediate representations without fine tuning",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Aditya Gopalan",
+          "Gugan Thoppe",
+          "Chaitanya Murti",
+          "Siddhartha Gadgil",
+          "Tanay Narshana"
+        ]
+      },
+      {
+        "institute": "Byju's",
+        "total_paper_count": 3,
+        "unique_paper_count": 3,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "_BoPed4tYww",
+            "title": "Timing is Everything: Learning to Act Selectively with Costly Actions and Budgetary Constraints",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "jAD0chIdt_",
+            "title": "Impulse Control Arbitration for A Dual System of Exploitation and Exploration",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "jK02XX9ZpJkt",
+            "title": "CAMA: A New Framework for Safe Multi-Agent Reinforcement Learning Using Constraint Augmentation",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Aivar Sootla",
+          "Yali Du"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Kharagpur",
+        "total_paper_count": 3,
+        "unique_paper_count": 3,
+        "author_count": 6,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "_NlE9YiyXKb",
+            "title": "Tessellated Neural Networks: A Robust Defence against Adversarial Attacks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "wYZeJ3BsXl6",
+            "title": "PMI-guided Masking Strategy to Enable Few-shot Learning for Genomic Applications",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "yyLvxYBJV1B",
+            "title": "AnyDA: Anytime Domain Adaptation",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Chinmay Jain",
+          "Pabitra Mitra",
+          "Soumyadeep Roy",
+          "Niloy Ganguly",
+          "Omprakash Chakraborty",
+          "Abir Das"
+        ]
+      },
+      {
+        "institute": "Birla Institute of Technology and Science",
+        "total_paper_count": 2,
+        "unique_paper_count": 2,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "05ff9BRSMzE",
+            "title": "Gandalf : Data Augmentation is all you need for Extreme Classification",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "k5e6oQP2zHx",
+            "title": "QUANTILE-LSTM: A ROBUST LSTM FOR ANOMALY DETECTION",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Devaansh Gupta",
+          "Snehanshu Saha"
+        ]
+      },
+      {
+        "institute": "Ashoka University",
+        "total_paper_count": 2,
+        "unique_paper_count": 2,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "0OlEBibFa_g",
+            "title": "Detecting Out-of-Distribution Data with Semi-supervised Graph “Feature\" Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "wSysC6I_S0z",
+            "title": "A Hybrid Framework for Generating A Country-scale Synthetic Population",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Debayan Gupta",
+          "Bhavesh Neekhra",
+          "Kshitij Kapoor"
+        ]
+      },
+      {
+        "institute": "Indraprastha Institute of Information Technology",
+        "total_paper_count": 2,
+        "unique_paper_count": 2,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "3nM5uhPlfv6",
+            "title": "Stochastic Differentially Private and Fair Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "JKFSUPa70W6M",
+            "title": "Don’t Bet on Sparsity: Designing Brain-inspired Distance-preserving Encoder",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Devansh Gupta",
+          "Md Shad Akhtar"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Madras",
+        "total_paper_count": 2,
+        "unique_paper_count": 2,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "JyD-NobfNL_",
+            "title": "Distinguishing Feature Model for Ranking From Pairwise Comparisons",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "xE-LtsE-xx",
+            "title": "Is Attention All That NeRF Needs?",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Elisha Parhi",
+          "Mukund Varma T"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Science",
+        "total_paper_count": 2,
+        "unique_paper_count": 2,
+        "author_count": 6,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "_3Lk3cUWSI",
+            "title": "Off Policy Average Reward Actor Critic with Deterministic Policy Search",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "sCYXJr3QJM8",
+            "title": "Few-shot Cross-domain Image Generation via Inference-time Latent-code Learning",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Naman Saxena",
+          "Subhojyoti Khastagir",
+          "Shishir N Y",
+          "Shalabh Bhatnagar",
+          "Piyush Tiwary",
+          "Prathosh AP"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "-lGvSmht7a",
+            "title": "Sequential Gradient Coding For Straggler Mitigation",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Nikhil Krishnan Muralee Krishnan"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Hyderabad",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "-p5ZEVGtojQ",
+            "title": "Continuous Depth Recurrent Neural Differential Equations",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Geetakrishnasai Gunapati"
+        ]
+      },
+      {
+        "institute": "Microsoft",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "corporate",
+        "papers": [
+          {
+            "id": "36g8Ept_CCj",
+            "title": "Learning Mixture Models with Simultaneous Data Partitioning and Parameter Estimation",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Durga S"
+        ]
+      },
+      {
+        "institute": "ShareChat",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "3VKiaagxw1S",
+            "title": "Gradient Boosting Performs Gaussian Process Inference",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Aleksei Ustimenko"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Indore",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "ATLEl_izD87",
+            "title": "Enhancing the Inductive Biases of Graph Neural ODE for Modeling Physical Systems",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Ravinder Bhattoo"
+        ]
+      },
+      {
+        "institute": "Ramakrishna Mission Vivekananda Educational and Research Institute",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "FHZUqgxIBYn",
+            "title": "Opportunistic Actor-Critic (OPAC) with Clipped Triple Q-learning",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Srinjoy Roy"
+        ]
+      },
+      {
+        "institute": "Google",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "corporate",
+        "papers": [
+          {
+            "id": "GKpwIa9wgwR",
+            "title": "Efficient Data Subset Selection to Generalize Training Across Models: Transductive and Inductive Networks",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Gaurav Aggarwal",
+          "Ashish V. Tendulkar"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Science",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "J0IhgZ8ziv-",
+            "title": "ENHANCING THE PRIVACY OF FEDERATED LEARNING THROUGH DATA SYNTHESIS",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "M Yashwanth",
+          "Anirban Chakraborty",
+          "Yogesh Simmhan"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Information Technology Design and Manufacturing Kancheepuram",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "Lq2rsxfNt8",
+            "title": "Fusion of Deep Transfer Learning with Mixed convolution network",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Isunuri BV"
+        ]
+      },
+      {
+        "institute": "National Institute of Science Education and Research",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "O7x_ldrlaO7",
+            "title": "Structural Privacy in Graphs",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Rucha Bhalchandra Joshi",
+          "Subhankar Mishra"
+        ]
+      },
+      {
+        "institute": "Tata Institute of Fundamental Research",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "PxohstFQm9q",
+            "title": "Simplicity bias in $1$-hidden layer neural networks",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "jatin batra"
+        ]
+      },
+      {
+        "institute": "International Institute of Information Technology, Hyderabad",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "U3_J25hAoRQ",
+            "title": "Momentum Boosted Episodic Memory for Improving Learning in Long-Tailed RL Environments",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Dolton Milagres Fernandes"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology, Bombay",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "Vf2DK1Ol0ed",
+            "title": "A Benchmark Dataset for Learning from Label Proportions",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Mohith Pokala"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Science Education and Research",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "Xj1orI5p6Sv",
+            "title": "Corruption Depth: Analysis of DNN depth for Misclassification",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Akshay Agarwal"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "Xj1orI5p6Sv",
+            "title": "Corruption Depth: Analysis of DNN depth for Misclassification",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Mayank Vatsa"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Jodhpur",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "Xj1orI5p6Sv",
+            "title": "Corruption Depth: Analysis of DNN depth for Misclassification",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Richa Singh"
+        ]
+      },
+      {
+        "institute": "International Institute of Information Technology",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "ZLv-8v0Sp_H",
+            "title": "Communication Efficient Fair Federated Recommender System",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Sujit Gujar"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Ropar",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "ZLv-8v0Sp_H",
+            "title": "Communication Efficient Fair Federated Recommender System",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Shweta Jain"
+        ]
+      },
+      {
+        "institute": "University of Glasgow",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "_NlE9YiyXKb",
+            "title": "Tessellated Neural Networks: A Robust Defence against Adversarial Attacks",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Debasis Ganguly"
+        ]
+      },
+      {
+        "institute": "International Institute of Information Technology",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "ar_09k_Gsos",
+            "title": "Learning 3D Point Cloud Embeddings using Optimal Transport",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Siddharth Katageri",
+          "Srinjay Sarkar",
+          "Charu Sharma"
+        ]
+      },
+      {
+        "institute": "Jio Platforms",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "diOVflNRZnG",
+            "title": "Curvature Informed Furthest Point Sampling",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Shubham Bhardwaj"
+        ]
+      },
+      {
+        "institute": "International Business Machines Corporation",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "g4JB0ksCrKe",
+            "title": "Contrastive Prompt Tuning Improves Generalization in Vision-Language Models",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Yoon Kim"
+        ]
+      },
+      {
+        "institute": "Indian Statistical Institute",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "gwTP_sA-aj-",
+            "title": "Interval Bound Interpolation for Few-shot Learning with Few Tasks",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Shounak Datta",
+          "Anish Chakrabarty",
+          "Swagatam Das"
+        ]
+      },
+      {
+        "institute": "PSG College of Technology",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "ndYXTEL6cZz",
+            "title": "Extremely Simple Activation Shaping for Out-of-Distribution Detection",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Nebojsa Bozanic"
+        ]
+      },
+      {
+        "institute": "Indian School of Mines",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "pRUW8BuTEFI",
+            "title": "MixBin: Towards Budgeted Binarization",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Neeraj Anand"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Delhi",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "sCYXJr3QJM8",
+            "title": "Few-shot Cross-domain Image Generation via Inference-time Latent-code Learning",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Parag Singla"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology, Hyderabad",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "xdVNc95sY1l",
+            "title": "SYNC: Efficient Neural Code Search Through Structurally Guided Hard Negative Curricula",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Soumitra Das"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Kharagpur",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "xdVNc95sY1l",
+            "title": "SYNC: Efficient Neural Code Search Through Structurally Guided Hard Negative Curricula",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Jyothi Vedurada"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology, Bombay",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "y_icnxeeUcl",
+            "title": "WaveMix-Lite: A Resource-efficient Neural Network for Image Analysis",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Kavitha Viswanathan"
+        ]
+      }
+    ]
+  },
+  "institutions": {
+    "summary": {
+      "total_institutions": 0,
+      "academic_institutions": 0,
+      "corporate_institutions": 0,
+      "total_papers": 0,
+      "total_authors": 0,
+      "avg_papers_per_institution": 0,
+      "avg_authors_per_institution": 0
+    },
+    "top_institutions": [],
+    "total_institutions": 0
+  },
+  "config": {
+    "focus_country_code": "IN",
+    "focus_country_name": "India",
+    "colors": {
+      "us": "hsl(221, 83%, 53%)",
+      "cn": "hsl(0, 84%, 60%)",
+      "focusCountry": "hsl(36, 96%, 50%)",
+      "primary": "hsl(var(--primary))",
+      "secondary": "hsl(var(--secondary-foreground))",
+      "academic": "hsl(221, 83%, 53%)",
+      "corporate": "hsl(330, 80%, 60%)",
+      "rest": "hsl(330, 60%, 30%)",
+      "spotlight": "hsl(48, 96%, 50%)",
+      "oral": "hsl(142, 71%, 45%)",
+      "papers": "hsl(200, 65%, 50%)",
+      "authors": "hsl(280, 55%, 55%)",
+      "US": "hsl(221, 83%, 53%)",
+      "CN": "hsl(0, 84%, 60%)",
+      "GB": "hsl(120, 70%, 45%)",
+      "HK": "hsl(300, 75%, 50%)",
+      "SG": "hsl(180, 80%, 50%)",
+      "CA": "hsl(15, 85%, 55%)",
+      "DE": "hsl(45, 90%, 50%)",
+      "KR": "hsl(270, 75%, 50%)",
+      "FR": "hsl(240, 80%, 55%)",
+      "CH": "hsl(135, 70%, 45%)",
+      "UK": "hsl(90, 65%, 50%)",
+      "AU": "hsl(315, 80%, 55%)",
+      "JP": "hsl(195, 85%, 50%)",
+      "UNK": "hsl(0, 0%, 60%)",
+      "IL": "hsl(210, 75%, 50%)",
+      "IT": "hsl(105, 70%, 50%)",
+      "NL": "hsl(255, 80%, 55%)",
+      "AE": "hsl(30, 85%, 55%)",
+      "TW": "hsl(165, 75%, 50%)",
+      "AI": "hsl(285, 80%, 55%)",
+      "IN": "hsl(36, 96%, 50%)",
+      "AT": "hsl(60, 85%, 50%)",
+      "RU": "hsl(330, 75%, 50%)",
+      "DK": "hsl(225, 80%, 55%)",
+      "SE": "hsl(75, 70%, 50%)",
+      "SA": "hsl(345, 85%, 55%)",
+      "BE": "hsl(150, 75%, 50%)",
+      "ES": "hsl(300, 70%, 50%)",
+      "FI": "hsl(120, 80%, 45%)",
+      "MO": "hsl(270, 85%, 55%)",
+      "GR": "hsl(195, 75%, 50%)",
+      "VN": "hsl(45, 80%, 55%)",
+      "BR": "hsl(105, 85%, 50%)",
+      "PL": "hsl(315, 75%, 50%)",
+      "CZ": "hsl(165, 80%, 50%)",
+      "NO": "hsl(240, 75%, 55%)",
+      "CL": "hsl(285, 70%, 50%)",
+      "TR": "hsl(15, 80%, 55%)",
+      "PT": "hsl(135, 75%, 50%)",
+      "EU": "hsl(210, 85%, 50%)",
+      "BG": "hsl(75, 80%, 50%)",
+      "LU": "hsl(330, 80%, 55%)",
+      "IR": "hsl(180, 75%, 50%)",
+      "NZ": "hsl(255, 85%, 55%)",
+      "PH": "hsl(60, 75%, 50%)",
+      "ZW": "hsl(120, 70%, 50%)",
+      "IE": "hsl(345, 80%, 55%)",
+      "CX": "hsl(195, 80%, 50%)",
+      "MY": "hsl(270, 75%, 55%)",
+      "CO": "hsl(30, 80%, 55%)",
+      "KP": "hsl(150, 80%, 50%)",
+      "SI": "hsl(285, 75%, 50%)",
+      "AC": "hsl(45, 85%, 55%)",
+      "TH": "hsl(105, 80%, 50%)",
+      "RE": "hsl(315, 85%, 55%)",
+      "UY": "hsl(165, 75%, 50%)",
+      "AM": "hsl(240, 80%, 55%)",
+      "IO": "hsl(75, 85%, 50%)",
+      "CY": "hsl(330, 75%, 50%)",
+      "TD": "hsl(195, 75%, 55%)",
+      "NA": "hsl(255, 80%, 50%)",
+      "HR": "hsl(60, 80%, 55%)",
+      "EG": "hsl(120, 85%, 45%)"
+    }
+  },
+  "dashboard": {
+    "summary": {
+      "title": "Research Impact Overview",
+      "content": [
+        "India contributed 60 research papers to ICLR 2023, representing 0.9% of the conference's total accepted works and ranking 15 globally among contributing nations.",
+        "India researchers demonstrated strong research leadership with 63.3% of papers featuring India first authors, indicating significant intellectual contribution to the global machine learning discourse.",
+        "The research quality is evidenced by a 0.0% spotlight acceptance rate, with 0 paper(s) receiving this prestigious recognition among the conference's most impactful contributions.",
+        "India's machine learning ecosystem comprises 106 unique researchers across 41 institutions, with a balanced representation of 39 academic institutions and 2 corporate research entities."
+      ]
+    },
+    "context": {
+      "title": "Global Research Landscape",
+      "content": [
+        "The global research landscape is led by the United States (38.1% of papers) and China (23.1%), followed by the United Kingdom (6.4%) and Germany (3.8%), with India contributing 0.9% of total research output.",
+        "India ranks 15 globally in research volume, positioning it as an emerging contributor in the international machine learning research ecosystem with substantial growth potential.",
+        "Within the Asia-Pacific region, India trails China, South Korea, Singapore, and Hong Kong in absolute research contributions, highlighting opportunities for enhanced regional collaboration and capacity building."
+      ],
+      "subtitle": "India's position within the international machine learning research community and comparative analysis with leading nations."
+    },
+    "focusCountry": {
+      "title": "India Research Ecosystem Analysis",
+      "content": [
+        "India researchers exhibit strong research independence with 41.7% of papers having majority India authorship, indicating substantial domestic research capacity and reduced dependence on international collaboration.",
+        "The 63.3% first authorship rate demonstrates India researchers' leadership in conceptualizing and driving research projects, reflecting growing confidence and expertise in the field.",
+        "With 106 unique authors contributing across 60 papers, India maintains an efficient author-to-paper ratio of 0.57, suggesting productive individual contributions and effective research mentorship."
+      ],
+      "subtitle": "Detailed examination of authorship patterns, collaboration dynamics, and research leadership within India's machine learning community."
+    },
+    "institutions": {
+      "title": "Institutional Research Excellence",
+      "content": [
+        "The Unknown emerges as the national leader with 0 papers and 0 authors, including the country's 0 spotlight papers, demonstrating exceptional research quality and productivity.",
+        "Academic institutions dominate India's research landscape with 95.1% representation (39 of 41 institutions), while corporate research centers contribute 4.9%, indicating strong university-led research culture.",
+        "The institutional diversity spans premier engineering institutes (IITs), specialized research universities (IISc), and corporate R&D centers, creating a robust ecosystem for sustained machine learning research growth."
+      ],
+      "subtitle": "Comprehensive evaluation of India's academic and corporate institutions contributing to machine learning research excellence."
+    }
+  }
+}

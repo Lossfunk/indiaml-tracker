@@ -1,0 +1,1481 @@
+{
+  "conference": "ICLR",
+  "year": 2021,
+  "track": "Conference",
+  "focus_country": "India",
+  "focus_country_code": "IN",
+  "generated_at": "2025-07-07T15:54:13.874495",
+  "globalStats": {
+    "totalPapers": 3636,
+    "totalAuthors": 9063,
+    "totalCountries": 48,
+    "countries": [
+      {
+        "affiliation_country": "US",
+        "paper_count": 1569,
+        "author_count": 3268,
+        "spotlights": 72,
+        "orals": 36
+      },
+      {
+        "affiliation_country": "CN",
+        "paper_count": 548,
+        "author_count": 1182,
+        "spotlights": 15,
+        "orals": 5
+      },
+      {
+        "affiliation_country": "GB",
+        "paper_count": 290,
+        "author_count": 522,
+        "spotlights": 14,
+        "orals": 10
+      },
+      {
+        "affiliation_country": "CA",
+        "paper_count": 186,
+        "author_count": 315,
+        "spotlights": 11,
+        "orals": 4
+      },
+      {
+        "affiliation_country": "DE",
+        "paper_count": 163,
+        "author_count": 301,
+        "spotlights": 8,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "KR",
+        "paper_count": 161,
+        "author_count": 334,
+        "spotlights": 3,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "JP",
+        "paper_count": 78,
+        "author_count": 126,
+        "spotlights": 4,
+        "orals": 3
+      },
+      {
+        "affiliation_country": "CH",
+        "paper_count": 75,
+        "author_count": 126,
+        "spotlights": 2,
+        "orals": 3
+      },
+      {
+        "affiliation_country": "AU",
+        "paper_count": 73,
+        "author_count": 119,
+        "spotlights": 4,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "SG",
+        "paper_count": 71,
+        "author_count": 104,
+        "spotlights": 4,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "FR",
+        "paper_count": 71,
+        "author_count": 127,
+        "spotlights": 4,
+        "orals": 2
+      },
+      {
+        "affiliation_country": "IL",
+        "paper_count": 63,
+        "author_count": 111,
+        "spotlights": 5,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "NL",
+        "paper_count": 50,
+        "author_count": 80,
+        "spotlights": 2,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "IN",
+        "paper_count": 30,
+        "author_count": 45,
+        "spotlights": 1,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "UNK",
+        "paper_count": 29,
+        "author_count": 29,
+        "spotlights": 0,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "SA",
+        "paper_count": 20,
+        "author_count": 24,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "RU",
+        "paper_count": 19,
+        "author_count": 26,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "IT",
+        "paper_count": 17,
+        "author_count": 35,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "SE",
+        "paper_count": 14,
+        "author_count": 23,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "DK",
+        "paper_count": 11,
+        "author_count": 16,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "AT",
+        "paper_count": 11,
+        "author_count": 33,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "AE",
+        "paper_count": 8,
+        "author_count": 9,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "FI",
+        "paper_count": 8,
+        "author_count": 13,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "BE",
+        "paper_count": 8,
+        "author_count": 17,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "VN",
+        "paper_count": 7,
+        "author_count": 11,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "ES",
+        "paper_count": 7,
+        "author_count": 11,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "PL",
+        "paper_count": 7,
+        "author_count": 13,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "CZ",
+        "paper_count": 5,
+        "author_count": 6,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "ZA",
+        "paper_count": 4,
+        "author_count": 5,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "NO",
+        "paper_count": 4,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "CL",
+        "paper_count": 4,
+        "author_count": 7,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "UNK",
+        "paper_count": 3,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "IE",
+        "paper_count": 3,
+        "author_count": 6,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "IR",
+        "paper_count": 3,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "HU",
+        "paper_count": 2,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "BR",
+        "paper_count": 2,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "SI",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "QA",
+        "paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "PT",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "PK",
+        "paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "NZ",
+        "paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "MX",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "LB",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "LV",
+        "paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "HR",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "CM",
+        "paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "AM",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "AR",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      }
+    ]
+  },
+  "focusCountrySummary": {
+    "country": "India",
+    "country_code": "IN",
+    "rank": 14,
+    "paper_count": 30,
+    "author_count": 45,
+    "percentage": 0.83,
+    "spotlights": 1,
+    "orals": 1,
+    "institution_count": 25,
+    "academic_institutions": 25,
+    "corporate_institutions": 0
+  },
+  "focusCountry": {
+    "authorship": {
+      "at_least_one": {
+        "count": 30,
+        "papers": [
+          {
+            "id": "04LZCAxMSco",
+            "title": "Learning a Latent Simplex in Input Sparsity Time",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "193sEnKY1ij",
+            "title": "No Cost Likelihood Manipulation at Test Time for Making Better Mistakes in Deep Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "1sJWR4y1lG",
+            "title": "Deep Learning Is Composite Kernel Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "98fWAc-sFkv",
+            "title": "A Unified Bayesian Framework for Discriminative and Generative Continual Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ANednkwrr8s",
+            "title": "Indirect Supervision to Mitigate Perturbations",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ATp1nW2FuZL",
+            "title": "Neural Learning of One-of-Many Solutions for Combinatorial Problems in Structured Output Spaces",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "BnokSKnhC7F",
+            "title": "Maximum Reward Formulation In Reinforcement Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "I3zV6igAT9",
+            "title": "Quantile Regularization : Towards Implicit Calibration of Regression Models",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Iuq6u10sCdl",
+            "title": "$Graph Embedding via Topology and Functional Analysis$",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "LFs3CnHwfM",
+            "title": "A Robust Fuel Optimization Strategy For Hybrid Electric Vehicles: A Deep Reinforcement Learning Based Continuous Time Design Approach",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ODKwX19UjOj",
+            "title": "Unsupervised Hierarchical Concept Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "QSMvGB5j5-",
+            "title": "Higher-order Structure Prediction in Evolving Graph Simplicial Complexes",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "SVP44gujOBL",
+            "title": "A Simple Approach To Define Curricula For Training Neural Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "UEtNMTl6yN",
+            "title": "Neural Pooling for Graph Neural Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "UwGY2qjqoLD",
+            "title": "Heating up decision boundaries: isocapacitory saturation, adversarial scenarios and generalization bounds",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Y9lsZcQ2Fcc",
+            "title": "Learning compositional structures for deep learning: why routing-by-agreement is necessary",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Zc36Mbb8G6",
+            "title": "Data Instance Prior for Transfer Learning in GANs",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "b7g3_ZMHnT0",
+            "title": "Learning to Deceive Knowledge Graph Augmented Models via Targeted Perturbation",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "d8Q1mt2Ghw",
+            "title": "Emergent Road Rules In Multi-Agent Driving Environments",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "eIPsmKwTrIe",
+            "title": "Using Deep Reinforcement Learning to Train and Evaluate Instructional Sequencing Policies for an Intelligent Tutoring System",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "gp5Uzbl-9C-",
+            "title": "Systematic Evaluation of Causal Discovery in Visual Model Based Reinforcement Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "klB-8BpR5N",
+            "title": "BLANK",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "mSAKhLYLSsl",
+            "title": "Dataset Condensation with Gradient Matching",
+            "isSpotlight": false,
+            "isOral": true
+          },
+          {
+            "id": "pbUcKxmiM54",
+            "title": "Simple deductive reasoning tests and numerical data sets for exposing limitation of today's deep neural networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "pdsec2YIOCx",
+            "title": "Untangle: Critiquing Disentangled Recommendations",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "r7L91opmsr",
+            "title": "Partial Rejection Control for Robust Variational Inference in Sequential Latent Variable Models",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "vCEhC7nOb6",
+            "title": "Inductive Bias of Gradient Descent for Exponentially Weight Normalized Smooth Homogeneous Neural Nets",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "xCxXwTzx4L1",
+            "title": "ChipNet: Budget-Aware Pruning with Heaviside Continuous Approximations",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "yEnaS6yOkxy",
+            "title": "Class Balancing GAN with a Classifier in the Loop",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "zsKWh2pRSBK",
+            "title": "Poisoned classifiers are not only backdoored, they are fundamentally broken",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ]
+      },
+      "majority": {
+        "count": 11,
+        "papers": [
+          {
+            "id": "ANednkwrr8s",
+            "title": "Indirect Supervision to Mitigate Perturbations",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Iuq6u10sCdl",
+            "title": "$Graph Embedding via Topology and Functional Analysis$",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "LFs3CnHwfM",
+            "title": "A Robust Fuel Optimization Strategy For Hybrid Electric Vehicles: A Deep Reinforcement Learning Based Continuous Time Design Approach",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "SVP44gujOBL",
+            "title": "A Simple Approach To Define Curricula For Training Neural Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Y9lsZcQ2Fcc",
+            "title": "Learning compositional structures for deep learning: why routing-by-agreement is necessary",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "pbUcKxmiM54",
+            "title": "Simple deductive reasoning tests and numerical data sets for exposing limitation of today's deep neural networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "pdsec2YIOCx",
+            "title": "Untangle: Critiquing Disentangled Recommendations",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "r7L91opmsr",
+            "title": "Partial Rejection Control for Robust Variational Inference in Sequential Latent Variable Models",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "vCEhC7nOb6",
+            "title": "Inductive Bias of Gradient Descent for Exponentially Weight Normalized Smooth Homogeneous Neural Nets",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "xCxXwTzx4L1",
+            "title": "ChipNet: Budget-Aware Pruning with Heaviside Continuous Approximations",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "yEnaS6yOkxy",
+            "title": "Class Balancing GAN with a Classifier in the Loop",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ]
+      },
+      "first_author": {
+        "count": 25,
+        "papers": [
+          {
+            "id": "193sEnKY1ij",
+            "title": "No Cost Likelihood Manipulation at Test Time for Making Better Mistakes in Deep Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "1sJWR4y1lG",
+            "title": "Deep Learning Is Composite Kernel Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "98fWAc-sFkv",
+            "title": "A Unified Bayesian Framework for Discriminative and Generative Continual Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ANednkwrr8s",
+            "title": "Indirect Supervision to Mitigate Perturbations",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ATp1nW2FuZL",
+            "title": "Neural Learning of One-of-Many Solutions for Combinatorial Problems in Structured Output Spaces",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "BnokSKnhC7F",
+            "title": "Maximum Reward Formulation In Reinforcement Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "I3zV6igAT9",
+            "title": "Quantile Regularization : Towards Implicit Calibration of Regression Models",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Iuq6u10sCdl",
+            "title": "$Graph Embedding via Topology and Functional Analysis$",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "LFs3CnHwfM",
+            "title": "A Robust Fuel Optimization Strategy For Hybrid Electric Vehicles: A Deep Reinforcement Learning Based Continuous Time Design Approach",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ODKwX19UjOj",
+            "title": "Unsupervised Hierarchical Concept Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "QSMvGB5j5-",
+            "title": "Higher-order Structure Prediction in Evolving Graph Simplicial Complexes",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "SVP44gujOBL",
+            "title": "A Simple Approach To Define Curricula For Training Neural Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "UEtNMTl6yN",
+            "title": "Neural Pooling for Graph Neural Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Y9lsZcQ2Fcc",
+            "title": "Learning compositional structures for deep learning: why routing-by-agreement is necessary",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "Zc36Mbb8G6",
+            "title": "Data Instance Prior for Transfer Learning in GANs",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "b7g3_ZMHnT0",
+            "title": "Learning to Deceive Knowledge Graph Augmented Models via Targeted Perturbation",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "d8Q1mt2Ghw",
+            "title": "Emergent Road Rules In Multi-Agent Driving Environments",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "eIPsmKwTrIe",
+            "title": "Using Deep Reinforcement Learning to Train and Evaluate Instructional Sequencing Policies for an Intelligent Tutoring System",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "klB-8BpR5N",
+            "title": "BLANK",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "pbUcKxmiM54",
+            "title": "Simple deductive reasoning tests and numerical data sets for exposing limitation of today's deep neural networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "pdsec2YIOCx",
+            "title": "Untangle: Critiquing Disentangled Recommendations",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "r7L91opmsr",
+            "title": "Partial Rejection Control for Robust Variational Inference in Sequential Latent Variable Models",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "vCEhC7nOb6",
+            "title": "Inductive Bias of Gradient Descent for Exponentially Weight Normalized Smooth Homogeneous Neural Nets",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "xCxXwTzx4L1",
+            "title": "ChipNet: Budget-Aware Pruning with Heaviside Continuous Approximations",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "yEnaS6yOkxy",
+            "title": "Class Balancing GAN with a Classifier in the Loop",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ]
+      }
+    },
+    "institutions": [
+      {
+        "institute": "Indian Institute of Technology Kanpur",
+        "total_paper_count": 5,
+        "unique_paper_count": 5,
+        "author_count": 7,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "98fWAc-sFkv",
+            "title": "A Unified Bayesian Framework for Discriminative and Generative Continual Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "I3zV6igAT9",
+            "title": "Quantile Regularization : Towards Implicit Calibration of Regression Models",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "d8Q1mt2Ghw",
+            "title": "Emergent Road Rules In Multi-Agent Driving Environments",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "klB-8BpR5N",
+            "title": "BLANK",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "r7L91opmsr",
+            "title": "Partial Rejection Control for Robust Variational Inference in Sequential Latent Variable Models",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Abhishek Kumar",
+          "Saiteja Utpala",
+          "Avik Pal",
+          "Soumya Banerjee",
+          "Rahul Sharma",
+          "Dootika Vats",
+          "Piyush Rai"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Kharagpur",
+        "total_paper_count": 3,
+        "unique_paper_count": 3,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "LFs3CnHwfM",
+            "title": "A Robust Fuel Optimization Strategy For Hybrid Electric Vehicles: A Deep Reinforcement Learning Based Continuous Time Design Approach",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "ODKwX19UjOj",
+            "title": "Unsupervised Hierarchical Concept Learning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "b7g3_ZMHnT0",
+            "title": "Learning to Deceive Knowledge Graph Augmented Models via Targeted Perturbation",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Nilanjan Mukherjee",
+          "Sudeshna Sarkar",
+          "Sumegh Roychowdhury",
+          "Mrigank Raman"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Guwahati",
+        "total_paper_count": 2,
+        "unique_paper_count": 2,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 1,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "mSAKhLYLSsl",
+            "title": "Dataset Condensation with Gradient Matching",
+            "isSpotlight": false,
+            "isOral": true
+          },
+          {
+            "id": "yEnaS6yOkxy",
+            "title": "Class Balancing GAN with a Classifier in the Loop",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Konda Reddy Mopuri"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Madras",
+        "total_paper_count": 2,
+        "unique_paper_count": 2,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "pdsec2YIOCx",
+            "title": "Untangle: Critiquing Disentangled Recommendations",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "vCEhC7nOb6",
+            "title": "Inductive Bias of Gradient Descent for Exponentially Weight Normalized Smooth Homogeneous Neural Nets",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Preksha Nema",
+          "Filip Radlinski",
+          "Depen Morwani",
+          "Harish Guruprasad Ramaswamy"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Science",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "04LZCAxMSco",
+            "title": "Learning a Latent Simplex in Input Sparsity Time",
+            "isSpotlight": true,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Chiranjib Bhattacharyya"
+        ]
+      },
+      {
+        "institute": "International Institute of Information Technology",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "193sEnKY1ij",
+            "title": "No Cost Likelihood Manipulation at Test Time for Making Better Mistakes in Deep Networks",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Shyamgopal Karthik",
+          "Vineet Gandhi"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "1sJWR4y1lG",
+            "title": "Deep Learning Is Composite Kernel Learning",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Chandra Shekar Lakshminarayanan"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Jodhpur",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "ANednkwrr8s",
+            "title": "Indirect Supervision to Mitigate Perturbations",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Mayank Kumar Kundalwal",
+          "Azad Singh"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Delhi",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "ATp1nW2FuZL",
+            "title": "Neural Learning of One-of-Many Solutions for Combinatorial Problems in Structured Output Spaces",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Yatin Nandwani",
+          "Deepanshu Jindal"
+        ]
+      },
+      {
+        "institute": "99andBeyond",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "BnokSKnhC7F",
+            "title": "Maximum Reward Formulation In Reinforcement Learning",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "SaiKrishna Gottipati"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Science",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "Iuq6u10sCdl",
+            "title": "$Graph Embedding via Topology and Functional Analysis$",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Phani raj Chinnalingu"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology, Hyderabad",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "QSMvGB5j5-",
+            "title": "Higher-order Structure Prediction in Evolving Graph Simplicial Complexes",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Manohar Kaul"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Gandhinagar",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "SVP44gujOBL",
+            "title": "A Simple Approach To Define Curricula For Training Neural Networks",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Vinu Sankar Sadasivan",
+          "Anirban Dasgupta"
+        ]
+      },
+      {
+        "institute": "National Institute of Technology, Karnataka",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "UEtNMTl6yN",
+            "title": "Neural Pooling for Graph Neural Networks",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Sai Sree Harsha"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Bombay",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "UwGY2qjqoLD",
+            "title": "Heating up decision boundaries: isocapacitory saturation, adversarial scenarios and generalization bounds",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Lukas Franken"
+        ]
+      },
+      {
+        "institute": "Sri Sathya Sai Institute of Higher Learning",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "Y9lsZcQ2Fcc",
+            "title": "Learning compositional structures for deep learning: why routing-by-agreement is necessary",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Sairaam Venkatraman",
+          "Ankit Anand",
+          "S Balasubramanian"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Hyderabad",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "Zc36Mbb8G6",
+            "title": "Data Instance Prior for Transfer Learning in GANs",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Puneet Mangla"
+        ]
+      },
+      {
+        "institute": "National Institute of Technology, Tiruchirappalli",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "eIPsmKwTrIe",
+            "title": "Using Deep Reinforcement Learning to Train and Evaluate Instructional Sequencing Policies for an Intelligent Tutoring System",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Jithendaraa Subramanian"
+        ]
+      },
+      {
+        "institute": "Manipal Institute of Technology",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "gp5Uzbl-9C-",
+            "title": "Systematic Evaluation of Causal Discovery in Visual Model Based Reinforcement Learning",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Aniket Rajiv Didolkar"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "pbUcKxmiM54",
+            "title": "Simple deductive reasoning tests and numerical data sets for exposing limitation of today's deep neural networks",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Kalidas Yeturu"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Tirupati",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "pbUcKxmiM54",
+            "title": "Simple deductive reasoning tests and numerical data sets for exposing limitation of today's deep neural networks",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Manish Kumar Srivastava"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Dhanbad",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "xCxXwTzx4L1",
+            "title": "ChipNet: Budget-Aware Pruning with Heaviside Continuous Approximations",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Rishabh Tiwari",
+          "Udbhav Bamba"
+        ]
+      },
+      {
+        "institute": "University of Amsterdam",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "xCxXwTzx4L1",
+            "title": "ChipNet: Budget-Aware Pruning with Heaviside Continuous Approximations",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Deepak Gupta"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Science",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "yEnaS6yOkxy",
+            "title": "Class Balancing GAN with a Classifier in the Loop",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Harsh Rangwani",
+          "Venkatesh Babu Radhakrishnan"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Kharagpur",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "zsKWh2pRSBK",
+            "title": "Poisoned classifiers are not only backdoored, they are fundamentally broken",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Siddhant Agarwal"
+        ]
+      }
+    ]
+  },
+  "institutions": {
+    "summary": {
+      "total_institutions": 0,
+      "academic_institutions": 0,
+      "corporate_institutions": 0,
+      "total_papers": 0,
+      "total_authors": 0,
+      "avg_papers_per_institution": 0,
+      "avg_authors_per_institution": 0
+    },
+    "top_institutions": [],
+    "total_institutions": 0
+  },
+  "config": {
+    "focus_country_code": "IN",
+    "focus_country_name": "India",
+    "colors": {
+      "us": "hsl(221, 83%, 53%)",
+      "cn": "hsl(0, 84%, 60%)",
+      "focusCountry": "hsl(36, 96%, 50%)",
+      "primary": "hsl(var(--primary))",
+      "secondary": "hsl(var(--secondary-foreground))",
+      "academic": "hsl(221, 83%, 53%)",
+      "corporate": "hsl(330, 80%, 60%)",
+      "rest": "hsl(330, 60%, 30%)",
+      "spotlight": "hsl(48, 96%, 50%)",
+      "oral": "hsl(142, 71%, 45%)",
+      "papers": "hsl(200, 65%, 50%)",
+      "authors": "hsl(280, 55%, 55%)",
+      "US": "hsl(221, 83%, 53%)",
+      "CN": "hsl(0, 84%, 60%)",
+      "GB": "hsl(120, 70%, 45%)",
+      "HK": "hsl(300, 75%, 50%)",
+      "SG": "hsl(180, 80%, 50%)",
+      "CA": "hsl(15, 85%, 55%)",
+      "DE": "hsl(45, 90%, 50%)",
+      "KR": "hsl(270, 75%, 50%)",
+      "FR": "hsl(240, 80%, 55%)",
+      "CH": "hsl(135, 70%, 45%)",
+      "UK": "hsl(90, 65%, 50%)",
+      "AU": "hsl(315, 80%, 55%)",
+      "JP": "hsl(195, 85%, 50%)",
+      "UNK": "hsl(0, 0%, 60%)",
+      "IL": "hsl(210, 75%, 50%)",
+      "IT": "hsl(105, 70%, 50%)",
+      "NL": "hsl(255, 80%, 55%)",
+      "AE": "hsl(30, 85%, 55%)",
+      "TW": "hsl(165, 75%, 50%)",
+      "AI": "hsl(285, 80%, 55%)",
+      "IN": "hsl(36, 96%, 50%)",
+      "AT": "hsl(60, 85%, 50%)",
+      "RU": "hsl(330, 75%, 50%)",
+      "DK": "hsl(225, 80%, 55%)",
+      "SE": "hsl(75, 70%, 50%)",
+      "SA": "hsl(345, 85%, 55%)",
+      "BE": "hsl(150, 75%, 50%)",
+      "ES": "hsl(300, 70%, 50%)",
+      "FI": "hsl(120, 80%, 45%)",
+      "MO": "hsl(270, 85%, 55%)",
+      "GR": "hsl(195, 75%, 50%)",
+      "VN": "hsl(45, 80%, 55%)",
+      "BR": "hsl(105, 85%, 50%)",
+      "PL": "hsl(315, 75%, 50%)",
+      "CZ": "hsl(165, 80%, 50%)",
+      "NO": "hsl(240, 75%, 55%)",
+      "CL": "hsl(285, 70%, 50%)",
+      "TR": "hsl(15, 80%, 55%)",
+      "PT": "hsl(135, 75%, 50%)",
+      "EU": "hsl(210, 85%, 50%)",
+      "BG": "hsl(75, 80%, 50%)",
+      "LU": "hsl(330, 80%, 55%)",
+      "IR": "hsl(180, 75%, 50%)",
+      "NZ": "hsl(255, 85%, 55%)",
+      "PH": "hsl(60, 75%, 50%)",
+      "ZW": "hsl(120, 70%, 50%)",
+      "IE": "hsl(345, 80%, 55%)",
+      "CX": "hsl(195, 80%, 50%)",
+      "MY": "hsl(270, 75%, 55%)",
+      "CO": "hsl(30, 80%, 55%)",
+      "KP": "hsl(150, 80%, 50%)",
+      "SI": "hsl(285, 75%, 50%)",
+      "AC": "hsl(45, 85%, 55%)",
+      "TH": "hsl(105, 80%, 50%)",
+      "RE": "hsl(315, 85%, 55%)",
+      "UY": "hsl(165, 75%, 50%)",
+      "AM": "hsl(240, 80%, 55%)",
+      "IO": "hsl(75, 85%, 50%)",
+      "CY": "hsl(330, 75%, 50%)",
+      "TD": "hsl(195, 75%, 55%)",
+      "NA": "hsl(255, 80%, 50%)",
+      "HR": "hsl(60, 80%, 55%)",
+      "EG": "hsl(120, 85%, 45%)"
+    }
+  },
+  "dashboard": {
+    "summary": {
+      "title": "Research Impact Overview",
+      "content": [
+        "India contributed 30 research papers to ICLR 2021, representing 0.8% of the conference's total accepted works and ranking 14 globally among contributing nations.",
+        "India researchers demonstrated strong research leadership with 83.3% of papers featuring India first authors, indicating significant intellectual contribution to the global machine learning discourse.",
+        "The research quality is evidenced by a 3.3% spotlight acceptance rate, with 1 paper(s) receiving this prestigious recognition among the conference's most impactful contributions.",
+        "India's machine learning ecosystem comprises 45 unique researchers across 25 institutions, with a balanced representation of 25 academic institutions and 0 corporate research entities."
+      ]
+    },
+    "context": {
+      "title": "Global Research Landscape",
+      "content": [
+        "The global research landscape is led by the United States (43.2% of papers) and China (15.1%), followed by the United Kingdom (8.0%) and Germany (4.5%), with India contributing 0.8% of total research output.",
+        "India ranks 14 globally in research volume, positioning it as an emerging contributor in the international machine learning research ecosystem with substantial growth potential.",
+        "Within the Asia-Pacific region, India trails China, South Korea, Singapore, and Hong Kong in absolute research contributions, highlighting opportunities for enhanced regional collaboration and capacity building."
+      ],
+      "subtitle": "India's position within the international machine learning research community and comparative analysis with leading nations."
+    },
+    "focusCountry": {
+      "title": "India Research Ecosystem Analysis",
+      "content": [
+        "India researchers exhibit strong research independence with 36.7% of papers having majority India authorship, indicating substantial domestic research capacity and reduced dependence on international collaboration.",
+        "The 83.3% first authorship rate demonstrates India researchers' leadership in conceptualizing and driving research projects, reflecting growing confidence and expertise in the field.",
+        "With 45 unique authors contributing across 30 papers, India maintains an efficient author-to-paper ratio of 0.67, suggesting productive individual contributions and effective research mentorship."
+      ],
+      "subtitle": "Detailed examination of authorship patterns, collaboration dynamics, and research leadership within India's machine learning community."
+    },
+    "institutions": {
+      "title": "Institutional Research Excellence",
+      "content": [
+        "The Unknown emerges as the national leader with 0 papers and 0 authors, including the country's spotlight paper, demonstrating exceptional research quality and productivity.",
+        "Academic institutions dominate India's research landscape with 100.0% representation (25 of 25 institutions), while corporate research centers contribute 0.0%, indicating strong university-led research culture.",
+        "The institutional diversity spans premier engineering institutes (IITs), specialized research universities (IISc), and corporate R&D centers, creating a robust ecosystem for sustained machine learning research growth."
+      ],
+      "subtitle": "Comprehensive evaluation of India's academic and corporate institutions contributing to machine learning research excellence."
+    }
+  }
+}

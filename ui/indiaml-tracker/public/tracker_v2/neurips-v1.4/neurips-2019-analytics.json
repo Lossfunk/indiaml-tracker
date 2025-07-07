@@ -1,0 +1,1124 @@
+{
+  "conference": "NeurIPS",
+  "year": 2019,
+  "track": "Conference",
+  "focus_country": "India",
+  "focus_country_code": "IN",
+  "generated_at": "2025-07-07T15:54:33.431898",
+  "globalStats": {
+    "totalPapers": 1788,
+    "totalAuthors": 5569,
+    "totalCountries": 35,
+    "countries": [
+      {
+        "affiliation_country": "US",
+        "paper_count": 760,
+        "author_count": 2593,
+        "spotlights": 95,
+        "orals": 17
+      },
+      {
+        "affiliation_country": "UNK",
+        "paper_count": 331,
+        "author_count": 842,
+        "spotlights": 49,
+        "orals": 7
+      },
+      {
+        "affiliation_country": "CN",
+        "paper_count": 137,
+        "author_count": 451,
+        "spotlights": 14,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "GB",
+        "paper_count": 121,
+        "author_count": 374,
+        "spotlights": 16,
+        "orals": 4
+      },
+      {
+        "affiliation_country": "FR",
+        "paper_count": 78,
+        "author_count": 200,
+        "spotlights": 7,
+        "orals": 3
+      },
+      {
+        "affiliation_country": "CA",
+        "paper_count": 63,
+        "author_count": 171,
+        "spotlights": 5,
+        "orals": 4
+      },
+      {
+        "affiliation_country": "CH",
+        "paper_count": 41,
+        "author_count": 109,
+        "spotlights": 6,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "DE",
+        "paper_count": 41,
+        "author_count": 104,
+        "spotlights": 6,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "IL",
+        "paper_count": 31,
+        "author_count": 66,
+        "spotlights": 4,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "JP",
+        "paper_count": 26,
+        "author_count": 77,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "AU",
+        "paper_count": 20,
+        "author_count": 57,
+        "spotlights": 2,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "KR",
+        "paper_count": 19,
+        "author_count": 57,
+        "spotlights": 2,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "SG",
+        "paper_count": 18,
+        "author_count": 43,
+        "spotlights": 2,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "IN",
+        "paper_count": 17,
+        "author_count": 46,
+        "spotlights": 2,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "NL",
+        "paper_count": 12,
+        "author_count": 21,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "IT",
+        "paper_count": 11,
+        "author_count": 27,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "SE",
+        "paper_count": 9,
+        "author_count": 23,
+        "spotlights": 3,
+        "orals": 1
+      },
+      {
+        "affiliation_country": "RU",
+        "paper_count": 9,
+        "author_count": 19,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "DK",
+        "paper_count": 7,
+        "author_count": 22,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "BE",
+        "paper_count": 7,
+        "author_count": 16,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "AT",
+        "paper_count": 6,
+        "author_count": 13,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "ES",
+        "paper_count": 5,
+        "author_count": 8,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "IR",
+        "paper_count": 3,
+        "author_count": 7,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "FI",
+        "paper_count": 3,
+        "author_count": 9,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "VN",
+        "paper_count": 2,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "AE",
+        "paper_count": 2,
+        "author_count": 2,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "SA",
+        "paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "RO",
+        "paper_count": 1,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "PL",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "NZ",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "MY",
+        "paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "IE",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 1,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "GR",
+        "paper_count": 1,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "EE",
+        "paper_count": 1,
+        "author_count": 3,
+        "spotlights": 0,
+        "orals": 0
+      },
+      {
+        "affiliation_country": "BR",
+        "paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0
+      }
+    ]
+  },
+  "focusCountrySummary": {
+    "country": "India",
+    "country_code": "IN",
+    "rank": 14,
+    "paper_count": 17,
+    "author_count": 46,
+    "percentage": 0.95,
+    "spotlights": 2,
+    "orals": 0,
+    "institution_count": 20,
+    "academic_institutions": 16,
+    "corporate_institutions": 4
+  },
+  "focusCountry": {
+    "authorship": {
+      "at_least_one": {
+        "count": 17,
+        "papers": [
+          {
+            "id": "14182",
+            "title": "A Primal Dual Formulation For Deep Learning With Constraints",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "14620",
+            "title": "Bayesian Optimization under Heavy-tailed Payoffs",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "14369",
+            "title": "Censored Semi-Bandits: A Framework for Resource Allocation with Censored Feedback",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "13326",
+            "title": "Combinatorial Bandits with Relative Feedback",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "14151",
+            "title": "Concentration of risk measures: A Wasserstein distance approach",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "14202",
+            "title": "Distribution Learning of a Random Spatial Field with a Location-Unaware Mobile Sensor",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "14219",
+            "title": "Efficient Algorithms for Smooth Minimax Optimization",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "13367",
+            "title": "HyperGCN: A New Method For Training Graph Convolutional Networks on Hypergraphs",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "14547",
+            "title": "Infra-slow brain dynamics as a marker for cognitive function and decline",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "14161",
+            "title": "Neural Attribution for Semantic Bug-Localization in Student Programs",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "13820",
+            "title": "Nonzero-sum Adversarial Hypothesis Testing Games",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "13585",
+            "title": "Practical Deep Learning with Bayesian Principles",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "13478",
+            "title": "Quality Aware Generative Adversarial Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "13687",
+            "title": "Quantum Embedding of Knowledge for Reasoning",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "14238",
+            "title": "Shallow RNN:  Accurate Time-series Classification on Resource Constrained Devices",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "14405",
+            "title": "The Step Decay Schedule: A Near Optimal, Geometrically Decaying Learning Rate Procedure For Least Squares",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "13464",
+            "title": "Turbo Autoencoder: Deep learning based channel codes for point-to-point communication channels",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ]
+      },
+      "majority": {
+        "count": 12,
+        "papers": [
+          {
+            "id": "14182",
+            "title": "A Primal Dual Formulation For Deep Learning With Constraints",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "14620",
+            "title": "Bayesian Optimization under Heavy-tailed Payoffs",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "14369",
+            "title": "Censored Semi-Bandits: A Framework for Resource Allocation with Censored Feedback",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "13326",
+            "title": "Combinatorial Bandits with Relative Feedback",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "14151",
+            "title": "Concentration of risk measures: A Wasserstein distance approach",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "14202",
+            "title": "Distribution Learning of a Random Spatial Field with a Location-Unaware Mobile Sensor",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "14219",
+            "title": "Efficient Algorithms for Smooth Minimax Optimization",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "13367",
+            "title": "HyperGCN: A New Method For Training Graph Convolutional Networks on Hypergraphs",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "14547",
+            "title": "Infra-slow brain dynamics as a marker for cognitive function and decline",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "14161",
+            "title": "Neural Attribution for Semantic Bug-Localization in Student Programs",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "13478",
+            "title": "Quality Aware Generative Adversarial Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "13687",
+            "title": "Quantum Embedding of Knowledge for Reasoning",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ]
+      },
+      "first_author": {
+        "count": 12,
+        "papers": [
+          {
+            "id": "14182",
+            "title": "A Primal Dual Formulation For Deep Learning With Constraints",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "14620",
+            "title": "Bayesian Optimization under Heavy-tailed Payoffs",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "14369",
+            "title": "Censored Semi-Bandits: A Framework for Resource Allocation with Censored Feedback",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "13326",
+            "title": "Combinatorial Bandits with Relative Feedback",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "14151",
+            "title": "Concentration of risk measures: A Wasserstein distance approach",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "14202",
+            "title": "Distribution Learning of a Random Spatial Field with a Location-Unaware Mobile Sensor",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "13367",
+            "title": "HyperGCN: A New Method For Training Graph Convolutional Networks on Hypergraphs",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "14547",
+            "title": "Infra-slow brain dynamics as a marker for cognitive function and decline",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "14161",
+            "title": "Neural Attribution for Semantic Bug-Localization in Student Programs",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "13820",
+            "title": "Nonzero-sum Adversarial Hypothesis Testing Games",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "13478",
+            "title": "Quality Aware Generative Adversarial Networks",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "13687",
+            "title": "Quantum Embedding of Knowledge for Reasoning",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ]
+      }
+    },
+    "institutions": [
+      {
+        "institute": "Indian Institute of Science",
+        "total_paper_count": 5,
+        "unique_paper_count": 5,
+        "author_count": 17,
+        "spotlights": 2,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "14620",
+            "title": "Bayesian Optimization under Heavy-tailed Payoffs",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "13326",
+            "title": "Combinatorial Bandits with Relative Feedback",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "13367",
+            "title": "HyperGCN: A New Method For Training Graph Convolutional Networks on Hypergraphs",
+            "isSpotlight": false,
+            "isOral": false
+          },
+          {
+            "id": "14547",
+            "title": "Infra-slow brain dynamics as a marker for cognitive function and decline",
+            "isSpotlight": true,
+            "isOral": false
+          },
+          {
+            "id": "14161",
+            "title": "Neural Attribution for Semantic Bug-Localization in Student Programs",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Sayak Ray Chowdhury",
+          "Aditya Gopalan",
+          "Aadirupa Saha",
+          "Aditya Gopalan",
+          "Naganand Yadati",
+          "Madhav Nimishakavi",
+          "Prateek Yadav",
+          "Vikram Nitin",
+          "Anand Louis",
+          "Partha Talukdar",
+          "Shagun Ajmera",
+          "Shreya Rajagopal",
+          "Razi Rehman",
+          "Devarajan Sridharan",
+          "Rahul Gupta",
+          "Aditya Kanade",
+          "Shirish Shevade"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Delhi",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 4,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "14182",
+            "title": "A Primal Dual Formulation For Deep Learning With Constraints",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Yatin Nandwani",
+          "Abhishek Pathak",
+          "Mausam",
+          "Parag Singla"
+        ]
+      },
+      {
+        "institute": "IIT Bombay",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "14369",
+            "title": "Censored Semi-Bandits: A Framework for Resource Allocation with Censored Feedback",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Arun Verma",
+          "Manjesh Hanawal"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Madras",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "14369",
+            "title": "Censored Semi-Bandits: A Framework for Resource Allocation with Censored Feedback",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Arun Rajkumar"
+        ]
+      },
+      {
+        "institute": "LinkedIn",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "corporate",
+        "papers": [
+          {
+            "id": "14369",
+            "title": "Censored Semi-Bandits: A Framework for Resource Allocation with Censored Feedback",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Raman Sankaran"
+        ]
+      },
+      {
+        "institute": "Tata Consultancy Services Limited",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "14151",
+            "title": "Concentration of risk measures: A Wasserstein distance approach",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Sanjay P. Bhat"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Madras",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "14151",
+            "title": "Concentration of risk measures: A Wasserstein distance approach",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Prashanth L.A."
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Bombay",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "14202",
+            "title": "Distribution Learning of a Random Spatial Field with a Location-Unaware Mobile Sensor",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Meera Pai",
+          "Animesh Kumar"
+        ]
+      },
+      {
+        "institute": "Microsoft",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "corporate",
+        "papers": [
+          {
+            "id": "14219",
+            "title": "Efficient Algorithms for Smooth Minimax Optimization",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Prateek Jain",
+          "Praneeth Netrapalli"
+        ]
+      },
+      {
+        "institute": "University of Washington",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "14219",
+            "title": "Efficient Algorithms for Smooth Minimax Optimization",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Sewoong Oh"
+        ]
+      },
+      {
+        "institute": "Birla Institute of Technology and Science",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "13367",
+            "title": "HyperGCN: A New Method For Training Graph Convolutional Networks on Hypergraphs",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Vikram Nitin"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Science",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "13820",
+            "title": "Nonzero-sum Adversarial Hypothesis Testing Games",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Sarath Yasodharan"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology (ISM)",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "13585",
+            "title": "Practical Deep Learning with Bayesian Principles",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Mohammad Emtiyaz Khan"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Hyderabad",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 2,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "13478",
+            "title": "Quality Aware Generative Adversarial Networks",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "KANCHARLA PARIMALA",
+          "Sumohana Channappayya"
+        ]
+      },
+      {
+        "institute": "IBM",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 6,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "corporate",
+        "papers": [
+          {
+            "id": "13687",
+            "title": "Quantum Embedding of Knowledge for Reasoning",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Dinesh Garg",
+          "Shajith Ikbal",
+          "Santosh K. Srivastava",
+          "Harit Vishwakarma",
+          "Hima Karanam",
+          "L Venkata Subramaniam"
+        ]
+      },
+      {
+        "institute": "University of Wisconsin-Madison",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "13687",
+            "title": "Quantum Embedding of Knowledge for Reasoning",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Harit Vishwakarma"
+        ]
+      },
+      {
+        "institute": "University of Texas at Austin",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "14238",
+            "title": "Shallow RNN:  Accurate Time-series Classification on Resource Constrained Devices",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Vikram Mandikal"
+        ]
+      },
+      {
+        "institute": "Indian Institute of Technology Gandhinagar",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "14238",
+            "title": "Shallow RNN:  Accurate Time-series Classification on Resource Constrained Devices",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Vinu Sankar Sadasivan"
+        ]
+      },
+      {
+        "institute": "Microsoft",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "corporate",
+        "papers": [
+          {
+            "id": "14405",
+            "title": "The Step Decay Schedule: A Near Optimal, Geometrically Decaying Learning Rate Procedure For Least Squares",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Praneeth Netrapalli"
+        ]
+      },
+      {
+        "institute": "Tata Institute of Fundamental Research",
+        "total_paper_count": 1,
+        "unique_paper_count": 1,
+        "author_count": 1,
+        "spotlights": 0,
+        "orals": 0,
+        "type": "academic",
+        "papers": [
+          {
+            "id": "13464",
+            "title": "Turbo Autoencoder: Deep learning based channel codes for point-to-point communication channels",
+            "isSpotlight": false,
+            "isOral": false
+          }
+        ],
+        "authors": [
+          "Himanshu Asnani"
+        ]
+      }
+    ]
+  },
+  "institutions": {
+    "summary": {
+      "total_institutions": 0,
+      "academic_institutions": 0,
+      "corporate_institutions": 0,
+      "total_papers": 0,
+      "total_authors": 0,
+      "avg_papers_per_institution": 0,
+      "avg_authors_per_institution": 0
+    },
+    "top_institutions": [],
+    "total_institutions": 0
+  },
+  "config": {
+    "focus_country_code": "IN",
+    "focus_country_name": "India",
+    "colors": {
+      "us": "hsl(221, 83%, 53%)",
+      "cn": "hsl(0, 84%, 60%)",
+      "focusCountry": "hsl(36, 96%, 50%)",
+      "primary": "hsl(var(--primary))",
+      "secondary": "hsl(var(--secondary-foreground))",
+      "academic": "hsl(221, 83%, 53%)",
+      "corporate": "hsl(330, 80%, 60%)",
+      "rest": "hsl(330, 60%, 30%)",
+      "spotlight": "hsl(48, 96%, 50%)",
+      "oral": "hsl(142, 71%, 45%)",
+      "papers": "hsl(200, 65%, 50%)",
+      "authors": "hsl(280, 55%, 55%)",
+      "US": "hsl(221, 83%, 53%)",
+      "CN": "hsl(0, 84%, 60%)",
+      "GB": "hsl(120, 70%, 45%)",
+      "HK": "hsl(300, 75%, 50%)",
+      "SG": "hsl(180, 80%, 50%)",
+      "CA": "hsl(15, 85%, 55%)",
+      "DE": "hsl(45, 90%, 50%)",
+      "KR": "hsl(270, 75%, 50%)",
+      "FR": "hsl(240, 80%, 55%)",
+      "CH": "hsl(135, 70%, 45%)",
+      "UK": "hsl(90, 65%, 50%)",
+      "AU": "hsl(315, 80%, 55%)",
+      "JP": "hsl(195, 85%, 50%)",
+      "UNK": "hsl(0, 0%, 60%)",
+      "IL": "hsl(210, 75%, 50%)",
+      "IT": "hsl(105, 70%, 50%)",
+      "NL": "hsl(255, 80%, 55%)",
+      "AE": "hsl(30, 85%, 55%)",
+      "TW": "hsl(165, 75%, 50%)",
+      "AI": "hsl(285, 80%, 55%)",
+      "IN": "hsl(36, 96%, 50%)",
+      "AT": "hsl(60, 85%, 50%)",
+      "RU": "hsl(330, 75%, 50%)",
+      "DK": "hsl(225, 80%, 55%)",
+      "SE": "hsl(75, 70%, 50%)",
+      "SA": "hsl(345, 85%, 55%)",
+      "BE": "hsl(150, 75%, 50%)",
+      "ES": "hsl(300, 70%, 50%)",
+      "FI": "hsl(120, 80%, 45%)",
+      "MO": "hsl(270, 85%, 55%)",
+      "GR": "hsl(195, 75%, 50%)",
+      "VN": "hsl(45, 80%, 55%)",
+      "BR": "hsl(105, 85%, 50%)",
+      "PL": "hsl(315, 75%, 50%)",
+      "CZ": "hsl(165, 80%, 50%)",
+      "NO": "hsl(240, 75%, 55%)",
+      "CL": "hsl(285, 70%, 50%)",
+      "TR": "hsl(15, 80%, 55%)",
+      "PT": "hsl(135, 75%, 50%)",
+      "EU": "hsl(210, 85%, 50%)",
+      "BG": "hsl(75, 80%, 50%)",
+      "LU": "hsl(330, 80%, 55%)",
+      "IR": "hsl(180, 75%, 50%)",
+      "NZ": "hsl(255, 85%, 55%)",
+      "PH": "hsl(60, 75%, 50%)",
+      "ZW": "hsl(120, 70%, 50%)",
+      "IE": "hsl(345, 80%, 55%)",
+      "CX": "hsl(195, 80%, 50%)",
+      "MY": "hsl(270, 75%, 55%)",
+      "CO": "hsl(30, 80%, 55%)",
+      "KP": "hsl(150, 80%, 50%)",
+      "SI": "hsl(285, 75%, 50%)",
+      "AC": "hsl(45, 85%, 55%)",
+      "TH": "hsl(105, 80%, 50%)",
+      "RE": "hsl(315, 85%, 55%)",
+      "UY": "hsl(165, 75%, 50%)",
+      "AM": "hsl(240, 80%, 55%)",
+      "IO": "hsl(75, 85%, 50%)",
+      "CY": "hsl(330, 75%, 50%)",
+      "TD": "hsl(195, 75%, 55%)",
+      "NA": "hsl(255, 80%, 50%)",
+      "HR": "hsl(60, 80%, 55%)",
+      "EG": "hsl(120, 85%, 45%)"
+    }
+  },
+  "dashboard": {
+    "summary": {
+      "title": "Research Impact Overview",
+      "content": [
+        "India contributed 17 research papers to NeurIPS 2019, representing 0.9% of the conference's total accepted works and ranking 14 globally among contributing nations.",
+        "India researchers demonstrated strong research leadership with 70.6% of papers featuring India first authors, indicating significant intellectual contribution to the global machine learning discourse.",
+        "The research quality is evidenced by a 11.8% spotlight acceptance rate, with 2 paper(s) receiving this prestigious recognition among the conference's most impactful contributions.",
+        "India's machine learning ecosystem comprises 46 unique researchers across 20 institutions, with a balanced representation of 16 academic institutions and 4 corporate research entities."
+      ]
+    },
+    "context": {
+      "title": "Global Research Landscape",
+      "content": [
+        "The global research landscape is led by the United States (42.5% of papers) and China (7.7%), followed by the United Kingdom (6.8%) and Germany (2.3%), with India contributing 0.9% of total research output.",
+        "India ranks 14 globally in research volume, positioning it as an emerging contributor in the international machine learning research ecosystem with substantial growth potential.",
+        "Within the Asia-Pacific region, India trails China, South Korea, Singapore, and Hong Kong in absolute research contributions, highlighting opportunities for enhanced regional collaboration and capacity building."
+      ],
+      "subtitle": "India's position within the international machine learning research community and comparative analysis with leading nations."
+    },
+    "focusCountry": {
+      "title": "India Research Ecosystem Analysis",
+      "content": [
+        "India researchers exhibit strong research independence with 70.6% of papers having majority India authorship, indicating substantial domestic research capacity and reduced dependence on international collaboration.",
+        "The 70.6% first authorship rate demonstrates India researchers' leadership in conceptualizing and driving research projects, reflecting growing confidence and expertise in the field.",
+        "With 46 unique authors contributing across 17 papers, India maintains an efficient author-to-paper ratio of 0.37, suggesting productive individual contributions and effective research mentorship."
+      ],
+      "subtitle": "Detailed examination of authorship patterns, collaboration dynamics, and research leadership within India's machine learning community."
+    },
+    "institutions": {
+      "title": "Institutional Research Excellence",
+      "content": [
+        "The Unknown emerges as the national leader with 0 papers and 0 authors, including the country's 2 spotlight papers, demonstrating exceptional research quality and productivity.",
+        "Academic institutions dominate India's research landscape with 80.0% representation (16 of 20 institutions), while corporate research centers contribute 20.0%, indicating strong university-led research culture.",
+        "The institutional diversity spans premier engineering institutes (IITs), specialized research universities (IISc), and corporate R&D centers, creating a robust ecosystem for sustained machine learning research growth."
+      ],
+      "subtitle": "Comprehensive evaluation of India's academic and corporate institutions contributing to machine learning research excellence."
+    }
+  }
+}
