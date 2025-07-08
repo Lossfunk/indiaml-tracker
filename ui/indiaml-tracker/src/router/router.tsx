@@ -17,7 +17,7 @@ const V1Items = {
 
 
 const V2Items = {
-  V1Homepage: loadable(() => import("../v2/Homepage")),
+  V2Homepage: loadable(() => import("../v2/Homepage")),
   Landing: loadable(() => import("../v2/Landing")),
   Papers: loadable(() => import("../v2/papers")),
   Motivation: loadable(() => import("../v2/motivation")),
@@ -60,23 +60,23 @@ export const router = createBrowserRouter([
   },
     {
     path: "v2/",
-    element: <AutoRedirectComponent children={<V1Items.V1Homepage />} />,
+    element: <AutoRedirectComponent children={<V2Items.V2Homepage />} />,
     children: [
       {
         path: "papers",
-        element: <V1Items.Papers />,
+        element: <V2Items.Papers />,
       },
       {
         path: "conference-summary",
-        element: <V1Items.AnalyticsV4 />,
+        element: <V2Items.AnalyticsV4 />,
       },
       {
         path: "landing",
-        element: <V1Items.Landing />,
+        element: <V2Items.Landing />,
       },
       {
         path: "motivation",
-        element: <V1Items.Motivation />,
+        element: <V2Items.Motivation />,
       },
     ],
   },

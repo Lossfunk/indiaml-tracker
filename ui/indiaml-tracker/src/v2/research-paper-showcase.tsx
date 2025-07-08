@@ -1,9 +1,10 @@
-// Updated ResearchPapersShowcase.tsx
 import { useState, useEffect, useMemo } from "react"
-import { FilterBar } from "./filter-bar" // Assuming this component exists
-import { PaperCard } from "./paper-card"   // Assuming this component exists
-import type { Paper } from "@/types/paper" // Assuming this type definition exists
-import { useNavigate } from "react-router-dom" // Added for navigation
+import { FilterBar } from "./filter-bar"
+import { PaperCard } from "./paper-card"
+import type { ConferenceData, Paper as V2Paper } from "./types/conference"
+import type { ConferenceStatistics } from "./types/conference_analytics"
+import type { Paper } from "@/types/paper"
+import { useNavigate } from "react-router-dom"
 
 interface ConferenceIndex {
   label: string
@@ -11,155 +12,121 @@ interface ConferenceIndex {
   analytics: string
   venue: string
   year: string
-}
-
-interface AnalyticsData {
-  conferenceInfo: {
-    name: string;
-    year: number;
-    totalAcceptedPapers: number;
-    totalAcceptedAuthors: number;
-  };
-  focusCountry: {
-    country_code: string;
-    country_name: string;
-    total_authors: number;
-    total_spotlights: number;
-    total_orals: number;
-    institution_types: {
-      academic: number;
-      corporate: number;
-    };
-    institutions: Array<{
-      institute: string;
-      total_paper_count: number;
-      unique_paper_count: number;
-      author_count: number;
-      spotlights: number;
-      orals: number;
-      type: string;
-    }>;
-  };
-  globalStats: {
-    countries: Array<{
-      affiliation_country: string;
-      paper_count: number;
-      author_count: number;
-      spotlights: number;
-      orals: number;
-    }>;
-  };
+  sqlite_file: string
 }
 
 interface ConferenceKPIs {
-  totalPapers: number;
-  spotlightCount: number;
-  authorCount: number;
-  indiaRank: number;
-  yearOverYearChange: {
-    percent: number;
-    direction: string;
-  };
+  totalPapers: number
+  spotlightCount: number
+  oralCount: number
+  authorCount: number
+  indiaRank: number
+  institutionCount: number
+  academicInstitutions: number
+  corporateInstitutions: number
   topInstitutions: Array<{
-    name: string;
-    paperCount: number;
-    authorCount: number;
-  }>;
-  institutionTypes: {
-    academic: number;
-    corporate: number;
-  };
+    name: string
+    paperCount: number
+    authorCount: number
+  }>
 }
 
-// Define Conference Priority using UPPERCASE keys to match derived names
+// Define Conference Priority
 const conferencePriority: Record<string, number> = {
   "NEURIPS": 3,
   "ICML": 2,
   "ICLR": 1,
-  // Add other conferences with priority 0 or lower if needed (use UPPERCASE)
-};
+}
 
-// Define Venue Priority for sorting papers within a conference group
-const venuePriority: Record<string, number> = {
+// Define Status Priority for sorting papers within a conference group
+const statusPriority: Record<string, number> = {
   "oral": 3,
   "spotlight": 2,
   "poster": 1,
-  "unknown": 0, // Default priority for unspecified or other venues
-};
-
-// Define Indian Authorship Priority for primary sorting
-const getIndianAuthorshipPriority = (paper: Paper): number => {
-  if (paper.top_author_from_india === true) {
-    return 3;
-  } else if (paper.majority_authors_from_india === true) {
-    return 2;
-  } else {
-    return 1;
-  }
-};
+  "rejected": 0,
+  "withdrawn": 0,
+}
 
 // Helper function to get conference priority, defaulting to 0
 const getConferencePriority = (conferenceName: string | undefined): number => {
-  return conferenceName ? (conferencePriority[conferenceName.toUpperCase()] || 0) : 0;
-};
+  return conferenceName ? (conferencePriority[conferenceName.toUpperCase()] || 0) : 0
+}
 
-// Helper function to get venue priority, defaulting to 0
-const getVenuePriority = (venueName: string | undefined): number => {
-  return venueName ? (venuePriority[venueName.toLowerCase()] || 0) : 0;
-};
+// Helper function to get status priority, defaulting to 0
+const getStatusPriority = (status: string | undefined): number => {
+  return status ? (statusPriority[status.toLowerCase()] || 0) : 0
+}
 
-// Helper function to capitalize the first letter of a string
-const capitalizeFirstLetter = (string: string): string => {
-  if (!string) return '';
-  return string.charAt(0).toUpperCase() + string.slice(1);
-};
+// Helper function to convert V2Paper to Paper type
+const convertV2PaperToPaper = (v2Paper: V2Paper, conferenceVenue: string, conferenceYear: number, conferenceLabel: string, fileId: string): Paper => {
+  return {
+    id: v2Paper.paper_id,
+    title: v2Paper.title,
+    paper_id: v2Paper.paper_id,
+    author_list: [{
+      name: v2Paper.author.name,
+      openreview_id: v2Paper.author.openreview_id,
+      affiliation_name: v2Paper.author.affiliations || undefined,
+      affiliation_country: v2Paper.author.country_codes[0] || undefined,
+    }],
+    abstract: v2Paper.abstract,
+    conference: conferenceVenue,
+    year: conferenceYear,
+    venue: v2Paper.normalized_status,
+    paper_content: v2Paper.tldr || v2Paper.abstract,
+    paper_title: v2Paper.title,
+    accepted_in: [fileId],
+    pdf_url: v2Paper.pdf_url || "",
+    top_author_from_india: v2Paper.author.position === 1 && v2Paper.author.country_codes.includes("IN"),
+    majority_authors_from_india: v2Paper.author.country_codes.includes("IN"),
+  }
+}
+
+// Helper function to check if paper has Indian authorship
+const hasIndianAuthorship = (paper: Paper): boolean => {
+  return paper.majority_authors_from_india
+}
+
+// Helper function to check if paper has first author from India
+const hasFirstAuthorFromIndia = (paper: Paper): boolean => {
+  return paper.top_author_from_india
+}
 
 export function ResearchPapersShowcase() {
   const [conferenceIndex, setConferenceIndex] = useState<ConferenceIndex[]>([])
   const [allPapers, setAllPapers] = useState<Paper[]>([])
-  const [analyticsData, setAnalyticsData] = useState<Record<string, AnalyticsData>>({})
+  const [analyticsData, setAnalyticsData] = useState<Record<string, ConferenceStatistics>>({})
   const [searchTerm, setSearchTerm] = useState("")
   const [isFirstAuthorIndian, setIsFirstAuthorIndian] = useState(false)
   const [isMajorityAuthorsIndian, setIsMajorityAuthorsIndian] = useState(false)
   const [selectedConferences, setSelectedConferences] = useState<string[]>([])
   const [loading, setLoading] = useState(true)
-  const [fileToKeyMap, setFileToKeyMap] = useState<Record<string, string>>({})
   const [expandedConferences, setExpandedConferences] = useState<Set<string>>(new Set())
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   // Function to toggle conference expansion
   const toggleConferenceExpansion = (conferenceKey: string) => {
     setExpandedConferences(prev => {
-      const newSet = new Set(prev);
+      const newSet = new Set(prev)
       if (newSet.has(conferenceKey)) {
-        newSet.delete(conferenceKey);
+        newSet.delete(conferenceKey)
       } else {
-        newSet.add(conferenceKey);
+        newSet.add(conferenceKey)
       }
-      return newSet;
-    });
-  };
+      return newSet
+    })
+  }
 
-  // --- Fetching Logic ---
+  // Fetch conference index
   useEffect(() => {
     async function fetchConferenceIndex() {
       try {
-        const response = await fetch('/tracker/index.json')
+        const response = await fetch('/tracker_v2/index.json')
         if (!response.ok) {
           throw new Error('Failed to fetch conference index')
         }
-        const data = await response.json()
+        const data = await response.json() as ConferenceIndex[]
         setConferenceIndex(data)
-
-        const mapping: Record<string, string> = {}
-        data.forEach((conf: ConferenceIndex) => {
-          const labelParts = conf.label.split(' ')
-          const id = labelParts[0].toLowerCase().replace(/[^a-z0-9]/g, '')
-          const year = labelParts[labelParts.length - 1]
-          const key = `${id}-${year}`
-          mapping[conf.file.replace('.json', '')] = key
-        })
-        setFileToKeyMap(mapping)
       } catch (error) {
         console.error("Error fetching conference index:", error)
       }
@@ -167,55 +134,34 @@ export function ResearchPapersShowcase() {
     fetchConferenceIndex()
   }, [])
 
+  // Fetch all papers
   useEffect(() => {
     async function fetchAllPapers() {
-      if (conferenceIndex.length === 0 || Object.keys(fileToKeyMap).length === 0) {
-        return;
+      if (conferenceIndex.length === 0) {
+        return
       }
       setLoading(true)
       const loadedPapers: Paper[] = []
+      
       try {
         const fetchPromises = conferenceIndex.map(async (conf) => {
           try {
-            const response = await fetch(`/tracker/${conf.file}`)
+            const response = await fetch(`/tracker_v2/${conf.file}`)
             if (!response.ok) {
               console.error(`Failed to fetch papers for ${conf.label} (Status: ${response.status})`)
               return []
             }
-            const papersData = await response.json() as Paper[]
-
-            return papersData.map((paper) => {
-              const fileId = conf.file.replace('.json', '');
-              const confKey = fileToKeyMap[fileId];
-
-              let year = paper.year || 0;
-              let conference = (paper.conference || 'UNKNOWN').toUpperCase();
-
-              if (confKey) {
-                const keyParts = confKey.split('-');
-                const derivedConfName = keyParts[0]?.toUpperCase();
-                const derivedYearStr = keyParts[keyParts.length - 1];
-
-                if (derivedConfName) {
-                  conference = derivedConfName;
-                }
-                const parsedYear = parseInt(derivedYearStr, 10);
-                if (!isNaN(parsedYear)) {
-                  year = parsedYear;
-                }
-              } else {
-                console.warn(`Could not find key for fileId: ${fileId} in fileToKeyMap`);
-              }
-              const venue = (paper.venue || 'unknown').toLowerCase();
-
-              return {
-                ...paper,
-                accepted_in: [fileId],
-                year: year,
-                conference: conference,
-                venue: venue,
-              };
-            });
+            const conferenceData = await response.json() as ConferenceData
+            
+            return conferenceData.papers.map((v2Paper) => 
+              convertV2PaperToPaper(
+                v2Paper,
+                conf.venue.toUpperCase(),
+                parseInt(conf.year),
+                conf.label,
+                conf.file.replace('.json', '')
+              )
+            )
           } catch (error) {
             console.error(`Error processing papers for ${conf.label}:`, error)
             return []
@@ -236,72 +182,73 @@ export function ResearchPapersShowcase() {
       }
     }
     fetchAllPapers()
-  }, [conferenceIndex, fileToKeyMap])
+  }, [conferenceIndex])
 
-  // Fetch analytics data for each conference
+  // Fetch analytics data
   useEffect(() => {
     async function fetchAnalyticsData() {
       if (conferenceIndex.length === 0) {
-        return;
+        return
       }
 
-      const analyticsMap: Record<string, AnalyticsData> = {};
+      const analyticsMap: Record<string, ConferenceStatistics> = {}
 
       try {
         const fetchPromises = conferenceIndex.map(async (conf) => {
-          if (!conf.analytics) return null;
+          if (!conf.analytics) return null
 
           try {
-            const response = await fetch(`/tracker/${conf.analytics}`);
+            const response = await fetch(`/tracker_v2/${conf.analytics}`)
             if (!response.ok) {
-              console.error(`Failed to fetch analytics for ${conf.label}`);
-              return null;
+              console.error(`Failed to fetch analytics for ${conf.label}`)
+              return null
             }
             
-            const data = await response.json();
-            const fileId = conf.file.replace('.json', '');
-            return { fileId, data };
+            const data = await response.json() as ConferenceStatistics
+            const fileId = conf.file.replace('.json', '')
+            return { fileId, data }
           } catch (error) {
-            console.error(`Error processing analytics for ${conf.label}:`, error);
-            return null;
+            console.error(`Error processing analytics for ${conf.label}:`, error)
+            return null
           }
-        });
+        })
 
-        const results = await Promise.all(fetchPromises);
+        const results = await Promise.all(fetchPromises)
         
         results.forEach(result => {
           if (result && result.fileId) {
-            analyticsMap[result.fileId] = result.data;
+            analyticsMap[result.fileId] = result.data
           }
-        });
+        })
 
-        setAnalyticsData(analyticsMap);
+        setAnalyticsData(analyticsMap)
       } catch (error) {
-        console.error("Error loading analytics data:", error);
+        console.error("Error loading analytics data:", error)
       }
     }
 
-    fetchAnalyticsData();
-  }, [conferenceIndex]);
+    fetchAnalyticsData()
+  }, [conferenceIndex])
 
-  // --- Filtering Logic ---
+  // Filtering Logic
   const filteredPapers = useMemo(() => {
     return allPapers.filter((paper) => {
-      const matchesSearch = paper.paper_title
+      const matchesSearch = paper.title
         .toLowerCase()
         .includes(searchTerm.toLowerCase())
 
       const matchesFirstAuthorIndian =
-        !isFirstAuthorIndian || paper.top_author_from_india === true
+        !isFirstAuthorIndian || hasFirstAuthorFromIndia(paper)
 
       const matchesMajorityAuthorsIndian =
-        !isMajorityAuthorsIndian || paper.majority_authors_from_india === true
+        !isMajorityAuthorsIndian || hasIndianAuthorship(paper)
 
       const matchesConference =
         selectedConferences.length === 0 ||
-        paper.accepted_in.some(confId => {
-          const confKey = fileToKeyMap[confId];
-          return confKey && selectedConferences.includes(confKey);
+        selectedConferences.some(confKey => {
+          const [venue, year] = confKey.split('-')
+          return paper.conference?.toLowerCase() === venue?.toLowerCase() &&
+                 paper.year?.toString() === year
         })
 
       return (
@@ -310,183 +257,161 @@ export function ResearchPapersShowcase() {
         matchesMajorityAuthorsIndian &&
         matchesConference
       )
-    });
-  }, [allPapers, searchTerm, isFirstAuthorIndian, isMajorityAuthorsIndian, selectedConferences, fileToKeyMap]);
+    })
+  }, [allPapers, searchTerm, isFirstAuthorIndian, isMajorityAuthorsIndian, selectedConferences])
 
-  // --- Grouping and Sorting Logic ---
+  // Grouping and Sorting Logic
   const groupedAndSortedPapers = useMemo(() => {
-    // 1. Sort the filtered papers (venue priority is still used for sorting within a conference)
+    // Sort the filtered papers
     const sortedFilteredPapers = [...filteredPapers].sort((a, b) => {
-      const authorshipPrioA = getIndianAuthorshipPriority(a);
-      const authorshipPrioB = getIndianAuthorshipPriority(b);
-      if (authorshipPrioA !== authorshipPrioB) return authorshipPrioB - authorshipPrioA;
+      // First sort by Indian authorship priority
+      const aHasIndian = hasIndianAuthorship(a)
+      const bHasIndian = hasIndianAuthorship(b)
+      if (aHasIndian !== bHasIndian) return bHasIndian ? 1 : -1
 
-      if (a.year !== b.year) return b.year - a.year;
-
-      const conferencePrioA = getConferencePriority(a.conference);
-      const conferencePrioB = getConferencePriority(b.conference);
-      if (conferencePrioA !== conferencePrioB) return conferencePrioB - conferencePrioA;
-
-      const venuePrioA = getVenuePriority(a.venue);
-      const venuePrioB = getVenuePriority(b.venue);
-      if (venuePrioA !== venuePrioB) return venuePrioB - venuePrioA;
-
-      return a.paper_title.localeCompare(b.paper_title);
-    });
-
-
-
-
-  // Helper function to get conference KPIs from analytics data
-  const getConferenceKPIs = (papers: Paper[], conferenceName: string, year: number): ConferenceKPIs => {
-    let analyticsForConference: AnalyticsData | undefined;
-    
-    // Find the analytics data for this conference
-    Object.keys(analyticsData).forEach(fileId => {
-      const data = analyticsData[fileId];
-      if (data && 
-          data.conferenceInfo && 
-          data.conferenceInfo.name?.toUpperCase() === conferenceName &&
-          data.conferenceInfo.year === year) {
-        analyticsForConference = data;
+      // Then by year (descending)
+      if (a.year !== b.year) {
+        return (b.year || 0) - (a.year || 0)
       }
-    });
 
-    if (analyticsForConference) {
-      // If we have analytics data, use it
-      const { conferenceInfo, focusCountry, globalStats } = analyticsForConference;
-      
-      // Find India's rank
-      let indiaRank = 0;
-      if (globalStats && globalStats.countries) {
-        const countriesWithRank = [...globalStats.countries]
-          .sort((a, b) => b.paper_count - a.paper_count)
-          .map((country, index) => ({ ...country, rank: index + 1 }));
+      // Then by conference priority
+      const conferencePrioA = getConferencePriority(a.conference)
+      const conferencePrioB = getConferencePriority(b.conference)
+      if (conferencePrioA !== conferencePrioB) return conferencePrioB - conferencePrioA
+
+      // Then by status priority
+      const statusPrioA = getStatusPriority(a.venue)
+      const statusPrioB = getStatusPriority(b.venue)
+      if (statusPrioA !== statusPrioB) return statusPrioB - statusPrioA
+
+      // Finally by title
+      return a.title.localeCompare(b.title)
+    })
+
+    // Helper function to get conference KPIs from analytics data
+    const getConferenceKPIs = (papers: Paper[], venue: string, year: number): ConferenceKPIs => {
+      // Find the analytics data for this conference
+      const analyticsForConference = Object.values(analyticsData).find(data => 
+        data.conference?.toLowerCase() === venue.toLowerCase() && data.year === year
+      )
+
+      if (analyticsForConference) {
+        const { focusCountrySummary, institutions } = analyticsForConference
         
-        const indiaData = countriesWithRank.find(c => c.affiliation_country === "IN");
-        if (indiaData) {
-          indiaRank = indiaData.rank;
+        return {
+          totalPapers: papers.length,
+          spotlightCount: focusCountrySummary.spotlights,
+          oralCount: focusCountrySummary.orals,
+          authorCount: focusCountrySummary.author_count,
+          indiaRank: focusCountrySummary.rank,
+          institutionCount: focusCountrySummary.institution_count,
+          academicInstitutions: focusCountrySummary.academic_institutions,
+          corporateInstitutions: focusCountrySummary.corporate_institutions,
+          topInstitutions: [], // Would need to extract from institutions.top_institutions
+        }
+      } else {
+        // Fallback calculation if no analytics data is available
+        const spotlightCount = papers.filter(
+          paper => paper.venue === "spotlight"
+        ).length
+        const oralCount = papers.filter(
+          paper => paper.venue === "oral"
+        ).length
+        
+        return {
+          totalPapers: papers.length,
+          spotlightCount,
+          oralCount,
+          authorCount: papers.length * 3, // Rough estimate
+          indiaRank: 15, // Default fallback value
+          institutionCount: 0,
+          academicInstitutions: 0,
+          corporateInstitutions: 0,
+          topInstitutions: [],
         }
       }
-
-      // Get top institutions
-      const topInstitutions = focusCountry?.institutions 
-        ? [...focusCountry.institutions]
-            .sort((a, b) => b.total_paper_count - a.total_paper_count)
-            .slice(0, 2)
-            .map(inst => ({
-              name: inst.institute,
-              paperCount: inst.total_paper_count,
-              authorCount: inst.author_count
-            }))
-        : [];
-
-      return {
-        totalPapers: papers.length,
-        spotlightCount: focusCountry?.total_spotlights || 
-          papers.filter(p => p.venue?.toLowerCase() === "spotlight").length,
-        authorCount: focusCountry?.total_authors || 0,
-        indiaRank: indiaRank,
-        yearOverYearChange: {
-          percent: 23, // Placeholder value - would need historical data
-          direction: 'up'
-        },
-        topInstitutions: topInstitutions,
-        institutionTypes: focusCountry?.institution_types || { academic: 0, corporate: 0 }
-      };
-    } else {
-      // Fallback calculation if no analytics data is available
-      const spotlightCount = papers.filter(
-        paper => paper.venue && ["spotlight", "oral"].includes(paper.venue.toLowerCase())
-      ).length;
-      
-      return {
-        totalPapers: papers.length,
-        spotlightCount,
-        authorCount: papers.length * 3, // Rough estimate assuming 3 authors per paper
-        indiaRank: 15, // Default fallback value
-        yearOverYearChange: {
-          percent: 20,
-          direction: 'up'
-        },
-        topInstitutions: [],
-        institutionTypes: { academic: 0, corporate: 0 }
-      };
     }
-  };
 
-
-    // 2. Group the sorted papers by Year and then by Conference (uppercase)
-    const groups: Record<number, Record<string, Paper[]>> = {}; // Simplified grouping
+    // Group the sorted papers by Year and then by Conference
+    const groups: Record<number, Record<string, Paper[]>> = {}
     sortedFilteredPapers.forEach(paper => {
-      const year = paper.year;
-      const conference = paper.conference; // Already uppercase
+      const year = paper.year || 0
+      const venue = paper.conference || 'UNKNOWN'
 
-      if (!groups[year]) groups[year] = {};
-      if (!groups[year][conference]) groups[year][conference] = [];
-      groups[year][conference].push(paper);
-    });
+      if (!groups[year]) groups[year] = {}
+      if (!groups[year][venue]) groups[year][venue] = []
+      groups[year][venue].push(paper)
+    })
 
-    // 3. Prepare sorted structure for rendering
+    // Prepare sorted structure for rendering
     const sortedYears = Object.keys(groups)
       .map(Number)
-      .sort((a, b) => b - a);
+      .sort((a, b) => b - a)
 
     const finalGroupedStructure: {
-      year: number;
+      year: number
       conferences: {
-        name: string; // Conference name (UPPERCASE)
-        papers: Paper[]; // All papers for this conference
-        kpis: ConferenceKPIs; // Conference KPIs from analytics data
-      }[];
+        name: string
+        papers: Paper[]
+        kpis: ConferenceKPIs
+      }[]
     }[] = sortedYears.map(year => {
-      const yearConferences = groups[year];
-      const sortedConferenceNames = Object.keys(yearConferences)
-        .sort((a, b) => getConferencePriority(b) - getConferencePriority(a));
+      const yearConferences = groups[year]
+      const sortedVenueNames = Object.keys(yearConferences)
+        .sort((a, b) => getConferencePriority(b) - getConferencePriority(a))
 
       return {
         year: year,
-        conferences: sortedConferenceNames.map(confName => {
-          const papers = yearConferences[confName];
-          // Find analytics data for this conference
-          const kpis = getConferenceKPIs(papers, confName, year);
+        conferences: sortedVenueNames.map(venueName => {
+          const papers = yearConferences[venueName]
+          const kpis = getConferenceKPIs(papers, venueName, year)
           
           return {
-            name: confName,
-            papers: papers, // Get all papers for this conference
-            kpis: kpis, // Add KPIs for this conference
-          };
+            name: venueName,
+            papers: papers,
+            kpis: kpis,
+          }
         })
-      };
-    });
+      }
+    })
 
-    return finalGroupedStructure;
+    return finalGroupedStructure
+  }, [filteredPapers, analyticsData])
 
-  }, [filteredPapers, analyticsData]);
-
-  // --- Paper Display Logic ---
-  // Track if all conferences should be collapsed
-  const [collapseAll, setCollapseAll] = useState<boolean>(false);
+  // Paper Display Logic
+  const [collapseAll, setCollapseAll] = useState<boolean>(false)
   
   // Effect to collapse all conferences when collapseAll is toggled
   useEffect(() => {
     if (collapseAll) {
-      setExpandedConferences(new Set());
+      setExpandedConferences(new Set())
     }
-  }, [collapseAll]);
+  }, [collapseAll])
   
   // Determine number of papers to show for each conference
   const getPapersToShow = (papers: Paper[], conferenceKey: string) => {
-    const isExpanded = expandedConferences.has(conferenceKey);
+    const isExpanded = expandedConferences.has(conferenceKey)
     
     if (isExpanded) {
-      return papers; // Show all papers if expanded
+      return papers // Show all papers if expanded
     } else {
-      return papers.slice(0, 6); // Show first 6 papers (2 rows) if not expanded
+      return papers.slice(0, 6) // Show first 6 papers if not expanded
     }
-  };
+  }
 
-  // --- Rendering ---
+  // Generate conference options for filter
+  const conferenceOptions = useMemo(() => {
+    const options = new Set<string>()
+    conferenceIndex.forEach(conf => {
+      const key = `${conf.venue}-${conf.year}`
+      options.add(key)
+    })
+    return Array.from(options).map(key => ({
+      value: key,
+      label: key.replace('-', ' ').toUpperCase()
+    }))
+  }, [conferenceIndex])
+
   return (
     <div className="container mx-auto space-y-6 p-4 font-sans">
       {/* Sticky Wrapper for FilterBar */}
@@ -500,7 +425,6 @@ export function ResearchPapersShowcase() {
           setIsMajorityAuthorsIndian={setIsMajorityAuthorsIndian}
           selectedConferences={selectedConferences}
           setSelectedConferences={setSelectedConferences}
-          // conferenceOptions={Object.entries(fileToKeyMap).map(([fileId, confKey]) => ({ value: confKey, label: confKey }))}
         />
       </div>
 
@@ -521,21 +445,21 @@ export function ResearchPapersShowcase() {
               </button>
             </div>
             {conferences.map(({ name, papers, kpis }) => {
-              const conferenceKey = `${year}-${name}`;
-              const isExpanded = expandedConferences.has(conferenceKey);
-              const papersToShow = getPapersToShow(papers, conferenceKey);
-              const hasMorePapers = papers.length > papersToShow.length;
+              const conferenceKey = `${year}-${name}`
+              const isExpanded = expandedConferences.has(conferenceKey)
+              const papersToShow = getPapersToShow(papers, conferenceKey)
+              const hasMorePapers = papers.length > papersToShow.length
               
               return (
                 <div key={conferenceKey} className="mb-8">
-                  {/* Enhanced KPI Card Section with Dark Theme and Redesigned Layout */}
-                  <div className="mb-3 sm:mb-6 bg-white dark:bg-slate-800/95 rounded-lg border border-slate-700 shadow-md overflow-hidden text-white">
+                  {/* Enhanced KPI Card Section */}
+                  <div className="mb-3 sm:mb-6 bg-white dark:bg-slate-800/95 rounded-lg border border-slate-700 shadow-md overflow-hidden">
                     <div className="flex flex-col">
                       {/* Title and View Analytics Button */}
                       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center px-3 sm:px-5 py-2 sm:py-4 gap-2 sm:gap-0">
                         <div>
                           <h3 className="text-sm sm:text-xl font-semibold text-black dark:text-white">
-                            {name} ({kpis.totalPapers} accepted)
+                            {name} {year} ({kpis.totalPapers} accepted)
                           </h3>
                         </div>
                         
@@ -554,7 +478,7 @@ export function ResearchPapersShowcase() {
                         </button>
                       </div>
                       
-                      {/* Metrics Section with Icons on Left */}
+                      {/* Metrics Section */}
                       <div className="px-3 sm:px-5 pb-3 sm:pb-5 grid grid-cols-2 md:grid-cols-4 gap-x-2 sm:gap-x-4 gap-y-3 sm:gap-y-8">
                         {/* Accepted Papers */}
                         <div className="flex items-center">
@@ -643,7 +567,7 @@ export function ResearchPapersShowcase() {
                     </div>
                   )}
                 </div>
-              );
+              )
             })}
           </div>
         ))

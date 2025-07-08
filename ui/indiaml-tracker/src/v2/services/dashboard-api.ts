@@ -39,7 +39,7 @@ export const fetchDashboardData = async (
   }
   
   // First, get the index to find the analytics file path
-  const indexResponse = await fetch("/tracker/index.json");
+  const indexResponse = await fetch("/tracker_v2  /index.json");
   if (!indexResponse.ok) {
     throw new Error(
       `Failed to fetch index: ${indexResponse.status} ${indexResponse.statusText}`
