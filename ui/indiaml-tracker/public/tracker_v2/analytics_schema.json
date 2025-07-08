@@ -1,0 +1,328 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ICLR Conference Statistics",
+  "description": "A schema for representing ICLR conference statistics with a focus on a specific country.",
+  "type": "object",
+  "required": [
+    "conference",
+    "year",
+    "track",
+    "focus_country",
+    "focus_country_code",
+    "generated_at",
+    "globalStats",
+    "focusCountrySummary",
+    "focusCountry",
+    "institutions",
+    "config",
+    "dashboard"
+  ],
+  "properties": {
+    "conference": {
+      "type": "string",
+      "description": "The name of the conference.",
+      "enum": ["ICLR"]
+    },
+    "year": {
+      "type": "integer",
+      "description": "The year of the conference.",
+      "examples": [2017]
+    },
+    "track": {
+      "type": "string",
+      "description": "The track of the conference submissions.",
+      "enum": ["Conference"]
+    },
+    "focus_country": {
+      "type": "string",
+      "description": "The country that is the focus of the statistics.",
+      "examples": ["India"]
+    },
+    "focus_country_code": {
+      "type": "string",
+      "description": "The ISO 3166-1 alpha-2 country code for the focus country.",
+      "examples": ["IN"]
+    },
+    "generated_at": {
+      "type": "string",
+      "description": "The timestamp when the data was generated.",
+      "format": "date-time"
+    },
+    "globalStats": {
+      "type": "object",
+      "description": "Global statistics for the conference.",
+      "required": [
+        "totalPapers",
+        "totalAuthors",
+        "totalCountries",
+        "countries"
+      ],
+      "properties": {
+        "totalPapers": {
+          "type": "integer",
+          "description": "Total number of papers at the conference."
+        },
+        "totalAuthors": {
+          "type": "integer",
+          "description": "Total number of unique authors at the conference."
+        },
+        "totalCountries": {
+          "type": "integer",
+          "description": "Total number of unique countries represented."
+        },
+        "countries": {
+          "type": "array",
+          "description": "An array of country codes represented at the conference.",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "focusCountrySummary": {
+      "type": "object",
+      "description": "A summary of the focus country's contributions.",
+      "required": [
+        "country",
+        "country_code",
+        "rank",
+        "paper_count",
+        "author_count",
+        "percentage",
+        "spotlights",
+        "orals",
+        "institution_count",
+        "academic_institutions",
+        "corporate_institutions"
+      ],
+      "properties": {
+        "country": {
+          "type": "string"
+        },
+        "country_code": {
+          "type": "string"
+        },
+        "rank": {
+          "type": "integer"
+        },
+        "paper_count": {
+          "type": "integer"
+        },
+        "author_count": {
+          "type": "integer"
+        },
+        "percentage": {
+          "type": "number"
+        },
+        "spotlights": {
+          "type": "integer"
+        },
+        "orals": {
+          "type": "integer"
+        },
+        "institution_count": {
+          "type": "integer"
+        },
+        "academic_institutions": {
+          "type": "integer"
+        },
+        "corporate_institutions": {
+          "type": "integer"
+        }
+      }
+    },
+    "focusCountry": {
+      "type": "object",
+      "description": "Detailed statistics about the focus country's authors and institutions.",
+      "required": [
+        "authorship",
+        "institutions"
+      ],
+      "properties": {
+        "authorship": {
+          "type": "object",
+          "description": "Authorship patterns for the focus country.",
+          "required": [
+            "at_least_one",
+            "majority",
+            "first_author"
+          ],
+          "properties": {
+            "at_least_one": {
+              "$ref": "#/definitions/authorshipDetail"
+            },
+            "majority": {
+              "$ref": "#/definitions/authorshipDetail"
+            },
+            "first_author": {
+              "$ref": "#/definitions/authorshipDetail"
+            }
+          }
+        },
+        "institutions": {
+          "type": "array",
+          "description": "A list of institutions from the focus country.",
+          "items": {}
+        }
+      }
+    },
+    "institutions": {
+      "type": "object",
+      "description": "Overall institutional statistics.",
+      "required": [
+        "summary",
+        "top_institutions",
+        "total_institutions"
+      ],
+      "properties": {
+        "summary": {
+          "type": "object",
+          "required": [
+            "total_institutions",
+            "academic_institutions",
+            "corporate_institutions",
+            "total_papers",
+            "total_authors",
+            "avg_papers_per_institution",
+            "avg_authors_per_institution"
+          ],
+          "properties": {
+            "total_institutions": {
+              "type": "integer"
+            },
+            "academic_institutions": {
+              "type": "integer"
+            },
+            "corporate_institutions": {
+              "type": "integer"
+            },
+            "total_papers": {
+              "type": "integer"
+            },
+            "total_authors": {
+              "type": "integer"
+            },
+            "avg_papers_per_institution": {
+              "type": "number"
+            },
+            "avg_authors_per_institution": {
+              "type": "number"
+            }
+          }
+        },
+        "top_institutions": {
+          "type": "array",
+          "items": {}
+        },
+        "total_institutions": {
+          "type": "integer"
+        }
+      }
+    },
+    "config": {
+      "type": "object",
+      "description": "Configuration settings for the data visualization.",
+      "required": [
+        "focus_country_code",
+        "focus_country_name",
+        "colors"
+      ],
+      "properties": {
+        "focus_country_code": {
+          "type": "string"
+        },
+        "focus_country_name": {
+          "type": "string"
+        },
+        "colors": {
+          "type": "object",
+          "description": "Color codes for different entities in visualizations.",
+          "additionalProperties": {
+            "type": "string",
+            "description": "An HSL color string."
+          }
+        }
+      }
+    },
+    "dashboard": {
+      "type": "object",
+      "description": "Content for a dashboard display.",
+      "required": [
+        "summary",
+        "context",
+        "focusCountry",
+        "institutions"
+      ],
+      "properties": {
+        "summary": {
+          "$ref": "#/definitions/dashboardSection"
+        },
+        "context": {
+          "$ref": "#/definitions/dashboardSectionWithSubtitle"
+        },
+        "focusCountry": {
+          "$ref": "#/definitions/dashboardSectionWithSubtitle"
+        },
+        "institutions": {
+          "$ref": "#/definitions/dashboardSectionWithSubtitle"
+        }
+      }
+    }
+  },
+  "definitions": {
+    "authorshipDetail": {
+      "type": "object",
+      "required": [
+        "count",
+        "papers"
+      ],
+      "properties": {
+        "count": {
+          "type": "integer",
+          "description": "The number of papers matching this authorship pattern."
+        },
+        "papers": {
+          "type": "array",
+          "description": "A list of identifiers for the papers.",
+          "items": {}
+        }
+      }
+    },
+    "dashboardSection": {
+      "type": "object",
+      "required": [
+        "title",
+        "content"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "content": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "dashboardSectionWithSubtitle": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/dashboardSection"
+        },
+        {
+          "type": "object",
+          "required": [
+            "subtitle"
+          ],
+          "properties": {
+            "subtitle": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

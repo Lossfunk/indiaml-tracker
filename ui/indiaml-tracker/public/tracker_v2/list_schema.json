@@ -1,0 +1,299 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ICLR Conference Papers Schema",
+  "description": "Schema for JSON data representing papers from the ICLR 2021 conference with a focus on India.",
+  "type": "object",
+  "required": [
+    "conference",
+    "focus_country",
+    "total_papers",
+    "generated_at",
+    "config",
+    "papers"
+  ],
+  "properties": {
+    "conference": {
+      "description": "The name of the conference.",
+      "type": "string"
+    },
+    "focus_country": {
+      "description": "The country of focus for the data analysis.",
+      "type": "string"
+    },
+    "total_papers": {
+      "description": "The total number of papers included in the data.",
+      "type": "integer"
+    },
+    "generated_at": {
+      "description": "The timestamp when the data was generated.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "config": {
+      "description": "Configuration settings used for data processing and scoring.",
+      "type": "object",
+      "required": [
+        "first_author_weight",
+        "last_author_weight",
+        "middle_author_weight",
+        "status_weights",
+        "output_format",
+        "include_review_details",
+        "include_citation_data"
+      ],
+      "properties": {
+        "first_author_weight": {
+          "description": "Weight for the first author's contribution score.",
+          "type": "number"
+        },
+        "last_author_weight": {
+          "description": "Weight for the last author's contribution score.",
+          "type": "number"
+        },
+        "middle_author_weight": {
+          "description": "Weight for middle authors' contribution score.",
+          "type": "number"
+        },
+        "status_weights": {
+          "description": "Weights assigned to different paper statuses (oral, spotlight, etc.).",
+          "type": "object",
+          "required": [
+            "oral",
+            "spotlight",
+            "poster",
+            "unknown"
+          ],
+          "properties": {
+            "oral": {
+              "type": "number"
+            },
+            "spotlight": {
+              "type": "number"
+            },
+            "poster": {
+              "type": "number"
+            },
+            "unknown": {
+              "type": "number"
+            }
+          }
+        },
+        "output_format": {
+          "description": "The format of the output file.",
+          "type": "string"
+        },
+        "include_review_details": {
+          "description": "Flag to indicate if review details are included.",
+          "type": "boolean"
+        },
+        "include_citation_data": {
+          "description": "Flag to indicate if citation data is included.",
+          "type": "boolean"
+        }
+      }
+    },
+    "papers": {
+      "description": "A list of papers.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "paper_id",
+          "title",
+          "status",
+          "normalized_status",
+          "abstract",
+          "site_url",
+          "total_authors",
+          "track_name",
+          "author",
+          "sort_score",
+          "reviews"
+        ],
+        "properties": {
+          "paper_id": {
+            "description": "Unique identifier for the paper.",
+            "type": "string"
+          },
+          "title": {
+            "description": "The title of the paper.",
+            "type": "string"
+          },
+          "status": {
+            "description": "The acceptance status of the paper (e.g., Oral, Poster).",
+            "type": "string",
+            "enum": ["Spotlight", "Poster", "Oral", "Reject", "Withdraw"]
+          },
+          "normalized_status": {
+            "description": "The normalized, lowercase status of the paper.",
+            "type": "string",
+             "enum": ["spotlight", "poster", "oral", "rejected", "withdrawn"]
+          },
+          "abstract": {
+            "description": "The abstract of the paper.",
+            "type": "string"
+          },
+          "tldr": {
+            "description": "A short summary of the paper (Too Long; Didn't Read).",
+            "type": "string"
+          },
+          "site_url": {
+            "description": "URL to the paper's page on the conference website.",
+            "type": "string",
+            "format": "uri"
+          },
+          "pdf_url": {
+            "description": "URL to the PDF of the paper.",
+            "type": ["string", "null"],
+            "format": "uri"
+          },
+          "github_url": {
+            "description": "URL to the GitHub repository for the paper.",
+            "type": "string"
+          },
+          "total_authors": {
+            "description": "The total number of authors for the paper.",
+            "type": "integer"
+          },
+          "track_name": {
+            "description": "The conference track the paper was submitted to.",
+            "type": "string"
+          },
+          "author": {
+            "description": "Information about one of the authors of the paper.",
+            "type": "object",
+            "required": [
+              "id",
+              "name",
+              "openreview_id",
+              "position",
+              "countries",
+              "country_codes"
+            ],
+            "properties": {
+              "id": {
+                "description": "A unique identifier for the author.",
+                "type": "string"
+              },
+              "name": {
+                "description": "The full name of the author.",
+                "type": "string"
+              },
+              "name_site": {
+                "description": "Author names as displayed on the site, potentially including all authors.",
+                "type": ["string", "null"]
+              },
+              "openreview_id": {
+                "description": "The author's ID on OpenReview.",
+                "type": "string"
+              },
+              "position": {
+                "description": "The author's position in the author list (1-indexed).",
+                "type": "integer"
+              },
+              "gender": {
+                "description": "The gender of the author.",
+                "type": ["string", "null"],
+                "enum": ["M", "F", null]
+              },
+              "homepage_url": {
+                "description": "URL to the author's personal homepage.",
+                "type": ["string", "null"],
+                "format": "uri"
+              },
+              "dblp_id": {
+                "description": "The author's ID on DBLP.",
+                "type": ["string", "null"]
+              },
+              "google_scholar_url": {
+                "description": "The author's ID for Google Scholar.",
+                "type": ["string", "null"]
+              },
+              "orcid": {
+                "description": "The author's ORCID ID.",
+                "type": ["string", "null"]
+              },
+              "linkedin_url": {
+                "description": "The author's LinkedIn profile URL slug.",
+                "type": ["string", "null"]
+              },
+              "twitter_url": {
+                "type": ["string", "null"]
+              },
+              "primary_email": {
+                "type": ["string", "null"],
+                "format": "email"
+              },
+              "affiliations": {
+                "description": "The author's institutional affiliation.",
+                "type": ["string", "null"]
+              },
+              "countries": {
+                "description": "A list of countries associated with the author's affiliation.",
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "country_codes": {
+                "description": "A list of country codes (ISO 3166-1 alpha-2) for the affiliations.",
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "sort_score": {
+            "description": "A calculated score for ranking the paper.",
+            "type": "number"
+          },
+          "reviews": {
+            "description": "Aggregated review and citation data for the paper.",
+            "type": "object",
+            "required": [
+              "rating_mean",
+              "rating_std",
+              "confidence_mean",
+              "confidence_std",
+              "google_scholar_citations",
+              "semantic_scholar_citations"
+            ],
+            "properties": {
+              "rating_mean": {
+                "description": "The mean rating from reviewers.",
+                "type": "number"
+              },
+              "rating_std": {
+                "description": "The standard deviation of reviewer ratings.",
+                "type": "number"
+              },
+              "confidence_mean": {
+                "description": "The mean confidence score from reviewers.",
+                "type": "number"
+              },
+              "confidence_std": {
+                "description": "The standard deviation of reviewer confidence scores.",
+                "type": "number"
+              },
+              "total_reviews": {
+                "type": ["integer", "null"]
+              },
+              "total_reviewers": {
+                "type": ["integer", "null"]
+              },
+              "google_scholar_citations": {
+                "description": "The number of citations according to Google Scholar.",
+                "type": "integer"
+              },
+              "semantic_scholar_citations": {
+                "description": "The number of citations according to Semantic Scholar.",
+                "type": "integer"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
