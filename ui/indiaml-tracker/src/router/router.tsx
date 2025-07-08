@@ -48,4 +48,26 @@ export const router = createBrowserRouter([
       },
     ],
   },
+    {
+    path: "v2/",
+    element: <AutoRedirectComponent children={<V1Items.V1Homepage />} />,
+    children: [
+      {
+        path: "papers",
+        element: <V1Items.Papers />,
+      },
+      {
+        path: "conference-summary",
+        element: <V1Items.AnalyticsV4 />,
+      },
+      {
+        path: "landing",
+        element: <V1Items.Landing />,
+      },
+      {
+        path: "motivation",
+        element: <V1Items.Motivation />,
+      },
+    ],
+  },
 ]);
