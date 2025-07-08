@@ -15,6 +15,16 @@ const V1Items = {
   AnalyticsV4: loadable(() => import("../v1/conference-dashboard"))
 };
 
+
+const V2Items = {
+  V1Homepage: loadable(() => import("../v2/Homepage")),
+  Landing: loadable(() => import("../v2/Landing")),
+  Papers: loadable(() => import("../v2/papers")),
+  Motivation: loadable(() => import("../v2/motivation")),
+  AnalyticsV4: loadable(() => import("../v2/conference-dashboard"))
+};
+
+
 const AutoRedirectComponent = ({children}: {children: JSX.Element}) => {
   const navigate = useNavigate();
   useEffect(() => {
