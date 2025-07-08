@@ -1,7 +1,7 @@
 [
   {
     "label": "ICML 2025 v2",
-    "file": "icml-2025-v2.json",
+    "file": "icml-v2/ICML_2025.json",
     "analytics": "icml-v2/icml-2025-analytics.json",
     "venue": "icml",
     "year": "2025",
@@ -9,7 +9,7 @@
   },
   {
     "label": "ICML 2024 v2",
-    "file": "icml-2024-v2.json",
+    "file": "icml-v2/ICML_2024.json",
     "analytics": "icml-v2/icml-2024-analytics.json",
     "venue": "icml",
     "year": "2024",
@@ -17,7 +17,7 @@
   },
   {
     "label": "ICML 2023 v2",
-    "file": "icml-2023-v2.json",
+    "file": "icml-v2/ICML_2023.json",
     "analytics": "icml-v2/icml-2023-analytics.json",
     "venue": "icml",
     "year": "2023",
@@ -25,7 +25,7 @@
   },
   {
     "label": "ICML 2022 v2",
-    "file": "icml-2022-v2.json",
+    "file": "icml-v2/ICML_2022.json",
     "analytics": "icml-v2/icml-2022-analytics.json",
     "venue": "icml",
     "year": "2022",
@@ -33,7 +33,7 @@
   },
   {
     "label": "ICML 2021 v2",
-    "file": "icml-2021-v2.json",
+    "file": "icml-v2/ICML_2021.json",
     "analytics": "icml-v2/icml-2021-analytics.json",
     "venue": "icml",
     "year": "2021",
@@ -41,7 +41,7 @@
   },
   {
     "label": "ICML 2020 v2",
-    "file": "icml-2020-v2.json",
+    "file": "icml-v2/ICML_2020.json",
     "analytics": "icml-v2/icml-2020-analytics.json",
     "venue": "icml",
     "year": "2020",
@@ -49,7 +49,7 @@
   },
   {
     "label": "ICML 2019 v2",
-    "file": "icml-2019-v2.json",
+    "file": "icml-v2/ICML_2019.json",
     "analytics": "icml-v2/icml-2019-analytics.json",
     "venue": "icml",
     "year": "2019",
@@ -57,7 +57,7 @@
   },
   {
     "label": "ICML 2018 v2",
-    "file": "icml-2018-v2.json",
+    "file": "icml-v2/ICML_2018.json",
     "analytics": "icml-v2/icml-2018-analytics.json",
     "venue": "icml",
     "year": "2018",
@@ -65,7 +65,7 @@
   },
   {
     "label": "ICML 2017 v2",
-    "file": "icml-2017-v2.json",
+    "file": "icml-v2/ICML_2017.json",
     "analytics": "icml-v2/icml-2017-analytics.json",
     "venue": "icml",
     "year": "2017",
@@ -73,7 +73,7 @@
   },
   {
     "label": "ICML 2016 v2",
-    "file": "icml-2016-v2.json",
+    "file": "icml-v2/ICML_2016.json",
     "analytics": "icml-v2/icml-2016-analytics.json",
     "venue": "icml",
     "year": "2016",
@@ -81,7 +81,7 @@
   },
   {
     "label": "ICML 2015 v2",
-    "file": "icml-2015-v2.json",
+    "file": "icml-v2/ICML_2015.json",
     "analytics": "icml-v2/icml-2015-analytics.json",
     "venue": "icml",
     "year": "2015",
@@ -89,7 +89,7 @@
   },
   {
     "label": "ICML 2014 v2",
-    "file": "icml-2014-v2.json",
+    "file": "icml-v2/ICML_2014.json",
     "analytics": "icml-v2/icml-2014-analytics.json",
     "venue": "icml",
     "year": "2014",
@@ -97,7 +97,7 @@
   },
   {
     "label": "ICML 2013 v2",
-    "file": "icml-2013-v2.json",
+    "file": "icml-v2/ICML_2013.json",
     "analytics": "icml-v2/icml-2013-analytics.json",
     "venue": "icml",
     "year": "2013",
@@ -105,7 +105,7 @@
   },
   {
     "label": "ICLR 2025 v1",
-    "file": "iclr-2025-v1.json",
+    "file": "iclr-v1/ICLR_2025.json",
     "analytics": "iclr-v1/iclr-2025-analytics.json",
     "venue": "iclr",
     "year": "2025",
@@ -113,7 +113,7 @@
   },
   {
     "label": "ICLR 2024 v1",
-    "file": "iclr-2024-v1.json",
+    "file": "iclr-v1/ICLR_2024.json",
     "analytics": "iclr-v1/iclr-2024-analytics.json",
     "venue": "iclr",
     "year": "2024",
@@ -121,7 +121,7 @@
   },
   {
     "label": "ICLR 2023 v1",
-    "file": "iclr-2023-v1.json",
+    "file": "iclr-v1/ICLR_2023.json",
     "analytics": "iclr-v1/iclr-2023-analytics.json",
     "venue": "iclr",
     "year": "2023",
@@ -129,7 +129,7 @@
   },
   {
     "label": "ICLR 2022 v1",
-    "file": "iclr-2022-v1.json",
+    "file": "iclr-v1/ICLR_2022.json",
     "analytics": "iclr-v1/iclr-2022-analytics.json",
     "venue": "iclr",
     "year": "2022",
@@ -137,7 +137,7 @@
   },
   {
     "label": "ICLR 2021 v1",
-    "file": "iclr-2021-v1.json",
+    "file": "iclr-v1/ICLR_2021.json",
     "analytics": "iclr-v1/iclr-2021-analytics.json",
     "venue": "iclr",
     "year": "2021",
@@ -145,7 +145,7 @@
   },
   {
     "label": "ICLR 2020 v1",
-    "file": "iclr-2020-v1.json",
+    "file": "iclr-v1/ICLR_2020.json",
     "analytics": "iclr-v1/iclr-2020-analytics.json",
     "venue": "iclr",
     "year": "2020",
@@ -153,7 +153,7 @@
   },
   {
     "label": "ICLR 2019 v1",
-    "file": "iclr-2019-v1.json",
+    "file": "iclr-v1/ICLR_2019.json",
     "analytics": "iclr-v1/iclr-2019-analytics.json",
     "venue": "iclr",
     "year": "2019",
@@ -161,7 +161,7 @@
   },
   {
     "label": "ICLR 2018 v1",
-    "file": "iclr-2018-v1.json",
+    "file": "iclr-v1/ICLR_2018.json",
     "analytics": "iclr-v1/iclr-2018-analytics.json",
     "venue": "iclr",
     "year": "2018",
@@ -169,7 +169,7 @@
   },
   {
     "label": "ICLR 2017 v1",
-    "file": "iclr-2017-v1.json",
+    "file": "iclr-v1/ICLR_2017.json",
     "analytics": "iclr-v1/iclr-2017-analytics.json",
     "venue": "iclr",
     "year": "2017",
@@ -177,7 +177,7 @@
   },
   {
     "label": "ICLR 2014 v1",
-    "file": "iclr-2014-v1.json",
+    "file": "iclr-v1/ICLR_2014.json",
     "analytics": "iclr-v1/iclr-2014-analytics.json",
     "venue": "iclr",
     "year": "2014",
@@ -185,7 +185,7 @@
   },
   {
     "label": "ICLR 2013 v1",
-    "file": "iclr-2013-v1.json",
+    "file": "iclr-v1/ICLR_2013.json",
     "analytics": "iclr-v1/iclr-2013-analytics.json",
     "venue": "iclr",
     "year": "2013",
@@ -193,7 +193,7 @@
   },
   {
     "label": "NeurIPS 2024 v1",
-    "file": "neurips-2024-v1.json",
+    "file": "neurips-v1.4/NeurIPS_2024.json",
     "analytics": "neurips-v1.4/neurips-2024-analytics.json",
     "venue": "neurips",
     "year": "2024",
@@ -201,7 +201,7 @@
   },
   {
     "label": "NeurIPS 2023 v1",
-    "file": "neurips-2023-v1.json",
+    "file": "neurips-v1.4/NeurIPS_2023.json",
     "analytics": "neurips-v1.4/neurips-2023-analytics.json",
     "venue": "neurips",
     "year": "2023",
@@ -209,7 +209,7 @@
   },
   {
     "label": "NeurIPS 2022 v1",
-    "file": "neurips-2022-v1.json",
+    "file": "neurips-v1.4/NeurIPS_2022.json",
     "analytics": "neurips-v1.4/neurips-2022-analytics.json",
     "venue": "neurips",
     "year": "2022",
@@ -217,7 +217,7 @@
   },
   {
     "label": "NeurIPS 2021 v1",
-    "file": "neurips-2021-v1.json",
+    "file": "neurips-v1.4/NeurIPS_2021.json",
     "analytics": "neurips-v1.4/neurips-2021-analytics.json",
     "venue": "neurips",
     "year": "2021",
@@ -225,7 +225,7 @@
   },
   {
     "label": "NeurIPS 2020 v1",
-    "file": "neurips-2020-v1.json",
+    "file": "neurips-v1.4/NeurIPS_2020.json",
     "analytics": "neurips-v1.4/neurips-2020-analytics.json",
     "venue": "neurips",
     "year": "2020",
@@ -233,7 +233,7 @@
   },
   {
     "label": "NeurIPS 2019 v1",
-    "file": "neurips-2019-v1.json",
+    "file": "neurips-v1.4/NeurIPS_2019.json",
     "analytics": "neurips-v1.4/neurips-2019-analytics.json",
     "venue": "neurips",
     "year": "2019",
@@ -241,7 +241,7 @@
   },
   {
     "label": "NeurIPS 2018 v1",
-    "file": "neurips-2018-v1.json",
+    "file": "neurips-v1.4/NeurIPS_2018.json",
     "analytics": "neurips-v1.4/neurips-2018-analytics.json",
     "venue": "neurips",
     "year": "2018",
@@ -249,7 +249,7 @@
   },
   {
     "label": "NeurIPS 2017 v1",
-    "file": "neurips-2017-v1.json",
+    "file": "neurips-v1.4/NeurIPS_2017.json",
     "analytics": "neurips-v1.4/neurips-2017-analytics.json",
     "venue": "neurips",
     "year": "2017",
@@ -257,7 +257,7 @@
   },
   {
     "label": "NeurIPS 2016 v1",
-    "file": "neurips-2016-v1.json",
+    "file": "neurips-v1.4/NeurIPS_2016.json",
     "analytics": "neurips-v1.4/neurips-2016-analytics.json",
     "venue": "neurips",
     "year": "2016",
@@ -265,7 +265,7 @@
   },
   {
     "label": "NeurIPS 2015 v1",
-    "file": "neurips-2015-v1.json",
+    "file": "neurips-v1.4/NeurIPS_2015.json",
     "analytics": "neurips-v1.4/neurips-2015-analytics.json",
     "venue": "neurips",
     "year": "2015",
@@ -273,7 +273,7 @@
   },
   {
     "label": "NeurIPS 2014 v1",
-    "file": "neurips-2014-v1.json",
+    "file": "neurips-v1.4/NeurIPS_2014.json",
     "analytics": "neurips-v1.4/neurips-2014-analytics.json",
     "venue": "neurips",
     "year": "2014",
@@ -281,7 +281,7 @@
   },
   {
     "label": "NeurIPS 2013 v1",
-    "file": "neurips-2013-v1.json",
+    "file": "neurips-v1.4/NeurIPS_2013.json",
     "analytics": "neurips-v1.4/neurips-2013-analytics.json",
     "venue": "neurips",
     "year": "2013",
@@ -289,7 +289,7 @@
   },
   {
     "label": "NeurIPS 2012 v1",
-    "file": "neurips-2012-v1.json",
+    "file": "neurips-v1.4/NeurIPS_2012.json",
     "analytics": "neurips-v1.4/neurips-2012-analytics.json",
     "venue": "neurips",
     "year": "2012",
@@ -297,7 +297,7 @@
   },
   {
     "label": "NeurIPS 2011 v1",
-    "file": "neurips-2011-v1.json",
+    "file": "neurips-v1.4/NeurIPS_2011.json",
     "analytics": "neurips-v1.4/neurips-2011-analytics.json",
     "venue": "neurips",
     "year": "2011",
@@ -305,7 +305,7 @@
   },
   {
     "label": "NeurIPS 2010 v1",
-    "file": "neurips-2010-v1.json",
+    "file": "neurips-v1.4/NeurIPS_2010.json",
     "analytics": "neurips-v1.4/neurips-2010-analytics.json",
     "venue": "neurips",
     "year": "2010",
@@ -313,7 +313,7 @@
   },
   {
     "label": "NeurIPS 2009 v1",
-    "file": "neurips-2009-v1.json",
+    "file": "neurips-v1.4/NeurIPS_2009.json",
     "analytics": "neurips-v1.4/neurips-2009-analytics.json",
     "venue": "neurips",
     "year": "2009",
@@ -321,7 +321,7 @@
   },
   {
     "label": "NeurIPS 2008 v1",
-    "file": "neurips-2008-v1.json",
+    "file": "neurips-v1.4/NeurIPS_2008.json",
     "analytics": "neurips-v1.4/neurips-2008-analytics.json",
     "venue": "neurips",
     "year": "2008",
@@ -329,7 +329,7 @@
   },
   {
     "label": "NeurIPS 2007 v1",
-    "file": "neurips-2007-v1.json",
+    "file": "neurips-v1.4/NeurIPS_2007.json",
     "analytics": "neurips-v1.4/neurips-2007-analytics.json",
     "venue": "neurips",
     "year": "2007",
@@ -337,7 +337,7 @@
   },
   {
     "label": "NeurIPS 2006 v1",
-    "file": "neurips-2006-v1.json",
+    "file": "neurips-v1.4/NeurIPS_2006.json",
     "analytics": "neurips-v1.4/neurips-2006-analytics.json",
     "venue": "neurips",
     "year": "2006",
@@ -345,7 +345,7 @@
   },
   {
     "label": "NeurIPS 2005 v1",
-    "file": "neurips-2005-v1.json",
+    "file": "neurips-v1.4/NeurIPS_2005.json",
     "analytics": "neurips-v1.4/neurips-2005-analytics.json",
     "venue": "neurips",
     "year": "2005",
@@ -353,7 +353,7 @@
   },
   {
     "label": "NeurIPS 2004 v1",
-    "file": "neurips-2004-v1.json",
+    "file": "neurips-v1.4/NeurIPS_2004.json",
     "analytics": "neurips-v1.4/neurips-2004-analytics.json",
     "venue": "neurips",
     "year": "2004",
@@ -361,7 +361,7 @@
   },
   {
     "label": "NeurIPS 2003 v1",
-    "file": "neurips-2003-v1.json",
+    "file": "neurips-v1.4/NeurIPS_2003.json",
     "analytics": "neurips-v1.4/neurips-2003-analytics.json",
     "venue": "neurips",
     "year": "2003",
@@ -369,7 +369,7 @@
   },
   {
     "label": "NeurIPS 2002 v1",
-    "file": "neurips-2002-v1.json",
+    "file": "neurips-v1.4/NeurIPS_2002.json",
     "analytics": "neurips-v1.4/neurips-2002-analytics.json",
     "venue": "neurips",
     "year": "2002",
@@ -377,7 +377,7 @@
   },
   {
     "label": "NeurIPS 2001 v1",
-    "file": "neurips-2001-v1.json",
+    "file": "neurips-v1.4/NeurIPS_2001.json",
     "analytics": "neurips-v1.4/neurips-2001-analytics.json",
     "venue": "neurips",
     "year": "2001",
@@ -385,7 +385,7 @@
   },
   {
     "label": "NeurIPS 2000 v1",
-    "file": "neurips-2000-v1.json",
+    "file": "neurips-v1.4/NeurIPS_2000.json",
     "analytics": "neurips-v1.4/neurips-2000-analytics.json",
     "venue": "neurips",
     "year": "2000",
@@ -393,7 +393,7 @@
   },
   {
     "label": "NeurIPS 1999 v1",
-    "file": "neurips-1999-v1.json",
+    "file": "neurips-v1.4/NeurIPS_1999.json",
     "analytics": "neurips-v1.4/neurips-1999-analytics.json",
     "venue": "neurips",
     "year": "1999",
@@ -401,7 +401,7 @@
   },
   {
     "label": "NeurIPS 1998 v1",
-    "file": "neurips-1998-v1.json",
+    "file": "neurips-v1.4/NeurIPS_1998.json",
     "analytics": "neurips-v1.4/neurips-1998-analytics.json",
     "venue": "neurips",
     "year": "1998",
@@ -409,7 +409,7 @@
   },
   {
     "label": "NeurIPS 1997 v1",
-    "file": "neurips-1997-v1.json",
+    "file": "neurips-v1.4/NeurIPS_1997.json",
     "analytics": "neurips-v1.4/neurips-1997-analytics.json",
     "venue": "neurips",
     "year": "1997",
@@ -417,7 +417,7 @@
   },
   {
     "label": "NeurIPS 1996 v1",
-    "file": "neurips-1996-v1.json",
+    "file": "neurips-v1.4/NeurIPS_1996.json",
     "analytics": "neurips-v1.4/neurips-1996-analytics.json",
     "venue": "neurips",
     "year": "1996",
@@ -425,7 +425,7 @@
   },
   {
     "label": "NeurIPS 1995 v1",
-    "file": "neurips-1995-v1.json",
+    "file": "neurips-v1.4/NeurIPS_1995.json",
     "analytics": "neurips-v1.4/neurips-1995-analytics.json",
     "venue": "neurips",
     "year": "1995",
@@ -433,7 +433,7 @@
   },
   {
     "label": "NeurIPS 1994 v1",
-    "file": "neurips-1994-v1.json",
+    "file": "neurips-v1.4/NeurIPS_1994.json",
     "analytics": "neurips-v1.4/neurips-1994-analytics.json",
     "venue": "neurips",
     "year": "1994",
@@ -441,7 +441,7 @@
   },
   {
     "label": "NeurIPS 1993 v1",
-    "file": "neurips-1993-v1.json",
+    "file": "neurips-v1.4/NeurIPS_1993.json",
     "analytics": "neurips-v1.4/neurips-1993-analytics.json",
     "venue": "neurips",
     "year": "1993",
@@ -449,7 +449,7 @@
   },
   {
     "label": "NeurIPS 1992 v1",
-    "file": "neurips-1992-v1.json",
+    "file": "neurips-v1.4/NeurIPS_1992.json",
     "analytics": "neurips-v1.4/neurips-1992-analytics.json",
     "venue": "neurips",
     "year": "1992",
@@ -457,7 +457,7 @@
   },
   {
     "label": "NeurIPS 1991 v1",
-    "file": "neurips-1991-v1.json",
+    "file": "neurips-v1.4/NeurIPS_1991.json",
     "analytics": "neurips-v1.4/neurips-1991-analytics.json",
     "venue": "neurips",
     "year": "1991",
@@ -465,7 +465,7 @@
   },
   {
     "label": "NeurIPS 1990 v1",
-    "file": "neurips-1990-v1.json",
+    "file": "neurips-v1.4/NeurIPS_1990.json",
     "analytics": "neurips-v1.4/neurips-1990-analytics.json",
     "venue": "neurips",
     "year": "1990",
@@ -473,7 +473,7 @@
   },
   {
     "label": "NeurIPS 1989 v1",
-    "file": "neurips-1989-v1.json",
+    "file": "neurips-v1.4/NeurIPS_1989.json",
     "analytics": "neurips-v1.4/neurips-1989-analytics.json",
     "venue": "neurips",
     "year": "1989",
@@ -481,7 +481,7 @@
   },
   {
     "label": "NeurIPS 1988 v1",
-    "file": "neurips-1988-v1.json",
+    "file": "neurips-v1.4/NeurIPS_1988.json",
     "analytics": "neurips-v1.4/neurips-1988-analytics.json",
     "venue": "neurips",
     "year": "1988",
@@ -489,7 +489,7 @@
   },
   {
     "label": "NeurIPS 1987 v1",
-    "file": "neurips-1987-v1.json",
+    "file": "neurips-v1.4/NeurIPS_1987.json",
     "analytics": "neurips-v1.4/neurips-1987-analytics.json",
     "venue": "neurips",
     "year": "1987",
