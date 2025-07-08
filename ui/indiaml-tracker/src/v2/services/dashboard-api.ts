@@ -1,6 +1,8 @@
 // src/services/dashboard-api.ts
 
 import { DashboardDataInterface, TrackerIndexEntry } from '../types/dashboard';
+import { ConferenceStatistics } from '../types/conference_analytics';
+import { transformConferenceStatistics } from '../utils/data-transformer';
 
 /**
  * Fetches the list of available conferences from the index.json file
@@ -39,7 +41,7 @@ export const fetchDashboardData = async (
   }
   
   // First, get the index to find the analytics file path
-  const indexResponse = await fetch("/tracker_v2  /index.json");
+  const indexResponse = await fetch("/tracker_v2/index.json");
   if (!indexResponse.ok) {
     throw new Error(
       `Failed to fetch index: ${indexResponse.status} ${indexResponse.statusText}`
@@ -59,8 +61,8 @@ export const fetchDashboardData = async (
     );
   }
   
-  // Now fetch the actual dashboard data
-  const analyticsUrl = `/tracker/${conferenceEntry.analytics}`;
+  // Now fetch the actual dashboard data from v2 path
+  const analyticsUrl = `/tracker_v2/${conferenceEntry.analytics}`;
   const analyticsResponse = await fetch(analyticsUrl);
   
   if (!analyticsResponse.ok) {
@@ -69,7 +71,9 @@ export const fetchDashboardData = async (
     );
   }
   
-  return await analyticsResponse.json() as DashboardDataInterface;
+  // Get the new format data and transform it to the legacy format
+  const newFormatData: ConferenceStatistics = await analyticsResponse.json();
+  return transformConferenceStatistics(newFormatData);
 };
 
 /**

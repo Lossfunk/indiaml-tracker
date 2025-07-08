@@ -46,7 +46,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "conference-summary",
-        element: <V1Items.AnalyticsV4 />,
+        element: <V2Items.AnalyticsV4 />,
       },
       {
         path: "landing",
