@@ -1,0 +1,87 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Research Paper Schema",
+  "description": "A schema to validate a list of research papers, including metadata about the paper and its authors.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "paper_title",
+      "paper_id",
+      "pdf_url",
+      "author_list",
+      "top_author_from_india",
+      "majority_authors_from_india",
+      "paper_content",
+      "venue"
+    ],
+    "properties": {
+      "paper_title": {
+        "type": "string",
+        "description": "The title of the research paper."
+      },
+      "paper_id": {
+        "type": "string",
+        "description": "A unique identifier for the paper."
+      },
+      "pdf_url": {
+        "type": "string",
+        "format": "uri",
+        "description": "The URL to the PDF of the paper."
+      },
+      "author_list": {
+        "type": "array",
+        "description": "A list of the paper's authors.",
+        "items": {
+          "type": "object",
+          "required": [
+            "name",
+            "openreview_id",
+            "affiliation_name",
+            "affiliation_domain",
+            "affiliation_country"
+          ],
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the author."
+            },
+            "openreview_id": {
+              "type": "string",
+              "description": "The author's OpenReview ID."
+            },
+            "affiliation_name": {
+              "type": "string",
+              "description": "The name of the author's affiliation(s)."
+            },
+            "affiliation_domain": {
+              "type": "string",
+              "description": "The domain of the author's affiliation."
+            },
+            "affiliation_country": {
+              "type": "string",
+              "description": "The country of the author's affiliation (2-letter code)."
+            }
+          }
+        }
+      },
+      "top_author_from_india": {
+        "type": "boolean",
+        "description": "Indicates if the top-billed author is from India."
+      },
+      "majority_authors_from_india": {
+        "type": "boolean",
+        "description": "Indicates if the majority of authors are from India."
+      },
+      "paper_content": {
+        "type": "string",
+        "description": "A brief summary or abstract of the paper's content."
+      },
+      "venue": {
+        "type": "string",
+        "enum": ["poster", "spotlight", "oral"],
+        "description": "The presentation format of the paper at the venue (e.g., poster, spotlight, oral)."
+      }
+    }
+  }
+}

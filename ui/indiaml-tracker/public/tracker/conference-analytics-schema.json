@@ -1,0 +1,465 @@
+{
+  "type": "object",
+  "properties": {
+    "conferenceInfo": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "year": {
+          "type": "integer"
+        },
+        "track": {
+          "type": "string"
+        },
+        "totalAcceptedPapers": {
+          "type": "integer"
+        },
+        "totalAcceptedAuthors": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "name",
+        "year",
+        "track",
+        "totalAcceptedPapers",
+        "totalAcceptedAuthors"
+      ]
+    },
+    "globalStats": {
+      "type": "object",
+      "properties": {
+        "countries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "affiliation_country": {
+                "type": "string"
+              },
+              "paper_count": {
+                "type": "integer"
+              },
+              "author_count": {
+                "type": "integer"
+              },
+              "spotlights": {
+                "type": "integer"
+              },
+              "orals": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "affiliation_country",
+              "paper_count",
+              "author_count",
+              "spotlights",
+              "orals"
+            ]
+          }
+        }
+      },
+      "required": [
+        "countries"
+      ]
+    },
+    "focusCountry": {
+      "type": "object",
+      "properties": {
+        "country_code": {
+          "type": "string"
+        },
+        "country_name": {
+          "type": "string"
+        },
+        "total_authors": {
+          "type": "integer"
+        },
+        "total_spotlights": {
+          "type": "integer"
+        },
+        "total_orals": {
+          "type": "integer"
+        },
+        "institution_types": {
+          "type": "object",
+          "properties": {
+            "corporate": {
+              "type": "integer"
+            },
+            "academic": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "corporate",
+            "academic"
+          ]
+        },
+        "at_least_one_focus_country_author": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "integer"
+            },
+            "papers": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "isSpotlight": {
+                    "type": "boolean"
+                  },
+                  "isOral": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "id",
+                  "title",
+                  "isSpotlight",
+                  "isOral"
+                ]
+              }
+            }
+          },
+          "required": [
+            "count",
+            "papers"
+          ]
+        },
+        "majority_focus_country_authors": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "integer"
+            },
+            "papers": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "isSpotlight": {
+                    "type": "boolean"
+                  },
+                  "isOral": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "id",
+                  "title",
+                  "isSpotlight",
+                  "isOral"
+                ]
+              }
+            }
+          },
+          "required": [
+            "count",
+            "papers"
+          ]
+        },
+        "first_focus_country_author": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "integer"
+            },
+            "papers": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "isSpotlight": {
+                    "type": "boolean"
+                  },
+                  "isOral": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "id",
+                  "title",
+                  "isSpotlight",
+                  "isOral"
+                ]
+              }
+            }
+          },
+          "required": [
+            "count",
+            "papers"
+          ]
+        },
+        "institutions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "institute": {
+                "type": "string"
+              },
+              "total_paper_count": {
+                "type": "integer"
+              },
+              "unique_paper_count": {
+                "type": "integer"
+              },
+              "author_count": {
+                "type": "integer"
+              },
+              "spotlights": {
+                "type": "integer"
+              },
+              "orals": {
+                "type": "integer"
+              },
+              "type": {
+                "type": "string"
+              },
+              "papers": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "isSpotlight": {
+                      "type": "boolean"
+                    },
+                    "isOral": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "title",
+                    "isSpotlight",
+                    "isOral"
+                  ]
+                }
+              },
+              "authors": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "institute",
+              "total_paper_count",
+              "unique_paper_count",
+              "author_count",
+              "spotlights",
+              "orals",
+              "type",
+              "papers",
+              "authors"
+            ]
+          }
+        }
+      },
+      "required": [
+        "country_code",
+        "country_name",
+        "total_authors",
+        "total_spotlights",
+        "total_orals",
+        "institution_types",
+        "at_least_one_focus_country_author",
+        "majority_focus_country_authors",
+        "first_focus_country_author",
+        "institutions"
+      ]
+    },
+    "configuration": {
+      "type": "object",
+      "properties": {
+        "countryMap": {
+          "type": "object",
+          "patternProperties": {
+            "^[A-Z]{2}$": {
+              "type": "string"
+            }
+          }
+        },
+        "apacCountries": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "colorScheme": {
+          "type": "object",
+          "patternProperties": {
+            ".*": {
+              "type": "string"
+            }
+          }
+        },
+        "dashboardTitle": {
+          "type": "string"
+        },
+        "dashboardSubtitle": {
+          "type": "string"
+        },
+        "sections": {
+          "type": "object",
+          "properties": {
+            "summary": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "insights": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "title",
+                "insights"
+              ]
+            },
+            "context": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "subtitle": {
+                  "type": "string"
+                },
+                "insights": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "title",
+                "subtitle",
+                "insights"
+              ]
+            },
+            "focusCountry": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "subtitle": {
+                  "type": "string"
+                },
+                "insights": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "title",
+                "subtitle",
+                "insights"
+              ]
+            },
+            "institutions": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "subtitle": {
+                  "type": "string"
+                },
+                "insights": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "title",
+                "subtitle",
+                "insights"
+              ]
+            }
+          },
+          "required": [
+            "summary",
+            "context",
+            "focusCountry",
+            "institutions"
+          ]
+        }
+      },
+      "required": [
+        "countryMap",
+        "apacCountries",
+        "colorScheme",
+        "dashboardTitle",
+        "dashboardSubtitle",
+        "sections"
+      ]
+    },
+    "credits": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "link": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "name",
+          "link"
+        ]
+      }
+    }
+  },
+  "required": [
+    "conferenceInfo",
+    "globalStats",
+    "focusCountry",
+    "configuration",
+    "credits"
+  ]
+}
