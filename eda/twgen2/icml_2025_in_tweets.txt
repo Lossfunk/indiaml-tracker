@@ -2,7 +2,7 @@ ICML 2025 INDIA TWEET THREAD
 ============================================================
 
 TWEET 1:
-🇮🇳 India at #ICML2025! 
+🇮🇳 India at #ICML2025! From @lossfunk
 
 📄 ACCEPTED PAPERS: 42
 💡 SPOTLIGHTS: 6 (3 oral, 3 spotlight)  
@@ -16,6 +16,9 @@ Character count: 205
 ----------------------------------------
 
 TWEET 2:
+
+Complete list at https://indiaml.lossfunk.com
+
 📄 Paper 1/42: "Discovering a Zero  (Zero-Vector Class of Machine Learning)"
 🇮🇳 Harikrishna Metta (Indian Institute of Sc...)
     LinkedIn: https://www.linkedin.com/in/metta-harikrishna/
