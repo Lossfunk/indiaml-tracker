@@ -36,6 +36,7 @@ class Paper(Base):
     pdf_path = Column(String)
     pdate = Column(DateTime)
     odate = Column(DateTime)
+    accept_type = Column(String, nullable=True)
     
     # New field to store raw authors data
     raw_authors = Column(JSON, nullable=True)
