@@ -1,4 +1,6 @@
-# 📢 This repoistory is NOT ACTIVELY MAINTAINED. We may update it in the future, but for now, we're not putting additional resources into the project.
+# 📢 This repoistory is NOT ACTIVELY MAINTAINED. 
+
+We may update it in the future, but for now, we're not putting additional resources into the project.
 
 # 🚀 IndiaML Tracker
 
